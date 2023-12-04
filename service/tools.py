@@ -20,9 +20,10 @@ class StaticFilesLoggerMiddleware:
         return self.app(environ, start_response)
 
 class Service:
-    def __init__(self, config_file, host='127.0.0.1', port=5000):
+    def __init__(self, config_file, host='127.0.0.1', port=5000, debug=False):
         self.host = host
         self.port = port
+        self.debug = debug
         self.config_file = config_file
         
         # Configurar logging
@@ -57,5 +58,5 @@ class Service:
     def run(self):
         config_path = self.config_file if self.config_file else 'default'
         self.logger.info(f'Using configuration file: {config_path}')
-        run_simple(hostname=self.host, port=self.port, application=self.app, use_reloader=True, use_debugger=True)
+        run_simple(hostname=self.host, port=self.port, application=self.app, use_reloader=self.debug, use_debugger=self.debug)
 

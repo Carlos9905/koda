@@ -27,5 +27,5 @@ class Config:
                 f'  Host: {self.host}')
     
     def set_config(self):
-        service = Service(config_file=self.config_file, host=self.host, port=self.http_port)
+        service = Service(config_file=self.config_file, host=self.host, port=self.http_port, debug=self.debug)
         service.run()
