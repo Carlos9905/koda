@@ -13,11 +13,10 @@ class CustomFormatter(logging.Formatter):
         'RESET': "\033[0m"       # Reset
     }
 
-    DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
     FORMAT = "%(asctime)s %(levelname)s: %(message)s"
 
     def __init__(self):
-        super().__init__(fmt=self.FORMAT, datefmt=self.DATE_FORMAT)
+        super().__init__(fmt=self.FORMAT)
 
     def format(self, record):
         colored_levelname = f"{self.COLORS[record.levelname]}{record.levelname}{self.COLORS['RESET']}"
