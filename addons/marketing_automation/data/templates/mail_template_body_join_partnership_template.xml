@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <template id="mail_template_body_join_partnership_template">
         <div class="o_layout o_default_theme">
             <div class="container o_mail_wrapper" style="text-align: center;">
@@ -46,4 +46,4 @@
             </div>
         </div>
     </template>
-</odoo>
+</koda>

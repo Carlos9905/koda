@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <template id="mail_template_body_welcome_template">
         <div class="o_layout oe_unremovable oe_unmovable bg-200 o_default_theme" data-name="Mailing">
                 <style id="design-element">.o_mail_wrapper h2 {
@@ -74,16 +74,16 @@
                                                         <a aria-label="Facebook" title="Facebook" href="https://www.facebook.com/Odoo">
                                                             <span class="fa fa-facebook"></span>
                                                         </a>&#160;&#160;         
-                                                        <a style="margin-left:10px" aria-label="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/company/odoo">
+                                                        <a style="margin-left:10px" aria-label="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/company/koda">
                                                             <span class="fa fa-linkedin"></span>
                                                         </a>&#160;&#160;          
                                                         <a style="margin-left:10px" aria-label="Twitter" title="Twitter" href="https://twitter.com/Odoo">
                                                             <span class="fa fa-twitter"></span>
                                                         </a>&#160;&#160;           
-                                                        <a style="margin-left:10px" aria-label="Instagram" title="Instagram" href="https://www.instagram.com/explore/tags/odoo/">
+                                                        <a style="margin-left:10px" aria-label="Instagram" title="Instagram" href="https://www.instagram.com/explore/tags/koda/">
                                                             <span class="fa fa-instagram"></span>
                                                         </a>&#160;&#160;               
-                                                        <a style="margin-left:10px" aria-label="TikTok" title="TikTok" href="https://www.tiktok.com/@odoo">
+                                                        <a style="margin-left:10px" aria-label="TikTok" title="TikTok" href="https://www.tiktok.com/@koda">
                                                             <span class="fa fa-tiktok"></span>
                                                         </a>
                                                     </div>
@@ -97,4 +97,4 @@
                     </div>
         </div>
     </template>
-</odoo>
+</koda>

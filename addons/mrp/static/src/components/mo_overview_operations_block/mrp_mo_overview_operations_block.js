@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { useBus } from "@web/core/utils/hooks";
 import { formatFloat, formatFloatTime, formatMonetary } from "@web/views/fields/formatters";
 import { MoOverviewLine } from "../mo_overview_line/mrp_mo_overview_line";

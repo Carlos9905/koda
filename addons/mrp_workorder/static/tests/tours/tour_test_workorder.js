@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import helper from '@mrp_workorder/../tests/tours/tour_helper_mrp_workorder';

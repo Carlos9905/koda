@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { formatFloatTime } from "@web/views/fields/formatters";
 import { getIntersection, getUnionOfIntersections } from "@web_gantt/gantt_helpers";

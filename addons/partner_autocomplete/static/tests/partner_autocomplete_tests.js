@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { registry } from "@web/core/registry";
@@ -45,7 +45,7 @@ QUnit.module('partner_autocomplete', {
                         return Promise.resolve([
                             {
                                 "name": "Odoo",
-                                "domain": "odoo.com",
+                                "domain": "koda.com",
                             },
                             {
                                 "name": "MyCompany",

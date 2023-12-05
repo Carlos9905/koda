@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { patchUiSize, SIZES } from "@mail/../tests/helpers/patch_ui_size";
 import { start } from "@mail/../tests/helpers/test_utils";

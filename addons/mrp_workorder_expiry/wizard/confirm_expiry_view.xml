@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mrp_workorder_view_form_tablet_expiry_inherit" model="ir.ui.view">
         <field name="name">mrp.workorder.tablet.view.expiry.inherit</field>
         <field name="model">mrp.workorder</field>
@@ -13,4 +13,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

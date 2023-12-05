@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { StockMoveX2ManyField, stockMoveX2ManyField, MovesListRenderer } from "@stock/views/picking_form/stock_move_one2many";

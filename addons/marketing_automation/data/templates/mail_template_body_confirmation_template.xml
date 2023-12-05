@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <template id="mail_template_body_confirmation_template" name="Email Confirmation Template">
         <div class="o_layout o_mail_wrapper o_mail_no_resize o_mail_wrapper_td oe_structure o_editable" style="margin: 0; padding: 0; width: 100%; background-color: #f3f3f3;" data-name="Mailing">
             <div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff;">
@@ -17,4 +17,4 @@
             </div>
         </div>
     </template>
-</odoo>
+</koda>

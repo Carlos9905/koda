@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { FloatField, floatField } from '@web/views/fields/float/float_field';
-import { useRef, useEffect } from "@odoo/owl";
+import { useRef, useEffect } from "@koda/owl";
 
 export class MrpConsumed extends FloatField {
     setup() {

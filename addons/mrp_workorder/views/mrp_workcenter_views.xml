@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <record id="mrp_workcenter_view_kanban_inherit_workorder" model="ir.ui.view">
         <field name="name">mrp.workcenter.view.kanban.inherit.mrp.workorder</field>
         <field name="model">mrp.workcenter</field>
@@ -55,4 +55,4 @@
       groups="mrp.group_mrp_routings"
       parent="mrp.menu_mrp_root"
       sequence="5"/>
-</odoo>
+</koda>

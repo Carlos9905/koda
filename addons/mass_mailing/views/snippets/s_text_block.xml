@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="s_text_block" name="Text">
         <div class="s_text_block o_mail_snippet_general pt40 pb40" style="padding-left: 15px; padding-right: 15px;">
             <div class="container s_allow_columns">
@@ -13,4 +13,4 @@
             </div>
         </div>
     </template>
-</odoo>
+</koda>

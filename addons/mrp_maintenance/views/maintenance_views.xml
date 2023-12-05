@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="maintenance_stage_view_tree_inherit_mrp" model="ir.ui.view">
         <field name="name">maintenance.stage.view.tree.inherit.mrp</field>
@@ -174,4 +174,4 @@
         action="maintenance.hr_equipment_action"
         sequence="2"/>
 
-</odoo>
+</koda>

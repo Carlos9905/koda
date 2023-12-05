@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="quality_point_view_form_inherit_mrp" model="ir.ui.view">
         <field name="name">quality.point.view.form.inherit.mrp</field>
         <field name="model">quality.point</field>
@@ -215,4 +215,4 @@
                 </field>
             </field>
     </record>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
     <record id="module_marketing_automation_category" model="ir.module.category">
         <field name="name">Marketing Automation</field>
         <field name="sequence">20</field>
@@ -16,4 +16,4 @@
         <field name="groups_id" eval="[(4, ref('marketing_automation.group_marketing_automation_user'))]"/>
     </record>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <!-- Stool demo data -->
     <data noupdate="1">
 
@@ -506,4 +506,4 @@
             <field name="sequence">60</field>
         </record>
     </data>
-</odoo>
+</koda>

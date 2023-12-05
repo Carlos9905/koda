@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { MrpWorkorder } from "./mrp_workorder";
@@ -6,7 +6,7 @@ import { MrpQualityCheckConfirmationDialog } from "../dialog/mrp_quality_check_c
 import { FileUploader } from "@web/views/fields/file_handler";
 import { useService } from "@web/core/utils/hooks";
 
-import { useRef } from "@odoo/owl";
+import { useRef } from "@koda/owl";
 
 export class QualityCheck extends MrpWorkorder {
     static template = "mrp_workorder.QualityCheck";

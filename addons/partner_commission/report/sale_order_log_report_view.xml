@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="sale_order_log_search" model="ir.ui.view">
         <field name="name">sale.order.log.report.search.inherit</field>
         <field name="model">sale.order.log.report</field>
@@ -14,4 +14,4 @@
             </filter>
         </field>
     </record>
-</odoo>
+</koda>

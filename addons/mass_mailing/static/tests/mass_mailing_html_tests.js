@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import weTestUtils from "@web_editor/../tests/test_utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
@@ -55,7 +55,7 @@ QUnit.module('field html', (hooks) => {
                     cssLibs: [],
                     jsLibs: [],
                     cssContents: ['.field_body {background-color: red;}'],
-                    jsContents: ['window.odoo = {define: function(){}}; // inline asset'],
+                    jsContents: ['window.koda = {define: function(){}}; // inline asset'],
                 }];
             },
         });

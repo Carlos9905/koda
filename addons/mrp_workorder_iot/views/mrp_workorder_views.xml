@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="quality_check_view_form_iot_inherit_quality" model="ir.ui.view">
         <field name="name">quality.check.view.form.inherit.quality.iot</field>
         <field name="model">quality.check</field>
@@ -61,4 +61,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

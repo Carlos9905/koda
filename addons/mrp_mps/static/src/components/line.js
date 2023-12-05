@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { CheckBox } from "@web/core/checkbox/checkbox";
 import { useService, useBus } from "@web/core/utils/hooks";
 import { formatFloat } from "@web/core/utils/numbers";
-import { Component, useRef, onPatched } from "@odoo/owl";
+import { Component, useRef, onPatched } from "@koda/owl";
 
 export default class MpsLineComponent extends Component {
 

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 import { QualityCheck } from "./quality_check";

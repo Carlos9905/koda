@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { loadBundle } from "@web/core/assets";
 import { attachComponent } from "@web/legacy/utils";
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";
-import { closestElement } from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
+import { closestElement } from "@web_editor/js/editor/koda-editor/src/OdooEditor";
 import { Toolbar } from "@web_editor/js/editor/toolbar";
 import "@web_editor/js/wysiwyg/wysiwyg_iframe";
 
@@ -115,7 +115,7 @@ export class MassMailingWysiwyg extends Wysiwyg {
      */
     async _createSnippetsMenuInstance(options={}) {
         await loadBundle('web_editor.assets_legacy_wysiwyg');
-        const { MassMailingSnippetsMenu }  = await odoo.loader.modules.get('@mass_mailing/js/snippets.editor');
+        const { MassMailingSnippetsMenu }  = await koda.loader.modules.get('@mass_mailing/js/snippets.editor');
         return new MassMailingSnippetsMenu(this, Object.assign({
             wysiwyg: this,
             selectorEditableArea: '.o_editable',

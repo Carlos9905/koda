@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import DocumentViewer from '@mrp_workorder/components/viewer';

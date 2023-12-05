@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <template id="report_mrp_bom_inherit_mrp_plm" inherit_id="mrp.report_mrp_bom">
         <xpath expr="//th[@name='th_mrp_bom_h']" position="after">
             <th t-if="data['show_ecos']">BoM Version</th>
@@ -35,4 +35,4 @@
             </td>
         </xpath>
     </template>
-</odoo>
+</koda>

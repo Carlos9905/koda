@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
 import { BomOverviewComponent } from "@mrp/components/bom_overview/mrp_bom_overview";

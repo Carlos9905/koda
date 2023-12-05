@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { useViewButtons } from "@web/views/view_button/view_button_hook";
@@ -6,7 +6,7 @@ import { useBus } from "@web/core/utils/hooks";
 
 import { formView } from "@web/views/form/form_view";
 import { FormController } from "@web/views/form/form_controller";
-import { useRef } from "@odoo/owl";
+import { useRef } from "@koda/owl";
 
 export class WorkorderFormController extends FormController {
     setup() {

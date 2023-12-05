@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="view_partner_grade_form_inherit_partner_commission" model="ir.ui.view">
         <field name="name">res.partner.grade.form.partner.commission</field>
         <field name="model">res.partner.grade</field>
@@ -20,4 +20,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

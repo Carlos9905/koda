@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
@@ -7,7 +7,7 @@ import { SelectionPopup } from "@mrp_workorder/components/popup";
 import { WorkingEmployeePopupWOList } from "@mrp_workorder/components/working_employee_popup_wo_list";
 import { PinPopup } from "@mrp_workorder/components/pin_popup";
 import { DialogWrapper } from "@mrp_workorder/components/dialog_wrapper";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 export function useConnectedEmployee(controllerType, context, workcenterId, env) {
     const orm = useService("orm");

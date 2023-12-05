@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="mrp_cost_structure_inherit_hr" inherit_id="mrp_account_enterprise.mrp_cost_structure">
         <xpath expr="//t[@name='operations']//tbody" position="after">
             <t t-if="line['operations']" name="operations">
@@ -173,4 +173,4 @@
         </t>
     </template>
     <template id="product_template_cost_structure" inherit_id="mrp_account_enterprise.mrp_cost_structure" primary="True"/>
-</odoo>
+</koda>

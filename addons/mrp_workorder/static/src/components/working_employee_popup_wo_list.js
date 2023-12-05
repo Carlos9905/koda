@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { MrpTimer } from "@mrp/widgets/timer";
 import { browser } from "@web/core/browser/browser";
 import { useService } from "@web/core/utils/hooks";
-import { Component, useState, onWillStart } from "@odoo/owl";
+import { Component, useState, onWillStart } from "@koda/owl";
 
 export class WorkingEmployeePopupWOList extends Component {
     setup() {

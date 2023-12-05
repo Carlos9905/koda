@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mail_compose_message_view_form" model="ir.ui.view" >
         <field name="name">mail.compose.message.view.form.marketing.campaign</field>
         <field name="model">mail.compose.message</field>
@@ -10,4 +10,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

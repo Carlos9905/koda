@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
 
     <record id="mailing_mailing_view_tree_marketing_automation" model="ir.ui.view" >
         <field name="name">mailing.mailing.view.tree.marketing.automation</field>
@@ -161,4 +161,4 @@
         <field name="view_id" ref="mailing_mailing_view_form_marketing_automation"/>
     </record>
 
-</odoo>
+</koda>

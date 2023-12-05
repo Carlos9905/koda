@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
         <!-- Files -->
     <record model="ir.ui.view" id="view_document_file_kanban_mrp">
         <field name="name">mrp.document kanban.mrp</field>
@@ -87,4 +87,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

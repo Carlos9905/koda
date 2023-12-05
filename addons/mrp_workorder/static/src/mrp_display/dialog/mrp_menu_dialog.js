@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { _t } from "@web/core/l10n/translation";
@@ -6,7 +6,7 @@ import { useService } from "@web/core/utils/hooks";
 import { MrpWorkcenterDialog } from "./mrp_workcenter_dialog";
 import { MrpQualityCheckSelectDialog } from "./mrp_check_select_dialog";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class MrpMenuDialog extends Component {
     static props = {

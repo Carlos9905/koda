@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { MrpQualityCheckConfirmationDialog } from "./mrp_quality_check_confirmation_dialog";
 

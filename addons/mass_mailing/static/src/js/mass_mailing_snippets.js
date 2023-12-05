@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import options from "@web_editor/js/editor/snippets.options";
 const SelectUserValueWidget = options.userValueWidgetsRegistry['we-select'];

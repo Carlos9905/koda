@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { formatFloatTime, formatMonetary } from "@web/views/fields/formatters";
 import { formatFloat } from "@web/core/utils/numbers";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class BomOverviewSpecialLine extends Component {
     setup() {

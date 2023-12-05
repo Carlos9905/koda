@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mrp_routing_workcenter_tree_view_inherited" model="ir.ui.view">
         <field name="name">mrp.routing.workcenter.tree.view.inherited</field>
         <field name="model">mrp.routing.workcenter</field>
@@ -21,4 +21,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

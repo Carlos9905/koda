@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { formView } from "@web/views/form/form_view";
 import { useThrottleForAnimation } from "@web/core/utils/timing";
-import { useSubEnv, onMounted, onWillUnmount } from "@odoo/owl";
+import { useSubEnv, onMounted, onWillUnmount } from "@koda/owl";
 
 export class MassMailingFullWidthViewController extends formView.Controller {
     setup() {

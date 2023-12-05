@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="mrp_cost_structure_subcontracting" inherit_id="mrp_account_enterprise.mrp_cost_structure">
         <xpath expr="//t[@name='operations']" position="after">
             <t t-if="line.get('subcontracting')">
@@ -50,4 +50,4 @@
             </t>
         </xpath>
     </template>
-</odoo>
+</koda>

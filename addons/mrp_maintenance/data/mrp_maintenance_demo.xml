@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Equipment categories -->
     <record id="equipment_furniture_tools" model="maintenance.equipment.category">
         <field name="name">Furniture Tools</field>
@@ -45,4 +45,4 @@
         <field name="workcenter_id" ref="mrp.mrp_workcenter_2"/>
     </record>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module alias=mailing.PortalSubscriptionFeedback **/
+/** @koda-module alias=mailing.PortalSubscriptionFeedback **/
 
 import { _t } from "@web/core/l10n/translation";
 import { jsonrpc } from "@web/core/network/rpc_service";

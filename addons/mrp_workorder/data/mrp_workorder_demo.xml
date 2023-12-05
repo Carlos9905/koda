@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <!-- Quality Control From Manufacturing -->
     
     <!-- For [FURN_9666] Table-->
@@ -78,4 +78,4 @@
         <function eval="[[('state', 'not in', ('cancel', 'done'))]]" model="mrp.workorder" name="search"/>
     </function>
 
-</odoo>
+</koda>

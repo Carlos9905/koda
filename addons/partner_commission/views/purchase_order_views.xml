@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="action_view_customer_invoices" model="ir.actions.act_window">
         <field name="name">Customer Invoices</field>
         <field name="res_model">account.move</field>
@@ -36,4 +36,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

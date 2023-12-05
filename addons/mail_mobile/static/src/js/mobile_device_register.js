@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import mobile from "@web_mobile/js/services/core";
 import { jsonrpc } from "@web/core/network/rpc_service";

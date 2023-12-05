@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mrp_bom_view_form_inherit_plm" model="ir.ui.view">
         <field name="name">mrp.bom.view.form.inherit.plm</field>
         <field name="model">mrp.bom</field>
@@ -42,4 +42,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

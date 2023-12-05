@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { MrpMpsControlPanel, MrpMpsSearchBar } from "../search/mrp_mps_control_panel";
@@ -14,7 +14,7 @@ import { WithSearch } from "@web/search/with_search/with_search";
 import { ActionMenus } from "@web/search/action_menus/action_menus";
 import { download } from "@web/core/network/download";
 import { ExportDataDialog } from "@web/views/view_dialogs/export_data_dialog";
-import { Component, onWillStart, useSubEnv } from "@odoo/owl";
+import { Component, onWillStart, useSubEnv } from "@koda/owl";
 
 class MainComponent extends Component {
     //--------------------------------------------------------------------------

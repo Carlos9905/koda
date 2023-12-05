@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="ir_model_view_tree_marketing" model="ir.ui.view">
         <field name="name">ir.model.view.tree.marketing</field>
         <field name="model">ir.model</field>
@@ -13,4 +13,4 @@
             </tree>
         </field>
     </record>
-</odoo>
+</koda>

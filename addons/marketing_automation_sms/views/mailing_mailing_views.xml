@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
     <record id="mailing_mailing_view_form_marketing_activity" model="ir.ui.view">
         <field name="name">mailing.mailing.view.form.marketing.activity.inherit.sms</field>
         <field name="model">mailing.mailing</field>
@@ -95,4 +95,4 @@
         <field name="view_id" ref="marketing_automation.mailing_mailing_view_form_marketing_automation"/>
     </record>
 
-</odoo>
+</koda>

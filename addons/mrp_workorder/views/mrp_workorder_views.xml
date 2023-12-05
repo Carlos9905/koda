@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mrp_workorder_view_form_inherit_workorder" model="ir.ui.view">
         <field name="name">mrp.workorder.view.form.inherit.workorder</field>
         <field name="model">mrp.workorder</field>
@@ -375,4 +375,4 @@
             <field name="state">code</field>
             <field name="code">action = record.action_mark_as_done()</field>
         </record>
-</odoo>
+</koda>

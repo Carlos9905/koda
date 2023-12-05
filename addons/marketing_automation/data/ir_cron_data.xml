@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="ir_cron_campaign_sync_participants" model="ir.cron">
         <field name="name">Marketing Automation: sync participants</field>
@@ -21,4 +21,4 @@
         <field name="numbercall">-1</field>
     </record>
 
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="link_tracker_action_marketing_campaign" model="ir.actions.act_window">
         <field name="name">Link Statistics</field>
         <field name="res_model">link.tracker</field>
@@ -20,4 +20,4 @@
         parent="marketing_automation_reporting_menu"
         action="link_tracker_action_marketing_campaign"
         groups="marketing_automation.group_marketing_automation_user"/>
-</odoo>
+</koda>

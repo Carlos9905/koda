@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from '@web/legacy/js/public/public_widget';
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 publicWidget.registry.PaymentButton = publicWidget.Widget.extend({
     selector: 'button[name="o_payment_submit_button"]',

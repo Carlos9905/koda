@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <t t-name="marketing.CampaignKanbanRenderer" t-inherit="web.KanbanRenderer" t-inherit-mode="primary">
         <t t-call="web.ActionHelper" position="replace">
             <t t-if="showNoContentHelper">
@@ -53,4 +53,4 @@
             </div>
         </div>
     </t>
-</odoo>
+</koda>

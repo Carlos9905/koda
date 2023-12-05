@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <template id="payment.express_checkout" name="Payment Express Checkout">
         <!-- Parameters description:
@@ -53,4 +53,4 @@
         </form>
     </template>
 
-</odoo>
+</koda>

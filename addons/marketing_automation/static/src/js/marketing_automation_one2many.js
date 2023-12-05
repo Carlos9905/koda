@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
@@ -9,7 +9,7 @@ import { useX2ManyCrud, useOpenX2ManyRecord } from "@web/views/fields/relational
 import { X2ManyField, x2ManyField } from "@web/views/fields/x2many/x2many_field";
 import { KanbanRecord } from "@web/views/kanban/kanban_record";
 import { KanbanRenderer } from "@web/views/kanban/kanban_renderer";
-import { useEffect, useRef, useSubEnv } from "@odoo/owl";
+import { useEffect, useRef, useSubEnv } from "@koda/owl";
 
 const fieldRegistry = registry.category("fields");
 

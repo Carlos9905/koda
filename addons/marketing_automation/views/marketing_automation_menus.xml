@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <menuitem id="marketing_automation_menu" name="Marketing Automation"
         web_icon="marketing_automation,static/description/icon.png" groups="marketing_automation.group_marketing_automation_user" sequence="110"/>
 
@@ -20,4 +20,4 @@
         parent="marketing_automation_menu_configuration"
         sequence="4"
         groups="marketing_automation.group_marketing_automation_user"/>
-</odoo>
+</koda>

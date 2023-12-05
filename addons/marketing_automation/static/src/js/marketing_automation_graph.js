@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { loadJS } from "@web/core/assets";
 import { registry } from "@web/core/registry";
 import { cookie } from "@web/core/browser/cookie";
-import { Component, onWillStart, onWillUnmount, useEffect, useRef } from "@odoo/owl";
+import { Component, onWillStart, onWillUnmount, useEffect, useRef } from "@koda/owl";
 const fieldRegistry = registry.category("fields");
 
 /**

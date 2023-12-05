@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo><data noupdate="0">
+<koda><data noupdate="0">
     <record id="mailing_tag_0" model="utm.tag">
         <field name="name">Bioutifoul SMS</field>
         <field name="color" eval="2"/>
@@ -13,4 +13,4 @@
     <record id="mailing_sms_0_utm_source" model="utm.source">
         <field name="name">Mailing Extra Promo</field>
     </record>
-</data></odoo>
+</data></koda>

@@ -1,4 +1,4 @@
-/** @odoo-module alias=mailing.PortalSubscriptionForm **/
+/** @koda-module alias=mailing.PortalSubscriptionForm **/
 
 import { jsonrpc } from "@web/core/network/rpc_service";
 import { renderToFragment } from "@web/core/utils/render";

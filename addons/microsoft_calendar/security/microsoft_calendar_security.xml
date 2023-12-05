@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="microsoft_calendar_not_own_token_rule" model="ir.rule">
             <field name="name">Microsoft Calendar NOT own token access rule</field>
@@ -27,4 +27,4 @@
             <field name="groups" eval="[(4, ref('base.group_system'))]"/>
         </record>
     </data>
-</odoo>
+</koda>

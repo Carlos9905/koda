@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 const PRODUCTION_DECORATORS = {
     draft: "muted",

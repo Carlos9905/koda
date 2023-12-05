@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from '@web/legacy/js/public/public_widget';
 import { renderToElement } from '@web/core/utils/render';
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 import { formatCurrency } from "@web/core/currency";
 import { _t } from '@web/core/l10n/translation';
 import { ConnectionLostError, RPCError } from '@web/core/network/rpc_service';
@@ -32,7 +32,7 @@ publicWidget.registry.PaymentPostProcessing = publicWidget.Widget.extend({
             // Fetch the post-processing values from the server.
             const self = this;
             this.rpc('/payment/status/poll', {
-                'csrf_token': odoo.csrf_token,
+                'csrf_token': koda.csrf_token,
             }).then(postProcessingValues => {
                 let { state, display_message, landing_route } = postProcessingValues;
 
