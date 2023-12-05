@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.modules import get_modules
 from koda.modules.module import load_manifest, _DEFAULT_MANIFEST

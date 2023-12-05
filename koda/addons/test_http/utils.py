@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from html.parser import HTMLParser
 from koda.http import FilesystemSessionStore

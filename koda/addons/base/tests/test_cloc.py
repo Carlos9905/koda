@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.tools import cloc
 from koda.tests import TransactionCase, tagged
 

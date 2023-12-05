@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.tests.common import TransactionCase
 from koda.tools import check_barcode_encoding, get_barcode_check_digit
