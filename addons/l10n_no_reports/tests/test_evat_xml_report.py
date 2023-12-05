@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo import Command, fields
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda import Command, fields
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

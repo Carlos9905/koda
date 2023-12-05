@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
+from koda import api, models
 
 class L10nBe325Report(models.AbstractModel):
     _name = 'report.l10n_be_reports.report_325_pdf'

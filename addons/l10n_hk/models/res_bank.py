@@ -2,9 +2,9 @@
 
 import re
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools import single_email_re
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.tools import single_email_re
 
 
 class ResPartnerBank(models.Model):

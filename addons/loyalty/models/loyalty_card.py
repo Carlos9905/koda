@@ -3,8 +3,8 @@
 
 from uuid import uuid4
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
 
 class LoyaltyCard(models.Model):
     _name = 'loyalty.card'

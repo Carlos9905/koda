@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.l10n_eu_oss.models.eu_tag_map import EU_TAG_MAP
-from odoo.tests import tagged
+from koda import Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.l10n_eu_oss.models.eu_tag_map import EU_TAG_MAP
+from koda.tests import tagged
 
 
 @tagged('post_install', 'post_install_l10n', '-at_install')

@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError
+from koda import fields, models, api, _
+from koda.exceptions import UserError
 from lxml import builder
 from lxml import etree
 from requests.adapters import HTTPAdapter

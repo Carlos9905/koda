@@ -1,6 +1,6 @@
-from odoo.http import route
-from odoo.addons.mail.controllers.attachment import AttachmentController
-from odoo.addons.im_livechat.tools.misc import force_guest_env
+from koda.http import route
+from koda.addons.mail.controllers.attachment import AttachmentController
+from koda.addons.im_livechat.tools.misc import force_guest_env
 
 
 class LivechatAttachmentController(AttachmentController):

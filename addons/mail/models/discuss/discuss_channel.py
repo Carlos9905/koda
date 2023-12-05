@@ -7,12 +7,12 @@ from hashlib import sha512
 from secrets import choice
 from markupsafe import Markup
 
-from odoo import _, api, fields, models, tools, Command
-from odoo.addons.base.models.avatar_mixin import get_hsl_from_seed
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import html_escape, get_lang
-from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import _, api, fields, models, tools, Command
+from koda.addons.base.models.avatar_mixin import get_hsl_from_seed
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
+from koda.tools import html_escape, get_lang
+from koda.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 _logger = logging.getLogger(__name__)
 

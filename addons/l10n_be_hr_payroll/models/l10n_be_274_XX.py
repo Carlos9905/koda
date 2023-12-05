@@ -9,11 +9,11 @@ from dateutil.relativedelta import relativedelta
 from datetime import date
 from lxml import etree
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import format_date
-from odoo.tools.misc import file_path, xlsxwriter
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.tools import format_date
+from koda.tools.misc import file_path, xlsxwriter
+from koda.osv import expression
 
 
 class L10nBe274XX(models.Model):

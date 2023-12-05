@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import time
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tools.misc import mod10r
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda.tools.misc import mod10r
 
 CH_IBAN = 'CH15 3881 5158 3845 3843 7'
 QR_IBAN = 'CH21 3080 8001 2345 6782 7'

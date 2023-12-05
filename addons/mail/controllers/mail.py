@@ -4,10 +4,10 @@ import logging
 
 from werkzeug.urls import url_encode
 
-from odoo import _, http
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.tools import consteq
+from koda import _, http
+from koda.exceptions import AccessError
+from koda.http import request
+from koda.tools import consteq
 
 _logger = logging.getLogger(__name__)
 

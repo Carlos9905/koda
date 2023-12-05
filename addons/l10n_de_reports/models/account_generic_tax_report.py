@@ -1,6 +1,6 @@
-from odoo import api, models, _
-from odoo.exceptions import RedirectWarning
-from odoo.tools import float_repr
+from koda import api, models, _
+from koda.exceptions import RedirectWarning
+from koda.tools import float_repr
 
 import stdnum.de.stnr
 import stdnum.exceptions

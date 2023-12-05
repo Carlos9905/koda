@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
-from odoo.exceptions import UserError
+from koda import models, _
+from koda.exceptions import UserError
 from markupsafe import Markup
 from itertools import groupby
 from .account_report import _raw_phonenumber, _get_xml_export_representative_node

@@ -1,5 +1,5 @@
 
-from odoo import models
+from koda import models
 
 
 class PolishTaxReportCustomHandler(models.AbstractModel):

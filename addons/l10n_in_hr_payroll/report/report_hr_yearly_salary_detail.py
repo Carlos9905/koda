@@ -3,8 +3,8 @@
 
 from datetime import date
 
-from odoo import api, models, _
-from odoo.exceptions import UserError
+from koda import api, models, _
+from koda.exceptions import UserError
 
 class EmployeesYearlySalaryReport(models.AbstractModel):
     _name = 'report.l10n_in_hr_payroll.report_hryearlysalary'

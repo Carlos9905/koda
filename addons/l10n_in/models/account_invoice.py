@@ -3,9 +3,9 @@
 import base64
 import logging
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError, RedirectWarning, UserError
-from odoo.tools.image import image_data_uri
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError, RedirectWarning, UserError
+from koda.tools.image import image_data_uri
 
 _logger = logging.getLogger(__name__)
 

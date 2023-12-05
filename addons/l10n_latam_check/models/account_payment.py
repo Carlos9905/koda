@@ -1,8 +1,8 @@
 import stdnum
 
-from odoo import fields, models, _, api
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.misc import format_date
+from koda import fields, models, _, api
+from koda.exceptions import UserError, ValidationError
+from koda.tools.misc import format_date
 
 
 class AccountPayment(models.Model):

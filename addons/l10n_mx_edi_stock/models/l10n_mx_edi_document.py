@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import api, models, fields
+from koda import api, models, fields
 
 
 class L10nMxEdiDocument(models.Model):

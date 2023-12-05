@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import logging
 
-from odoo.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.interface import Interface
 
 _logger = logging.getLogger(__name__)
 

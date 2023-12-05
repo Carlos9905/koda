@@ -2,9 +2,9 @@
 
 from freezegun import freeze_time
 
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo import fields
-from odoo.tests import tagged
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda import fields
+from koda.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

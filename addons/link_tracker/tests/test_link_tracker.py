@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.link_tracker.tests.common import MockLinkTracker
-from odoo.exceptions import UserError
-from odoo.tests import common, tagged
+from koda.addons.link_tracker.tests.common import MockLinkTracker
+from koda.exceptions import UserError
+from koda.tests import common, tagged
 
 
 @tagged('link_tracker')

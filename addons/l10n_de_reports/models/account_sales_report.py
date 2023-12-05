@@ -4,7 +4,7 @@ import math
 import tempfile
 import zipfile
 
-from odoo import _, api, models
+from koda import _, api, models
 
 
 class GermanECSalesReportCustomHandler(models.AbstractModel):

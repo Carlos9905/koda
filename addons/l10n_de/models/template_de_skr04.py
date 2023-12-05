@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, Command
-from odoo.addons.account.models.chart_template import template
+from koda import models, Command
+from koda.addons.account.models.chart_template import template
 
 
 class AccountChartTemplate(models.AbstractModel):

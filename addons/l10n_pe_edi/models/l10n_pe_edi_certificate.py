@@ -12,8 +12,8 @@ from pytz import timezone
 from datetime import datetime
 from OpenSSL import crypto
 
-from odoo import _, api, fields, models, tools
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models, tools
+from koda.exceptions import ValidationError
 
 
 class Certificate(models.Model):

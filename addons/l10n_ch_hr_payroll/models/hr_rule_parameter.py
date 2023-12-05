@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 # Koda
 
-from odoo import api, models, _
-from odoo.tools import ormcache
-from odoo.exceptions import UserError
+from koda import api, models, _
+from koda.tools import ormcache
+from koda.exceptions import UserError
 
 
 class HrSalaryRuleParameter(models.Model):

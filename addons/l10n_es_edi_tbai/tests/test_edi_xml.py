@@ -7,8 +7,8 @@ from datetime import datetime
 from freezegun import freeze_time
 from lxml import etree
 
-from odoo.addons.l10n_es_edi_tbai.models.xml_utils import NS_MAP
-from odoo.tests import tagged
+from koda.addons.l10n_es_edi_tbai.models.xml_utils import NS_MAP
+from koda.tests import tagged
 
 from .common import TestEsEdiTbaiCommon
 

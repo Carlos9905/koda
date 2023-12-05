@@ -4,13 +4,13 @@
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo.addons.base.models.ir_cron import ir_cron
-from odoo.addons.iap.models.iap_account import IapAccount
-from odoo.addons.iap.tools import iap_tools
-from odoo.addons.iap_extract.models.extract_mixin import ExtractMixin
-from odoo.addons.partner_autocomplete.models.iap_autocomplete_api import IapAutocompleteEnrichAPI
-from odoo.sql_db import Cursor
-from odoo.tests import common
+from koda.addons.base.models.ir_cron import ir_cron
+from koda.addons.iap.models.iap_account import IapAccount
+from koda.addons.iap.tools import iap_tools
+from koda.addons.iap_extract.models.extract_mixin import ExtractMixin
+from koda.addons.partner_autocomplete.models.iap_autocomplete_api import IapAutocompleteEnrichAPI
+from koda.sql_db import Cursor
+from koda.tests import common
 
 
 class TestExtractMixin(common.TransactionCase):

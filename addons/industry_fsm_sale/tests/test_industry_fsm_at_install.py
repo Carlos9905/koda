@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 
 from datetime import datetime
-from odoo.addons.industry_fsm_sale.tests.common import TestFsmFlowCommon
-from odoo.exceptions import UserError
+from koda.addons.industry_fsm_sale.tests.common import TestFsmFlowCommon
+from koda.exceptions import UserError
 
 
 class TestFsmFlowSaleAtInstall(TestFsmFlowCommon):

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from dateutil import tz
 
-from odoo import _, api, models, fields, Command
-from odoo.addons.l10n_mx_edi.models.l10n_mx_edi_document import USAGE_SELECTION
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import _, api, models, fields, Command
+from koda.addons.l10n_mx_edi.models.l10n_mx_edi_document import USAGE_SELECTION
+from koda.exceptions import UserError
+from koda.osv import expression
 
 
 class PosOrder(models.Model):

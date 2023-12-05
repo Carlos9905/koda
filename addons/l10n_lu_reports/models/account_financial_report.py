@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import re
-from odoo import fields, models, _
-from odoo.tools.float_utils import float_compare, float_repr
-from odoo.exceptions import UserError
+from koda import fields, models, _
+from koda.tools.float_utils import float_compare, float_repr
+from koda.exceptions import UserError
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 

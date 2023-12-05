@@ -8,9 +8,9 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 from dateutil.rrule import rrule, DAILY, WEEKLY
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools.misc import format_date
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools.misc import format_date
 
 
 class L10nBeExportSDWorxLeavesWizard(models.TransientModel):

@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from freezegun import freeze_time
 
-from odoo import fields
-from odoo.addons.account_reports.tests.account_sales_report_common import AccountSalesReportCommon
-from odoo.tests import tagged
+from koda import fields
+from koda.addons.account_reports.tests.account_sales_report_common import AccountSalesReportCommon
+from koda.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

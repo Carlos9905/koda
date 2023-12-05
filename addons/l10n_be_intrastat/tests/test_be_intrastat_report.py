@@ -3,8 +3,8 @@
 
 from lxml import etree
 
-from odoo.tests import tagged
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class TestBEIntrastatReport(TestAccountReportsCommon):

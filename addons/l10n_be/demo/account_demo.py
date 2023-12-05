@@ -1,4 +1,4 @@
-from odoo import api, models, Command
+from koda import api, models, Command
 
 
 class AccountChartTemplate(models.AbstractModel):

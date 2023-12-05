@@ -1,6 +1,6 @@
 # Koda
 
-from odoo import models, _lt
+from koda import models, _lt
 
 
 class Website(models.Model):

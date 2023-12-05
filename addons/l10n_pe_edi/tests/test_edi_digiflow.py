@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo.tests import tagged
+from koda.tests import tagged
 from .common import TestPeEdiCommon
 
 from datetime import timedelta

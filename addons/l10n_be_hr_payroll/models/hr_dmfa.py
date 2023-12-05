@@ -11,10 +11,10 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.backends import default_backend
 from lxml import etree
 
-from odoo import api, fields, models, _
-from odoo.tools import date_utils
-from odoo.tools.misc import file_path
-from odoo.exceptions import ValidationError, UserError
+from koda import api, fields, models, _
+from koda.tools import date_utils
+from koda.tools.misc import file_path
+from koda.exceptions import ValidationError, UserError
 
 
 def format_amount(amount, width=11, hundredth=True):

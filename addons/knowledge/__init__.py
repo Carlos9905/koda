@@ -8,7 +8,7 @@ from . import models
 from . import populate
 from . import wizard
 
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
 def pre_init_knowledge(env):
     """ Some lxml arm64 versions cannot decode icons and cause the installation to crash.

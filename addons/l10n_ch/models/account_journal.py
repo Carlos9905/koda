@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api
+from koda import models, fields, api
 
-from odoo.exceptions import ValidationError
+from koda.exceptions import ValidationError
 
-from odoo.addons.base_iban.models.res_partner_bank import validate_iban
-from odoo.addons.base.models.res_bank import sanitize_account_number
+from koda.addons.base_iban.models.res_partner_bank import validate_iban
+from koda.addons.base.models.res_bank import sanitize_account_number
 
 
 class AccountJournal(models.Model):

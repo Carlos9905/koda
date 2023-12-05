@@ -3,7 +3,7 @@
 
 # Copyright (c) 2022 WT-IO-IT GmbH (https://www.wt-io-it.at)
 #                    Mag. Wolfgang Taferner <wolfgang.taferner@wt-io-it.at>
-from odoo import models
+from koda import models
 
 
 class AustrianECSalesReport(models.AbstractModel):

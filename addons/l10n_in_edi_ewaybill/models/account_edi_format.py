@@ -6,11 +6,11 @@ import json
 from datetime import timedelta
 from markupsafe import Markup
 
-from odoo import models, fields, api, _
-from odoo.tools import html_escape
-from odoo.exceptions import AccessError
-from odoo.addons.iap import jsonrpc
-from odoo.addons.l10n_in_edi.models.account_edi_format import DEFAULT_IAP_ENDPOINT, DEFAULT_IAP_TEST_ENDPOINT
+from koda import models, fields, api, _
+from koda.tools import html_escape
+from koda.exceptions import AccessError
+from koda.addons.iap import jsonrpc
+from koda.addons.l10n_in_edi.models.account_edi_format import DEFAULT_IAP_ENDPOINT, DEFAULT_IAP_TEST_ENDPOINT
 
 from .error_codes import ERROR_CODES
 

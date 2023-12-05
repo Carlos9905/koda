@@ -8,10 +8,10 @@ from collections import defaultdict
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import format_date
-from odoo.tools.misc import xlsxwriter
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import format_date
+from koda.tools.misc import xlsxwriter
 
 
 class L10nChMonthlySummaryWizard(models.Model):

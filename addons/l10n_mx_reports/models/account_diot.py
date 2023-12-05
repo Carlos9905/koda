@@ -7,9 +7,9 @@ import logging
 from unicodedata import normalize
 
 
-from odoo import _, fields, models
-from odoo.exceptions import RedirectWarning, UserError
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT, get_lang
+from koda import _, fields, models
+from koda.exceptions import RedirectWarning, UserError
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT, get_lang
 
 _logger = logging.getLogger(__name__)
 

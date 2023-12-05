@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, api, models, _
-from odoo.tools.float_utils import float_compare
-from odoo.tools import DEFAULT_SERVER_TIME_FORMAT, float_repr, float_round
-from odoo.tools import html2plaintext
+from koda import fields, api, models, _
+from koda.tools.float_utils import float_compare
+from koda.tools import DEFAULT_SERVER_TIME_FORMAT, float_repr, float_round
+from koda.tools import html2plaintext
 from .carvajal_request import CarvajalRequest
 
 import pytz

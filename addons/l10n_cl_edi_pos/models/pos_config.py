@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
-from odoo.tools.translate import _
-from odoo.exceptions import UserError
+from koda import models, fields
+from koda.tools.translate import _
+from koda.exceptions import UserError
 
 
 class PosConfig(models.Model):

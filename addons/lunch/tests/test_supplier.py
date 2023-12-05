@@ -5,10 +5,10 @@ import pytz
 from datetime import datetime, time, timedelta
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.tests import common
+from koda import fields
+from koda.tests import common
 
-from odoo.addons.lunch.tests.common import TestsCommon
+from koda.addons.lunch.tests.common import TestsCommon
 
 
 class TestSupplier(TestsCommon):

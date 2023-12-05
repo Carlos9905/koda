@@ -1,6 +1,6 @@
 # Koda
-from odoo import api, models, fields
-from odoo.tools.sql import column_exists, create_column
+from koda import api, models, fields
+from koda.tools.sql import column_exists, create_column
 
 
 class AccountMove(models.Model):

@@ -6,8 +6,8 @@ import stdnum
 
 from markupsafe import Markup
 
-from odoo import models, _
-from odoo.exceptions import RedirectWarning, UserError
+from koda import models, _
+from koda.exceptions import RedirectWarning, UserError
 
 
 def _raw_phonenumber(phonenumber):

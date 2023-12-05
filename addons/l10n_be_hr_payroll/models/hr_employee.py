@@ -4,8 +4,8 @@
 from collections import defaultdict
 from functools import reduce
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError, AccessError
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError, AccessError
 
 
 class HrEmployee(models.Model):

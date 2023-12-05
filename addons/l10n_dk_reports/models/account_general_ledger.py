@@ -3,9 +3,9 @@
 import contextlib
 import io
 
-from odoo.tools import pycompat, street_split
+from koda.tools import pycompat, street_split
 
-from odoo import api, models, _
+from koda import api, models, _
 
 
 class GeneralLedgerCustomHandler(models.AbstractModel):

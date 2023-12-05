@@ -12,10 +12,10 @@ from lxml import etree
 from lxml import objectify
 from copy import deepcopy
 
-from odoo import models, api, _, _lt
-from odoo.addons.iap.tools.iap_tools import iap_jsonrpc
-from odoo.exceptions import AccessError
-from odoo.tools import float_round, html_escape
+from koda import models, api, _, _lt
+from koda.addons.iap.tools.iap_tools import iap_jsonrpc
+from koda.exceptions import AccessError
+from koda.tools import float_round, html_escape
 
 DEFAULT_IAP_ENDPOINT = 'https://l10n-pe-edi.api.odoo.com'
 DEFAULT_IAP_TEST_ENDPOINT = 'https://l10n-pe-edi.test.odoo.com'

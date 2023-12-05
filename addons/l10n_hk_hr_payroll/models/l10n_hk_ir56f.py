@@ -7,8 +7,8 @@ from datetime import date
 from collections import defaultdict
 from lxml import etree
 
-from odoo import _, models, api
-from odoo.exceptions import UserError
+from koda import _, models, api
+from koda.exceptions import UserError
 
 
 class L10nHkIr56f(models.Model):

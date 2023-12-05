@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
-from odoo.tools import float_round
+from koda import models, _
+from koda.tools import float_round
 
 class FrenchReportCustomHandler(models.AbstractModel):
     _name = 'l10n_fr.report.handler'

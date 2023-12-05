@@ -1,7 +1,7 @@
 # coding: utf-8
 
-from odoo import _
-from odoo.tools import html_escape
+from koda import _
+from koda.tools import html_escape
 import re
 
 import base64

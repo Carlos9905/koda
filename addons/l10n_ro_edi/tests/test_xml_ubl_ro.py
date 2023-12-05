@@ -1,7 +1,7 @@
-from odoo import Command
-from odoo.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda import Command
+from koda.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

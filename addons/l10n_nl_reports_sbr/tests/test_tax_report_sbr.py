@@ -6,11 +6,11 @@ import os
 from freezegun import freeze_time
 from unittest import skipIf
 
-from odoo import fields
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
+from koda import fields
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

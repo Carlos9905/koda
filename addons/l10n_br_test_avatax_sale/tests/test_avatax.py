@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests.common import tagged
-from odoo.tools.misc import formatLang
-from odoo.addons.l10n_br_avatax.tests.test_br_avatax import TestAvalaraBrCommon
+from koda.tests.common import tagged
+from koda.tools.misc import formatLang
+from koda.addons.l10n_br_avatax.tests.test_br_avatax import TestAvalaraBrCommon
 from .mocked_so_response import generate_response
 
 @tagged("post_install_l10n", "-at_install", "post_install")

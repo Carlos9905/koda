@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from .common import TestMxEdiCommonExternal
-from odoo.tests import tagged
+from koda.tests import tagged
 
 
 @tagged('external_l10n', 'post_install', '-at_install', '-standard', 'external')

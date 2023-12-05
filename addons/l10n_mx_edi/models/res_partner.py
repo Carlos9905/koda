@@ -3,9 +3,9 @@ from .extra_timezones import TIEMPO_DEL_CENTRO_ZIPCODES, TIEMPO_DEL_CENTRO_EN_FR
 
 from pytz import timezone
 
-from odoo import api, fields, models, _
-from odoo.addons.l10n_mx_edi.models.res_company import FISCAL_REGIMES_SELECTION
-from odoo.addons.l10n_mx_edi.models.l10n_mx_edi_document import USAGE_SELECTION
+from koda import api, fields, models, _
+from koda.addons.l10n_mx_edi.models.res_company import FISCAL_REGIMES_SELECTION
+from koda.addons.l10n_mx_edi.models.l10n_mx_edi_document import USAGE_SELECTION
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'

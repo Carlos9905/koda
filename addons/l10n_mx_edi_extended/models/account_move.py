@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models, api, _
-from odoo.exceptions import ValidationError
-from odoo.tools.sql import column_exists, create_column
+from koda import fields, models, api, _
+from koda.exceptions import ValidationError
+from koda.tools.sql import column_exists, create_column
 
 import re
 from collections import defaultdict

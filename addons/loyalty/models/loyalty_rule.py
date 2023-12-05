@@ -3,9 +3,9 @@
 
 import ast
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.osv import expression
 
 class LoyaltyRule(models.Model):
     _name = 'loyalty.rule'

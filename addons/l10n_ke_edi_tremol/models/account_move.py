@@ -5,8 +5,8 @@ import json
 import re
 from datetime import datetime
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError
+from koda import models, fields, _
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

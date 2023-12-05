@@ -3,9 +3,9 @@
 # pylint: disable=C0326
 from freezegun import freeze_time
 
-from odoo.addons.account_reports.tests.account_sales_report_common import AccountSalesReportCommon
-from odoo.tests import tagged
-from odoo.tools.misc import NON_BREAKING_SPACE
+from koda.addons.account_reports.tests.account_sales_report_common import AccountSalesReportCommon
+from koda.tests import tagged
+from koda.tools.misc import NON_BREAKING_SPACE
 from freezegun import freeze_time
 
 

@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, models, _
-from odoo.exceptions import UserError, RedirectWarning
+from koda import fields, models, _
+from koda.exceptions import UserError, RedirectWarning
 from cryptography.hazmat.primitives import serialization
 from cryptography import x509
 from datetime import datetime

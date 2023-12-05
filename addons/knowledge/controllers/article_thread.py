@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.addons.portal.controllers.mail import MailController
-from odoo.addons.knowledge.controllers.main import KnowledgeController
-from odoo.http import request
-from odoo.addons.mail.controllers.thread import ThreadController
+from koda import http
+from koda.addons.portal.controllers.mail import MailController
+from koda.addons.knowledge.controllers.main import KnowledgeController
+from koda.http import request
+from koda.addons.mail.controllers.thread import ThreadController
 from werkzeug.exceptions import Forbidden
 
 

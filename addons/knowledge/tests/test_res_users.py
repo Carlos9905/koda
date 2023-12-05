@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.knowledge.tests.common import KnowledgeCommon
-from odoo.tests.common import tagged
+from koda.addons.knowledge.tests.common import KnowledgeCommon
+from koda.tests.common import tagged
 
 
 @tagged('knowledge_user')

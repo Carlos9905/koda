@@ -4,10 +4,10 @@ from contextlib import contextmanager
 from dateutil.relativedelta import relativedelta
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.addons.mail.models.mail_activity import MailActivity
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests.common import Form, tagged, HttpCase
+from koda import fields
+from koda.addons.mail.models.mail_activity import MailActivity
+from koda.addons.mail.tests.common import MailCommon
+from koda.tests.common import Form, tagged, HttpCase
 
 
 class ActivityScheduleCase(MailCommon):

@@ -1,8 +1,8 @@
 # coding: utf-8
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
 
 import datetime
 from freezegun import freeze_time

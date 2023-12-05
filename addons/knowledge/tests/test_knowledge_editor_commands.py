@@ -4,7 +4,7 @@
 import base64
 from markupsafe import Markup
 
-from odoo.tests.common import tagged, users, HttpCase
+from koda.tests.common import tagged, users, HttpCase
 
 
 @tagged('post_install', '-at_install', 'knowledge', 'knowledge_tour')

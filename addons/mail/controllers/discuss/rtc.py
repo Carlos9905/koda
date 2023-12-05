@@ -3,10 +3,10 @@
 from collections import defaultdict
 from werkzeug.exceptions import NotFound
 
-from odoo import http
-from odoo.http import request
-from odoo.tools import file_open
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from koda import http
+from koda.http import request
+from koda.tools import file_open
+from koda.addons.mail.models.discuss.mail_guest import add_guest_to_context
 
 
 class RtcController(http.Controller):

@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import tagged
+from koda import fields
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
 import logging
-from odoo.tools.misc import NON_BREAKING_SPACE
+from koda.tools.misc import NON_BREAKING_SPACE
 
 
 _logger = logging.getLogger(__name__)

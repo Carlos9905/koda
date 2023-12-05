@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api
-from odoo.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key
-from odoo.tools import xml_utils
+from koda import models, api
+from koda.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key
+from koda.tools import xml_utils
 
 
 class IrAttachment(models.Model):

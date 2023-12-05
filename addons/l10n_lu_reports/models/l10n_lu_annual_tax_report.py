@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from collections import defaultdict
-from odoo import _, api, fields, models
+from koda import _, api, fields, models
 from ..models.l10n_lu_tax_report_data import MULTI_COLUMN_FIELDS, YEARLY_ANNEX_MAPPING
 
 

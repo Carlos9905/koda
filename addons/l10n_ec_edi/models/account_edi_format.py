@@ -6,13 +6,13 @@ from functools import partial
 from lxml import etree
 from markupsafe import Markup, escape
 
-from odoo import _, models
-from odoo.addons.l10n_ec_edi.models.account_move import L10N_EC_VAT_SUBTAXES
-from odoo.addons.l10n_ec_edi.models.ir_attachment import L10N_EC_XSD_INFOS
-from odoo.exceptions import UserError
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT as DTF
-from odoo.tools import float_repr, float_round, html_escape
-from odoo.tools.xml_utils import cleanup_xml_node, validate_xml_from_attachment
+from koda import _, models
+from koda.addons.l10n_ec_edi.models.account_move import L10N_EC_VAT_SUBTAXES
+from koda.addons.l10n_ec_edi.models.ir_attachment import L10N_EC_XSD_INFOS
+from koda.exceptions import UserError
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT as DTF
+from koda.tools import float_repr, float_round, html_escape
+from koda.tools.xml_utils import cleanup_xml_node, validate_xml_from_attachment
 from pytz import timezone
 from requests.exceptions import ConnectionError as RConnectionError
 from zeep import Client

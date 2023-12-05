@@ -1,8 +1,8 @@
 # coding: utf-8
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.addons.l10n_mx_edi_extended.models.account_move import CUSTOM_NUMBERS_PATTERN
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.addons.l10n_mx_edi_extended.models.account_move import CUSTOM_NUMBERS_PATTERN
 
 
 class StockLandedCost(models.Model):

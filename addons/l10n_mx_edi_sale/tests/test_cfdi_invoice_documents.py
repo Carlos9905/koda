@@ -1,6 +1,6 @@
-from odoo.addons.l10n_mx_edi.tests.common import TestMxEdiCommon
-from odoo import Command
-from odoo.tests import tagged
+from koda.addons.l10n_mx_edi.tests.common import TestMxEdiCommon
+from koda import Command
+from koda.tests import tagged
 
 from freezegun import freeze_time
 

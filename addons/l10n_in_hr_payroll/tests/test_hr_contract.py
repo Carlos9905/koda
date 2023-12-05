@@ -4,8 +4,8 @@
 from datetime import date
 
 from freezegun import freeze_time
-from odoo.addons.l10n_in_hr_payroll.tests.common import TestPayrollCommon
-from odoo.tests import tagged
+from koda.addons.l10n_in_hr_payroll.tests.common import TestPayrollCommon
+from koda.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

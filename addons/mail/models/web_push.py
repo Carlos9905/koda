@@ -5,7 +5,7 @@ from requests import Session
 
 from ..web_push import push_to_end_point, DeviceUnreachableError
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 _logger = logging.getLogger(__name__)
 

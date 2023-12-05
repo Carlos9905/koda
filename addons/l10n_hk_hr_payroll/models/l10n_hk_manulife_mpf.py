@@ -7,11 +7,11 @@ from collections import defaultdict
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import format_date, xlsxwriter
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools import format_date, xlsxwriter
 
-from odoo.addons.l10n_hk_hr_payroll.models.l10n_hk_ird import MONTH_SELECTION
+from koda.addons.l10n_hk_hr_payroll.models.l10n_hk_ird import MONTH_SELECTION
 
 
 class L10nHkManulifeMpf(models.Model):

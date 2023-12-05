@@ -4,11 +4,11 @@ from psycopg2 import IntegrityError
 from psycopg2.errorcodes import UNIQUE_VIOLATION
 from werkzeug.exceptions import NotFound
 
-from odoo import _, http
-from odoo.exceptions import UserError
-from odoo.http import request
-from odoo.tools import consteq, replace_exceptions
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from koda import _, http
+from koda.exceptions import UserError
+from koda.http import request
+from koda.tools import consteq, replace_exceptions
+from koda.addons.mail.models.discuss.mail_guest import add_guest_to_context
 
 
 class PublicPageController(http.Controller):

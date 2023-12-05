@@ -4,8 +4,8 @@
 import re
 from stdnum.it import codicefiscale, iva
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 
 class ResPartner(models.Model):

@@ -3,8 +3,8 @@
 
 import datetime
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError
+from koda import _, fields, models
+from koda.exceptions import UserError
 
 
 class ResConfigSettings(models.TransientModel):

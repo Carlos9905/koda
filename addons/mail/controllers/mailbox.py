@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
 
 class MailboxController(http.Controller):

@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.tests.common import tagged, HttpCase
-from odoo.tools import mute_logger, file_open
+from koda import http
+from koda.tests.common import tagged, HttpCase
+from koda.tools import mute_logger, file_open
 
 
 @tagged("post_install", "-at_install")

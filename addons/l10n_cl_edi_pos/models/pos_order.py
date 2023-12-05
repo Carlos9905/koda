@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields
+from koda import models, fields
 
 
 class PosOrder(models.Model):

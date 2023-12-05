@@ -6,10 +6,10 @@ import io
 import logging
 import re
 
-from odoo import http, fields
-from odoo.http import request, content_disposition
-from odoo.tools import pycompat
-from odoo.tools.misc import xlsxwriter
+from koda import http, fields
+from koda.http import request, content_disposition
+from koda.tools import pycompat
+from koda.tools.misc import xlsxwriter
 
 _logger = logging.getLogger(__name__)
 

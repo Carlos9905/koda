@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from datetime import datetime, timedelta
-from odoo import api, Command, models
+from koda import api, Command, models
 
 
 class AccountChartTemplate(models.AbstractModel):

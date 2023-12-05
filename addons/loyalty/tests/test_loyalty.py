@@ -3,10 +3,10 @@
 
 from psycopg2 import IntegrityError
 
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
-from odoo.tests import tagged, TransactionCase, Form
-from odoo.tools import mute_logger
+from koda.exceptions import ValidationError
+from koda.fields import Command
+from koda.tests import tagged, TransactionCase, Form
+from koda.tools import mute_logger
 
 from unittest.mock import patch
 

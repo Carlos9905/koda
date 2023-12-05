@@ -8,8 +8,8 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.serialization import Encoding, NoEncryption, PrivateFormat, pkcs12
 
 
-from odoo import _, api, fields, models, tools
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models, tools
+from koda.exceptions import ValidationError
 
 
 class Certificate(models.Model):

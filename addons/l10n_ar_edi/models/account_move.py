@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError, RedirectWarning
-from odoo.tools.float_utils import float_repr, float_round
-from odoo.tools import html2plaintext, plaintext2html
+from koda import fields, models, api, _
+from koda.exceptions import UserError, RedirectWarning
+from koda.tools.float_utils import float_repr, float_round
+from koda.tools import html2plaintext, plaintext2html
 from datetime import datetime
 from . import afip_errors
 import re

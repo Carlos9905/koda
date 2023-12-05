@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from odoo import api, models
+from koda import api, models
 
 
 class AccountChartTemplate(models.AbstractModel):

@@ -5,10 +5,10 @@ from freezegun import freeze_time
 from lxml import etree
 from unittest.mock import patch
 
-from odoo.tests import tagged
-from odoo.tools import misc
-from odoo.addons.l10n_cl_edi_stock.tests.common import TestL10nClEdiStockCommon
-from odoo.addons.l10n_cl_edi.tests.common import _check_with_xsd_patch
+from koda.tests import tagged
+from koda.tools import misc
+from koda.addons.l10n_cl_edi_stock.tests.common import TestL10nClEdiStockCommon
+from koda.addons.l10n_cl_edi.tests.common import _check_with_xsd_patch
 
 _logger = logging.getLogger(__name__)
 

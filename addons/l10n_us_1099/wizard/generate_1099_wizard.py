@@ -4,7 +4,7 @@ import base64
 import csv
 import io
 
-from odoo import api, models, fields
+from koda import api, models, fields
 
 
 class Generate1099Wizard(models.TransientModel):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, models, fields
-from odoo.osv import expression
+from koda import api, models, fields
+from koda.osv import expression
 
 ISSUING_ENTITY = [
     ('01', 'National Superintendency for the Control of Security Services, Weapons, Ammunition and Explosives for Civil Use'),

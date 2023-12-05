@@ -24,7 +24,7 @@
                         <div class="mt16">
                             <button name="create_account" type="object" class="btn-link" noSaveDialog="1"
                                     invisible="not l10n_br_avatax_show_overwrite_warning"
-                                    confirm="Creating a new account will permanently remove your current Avatax account from Odoo, but it won't delete the account on the Avatax side. Do you wish to proceed?">
+                                    confirm="Creating a new account will permanently remove your current Avatax account from koda, but it won't delete the account on the Avatax side. Do you wish to proceed?">
                                 <i title="Create a new account" role="img" aria-label="Create a new account" class="fa fa-plug fa-fw"/>
                                 Create a new account
                             </button>

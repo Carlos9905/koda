@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools.float_utils import float_compare
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.tools.float_utils import float_compare
 from ..models.coa_data import ACCOUNTS_2020, ACCOUNTS_2019
 
 class AccountChartOfAccountReport(models.AbstractModel):

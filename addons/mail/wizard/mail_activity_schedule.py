@@ -3,10 +3,10 @@
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.addons.mail.tools.parser import parse_res_ids
-from odoo.exceptions import ValidationError
-from odoo.tools.misc import clean_context
+from koda import api, fields, models, _
+from koda.addons.mail.tools.parser import parse_res_ids
+from koda.exceptions import ValidationError
+from koda.tools.misc import clean_context
 
 
 class MailActivitySchedule(models.TransientModel):

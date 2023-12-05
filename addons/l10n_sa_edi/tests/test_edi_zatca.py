@@ -4,8 +4,8 @@ from freezegun import freeze_time
 import logging
 from pytz import timezone
 
-from odoo.tests import tagged
-from odoo.tools import misc
+from koda.tests import tagged
+from koda.tools import misc
 
 from .common import TestSaEdiCommon
 

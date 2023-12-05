@@ -6,8 +6,8 @@ from pathlib import Path
 from time import sleep
 from threading import Thread
 
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
+from koda.addons.hw_drivers.driver import Driver
+from koda.addons.hw_drivers.event_manager import event_manager
 
 
 easyCTEPPath = Path(__file__).parent.parent / 'lib/ctep_w/libeasyctep.dll'

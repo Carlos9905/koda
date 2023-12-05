@@ -1,5 +1,5 @@
-from odoo.http import request
-from odoo.addons.portal.controllers import portal
+from koda.http import request
+from koda.addons.portal.controllers import portal
 
 
 class KnowledgePortal(portal.CustomerPortal):

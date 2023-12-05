@@ -5,16 +5,16 @@ import calendar
 from collections import defaultdict
 from datetime import date
 
-from odoo import _, api, Command, fields, models
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import float_compare
+from koda import _, api, Command, fields, models
+from koda.exceptions import ValidationError, UserError
+from koda.tools import float_compare
 
-from odoo.addons.l10n_ec_edi.models.account_tax import L10N_EC_TAXSUPPORTS
-from odoo.addons.l10n_ec_edi.models.account_move import L10N_EC_WTH_FOREIGN_GENERAL_REGIME_CODES
-from odoo.addons.l10n_ec_edi.models.account_move import L10N_EC_WTH_FOREIGN_TAX_HAVEN_OR_LOWER_TAX_CODES
-from odoo.addons.l10n_ec_edi.models.account_move import L10N_EC_WTH_FOREIGN_SUBJECT_WITHHOLD_CODES
-from odoo.addons.l10n_ec_edi.models.account_move import L10N_EC_WTH_FOREIGN_DOUBLE_TAXATION_CODES
-from odoo.addons.l10n_ec_edi.models.account_move import L10N_EC_WITHHOLD_FOREIGN_REGIME
+from koda.addons.l10n_ec_edi.models.account_tax import L10N_EC_TAXSUPPORTS
+from koda.addons.l10n_ec_edi.models.account_move import L10N_EC_WTH_FOREIGN_GENERAL_REGIME_CODES
+from koda.addons.l10n_ec_edi.models.account_move import L10N_EC_WTH_FOREIGN_TAX_HAVEN_OR_LOWER_TAX_CODES
+from koda.addons.l10n_ec_edi.models.account_move import L10N_EC_WTH_FOREIGN_SUBJECT_WITHHOLD_CODES
+from koda.addons.l10n_ec_edi.models.account_move import L10N_EC_WTH_FOREIGN_DOUBLE_TAXATION_CODES
+from koda.addons.l10n_ec_edi.models.account_move import L10N_EC_WITHHOLD_FOREIGN_REGIME
 
 
 class L10nEcWizardAccountWithhold(models.TransientModel):

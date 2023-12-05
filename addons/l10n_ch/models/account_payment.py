@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import re
 
-from odoo import _, models, fields, api
-from odoo.tools import mod10r
+from koda import _, models, fields, api
+from koda.tools import mod10r
 
 
 class AccountPayment(models.Model):

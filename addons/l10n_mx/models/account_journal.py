@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, api, Command
+from koda import models, api, Command
 
 
 class AccountJournal(models.Model):

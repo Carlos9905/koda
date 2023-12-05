@@ -1,10 +1,10 @@
-from odoo import _, api, fields, models
-from odoo.addons.l10n_mx_edi.models.l10n_mx_edi_document import (
+from koda import _, api, fields, models
+from koda.addons.l10n_mx_edi.models.l10n_mx_edi_document import (
     CANCELLATION_REASON_SELECTION,
     CANCELLATION_REASON_DESCRIPTION,
     GLOBAL_INVOICE_PERIODICITY_DEFAULT_VALUES,
 )
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
 
 class L10nMxEdiInvoiceCancel(models.TransientModel):

@@ -1,7 +1,7 @@
 from .common import TestMxEdiPosCommon
 
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda.exceptions import UserError
+from koda.tests import tagged
 
 from freezegun import freeze_time
 

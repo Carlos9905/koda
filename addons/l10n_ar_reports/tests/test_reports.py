@@ -1,10 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields
-from odoo.addons.l10n_ar.tests.common import TestAr
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests.common import Form
-from odoo.tests import tagged
-from odoo.tools import file_open
+from koda import fields
+from koda.addons.l10n_ar.tests.common import TestAr
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests.common import Form
+from koda.tests import tagged
+from koda.tools import file_open
 import logging
 
 _logger = logging.getLogger(__name__)

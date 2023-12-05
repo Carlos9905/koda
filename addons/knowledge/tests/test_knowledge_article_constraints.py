@@ -3,10 +3,10 @@
 
 from psycopg2 import IntegrityError
 
-from odoo import exceptions
-from odoo.addons.knowledge.tests.common import KnowledgeCommon
-from odoo.tests.common import tagged, users
-from odoo.tools import mute_logger
+from koda import exceptions
+from koda.addons.knowledge.tests.common import KnowledgeCommon
+from koda.tests.common import tagged, users
+from koda.tools import mute_logger
 
 
 @tagged('knowledge_internals')

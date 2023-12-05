@@ -3,12 +3,12 @@
 
 from functools import partial
 
-from odoo import _, api, fields, models
-from odoo.tools import frozendict, float_round
-from odoo.tools.misc import formatLang, format_date
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models
+from koda.tools import frozendict, float_round
+from koda.tools.misc import formatLang, format_date
+from koda.exceptions import ValidationError
 
-from odoo.addons.l10n_ec_edi.models.account_tax import L10N_EC_TAXSUPPORTS
+from koda.addons.l10n_ec_edi.models.account_tax import L10N_EC_TAXSUPPORTS
 
 L10N_EC_VAT_RATES = {
     2: 12.0,

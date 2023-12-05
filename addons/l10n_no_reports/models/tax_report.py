@@ -4,10 +4,10 @@ import logging
 
 from lxml import etree
 
-from odoo import fields, models, release, _
-from odoo.exceptions import UserError
-from odoo.tools import date_utils
-from odoo.tools.misc import get_lang
+from koda import fields, models, release, _
+from koda.exceptions import UserError
+from koda.tools import date_utils
+from koda.tools.misc import get_lang
 
 _logger = logging.getLogger(__name__)
 

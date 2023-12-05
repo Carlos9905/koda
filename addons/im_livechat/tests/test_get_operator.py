@@ -1,7 +1,7 @@
 import odoo
-from odoo import Command
-from odoo.tests import HttpCase
-from odoo.tests.common import new_test_user
+from koda import Command
+from koda.tests import HttpCase
+from koda.tests.common import new_test_user
 
 from unittest.mock import patch
 

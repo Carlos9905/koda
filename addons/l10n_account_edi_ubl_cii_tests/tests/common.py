@@ -5,9 +5,9 @@ from freezegun import freeze_time
 from collections import Counter
 from os.path import join as opj
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo import fields
-from odoo.tools import misc
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda import fields
+from koda.tools import misc
 
 from lxml import etree
 

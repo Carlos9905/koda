@@ -13,16 +13,16 @@ from functools import partial
 from lxml import html
 from unittest.mock import patch
 
-from odoo.addons.base.models.ir_mail_server import IrMailServer
-from odoo.addons.base.tests.common import MockSmtplibCase
-from odoo.addons.bus.models.bus import ImBus, json_dump
-from odoo.addons.mail.models.mail_mail import MailMail
-from odoo.addons.mail.models.mail_message import Message
-from odoo.addons.mail.models.mail_notification import MailNotification
-from odoo.addons.mail.models.res_users import Users
-from odoo.tests import common, new_test_user
-from odoo.tools import email_normalize, formataddr, mute_logger, pycompat
-from odoo.tools.translate import code_translations
+from koda.addons.base.models.ir_mail_server import IrMailServer
+from koda.addons.base.tests.common import MockSmtplibCase
+from koda.addons.bus.models.bus import ImBus, json_dump
+from koda.addons.mail.models.mail_mail import MailMail
+from koda.addons.mail.models.mail_message import Message
+from koda.addons.mail.models.mail_notification import MailNotification
+from koda.addons.mail.models.res_users import Users
+from koda.tests import common, new_test_user
+from koda.tools import email_normalize, formataddr, mute_logger, pycompat
+from koda.tools.translate import code_translations
 
 mail_new_test_user = partial(new_test_user, context={'mail_create_nolog': True,
                                                      'mail_create_nosubscribe': True,

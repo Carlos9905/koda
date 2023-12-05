@@ -6,9 +6,9 @@ from urllib3.contrib.pyopenssl import inject_into_urllib3
 from OpenSSL.crypto import load_certificate, load_privatekey, FILETYPE_PEM
 from zeep.transports import Transport
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import html_escape
+from koda import fields, models, _
+from koda.exceptions import UserError
+from koda.tools import html_escape
 
 import math
 import json

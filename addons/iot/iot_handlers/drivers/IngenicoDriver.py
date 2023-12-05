@@ -7,9 +7,9 @@ from traceback import format_exc
 from zlib import crc32
 import socket
 
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.iot_handlers.interfaces.SocketInterface import socket_devices
+from koda.addons.hw_drivers.driver import Driver
+from koda.addons.hw_drivers.event_manager import event_manager
+from koda.addons.hw_drivers.iot_handlers.interfaces.SocketInterface import socket_devices
 
 _logger = logging.getLogger(__name__)
 
@@ -781,7 +781,7 @@ class IngenicoDriver(Driver):
                 self._protocolId, messageType, self._getSequence(), **kwargs)
 
     def _action_default(self, data):
-        """Action trigered on request from Odoo.
+        """Action trigered on request from koda.
         Override
         """
         try:

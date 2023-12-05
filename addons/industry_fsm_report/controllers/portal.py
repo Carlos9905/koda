@@ -3,10 +3,10 @@
 
 import binascii
 
-from odoo import _
-from odoo.exceptions import AccessError, MissingError
-from odoo.http import request, route
-from odoo.addons.industry_fsm.controllers.portal import CustomerPortal
+from koda import _
+from koda.exceptions import AccessError, MissingError
+from koda.http import request, route
+from koda.addons.industry_fsm.controllers.portal import CustomerPortal
 
 
 class CustomerFsmPortal(CustomerPortal):

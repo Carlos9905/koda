@@ -3,8 +3,8 @@
 
 import base64
 import re
-from odoo import models, fields, tools, _
-from odoo.exceptions import RedirectWarning, ValidationError
+from koda import models, fields, tools, _
+from koda.exceptions import RedirectWarning, ValidationError
 
 
 class L10nLuGenerateXML(models.TransientModel):

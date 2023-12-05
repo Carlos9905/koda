@@ -5,9 +5,9 @@ from base64 import b64decode
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import tagged
-from odoo import Command, fields
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
+from koda import Command, fields
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

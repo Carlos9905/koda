@@ -2,8 +2,8 @@
 import base64
 import math
 
-from odoo import fields, models, _
-from odoo.exceptions import ValidationError
+from koda import fields, models, _
+from koda.exceptions import ValidationError
 
 
 class AccountBatchPayment(models.Model):

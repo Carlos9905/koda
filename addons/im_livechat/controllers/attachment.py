@@ -2,11 +2,11 @@
 
 from werkzeug.exceptions import NotFound
 
-from odoo import _
-from odoo.http import route, request
-from odoo.addons.mail.controllers.attachment import AttachmentController
-from odoo.exceptions import AccessError
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from koda import _
+from koda.http import route, request
+from koda.addons.mail.controllers.attachment import AttachmentController
+from koda.exceptions import AccessError
+from koda.addons.mail.models.discuss.mail_guest import add_guest_to_context
 
 
 class LivechatAttachmentController(AttachmentController):

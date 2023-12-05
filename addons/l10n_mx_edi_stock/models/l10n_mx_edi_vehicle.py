@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, models, fields, _
-from odoo.exceptions import ValidationError
+from koda import api, models, fields, _
+from koda.exceptions import ValidationError
 
 class Vehicle(models.Model):
     _name = 'l10n_mx_edi.vehicle'

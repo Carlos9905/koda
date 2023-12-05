@@ -3,8 +3,8 @@ import base64
 from pytz import timezone
 from datetime import datetime
 
-from odoo.tools import misc
-from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
+from koda.tools import misc
+from koda.addons.account_edi.tests.common import AccountEdiTestCommon
 
 
 class TestEsEdiCommon(AccountEdiTestCommon):

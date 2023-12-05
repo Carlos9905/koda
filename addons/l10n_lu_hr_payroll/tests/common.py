@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import TransactionCase
-from odoo.tests import tagged
+from koda.tests.common import TransactionCase
+from koda.tests import tagged
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class TestLuPayrollCommon(TransactionCase):

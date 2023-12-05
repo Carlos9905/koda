@@ -6,9 +6,9 @@ import json
 import pathlib
 import zipfile
 
-from odoo import http
-from odoo.http import request
-from odoo.modules import get_module_path
+from koda import http
+from koda.http import request
+from koda.modules import get_module_path
 
 
 class IoTController(http.Controller):

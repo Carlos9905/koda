@@ -4,9 +4,9 @@
 from ast import literal_eval
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.osv import expression
 
 
 class Task(models.Model):

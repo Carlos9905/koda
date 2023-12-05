@@ -6,7 +6,7 @@ import json
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
 
 def mocked_l10n_es_edi_call_web_service_sign(edi_format, invoices, info_list):

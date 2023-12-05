@@ -1,7 +1,7 @@
 # Koda
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
 
 
 class HrEmployee(models.Model):

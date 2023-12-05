@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import io
-from odoo import _, models
-from odoo.tools.misc import xlsxwriter
-from odoo import fields
+from koda import _, models
+from koda.tools.misc import xlsxwriter
+from koda import fields
 
 
 class AccountGenericTaxReport(models.AbstractModel):

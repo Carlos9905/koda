@@ -1,9 +1,9 @@
 from datetime import datetime
 from pytz import timezone
 
-from odoo.fields import Command
-from odoo.tests import tagged
-from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
+from koda.fields import Command
+from koda.tests import tagged
+from koda.addons.account_edi.tests.common import AccountEdiTestCommon
 
 
 class TestEGEdiCommon(AccountEdiTestCommon):

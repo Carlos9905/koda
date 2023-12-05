@@ -4,9 +4,9 @@ from markupsafe import Markup
 from lxml import etree
 from datetime import datetime
 from base64 import b64encode, b64decode
-from odoo import models, fields, service, _, api
-from odoo.exceptions import UserError
-from odoo.tools.misc import file_open
+from koda import models, fields, service, _, api
+from koda.exceptions import UserError
+from koda.tools.misc import file_open
 from requests.exceptions import HTTPError, RequestException
 from cryptography import x509
 from cryptography.x509 import ObjectIdentifier, load_der_x509_certificate

@@ -4,8 +4,8 @@
 import re
 
 import odoo
-from odoo import _, api, fields, models, tools
-from odoo.osv import expression
+from koda import _, api, fields, models, tools
+from koda.osv import expression
 
 class Partner(models.Model):
     """ Update partner to add a field about notification preferences. Add a generic opt-out field that can be used

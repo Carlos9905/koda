@@ -4,8 +4,8 @@ from gi.repository import GLib
 import logging
 from threading import Thread
 
-from odoo.addons.hw_drivers.interface import Interface
-from odoo.addons.hw_drivers.main import iot_devices
+from koda.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.main import iot_devices
 
 bt_devices = {}
 

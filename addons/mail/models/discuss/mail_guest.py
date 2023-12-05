@@ -7,13 +7,13 @@ from functools import wraps
 from inspect import Parameter, signature
 
 import odoo
-from odoo.tools import consteq, get_lang
-from odoo import _, api, fields, models
-from odoo.http import request
-from odoo.addons.base.models.res_partner import _tz_get
-from odoo.exceptions import UserError
-from odoo.addons.bus.models.bus_presence import AWAY_TIMER, DISCONNECTION_TIMER
-from odoo.addons.bus.websocket import wsrequest
+from koda.tools import consteq, get_lang
+from koda import _, api, fields, models
+from koda.http import request
+from koda.addons.base.models.res_partner import _tz_get
+from koda.exceptions import UserError
+from koda.addons.bus.models.bus_presence import AWAY_TIMER, DISCONNECTION_TIMER
+from koda.addons.bus.websocket import wsrequest
 
 
 def add_guest_to_context(func):

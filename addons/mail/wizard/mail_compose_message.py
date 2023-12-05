@@ -6,11 +6,11 @@ import base64
 import datetime
 import logging
 
-from odoo import _, api, fields, models, tools, Command
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import is_html_empty
-from odoo.addons.mail.tools.parser import parse_res_ids
+from koda import _, api, fields, models, tools, Command
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
+from koda.tools import is_html_empty
+from koda.addons.mail.tools.parser import parse_res_ids
 
 
 def _reopen(self, res_id, model, context=None):

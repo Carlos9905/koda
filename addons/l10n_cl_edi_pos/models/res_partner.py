@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo import models, api
-from odoo.exceptions import UserError
-from odoo.tools.translate import _
+from koda import models, api
+from koda.exceptions import UserError
+from koda.tools.translate import _
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'

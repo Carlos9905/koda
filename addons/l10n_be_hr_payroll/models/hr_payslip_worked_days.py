@@ -5,8 +5,8 @@ import pytz
 
 from datetime import timedelta
 
-from odoo import api, fields, models
-from odoo.tools.float_utils import float_compare
+from koda import api, fields, models
+from koda.tools.float_utils import float_compare
 
 
 class HrPayslipWorkedDays(models.Model):

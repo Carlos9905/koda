@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.tools import pycompat, float_repr
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.tools import pycompat, float_repr
+from koda.exceptions import UserError
 
 from datetime import datetime
 from collections import namedtuple

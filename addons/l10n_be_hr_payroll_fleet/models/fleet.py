@@ -3,11 +3,11 @@
 
 import babel.dates
 
-from odoo import api, fields, models
-from odoo.tools.misc import format_date
-from odoo.tools.float_utils import float_round
+from koda import api, fields, models
+from koda.tools.misc import format_date
+from koda.tools.float_utils import float_round
 
-from odoo.fields import Datetime, Date
+from koda.fields import Datetime, Date
 
 
 class FleetVehicle(models.Model):

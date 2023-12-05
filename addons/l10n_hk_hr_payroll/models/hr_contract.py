@@ -3,7 +3,7 @@
 
 import pytz
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class HrContract(models.Model):

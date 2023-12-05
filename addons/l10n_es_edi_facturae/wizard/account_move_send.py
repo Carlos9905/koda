@@ -1,4 +1,4 @@
-from odoo import _, api, fields, models, SUPERUSER_ID
+from koda import _, api, fields, models, SUPERUSER_ID
 
 
 class AccountMoveSend(models.TransientModel):

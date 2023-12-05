@@ -2,11 +2,11 @@
 import base64
 import logging
 
-from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
+from koda.addons.account_edi.tests.common import AccountEdiTestCommon
 
-from odoo import fields
-from odoo.tests import tagged
-from odoo.tools import misc, os, relativedelta
+from koda import fields
+from koda.tests import tagged
+from koda.tools import misc, os, relativedelta
 
 _logger = logging.getLogger(__name__)
 

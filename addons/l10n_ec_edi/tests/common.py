@@ -3,9 +3,9 @@
 
 from datetime import datetime
 
-from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
-from odoo.tests import tagged
-from odoo import Command
+from koda.addons.account_edi.tests.common import AccountEdiTestCommon
+from koda.tests import tagged
+from koda import Command
 from pytz import timezone
 from freezegun import freeze_time
 

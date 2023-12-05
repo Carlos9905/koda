@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
+from koda import fields, models, _
+from koda.exceptions import UserError
 import odoo.release
-from odoo.tools.float_utils import float_split_str
+from koda.tools.float_utils import float_split_str
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta

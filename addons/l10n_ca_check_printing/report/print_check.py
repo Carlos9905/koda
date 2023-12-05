@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models
-from odoo.tools.misc import format_date
+from koda import models
+from koda.tools.misc import format_date
 
 
 class report_print_check(models.Model):

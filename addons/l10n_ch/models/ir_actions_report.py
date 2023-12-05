@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import io
-from odoo import api, models
-from odoo.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
+from koda import api, models
+from koda.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
 from pathlib import Path
 from reportlab.graphics.shapes import Image as ReportLabImage
 from reportlab.lib.units import mm

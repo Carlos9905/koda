@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from freezegun import freeze_time
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
-from odoo import Command, fields
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda import Command, fields
+from koda.exceptions import UserError
+from koda.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
@@ -680,7 +680,7 @@ class TestResPartner(AccountTestInvoicingCommon):
         }])
 
     def test_325_50_invoicing_and_paying_subpartner_should_impact_commercial_partner_legacy_issue(self):
-        """ In previous version from Odoo, the aml could get the partner_id instead of the commercial_partner_id
+        """ In previous version from koda, the aml could get the partner_id instead of the commercial_partner_id
         set as a partner
         """
         parent_partner = self.env['res.partner'].create({

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, api, fields, _
-from odoo.exceptions import UserError
+from koda import models, api, fields, _
+from koda.exceptions import UserError
 from datetime import datetime
-from odoo.fields import Datetime, Date
-from odoo.tools.misc import format_date
+from koda.fields import Datetime, Date
+from koda.tools.misc import format_date
 import pytz
 
 

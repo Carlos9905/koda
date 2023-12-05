@@ -5,9 +5,9 @@ import re
 from datetime import datetime
 from io import StringIO
 
-from odoo import _, api, models
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.exceptions import UserError
+from koda import _, api, models
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT
+from koda.exceptions import UserError
 
 
 class PeruvianTaxPleReportCustomHandler(models.AbstractModel):

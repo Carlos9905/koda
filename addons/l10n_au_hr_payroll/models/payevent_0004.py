@@ -5,8 +5,8 @@ from lxml import etree
 from datetime import date
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.tools.misc import file_path
+from koda import api, fields, models, _
+from koda.tools.misc import file_path
 
 
 class L10nAuPayEvent0004(models.Model):

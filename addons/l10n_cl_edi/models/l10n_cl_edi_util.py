@@ -22,7 +22,7 @@ from zeep.exceptions import TransportError
 from zeep.transports import Transport
 
 
-from odoo import _, models, fields, tools
+from koda import _, models, fields, tools
 
 _logger = logging.getLogger(__name__)
 

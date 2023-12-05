@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 
 from datetime import datetime
-from odoo.addons.industry_fsm_sale.tests.common import TestFsmFlowSaleCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda.addons.industry_fsm_sale.tests.common import TestFsmFlowSaleCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
 
 
 @tagged('-at_install', 'post_install')

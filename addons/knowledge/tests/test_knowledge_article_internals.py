@@ -4,10 +4,10 @@
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import exceptions
-from odoo.addons.knowledge.tests.common import KnowledgeCommonWData
-from odoo.tests.common import tagged, users
-from odoo.tools import mute_logger
+from koda import exceptions
+from koda.addons.knowledge.tests.common import KnowledgeCommonWData
+from koda.tests.common import tagged, users
+from koda.tools import mute_logger
 
 
 @tagged('knowledge_internals')

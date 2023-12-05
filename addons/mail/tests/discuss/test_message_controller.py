@@ -3,10 +3,10 @@
 import json
 
 import odoo
-from odoo.tools import mute_logger, date_utils
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.http import STATIC_CACHE_LONG
-from odoo import Command
+from koda.tools import mute_logger, date_utils
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.http import STATIC_CACHE_LONG
+from koda import Command
 
 
 @odoo.tests.tagged("-at_install", "post_install")

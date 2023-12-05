@@ -7,11 +7,11 @@ from lxml import etree
 from markupsafe import Markup
 from psycopg2 import OperationalError
 
-from odoo import models, fields, _
-from odoo.addons.l10n_cl_edi.models.l10n_cl_edi_util import UnexpectedXMLResponse
-from odoo.exceptions import UserError
-from odoo.tools import float_repr, html_escape
-from odoo.tools import BytesIO
+from koda import models, fields, _
+from koda.addons.l10n_cl_edi.models.l10n_cl_edi_util import UnexpectedXMLResponse
+from koda.exceptions import UserError
+from koda.tools import float_repr, html_escape
+from koda.tools import BytesIO
 
 _logger = logging.getLogger(__name__)
 

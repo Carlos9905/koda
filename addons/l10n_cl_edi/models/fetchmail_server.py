@@ -10,10 +10,10 @@ from lxml import etree
 from markupsafe import Markup
 from xmlrpc import client as xmlrpclib
 
-from odoo import api, fields, models, _, Command
-from odoo.exceptions import ValidationError
-from odoo.tools import float_compare
-from odoo.tools.misc import formatLang
+from koda import api, fields, models, _, Command
+from koda.exceptions import ValidationError
+from koda.tools import float_compare
+from koda.tools.misc import formatLang
 
 _logger = logging.getLogger(__name__)
 

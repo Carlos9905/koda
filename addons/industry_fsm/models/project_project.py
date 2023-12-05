@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, api, _
-from odoo.osv import expression
+from koda import fields, models, api, _
+from koda.osv import expression
 
 
 class Project(models.Model):

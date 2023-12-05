@@ -8,10 +8,10 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from dateutil.rrule import rrule, DAILY
 
-from odoo import api, fields, models, _
-from odoo.tools import float_round, date_utils
-from odoo.tools.float_utils import float_compare
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.tools import float_round, date_utils
+from koda.tools.float_utils import float_compare
+from koda.exceptions import ValidationError
 
 EMPLOYER_ONSS = 0.2714
 

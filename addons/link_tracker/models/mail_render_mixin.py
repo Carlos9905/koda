@@ -7,7 +7,7 @@ import markupsafe
 from html import unescape
 from werkzeug import urls
 
-from odoo import api, models, tools
+from koda import api, models, tools
 
 
 class MailRenderMixin(models.AbstractModel):

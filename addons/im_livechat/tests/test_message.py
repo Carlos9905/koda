@@ -3,8 +3,8 @@
 
 from markupsafe import Markup
 
-from odoo import Command
-from odoo.tests.common import users, tagged, HttpCase
+from koda import Command
+from koda.tests.common import users, tagged, HttpCase
 
 
 @tagged('post_install', '-at_install')

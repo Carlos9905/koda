@@ -1,6 +1,6 @@
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError, ValidationError, RedirectWarning
-from odoo.tools.misc import format_date
+from koda import fields, models, api, _
+from koda.exceptions import UserError, ValidationError, RedirectWarning
+from koda.tools.misc import format_date
 
 import json
 import os

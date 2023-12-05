@@ -1,6 +1,6 @@
 # coding: utf-8
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, fields
+from koda import models, fields
 
 
 class Box1099(models.Model):

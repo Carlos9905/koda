@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import route
-from odoo.addons.im_livechat.controllers.main import LivechatController
-from odoo.addons.im_livechat.tools.misc import downgrade_to_public_user, force_guest_env
+from koda.http import route
+from koda.addons.im_livechat.controllers.main import LivechatController
+from koda.addons.im_livechat.tools.misc import downgrade_to_public_user, force_guest_env
 
 
 class CorsLivechatController(LivechatController):

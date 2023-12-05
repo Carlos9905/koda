@@ -6,10 +6,10 @@
 import base64
 import io
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, AccessDenied
-from odoo.tools import float_is_zero, pycompat
-from odoo.tools.misc import get_lang
+from koda import api, fields, models, _
+from koda.exceptions import UserError, AccessDenied
+from koda.tools import float_is_zero, pycompat
+from koda.tools.misc import get_lang
 from stdnum.fr import siren
 
 

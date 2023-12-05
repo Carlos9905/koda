@@ -10,8 +10,8 @@ from poplib import POP3, POP3_SSL
 from socket import gaierror, timeout
 from ssl import SSLError
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, tools, _
+from koda.exceptions import UserError
 
 
 _logger = logging.getLogger(__name__)

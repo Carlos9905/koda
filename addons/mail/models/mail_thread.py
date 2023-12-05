@@ -25,11 +25,11 @@ from werkzeug import urls
 from xmlrpc import client as xmlrpclib
 from markupsafe import Markup, escape
 
-from odoo import _, api, exceptions, fields, models, tools, registry, SUPERUSER_ID, Command
-from odoo.exceptions import MissingError, AccessError
-from odoo.osv import expression
-from odoo.tools import is_html_empty, html_escape, html2plaintext, parse_contact_from_email
-from odoo.tools.misc import clean_context, split_every
+from koda import _, api, exceptions, fields, models, tools, registry, SUPERUSER_ID, Command
+from koda.exceptions import MissingError, AccessError
+from koda.osv import expression
+from koda.tools import is_html_empty, html_escape, html2plaintext, parse_contact_from_email
+from koda.tools.misc import clean_context, split_every
 
 from requests import Session
 from ..web_push import push_to_end_point, DeviceUnreachableError

@@ -3,9 +3,9 @@
 
 from markupsafe import Markup
 
-from odoo.addons.mail.tests import common
-from odoo.exceptions import AccessError
-from odoo.tests import tagged, users
+from koda.addons.mail.tests import common
+from koda.exceptions import AccessError
+from koda.tests import tagged, users
 
 
 class TestMailRenderCommon(common.MailCommon):

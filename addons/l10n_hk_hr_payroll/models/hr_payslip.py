@@ -8,10 +8,10 @@ from collections import defaultdict
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools.float_utils import float_compare
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools.float_utils import float_compare
 
 
 class Payslip(models.Model):

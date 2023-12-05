@@ -1,6 +1,6 @@
 # Koda
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class L10nAuSuperFund(models.Model):

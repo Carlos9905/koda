@@ -5,7 +5,7 @@ from datetime import datetime, date
 from math import floor
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 PERIODS_PER_YEAR = {
     "daily": 260,

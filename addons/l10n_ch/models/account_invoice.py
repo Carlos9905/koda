@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import re
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
-from odoo.tools.misc import mod10r
+from koda import models, fields, api, _
+from koda.exceptions import UserError
+from koda.tools.misc import mod10r
 
 L10N_CH_QRR_NUMBER_LENGTH = 27
 

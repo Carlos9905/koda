@@ -1,7 +1,7 @@
 from contextlib import contextmanager
 
-from odoo.addons.l10n_mx_edi.tests.common import TestMxEdiCommon
-from odoo.addons.point_of_sale.tests.common import TestPoSCommon
+from koda.addons.l10n_mx_edi.tests.common import TestMxEdiCommon
+from koda.addons.point_of_sale.tests.common import TestPoSCommon
 
 
 class TestMxEdiPosCommon(TestMxEdiCommon, TestPoSCommon):

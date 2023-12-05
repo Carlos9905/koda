@@ -4,8 +4,8 @@
 
 from datetime import date, datetime
 
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
 
 
 

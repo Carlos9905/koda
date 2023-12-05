@@ -13,8 +13,8 @@ from datetime import date, timedelta
 import stdnum.mx
 from werkzeug.urls import url_encode
 
-from odoo import _, api, fields, models, tools
-from odoo.exceptions import RedirectWarning, UserError, ValidationError
+from koda import _, api, fields, models, tools
+from koda.exceptions import RedirectWarning, UserError, ValidationError
 
 # Order number is constrained by this pattern, an example is given.
 ORDER_NUMBER_PATTERN = re.compile('^[A-Z]{3}[0-6][0-9][0-9]{5}(/)[0-9]{2}$')

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from koda import models, fields
 
 class Vehicle(models.Model):
     _inherit = 'l10n_mx_edi.vehicle'

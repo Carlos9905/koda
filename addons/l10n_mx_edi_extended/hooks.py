@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from os.path import join, dirname, realpath
-from odoo import tools
-from odoo.tools.misc import file_open
+from koda import tools
+from koda.tools.misc import file_open
 import csv
 
 

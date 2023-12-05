@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import base64
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError
 import uuid
 
 

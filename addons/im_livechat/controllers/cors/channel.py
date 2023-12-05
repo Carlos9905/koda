@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import route
-from odoo.addons.mail.controllers.discuss.channel import ChannelController
-from odoo.addons.im_livechat.tools.misc import force_guest_env
+from koda.http import route
+from koda.addons.mail.controllers.discuss.channel import ChannelController
+from koda.addons.im_livechat.tools.misc import force_guest_env
 
 
 class LivechatChannelController(ChannelController):

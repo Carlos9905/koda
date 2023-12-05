@@ -4,9 +4,9 @@ import logging
 import requests
 from dateutil.relativedelta import relativedelta
 
-from odoo import models, _, fields
-from odoo.exceptions import UserError
-from odoo.addons.l10n_be_codabox.const import get_error_msg, get_iap_endpoint
+from koda import models, _, fields
+from koda.exceptions import UserError
+from koda.addons.l10n_be_codabox.const import get_error_msg, get_iap_endpoint
 
 _logger = logging.getLogger(__name__)
 

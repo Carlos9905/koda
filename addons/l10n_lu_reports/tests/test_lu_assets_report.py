@@ -3,9 +3,9 @@
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import tagged
-from odoo.tests.common import Form
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
+from koda.tests.common import Form
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class LuxembourgAssetsReportTaxesTest(TestAccountReportsCommon):

@@ -5,12 +5,12 @@ import json
 
 from lxml import etree
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError
-from odoo.modules.module import get_resource_from_path
-from odoo.tools.convert import xml_import
-from odoo.tools.misc import file_path
-from odoo.tools.translate import TranslationImporter, get_po_paths
+from koda import api, fields, models, tools, _
+from koda.exceptions import UserError
+from koda.modules.module import get_resource_from_path
+from koda.tools.convert import xml_import
+from koda.tools.misc import file_path
+from koda.tools.translate import TranslationImporter, get_po_paths
 
 
 class TemplateResetMixin(models.AbstractModel):

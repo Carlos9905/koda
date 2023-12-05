@@ -10,7 +10,7 @@ from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
-from odoo.tools import consteq
+from koda.tools import consteq
 
 XMLSIG_NSMAP = {"ds": "http://www.w3.org/2000/09/xmldsig#"}
 

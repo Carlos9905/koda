@@ -1,7 +1,7 @@
 # Koda
-from odoo import Command, _, models
+from koda import Command, _, models
 
-from odoo.addons.account.models.chart_template import template
+from koda.addons.account.models.chart_template import template
 
 
 class AccountChartTemplate(models.AbstractModel):

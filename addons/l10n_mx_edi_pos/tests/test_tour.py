@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import odoo
-from odoo.tests import tagged
-from odoo.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
-from odoo.addons.l10n_mx_edi.tests.common import TestMxEdiCommon
+from koda.tests import tagged
+from koda.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
+from koda.addons.l10n_mx_edi.tests.common import TestMxEdiCommon
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

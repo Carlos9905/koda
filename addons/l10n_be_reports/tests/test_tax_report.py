@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.account_reports.tests.account_sales_report_common import AccountSalesReportCommon
-from odoo.tests import tagged
+from koda import Command
+from koda.addons.account_reports.tests.account_sales_report_common import AccountSalesReportCommon
+from koda.tests import tagged
 from freezegun import freeze_time
 
 

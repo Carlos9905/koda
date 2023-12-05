@@ -6,7 +6,7 @@ from lxml import etree, objectify
 from os.path import join
 from werkzeug.urls import url_quote
 
-from odoo import api, models, tools
+from koda import api, models, tools
 
 
 class IrAttachment(models.Model):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
-from odoo.tools import email_normalize, html_escape, html2plaintext, plaintext2html
+from koda import api, fields, models, _
+from koda.osv import expression
+from koda.tools import email_normalize, html_escape, html2plaintext, plaintext2html
 
 from markupsafe import Markup
 

@@ -16,16 +16,16 @@ from lxml import etree
 from pytz import timezone
 from requests.exceptions import RequestException
 
-from odoo import _, models, release
-from odoo.addons.l10n_es_edi_sii.models.account_edi_format import PatchedHTTPAdapter
-from odoo.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key
-from odoo.addons.l10n_es_edi_tbai.models.xml_utils import (
+from koda import _, models, release
+from koda.addons.l10n_es_edi_sii.models.account_edi_format import PatchedHTTPAdapter
+from koda.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key
+from koda.addons.l10n_es_edi_tbai.models.xml_utils import (
     NS_MAP, bytes_as_block, calculate_references_digests,
     cleanup_xml_signature, fill_signature, int_as_bytes)
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import get_lang
-from odoo.tools.float_utils import float_repr
-from odoo.tools.xml_utils import cleanup_xml_node, validate_xml_from_attachment
+from koda.exceptions import UserError, ValidationError
+from koda.tools import get_lang
+from koda.tools.float_utils import float_repr
+from koda.tools.xml_utils import cleanup_xml_node, validate_xml_from_attachment
 
 
 class AccountEdiFormat(models.Model):

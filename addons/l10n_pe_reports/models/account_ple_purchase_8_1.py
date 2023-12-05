@@ -1,6 +1,6 @@
 # Koda
 
-from odoo import models
+from koda import models
 
 
 class PeruvianTaxPle81ReportCustomHandler(models.AbstractModel):

@@ -4,8 +4,8 @@
 from collections import defaultdict
 import pytz
 
-from odoo import models
-from odoo.addons.resource.models.utils import datetime_to_string
+from koda import models
+from koda.addons.resource.models.utils import datetime_to_string
 
 
 class HrContract(models.Model):

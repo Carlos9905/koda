@@ -9,9 +9,9 @@ import datetime
 import io
 import logging
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError, RedirectWarning
-from odoo.tools import float_repr, float_is_zero, get_lang
+from koda import _, fields, models
+from koda.exceptions import UserError, RedirectWarning
+from koda.tools import float_repr, float_is_zero, get_lang
 
 _logger = logging.getLogger(__name__)
 

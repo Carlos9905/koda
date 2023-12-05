@@ -6,8 +6,8 @@ import collections
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 
 class L10nBeSocialBalanceSheet(models.TransientModel):

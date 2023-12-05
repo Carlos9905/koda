@@ -9,10 +9,10 @@ import markupsafe
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import models, fields, api, _
-from odoo.tools import html_escape, float_is_zero, float_compare
-from odoo.exceptions import AccessError, ValidationError
-from odoo.addons.iap import jsonrpc
+from koda import models, fields, api, _
+from koda.tools import html_escape, float_is_zero, float_compare
+from koda.exceptions import AccessError, ValidationError
+from koda.addons.iap import jsonrpc
 import logging
 
 _logger = logging.getLogger(__name__)

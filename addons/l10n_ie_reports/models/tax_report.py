@@ -4,9 +4,9 @@ import stdnum.ie.pps
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, models, fields, _
-from odoo.tools import float_repr, float_round
-from odoo.exceptions import UserError
+from koda import api, models, fields, _
+from koda.tools import float_repr, float_round
+from koda.exceptions import UserError
 
 
 class IeTaxReportCustomHandler(models.AbstractModel):

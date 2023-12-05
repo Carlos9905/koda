@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.knowledge.tests.common import  KnowledgeArticlePermissionsCase
-from odoo.tests.common import tagged, users
-from odoo.exceptions import AccessError
+from koda.addons.knowledge.tests.common import  KnowledgeArticlePermissionsCase
+from koda.tests.common import tagged, users
+from koda.exceptions import AccessError
 
 @tagged('knowledge_comments')
 class TestKnowledgeArticleThreadPermissions(KnowledgeArticlePermissionsCase):

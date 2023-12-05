@@ -4,8 +4,8 @@
 import ast
 import json
 
-from odoo import _, api, fields, models
-from odoo.osv import expression
+from koda import _, api, fields, models
+from koda.osv import expression
 
 class LoyaltyReward(models.Model):
     _name = 'loyalty.reward'

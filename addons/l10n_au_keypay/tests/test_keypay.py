@@ -5,7 +5,7 @@ import datetime
 import os
 from unittest import skipIf
 
-from odoo.tests.common import tagged, TransactionCase
+from koda.tests.common import tagged, TransactionCase
 
 
 @tagged('external_l10n', 'external', 'post_install', '-at_install')

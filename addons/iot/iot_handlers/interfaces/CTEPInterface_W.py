@@ -5,8 +5,8 @@ import ctypes
 from pathlib import Path
 import os
 
-from odoo.addons.hw_drivers.interface import Interface
-from odoo.addons.hw_drivers.tools.helpers import download_from_url, unzip_file
+from koda.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.tools.helpers import download_from_url, unzip_file
 
 libPath = Path('odoo/addons/hw_drivers/iot_handlers/lib')
 easyCTEPPath = libPath / 'ctep_w/libeasyctep.dll'

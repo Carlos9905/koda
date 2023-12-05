@@ -2,8 +2,8 @@
 
 from collections import defaultdict
 
-from odoo import _, api, Command, fields, models, modules, tools
-from odoo.tools import email_normalize
+from koda import _, api, Command, fields, models, modules, tools
+from koda.tools import email_normalize
 
 
 class Users(models.Model):

@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # Koda
 
-from odoo import models, fields
+from koda import models, fields
 
 
 class l10nChLppInsurance(models.Model):

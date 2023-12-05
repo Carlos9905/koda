@@ -5,7 +5,7 @@ import logging
 
 from lxml import etree
 
-from odoo import api, models, tools
+from koda import api, models, tools
 
 _logger = logging.getLogger(__name__)
 

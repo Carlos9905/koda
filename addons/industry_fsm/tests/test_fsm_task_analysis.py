@@ -4,11 +4,11 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tests.common import users
-from odoo.tools import float_compare
+from koda import Command
+from koda.exceptions import AccessError
+from koda.tests import tagged
+from koda.tests.common import users
+from koda.tools import float_compare
 
 from .common import TestIndustryFsmCommon
 

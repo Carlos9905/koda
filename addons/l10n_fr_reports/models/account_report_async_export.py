@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api, _, _lt
-from odoo.exceptions import UserError
-from odoo.addons.iap.tools import iap_tools
+from koda import models, fields, api, _, _lt
+from koda.exceptions import UserError
+from koda.addons.iap.tools import iap_tools
 
 from datetime import timedelta
 import json
@@ -14,8 +14,8 @@ ERROR_CODE_TO_MSG = {
     'invalid_xml': _lt("The structure of the xml document is invalid."),
     'missing_deposit': _lt("No deposit_uid was provided."),
     'missing_declaration': _lt("No declaration_uid was provided."),
-    'unknown_deposit': _lt("This deposit is unknown from Odoo."),
-    'unknown_declaration': _lt("This declaration is unknown from Odoo."),
+    'unknown_deposit': _lt("This deposit is unknown from koda."),
+    'unknown_declaration': _lt("This declaration is unknown from koda."),
     'error_subscription': _lt("An error has occurred when trying to verify your subscription."),
     'dbuuid_not_exist': _lt("Your database uuid does not exist"),
     'not_enterprise': _lt("You do not have an Odoo enterprise subscription."),

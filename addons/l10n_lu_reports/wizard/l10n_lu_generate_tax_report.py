@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools.float_utils import float_compare
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.tools.float_utils import float_compare
 from dateutil.relativedelta import relativedelta
 from ..models.l10n_lu_tax_report_data import (YEARLY_SIMPLIFIED_NEW_TOTALS, YEARLY_SIMPLIFIED_FIELDS,
                                               YEARLY_MONTHLY_FIELDS_TO_DELETE, VAT_MANDATORY_FIELDS)

@@ -4,8 +4,8 @@ from collections import defaultdict
 
 import stdnum.ro
 
-from odoo import api, models, _
-from odoo.addons.account_edi_ubl_cii.models.account_edi_common import UOM_TO_UNECE_CODE
+from koda import api, models, _
+from koda.addons.account_edi_ubl_cii.models.account_edi_common import UOM_TO_UNECE_CODE
 
 
 class GeneralLedgerCustomHandler(models.AbstractModel):

@@ -5,9 +5,9 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from lxml import etree, objectify
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_compare
+from koda import api, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.tools import float_compare
 
 
 class LuxembourgishECSalesReportCustomHandler(models.AbstractModel):

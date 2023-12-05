@@ -1,5 +1,5 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import api, SUPERUSER_ID
+from koda import api, SUPERUSER_ID
 
 
 def migrate(cr, version):

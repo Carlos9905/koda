@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class TestKeMoveExport(AccountTestInvoicingCommon):

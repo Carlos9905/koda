@@ -4,8 +4,8 @@
 from lxml import etree
 from collections import defaultdict
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError, RedirectWarning
+from koda import models, fields, _
+from koda.exceptions import UserError, RedirectWarning
 
 
 class TrialBalanceCustomHandler(models.AbstractModel):

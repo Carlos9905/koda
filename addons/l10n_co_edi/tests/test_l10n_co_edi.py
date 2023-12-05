@@ -1,8 +1,8 @@
 # coding: utf-8
 
 from .common import TestCoEdiCommon
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class TestColombianInvoice(TestCoEdiCommon):

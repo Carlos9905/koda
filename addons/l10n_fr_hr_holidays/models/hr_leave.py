@@ -4,8 +4,8 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError
+from koda import fields, models, api, _
+from koda.exceptions import UserError
 
 class HrLeave(models.Model):
     _inherit = 'hr.leave'

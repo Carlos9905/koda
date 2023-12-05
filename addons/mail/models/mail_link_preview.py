@@ -7,8 +7,8 @@ from lxml import html
 from urllib.parse import urlparse
 import requests
 
-from odoo import api, models, fields, tools
-from odoo.addons.mail.tools import link_preview
+from koda import api, models, fields, tools
+from koda.addons.mail.tools import link_preview
 
 
 class LinkPreview(models.Model):

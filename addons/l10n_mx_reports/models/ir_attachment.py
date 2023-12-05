@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, tools
+from koda import api, models, tools
 
 XSD_INFOS = {
     'xsd_mx_cfdicoa_1_3.xsd': {

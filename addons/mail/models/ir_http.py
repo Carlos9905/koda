@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import odoo
-from odoo import models
-from odoo.http import request
+from koda import models
+from koda.http import request
 
 
 class IrHttp(models.AbstractModel):

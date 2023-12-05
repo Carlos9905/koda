@@ -1,10 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from pprint import pformat
 
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError, AccessError
-from odoo.tools import street_split
-from odoo.tools.safe_eval import json
+from koda import fields, models, api, _
+from koda.exceptions import UserError, AccessError
+from koda.tools import street_split
+from koda.tools.safe_eval import json
 
 
 class ResConfigSettings(models.TransientModel):

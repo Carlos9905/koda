@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from ast import literal_eval
 
-from odoo import api, models, _
-from odoo.exceptions import UserError
+from koda import api, models, _
+from koda.exceptions import UserError
 
 
 class WorksheetTemplate(models.Model):

@@ -4,7 +4,7 @@
 from datetime import date
 from collections import defaultdict
 
-from odoo import _, api, fields, models
+from koda import _, api, fields, models
 
 
 class L10nHkIr56g(models.Model):

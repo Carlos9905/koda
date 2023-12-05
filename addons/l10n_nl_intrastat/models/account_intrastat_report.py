@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
-from odoo import api, fields, models, release, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, release, _
+from koda.exceptions import ValidationError
 
 from datetime import datetime, date
 from math import copysign

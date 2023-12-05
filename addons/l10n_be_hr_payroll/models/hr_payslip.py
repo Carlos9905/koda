@@ -6,9 +6,9 @@ from dateutil.relativedelta import relativedelta, MO, SU
 from dateutil import rrule
 from collections import defaultdict
 from datetime import date, datetime, timedelta
-from odoo import api, models, fields, _
-from odoo.tools import float_round, date_utils, ormcache
-from odoo.exceptions import UserError
+from koda import api, models, fields, _
+from koda.tools import float_round, date_utils, ormcache
+from koda.exceptions import UserError
 
 
 class Payslip(models.Model):

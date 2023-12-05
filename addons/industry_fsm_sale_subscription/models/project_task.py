@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models
-from odoo.osv import expression
+from koda import models
+from koda.osv import expression
 
 
 class Task(models.Model):

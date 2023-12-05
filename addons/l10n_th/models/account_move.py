@@ -1,4 +1,4 @@
-from odoo import models
+from koda import models
 
 class AccountMove(models.Model):
     _inherit = "account.move"

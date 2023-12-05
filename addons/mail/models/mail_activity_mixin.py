@@ -6,9 +6,9 @@ from datetime import datetime
 import logging
 import pytz
 
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.tools import SQL
+from koda import api, fields, models
+from koda.osv import expression
+from koda.tools import SQL
 
 _logger = logging.getLogger(__name__)
 

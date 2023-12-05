@@ -4,9 +4,9 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from werkzeug.exceptions import NotFound
 
-from odoo import fields, http
-from odoo.http import request
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from koda import fields, http
+from koda.http import request
+from koda.addons.mail.models.discuss.mail_guest import add_guest_to_context
 
 
 class ChannelController(http.Controller):

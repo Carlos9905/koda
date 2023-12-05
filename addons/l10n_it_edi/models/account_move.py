@@ -7,11 +7,11 @@ from lxml import etree
 from markupsafe import escape
 import uuid
 
-from odoo import _, api, Command, fields, models
-from odoo.addons.base.models.ir_qweb_fields import Markup, nl2br, nl2br_enclose
-from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
-from odoo.exceptions import UserError
-from odoo.tools import float_compare, float_repr, cleanup_xml_node
+from koda import _, api, Command, fields, models
+from koda.addons.base.models.ir_qweb_fields import Markup, nl2br, nl2br_enclose
+from koda.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
+from koda.exceptions import UserError
+from koda.tools import float_compare, float_repr, cleanup_xml_node
 
 _logger = logging.getLogger(__name__)
 

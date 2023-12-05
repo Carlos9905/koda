@@ -5,10 +5,10 @@ import base64
 import itertools
 import logging
 
-from odoo import _, api, fields, models, tools, Command
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import is_html_empty
-from odoo.tools.safe_eval import safe_eval, time
+from koda import _, api, fields, models, tools, Command
+from koda.exceptions import ValidationError, UserError
+from koda.tools import is_html_empty
+from koda.tools.safe_eval import safe_eval, time
 
 _logger = logging.getLogger(__name__)
 

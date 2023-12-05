@@ -7,8 +7,8 @@ import time
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests.common import users, warmup, tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests.common import users, warmup, tagged
 
 _logger = logging.getLogger(__name__)
 

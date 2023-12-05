@@ -4,10 +4,10 @@
 from datetime import timedelta, datetime
 import pytz
 
-from odoo import Command, fields, models, api, _
-from odoo.osv import expression
-from odoo.tools import get_lang
-from odoo.addons.project.models.project_task import CLOSED_STATES
+from koda import Command, fields, models, api, _
+from koda.osv import expression
+from koda.tools import get_lang
+from koda.addons.project.models.project_task import CLOSED_STATES
 
 class Task(models.Model):
     _inherit = "project.task"

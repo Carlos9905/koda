@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0326
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
-from odoo.tests import tagged
-from odoo import fields, Command
+from koda.tests import tagged
+from koda import fields, Command
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

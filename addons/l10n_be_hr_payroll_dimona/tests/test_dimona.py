@@ -7,9 +7,9 @@ from dateutil.relativedelta import relativedelta
 
 import requests
 
-from odoo.addons.l10n_be_hr_payroll_dimona.models.hr_contract import HrContract
-from odoo.tests.common import TransactionCase
-from odoo.tests import tagged
+from koda.addons.l10n_be_hr_payroll_dimona.models.hr_contract import HrContract
+from koda.tests.common import TransactionCase
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install', 'post_install_l10n', 'dimona')

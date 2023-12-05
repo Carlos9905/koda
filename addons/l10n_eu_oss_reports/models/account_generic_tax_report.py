@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields, _
-from odoo.addons.l10n_eu_oss.models.eu_tax_map import EU_TAX_MAP
-from odoo.exceptions import UserError
+from koda import api, models, fields, _
+from koda.addons.l10n_eu_oss.models.eu_tax_map import EU_TAX_MAP
+from koda.exceptions import UserError
 
 from collections import defaultdict
 from lxml import etree, objectify

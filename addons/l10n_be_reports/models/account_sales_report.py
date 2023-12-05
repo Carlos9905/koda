@@ -4,8 +4,8 @@ import time
 
 from markupsafe import Markup
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError
+from koda import _, fields, models
+from koda.exceptions import UserError
 from .account_report import _raw_phonenumber, _get_xml_export_representative_node
 
 

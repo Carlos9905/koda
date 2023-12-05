@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 
-from odoo import fields, models
+from koda import fields, models
 
-from odoo.addons.sale.models.sale_order import INVOICE_STATUS
+from koda.addons.sale.models.sale_order import INVOICE_STATUS
 
 
 class ReportProjectTaskUser(models.Model):

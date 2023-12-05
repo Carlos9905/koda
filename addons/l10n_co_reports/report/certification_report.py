@@ -3,9 +3,9 @@
 
 from datetime import datetime
 
-from odoo import models, fields
-from odoo.exceptions import UserError
-from odoo.tools.translate import _
+from koda import models, fields
+from koda.exceptions import UserError
+from koda.tools.translate import _
 
 
 class CertificationReport(models.AbstractModel):

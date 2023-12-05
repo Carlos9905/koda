@@ -3,9 +3,9 @@
 
 import werkzeug
 
-from odoo import conf, http, tools, _
-from odoo.exceptions import AccessError, ValidationError
-from odoo.http import request
+from koda import conf, http, tools, _
+from koda.exceptions import AccessError, ValidationError
+from koda.http import request
 
 
 class KnowledgeController(http.Controller):

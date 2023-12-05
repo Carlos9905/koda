@@ -1,5 +1,5 @@
 # Koda
-from odoo import fields, models
+from koda import fields, models
 
 
 class AccountTax(models.Model):

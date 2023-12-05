@@ -6,10 +6,10 @@ import requests
 from lxml import etree
 from werkzeug.urls import url_quote, url_quote_plus
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.addons.base.models.ir_qweb import keep_query
+from koda import api, models, fields, _
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.addons.base.models.ir_qweb import keep_query
 
 MAPBOX_GEOCODE_URL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
 MAPBOX_MATRIX_URL = 'https://api.mapbox.com/directions-matrix/v1/mapbox/driving/'

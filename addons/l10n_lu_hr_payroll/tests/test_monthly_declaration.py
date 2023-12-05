@@ -4,8 +4,8 @@ import base64
 
 from datetime import date
 
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda.exceptions import UserError
+from koda.tests import tagged
 
 from .common import TestLuPayrollCommon
 

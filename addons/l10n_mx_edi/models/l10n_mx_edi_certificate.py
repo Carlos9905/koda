@@ -8,9 +8,9 @@ from datetime import datetime
 from lxml import etree
 from pytz import timezone
 
-from odoo import _, api, fields, models, tools
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import _, api, fields, models, tools
+from koda.exceptions import ValidationError, UserError
+from koda.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 _logger = logging.getLogger(__name__)
 

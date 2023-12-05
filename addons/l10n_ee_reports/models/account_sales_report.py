@@ -3,9 +3,9 @@
 from collections import defaultdict
 from lxml import etree, objectify
 
-from odoo import _, fields, models
-from odoo.exceptions import RedirectWarning, UserError
-from odoo.tools import float_round
+from koda import _, fields, models
+from koda.exceptions import RedirectWarning, UserError
+from koda.tools import float_round
 
 class EstonianECSalesReportCustomHandler(models.AbstractModel):
     _name = 'l10n_ee.ec.sales.report.handler'

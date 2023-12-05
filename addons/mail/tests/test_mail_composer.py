@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import AccessError
-from odoo.tests import Form, HttpCase, tagged, users
-from odoo.tools import mute_logger
+from koda.addons.mail.tests.common import MailCommon
+from koda.exceptions import AccessError
+from koda.tests import Form, HttpCase, tagged, users
+from koda.tools import mute_logger
 
 
 @tagged('mail_composer')

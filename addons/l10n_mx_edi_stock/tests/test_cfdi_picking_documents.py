@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from .common import TestMXEdiStockCommon
-from odoo import fields
-from odoo.tests import tagged
+from koda import fields
+from koda.tests import tagged
 
 from freezegun import freeze_time
 

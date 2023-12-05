@@ -8,10 +8,10 @@ from datetime import date
 from lxml import etree
 
 from dateutil.relativedelta import relativedelta
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import format_date
-from odoo.tools.misc import file_path
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import format_date
+from koda.tools.misc import file_path
 
 
 class L10nBe273S(models.Model):

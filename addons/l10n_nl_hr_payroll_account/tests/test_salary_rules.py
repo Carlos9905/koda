@@ -3,9 +3,9 @@
 
 import datetime
 
-from odoo.tests.common import tagged
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tools.float_utils import float_compare
+from koda.tests.common import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tools.float_utils import float_compare
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install', 'payslips_validation')

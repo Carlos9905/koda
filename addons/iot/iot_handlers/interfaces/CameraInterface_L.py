@@ -2,7 +2,7 @@ from fcntl import ioctl
 from glob import glob
 import v4l2
 
-from odoo.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.interface import Interface
 
 
 class CameraInterface(Interface):

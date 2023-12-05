@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, AccessError
+from koda import api, fields, models, _
+from koda.exceptions import UserError, AccessError
 
 class ProductProduct(models.Model):
     _inherit = 'product.product'

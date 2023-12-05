@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 from datetime import datetime
 
-from odoo import Command
-from odoo.exceptions import UserError, AccessError
-from odoo.tests import Form, common
-from odoo.addons.industry_fsm_sale.tests.common import TestFsmFlowSaleCommon
+from koda import Command
+from koda.exceptions import UserError, AccessError
+from koda.tests import Form, common
+from koda.addons.industry_fsm_sale.tests.common import TestFsmFlowSaleCommon
 
 
 @common.tagged('post_install', '-at_install')

@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
-from odoo import api, models, fields
+from koda import api, models, fields
 
 class L10nLuGenerateAccountsReport(models.TransientModel):
     """

@@ -4,8 +4,8 @@ import io
 import base64
 import logging
 
-from odoo import models, fields, api
-from odoo.tools import pycompat
+from koda import models, fields, api
+from koda.tools import pycompat
 
 _logger = logging.getLogger(__name__)
 

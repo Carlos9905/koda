@@ -3,7 +3,7 @@
 
 import base64
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class IrActionReport(models.Model):

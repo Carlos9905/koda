@@ -2,8 +2,8 @@
 
 from lxml import etree, objectify
 
-from odoo import _, fields, models
-from odoo.exceptions import RedirectWarning, UserError
+from koda import _, fields, models
+from koda.exceptions import RedirectWarning, UserError
 
 class EstonianTaxReportCustomHandler(models.AbstractModel):
     _name = 'l10n_ee.tax.report.handler'

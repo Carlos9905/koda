@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests.common import tagged
-from odoo.tools import mute_logger
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.mail.tests.common import MailCommon
+from koda.tests.common import tagged
+from koda.tools import mute_logger
 
 
 @tagged("post_install", "-at_install")

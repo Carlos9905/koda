@@ -6,9 +6,9 @@ from datetime import datetime
 from collections import defaultdict
 from werkzeug.urls import url_join
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, AccessError
-from odoo.tools.misc import format_date, format_datetime
+from koda import _, api, fields, models
+from koda.exceptions import UserError, AccessError
+from koda.tools.misc import format_date, format_datetime
 
 
 class res_company(models.Model):

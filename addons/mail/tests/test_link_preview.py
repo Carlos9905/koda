@@ -6,9 +6,9 @@ from unittest.mock import patch
 import io
 import requests
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.mail.tools import link_preview
-from odoo.tests.common import tagged
+from koda.addons.mail.tests.common import MailCommon
+from koda.addons.mail.tools import link_preview
+from koda.tests.common import tagged
 
 
 @tagged("mail_link_preview", "mail_message", "post_install", "-at_install")

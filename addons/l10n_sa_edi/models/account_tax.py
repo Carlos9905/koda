@@ -1,5 +1,5 @@
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError
+from koda import fields, models, api, _
+from koda.exceptions import UserError
 
 
 EXEMPTION_REASON_CODES = [

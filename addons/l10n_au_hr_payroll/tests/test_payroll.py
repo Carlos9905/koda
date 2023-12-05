@@ -5,7 +5,7 @@ from collections import defaultdict
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
 from .common import TestPayrollCommon
 

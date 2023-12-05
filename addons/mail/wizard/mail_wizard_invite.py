@@ -4,9 +4,9 @@
 from lxml import etree
 from lxml.html import builder as html
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import is_html_empty
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools import is_html_empty
 
 
 class Invite(models.TransientModel):

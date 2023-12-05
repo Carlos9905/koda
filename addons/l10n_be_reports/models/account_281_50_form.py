@@ -2,8 +2,8 @@
 
 import base64
 
-from odoo import _, fields, models, api
-from odoo.exceptions import UserError
+from koda import _, fields, models, api
+from koda.exceptions import UserError
 from .ONSS_country_mapping import ONSS_COUNTRY_CODE_MAPPING
 
 

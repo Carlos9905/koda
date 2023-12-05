@@ -2,8 +2,8 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.l10n_pe_edi.tests.common import TestPeEdiCommon
-from odoo.tests import tagged
+from koda.addons.l10n_pe_edi.tests.common import TestPeEdiCommon
+from koda.tests import tagged
 
 class TestPEDeliveryGuideCommon(TestPeEdiCommon):
 

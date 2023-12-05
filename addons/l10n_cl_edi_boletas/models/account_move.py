@@ -4,9 +4,9 @@ import base64
 from psycopg2 import OperationalError
 from markupsafe import Markup
 
-from odoo import _, _lt, models, fields
-from odoo.exceptions import UserError
-from odoo.tools import html_escape
+from koda import _, _lt, models, fields
+from koda.exceptions import UserError
+from koda.tools import html_escape
 
 
 class AccountMove(models.Model):

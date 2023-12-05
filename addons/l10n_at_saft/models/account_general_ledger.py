@@ -2,9 +2,9 @@
 
 from collections import defaultdict
 
-from odoo.tools.misc import street_split
+from koda.tools.misc import street_split
 
-from odoo import api, models, _
+from koda import api, models, _
 
 class AccountReportFileDownloadErrorWizard(models.TransientModel):
     _inherit = 'account.report.file.download.error.wizard'

@@ -2,7 +2,7 @@
 # Koda
 
 from collections import defaultdict
-from odoo import api, fields, models
+from koda import api, fields, models
 
 SWISS_LANGUAGES = ["it_IT", "de_DE", "de_CH", "fr_FR", "fr_CH", "en_EN", "en_US"]
 

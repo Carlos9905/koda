@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from koda import models, fields
 
 from ..models.account_invoice import DESCRIPTION_DEBIT_CODE
 

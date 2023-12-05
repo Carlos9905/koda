@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import base64
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import misc
-from odoo.tools.translate import _
+from koda import api, fields, models
+from koda.exceptions import UserError
+from koda.tools import misc
+from koda.tools.translate import _
 
 
 L10N_CL_SII_REGIONAL_OFFICES_ITEMS = [

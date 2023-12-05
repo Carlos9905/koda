@@ -3,7 +3,7 @@
 import json
 import logging as logger
 
-from odoo import api, fields, models
+from koda import api, fields, models
 from ..web_push import generate_web_push_vapid_key
 
 _logger = logger.getLogger(__name__)

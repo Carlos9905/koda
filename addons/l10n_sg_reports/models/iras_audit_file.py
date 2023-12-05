@@ -3,11 +3,11 @@
 import json
 from lxml import etree
 from lxml.objectify import fromstring
-from odoo import fields, models, release, tools, _
-from odoo.exceptions import UserError
-from odoo.tools import date_utils
-from odoo.tools.float_utils import float_repr
-from odoo.tools.xml_utils import _check_with_xsd
+from koda import fields, models, release, tools, _
+from koda.exceptions import UserError
+from koda.tools import date_utils
+from koda.tools.float_utils import float_repr
+from koda.tools.xml_utils import _check_with_xsd
 
 IRAS_DIGITS = 2
 IRAS_VERSION = 'IAFv2.0.0'

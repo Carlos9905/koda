@@ -3,10 +3,10 @@
 from markupsafe import Markup
 from unittest.mock import patch
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import AccessError, ValidationError, UserError
-from odoo.tests import Form, HttpCase, tagged, users
-from odoo.tools import convert_file
+from koda.addons.mail.tests.common import MailCommon
+from koda.exceptions import AccessError, ValidationError, UserError
+from koda.tests import Form, HttpCase, tagged, users
+from koda.tools import convert_file
 
 
 @tagged('mail_template')

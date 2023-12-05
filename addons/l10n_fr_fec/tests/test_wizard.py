@@ -5,9 +5,9 @@ import base64
 from datetime import timedelta
 from freezegun import freeze_time
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo import fields, Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda import fields, Command
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

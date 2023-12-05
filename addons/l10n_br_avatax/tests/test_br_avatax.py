@@ -5,10 +5,10 @@ from contextlib import contextmanager, nullcontext
 from unittest import SkipTest
 from unittest.mock import patch
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.l10n_br_avatax.models.account_external_tax_mixin import AccountExternalTaxMixinL10nBR, IAP_SERVICE_NAME
-from odoo.exceptions import UserError
-from odoo.tests.common import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.l10n_br_avatax.models.account_external_tax_mixin import AccountExternalTaxMixinL10nBR, IAP_SERVICE_NAME
+from koda.exceptions import UserError
+from koda.tests.common import tagged
 from .mocked_invoice_response import generate_response
 
 _logger = logging.getLogger(__name__)

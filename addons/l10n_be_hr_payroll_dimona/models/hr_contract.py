@@ -14,8 +14,8 @@ from cryptography.hazmat.backends import default_backend
 from datetime import timedelta
 from werkzeug.urls import url_quote
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 AUTH_ENDPOINT = 'https://services.socialsecurity.be/REST/oauth/v3/token'
 POST_ENDPOINT = 'https://services.socialsecurity.be/REST/dimona/v1/declarations'

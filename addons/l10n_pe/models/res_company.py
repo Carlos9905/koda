@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Koda
-from odoo import models
+from koda import models
 
 
 class ResCompany(models.Model):

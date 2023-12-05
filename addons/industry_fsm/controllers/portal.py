@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.portal.controllers import portal
+from koda.addons.portal.controllers import portal
 
 
 

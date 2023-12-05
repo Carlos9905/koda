@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from koda import models
+from koda.addons.mail.models.discuss.mail_guest import add_guest_to_context
 
 
 class IrWebsocket(models.AbstractModel):

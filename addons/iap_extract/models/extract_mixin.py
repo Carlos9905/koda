@@ -6,8 +6,8 @@ import logging
 from dateutil.relativedelta import relativedelta
 from psycopg2 import IntegrityError, OperationalError
 
-from odoo import api, fields, models, _lt, _
-from odoo.exceptions import AccessError, UserError
+from koda import api, fields, models, _lt, _
+from koda.exceptions import AccessError, UserError
 
 
 _logger = logging.getLogger(__name__)

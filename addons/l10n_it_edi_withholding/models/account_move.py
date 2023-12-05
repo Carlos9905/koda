@@ -3,7 +3,7 @@
 
 import logging
 from collections import namedtuple
-from odoo import _, api, fields, models
+from koda import _, api, fields, models
 
 _logger = logging.getLogger(__name__)
 

@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.addons.fleet.models.fleet_vehicle_model import FUEL_TYPES
+from koda import api, fields, models
+from koda.osv import expression
+from koda.addons.fleet.models.fleet_vehicle_model import FUEL_TYPES
 
 
 class HrContract(models.Model):

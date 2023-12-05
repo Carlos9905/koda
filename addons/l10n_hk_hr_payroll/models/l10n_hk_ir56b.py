@@ -6,9 +6,9 @@ import base64
 from lxml import etree
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import format_date
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools import format_date
 
 
 

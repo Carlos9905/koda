@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, models
-from odoo.exceptions import UserError, ValidationError
+from koda import _, api, models
+from koda.exceptions import UserError, ValidationError
 
 
 class ProductProduct(models.Model):

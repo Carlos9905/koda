@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import models, api, _
-from odoo.exceptions import UserError
+from koda import models, api, _
+from koda.exceptions import UserError
 
 
 class ResPartner(models.Model):

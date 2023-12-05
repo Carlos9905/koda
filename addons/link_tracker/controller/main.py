@@ -3,8 +3,8 @@
 
 from werkzeug.exceptions import NotFound
 
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
 
 class LinkTracker(http.Controller):

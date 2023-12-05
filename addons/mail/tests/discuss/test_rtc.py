@@ -2,10 +2,10 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests.common import tagged, users
-from odoo.tools import mute_logger
+from koda import fields
+from koda.addons.mail.tests.common import MailCommon
+from koda.tests.common import tagged, users
+from koda.tools import mute_logger
 
 
 @tagged("RTC", "post_install", "-at_install")

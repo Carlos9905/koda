@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from koda import fields, models, api
 
 
 class L10nPEPleUsage(models.Model):

@@ -2,7 +2,7 @@
 
 from datetime import datetime
 from freezegun import freeze_time
-from odoo.tests import common, new_test_user
+from koda.tests import common, new_test_user
 
 
 class TestsCommon(common.TransactionCase):

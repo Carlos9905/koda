@@ -12,13 +12,13 @@ from markupsafe import Markup
 from urllib import parse
 from werkzeug.urls import url_join
 
-from odoo import api, Command, fields, models, _
-from odoo.addons.web_editor.tools import handle_history_divergence
-from odoo.exceptions import AccessError, ValidationError, UserError
-from odoo.osv import expression
-from odoo.tools import get_lang
-from odoo.tools.translate import html_translate
-from odoo.tools.sql import SQL
+from koda import api, Command, fields, models, _
+from koda.addons.web_editor.tools import handle_history_divergence
+from koda.exceptions import AccessError, ValidationError, UserError
+from koda.osv import expression
+from koda.tools import get_lang
+from koda.tools.translate import html_translate
+from koda.tools.sql import SQL
 
 ARTICLE_PERMISSION_LEVEL = {'none': 0, 'read': 1, 'write': 2}
 

@@ -3,8 +3,8 @@
 
 from datetime import date
 
-from odoo import Command
-from odoo.tests import tagged
+from koda import Command
+from koda.tests import tagged
 
 from .common import TestPayrollCommon
 

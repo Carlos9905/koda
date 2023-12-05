@@ -1,4 +1,4 @@
-from odoo import models
+from koda import models
 
 class BelgianTaxReportCustomHandler(models.AbstractModel):
     _inherit = 'l10n_be.tax.report.handler'

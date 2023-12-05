@@ -4,11 +4,11 @@ from collections import defaultdict
 
 from lxml import etree
 
-from odoo import Command, _, api, fields, models
-from odoo.addons.l10n_se_sie_import.xml_utils import validate_xmldsig_signature
-from odoo.exceptions import RedirectWarning, UserError
-from odoo.tools import date_utils, file_open, mimetypes, float_is_zero
-from odoo.tools.safe_eval import datetime
+from koda import Command, _, api, fields, models
+from koda.addons.l10n_se_sie_import.xml_utils import validate_xmldsig_signature
+from koda.exceptions import RedirectWarning, UserError
+from koda.tools import date_utils, file_open, mimetypes, float_is_zero
+from koda.tools.safe_eval import datetime
 
 _logger = logging.getLogger(__name__)
 

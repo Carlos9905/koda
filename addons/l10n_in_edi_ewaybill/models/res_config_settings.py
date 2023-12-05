@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError
-from odoo.tools import html_escape
+from koda import models, fields, _
+from koda.exceptions import UserError
+from koda.tools import html_escape
 
 
 class ResConfigSettings(models.TransientModel):

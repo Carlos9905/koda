@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.exceptions import UserError
-from odoo.addons.l10n_ar.tests.common import TestAr
-from odoo.tools.misc import file_open
-from odoo.tests import tagged
+from koda.exceptions import UserError
+from koda.addons.l10n_ar.tests.common import TestAr
+from koda.tools.misc import file_open
+from koda.tests import tagged
 from contextlib import contextmanager
 import base64
 import logging

@@ -1,4 +1,4 @@
-from odoo import _, models
+from koda import _, models
 
 
 def _csv_row(*data, delimiter=","):

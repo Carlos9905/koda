@@ -6,8 +6,8 @@
 import random
 import re
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 """
 account.move object: add support for Belgian structured communication

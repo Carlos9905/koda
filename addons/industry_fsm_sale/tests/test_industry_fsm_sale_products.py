@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 
 from datetime import timedelta
-from odoo import Command, fields
-from odoo.addons.industry_fsm_sale.tests.common import TestFsmFlowCommon
-from odoo.tests import tagged, HttpCase
+from koda import Command, fields
+from koda.addons.industry_fsm_sale.tests.common import TestFsmFlowCommon
+from koda.tests import tagged, HttpCase
 
 
 @tagged('-at_install', 'post_install')

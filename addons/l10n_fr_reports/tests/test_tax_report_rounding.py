@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from unittest.mock import patch
 
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import tagged
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class TestFrenchFiscalRounding(TestAccountReportsCommon):

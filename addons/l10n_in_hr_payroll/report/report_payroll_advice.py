@@ -3,7 +3,7 @@
 
 import time
 
-from odoo import api, models
+from koda import api, models
 
 
 class payroll_advice_report(models.AbstractModel):

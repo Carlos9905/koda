@@ -1,5 +1,5 @@
 import odoo
-from odoo.addons.web.tests.test_js import qunit_error_checker
+from koda.addons.web.tests.test_js import qunit_error_checker
 
 
 @odoo.tests.tagged("post_install", "-at_install")

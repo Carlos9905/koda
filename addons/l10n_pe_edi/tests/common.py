@@ -3,10 +3,10 @@ import base64
 from pytz import timezone
 from datetime import datetime
 
-from odoo.tests import tagged
-from odoo.tools import misc
-from odoo.modules import module as modules
-from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
+from koda.tests import tagged
+from koda.tools import misc
+from koda.modules import module as modules
+from koda.addons.account_edi.tests.common import AccountEdiTestCommon
 
 
 def mocked_l10n_pe_edi_post_invoice_web_service(edi_format, invoice, edi_filename, edi_str):

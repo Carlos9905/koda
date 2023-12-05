@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import models, fields
+from koda import models, fields
 
 L10N_CH_PAYROLL_WRITABLE_FIELDS = [
     'l10n_ch_canton',

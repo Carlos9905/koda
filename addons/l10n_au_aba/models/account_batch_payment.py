@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, _
-from odoo.tools import float_round
-from odoo.exceptions import UserError
+from koda import fields, models, _
+from koda.tools import float_round
+from koda.exceptions import UserError
 
 import base64
 import re

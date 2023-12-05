@@ -2,10 +2,10 @@
 
 from werkzeug.exceptions import NotFound
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
-from odoo.addons.web.controllers.binary import Binary
+from koda import http
+from koda.http import request
+from koda.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from koda.addons.web.controllers.binary import Binary
 
 
 class BinaryController(Binary):

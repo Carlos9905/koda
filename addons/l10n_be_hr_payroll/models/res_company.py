@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.tools import ormcache
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.tools import ormcache
+from koda.exceptions import ValidationError
 
 
 class ResCompany(models.Model):

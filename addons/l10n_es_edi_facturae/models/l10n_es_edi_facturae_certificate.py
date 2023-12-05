@@ -8,10 +8,10 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.serialization import pkcs12
 from lxml import etree
 
-from odoo import _, api, fields, models
-from odoo.addons.l10n_es_edi_facturae import xml_utils
-from odoo.exceptions import UserError
-from odoo.tools import cleanup_xml_node
+from koda import _, api, fields, models
+from koda.addons.l10n_es_edi_facturae import xml_utils
+from koda.exceptions import UserError
+from koda.tools import cleanup_xml_node
 
 class Certificate(models.Model):
     _name = 'l10n_es_edi_facturae.certificate'

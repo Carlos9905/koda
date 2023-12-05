@@ -6,11 +6,11 @@ from markupsafe import Markup
 from unittest.mock import patch
 from uuid import uuid4
 
-from odoo import tools
-from odoo.addons.base.models.res_partner import Partner
-from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
-from odoo.tests.common import Form, tagged, users
-from odoo.tools import mute_logger
+from koda import tools
+from koda.addons.base.models.res_partner import Partner
+from koda.addons.mail.tests.common import MailCommon, mail_new_test_user
+from koda.tests.common import Form, tagged, users
+from koda.tools import mute_logger
 
 
 @tagged('res_partner', 'mail_tools')

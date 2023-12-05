@@ -14,11 +14,11 @@ from psycopg2 import OperationalError
 from zeep import Client
 from zeep.transports import Transport
 
-from odoo import _, api, models, modules, fields, tools
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools import frozendict
-from odoo.tools.float_utils import float_is_zero
+from koda import _, api, models, modules, fields, tools
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools import frozendict
+from koda.tools.float_utils import float_is_zero
 
 CANCELLATION_REASON_SELECTION = [
     ('01', "01 - Invoice issued with errors (with related document)"),

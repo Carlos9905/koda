@@ -3,9 +3,9 @@
 
 from unittest.mock import patch
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests import tagged, users
-from odoo.tools import config, mute_logger
+from koda.addons.mail.tests.common import MailCommon
+from koda.tests import tagged, users
+from koda.tools import config, mute_logger
 
 
 @tagged('mail_server')
@@ -113,7 +113,7 @@ class TestIrMailServer(MailCommon):
                         from_filter="dummy@example.com, test.mycompany.com, dummy2@example.com",
                     )
 
-        # for from_filter in ICP, overwrite the one from odoo-bin
+        # for from_filter in ICP, overwrite the one from koda-bin
         self.env['ir.config_parameter'].sudo().set_param('mail.default.from_filter', 'icp.example.com')
 
         # Use an email in the domain of the config parameter "mail.default.from_filter"

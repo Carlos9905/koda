@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.l10n_mx_edi_extended.tests.common import TestMxExtendedEdiCommon
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
-from odoo import fields
-from odoo.tests import tagged
+from koda.addons.l10n_mx_edi_extended.tests.common import TestMxExtendedEdiCommon
+from koda.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
+from koda import fields
+from koda.tests import tagged
 
 from freezegun import freeze_time
 

@@ -7,8 +7,8 @@ from lxml import html
 from markupsafe import Markup
 from urllib import parse
 
-from odoo.tests.common import tagged, HttpCase
-from odoo.tools import mute_logger
+from koda.tests.common import tagged, HttpCase
+from koda.tools import mute_logger
 
 
 @tagged('post_install', '-at_install', 'knowledge_article_template')

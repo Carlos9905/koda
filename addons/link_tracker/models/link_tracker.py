@@ -8,10 +8,10 @@ import string
 from lxml import html
 from werkzeug import urls
 
-from odoo import tools, models, fields, api, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.addons.mail.tools import link_preview
+from koda import tools, models, fields, api, _
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.addons.mail.tools import link_preview
 
 
 class LinkTracker(models.Model):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request
-from odoo.tools import file_open
-from odoo.addons.web.controllers.webmanifest import WebManifest as WebWebManifest
+from koda.http import request
+from koda.tools import file_open
+from koda.addons.web.controllers.webmanifest import WebManifest as WebWebManifest
 
 
 class WebManifest(WebWebManifest):

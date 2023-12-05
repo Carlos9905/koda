@@ -6,7 +6,7 @@ import werkzeug
 from lxml import etree
 from unittest.mock import patch
 
-from odoo.tests import common
+from koda.tests import common
 
 
 class MockLinkTracker(common.BaseCase):

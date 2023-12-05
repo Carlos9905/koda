@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools import float_round
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.tools import float_round
 
 from datetime import timedelta
 from markupsafe import Markup

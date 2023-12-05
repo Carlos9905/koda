@@ -12,11 +12,11 @@ from psycopg2 import OperationalError
 
 from lxml import etree
 
-from odoo import fields, models
-from odoo.addons.l10n_cl_edi.models.l10n_cl_edi_util import UnexpectedXMLResponse, InvalidToken
-from odoo.exceptions import UserError
-from odoo.tools.translate import _
-from odoo.tools.float_utils import float_repr, float_round
+from koda import fields, models
+from koda.addons.l10n_cl_edi.models.l10n_cl_edi_util import UnexpectedXMLResponse, InvalidToken
+from koda.exceptions import UserError
+from koda.tools.translate import _
+from koda.tools.float_utils import float_repr, float_round
 
 _logger = logging.getLogger(__name__)
 

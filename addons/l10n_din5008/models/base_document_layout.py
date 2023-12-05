@@ -1,8 +1,8 @@
 from markupsafe import Markup
 import re
 
-from odoo import api, models, fields, _
-from odoo.tools import format_date
+from koda import api, models, fields, _
+from koda.tools import format_date
 
 
 class BaseDocumentLayout(models.TransientModel):

@@ -4,14 +4,14 @@ import base64
 from datetime import datetime
 from unittest.mock import patch
 
-from odoo import Command, fields
-from odoo.addons.mail.models.discuss.discuss_channel import channel_avatar, group_avatar
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import ValidationError
-from odoo.tests.common import tagged, users
-from odoo.tools import html_escape, mute_logger
-from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import Command, fields
+from koda.addons.mail.models.discuss.discuss_channel import channel_avatar, group_avatar
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.mail.tests.common import MailCommon
+from koda.exceptions import ValidationError
+from koda.tests.common import tagged, users
+from koda.tools import html_escape, mute_logger
+from koda.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 
 @tagged("post_install", "-at_install")

@@ -1,9 +1,9 @@
 import io
 import xlsxwriter
 
-from odoo import models, _
-from odoo.exceptions import UserError
-from odoo.tools import get_quarter_number, format_date
+from koda import models, _
+from koda.exceptions import UserError
+from koda.tools import get_quarter_number, format_date
 
 INCOME_FIELDS = (
     'year', 'period', 'activity_code', 'activity_type', 'activity_group', 'invoice_type', 'income_concept',

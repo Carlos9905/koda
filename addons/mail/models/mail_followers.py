@@ -4,7 +4,7 @@
 from collections import defaultdict
 import itertools
 
-from odoo import api, fields, models, Command
+from koda import api, fields, models, Command
 
 
 class Followers(models.Model):

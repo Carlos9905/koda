@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from stdnum.be import vat
 
-from odoo import _, fields, models
-from odoo.exceptions import RedirectWarning
+from koda import _, fields, models
+from koda.exceptions import RedirectWarning
 
 
 class ResPartner(models.Model):

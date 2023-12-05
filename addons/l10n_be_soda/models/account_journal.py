@@ -5,8 +5,8 @@ import io
 from lxml import etree
 import re
 
-from odoo import _, models
-from odoo.exceptions import UserError
+from koda import _, models
+from koda.exceptions import UserError
 
 
 class AccountJournal(models.Model):

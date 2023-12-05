@@ -1,5 +1,5 @@
-from odoo import fields, models, _, api
-from odoo.exceptions import UserError
+from koda import fields, models, _, api
+from koda.exceptions import UserError
 
 
 class RequestZATCAOtp(models.TransientModel):

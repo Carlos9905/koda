@@ -6,9 +6,9 @@ from datetime import datetime
 from re import sub as regex_sub
 
 from lxml import etree
-from odoo import _, api, fields, models
-from odoo.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key
-from odoo.exceptions import UserError
+from koda import _, api, fields, models
+from koda.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key
+from koda.exceptions import UserError
 
 L10N_ES_TBAI_CRC8_TABLE = [
     0x00, 0x07, 0x0E, 0x09, 0x1C, 0x1B, 0x12, 0x15, 0x38, 0x3F, 0x36, 0x31, 0x24, 0x23, 0x2A, 0x2D,

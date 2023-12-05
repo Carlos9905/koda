@@ -3,7 +3,7 @@
 from . import models
 from . import report
 from . import demo
-from odoo import api, SUPERUSER_ID
+from koda import api, SUPERUSER_ID
 
 def load_translations(cr, registry):
     env = api.Environment(cr, SUPERUSER_ID, {})

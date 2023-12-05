@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
-from odoo import api, models, fields, _
+from koda import api, models, fields, _
 
 
 class L10nBeScheduleChangeAllocation(models.Model):

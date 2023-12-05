@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import re
 
-from odoo.tests import common, tagged
-from odoo.tools import TEXT_URL_REGEX
+from koda.tests import common, tagged
+from koda.tools import TEXT_URL_REGEX
 
 
 @tagged('-at_install', 'post_install')

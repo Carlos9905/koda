@@ -6,11 +6,11 @@ import zipfile
 
 from werkzeug.exceptions import NotFound
 
-from odoo import _, http
-from odoo.exceptions import AccessError
-from odoo.http import request, content_disposition
+from koda import _, http
+from koda.exceptions import AccessError
+from koda.http import request, content_disposition
 
-from odoo.tools import consteq
+from koda.tools import consteq
 from ..models.discuss.mail_guest import add_guest_to_context
 
 logger = logging.getLogger(__name__)

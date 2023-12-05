@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # Koda
 
-from odoo import api, models, fields
+from koda import api, models, fields
 
 
 class L10nChHrEmployeeChildren(models.Model):

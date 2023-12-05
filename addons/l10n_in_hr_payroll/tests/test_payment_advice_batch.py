@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.l10n_in_hr_payroll.tests.common import TestPayrollCommon
-from odoo.tests import tagged
+from koda.addons.l10n_in_hr_payroll.tests.common import TestPayrollCommon
+from koda.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

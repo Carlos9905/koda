@@ -5,8 +5,8 @@ from collections import defaultdict
 from lxml.builder import E
 from markupsafe import Markup
 
-from odoo import api, models, tools, _
-from odoo.addons.mail.tools.alias_error import AliasError
+from koda import api, models, tools, _
+from koda.addons.mail.tools.alias_error import AliasError
 
 
 class BaseModel(models.AbstractModel):

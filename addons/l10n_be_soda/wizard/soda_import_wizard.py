@@ -1,5 +1,5 @@
-from odoo import Command, _, api, fields, models
-from odoo.exceptions import UserError
+from koda import Command, _, api, fields, models
+from koda.exceptions import UserError
 
 
 class SodaImportWizard(models.TransientModel):

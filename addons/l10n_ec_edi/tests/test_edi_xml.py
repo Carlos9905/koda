@@ -3,8 +3,8 @@
 
 from freezegun import freeze_time
 from lxml import etree
-from odoo import Command
-from odoo.tests import tagged
+from koda import Command
+from koda.tests import tagged
 
 from .common import (L10N_EC_EDI_XML_CREDIT_NOTE, L10N_EC_EDI_XML_DEBIT_NOTE,
                      L10N_EC_EDI_XML_IN_WTH, L10N_EC_EDI_XML_OUT_INV,

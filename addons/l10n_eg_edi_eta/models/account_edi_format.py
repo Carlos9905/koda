@@ -7,11 +7,11 @@ import logging
 import requests
 from werkzeug.urls import url_quote
 from base64 import b64encode
-from odoo.addons.account.tools import LegacyHTTPAdapter
+from koda.addons.account.tools import LegacyHTTPAdapter
 from json.decoder import JSONDecodeError
 
-from odoo import api, models, _
-from odoo.tools.float_utils import json_float_round
+from koda import api, models, _
+from koda.tools.float_utils import json_float_round
 
 _logger = logging.getLogger(__name__)
 

@@ -9,8 +9,8 @@ from collections import Counter
 
 from lxml import etree
 
-from odoo import _, fields, models, api, Command
-from odoo.exceptions import UserError
+from koda import _, fields, models, api, Command
+from koda.exceptions import UserError
 from .ONSS_country_mapping import ONSS_COUNTRY_CODE_MAPPING
 
 

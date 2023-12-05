@@ -1,8 +1,8 @@
 from collections import defaultdict
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError
-from odoo.tools.misc import format_date
+from koda import _, fields, models
+from koda.exceptions import UserError
+from koda.tools.misc import format_date
 
 
 class ResPartner(models.Model):

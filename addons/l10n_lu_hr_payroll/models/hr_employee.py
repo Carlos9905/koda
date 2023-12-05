@@ -3,7 +3,7 @@
 
 from datetime import date
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class HrEmployee(models.Model):

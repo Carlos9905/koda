@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _lt, _
+from koda import _lt, _
 
 PROXY_ERROR_CODES = {
     "error_codabox_not_configured": _lt("Codabox is not configured. Please check your configuration."),

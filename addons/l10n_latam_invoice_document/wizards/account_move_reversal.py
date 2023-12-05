@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
+from koda import models, fields, api, _
+from koda.exceptions import UserError
 
 
 class AccountMoveReversal(models.TransientModel):

@@ -5,10 +5,10 @@ import base64
 import datetime
 import logging
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo import tools
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda import tools
 
 _logger = logging.getLogger(__name__)
 

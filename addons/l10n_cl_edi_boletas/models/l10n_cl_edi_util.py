@@ -7,7 +7,7 @@ from lxml import etree
 
 from werkzeug.urls import url_join
 
-from odoo import _, models
+from koda import _, models
 
 _logger = logging.getLogger(__name__)
 

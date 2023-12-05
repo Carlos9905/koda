@@ -43,7 +43,7 @@ patch(Wysiwyg.prototype, {
         if (!this.inDiscuss) {
             return;
         }
-        // Let event be handled by bubbling handlers and other handlers from Odoo Editor first.
+        // Let event be handled by bubbling handlers and other handlers from koda Editor first.
         await new Promise((resolve) => setTimeout(resolve, 0));
         const selection = this.odooEditor.document.getSelection();
         if (

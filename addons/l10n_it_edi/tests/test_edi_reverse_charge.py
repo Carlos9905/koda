@@ -3,9 +3,9 @@
 
 from collections import namedtuple
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.addons.l10n_it_edi.tests.common import TestItEdi
+from koda import Command
+from koda.tests import tagged
+from koda.addons.l10n_it_edi.tests.common import TestItEdi
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

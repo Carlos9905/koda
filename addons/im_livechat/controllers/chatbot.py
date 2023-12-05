@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.http import request
-from odoo.tools import get_lang, is_html_empty, plaintext2html
+from koda import http
+from koda.http import request
+from koda.tools import get_lang, is_html_empty, plaintext2html
 
 
 class LivechatChatbotScriptController(http.Controller):

@@ -3,9 +3,9 @@
 
 from datetime import date
 
-from odoo import Command
-from odoo.tests.common import TransactionCase
-from odoo.tests import tagged
+from koda import Command
+from koda.tests.common import TransactionCase
+from koda.tests import tagged
 
 class TestPayrollCommon(TransactionCase):
 

@@ -6,17 +6,17 @@ from pytz import timezone
 import re
 from werkzeug.urls import url_quote_plus
 
-from odoo import api, fields, models, Command, _
-from odoo.addons.l10n_mx_edi.models.l10n_mx_edi_document import (
+from koda import api, fields, models, Command, _
+from koda.addons.l10n_mx_edi.models.l10n_mx_edi_document import (
     CANCELLATION_REASON_SELECTION,
     CANCELLATION_REASON_DESCRIPTION,
     TAX_TYPE_TO_CFDI_CODE,
     USAGE_SELECTION,
 )
-from odoo.exceptions import ValidationError, UserError
-from odoo.osv import expression
-from odoo.tools import frozendict
-from odoo.addons.base.models.ir_qweb import keep_query
+from koda.exceptions import ValidationError, UserError
+from koda.osv import expression
+from koda.tools import frozendict
+from koda.addons.base.models.ir_qweb import keep_query
 
 
 class AccountMove(models.Model):
@@ -1902,7 +1902,7 @@ class AccountMove(models.Model):
 
     def _l10n_mx_edi_import_cfdi_fill_invoice_line(self, tree, line):
         # Product
-        code = tree.attrib.get('NoIdentificacion')  # default_code if export from Odoo
+        code = tree.attrib.get('NoIdentificacion')  # default_code if export from koda
         unspsc_code = tree.attrib.get('ClaveProdServ')  # UNSPSC code
         description = tree.attrib.get('Descripcion')  # label of the invoice line "[{p.default_code}] {p.name}"
         cleaned_name = re.sub(r"^\[.*\] ", "", description)

@@ -3,7 +3,7 @@
 
 import json
 
-from odoo import models
+from koda import models
 
 
 class ColumbianReportCustomHandler(models.AbstractModel):

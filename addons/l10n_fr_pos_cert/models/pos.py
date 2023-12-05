@@ -4,10 +4,10 @@ from datetime import datetime, timedelta
 from hashlib import sha256
 from json import dumps
 
-from odoo import models, api, fields
-from odoo.fields import Datetime
-from odoo.tools.translate import _, _lt
-from odoo.exceptions import UserError
+from koda import models, api, fields
+from koda.fields import Datetime
+from koda.tools.translate import _, _lt
+from koda.exceptions import UserError
 
 
 class pos_config(models.Model):

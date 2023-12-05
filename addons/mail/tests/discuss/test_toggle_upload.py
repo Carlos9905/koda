@@ -2,9 +2,9 @@
 
 from requests.exceptions import HTTPError
 
-from odoo import Command, http
-from odoo.tests.common import tagged, HttpCase
-from odoo.tools import file_open, mute_logger
+from koda import Command, http
+from koda.tests.common import tagged, HttpCase
+from koda.tools import file_open, mute_logger
 
 
 @tagged("post_install", "-at_install")

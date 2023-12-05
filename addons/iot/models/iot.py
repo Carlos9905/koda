@@ -3,7 +3,7 @@
 
 import secrets
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 # ----------------------------------------------------------

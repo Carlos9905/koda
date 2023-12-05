@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 
-from odoo.exceptions import UserError
-from odoo.addons.industry_fsm_sale.tests.common import TestFsmFlowSaleCommon
-from odoo.tests import tagged
+from koda.exceptions import UserError
+from koda.addons.industry_fsm_sale.tests.common import TestFsmFlowSaleCommon
+from koda.tests import tagged
 
 @tagged('post_install', '-at_install')
 class TestTaskReport(TestFsmFlowSaleCommon):

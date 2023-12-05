@@ -3,8 +3,8 @@
 
 from markupsafe import Markup
 
-from odoo import fields, api, models, _
-from odoo.exceptions import UserError
+from koda import fields, api, models, _
+from koda.exceptions import UserError
 
 
 class Message(models.Model):

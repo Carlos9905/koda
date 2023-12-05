@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, _
-from odoo.tools import cleanup_xml_node, float_repr
-from odoo.exceptions import ValidationError
-from odoo.addons.l10n_fr_reports.models.account_report_async_export import ENDPOINT
+from koda import models, fields, _
+from koda.tools import cleanup_xml_node, float_repr
+from koda.exceptions import ValidationError
+from koda.addons.l10n_fr_reports.models.account_report_async_export import ENDPOINT
 
 from lxml import etree
 from stdnum.fr import siret

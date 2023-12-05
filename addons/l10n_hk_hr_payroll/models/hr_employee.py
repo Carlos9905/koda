@@ -3,9 +3,9 @@
 
 import re
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools import single_email_re
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.tools import single_email_re
 
 
 auto_mobn_re = re.compile(r"""^[+]\d{1,3}-\d{1,29}$""", re.VERBOSE)

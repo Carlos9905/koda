@@ -3,7 +3,7 @@
 
 from collections import defaultdict
 
-from odoo import models
+from koda import models
 
 
 class AccountChartTemplate(models.AbstractModel):

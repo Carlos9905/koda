@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from .common import TestMxExtendedEdiCommon
-from odoo import Command
-from odoo.tests import tagged
-from odoo.exceptions import ValidationError
+from koda import Command
+from koda.tests import tagged
+from koda.exceptions import ValidationError
 
 from freezegun import freeze_time
 

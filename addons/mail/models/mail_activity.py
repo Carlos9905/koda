@@ -8,10 +8,10 @@ from collections import defaultdict, Counter
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, exceptions, fields, models, _, Command
-from odoo.osv import expression
-from odoo.tools import is_html_empty
-from odoo.tools.misc import clean_context, get_lang, groupby
+from koda import api, exceptions, fields, models, _, Command
+from koda.osv import expression
+from koda.tools import is_html_empty
+from koda.tools.misc import clean_context, get_lang, groupby
 
 _logger = logging.getLogger(__name__)
 

@@ -6,9 +6,9 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 from dateutil.rrule import rrule, DAILY
 
-from odoo import api, fields, models, _
-from odoo.tools import float_round
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.tools import float_round
+from koda.exceptions import UserError
 
 
 class HrPayrollAllocPaidLeave(models.TransientModel):

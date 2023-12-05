@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
+from koda import models, fields, api, _
+from koda.exceptions import UserError
 import json
 import requests
 import logging

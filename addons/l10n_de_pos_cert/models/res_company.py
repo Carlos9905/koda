@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, _, api
-from odoo.addons.iap import jsonrpc
-from odoo.exceptions import ValidationError, UserError
+from koda import models, fields, _, api
+from koda.addons.iap import jsonrpc
+from koda.exceptions import ValidationError, UserError
 import requests
 from requests.exceptions import ConnectTimeout
 from urllib.parse import urljoin

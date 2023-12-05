@@ -6,8 +6,8 @@
 import time
 import re
 
-from odoo import models, fields, tools, _, _lt
-from odoo.exceptions import UserError
+from koda import models, fields, tools, _, _lt
+from koda.exceptions import UserError
 
 
 class safedict(dict):

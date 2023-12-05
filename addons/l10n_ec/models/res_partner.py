@@ -2,8 +2,8 @@
 
 import enum
 import stdnum
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
 
 
 def verify_final_consumer(vat):

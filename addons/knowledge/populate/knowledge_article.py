@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.tools import populate
-from odoo.addons.base.models.ir_qweb_fields import nl2br
-from odoo.addons.knowledge.populate import tools
+from koda import models
+from koda.tools import populate
+from koda.addons.base.models.ir_qweb_fields import nl2br
+from koda.addons.knowledge.populate import tools
 
 
 class KnowledgeArticle(models.Model):

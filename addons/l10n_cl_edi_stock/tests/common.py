@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import base64
 
-from odoo import fields, Command
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
+from koda import fields, Command
+from koda.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
 
-from odoo.tools import misc, relativedelta
+from koda.tools import misc, relativedelta
 
 
 class TestL10nClEdiStockCommon(ValuationReconciliationTestCommon):

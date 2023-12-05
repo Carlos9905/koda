@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models
+from koda import fields, models
 
 # This model is a persistant copy of l10n.be.double.pay.recovery.line.wizard
 # it will be used as default values for the wizard.

@@ -3,8 +3,8 @@
 
 from datetime import date, datetime, time
 from dateutil.relativedelta import relativedelta
-from odoo import api, fields, models, _
-from odoo.tools import format_date, date_utils
+from koda import api, fields, models, _
+from koda.tools import format_date, date_utils
 
 
 class HrPayslip(models.Model):

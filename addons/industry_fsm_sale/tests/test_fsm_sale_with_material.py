@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 
-from odoo import Command
-from odoo.addons.industry_fsm_sale.tests.common import TestFsmFlowCommon
+from koda import Command
+from koda.addons.industry_fsm_sale.tests.common import TestFsmFlowCommon
 
 
 # This test class has to be tested at install since the flow is modified in industry_fsm_stock

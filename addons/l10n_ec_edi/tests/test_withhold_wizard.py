@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from freezegun import freeze_time
-from odoo import Command
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
+from koda import Command
+from koda.exceptions import ValidationError
+from koda.tests import tagged
 
 from .common import TestEcEdiCommon
 

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.l10n_latam_check.tests.common import L10nLatamCheckTest
-from odoo.exceptions import ValidationError, UserError
-from odoo.tests.common import tagged
+from koda.addons.l10n_latam_check.tests.common import L10nLatamCheckTest
+from koda.exceptions import ValidationError, UserError
+from koda.tests.common import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

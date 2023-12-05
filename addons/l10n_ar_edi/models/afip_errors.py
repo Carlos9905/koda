@@ -1,4 +1,4 @@
-from odoo import _, _lt
+from koda import _, _lt
 
 WSFE_ERRORS = {
     '501': _lt('This is an internal error in AFIP. Please wait a couple of minutes and try again'),

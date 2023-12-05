@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, models
-from odoo.exceptions import UserError
+from koda import _, api, models
+from koda.exceptions import UserError
 
 
 class PartnerLedgerCustomHandler(models.AbstractModel):

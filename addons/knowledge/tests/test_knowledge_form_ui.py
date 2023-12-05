@@ -9,9 +9,9 @@ import re
 from markupsafe import Markup
 from PIL import Image
 from unittest import skipIf
-from odoo import fields
-from odoo.tests.common import tagged, HttpCase, users
-from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
+from koda import fields
+from koda.tests.common import tagged, HttpCase, users
+from koda.addons.mail.tests.common import MailCommon, mail_new_test_user
 
 
 class TestKnowledgeUICommon(HttpCase, MailCommon):

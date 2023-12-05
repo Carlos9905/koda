@@ -2,9 +2,9 @@
 # pylint: disable=C0326
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
-from odoo.tests import tagged
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda import fields
+from koda.tests import tagged
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
 from freezegun import freeze_time
 

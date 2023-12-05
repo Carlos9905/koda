@@ -3,7 +3,7 @@
 
 # Copyright (c) 2011 Noviat nv/sa (www.noviat.be). All rights reserved.
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class AccountBankStatement(models.Model):

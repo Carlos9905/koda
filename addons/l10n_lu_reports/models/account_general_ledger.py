@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from itertools import groupby
 
-from odoo.tools import get_lang
+from koda.tools import get_lang
 
-from odoo import api, models, _
+from koda import api, models, _
 
 
 class AccountGeneralLedger(models.AbstractModel):

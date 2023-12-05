@@ -1,7 +1,7 @@
-from odoo import models, api, _
-from odoo.exceptions import RedirectWarning, ValidationError
-from odoo.tools.misc import format_date
-from odoo.addons.l10n_nl_reports_sbr.wizard.l10n_nl_reports_sbr_tax_report_wizard import _create_soap_client
+from koda import models, api, _
+from koda.exceptions import RedirectWarning, ValidationError
+from koda.tools.misc import format_date
+from koda.addons.l10n_nl_reports_sbr.wizard.l10n_nl_reports_sbr_tax_report_wizard import _create_soap_client
 
 import json
 import os

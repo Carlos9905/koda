@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from dateutil.relativedelta import relativedelta
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import format_date
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import format_date
 
 
 class L10nBeDoublePayRecoveryWizard(models.TransientModel):

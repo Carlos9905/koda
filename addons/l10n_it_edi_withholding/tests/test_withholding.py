@@ -4,10 +4,10 @@
 import datetime
 from collections import namedtuple
 
-from odoo import fields
-from odoo.tests import tagged
-from odoo.exceptions import ValidationError
-from odoo.addons.l10n_it_edi.tests.common import TestItEdi
+from koda import fields
+from koda.tests import tagged
+from koda.exceptions import ValidationError
+from koda.addons.l10n_it_edi.tests.common import TestItEdi
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

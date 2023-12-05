@@ -3,8 +3,8 @@
 
 # Copyright (c) 2023 WT-IO-IT GmbH (https://www.wt-io-it.at)
 #                    Mag. Wolfgang Taferner <wolfgang.taferner@wt-io-it.at>
-from odoo import models, _
-from odoo.tools import float_compare
+from koda import models, _
+from koda.tools import float_compare
 
 class AccountReportCustomHandler(models.AbstractModel):
     _name = 'account.report.l10n_at.balance.custom.handler'

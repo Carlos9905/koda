@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, models
-from odoo.exceptions import UserError
+from koda import _, models
+from koda.exceptions import UserError
 
 
 class AccountPayment(models.Model):

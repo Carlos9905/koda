@@ -3,7 +3,7 @@
 
 from lxml import etree, objectify
 
-from odoo import api, models, tools
+from koda import api, models, tools
 
 
 class IrAttachment(models.Model):

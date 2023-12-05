@@ -2,9 +2,9 @@
 
 import datetime
 
-from odoo import api, fields, models, _
-from odoo.tools import format_date
-from odoo.fields import Datetime
+from koda import api, fields, models, _
+from koda.tools import format_date
+from koda.fields import Datetime
 
 
 class L10nKeTaxDeductionCard(models.Model):

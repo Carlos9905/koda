@@ -4,9 +4,9 @@ from datetime import timedelta
 from freezegun import freeze_time
 from unittest.mock import patch, PropertyMock
 
-from odoo import fields
-from odoo.addons.im_livechat.tests.common import TestImLivechatCommon
-from odoo.tests.common import tagged
+from koda import fields
+from koda.addons.im_livechat.tests.common import TestImLivechatCommon
+from koda.tests.common import tagged
 
 
 @tagged("post_install", "-at_install")

@@ -10,8 +10,8 @@ from lxml import etree
 from json.decoder import JSONDecodeError
 from markupsafe import Markup
 
-from odoo import api, models, fields, _, _lt
-from odoo.exceptions import UserError
+from koda import api, models, fields, _, _lt
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

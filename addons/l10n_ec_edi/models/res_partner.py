@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.addons.l10n_ec.models.res_partner import PartnerIdTypeEc
-from odoo.addons.l10n_ec.models.res_partner import verify_final_consumer
+from koda import api, fields, models
+from koda.addons.l10n_ec.models.res_partner import PartnerIdTypeEc
+from koda.addons.l10n_ec.models.res_partner import verify_final_consumer
 
 
 class ResPartner(models.Model):

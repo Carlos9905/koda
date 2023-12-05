@@ -2,10 +2,10 @@
 
 from typing import Dict
 
-from odoo import models, fields, _, release
-from odoo.tools.float_utils import float_repr
-from odoo.tools.safe_eval import safe_eval
-from odoo.exceptions import UserError
+from koda import models, fields, _, release
+from koda.tools.float_utils import float_repr
+from koda.tools.safe_eval import safe_eval
+from koda.exceptions import UserError
 import uuid
 
 COUNTRY_CODE_MAP = {

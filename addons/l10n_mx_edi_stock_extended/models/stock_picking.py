@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError
+from koda import models, fields, _
+from koda.exceptions import UserError
 
 from .product_template import MX_PACKAGING_CATALOG
 

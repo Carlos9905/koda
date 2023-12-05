@@ -8,12 +8,12 @@ from dateutil import relativedelta
 from itertools import groupby
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.addons.iap import jsonrpc
-from odoo.exceptions import UserError, AccessError, ValidationError, RedirectWarning
-from odoo.tools import date_utils, get_lang, html_escape
-from odoo.tools.misc import format_date
-from odoo.addons.l10n_in_edi.models.account_edi_format import DEFAULT_IAP_ENDPOINT, DEFAULT_IAP_TEST_ENDPOINT
+from koda import api, fields, models, _
+from koda.addons.iap import jsonrpc
+from koda.exceptions import UserError, AccessError, ValidationError, RedirectWarning
+from koda.tools import date_utils, get_lang, html_escape
+from koda.tools.misc import format_date
+from koda.addons.l10n_in_edi.models.account_edi_format import DEFAULT_IAP_ENDPOINT, DEFAULT_IAP_TEST_ENDPOINT
 
 import logging
 

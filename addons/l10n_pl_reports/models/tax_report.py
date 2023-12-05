@@ -1,6 +1,6 @@
-from odoo import models, fields, api, _
-from odoo.tools import date_utils, float_repr, float_is_zero, float_compare
-from odoo.exceptions import UserError, RedirectWarning
+from koda import models, fields, api, _
+from koda.tools import date_utils, float_repr, float_is_zero, float_compare
+from koda.exceptions import UserError, RedirectWarning
 
 from datetime import datetime
 

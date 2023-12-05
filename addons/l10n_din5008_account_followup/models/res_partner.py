@@ -1,5 +1,5 @@
-from odoo import models, fields, _
-from odoo.tools import format_date
+from koda import models, fields, _
+from koda.tools import format_date
 
 # Used for printing a follow-up letter
 

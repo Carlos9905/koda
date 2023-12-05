@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from unittest.mock import patch
 
-from odoo import fields, Command
+from koda import fields, Command
 
 from .common import TestL10nClEdiCommon, _check_with_xsd_patch
-from odoo.tests import tagged
+from koda.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

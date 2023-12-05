@@ -2,9 +2,9 @@
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo.tools import misc
-from odoo.tests import tagged
-from odoo.addons.l10n_cl_edi.tests.common import TestL10nClEdiCommon, _check_with_xsd_patch
+from koda.tools import misc
+from koda.tests import tagged
+from koda.addons.l10n_cl_edi.tests.common import TestL10nClEdiCommon, _check_with_xsd_patch
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

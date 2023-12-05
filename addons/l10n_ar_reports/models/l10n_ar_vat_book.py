@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import api, models, _
-from odoo.exceptions import UserError, RedirectWarning
-from odoo.tools.float_utils import float_split_str
+from koda import api, models, _
+from koda.exceptions import UserError, RedirectWarning
+from koda.tools.float_utils import float_split_str
 
 from collections import OrderedDict
 import re

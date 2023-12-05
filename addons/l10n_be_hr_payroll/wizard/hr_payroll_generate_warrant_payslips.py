@@ -5,8 +5,8 @@ import base64
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 
 class HrPayrollGenerateCommissionPayslips(models.TransientModel):

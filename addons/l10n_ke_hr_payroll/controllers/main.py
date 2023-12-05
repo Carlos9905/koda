@@ -2,9 +2,9 @@
 
 from io import BytesIO
 from logging import getLogger
-from odoo import http, _
-from odoo.http import request
-from odoo.tools.misc import xlsxwriter
+from koda import http, _
+from koda.http import request
+from koda.tools.misc import xlsxwriter
 
 _logger = getLogger(__name__)
 

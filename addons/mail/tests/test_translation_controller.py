@@ -5,8 +5,8 @@ import requests
 from http import HTTPStatus
 from unittest.mock import patch
 
-from odoo.tests.common import HttpCase, JsonRpcException, new_test_user, tagged
-from odoo.tools import mute_logger
+from koda.tests.common import HttpCase, JsonRpcException, new_test_user, tagged
+from koda.tools import mute_logger
 
 SAMPLE = {
     "text": "<p>Al mal tiempo, buena cara.</p>",

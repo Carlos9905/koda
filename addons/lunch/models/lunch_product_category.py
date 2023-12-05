@@ -3,9 +3,9 @@
 
 import base64
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
-from odoo.tools.misc import file_open
+from koda.tools.misc import file_open
 
 
 class LunchProductCategory(models.Model):

@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, models, api
-from odoo.osv import expression
+from koda import fields, models, api
+from koda.osv import expression
 
 
 class L10nLatamDocumentType(models.Model):

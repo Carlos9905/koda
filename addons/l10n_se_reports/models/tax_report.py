@@ -1,5 +1,5 @@
-from odoo import models, _
-from odoo.tools import float_repr
+from koda import models, _
+from koda.tools import float_repr
 from lxml import etree
 from lxml.objectify import fromstring
 

@@ -3,8 +3,8 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.tests import tagged, HttpCase
+from koda import fields
+from koda.tests import tagged, HttpCase
 
 
 @tagged('post_install', '-at_install')

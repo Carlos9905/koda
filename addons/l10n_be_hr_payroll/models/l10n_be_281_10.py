@@ -8,9 +8,9 @@ import re
 from collections import defaultdict
 from datetime import date
 from lxml import etree
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools.misc import file_path
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools.misc import file_path
 
 
 _logger = logging.getLogger(__name__)

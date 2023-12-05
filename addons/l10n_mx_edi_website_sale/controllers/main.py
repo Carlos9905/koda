@@ -1,7 +1,7 @@
 # coding: utf-8
-from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.http import request
-from odoo import http, _
+from koda.addons.website_sale.controllers.main import WebsiteSale
+from koda.http import request
+from koda import http, _
 
 
 class WebsiteSaleL10nMX(WebsiteSale):

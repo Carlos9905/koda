@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import fields, models
+from koda import fields, models
 
 CHART_OF_ACCOUNTS = [
     ("1", "Business general accounting plan"),

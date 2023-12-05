@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
-from odoo import fields, models, _
-from odoo.tools import get_lang
+from koda import fields, models, _
+from koda.tools import get_lang
 
 class ProjectTaskCreateTimesheet(models.TransientModel):
     _inherit = 'project.task.create.timesheet'

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models
+from koda import fields, models
 
 
 class L10nMxEdiResLocality(models.Model):

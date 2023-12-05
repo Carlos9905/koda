@@ -3,12 +3,12 @@
 
 from werkzeug.exceptions import NotFound
 
-from odoo import _
-from odoo.http import request, route
+from koda import _
+from koda.http import request, route
 
-from odoo.addons.sale.controllers.portal import CustomerPortal as SaleCustomerPortal
-from odoo.addons.account.controllers.portal import CustomerPortal as AccountCustomerPortal
-from odoo.addons.portal.controllers.portal import pager as portal_pager
+from koda.addons.sale.controllers.portal import CustomerPortal as SaleCustomerPortal
+from koda.addons.account.controllers.portal import CustomerPortal as AccountCustomerPortal
+from koda.addons.portal.controllers.portal import pager as portal_pager
 
 
 class CustomerPortal(SaleCustomerPortal, AccountCustomerPortal):

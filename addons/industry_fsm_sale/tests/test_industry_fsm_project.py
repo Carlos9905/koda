@@ -3,10 +3,10 @@
 
 from psycopg2 import IntegrityError
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.tools import mute_logger
-from odoo.tests.common import Form
+from koda import Command
+from koda.tests import tagged
+from koda.tools import mute_logger
+from koda.tests.common import Form
 
 from .common import TestFsmFlowSaleCommon
 

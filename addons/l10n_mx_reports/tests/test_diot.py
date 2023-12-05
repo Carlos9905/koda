@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace
-from odoo import fields, Command
-from odoo.tests import tagged
+from koda import fields, Command
+from koda.tests import tagged
 
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
 
 @tagged('post_install', 'post_install_l10n', '-at_install')

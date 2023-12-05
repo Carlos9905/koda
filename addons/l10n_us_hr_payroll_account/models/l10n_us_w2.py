@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.osv.expression import AND
+from koda import models
+from koda.osv.expression import AND
 
 
 class L10nUsW2(models.Model):

@@ -10,9 +10,9 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.serialization import load_pem_private_key
 from OpenSSL import crypto
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 _logger = logging.getLogger(__name__)
 

@@ -9,11 +9,11 @@ import werkzeug.urls
 
 from ast import literal_eval
 
-from odoo import api, release, SUPERUSER_ID
-from odoo.exceptions import UserError
-from odoo.models import AbstractModel
-from odoo.tools.translate import _
-from odoo.tools import config, misc, ustr
+from koda import api, release, SUPERUSER_ID
+from koda.exceptions import UserError
+from koda.models import AbstractModel
+from koda.tools.translate import _
+from koda.tools import config, misc, ustr
 
 _logger = logging.getLogger(__name__)
 

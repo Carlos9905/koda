@@ -14,9 +14,9 @@ import pytz
 from collections import defaultdict
 from dateutil.parser import parse
 
-from odoo import _, api, fields, models
-from odoo import tools
-from odoo.addons.base.models.ir_mail_server import MailDeliveryException
+from koda import _, api, fields, models
+from koda import tools
+from koda.addons.base.models.ir_mail_server import MailDeliveryException
 
 _logger = logging.getLogger(__name__)
 _UNFOLLOW_REGEX = re.compile(r'<span id="mail_unfollow".*?<\/span>', re.DOTALL)

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, http, fields
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import float_round, float_repr
+from koda import _, http, fields
+from koda.exceptions import AccessError
+from koda.http import request
+from koda.osv import expression
+from koda.tools import float_round, float_repr
 
 
 class LunchController(http.Controller):

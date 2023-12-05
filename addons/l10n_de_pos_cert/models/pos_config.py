@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, _, api
-from odoo.exceptions import UserError
+from koda import models, fields, _, api
+from koda.exceptions import UserError
 import uuid
 from random import choice
 

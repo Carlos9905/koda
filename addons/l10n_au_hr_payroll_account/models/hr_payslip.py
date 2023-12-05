@@ -5,9 +5,9 @@ import re
 
 from datetime import datetime
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import float_round
+from koda import fields, models, _
+from koda.exceptions import UserError
+from koda.tools import float_round
 
 
 class HrPayslip(models.Model):

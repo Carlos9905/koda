@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.knowledge.tests.common import KnowledgeCommonWData, KnowledgeArticlePermissionsCase
-from odoo.tests.common import tagged, users, warmup
-from odoo.tools import mute_logger
+from koda.addons.knowledge.tests.common import KnowledgeCommonWData, KnowledgeArticlePermissionsCase
+from koda.tests.common import tagged, users, warmup
+from koda.tools import mute_logger
 
 
 @tagged('knowledge_performance', 'post_install', '-at_install')

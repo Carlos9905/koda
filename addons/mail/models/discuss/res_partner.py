@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.osv import expression
+from koda import api, fields, models
+from koda.osv import expression
 
 
 class ResPartner(models.Model):

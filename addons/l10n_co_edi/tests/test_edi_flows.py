@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from .common import TestCoEdiCommon
 
-from odoo.tests import tagged
-from odoo.exceptions import UserError
+from koda.tests import tagged
+from koda.exceptions import UserError
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

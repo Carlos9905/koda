@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, tools
-from odoo.tests import tagged
+from koda import fields, tools
+from koda.tests import tagged
 
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
 from freezegun import freeze_time
 

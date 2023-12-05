@@ -1,8 +1,8 @@
 # coding: utf-8
-from odoo import fields, Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import ValidationError
-from odoo.tools import misc
+from koda import fields, Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.exceptions import ValidationError
+from koda.tools import misc
 
 import base64
 import datetime

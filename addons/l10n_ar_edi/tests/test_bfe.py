@@ -1,5 +1,5 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import tagged
+from koda.tests import tagged
 from . import common
 
 @tagged('bfe', 'ri', '-at_install', 'external_l10n', 'post_install', '-standard', 'external')

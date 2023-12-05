@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
 
 QR_IBAN = 'CH21 3080 8001 2345 6782 7'
 

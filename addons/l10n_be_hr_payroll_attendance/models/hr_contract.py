@@ -3,9 +3,9 @@
 
 from datetime import datetime
 
-from odoo import models
-from odoo.addons.resource.models.utils import HOURS_PER_DAY
-from odoo.tools import float_round
+from koda import models
+from koda.addons.resource.models.utils import HOURS_PER_DAY
+from koda.tools import float_round
 
 
 class HrContract(models.Model):

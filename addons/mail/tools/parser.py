@@ -3,8 +3,8 @@
 
 import ast
 
-from odoo import _, tools
-from odoo.exceptions import ValidationError
+from koda import _, tools
+from koda.exceptions import ValidationError
 
 
 def parse_res_ids(res_ids):

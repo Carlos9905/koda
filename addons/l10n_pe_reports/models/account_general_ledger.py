@@ -4,11 +4,11 @@
 import csv
 from io import StringIO
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import groupby
-from odoo.tools.float_utils import float_repr
-from odoo.addons.l10n_pe_reports.models.res_company import CHART_OF_ACCOUNTS
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools import groupby
+from koda.tools.float_utils import float_repr
+from koda.addons.l10n_pe_reports.models.res_company import CHART_OF_ACCOUNTS
 
 
 class GeneralLedgerCustomHandler(models.AbstractModel):

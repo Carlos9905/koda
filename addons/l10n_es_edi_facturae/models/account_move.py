@@ -3,10 +3,10 @@ import re
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import fields, models, api, _, Command
-from odoo.exceptions import UserError
-from odoo.tools import float_repr, date_utils
-from odoo.tools.xml_utils import cleanup_xml_node, find_xml_value
+from koda import fields, models, api, _, Command
+from koda.exceptions import UserError
+from koda.tools import float_repr, date_utils
+from koda.tools.xml_utils import cleanup_xml_node, find_xml_value
 
 PHONE_CLEAN_TABLE = str.maketrans({" ": None, "-": None, "(": None, ")": None, "+": None})
 COUNTRY_CODE_MAP = {

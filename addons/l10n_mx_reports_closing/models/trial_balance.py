@@ -1,7 +1,7 @@
 # coding: utf-8
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, _
+from koda import models, fields, _
 
 class L10nMXTrialBalanceCustomHandler(models.AbstractModel):
     _inherit = 'account.trial.balance.report.handler'

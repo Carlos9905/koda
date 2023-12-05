@@ -4,9 +4,9 @@
 import logging
 from lxml import etree
 from freezegun import freeze_time
-from odoo import tools
-from odoo.tests import tagged, Form
-from odoo.addons.l10n_it_edi.tests.common import TestItEdi
+from koda import tools
+from koda.tests import tagged, Form
+from koda.addons.l10n_it_edi.tests.common import TestItEdi
 
 _logger = logging.getLogger(__name__)
 

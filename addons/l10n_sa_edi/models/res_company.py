@@ -1,6 +1,6 @@
 import re
-from odoo import models, fields, _
-from odoo.exceptions import UserError
+from koda import models, fields, _
+from koda.exceptions import UserError
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import ec

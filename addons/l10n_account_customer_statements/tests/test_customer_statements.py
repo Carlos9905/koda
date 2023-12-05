@@ -2,9 +2,9 @@
 
 from freezegun import freeze_time
 
-from odoo.tests.common import tagged
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tools.misc import NON_BREAKING_SPACE
+from koda.tests.common import tagged
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tools.misc import NON_BREAKING_SPACE
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

@@ -6,9 +6,9 @@ import base64
 from lxml import etree
 from num2words import num2words
 
-from odoo import api, fields, models, _
-from odoo.tools.float_utils import float_repr, float_round
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.tools.float_utils import float_repr, float_round
+from koda.exceptions import UserError
 
 CATALOG52 = [
     ("1002", "TRANSFERENCIA GRATUITA DE UN BIEN Y/O SERVICIO PRESTADO GRATUITAMENTE"),

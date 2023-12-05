@@ -3,10 +3,10 @@
 
 from collections import OrderedDict
 
-from odoo import fields, _
-from odoo.addons.hr_contract_salary.controllers import main
-from odoo.addons.sign.controllers.main import Sign
-from odoo.http import route, request
+from koda import fields, _
+from koda.addons.hr_contract_salary.controllers import main
+from koda.addons.sign.controllers.main import Sign
+from koda.http import route, request
 
 ODOMETER_UNITS = {'kilometers': 'km', 'miles': 'mi'}
 

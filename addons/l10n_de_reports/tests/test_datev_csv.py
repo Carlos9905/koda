@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from odoo import fields
-from odoo.tests import tagged
-from odoo.tools import pycompat
+from koda import fields
+from koda.tests import tagged
+from koda.tools import pycompat
 import zipfile
 from io import BytesIO
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 

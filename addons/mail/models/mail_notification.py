@@ -3,9 +3,9 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models
-from odoo.exceptions import AccessError
-from odoo.tools.translate import _
+from koda import api, fields, models
+from koda.exceptions import AccessError
+from koda.tools.translate import _
 
 
 class MailNotification(models.Model):

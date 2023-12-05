@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from stdnum.cl import rut
 
-from odoo import _, tools, http
-from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.http import request
+from koda import _, tools, http
+from koda.addons.website_sale.controllers.main import WebsiteSale
+from koda.http import request
 
 
 class L10nCLWebsiteSale(WebsiteSale):

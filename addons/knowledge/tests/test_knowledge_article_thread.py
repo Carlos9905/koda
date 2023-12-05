@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import tagged, HttpCase
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.tests.common import tagged, HttpCase
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 @tagged('post_install', '-at_install', 'knowledge', 'knowledge_tour', 'knowledge_comments')

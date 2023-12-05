@@ -7,8 +7,8 @@ import io
 from PIL import Image
 from datetime import datetime
 
-from odoo.addons.industry_fsm_sale.tests.common import TestFsmFlowSaleCommon
-from odoo.tests import tagged
+from koda.addons.industry_fsm_sale.tests.common import TestFsmFlowSaleCommon
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

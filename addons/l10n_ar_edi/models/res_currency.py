@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, _
-from odoo.exceptions import UserError
+from koda import models, _
+from koda.exceptions import UserError
 import datetime
-from odoo.tools import format_date
+from koda.tools import format_date
 
 
 class ResCurrency(models.Model):

@@ -4,8 +4,8 @@
 import base64
 from datetime import datetime
 
-from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
-from odoo.tools import misc
+from koda.addons.account_edi.tests.common import AccountEdiTestCommon
+from koda.tools import misc
 from pytz import timezone
 
 

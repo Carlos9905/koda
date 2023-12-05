@@ -4,7 +4,7 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 class TestPayrollCommon(TransactionCase):
 

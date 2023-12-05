@@ -4,10 +4,10 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
-from odoo.tests import tagged
-from odoo.tests.common import Form
+from koda.tests import tagged
+from koda.tests.common import Form
 
 
 @tagged("post_install_l10n", "post_install", "-at_install", "superstream")

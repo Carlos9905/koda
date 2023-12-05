@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models
+from koda import fields, models
 
 class RealEstate(models.Model):
     """ Model to contain the information related to a real estate, when making an

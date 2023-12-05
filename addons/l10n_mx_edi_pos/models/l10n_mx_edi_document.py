@@ -1,4 +1,4 @@
-from odoo import _, api, fields, models
+from koda import _, api, fields, models
 
 
 class L10nMxEdiDocument(models.Model):

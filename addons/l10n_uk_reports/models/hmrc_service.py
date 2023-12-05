@@ -11,10 +11,10 @@ import hmac
 from hashlib import sha256
 from werkzeug import urls
 
-from odoo import api, models, _
-from odoo.http import request
+from koda import api, models, _
+from koda.http import request
 import logging
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

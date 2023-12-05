@@ -1,7 +1,7 @@
 # coding: utf-8
-from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
-from odoo.tools import misc
-from odoo import Command
+from koda.addons.account_edi.tests.common import AccountEdiTestCommon
+from koda.tools import misc
+from koda import Command
 
 from unittest.mock import patch, Mock
 from freezegun import freeze_time

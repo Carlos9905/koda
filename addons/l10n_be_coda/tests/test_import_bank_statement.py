@@ -4,9 +4,9 @@
 # Copyright (c) 2012 Noviat nv/sa (www.noviat.be). All rights reserved.
 import base64
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tools import file_open
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tools import file_open
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

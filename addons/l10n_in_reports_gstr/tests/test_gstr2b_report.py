@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import Command
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import tagged
+from koda import Command
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
 from .gstr_test_json import gstr2b_test_json
 import logging
 import json

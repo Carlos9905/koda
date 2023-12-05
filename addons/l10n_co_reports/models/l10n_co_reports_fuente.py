@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.tools.misc import get_lang
+from koda import models
+from koda.tools.misc import get_lang
 
 class FuenteReportCustomHandler(models.AbstractModel):
     _name = 'l10n_co.fuente.report.handler'

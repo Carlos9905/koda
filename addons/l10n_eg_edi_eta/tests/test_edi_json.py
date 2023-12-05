@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 from freezegun import freeze_time
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
 from .common import TestEGEdiCommon
 

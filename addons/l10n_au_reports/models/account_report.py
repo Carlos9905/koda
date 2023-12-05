@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, fields, _
-from odoo.exceptions import UserError
-from odoo.release import version
+from koda import models, fields, _
+from koda.exceptions import UserError
+from koda.release import version
 
 try:
     from stdnum.au.abn import is_valid_abn

@@ -1,6 +1,6 @@
-from odoo import Command, fields
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import tagged
+from koda import Command, fields
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
 
 
 @tagged("post_install", "post_install_l10n", "-at_install")

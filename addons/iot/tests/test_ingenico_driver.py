@@ -1,8 +1,8 @@
 from unittest.mock import MagicMock, patch
 from zlib import crc32
 
-from odoo.tests.common import BaseCase
-from odoo.tools import file_open
+from koda.tests.common import BaseCase
+from koda.tools import file_open
 
 
 class MockSocket:
@@ -27,7 +27,7 @@ class TestIncomingTransactionResponse(BaseCase):
     )
     def setUp(self):
         # pylint: disable=import-outside-toplevel
-        from odoo.addons.iot.iot_handlers.drivers.IngenicoDriver import IncomingIngenicoMessage
+        from koda.addons.iot.iot_handlers.drivers.IngenicoDriver import IncomingIngenicoMessage
         self.IncomingIngenicoMessage = IncomingIngenicoMessage
 
     def test_parse_ticketdata(self):
@@ -59,7 +59,7 @@ class TestOutgoingIngenicoMessage(BaseCase):
     )
     def setUp(self):
         # pylint: disable=import-outside-toplevel
-        from odoo.addons.iot.iot_handlers.drivers.IngenicoDriver import OutgoingIngenicoMessage
+        from koda.addons.iot.iot_handlers.drivers.IngenicoDriver import OutgoingIngenicoMessage
 
         self.OutgoingIngenicoMessage = OutgoingIngenicoMessage
         self.dev = MagicMock()

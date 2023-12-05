@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import datetime
 
-from odoo import fields
-from odoo.exceptions import UserError
-from odoo.tests import TransactionCase, tagged
-from odoo.tools import misc, os
+from koda import fields
+from koda.exceptions import UserError
+from koda.tests import TransactionCase, tagged
+from koda.tools import misc, os
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

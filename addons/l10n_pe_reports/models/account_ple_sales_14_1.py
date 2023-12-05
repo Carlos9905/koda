@@ -1,7 +1,7 @@
 # Koda
 
-from odoo import _, api, models
-from odoo.exceptions import UserError
+from koda import _, api, models
+from koda.exceptions import UserError
 
 
 class AccountReport(models.Model):

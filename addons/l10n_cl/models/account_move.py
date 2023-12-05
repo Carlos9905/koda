@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.exceptions import ValidationError
-from odoo import models, fields, api, _
-from odoo.tools.misc import formatLang
+from koda.exceptions import ValidationError
+from koda import models, fields, api, _
+from koda.tools.misc import formatLang
 
 SII_VAT = '60805000-0'
 

@@ -7,9 +7,9 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 from itertools import product
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import float_round
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools import float_round
 
 
 class L10nLuMonthlyDeclarationWizard(models.TransientModel):

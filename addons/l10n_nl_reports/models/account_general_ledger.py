@@ -5,10 +5,10 @@ from collections import namedtuple
 
 from dateutil.rrule import rrule, MONTHLY
 
-from odoo import models, fields, release, _
-from odoo.exceptions import RedirectWarning, UserError
-from odoo.tools import get_lang
-from odoo.tools.misc import street_split
+from koda import models, fields, release, _
+from koda.exceptions import RedirectWarning, UserError
+from koda.tools import get_lang
+from koda.tools.misc import street_split
 
 
 class GeneralLedgerCustomHandler(models.AbstractModel):

@@ -4,10 +4,10 @@ from dateutil.relativedelta import relativedelta
 from datetime import date
 from lxml import etree
 
-from odoo import api, fields, models, _
-from odoo.tools import date_utils
-from odoo.exceptions import UserError
-from odoo.addons.l10n_be_hr_payroll.models.hr_dmfa import DMFANode, format_amount
+from koda import api, fields, models, _
+from koda.tools import date_utils
+from koda.exceptions import UserError
+from koda.addons.l10n_be_hr_payroll.models.hr_dmfa import DMFANode, format_amount
 
 
 class DMFACompanyVehicle(DMFANode):

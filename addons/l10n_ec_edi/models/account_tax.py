@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models
+from koda import fields, models
 
 L10N_EC_TAXSUPPORTS = [
     ('01', '01 Tax credit for VAT declaration (services and goods other than inventories and fixed assets)'),

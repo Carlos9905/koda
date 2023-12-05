@@ -11,12 +11,12 @@ from lxml import html
 from markupsafe import Markup
 from werkzeug import urls
 
-from odoo import _, api, fields, models, tools
-from odoo.addons.base.models.ir_qweb import QWebException
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.exceptions import UserError, AccessError
-from odoo.tools import is_html_empty
-from odoo.tools.rendering_tools import convert_inline_template_to_qweb, parse_inline_template, render_inline_template, template_env_globals
+from koda import _, api, fields, models, tools
+from koda.addons.base.models.ir_qweb import QWebException
+from koda.addons.http_routing.models.ir_http import slug
+from koda.exceptions import UserError, AccessError
+from koda.tools import is_html_empty
+from koda.tools.rendering_tools import convert_inline_template_to_qweb, parse_inline_template, render_inline_template, template_env_globals
 
 _logger = logging.getLogger(__name__)
 

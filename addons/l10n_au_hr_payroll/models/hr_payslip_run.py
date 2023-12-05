@@ -1,6 +1,6 @@
 # Koda
 
-from odoo import fields, models, _
+from koda import fields, models, _
 
 
 class HrPayslipRun(models.Model):

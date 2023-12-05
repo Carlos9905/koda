@@ -8,13 +8,13 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.serialization import pkcs12
 from cryptography.x509.oid import NameOID
 from lxml import etree
-from odoo import api, fields, models, tools
-from odoo.addons.l10n_ec_edi.models.xml_utils import (
+from koda import api, fields, models, tools
+from koda.addons.l10n_ec_edi.models.xml_utils import (
     NS_MAP, bytes_as_block, calculate_references_digests,
     cleanup_xml_signature, fill_signature, int_as_bytes)
-from odoo.exceptions import ValidationError
-from odoo.tools.translate import _
-from odoo.tools.xml_utils import cleanup_xml_node
+from koda.exceptions import ValidationError
+from koda.tools.translate import _
+from koda.tools.xml_utils import cleanup_xml_node
 
 
 class L10nEcCertificate(models.Model):

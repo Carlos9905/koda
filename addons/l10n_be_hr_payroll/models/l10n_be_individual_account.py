@@ -5,8 +5,8 @@ import datetime
 import logging
 
 from collections import OrderedDict
-from odoo import api, fields, models, _
-from odoo.fields import Datetime
+from koda import api, fields, models, _
+from koda.fields import Datetime
 
 _logger = logging.getLogger(__name__)
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, models, _
+from koda import api, models, _
 
 
 class DutchECSalesReportCustomHandler(models.AbstractModel):

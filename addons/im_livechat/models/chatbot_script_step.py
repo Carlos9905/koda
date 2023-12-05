@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, models, fields
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
-from odoo.osv import expression
-from odoo.tools import html2plaintext, is_html_empty, email_normalize, plaintext2html
+from koda import _, api, models, fields
+from koda.exceptions import ValidationError
+from koda.fields import Command
+from koda.osv import expression
+from koda.tools import html2plaintext, is_html_empty, email_normalize, plaintext2html
 
 from collections import defaultdict
 from markupsafe import Markup

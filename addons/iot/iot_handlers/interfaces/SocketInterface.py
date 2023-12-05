@@ -1,9 +1,9 @@
 import logging
 import socket
 
-from odoo import _
-from odoo.addons.hw_drivers.interface import Interface
-from odoo.addons.hw_drivers.main import iot_devices
+from koda import _
+from koda.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.main import iot_devices
 
 _logger = logging.getLogger(__name__)
 

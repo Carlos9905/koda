@@ -1,10 +1,10 @@
 import requests
 import werkzeug
 
-from odoo.addons.web_unsplash.controllers import main
-from odoo import http
-from odoo.exceptions import AccessError
-from odoo.http import request
+from koda.addons.web_unsplash.controllers import main
+from koda import http
+from koda.exceptions import AccessError
+from koda.http import request
 from werkzeug.urls import url_encode
 
 # ID of the unsplash collection, used as a fallback for knowledge covers when we can't find a suitable image

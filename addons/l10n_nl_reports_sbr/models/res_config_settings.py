@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, fields, _, api
-from odoo.exceptions import ValidationError
+from koda import models, fields, _, api
+from koda.exceptions import ValidationError
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.serialization import pkcs12, pkcs7
 from cryptography import x509

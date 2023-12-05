@@ -5,8 +5,8 @@ import io
 import re
 import xlwt
 
-from odoo import fields, models
-from odoo.tools.misc import format_date
+from koda import fields, models
+from koda.tools.misc import format_date
 
 
 COLUMN_HEADER_MAP = {

@@ -6,10 +6,10 @@ import re
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError, UserError
-from odoo.osv import expression
-from odoo.tools import is_html_empty, remove_accents
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError, UserError
+from koda.osv import expression
+from koda.tools import is_html_empty, remove_accents
 
 # see rfc5322 section 3.2.3
 atext = r"[a-zA-Z0-9!#$%&'*+\-/=?^_`{|}~]"

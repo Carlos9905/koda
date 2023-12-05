@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, _
+from koda import models, _
 
 from lxml import etree
 

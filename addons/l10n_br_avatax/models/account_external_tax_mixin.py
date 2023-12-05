@@ -4,10 +4,10 @@ from datetime import datetime, timedelta
 from json import dumps
 from pprint import pformat
 
-from odoo import models, fields, _, registry, api, SUPERUSER_ID
-from odoo.addons.iap.tools.iap_tools import iap_jsonrpc
-from odoo.exceptions import UserError, ValidationError, RedirectWarning
-from odoo.tools import float_round, DEFAULT_SERVER_DATETIME_FORMAT, json_float_round
+from koda import models, fields, _, registry, api, SUPERUSER_ID
+from koda.addons.iap.tools.iap_tools import iap_jsonrpc
+from koda.exceptions import UserError, ValidationError, RedirectWarning
+from koda.tools import float_round, DEFAULT_SERVER_DATETIME_FORMAT, json_float_round
 
 logger = logging.getLogger(__name__)
 

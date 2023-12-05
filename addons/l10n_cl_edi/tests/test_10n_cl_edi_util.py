@@ -4,8 +4,8 @@ import os
 from lxml import etree
 from unittest.mock import patch
 
-from odoo.tools import misc
-from odoo.tests.common import tagged
+from koda.tools import misc
+from koda.tests.common import tagged
 from .common import TestL10nClEdiCommon, _check_with_xsd_patch
 
 

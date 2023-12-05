@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools import parse_date
-from odoo.tools.float_utils import float_round
+from koda import fields, models, _
+from koda.exceptions import ValidationError
+from koda.tools import parse_date
+from koda.tools.float_utils import float_round
 
 class AssetsReport(models.Model):
     _inherit = 'account.report'

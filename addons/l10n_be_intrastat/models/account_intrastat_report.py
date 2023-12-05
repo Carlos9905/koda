@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, _
-from odoo.exceptions import UserError, RedirectWarning
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
+from koda import api, models, _
+from koda.exceptions import UserError, RedirectWarning
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT
 
 from datetime import datetime, timedelta
 

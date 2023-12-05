@@ -749,7 +749,7 @@ QUnit.test("chat window should open when receiving a new DM", async () => {
     await contains(".o-mail-ChatWindow");
 });
 
-QUnit.test("chat window should not open when receiving a new DM from odoobot", async () => {
+QUnit.test("chat window should not open when receiving a new DM from kodabot", async () => {
     const pyEnv = await startServer();
     const userId = pyEnv["res.users"].create({ partner_id: pyEnv.odoobotId });
     const channelId = pyEnv["discuss.channel"].create({

@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.http import request
-from odoo.tools import file_open
+from koda import http
+from koda.http import request
+from koda.tools import file_open
 
 
 class VoiceController(http.Controller):
