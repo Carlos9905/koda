@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="disallowed_expenses_report" model="account.report">
         <field name="name">Disallowed Expenses Report</field>
         <field name="filter_multi_company">selector</field>
@@ -24,4 +24,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

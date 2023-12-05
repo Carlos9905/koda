@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="template_followup_report">
            <!-- doc is a 'res.partner' -->
@@ -174,4 +174,4 @@
             <field eval="False" name="value"/>
         </record>
     </data>
-</odoo>
+</koda>

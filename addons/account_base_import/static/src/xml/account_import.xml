@@ -51,7 +51,7 @@
                 </t>
                 <t t-if="countryCode === 'SE'">
                     <div class="sie-import pt-4">
-                        <h2 class="text-odoo">
+                        <h2 class="text-koda">
                             SIE 5
                         </h2>
                         <p>

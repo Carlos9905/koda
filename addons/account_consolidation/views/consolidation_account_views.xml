@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <record id="consolidation_account_tree" model="ir.ui.view">
             <field name="name">consolidation.account.tree</field>
@@ -172,4 +172,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

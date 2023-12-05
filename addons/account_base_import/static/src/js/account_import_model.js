@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 import { BaseImportModel } from "@base_import/import_model";
 
 class AccountMoveLineImportModel extends BaseImportModel {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="sdd_mandate_form_report_main" model="ir.actions.report">
             <field name="name">Mandate form</field>
@@ -141,4 +141,4 @@
             </div>
         </template>
     </data>
-</odoo>
+</koda>

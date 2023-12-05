@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mail_activity_schedule_view_form" model="ir.ui.view">
         <field name="name">mail.activity.schedule.inherit.account.tax</field>
         <field name="model">mail.activity.schedule</field>
@@ -10,4 +10,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

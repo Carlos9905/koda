@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { EmbeddedListView } from "@account_accountant/components/bank_reconciliation/embedded_list_view";
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { useState, onWillUnmount } from "@odoo/owl";
+import { useState, onWillUnmount } from "@koda/owl";
 
 export class BankRecBatchPaymentsRenderer extends ListRenderer {
     setup() {

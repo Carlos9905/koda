@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { MonetaryField, monetaryField } from "@web/views/fields/monetary/monetary_field";
 
 export class BankRecMonetaryField extends MonetaryField{

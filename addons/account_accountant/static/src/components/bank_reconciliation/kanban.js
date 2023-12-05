@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
@@ -38,7 +38,7 @@ import { BankRecRainbowContent } from "./rainbowman_content";
 import { BankRecFinishButtons } from "./finish_buttons";
 import { BankRecGlobalInfo } from "./global_info";
 
-import { useState, useEffect, useRef, useChildSubEnv, markRaw } from "@odoo/owl";
+import { useState, useEffect, useRef, useChildSubEnv, markRaw } from "@koda/owl";
 
 export class BankRecKanbanRecord extends KanbanRecord {
     static template = "account.BankRecKanbanRecord";

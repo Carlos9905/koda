@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
         <!-- Switch root menu "Invoicing" to "Accounting" -->
         <!-- Top menu item -->
         <menuitem name="Accounting"
@@ -29,4 +29,4 @@
 
         <menuitem id="account.menu_account_config" name="Settings" parent="account.menu_finance_configuration" sequence="0" groups="base.group_system"/>
 
-</odoo>
+</koda>

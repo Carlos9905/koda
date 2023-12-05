@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 export class AccountReportButtonsBar extends Component {
     static template = "account_reports.AccountReportButtonsBar";

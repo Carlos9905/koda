@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import { Component } from "@odoo/owl";
+/** @koda-module **/
+import { Component } from "@koda/owl";
 
 export class BankRecGlobalInfo extends Component {
     static template = "account_accountant.BankRecGlobalInfo";

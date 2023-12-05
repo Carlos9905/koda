@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record model="ir.ui.view" id="account_sepa_direct_debit_mandate_form">
             <field name="name">sdd.mandate.form</field>
@@ -125,4 +125,4 @@
             action="account_sepa_direct_debit_mandate_tree_act"
             sequence="50"/>
     </data>
-</odoo>
+</koda>

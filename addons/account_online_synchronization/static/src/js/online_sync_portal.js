@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
     import publicWidget from "@web/legacy/js/public/public_widget";
     import { loadJS } from "@web/core/assets";
@@ -29,7 +29,7 @@
                                 case 'success':
                                     const processUrl = window.location.pathname + '/complete' + window.location.search;
                                     $('.js_reconnect').toggleClass('d-none');
-                                    $.post(processUrl, {csrf_token: odoo.csrf_token});
+                                    $.post(processUrl, {csrf_token: koda.csrf_token});
                                 default:
                                     return;
                             }

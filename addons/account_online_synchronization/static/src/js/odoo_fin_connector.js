@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { loadJS } from "@web/core/assets";
 import { cookie } from "@web/core/browser/cookie";
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 const actionRegistry = registry.category('actions');
 /* global OdooFin, debugMode */
 
@@ -17,7 +17,7 @@ function OdooFinConnector(parent, action) {
     let mode = action.params.mode || 'link';
     // Ensure that the proxyMode is valid
     const modeRegexp = /^[a-z0-9-_]+$/i;
-    const runbotRegexp = /^https:\/\/[a-z0-9-_]+\.[a-z0-9-_]+\.odoo\.com$/i;
+    const runbotRegexp = /^https:\/\/[a-z0-9-_]+\.[a-z0-9-_]+\.koda\.com$/i;
     if (!modeRegexp.test(action.params.proxyMode) && !runbotRegexp.test(action.params.proxyMode)) {
         return;
     }

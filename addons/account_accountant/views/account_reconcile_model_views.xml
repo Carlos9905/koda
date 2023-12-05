@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="account_reconcile_model_form_inherit_account_accountant" model="ir.ui.view">
             <field name="name">account.reconcile.model.form.inherit.account_accountant</field>
@@ -19,4 +19,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

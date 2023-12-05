@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <!-- TODO: fully rewrite the account.account views ? what ? -->
         <!-- SEARCH -->
@@ -57,4 +57,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

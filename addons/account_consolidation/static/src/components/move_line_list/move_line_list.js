@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { AccountMoveLineListController, AccountMoveLineListView } from "@account_accountant/components/move_line_list/move_line_list"
 import { registry } from "@web/core/registry";

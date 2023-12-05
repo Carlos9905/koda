@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="account_journal_dashboard_inherit_online_sync" model="ir.ui.view">
             <field name="name">account.journal.dashboard.inherit.online.sync</field>
@@ -43,4 +43,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

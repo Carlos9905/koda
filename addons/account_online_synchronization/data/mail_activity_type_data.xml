@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="bank_sync_activity_update_consent" model="mail.activity.type">
             <field name="name">Bank Synchronization: Update consent</field>
@@ -18,4 +18,4 @@
             <field name="track_recipients" eval="True"/>
         </record>
     </data>
-</odoo>
+</koda>

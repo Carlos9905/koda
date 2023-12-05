@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="sdd_view_account_invoice_search" model="ir.ui.view">
             <field name="name">sdd.account.invoice.search</field>
@@ -13,4 +13,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

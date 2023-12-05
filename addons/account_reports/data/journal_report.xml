@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="journal_report" model="account.report">
         <field name="name">Journal Report</field>
         <field name="filter_journals" eval="True"/>
@@ -184,4 +184,4 @@
             </div>
         </xpath>
     </template>
-</odoo>
+</koda>

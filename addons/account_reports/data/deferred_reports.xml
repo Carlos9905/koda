@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="deferred_expense_report" model="account.report">
         <field name="name">Deferred Expense Report</field>
@@ -40,4 +40,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

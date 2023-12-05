@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="view_report_intrastat_code_tree" model="ir.ui.view">
             <field name="name">account.intrastat.code.tree</field>
@@ -130,4 +130,4 @@
         <menuitem action="action_report_intrastat_code_tree" id="menu_report_intrastat_code"
                   parent="account.account_invoicing_menu" sequence="4" groups="account.group_account_manager"/>
     </data>
-</odoo>
+</koda>

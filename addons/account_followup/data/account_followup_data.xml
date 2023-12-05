@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <!-- Mail template is done in a NOUPDATE block
          so users can freely customize/delete them -->
     <data noupdate="1">
@@ -66,4 +66,4 @@
             <field name="context" eval="{'model': 'account.followup.report'}" />
         </record>
     </data>
-</odoo>
+</koda>

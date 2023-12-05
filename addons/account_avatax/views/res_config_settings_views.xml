@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="ir_logging_avalara_tree" model="ir.ui.view">
         <field name="name">ir.logging.avalara</field>
         <field name="model">ir.logging</field>
@@ -96,4 +96,4 @@
             </setting>
         </field>
     </record>
-</odoo>
+</koda>

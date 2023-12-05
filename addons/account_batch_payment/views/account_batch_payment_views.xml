@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
         <record model="ir.actions.server" id="action_account_create_batch_payment">
             <field name="name">Create batch payment</field>
@@ -189,4 +189,4 @@ if records:
         <menuitem action="action_batch_payment_in" name="Batch Payments" id="menu_batch_payment_sales" parent="account.menu_finance_receivables" sequence="18" groups="account.group_account_readonly"/>
         <menuitem action="action_batch_payment_out" name="Batch Payments" id="menu_batch_payment_purchases" parent="account.menu_finance_payables" sequence="21" groups="account.group_account_readonly"/>
 
-</odoo>
+</koda>

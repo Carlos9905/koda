@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { accountMove as accountMoveService } from "@account/components/account_move_service/account_move_service";
 

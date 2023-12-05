@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <record id="consolidation_group_tree" model="ir.ui.view">
             <field name="name">consolidation.group.tree</field>
@@ -85,4 +85,4 @@
             <field name="search_view_id" ref="consolidation_group_search"/>
         </record>
     </data>
-</odoo>
+</koda>

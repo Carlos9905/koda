@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 //----------------------------------------------------------------------------------------------------------------------
 // This class provides some helpers function to do assertions on tours

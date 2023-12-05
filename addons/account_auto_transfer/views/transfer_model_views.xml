@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- SEARCH VIEW -->
     <record model="ir.ui.view" id="view_generated_transfer_search">
         <field name="name">account.auto.transfer.search</field>
@@ -124,4 +124,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

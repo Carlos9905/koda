@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Budgets -->
     <data noupdate="1">
         <!-- Optimistic -->
@@ -203,4 +203,4 @@
             <field name="analytic_account_id" ref="analytic.analytic_agrolait"/>
         </record>
     </data>
-</odoo>
+</koda>

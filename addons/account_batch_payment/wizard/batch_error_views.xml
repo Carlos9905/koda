@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
 
         <record model="ir.ui.view" id="batch_error_wizard_form">
@@ -53,4 +53,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

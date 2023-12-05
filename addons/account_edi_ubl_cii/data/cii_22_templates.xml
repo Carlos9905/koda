@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="account_invoice_line_facturx_export_22">
             <t t-set="line" t-value="line_vals['line']"/>
@@ -389,4 +389,4 @@
         </template>
 
     </data>
-</odoo>
+</koda>

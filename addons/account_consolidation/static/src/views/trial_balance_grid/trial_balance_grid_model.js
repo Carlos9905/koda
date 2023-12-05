@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { GridModel, GridCell, GridDataPoint } from "@web_grid/views/grid_model";
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Office Chair -->
     <record id="product.product_delivery_01" model="product.product">
         <field name="intrastat_code_id" ref="account_intrastat.commodity_code_2022_94013900"/>
@@ -122,4 +122,4 @@
         <field name="intrastat_code_id" ref="account_intrastat.commodity_code_2018_94016100"/>
     </record>
 
-</odoo>
+</koda>

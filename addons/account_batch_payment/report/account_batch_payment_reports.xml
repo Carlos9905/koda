@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="action_print_batch_payment" model="ir.actions.report">
         <field name="name">Print Batch Payment</field>
         <field name="model">account.batch.payment</field>
@@ -10,4 +10,4 @@
         <field name="binding_model_id" ref="model_account_batch_payment"/>
         <field name="binding_type">report</field>
     </record>
-</odoo>
+</koda>

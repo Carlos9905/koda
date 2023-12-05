@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<odoo>
+<koda>
 
     <record id="journal_dashboard_view_inherit" model="ir.ui.view">
         <field name="name">account.journal.dashboard.kanban.inherit</field>
@@ -31,4 +31,4 @@
             </tree>
         </field>
     </record>
-</odoo>
+</koda>

@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { localization } from "@web/core/l10n/localization";
 import { useService } from "@web/core/utils/hooks";
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 import { AccountReportEllipsisPopover } from "@account_reports/components/account_report/ellipsis/popover/ellipsis_popover";
 

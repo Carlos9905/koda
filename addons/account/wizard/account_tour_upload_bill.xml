@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="account_tour_upload_bill" model="ir.ui.view">
             <field name="name">account.tour.upload.bill</field>
@@ -44,4 +44,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

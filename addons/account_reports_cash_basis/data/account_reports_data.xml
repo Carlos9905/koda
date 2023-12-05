@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="account_reports.profit_and_loss" model="account.report">
         <field name="filter_cash_basis" eval="True"/>
     </record>
@@ -34,4 +34,4 @@
             </t>
         </xpath>
     </template>
-</odoo>
+</koda>

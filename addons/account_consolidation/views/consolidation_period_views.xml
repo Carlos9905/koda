@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <!-- consolidation.period views -->
 
@@ -472,4 +472,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

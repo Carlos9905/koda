@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="avatax_category_tree" model="ir.ui.view">
         <field name="name">product.avatax.category.tree</field>
         <field name="model">product.avatax.category</field>
@@ -21,4 +21,4 @@
             </search>
         </field>
     </record>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <!-- SEARCH -->
         <record id="trial_balance_grid_search" model="ir.ui.view">
@@ -222,4 +222,4 @@
             <field name="search_view_id" ref="consolidation_journal_line_search"/>
         </record>
     </data>
-</odoo>
+</koda>

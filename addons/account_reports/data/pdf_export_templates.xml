@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="pdf_export_main">
          <html>
              <head>
@@ -276,4 +276,4 @@
 
         <span t-att-class="o_classes" t-out="cell.get('name')"/>
     </template>
-</odoo>
+</koda>

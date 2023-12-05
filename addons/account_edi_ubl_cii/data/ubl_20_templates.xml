@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <template id="ubl_20_AddressType">
         <t xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
@@ -576,4 +576,4 @@
         </DebitNote>
     </template>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <record id="consolidation_chart_tree" model="ir.ui.view">
             <field name="name">consolidation.chart.tree</field>
@@ -135,4 +135,4 @@
             <field name="target">new</field>
         </record>
     </data>
-</odoo>
+</koda>

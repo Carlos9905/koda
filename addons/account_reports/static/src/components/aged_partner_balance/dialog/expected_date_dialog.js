@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { DateTimeInput } from '@web/core/datetime/datetime_input';
 import { Dialog } from "@web/core/dialog/dialog";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 const { DateTime } = luxon;
 
 export class ExpectedDateDialog extends Component {

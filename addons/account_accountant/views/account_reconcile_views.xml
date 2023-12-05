@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
     <record id="view_account_move_line_reconcile_search" model="ir.ui.view">
         <field name="name">account.move.line.reconcile.search</field>
         <field name="model">account.move.line</field>
@@ -113,4 +113,4 @@
         <field name="domain">[('display_type', 'not in', ('line_section', 'line_note')), ('account_id.reconcile', '=', True), ('parent_state', '=', 'posted'), ('full_reconcile_id', '=', False)]</field>
         <field name="context">{'journal_type': 'general', 'search_default_unreconciled': True, 'search_default_group_by_account': True, 'search_default_group_by_partner': True}</field>
     </record>
-</odoo>
+</koda>

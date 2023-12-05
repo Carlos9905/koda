@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { AccountMoveFormView } from '@account/components/account_move_form/account_move_form';

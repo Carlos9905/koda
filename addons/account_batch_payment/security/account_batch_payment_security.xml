@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record model="ir.rule" id="account_batch_payment_comp_rule">
         <field name="name">Account batch payment company rule</field>
@@ -7,4 +7,4 @@
         <field name="domain_force">['|',('journal_id.company_id','=',False),('journal_id.company_id','in', company_ids)]</field>
     </record>
 
-</odoo>
+</koda>

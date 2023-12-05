@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="intrastat_report" model="account.report">
             <field name="name">Intrastat Report</field>
@@ -90,4 +90,4 @@
             <field name="active" eval="True"/>
         </record>
     </data>
-</odoo>
+</koda>

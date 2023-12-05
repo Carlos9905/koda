@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { localization } from "@web/core/l10n/localization";
 import { useService } from "@web/core/utils/hooks";
@@ -6,7 +6,7 @@ import { useService } from "@web/core/utils/hooks";
 import { AccountReportCarryoverPopover } from "@account_reports/components/account_report/line_cell/popover/carryover_popover";
 import { AccountReportEditPopover } from "@account_reports/components/account_report/line_cell/popover/edit_popover";
 
-import { Component, markup, useState } from "@odoo/owl";
+import { Component, markup, useState } from "@koda/owl";
 
 export class AccountReportLineCell extends Component {
     static template = "account_reports.AccountReportLineCell";

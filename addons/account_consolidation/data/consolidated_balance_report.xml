@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="consolidated_balance_report" model="account.report">
         <field name="name">Consolidated Balance</field>
@@ -11,4 +11,4 @@
         <field name="custom_handler_model_id" ref="model_consolidation_trial_balance_report_handler"/>
     </record>
 
-</odoo>
+</koda>

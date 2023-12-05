@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="executive_summary" model="account.report">
         <field name="name">Executive Summary</field>
         <field name="filter_multi_company">selector</field>
@@ -324,4 +324,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

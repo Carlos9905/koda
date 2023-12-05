@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useAutofocus, useService } from "@web/core/utils/hooks";
 
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 export class AccountReportEditPopover extends Component {
     static template = "account_reports.AccountReportEditPopover";

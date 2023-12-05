@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { mockDownload } from "@web/../tests/helpers/utils";
 

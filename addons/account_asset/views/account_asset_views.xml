@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record model="ir.ui.view" id="view_account_asset_form">
         <field name="name">account.asset.form</field>
@@ -477,4 +477,4 @@ if records:
         </field>
     </record>
 
-</odoo>
+</koda>

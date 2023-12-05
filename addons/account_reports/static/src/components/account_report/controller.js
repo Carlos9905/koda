@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 /* global owl:readonly */
 
 import { browser } from "@web/core/browser/browser";

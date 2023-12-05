@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="sdd_report_invoice_document" inherit_id="account.report_invoice_document">
             <xpath expr="//div[@t-if='not is_html_empty(o.narration)']" position="before">
@@ -18,4 +18,4 @@
             </xpath>
         </template>
     </data>
-</odoo>
+</koda>

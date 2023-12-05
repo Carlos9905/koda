@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="missing_information_view_form" model="ir.ui.view">
         <field name="name">missing.information.view.form</field>
         <field name="model">account_followup.missing.information.wizard</field>
@@ -30,4 +30,4 @@
             </tree>
         </field>
     </record>
-</odoo>
+</koda>

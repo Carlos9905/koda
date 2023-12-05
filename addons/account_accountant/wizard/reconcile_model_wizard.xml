@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <record id="view_account_reconcile_model_widget_wizard" model="ir.ui.view">
         <field name="name">account.reconcile.model.form</field>
         <field name="model">account.reconcile.model</field>
@@ -42,4 +42,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

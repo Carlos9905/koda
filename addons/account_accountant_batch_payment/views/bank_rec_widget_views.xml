@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
 
         <!-- Search view on batch payment to be injected inside the form (view_bank_rec_widget_form) -->
@@ -60,4 +60,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

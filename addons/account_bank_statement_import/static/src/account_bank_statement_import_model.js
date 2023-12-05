@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { BaseImportModel } from "@base_import/import_model";
 import { patch } from "@web/core/utils/patch";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="report_invoice_document" inherit_id="sale.report_saleorder_document">
         <!-- TODO not the best thing to inherit... -->
         <xpath expr="//td[@name='td_taxes']" position="attributes">
@@ -9,4 +9,4 @@
             <attribute name="t-if">not doc.is_avatax</attribute>
         </xpath>
     </template>
-</odoo>
+</koda>

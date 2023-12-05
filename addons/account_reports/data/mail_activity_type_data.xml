@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="tax_closing_activity_type" model="mail.activity.type">
             <field name="name">Tax Report</field>
@@ -9,4 +9,4 @@
             <field name="chaining_type">suggest</field>
         </record>
     </data>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Asserts } from "./asserts";
 import { registry } from "@web/core/registry";

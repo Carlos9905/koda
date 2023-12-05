@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { PortalHomeCounters } from '@portal/js/portal';
 

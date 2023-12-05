@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { FileInput } from "@web/core/file_input/file_input";
-import { Component, onWillUnmount } from "@odoo/owl";
+import { Component, onWillUnmount } from "@koda/owl";
 
 export class MailAttachments extends Component {
     static template = "account.mail_attachments";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="view_bank_statement_form_bank_rec_widget" model="ir.ui.view">
             <field name="name">account.bank.statement.form.bank_rec_widget</field>
@@ -441,4 +441,4 @@ if records:
             </field>
         </record>
     </data>
-</odoo>
+</koda>

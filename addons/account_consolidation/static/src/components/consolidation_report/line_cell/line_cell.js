@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AccountReport } from "@account_reports/components/account_report/account_report";
 import { AccountReportLineCell } from "@account_reports/components/account_report/line_cell/line_cell";

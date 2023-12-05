@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <!-- account.move.line views -->
 
@@ -31,4 +31,4 @@
             <field name="search_view_id" ref="view_account_move_line_filter_search"/>
         </record>
     </data>
-</odoo>
+</koda>

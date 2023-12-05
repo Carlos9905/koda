@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { formatMonetary } from "@web/views/fields/formatters";
 import { formatFloat } from "@web/core/utils/numbers";
@@ -14,7 +14,7 @@ import {
     toRaw,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 /**
  A line of some TaxTotalsComponent, giving the values of a tax group.

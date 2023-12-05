@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <menuitem id="account_reports_partners_reports_menu" name="Partner Reports" parent="account.menu_finance_reports" sequence="3">
         <menuitem id="menu_action_account_report_partner_ledger" name="Partner Ledger" action="action_account_report_partner_ledger" groups="account.group_account_readonly"/>
         <menuitem id="menu_action_account_report_aged_receivable" name="Aged Receivable" action="action_account_report_ar" groups="account.group_account_readonly"/>
@@ -23,4 +23,4 @@
     <menuitem id="menu_action_account_report_deferred_revenue" name="Deferred Revenue" action="action_account_report_deferred_revenue" parent="account.account_reports_management_menu" groups="account.group_account_readonly"/>
     <menuitem id="menu_action_account_report_tree" name="Accounting Reports" sequence="6" parent="account.account_management_menu" action="action_account_report_tree" groups="base.group_no_one"/>
     <menuitem id="menu_action_account_report_horizontal_groups" name="Horizontal Groups" action="action_account_report_horizontal_groups" parent="account.account_account_menu" sequence="10" groups="base.group_no_one"/>
-</odoo>
+</koda>

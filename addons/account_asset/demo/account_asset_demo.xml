@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="account_asset_model_demo" model="account.asset">
             <field name="name">Asset - 5 Years</field>
@@ -22,4 +22,4 @@
             <field name="state">open</field>
         </record>
     </data>
-</odoo>
+</koda>
