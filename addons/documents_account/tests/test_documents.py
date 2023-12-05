@@ -2,10 +2,10 @@
 
 import base64
 
-from odoo.tests import Form
+from koda.tests import Form
 
-from odoo.exceptions import UserError
-from odoo.tests.common import tagged, TransactionCase
+from koda.exceptions import UserError
+from koda.tests.common import tagged, TransactionCase
 
 GIF = b"R0lGODdhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs="
 TEXT = base64.b64encode(bytes("workflow bridge account", 'utf-8'))

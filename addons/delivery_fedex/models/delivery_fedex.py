@@ -6,10 +6,10 @@ import time
 from markupsafe import Markup
 from zeep.helpers import serialize_object
 
-from odoo import api, models, fields, _, tools
-from odoo.exceptions import UserError
-from odoo.tools import pdf, float_repr
-from odoo.tools.safe_eval import const_eval
+from koda import api, models, fields, _, tools
+from koda.exceptions import UserError
+from koda.tools import pdf, float_repr
+from koda.tools.safe_eval import const_eval
 
 from .fedex_request import FedexRequest
 

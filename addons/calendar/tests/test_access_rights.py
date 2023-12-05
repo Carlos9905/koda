@@ -3,9 +3,9 @@
 
 from datetime import datetime, timedelta
 
-from odoo.tests.common import TransactionCase, new_test_user
-from odoo.exceptions import AccessError
-from odoo.tools import mute_logger
+from koda.tests.common import TransactionCase, new_test_user
+from koda.exceptions import AccessError
+from koda.tools import mute_logger
 
 
 class TestAccessRights(TransactionCase):

@@ -1,6 +1,6 @@
-from odoo import models
-from odoo.http import request, SessionExpiredException
-from odoo.service import security
+from koda import models
+from koda.http import request, SessionExpiredException
+from koda.service import security
 from ..models.bus import dispatch
 from ..websocket import wsrequest
 

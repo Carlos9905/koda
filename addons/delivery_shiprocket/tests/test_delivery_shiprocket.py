@@ -4,8 +4,8 @@ import logging
 from datetime import datetime
 import re
 
-from odoo.addons.delivery_shiprocket.models.shiprocket_request import ShipRocket
-from odoo.tests import TransactionCase
+from koda.addons.delivery_shiprocket.models.shiprocket_request import ShipRocket
+from koda.tests import TransactionCase
 
 _logger = logging.getLogger(__name__)
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
+from koda import models
 
 class L10nBeSocialSecurityCertificate(models.TransientModel):
     _inherit = 'l10n.be.social.security.certificate'

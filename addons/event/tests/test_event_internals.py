@@ -4,12 +4,12 @@
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.addons.event.tests.common import EventCase
-from odoo import exceptions
-from odoo.fields import Datetime as FieldsDatetime
-from odoo.tests.common import users, Form, tagged
-from odoo.tools import mute_logger
+from koda import Command
+from koda.addons.event.tests.common import EventCase
+from koda import exceptions
+from koda.fields import Datetime as FieldsDatetime
+from koda.tests.common import users, Form, tagged
+from koda.tools import mute_logger
 
 
 class TestEventInternalsCommon(EventCase):

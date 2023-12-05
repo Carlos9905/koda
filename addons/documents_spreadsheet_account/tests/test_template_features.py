@@ -1,5 +1,5 @@
-from odoo.tests import tagged
-from odoo.tests.common import HttpCase
+from koda.tests import tagged
+from koda.tests.common import HttpCase
 
 TEST_CONTENT = '{"sheets": [{"cells":{"A1":{"content":"😃"}}}]}'
 

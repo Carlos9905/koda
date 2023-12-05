@@ -4,7 +4,7 @@
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, exceptions, fields, models, _
+from koda import api, exceptions, fields, models, _
 
 
 class ResConfigSettings(models.TransientModel):

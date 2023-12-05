@@ -3,7 +3,7 @@
 
 import json
 
-from odoo.addons.mail_plugin.tests.common import TestMailPluginControllerCommon, mock_auth_method_outlook
+from koda.addons.mail_plugin.tests.common import TestMailPluginControllerCommon, mock_auth_method_outlook
 
 
 class TestCrmMailPlugin(TestMailPluginControllerCommon):

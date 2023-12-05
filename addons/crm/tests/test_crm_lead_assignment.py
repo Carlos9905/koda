@@ -7,10 +7,10 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.addons.crm.tests.common import TestLeadConvertCommon
-from odoo.tests.common import tagged
-from odoo.tools import mute_logger
+from koda import fields
+from koda.addons.crm.tests.common import TestLeadConvertCommon
+from koda.tests.common import tagged
+from koda.tools import mute_logger
 
 
 class TestLeadAssignCommon(TestLeadConvertCommon):

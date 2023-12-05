@@ -3,11 +3,11 @@
 
 from datetime import timedelta
 
-from odoo import tools
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.fields import Date
-from odoo.tests import Form, tagged, users
-from odoo.tests.common import TransactionCase
+from koda import tools
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.fields import Date
+from koda.tests import Form, tagged, users
+from koda.tests.common import TransactionCase
 
 
 @tagged('crm_lead_pls')

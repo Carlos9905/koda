@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
 import re
-from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase, tagged, Form
+from koda.exceptions import UserError
+from koda.tests.common import TransactionCase, tagged, Form
 
 
 _logger = logging.getLogger(__name__)

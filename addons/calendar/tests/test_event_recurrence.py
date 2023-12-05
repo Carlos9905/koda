@@ -4,9 +4,9 @@
 import pytz
 from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
-from odoo.tests.common import TransactionCase, Form
+from koda.tests.common import TransactionCase, Form
 from freezegun import freeze_time
 
 

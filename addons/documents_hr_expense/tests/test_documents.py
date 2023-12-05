@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import base64
-from odoo import Command
-from odoo.tests.common import TransactionCase
+from koda import Command
+from koda.tests.common import TransactionCase
 
 
 TEXT = base64.b64encode(bytes("workflow bridge project", 'utf-8'))

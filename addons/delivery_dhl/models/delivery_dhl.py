@@ -4,10 +4,10 @@ from .dhl_request import DHLProvider
 from markupsafe import Markup
 from zeep.helpers import serialize_object
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
-from odoo.tools import float_repr
-from odoo.tools.safe_eval import const_eval
+from koda import api, models, fields, _
+from koda.exceptions import UserError
+from koda.tools import float_repr
+from koda.tools.safe_eval import const_eval
 
 
 class Providerdhl(models.Model):

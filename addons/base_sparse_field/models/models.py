@@ -2,8 +2,8 @@
 
 from collections import defaultdict
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
+from koda import models, fields, api, _
+from koda.exceptions import UserError
 
 
 class Base(models.AbstractModel):

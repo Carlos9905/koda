@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api, fields, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.models import MAGIC_COLUMNS
-from odoo.osv.expression import FALSE_DOMAIN, OR, expression
-from odoo.tools import get_lang
-from odoo.tools.misc import format_datetime, format_date, partition as tools_partition
+from koda import models, api, fields, _
+from koda.exceptions import ValidationError, UserError
+from koda.models import MAGIC_COLUMNS
+from koda.osv.expression import FALSE_DOMAIN, OR, expression
+from koda.tools import get_lang
+from koda.tools.misc import format_datetime, format_date, partition as tools_partition
 from collections.abc import Iterable
 
 from datetime import datetime, date

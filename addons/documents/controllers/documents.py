@@ -10,10 +10,10 @@ from contextlib import ExitStack
 from markupsafe import Markup
 from werkzeug.exceptions import Forbidden
 
-from odoo import Command, http
-from odoo.exceptions import AccessError
-from odoo.http import request, content_disposition
-from odoo.tools.translate import _
+from koda import Command, http
+from koda.exceptions import AccessError
+from koda.http import request, content_disposition
+from koda.tools.translate import _
 
 logger = logging.getLogger(__name__)
 

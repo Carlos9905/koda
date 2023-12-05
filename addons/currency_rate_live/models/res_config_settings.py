@@ -10,11 +10,11 @@ from urllib.parse import urlencode, quote
 
 import requests
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools.translate import _
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.addons.account.tools import LegacyHTTPAdapter
+from koda import api, fields, models
+from koda.exceptions import UserError
+from koda.tools.translate import _
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT
+from koda.addons.account.tools import LegacyHTTPAdapter
 
 BANXICO_DATE_FORMAT = '%d/%m/%Y'
 CBUAE_URL = "https://centralbank.ae/umbraco/Surface/Exchange/GetExchangeRateAllCurrency"

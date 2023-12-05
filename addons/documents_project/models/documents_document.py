@@ -3,9 +3,9 @@
 
 from collections import OrderedDict
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools import SQL
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.tools import SQL
 
 
 class Document(models.Model):

@@ -4,7 +4,7 @@
 from . import models
 from . import wizard
 
-from odoo import tools
+from koda import tools
 
 
 def _auto_install_apps(env):

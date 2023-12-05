@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api, fields, _
-from odoo.models import MAGIC_COLUMNS
-from odoo.osv import expression
-from odoo.tools import split_every
+from koda import models, api, fields, _
+from koda.models import MAGIC_COLUMNS
+from koda.osv import expression
+from koda.tools import split_every
 
 import logging
 _logger = logging.getLogger(__name__)

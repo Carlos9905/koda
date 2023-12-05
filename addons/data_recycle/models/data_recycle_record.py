@@ -3,7 +3,7 @@
 
 from collections import defaultdict
 
-from odoo import models, api, fields, _
+from koda import models, api, fields, _
 
 
 class DataRecycleRecord(models.Model):

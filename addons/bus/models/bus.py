@@ -11,10 +11,10 @@ import time
 from psycopg2 import InterfaceError, sql
 
 import odoo
-from odoo import api, fields, models
-from odoo.service.server import CommonServer
-from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
-from odoo.tools import date_utils
+from koda import api, fields, models
+from koda.service.server import CommonServer
+from koda.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from koda.tools import date_utils
 
 _logger = logging.getLogger(__name__)
 

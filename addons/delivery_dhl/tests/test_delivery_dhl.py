@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from contextlib import contextmanager
 from unittest.mock import Mock, patch
-from odoo.tests.common import TransactionCase, tagged, Form
+from koda.tests.common import TransactionCase, tagged, Form
 
 
 @tagged('-standard', 'external')

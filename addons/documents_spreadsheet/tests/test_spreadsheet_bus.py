@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from .common import SpreadsheetTestCommon
-from odoo.tests.common import new_test_user
-from odoo.addons.bus.models.bus import channel_with_db
-from odoo.addons.mail.tests.common import MailCase
+from koda.tests.common import new_test_user
+from koda.addons.bus.models.bus import channel_with_db
+from koda.addons.mail.tests.common import MailCase
 
 
 class TestSpreadsheetBus(SpreadsheetTestCommon, MailCase):

@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests.common import tagged
+from koda import Command
+from koda.tests.common import tagged
 
-from odoo.addons.sale_project.tests.common import TestSaleProjectCommon
+from koda.addons.sale_project.tests.common import TestSaleProjectCommon
 
 
 @tagged("-at_install", "post_install")

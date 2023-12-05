@@ -4,10 +4,10 @@ import time
 
 from psycopg2 import OperationalError
 
-from odoo import api, fields, models
-from odoo import tools
-from odoo.service.model import PG_CONCURRENCY_ERRORS_TO_RETRY
-from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import api, fields, models
+from koda import tools
+from koda.service.model import PG_CONCURRENCY_ERRORS_TO_RETRY
+from koda.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 UPDATE_PRESENCE_DELAY = 60
 DISCONNECTION_TIMER = UPDATE_PRESENCE_DELAY + 5

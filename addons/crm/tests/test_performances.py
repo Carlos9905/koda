@@ -3,9 +3,9 @@
 
 import random
 
-from odoo.addons.crm.tests.test_crm_lead_assignment import TestLeadAssignCommon
-from odoo.tests.common import tagged
-from odoo.tools import mute_logger
+from koda.addons.crm.tests.test_crm_lead_assignment import TestLeadAssignCommon
+from koda.tests.common import tagged
+from koda.tools import mute_logger
 
 
 @tagged('lead_assign', 'crm_performance', 'post_install', '-at_install')

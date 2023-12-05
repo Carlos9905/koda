@@ -7,8 +7,8 @@ from freezegun import freeze_time
 from uuid import uuid4
 
 from .common import SpreadsheetTestCommon
-from odoo.tests.common import new_test_user, tagged
-from odoo.exceptions import AccessError
+from koda.tests.common import new_test_user, tagged
+from koda.exceptions import AccessError
 
 
 @tagged("collaborative_spreadsheet")

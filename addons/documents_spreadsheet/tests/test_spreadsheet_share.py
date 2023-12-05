@@ -2,8 +2,8 @@
 
 
 from .common import SpreadsheetTestCommon
-from odoo.exceptions import AccessError
-from odoo.tests.common import new_test_user
+from koda.exceptions import AccessError
+from koda.tests.common import new_test_user
 
 EXCEL_FILES = [
     {

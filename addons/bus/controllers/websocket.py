@@ -2,8 +2,8 @@
 
 import json
 
-from odoo.http import Controller, request, route, SessionExpiredException
-from odoo.addons.base.models.assetsbundle import AssetsBundle
+from koda.http import Controller, request, route, SessionExpiredException
+from koda.addons.base.models.assetsbundle import AssetsBundle
 from ..models.bus import channel_with_db
 from ..websocket import WebsocketConnectionHandler
 

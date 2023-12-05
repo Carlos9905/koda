@@ -2,8 +2,8 @@
 
 import json
 
-from odoo.tests import JsonRpcException
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.tests import JsonRpcException
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
 
 
 class TestWebsocketController(HttpCaseWithUserDemo):

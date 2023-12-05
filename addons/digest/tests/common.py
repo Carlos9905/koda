@@ -7,8 +7,8 @@ import random
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.addons.mail.tests import common as mail_test
+from koda import fields
+from koda.addons.mail.tests import common as mail_test
 
 
 class TestDigestCommon(mail_test.MailCommon):

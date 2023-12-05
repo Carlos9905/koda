@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import unittest
 
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 
 class TestCommon(TransactionCase):

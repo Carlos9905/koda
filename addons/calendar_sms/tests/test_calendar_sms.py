@@ -3,8 +3,8 @@
 
 from datetime import datetime
 
-from odoo.addons.sms.tests.common import SMSCommon
-from odoo.tests import tagged
+from koda.addons.sms.tests.common import SMSCommon
+from koda.tests import tagged
 
 
 @tagged('sms')

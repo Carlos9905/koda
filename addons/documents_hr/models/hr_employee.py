@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, fields, models
-from odoo.exceptions import ValidationError, UserError
-from odoo.osv import expression
+from koda import _, fields, models
+from koda.exceptions import ValidationError, UserError
+from koda.osv import expression
 
 
 class HrEmployee(models.Model):

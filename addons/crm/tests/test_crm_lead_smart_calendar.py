@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, datetime
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.tests.common import tagged, users
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.crm.tests.common import TestCrmCommon
+from koda.tests.common import tagged, users
 
 @tagged('post_install', '-at_install')
 class TestCRMLeadSmartCalendar(TestCrmCommon):

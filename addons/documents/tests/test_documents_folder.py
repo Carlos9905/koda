@@ -4,10 +4,10 @@
 from datetime import date, timedelta
 import base64
 
-from odoo import Command
-from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase
-from odoo.tools import mute_logger
+from koda import Command
+from koda.exceptions import UserError
+from koda.tests.common import TransactionCase
+from koda.tools import mute_logger
 
 TEXT = base64.b64encode(bytes("TEST", 'utf-8'))
 

@@ -6,9 +6,9 @@ import requests
 from werkzeug.urls import url_join
 
 
-from odoo import fields, _
-from odoo.exceptions import UserError
-from odoo.tools import float_repr, float_compare
+from koda import fields, _
+from koda.exceptions import UserError
+from koda.tools import float_repr, float_compare
 
 # More information at : https://api.sendcloud.dev/docs/sendcloud-public-api/integrations
 BASE_URL = "https://panel.sendcloud.sc/api/v2/"

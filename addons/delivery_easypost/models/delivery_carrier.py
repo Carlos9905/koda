@@ -5,10 +5,10 @@ import requests
 from markupsafe import Markup
 from werkzeug.urls import url_join
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools.float_utils import float_round
-from odoo.tools import file_open
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools.float_utils import float_round
+from koda.tools import file_open
 
 from .easypost_request import EasypostRequest
 

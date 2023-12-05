@@ -4,8 +4,8 @@ import json
 from base64 import b64encode
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 from .bpost_request import BpostRequest
 

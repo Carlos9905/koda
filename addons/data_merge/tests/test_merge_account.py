@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.account.tests.common import AccountTestInvoicingHttpCommon
-from odoo.exceptions import UserError
-from odoo.tests.common import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingHttpCommon
+from koda.exceptions import UserError
+from koda.tests.common import tagged
 
 
 @tagged('post_install', '-at_install')

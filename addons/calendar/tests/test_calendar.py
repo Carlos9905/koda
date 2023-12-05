@@ -4,9 +4,9 @@ import datetime
 
 from datetime import date, datetime, timedelta
 
-from odoo import fields, Command
-from odoo.tests import Form, HttpCase, tagged
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
+from koda import fields, Command
+from koda.tests import Form, HttpCase, tagged
+from koda.addons.base.tests.common import SavepointCaseWithUserDemo
 
 import freezegun
 import pytz

@@ -3,8 +3,8 @@
 
 from datetime import date, timedelta
 
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.tests.common import users
+from koda.addons.crm.tests.common import TestCrmCommon
+from koda.tests.common import users
 
 
 class TestCrmMailActivity(TestCrmCommon):

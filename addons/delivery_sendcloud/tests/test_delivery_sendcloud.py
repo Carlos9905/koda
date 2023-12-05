@@ -3,8 +3,8 @@ from contextlib import contextmanager
 from unittest.mock import patch
 import requests
 
-from odoo.tests import TransactionCase, tagged
-from odoo import Command
+from koda.tests import TransactionCase, tagged
+from koda import Command
 
 @contextmanager
 def _mock_sendcloud_call(warehouse_id):

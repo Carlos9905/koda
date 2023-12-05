@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, models, _
-from odoo.exceptions import ValidationError
+from koda import api, models, _
+from koda.exceptions import ValidationError
 
 
 class AccountFiscalPosition(models.Model):

@@ -3,9 +3,9 @@
 import json
 from collections import defaultdict
 
-from odoo import api, fields, models, _, _lt
-from odoo.exceptions import UserError
-from odoo.tools import frozendict
+from koda import api, fields, models, _, _lt
+from koda.exceptions import UserError
+from koda.tools import frozendict
 
 
 class ProjectProject(models.Model):

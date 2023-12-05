@@ -6,9 +6,9 @@ import datetime
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo.addons.event.tests.common import EventCase
-from odoo.tests.common import users
-from odoo.tools import mute_logger
+from koda.addons.event.tests.common import EventCase
+from koda.tests.common import users
+from koda.tools import mute_logger
 
 
 class TestEventFlow(EventCase):

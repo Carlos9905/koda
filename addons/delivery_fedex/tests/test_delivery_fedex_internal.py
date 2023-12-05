@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import unittest
-from odoo.tests.common import TransactionCase, tagged
-from odoo.exceptions import UserError
+from koda.tests.common import TransactionCase, tagged
+from koda.exceptions import UserError
 from ..models.fedex_request import FedexRequest
 
 

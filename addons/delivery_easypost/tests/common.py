@@ -5,10 +5,10 @@ import json
 import requests
 from unittest.mock import Mock, patch
 
-from odoo.addons.delivery_easypost.models.delivery_carrier import DeliverCarrier
-from odoo.addons.delivery_easypost.models.easypost_request import EasypostRequest
-from odoo.tools import file_open
-from odoo.tests import TransactionCase
+from koda.addons.delivery_easypost.models.delivery_carrier import DeliverCarrier
+from koda.addons.delivery_easypost.models.easypost_request import EasypostRequest
+from koda.tools import file_open
+from koda.tests import TransactionCase
 
 
 class EasypostTestCommon(TransactionCase):

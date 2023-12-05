@@ -6,11 +6,11 @@ from lxml import etree
 from zeep import Client, Plugin
 from zeep.wsdl.utils import etree_to_string
 
-from odoo import _
-from odoo import release
-from odoo.exceptions import UserError
-from odoo.tools import float_repr, float_round
-from odoo.tools.misc import file_path
+from koda import _
+from koda import release
+from koda.exceptions import UserError
+from koda.tools import float_repr, float_round
+from koda.tools.misc import file_path
 
 class DHLProvider():
 

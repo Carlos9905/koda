@@ -3,9 +3,9 @@
 
 from datetime import datetime, timedelta
 
-from odoo import models
-from odoo.tools import populate
-from odoo.addons.crm.populate import tools
+from koda import models
+from koda.tools import populate
+from koda.addons.crm.populate import tools
 
 
 class CrmLead(models.Model):

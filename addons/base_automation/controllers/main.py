@@ -1,4 +1,4 @@
-from odoo.http import request, route, Controller
+from koda.http import request, route, Controller
 
 from json import JSONDecodeError
 

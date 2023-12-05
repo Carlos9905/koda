@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import TransactionCase
-from odoo.exceptions import UserError
+from koda.tests import TransactionCase
+from koda.exceptions import UserError
 
 import odoo.tests
 

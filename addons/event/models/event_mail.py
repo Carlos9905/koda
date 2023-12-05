@@ -9,10 +9,10 @@ from collections import namedtuple
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, tools
-from odoo.tools import exception_to_unicode
-from odoo.tools.translate import _
-from odoo.exceptions import MissingError, ValidationError
+from koda import api, fields, models, tools
+from koda.tools import exception_to_unicode
+from koda.tools.translate import _
+from koda.exceptions import MissingError, ValidationError
 
 
 _logger = logging.getLogger(__name__)

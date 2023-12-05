@@ -10,11 +10,11 @@ from werkzeug.urls import url_parse
 import pytz
 import uuid
 
-from odoo import api, fields, models, Command
-from odoo.osv.expression import AND
-from odoo.addons.base.models.res_partner import _tz_get
-from odoo.addons.calendar.models.calendar_attendee import Attendee
-from odoo.addons.calendar.models.calendar_recurrence import (
+from koda import api, fields, models, Command
+from koda.osv.expression import AND
+from koda.addons.base.models.res_partner import _tz_get
+from koda.addons.calendar.models.calendar_attendee import Attendee
+from koda.addons.calendar.models.calendar_recurrence import (
     weekday_to_field,
     RRULE_TYPE_SELECTION,
     END_TYPE_SELECTION,
@@ -22,10 +22,10 @@ from odoo.addons.calendar.models.calendar_recurrence import (
     WEEKDAY_SELECTION,
     BYDAY_SELECTION
 )
-from odoo.tools.translate import _
-from odoo.tools.misc import get_lang
-from odoo.tools import pycompat, html2plaintext, is_html_empty, single_email_re
-from odoo.exceptions import UserError, ValidationError
+from koda.tools.translate import _
+from koda.tools.misc import get_lang
+from koda.tools import pycompat, html2plaintext, is_html_empty, single_email_re
+from koda.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 

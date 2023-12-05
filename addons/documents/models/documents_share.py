@@ -2,11 +2,11 @@
 
 from ast import literal_eval
 
-from odoo import models, fields, api, exceptions
-from odoo.tools.translate import _
-from odoo.tools import consteq
+from koda import models, fields, api, exceptions
+from koda.tools.translate import _
+from koda.tools import consteq
 
-from odoo.osv import expression
+from koda.osv import expression
 
 import uuid
 

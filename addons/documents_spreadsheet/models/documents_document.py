@@ -9,10 +9,10 @@ import datetime
 
 from lxml import etree
 
-from odoo import _, fields, models, api
-from odoo.exceptions import UserError, AccessError, ValidationError
-from odoo.osv import expression
-from odoo.tools import image_process
+from koda import _, fields, models, api
+from koda.exceptions import UserError, AccessError, ValidationError
+from koda.osv import expression
+from koda.tools import image_process
 
 
 SUPPORTED_PATHS = (

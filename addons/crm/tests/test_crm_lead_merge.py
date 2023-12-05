@@ -4,10 +4,10 @@
 import base64
 from datetime import timedelta
 
-from odoo.addons.crm.tests.common import TestLeadConvertMassCommon
-from odoo.fields import Datetime
-from odoo.tests.common import tagged, users
-from odoo.tools import mute_logger
+from koda.addons.crm.tests.common import TestLeadConvertMassCommon
+from koda.fields import Datetime
+from koda.tests.common import tagged, users
+from koda.tools import mute_logger
 
 
 class TestLeadMergeCommon(TestLeadConvertMassCommon):

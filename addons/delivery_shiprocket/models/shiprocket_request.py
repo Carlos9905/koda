@@ -9,8 +9,8 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 from werkzeug.urls import url_join
 
-from odoo import fields, _
-from odoo.exceptions import ValidationError, UserError, RedirectWarning
+from koda import fields, _
+from koda.exceptions import ValidationError, UserError, RedirectWarning
 
 _logger = logging.getLogger(__name__)
 

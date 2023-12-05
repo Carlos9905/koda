@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import odoo
-from odoo.tests import HttpCase
+from koda.tests import HttpCase
 
 
 @odoo.tests.tagged('-at_install', 'post_install')

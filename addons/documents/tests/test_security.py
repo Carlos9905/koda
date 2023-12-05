@@ -2,9 +2,9 @@
 
 import base64
 
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import AccessError, ValidationError
-from odoo.tools import mute_logger
+from koda.tests.common import TransactionCase
+from koda.exceptions import AccessError, ValidationError
+from koda.tools import mute_logger
 
 from psycopg2 import IntegrityError
 

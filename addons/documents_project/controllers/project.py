@@ -4,11 +4,11 @@
 import base64
 import logging
 
-from odoo import http
-from odoo.addons.documents.controllers.documents import ShareRoute
-from odoo.addons.portal.controllers.portal import CustomerPortal
-from odoo.exceptions import AccessError, MissingError
-from odoo.http import request
+from koda import http
+from koda.addons.documents.controllers.documents import ShareRoute
+from koda.addons.portal.controllers.portal import CustomerPortal
+from koda.exceptions import AccessError, MissingError
+from koda.http import request
 
 logger = logging.getLogger(__name__)
 

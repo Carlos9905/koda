@@ -4,15 +4,15 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo import fields
-from odoo.addons.base.tests.test_format_address_mixin import FormatAddressCase
-from odoo.addons.crm.models.crm_lead import PARTNER_FIELDS_TO_SYNC, PARTNER_ADDRESS_FIELDS_TO_SYNC
-from odoo.addons.crm.tests.common import TestCrmCommon, INCOMING_EMAIL
-from odoo.addons.mail.tests.mail_tracking_duration_mixin_case import MailTrackingDurationMixinCase
-from odoo.addons.phone_validation.tools.phone_validation import phone_format
-from odoo.exceptions import UserError
-from odoo.tests.common import Form, tagged, users
-from odoo.tools import mute_logger
+from koda import fields
+from koda.addons.base.tests.test_format_address_mixin import FormatAddressCase
+from koda.addons.crm.models.crm_lead import PARTNER_FIELDS_TO_SYNC, PARTNER_ADDRESS_FIELDS_TO_SYNC
+from koda.addons.crm.tests.common import TestCrmCommon, INCOMING_EMAIL
+from koda.addons.mail.tests.mail_tracking_duration_mixin_case import MailTrackingDurationMixinCase
+from koda.addons.phone_validation.tools.phone_validation import phone_format
+from koda.exceptions import UserError
+from koda.tests.common import Form, tagged, users
+from koda.tools import mute_logger
 
 
 @tagged('lead_internals')

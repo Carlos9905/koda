@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from markupsafe import Markup, escape
-from odoo import Command, fields, models, _
+from koda import Command, fields, models, _
 
 
 class WorkflowActionRuleTask(models.Model):

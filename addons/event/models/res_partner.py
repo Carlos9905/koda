@@ -8,7 +8,7 @@ import hmac
 import requests
 import werkzeug.urls
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class ResPartner(models.Model):

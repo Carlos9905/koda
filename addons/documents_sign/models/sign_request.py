@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api, exceptions
+from koda import models, fields, api, exceptions
 
 
 class SignRequest(models.Model):

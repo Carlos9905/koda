@@ -1,9 +1,9 @@
 
-from odoo import http, _
-from odoo.exceptions import AccessError
-from odoo.addons.documents.controllers.documents import ShareRoute
+from koda import http, _
+from koda.exceptions import AccessError
+from koda.addons.documents.controllers.documents import ShareRoute
 
-from odoo.http import request
+from koda.http import request
 
 
 class SpreadsheetShareRoute(ShareRoute):

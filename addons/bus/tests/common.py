@@ -12,7 +12,7 @@ except ImportError:
     websocket = None
 
 import odoo.tools
-from odoo.tests import HOST, HttpCase
+from koda.tests import HOST, HttpCase
 from ..websocket import CloseCode, Websocket, WebsocketConnectionHandler
 from ..models.bus import dispatch, hashable, channel_with_db
 

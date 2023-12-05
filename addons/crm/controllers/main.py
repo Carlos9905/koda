@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
 
-from odoo.addons.mail.controllers.mail import MailController
-from odoo import http
-from odoo.http import request
+from koda.addons.mail.controllers.mail import MailController
+from koda import http
+from koda.http import request
 
 _logger = logging.getLogger(__name__)
 

@@ -1,4 +1,4 @@
-from odoo import models, api
+from koda import models, api
 
 class IrAttachment(models.Model):
     _inherit = ['ir.attachment']

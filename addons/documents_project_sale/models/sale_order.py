@@ -2,7 +2,7 @@
 
 from collections import defaultdict
 
-from odoo import models
+from koda import models
 
 
 class SaleOrder(models.Model):

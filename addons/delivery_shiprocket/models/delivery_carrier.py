@@ -6,8 +6,8 @@ import requests
 
 from datetime import timedelta
 
-from odoo import fields, models, _
-from odoo.exceptions import ValidationError
+from koda import fields, models, _
+from koda.exceptions import ValidationError
 
 from .shiprocket_request import ShipRocket
 

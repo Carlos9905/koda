@@ -3,8 +3,8 @@
 from contextlib import contextmanager
 import unittest
 from unittest.mock import Mock, patch
-from odoo.tests.common import TransactionCase, tagged, Form
-from odoo.exceptions import UserError
+from koda.tests.common import TransactionCase, tagged, Form
+from koda.exceptions import UserError
 
 
 # These errors are due to failures of Fedex test server and are not implementation errors

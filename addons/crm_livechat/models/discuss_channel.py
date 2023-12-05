@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
-from odoo.tools import html2plaintext
+from koda import models, _
+from koda.tools import html2plaintext
 
 
 class DiscussChannel(models.Model):

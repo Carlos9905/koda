@@ -6,9 +6,9 @@ from dateutil.relativedelta import relativedelta
 
 import pytz
 
-from odoo import Command
-from odoo import tests
-from odoo.addons.mail.tests.common import MailCommon
+from koda import Command
+from koda import tests
+from koda.addons.mail.tests.common import MailCommon
 
 
 @tests.tagged('mail_activity_mixin')

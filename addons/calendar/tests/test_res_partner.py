@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import TransactionCase
-from odoo.tests.common import new_test_user
+from koda.tests.common import TransactionCase
+from koda.tests.common import new_test_user
 
 
 class TestResPartner(TransactionCase):

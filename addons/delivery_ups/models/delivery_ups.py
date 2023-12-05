@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
-from odoo.tools import pdf
+from koda import api, models, fields, _
+from koda.exceptions import UserError
+from koda.tools import pdf
 
 from .ups_request import UPSRequest
 

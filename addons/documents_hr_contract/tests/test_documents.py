@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import base64
-from odoo.tests.common import tagged, TransactionCase, new_test_user
+from koda.tests.common import tagged, TransactionCase, new_test_user
 
 TEXT = base64.b64encode(bytes("documents_hr", 'utf-8'))
 

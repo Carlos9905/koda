@@ -10,8 +10,8 @@ from zeep import Client, Plugin, Settings
 from zeep.exceptions import Fault
 from zeep.wsdl.utils import etree_to_string
 
-from odoo.tools import remove_accents, float_repr
-from odoo.tools.misc import file_path
+from koda.tools import remove_accents, float_repr
+from koda.tools.misc import file_path
 
 
 _logger = logging.getLogger(__name__)

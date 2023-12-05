@@ -5,11 +5,11 @@ from dateutil.relativedelta import relativedelta
 from lxml import html
 from werkzeug.urls import url_encode, url_join
 
-from odoo import fields, SUPERUSER_ID
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.digest.tests.common import TestDigestCommon
-from odoo.tests import tagged
-from odoo.tests.common import users
+from koda import fields, SUPERUSER_ID
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.addons.digest.tests.common import TestDigestCommon
+from koda.tests import tagged
+from koda.tests.common import users
 
 
 class TestDigest(TestDigestCommon):

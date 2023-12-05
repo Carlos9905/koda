@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import ipaddress
 
-from odoo import _, SUPERUSER_ID
-from odoo.http import request
-from odoo.addons.web.controllers.home import Home as WebHome
+from koda import _, SUPERUSER_ID
+from koda.http import request
+from koda.addons.web.controllers.home import Home as WebHome
 
 
 def _admin_password_warn(uid):

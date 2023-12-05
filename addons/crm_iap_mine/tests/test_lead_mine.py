@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import exceptions
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.addons.crm_iap_mine.tests.common import MockIAPReveal
-from odoo.tests.common import users
+from koda import exceptions
+from koda.addons.crm.tests.common import TestCrmCommon
+from koda.addons.crm_iap_mine.tests.common import MockIAPReveal
+from koda.tests.common import users
 
 
 class TestLeadMine(TestCrmCommon, MockIAPReveal):

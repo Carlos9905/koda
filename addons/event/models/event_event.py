@@ -6,13 +6,13 @@ import pytz
 
 from datetime import timedelta
 
-from odoo import _, api, Command, fields, models, tools
-from odoo.addons.base.models.res_partner import _tz_get
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import format_datetime, is_html_empty
-from odoo.tools.misc import formatLang
-from odoo.tools.translate import html_translate
+from koda import _, api, Command, fields, models, tools
+from koda.addons.base.models.res_partner import _tz_get
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
+from koda.tools import format_datetime, is_html_empty
+from koda.tools.misc import formatLang
+from koda.tools.translate import html_translate
 
 _logger = logging.getLogger(__name__)
 

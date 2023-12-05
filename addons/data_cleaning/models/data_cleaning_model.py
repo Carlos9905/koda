@@ -5,8 +5,8 @@ import ast
 from dateutil.relativedelta import relativedelta
 from psycopg2 import sql
 
-from odoo import models, api, fields, _
-from odoo.tools import split_every
+from koda import models, api, fields, _
+from koda.tools import split_every
 
 # When cleaning_mode = automatic, _clean_records calls action_validate.
 # This is quite slow so requires smaller batch size.

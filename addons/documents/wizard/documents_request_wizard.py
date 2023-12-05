@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from dateutil.relativedelta import relativedelta
-from odoo import api, fields, models
-from odoo.tools.misc import clean_context
+from koda import api, fields, models
+from koda.tools.misc import clean_context
 
 
 class RequestWizard(models.TransientModel):

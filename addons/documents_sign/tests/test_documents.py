@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import base64
-from odoo.tools import file_open
-from odoo.tests.common import TransactionCase
+from koda.tools import file_open
+from koda.tests.common import TransactionCase
 
 GIF = b"R0lGODdhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs="
 

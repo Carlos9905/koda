@@ -14,8 +14,8 @@ try:
 except ImportError:
     pass
 
-from odoo.api import Environment
-from odoo.tests import common, new_test_user
+from koda.api import Environment
+from koda.tests import common, new_test_user
 from .common import WebsocketCase
 from ..models.bus import dispatch
 from ..websocket import (

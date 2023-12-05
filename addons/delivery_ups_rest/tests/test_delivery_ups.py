@@ -2,7 +2,7 @@ import json
 from contextlib import contextmanager
 from unittest.mock import patch
 import requests
-from odoo.tests.common import TransactionCase, tagged
+from koda.tests.common import TransactionCase, tagged
 
 
 @contextmanager

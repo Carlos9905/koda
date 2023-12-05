@@ -3,9 +3,9 @@
 
 import logging
 
-from odoo import http
-from odoo.addons.documents.controllers.documents import ShareRoute
-from odoo.http import request
+from koda import http
+from koda.addons.documents.controllers.documents import ShareRoute
+from koda.http import request
 
 logger = logging.getLogger(__name__)
 

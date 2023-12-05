@@ -1,4 +1,4 @@
-from odoo.tests.common import TransactionCase, tagged
+from koda.tests.common import TransactionCase, tagged
 
 
 @tagged('-standard', 'external')

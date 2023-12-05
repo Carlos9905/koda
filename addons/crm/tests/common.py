@@ -5,12 +5,12 @@ from ast import literal_eval
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo.addons.crm.models.crm_lead import PARTNER_ADDRESS_FIELDS_TO_SYNC
-from odoo.addons.mail.tests.common import MailCase, mail_new_test_user
-from odoo.addons.phone_validation.tools import phone_validation
-from odoo.addons.sales_team.tests.common import TestSalesCommon
-from odoo.fields import Datetime
-from odoo import models, tools
+from koda.addons.crm.models.crm_lead import PARTNER_ADDRESS_FIELDS_TO_SYNC
+from koda.addons.mail.tests.common import MailCase, mail_new_test_user
+from koda.addons.phone_validation.tools import phone_validation
+from koda.addons.sales_team.tests.common import TestSalesCommon
+from koda.fields import Datetime
+from koda import models, tools
 
 INCOMING_EMAIL = """Return-Path: {return_path}
 X-Original-To: {to}

@@ -8,7 +8,7 @@ try:
 except ImportError:
     pass
 
-from odoo.tests import common
+from koda.tests import common
 from .common import WebsocketCase
 from ..websocket import CloseCode, Websocket
 

@@ -4,9 +4,9 @@
 from werkzeug.exceptions import Forbidden, NotFound
 from werkzeug.urls import url_encode
 
-from odoo import _
-from odoo.http import Controller, request, route
-from odoo.tools import consteq
+from koda import _
+from koda.http import Controller, request, route
+from koda.tools import consteq
 
 
 class DigestController(Controller):

@@ -12,9 +12,9 @@ from stdnum.util import clean
 
 import logging
 
-from odoo import api, models, fields, tools, _
-from odoo.tools.misc import ustr
-from odoo.exceptions import ValidationError
+from koda import api, models, fields, tools, _
+from koda.tools.misc import ustr
+from koda.exceptions import ValidationError
 
 
 _logger = logging.getLogger(__name__)

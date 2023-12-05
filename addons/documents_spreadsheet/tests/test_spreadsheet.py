@@ -8,10 +8,10 @@ from freezegun import freeze_time
 from psycopg2 import IntegrityError
 
 from .common import SpreadsheetTestCommon, TEST_CONTENT, GIF
-from odoo.exceptions import AccessError
-from odoo.tools import mute_logger
-from odoo.tests import Form
-from odoo.tests.common import new_test_user
+from koda.exceptions import AccessError
+from koda.tools import mute_logger
+from koda.tests import Form
+from koda.tests.common import new_test_user
 
 
 class SpreadsheetDocuments(SpreadsheetTestCommon):

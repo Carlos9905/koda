@@ -3,9 +3,9 @@
 
 import base64
 
-from odoo.tests import tagged
-from odoo.tests.common import HttpCase
-from odoo.tools import file_open
+from koda.tests import tagged
+from koda.tests.common import HttpCase
+from koda.tools import file_open
 
 
 @tagged("post_install", "-at_install")

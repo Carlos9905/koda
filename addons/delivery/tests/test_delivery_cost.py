@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import common, Form
-from odoo.tools import float_compare
+from koda.tests import common, Form
+from koda.tools import float_compare
 
 
 @common.tagged('post_install', '-at_install')

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.addons.calendar.populate import data
-from odoo.tools import populate
+from koda import models
+from koda.addons.calendar.populate import data
+from koda.tools import populate
 
 
 class Alarm(models.Model):

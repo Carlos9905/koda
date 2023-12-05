@@ -3,7 +3,7 @@
 
 from random import sample
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class PickingType(models.Model):

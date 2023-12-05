@@ -2,12 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import base64
-from odoo import http
-from odoo.tests.common import HttpCase
+from koda import http
+from koda.tests.common import HttpCase
 
 from .common import SpreadsheetTestCommon
-from odoo.tools import file_open
-from odoo.exceptions import UserError
+from koda.tools import file_open
+from koda.exceptions import UserError
 
 class SpreadsheetImportXlsx(HttpCase, SpreadsheetTestCommon):
     def test_import_xlsx(self):

@@ -3,8 +3,8 @@
 
 import ast
 
-from odoo import fields, models, _
-from odoo.osv import expression
+from koda import fields, models, _
+from koda.osv import expression
 
 
 class ProjectTask(models.Model):

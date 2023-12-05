@@ -9,9 +9,9 @@ from json.decoder import JSONDecodeError
 from requests.exceptions import RequestException
 from werkzeug.urls import url_join
 
-from odoo import _
-from odoo.exceptions import ValidationError
-from odoo.tools import float_repr
+from koda import _
+from koda.exceptions import ValidationError
+from koda.tools import float_repr
 
 TEST_BASE_URL = "https://wwwcie.ups.com"
 PROD_BASE_URL = "https://onlinetools.ups.com"

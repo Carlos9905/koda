@@ -5,9 +5,9 @@ import base64
 import logging
 
 from collections import defaultdict
-from odoo import api, fields, models, _
-from odoo.addons.base.models.res_partner import _tz_get
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.addons.base.models.res_partner import _tz_get
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

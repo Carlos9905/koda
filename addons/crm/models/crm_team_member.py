@@ -9,8 +9,8 @@ import random
 
 from ast import literal_eval
 
-from odoo import api, exceptions, fields, models, _
-from odoo.osv import expression
+from koda import api, exceptions, fields, models, _
+from koda.osv import expression
 
 _logger = logging.getLogger(__name__)
 

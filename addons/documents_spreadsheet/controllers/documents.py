@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import _
-from odoo.http import request
-from odoo.exceptions import AccessError, MissingError
-from odoo.addons.documents.controllers.documents import ShareRoute
+from koda import _
+from koda.http import request
+from koda.exceptions import AccessError, MissingError
+from koda.addons.documents.controllers.documents import ShareRoute
 
 class SpreadsheetShareRoute(ShareRoute):
 

@@ -5,9 +5,9 @@ import os
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models, SUPERUSER_ID
-from odoo.tools import format_date, email_normalize, email_normalize_all
-from odoo.exceptions import AccessError, ValidationError
+from koda import _, api, fields, models, SUPERUSER_ID
+from koda.tools import format_date, email_normalize, email_normalize_all
+from koda.exceptions import AccessError, ValidationError
 _logger = logging.getLogger(__name__)
 
 

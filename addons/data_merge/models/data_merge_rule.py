@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, models, fields, api
+from koda import _, models, fields, api
 
 class DataMergeRule(models.Model):
     _name = 'data_merge.rule'

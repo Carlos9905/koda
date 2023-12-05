@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from odoo.addons.crm.tests import common as crm_common
-from odoo.exceptions import AccessError
-from odoo.tests.common import tagged, users
+from koda.addons.crm.tests import common as crm_common
+from koda.exceptions import AccessError
+from koda.tests.common import tagged, users
 
 
 @tagged('lead_manage')

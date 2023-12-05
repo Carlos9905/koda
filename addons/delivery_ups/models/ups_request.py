@@ -13,9 +13,9 @@ from zeep import Client, Plugin
 from zeep.exceptions import Fault
 from zeep.wsdl.utils import etree_to_string
 
-from odoo import _, _lt
-from odoo.tools.float_utils import float_repr
-from odoo.exceptions import UserError
+from koda import _, _lt
+from koda.tools.float_utils import float_repr
+from koda.exceptions import UserError
 
 
 _logger = logging.getLogger(__name__)

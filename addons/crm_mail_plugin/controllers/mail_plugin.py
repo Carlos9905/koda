@@ -3,10 +3,10 @@
 
 import logging
 
-from odoo.http import request
-from odoo.tools.misc import formatLang
+from koda.http import request
+from koda.tools.misc import formatLang
 
-from odoo.addons.mail_plugin.controllers import mail_plugin
+from koda.addons.mail_plugin.controllers import mail_plugin
 
 _logger = logging.getLogger(__name__)
 

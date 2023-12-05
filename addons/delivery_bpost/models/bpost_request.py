@@ -11,9 +11,9 @@ from PyPDF2 import PdfFileWriter, PdfFileReader
 from xml.etree import ElementTree as etree
 from werkzeug.urls import url_join
 
-from odoo import _
-from odoo.exceptions import UserError
-from odoo.tools import float_round
+from koda import _
+from koda.exceptions import UserError
+from koda.tools import float_round
 
 _logger = logging.getLogger(__name__)
 

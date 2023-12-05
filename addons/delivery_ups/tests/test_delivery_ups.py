@@ -5,8 +5,8 @@ from base64 import b64encode
 from contextlib import contextmanager
 from unittest.mock import Mock, patch
 
-from odoo.tools import file_open
-from odoo.tests.common import TransactionCase, tagged, Form
+from koda.tools import file_open
+from koda.tests.common import TransactionCase, tagged, Form
 
 
 @tagged('-standard', 'external')

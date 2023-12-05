@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import new_test_user
-from odoo.addons.spreadsheet_edition.tests.spreadsheet_test_case import SpreadsheetTestCase
+from koda.tests.common import new_test_user
+from koda.addons.spreadsheet_edition.tests.spreadsheet_test_case import SpreadsheetTestCase
 
 from uuid import uuid4
 

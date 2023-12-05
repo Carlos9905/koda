@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.tests.common import Form
-from odoo.tests import tagged, users
+from koda.addons.crm.tests.common import TestCrmCommon
+from koda.tests.common import Form
+from koda.tests import tagged, users
 
 
 @tagged('res_partner')

@@ -1,5 +1,5 @@
-from odoo import models
-from odoo.http import Stream
+from koda import models
+from koda.http import Stream
 
 
 class IrBinary(models.AbstractModel):

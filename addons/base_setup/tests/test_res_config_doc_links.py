@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import re
-from odoo.tests import HttpCase, tagged
-from odoo.release import url, version
+from koda.tests import HttpCase, tagged
+from koda.release import url, version
 
 
 @tagged('-standard', 'external', 'post_install', '-at_install') # nightly is not a real tag

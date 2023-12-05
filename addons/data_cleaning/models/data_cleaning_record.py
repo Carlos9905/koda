@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api, fields
-from odoo.addons.phone_validation.tools.phone_validation import phone_format
+from koda import models, api, fields
+from koda.addons.phone_validation.tools.phone_validation import phone_format
 
 
 class DataCleaningRecord(models.Model):

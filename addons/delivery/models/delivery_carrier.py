@@ -3,9 +3,9 @@
 import psycopg2
 import re
 
-from odoo import _, api, fields, models, registry, Command, SUPERUSER_ID
-from odoo.exceptions import UserError
-from odoo.tools.safe_eval import safe_eval
+from koda import _, api, fields, models, registry, Command, SUPERUSER_ID
+from koda.exceptions import UserError
+from koda.tools.safe_eval import safe_eval
 
 
 class DeliveryCarrier(models.Model):

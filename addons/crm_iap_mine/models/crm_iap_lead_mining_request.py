@@ -3,10 +3,10 @@
 
 import logging
 
-from odoo import api, fields, models, _
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import UserError
-from odoo.tools import is_html_empty
+from koda import api, fields, models, _
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import UserError
+from koda.tools import is_html_empty
 
 _logger = logging.getLogger(__name__)
 

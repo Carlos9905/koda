@@ -3,9 +3,9 @@
 import base64
 from datetime import date, timedelta
 
-from odoo import Command
+from koda import Command
 
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
+from koda.addons.project.tests.test_project_base import TestProjectCommon
 
 GIF = b"R0lGODdhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs="
 TEXT = base64.b64encode(bytes("workflow bridge project", 'utf-8'))

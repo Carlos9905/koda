@@ -6,10 +6,10 @@ from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo import fields
-from odoo.tests.common import TransactionCase, new_test_user
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.mail.tests.common import MailCase
+from koda import fields
+from koda.tests.common import TransactionCase, new_test_user
+from koda.addons.base.tests.test_ir_cron import CronMixinCase
+from koda.addons.mail.tests.common import MailCase
 
 
 class TestEventNotifications(TransactionCase, MailCase, CronMixinCase):

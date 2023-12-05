@@ -4,9 +4,9 @@ import io
 import zipfile
 import base64
 
-from odoo import http, fields
-from odoo.tests.common import HttpCase
-from odoo.tools import mute_logger
+from koda import http, fields
+from koda.tests.common import HttpCase
+from koda.tools import mute_logger
 
 
 class TestDocumentsRoutes(HttpCase):

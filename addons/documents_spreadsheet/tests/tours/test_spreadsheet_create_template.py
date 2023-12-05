@@ -3,9 +3,9 @@
 
 from ..common import SpreadsheetTestCommon
 
-from odoo.tests import tagged
-from odoo.tests.common import HttpCase
-from odoo.tools import file_open, misc
+from koda.tests import tagged
+from koda.tests.common import HttpCase
+from koda.tools import file_open, misc
 
 @tagged("post_install", "-at_install")
 class TestSpreadsheetCreateTemplate(SpreadsheetTestCommon, HttpCase):

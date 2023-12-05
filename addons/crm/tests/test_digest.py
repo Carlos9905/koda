@@ -3,8 +3,8 @@
 
 from datetime import datetime, timedelta
 
-from odoo.addons.digest.tests.common import TestDigestCommon
-from odoo.tools import mute_logger
+from koda.addons.digest.tests.common import TestDigestCommon
+from koda.tools import mute_logger
 
 
 class TestCrmDigest(TestDigestCommon):

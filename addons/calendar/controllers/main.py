@@ -3,8 +3,8 @@
 
 import odoo.http as http
 
-from odoo.http import request
-from odoo.tools.misc import get_lang
+from koda.http import request
+from koda.tools.misc import get_lang
 
 
 class CalendarController(http.Controller):

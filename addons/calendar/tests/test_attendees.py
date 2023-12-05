@@ -3,7 +3,7 @@
 
 from datetime import datetime
 
-from odoo.tests.common import TransactionCase, new_test_user
+from koda.tests.common import TransactionCase, new_test_user
 
 
 class TestEventNotifications(TransactionCase):

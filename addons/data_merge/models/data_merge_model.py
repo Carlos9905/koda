@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api, fields, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import SQL
+from koda import models, api, fields, _
+from koda.exceptions import UserError, ValidationError
+from koda.tools import SQL
 
 from psycopg2 import ProgrammingError, errorcodes
 
@@ -14,7 +14,7 @@ import timeit
 import logging
 import re
 
-from odoo.osv.expression import get_unaccent_wrapper
+from koda.osv.expression import get_unaccent_wrapper
 
 _logger = logging.getLogger(__name__)
 

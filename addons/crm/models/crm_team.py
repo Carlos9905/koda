@@ -9,10 +9,10 @@ import threading
 from ast import literal_eval
 from markupsafe import Markup
 
-from odoo import api, exceptions, fields, models, _
-from odoo.osv import expression
-from odoo.tools import float_compare, float_round
-from odoo.tools.safe_eval import safe_eval
+from koda import api, exceptions, fields, models, _
+from koda.osv import expression
+from koda.tools import float_compare, float_round
+from koda.tools.safe_eval import safe_eval
 
 _logger = logging.getLogger(__name__)
 

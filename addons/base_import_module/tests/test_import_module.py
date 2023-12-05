@@ -8,13 +8,13 @@ from io import BytesIO
 from zipfile import ZipFile
 
 import odoo.tests
-from odoo.tests import new_test_user
+from koda.tests import new_test_user
 
 
 from unittest.mock import patch
 
-from odoo.addons import __path__ as __addons_path__
-from odoo.tools import mute_logger
+from koda.addons import __path__ as __addons_path__
+from koda.tools import mute_logger
 
 
 @odoo.tests.tagged('post_install', '-at_install')

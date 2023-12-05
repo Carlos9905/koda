@@ -12,13 +12,13 @@ from collections import defaultdict
 from io import BytesIO
 from os.path import join as opj
 
-from odoo import api, fields, models, _
-from odoo.exceptions import AccessDenied, UserError
-from odoo.modules.module import MANIFEST_NAMES
-from odoo.osv.expression import is_leaf
-from odoo.release import major_version
-from odoo.tools import convert_csv_import, convert_sql_import, convert_xml_import, exception_to_unicode
-from odoo.tools import file_open, file_open_temporary_directory, ormcache
+from koda import api, fields, models, _
+from koda.exceptions import AccessDenied, UserError
+from koda.modules.module import MANIFEST_NAMES
+from koda.osv.expression import is_leaf
+from koda.release import major_version
+from koda.tools import convert_csv_import, convert_sql_import, convert_xml_import, exception_to_unicode
+from koda.tools import file_open, file_open_temporary_directory, ormcache
 
 _logger = logging.getLogger(__name__)
 

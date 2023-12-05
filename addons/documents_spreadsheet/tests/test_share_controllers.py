@@ -5,8 +5,8 @@ from io import BytesIO
 from urllib.parse import urlparse
 from zipfile import ZipFile
 
-from odoo.tests.common import HttpCase, new_test_user
-from odoo.tools import mute_logger
+from koda.tests.common import HttpCase, new_test_user
+from koda.tools import mute_logger
 
 from .common import SpreadsheetTestCommon
 

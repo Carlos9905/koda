@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import fields
-from odoo.tests import tagged
+from koda import fields
+from koda.tests import tagged
 
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
 @tagged('post_install', '-at_install')
 class TestReports(TestAccountReportsCommon):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import functools
 
-from odoo import _
-from odoo.exceptions import AccessError
-from odoo.http import Controller, route, request, Response
+from koda import _
+from koda.exceptions import AccessError
+from koda.http import Controller, route, request, Response
 
 
 class ImportModule(Controller):

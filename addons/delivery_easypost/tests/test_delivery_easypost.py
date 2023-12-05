@@ -3,9 +3,9 @@
 
 import logging
 
-from odoo.addons.delivery_easypost.tests.common import EasypostTestCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged, Form
+from koda.addons.delivery_easypost.tests.common import EasypostTestCommon
+from koda.exceptions import UserError
+from koda.tests import tagged, Form
 
 _logger = logging.getLogger(__name__)
 

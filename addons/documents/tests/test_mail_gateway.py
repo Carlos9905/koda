@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import tools
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail.data.test_mail_data import MAIL_EML_ATTACHMENT
+from koda import tools
+from koda.addons.mail.tests.common import MailCommon
+from koda.addons.test_mail.data.test_mail_data import MAIL_EML_ATTACHMENT
 
 
 class TestMailGateway(MailCommon):

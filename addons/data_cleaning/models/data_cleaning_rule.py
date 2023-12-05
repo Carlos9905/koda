@@ -3,9 +3,9 @@
 
 import re
 
-from odoo import models, api, fields, _
-from odoo.tools import html2plaintext
-from odoo.exceptions import ValidationError
+from koda import models, api, fields, _
+from koda.tools import html2plaintext
+from koda.exceptions import ValidationError
 
 
 ACTIONS = [

@@ -7,7 +7,7 @@ import re
 import requests
 from lxml import etree
 
-from odoo import fields, _
+from koda import fields, _
 
 
 # This re should match postcodes like 12345 and 12345-6789

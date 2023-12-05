@@ -4,9 +4,9 @@
 import json
 from werkzeug.exceptions import NotFound
 
-from odoo import http, _
-from odoo.http import Controller, request, route, content_disposition
-from odoo.tools import consteq
+from koda import http, _
+from koda.http import Controller, request, route, content_disposition
+from koda.tools import consteq
 
 
 class EventController(Controller):
