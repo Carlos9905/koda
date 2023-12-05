@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.tests.common import BaseCase
 from koda.addons.web.controllers.utils import fix_view_modes
 

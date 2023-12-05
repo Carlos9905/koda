@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import api, fields, models, _
 from koda.addons.http_routing.models.ir_http import slug, unslug

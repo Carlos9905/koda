@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': "Coupons, Promotions, Gift Card and Loyalty for eCommerce",
     'summary': """Use coupon, promotion, gift cards and loyalty programs in your eCommerce store""",

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.website_forum.models.forum_forum import MOST_USED_TAGS_COUNT
 from koda.addons.website_forum.tests.common import KARMA, TestForumCommon

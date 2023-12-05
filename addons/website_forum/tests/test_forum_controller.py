@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.website.tools import MockRequest
 from koda.addons.website_forum.controllers.website_forum import WebsiteForum

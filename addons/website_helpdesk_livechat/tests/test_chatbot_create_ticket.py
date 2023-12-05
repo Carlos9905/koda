@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.website_helpdesk_livechat.tests.helpdesk_livechat_chatbot_common import HelpdeskChatbotCase
 from koda.tests.common import users

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.appointment_crm.tests.test_appointment_crm import AppointmentCRMTest
 from koda.addons.website.tests.test_website_visitor import MockVisitor

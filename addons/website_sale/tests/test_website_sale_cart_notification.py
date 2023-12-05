@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.fields import Command
 from koda.tests import HttpCase, tagged

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import api, fields, models
 from koda.addons.payment_stripe.const import SUPPORTED_COUNTRIES as STRIPE_SUPPORTED_COUNTRIES

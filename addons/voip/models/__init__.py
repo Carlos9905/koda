@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from . import voip_queue_mixin  # keep this before res_partner import
 from . import mail_activity

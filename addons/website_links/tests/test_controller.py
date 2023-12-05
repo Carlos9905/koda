@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from urllib.parse import urlparse
 
 from koda.tests import tagged

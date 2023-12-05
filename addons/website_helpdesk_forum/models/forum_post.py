@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda import api, fields, models
 
 from koda.addons.http_routing.models.ir_http import slug, unslug

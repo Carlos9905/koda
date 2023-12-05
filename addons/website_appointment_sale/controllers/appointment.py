@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.http import request
 from koda.addons.appointment_account_payment.controllers.appointment import AppointmentAccountPayment

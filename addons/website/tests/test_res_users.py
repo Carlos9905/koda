@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from psycopg2 import IntegrityError
 from unittest import TestCase
