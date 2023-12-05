@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 import logging
 from datetime import datetime, timedelta
 from json import dumps

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 # Built from: https://ecdf-developer.b2g.etat.lu/ecdf/formdocs/2019/CA_PLANCOMPTA/2019M1V003/CA_PLANCOMPTA_LINK_00_DOC_EN_2019M1V003.fieldlist
 # The dictionary keys represent the first N digits (with N the lenghts of the code) of the accounts matching the category.

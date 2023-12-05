@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from datetime import datetime
 from freezegun import freeze_time
 import logging

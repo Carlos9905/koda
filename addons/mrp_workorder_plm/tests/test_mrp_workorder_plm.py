@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.addons.mrp_plm.tests.test_common import TestPlmCommon
 from koda.tests import Form
 

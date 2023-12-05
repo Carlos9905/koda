@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': 'Test SOs for the Brazilian Avatax',
     'version': '1.0',

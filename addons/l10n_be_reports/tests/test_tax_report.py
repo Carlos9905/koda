@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import Command
 from koda.addons.account_reports.tests.account_sales_report_common import AccountSalesReportCommon

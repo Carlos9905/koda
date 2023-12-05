@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.exceptions import UserError
 from koda.addons.l10n_ar.tests.common import TestAr
 from koda.tools.misc import file_open

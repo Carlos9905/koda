@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from pprint import pformat
 
 from koda import fields, models, api, _

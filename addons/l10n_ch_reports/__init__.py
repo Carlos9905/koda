@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 # Author: Nicolas Bessi. Copyright Camptocamp SA
 # Financial contributors: Hasa SA, Open Net SA,

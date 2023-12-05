@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 import datetime
 from koda.addons.l10n_it_edi.tests.common import TestItEdi

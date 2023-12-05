@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import api, exceptions, fields, models, _
 from koda.addons.mail.models.mail_alias import dot_atom_text

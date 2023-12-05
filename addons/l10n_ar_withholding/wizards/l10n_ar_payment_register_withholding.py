@@ -1,5 +1,5 @@
 # pylint: disable=protected-access
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 import logging
 
 from koda import models, fields, api

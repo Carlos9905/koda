@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import fields, models, _
 from koda.tools.date_utils import start_of, end_of, add, subtract

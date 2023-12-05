@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 # Based on the module developped by Richard de Meester, from Willdoo IT
 {
     'name': "ABA Credit Transfer",

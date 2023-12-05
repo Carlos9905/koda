@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 def post_init_hook(env):
     for company in env['res.company'].search([('chart_template', '=', 'pe')]):

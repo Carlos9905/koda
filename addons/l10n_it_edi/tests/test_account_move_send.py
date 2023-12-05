@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.tests import tagged
 from koda.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon

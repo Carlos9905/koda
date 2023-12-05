@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': 'OHADA (révisé) - Accounting Reports',
     'icon': '/l10n_syscohada/static/description/icon.jpeg',

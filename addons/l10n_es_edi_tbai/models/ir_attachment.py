@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import models, api
 from koda.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key

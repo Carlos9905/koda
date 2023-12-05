@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 import re
 from koda import api, models, _
 from koda.exceptions import UserError

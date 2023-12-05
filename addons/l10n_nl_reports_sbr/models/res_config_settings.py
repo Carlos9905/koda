@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda import models, fields, _, api
 from koda.exceptions import ValidationError
 from cryptography.hazmat.primitives import serialization

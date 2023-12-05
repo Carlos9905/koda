@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.mail_group.tests.common import TestMailListCommon
 from koda.addons.mail_group.tests.data import GROUP_TEMPLATE

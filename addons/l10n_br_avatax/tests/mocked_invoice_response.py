@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 def generate_response(invoice_line_ids):
     assert len(invoice_line_ids) == 4, "the mocked response is for 4 lines"
 

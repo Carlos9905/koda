@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda import fields
 from koda.addons.l10n_ar.tests.common import TestAr
 from koda.addons.account_reports.tests.common import TestAccountReportsCommon

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 # Supported currencies of PayuLatam, in ISO 4217 currency codes.
 # https://developers.payulatam.com/latam/en/docs/getting-started/response-codes-and-variables.html#accepted-currencies.

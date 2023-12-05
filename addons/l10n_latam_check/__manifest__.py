@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': 'Third Party and Deferred/Electronic Checks Management',
     'version': "1.0.0",

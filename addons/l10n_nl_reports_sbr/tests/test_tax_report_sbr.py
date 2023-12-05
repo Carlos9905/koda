@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0326
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 import base64
 import os
 from freezegun import freeze_time

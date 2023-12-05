@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 def generate_response(sale_order_line_ids):
     assert len(sale_order_line_ids) == 4, "the mocked response is for 4 lines"
     # negative lines are distributed to positive lines and not sent to avatax

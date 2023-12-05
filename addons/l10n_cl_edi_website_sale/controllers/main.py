@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from stdnum.cl import rut
 
 from koda import _, tools, http

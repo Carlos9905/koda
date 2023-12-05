@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda import api, models, _
 from koda.exceptions import UserError, RedirectWarning
 from koda.tools.float_utils import float_split_str

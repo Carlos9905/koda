@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': 'Portugal - Accounting',
     'website': 'https://www.koda.com/documentation/17.0/applications/finance/fiscal_localizations.html',

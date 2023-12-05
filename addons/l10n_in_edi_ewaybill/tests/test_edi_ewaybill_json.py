@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.addons.l10n_in_edi.tests.test_edi_json import TestEdiJson
 from koda.tests import tagged
 

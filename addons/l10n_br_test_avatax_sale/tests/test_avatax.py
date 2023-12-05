@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.tests.common import tagged
 from koda.tools.misc import formatLang
 from koda.addons.l10n_br_avatax.tests.test_br_avatax import TestAvalaraBrCommon

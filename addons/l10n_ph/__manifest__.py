@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': 'Philippines - Accounting',
     'icon': '/account/static/description/l10n.png',

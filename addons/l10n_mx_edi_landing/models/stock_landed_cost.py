@@ -1,5 +1,5 @@
 # coding: utf-8
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda import _, api, fields, models
 from koda.exceptions import ValidationError
 from koda.addons.l10n_mx_edi_extended.models.account_move import CUSTOM_NUMBERS_PATTERN
