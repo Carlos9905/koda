@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from unittest.mock import patch
 from koda.exceptions import UserError
 from koda.addons.mail.models.mail_mail import MailDeliveryException

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.mail.tests.test_res_users import TestNotifySecurityUpdate
 from koda.tests import users

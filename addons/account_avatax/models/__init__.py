@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from . import account_avatax_unique_code
 from . import product
 from . import avatax_exemption

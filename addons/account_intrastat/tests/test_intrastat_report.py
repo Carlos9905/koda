@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0326
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from freezegun import freeze_time
 
 from koda.addons.account_reports.tests.common import TestAccountReportsCommon

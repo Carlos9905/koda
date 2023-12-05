@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.account_edi.tests.common import AccountEdiTestCommon
 from koda.addons.base.tests.test_ir_cron import CronMixinCase

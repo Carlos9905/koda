@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': 'UK BACS Payment Files',
     'summary': """Export payments as BACS Direct Debit and Direct Credit files""",

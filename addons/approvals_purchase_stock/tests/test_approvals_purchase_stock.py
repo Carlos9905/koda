@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import fields
 from koda.addons.approvals_purchase_stock.tests.common import TestApprovalsCommon

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name' : 'Accounting Reports Tax Reminder',
     'summary': 'Add a notification when the tax report has been generated',

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import Command, fields
 from koda.addons.account.tests.common import AccountTestInvoicingCommon

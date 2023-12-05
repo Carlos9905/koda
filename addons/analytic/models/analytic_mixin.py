@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda import models, fields, api, _
 from koda.tools.float_utils import float_round, float_compare
 from koda.exceptions import UserError, ValidationError
