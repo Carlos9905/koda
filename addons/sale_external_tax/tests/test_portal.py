@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from unittest.mock import patch
 
 from koda.tests import tagged, HttpCase

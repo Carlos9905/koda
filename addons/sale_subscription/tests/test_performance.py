@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
 from koda.tests.common import users, warmup, tagged

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import fields, models, tools
 from koda.addons.sale.models.sale_order import SALE_ORDER_STATE

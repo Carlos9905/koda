@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 # a full answer (anonymised) as given by eBay for a GetOrders request
 EBAY_ANSWER_1 = {'Ack': 'Success',

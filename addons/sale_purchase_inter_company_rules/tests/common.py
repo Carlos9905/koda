@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.addons.account_inter_company_rules.tests.common import TestInterCompanyRulesCommon
 
 

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': 'Sale Loyalty',
     'summary': 'Use discounts and loyalty programs in sales orders',

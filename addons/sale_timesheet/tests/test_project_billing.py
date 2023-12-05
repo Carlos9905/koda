@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
 from koda.fields import Command
 from koda.tests import tagged

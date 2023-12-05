@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import api, Command, fields, models, _
 from koda.tools.float_utils import float_compare, float_is_zero, float_round

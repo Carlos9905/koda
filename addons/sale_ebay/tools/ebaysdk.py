@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 # This file override the method/class coming from the ebaysdk package that
 # are not python3 compatible.

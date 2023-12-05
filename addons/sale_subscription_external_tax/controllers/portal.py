@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda import http
 from koda.addons.sale_subscription.controllers.portal import CustomerPortal
 

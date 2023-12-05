@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': "Account Taxcloud - Sale (loyalty) - Delivery",
     'summary': """Manage discounts in taxclouds computations with delivery.""",

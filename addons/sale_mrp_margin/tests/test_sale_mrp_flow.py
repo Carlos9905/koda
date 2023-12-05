@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.sale_mrp.tests import test_sale_mrp_flow
 from koda.tests import common, Form

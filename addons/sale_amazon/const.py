@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 # The SellerCentral application ID of Odoo S.A.
 APP_ID = 'amzn1.sp.solution.1cab4d17-1dba-47d1-968f-66b10b614b01'

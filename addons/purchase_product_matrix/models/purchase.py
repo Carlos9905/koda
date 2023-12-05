@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 import json
 from koda import api, fields, models, _
 from koda.exceptions import ValidationError
