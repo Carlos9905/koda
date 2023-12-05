@@ -3,8 +3,8 @@
 import logging
 import re
 
-from odoo.exceptions import UserError
-from odoo.http import Controller, request, route
+from koda.exceptions import UserError
+from koda.http import Controller, request, route
 
 _logger = logging.getLogger(__name__)
 

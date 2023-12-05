@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 new_rule_type = {
     'sale': 'Synchronize Sales Order',

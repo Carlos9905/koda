@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _
-from odoo.addons.iap.tools import iap_tools
+from koda import _
+from koda.addons.iap.tools import iap_tools
 
 
 class SmsApi:

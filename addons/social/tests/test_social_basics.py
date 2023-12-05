@@ -5,13 +5,13 @@ from datetime import timedelta, datetime
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.tests import Form
-from odoo.addons.social.tests import common
-from odoo.addons.social.tests.tools import mock_void_external_calls
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.sql_db import Cursor
-from odoo.tests.common import users
+from koda import fields
+from koda.tests import Form
+from koda.addons.social.tests import common
+from koda.addons.social.tests.tools import mock_void_external_calls
+from koda.addons.base.tests.test_ir_cron import CronMixinCase
+from koda.sql_db import Cursor
+from koda.tests.common import users
 
 
 class TestSocialBasics(common.SocialCase, CronMixinCase):

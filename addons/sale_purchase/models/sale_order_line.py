@@ -3,10 +3,10 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import float_compare
-from odoo.tools.misc import get_lang
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import float_compare
+from koda.tools.misc import get_lang
 
 
 class SaleOrderLine(models.Model):

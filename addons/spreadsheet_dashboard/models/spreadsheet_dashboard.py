@@ -1,6 +1,6 @@
 import json
 
-from odoo import _, fields, models
+from koda import _, fields, models
 
 
 class SpreadsheetDashboard(models.Model):

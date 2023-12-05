@@ -1,7 +1,7 @@
 # Koda
 
 from .common import DashboardTestCommon
-from odoo.exceptions import AccessError
+from koda.exceptions import AccessError
 
 EXCEL_FILES = [
     {

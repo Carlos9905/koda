@@ -3,7 +3,7 @@
 
 import requests
 
-from odoo import _, fields, models, tools
+from koda import _, fields, models, tools
 from werkzeug.urls import url_join
 
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import models, api, fields
+from koda import models, api, fields
 
 
 class SocialPostTemplate(models.Model):

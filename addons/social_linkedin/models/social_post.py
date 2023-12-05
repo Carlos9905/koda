@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, models
-from odoo.osv import expression
+from koda import api, models
+from koda.osv import expression
 
 
 class SocialPostLinkedin(models.Model):

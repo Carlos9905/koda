@@ -4,8 +4,8 @@
 import logging
 from collections import namedtuple
 
-from odoo import _, _lt, api, fields, models
-from odoo.exceptions import UserError
+from koda import _, _lt, api, fields, models
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

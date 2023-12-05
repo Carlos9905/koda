@@ -5,12 +5,12 @@ from freezegun import freeze_time
 from markupsafe import Markup
 from unittest.mock import patch
 
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
-from odoo.addons.sale_subscription.models.sale_order import SaleOrder
-from odoo.tests import Form, tagged
-from odoo.tools import mute_logger
-from odoo import fields, Command
-from odoo.exceptions import AccessError, ValidationError, UserError
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.addons.sale_subscription.models.sale_order import SaleOrder
+from koda.tests import Form, tagged
+from koda.tools import mute_logger
+from koda import fields, Command
+from koda.exceptions import AccessError, ValidationError, UserError
 
 
 @tagged('post_install', '-at_install')

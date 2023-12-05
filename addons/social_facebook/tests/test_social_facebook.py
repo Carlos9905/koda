@@ -5,10 +5,10 @@ import json
 import requests
 
 from freezegun import freeze_time
-from odoo.addons.social.tests.tools import mock_void_external_calls
-from odoo.addons.social_facebook.models.social_post import SocialPostFacebook
-from odoo.addons.social_facebook.models.social_stream import SocialStreamFacebook
-from odoo.addons.social_facebook.tests.common import SocialFacebookCommon
+from koda.addons.social.tests.tools import mock_void_external_calls
+from koda.addons.social_facebook.models.social_post import SocialPostFacebook
+from koda.addons.social_facebook.models.social_stream import SocialStreamFacebook
+from koda.addons.social_facebook.tests.common import SocialFacebookCommon
 from unittest.mock import patch
 
 

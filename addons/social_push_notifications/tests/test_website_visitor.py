@@ -3,8 +3,8 @@
 
 from datetime import datetime, timedelta
 
-from odoo.addons.website.tests.test_website_visitor import WebsiteVisitorTests
-from odoo.tests import tagged
+from koda.addons.website.tests.test_website_visitor import WebsiteVisitorTests
+from koda.tests import tagged
 
 
 @tagged('website_visitor')

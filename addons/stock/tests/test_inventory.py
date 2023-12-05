@@ -3,8 +3,8 @@
 from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-from odoo.exceptions import ValidationError
-from odoo.tests.common import Form, TransactionCase
+from koda.exceptions import ValidationError
+from koda.tests.common import Form, TransactionCase
 
 
 class TestInventory(TransactionCase):

@@ -1,7 +1,7 @@
 import base64
 
 from uuid import uuid4
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 class TestSpreadsheetDocumentToDashboard(TransactionCase):
     def test_create_wizard(self):

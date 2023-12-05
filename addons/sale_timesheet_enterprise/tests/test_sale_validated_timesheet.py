@@ -3,11 +3,11 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command
-from odoo.tests import tagged
+from koda import Command
+from koda.tests import tagged
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
 
 
 @tagged('-at_install', 'post_install')

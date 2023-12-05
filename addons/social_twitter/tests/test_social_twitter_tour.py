@@ -7,9 +7,9 @@ from contextlib import contextmanager
 from unittest.mock import patch
 from datetime import datetime
 
-from odoo.tests.common import tagged, HttpCase
+from koda.tests.common import tagged, HttpCase
 
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 @tagged('-at_install', 'post_install')

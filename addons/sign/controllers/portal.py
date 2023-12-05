@@ -6,14 +6,14 @@ from collections import OrderedDict
 
 from markupsafe import Markup
 
-from odoo import http, _
-from odoo.exceptions import MissingError
-from odoo.http import request
-from odoo.addons.portal.controllers import portal
-from odoo.addons.portal.controllers.portal import pager as portal_pager, get_records_pager
+from koda import http, _
+from koda.exceptions import MissingError
+from koda.http import request
+from koda.addons.portal.controllers import portal
+from koda.addons.portal.controllers.portal import pager as portal_pager, get_records_pager
 
-from odoo.tools import groupby as groupbyelem
-from odoo.osv.expression import AND
+from koda.tools import groupby as groupbyelem
+from koda.osv.expression import AND
 
 
 class CustomerPortal(portal.CustomerPortal):

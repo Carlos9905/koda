@@ -6,8 +6,8 @@ import requests
 
 from werkzeug.urls import url_join, url_quote
 
-from odoo import fields, models
-from odoo.exceptions import ValidationError
+from koda import fields, models
+from koda.exceptions import ValidationError
 
 
 class SocialStreamPostInstagram(models.Model):

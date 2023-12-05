@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import datetime, timedelta
 
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
-from odoo.addons.sale.tests.common import TestSaleCommon
-from odoo.exceptions import UserError
-from odoo.tests import Form, tagged
+from koda.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
+from koda.addons.sale.tests.common import TestSaleCommon
+from koda.exceptions import UserError
+from koda.tests import Form, tagged
 
 
 @tagged('post_install', '-at_install')

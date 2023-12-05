@@ -6,8 +6,8 @@ import requests
 from datetime import datetime, timedelta
 from werkzeug.urls import url_join
 
-from odoo import _, models, fields, api
-from odoo.addons.social.controllers.main import SocialValidationException
+from koda import _, models, fields, api
+from koda.addons.social.controllers.main import SocialValidationException
 
 
 class SocialAccountLinkedin(models.Model):

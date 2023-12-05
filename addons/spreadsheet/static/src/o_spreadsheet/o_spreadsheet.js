@@ -4262,7 +4262,7 @@
         return cellPositions;
     }
 
-    /** Methods from Odoo Web Utils  */
+    /** Methods from koda Web Utils  */
     /**
      * This function computes a score that represent the fact that the
      * string contains the pattern, or not
@@ -28006,7 +28006,7 @@
      * components. If your hook only needs a single event listener, consider simply
      * returning it from the hook and letting the user attach it with t-on.
      *
-     * Adapted from Odoo Community - See https://github.com/odoo/odoo/blob/saas-16.2/addons/web/static/src/core/utils/hooks.js
+     * Adapted from koda Community - See https://github.com/odoo/odoo/blob/saas-16.2/addons/web/static/src/core/utils/hooks.js
      */
     function useRefListener(ref, ...listener) {
         owl.useEffect((el) => {

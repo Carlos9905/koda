@@ -9,9 +9,9 @@ import uuid
 from datetime import timedelta
 from typing import Dict, Any, List, Optional
 
-from odoo import _, fields, models, api
-from odoo.exceptions import AccessError, UserError
-from odoo.tools import mute_logger
+from koda import _, fields, models, api
+from koda.exceptions import AccessError, UserError
+from koda.tools import mute_logger
 _logger = logging.getLogger(__name__)
 
 CollaborationMessage = Dict[str, Any]

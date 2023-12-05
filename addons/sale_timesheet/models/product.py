@@ -3,8 +3,8 @@
 
 import threading
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, tools, _
+from koda.exceptions import ValidationError
 
 
 class ProductTemplate(models.Model):

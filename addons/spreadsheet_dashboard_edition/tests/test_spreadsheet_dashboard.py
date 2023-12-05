@@ -1,5 +1,5 @@
-from odoo.addons.spreadsheet_dashboard.tests.common import DashboardTestCommon
-from odoo.addons.spreadsheet_edition.tests.spreadsheet_test_case import SpreadsheetTestCase
+from koda.addons.spreadsheet_dashboard.tests.common import DashboardTestCommon
+from koda.addons.spreadsheet_edition.tests.spreadsheet_test_case import SpreadsheetTestCase
 
 
 class TestSpreadsheetDashboard(DashboardTestCommon, SpreadsheetTestCase):

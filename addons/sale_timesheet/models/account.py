@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.osv import expression
 
 TIMESHEET_INVOICE_TYPES = [
     ('billable_time', 'Billed on Timesheets'),

@@ -4,8 +4,8 @@
 from datetime import datetime, timedelta
 import json
 
-from odoo import api, models, fields
-from odoo.tools.misc import format_date, _format_time_ago
+from koda import api, models, fields
+from koda.tools.misc import format_date, _format_time_ago
 
 
 class SocialStreamPost(models.Model):

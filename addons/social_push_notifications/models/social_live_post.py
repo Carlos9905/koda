@@ -4,8 +4,8 @@
 import ast
 import pytz
 
-from odoo import models, fields, _
-from odoo.osv import expression
+from koda import models, fields, _
+from koda.osv import expression
 
 
 class SocialLivePostPushNotifications(models.Model):

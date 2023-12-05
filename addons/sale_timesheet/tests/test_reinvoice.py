@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
 
-from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
+from koda.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
 
-from odoo.fields import Date
-from odoo.tests import Form, tagged
+from koda.fields import Date
+from koda.tests import Form, tagged
 
 
 @tagged('-at_install', 'post_install')

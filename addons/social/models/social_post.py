@@ -7,8 +7,8 @@ import threading
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import _, api, fields, models
-from odoo.exceptions import AccessError, UserError, ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import AccessError, UserError, ValidationError
 
 
 class SocialPost(models.Model):

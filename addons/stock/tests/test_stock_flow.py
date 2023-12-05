@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, tagged
-from odoo.tools import mute_logger, float_round
-from odoo import fields
+from koda.addons.stock.tests.common import TestStockCommon
+from koda.exceptions import ValidationError
+from koda.tests import Form, tagged
+from koda.tools import mute_logger, float_round
+from koda import fields
 
 
 class TestStockFlow(TestStockCommon):

@@ -3,8 +3,8 @@
 
 import requests
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from koda import _, api, fields, models
+from koda.exceptions import UserError
 from dateutil.relativedelta import relativedelta
 from werkzeug.urls import url_join
 

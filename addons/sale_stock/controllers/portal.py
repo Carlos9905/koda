@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from werkzeug.exceptions import NotFound
 
-from odoo import exceptions, SUPERUSER_ID
-from odoo.addons.sale.controllers.portal import CustomerPortal
-from odoo.http import request, route
-from odoo.tools import consteq
+from koda import exceptions, SUPERUSER_ID
+from koda.addons.sale.controllers.portal import CustomerPortal
+from koda.http import request, route
+from koda.tools import consteq
 
 
 class SaleStockPortal(CustomerPortal):

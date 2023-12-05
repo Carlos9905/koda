@@ -6,7 +6,7 @@
 #    - Order if the virtual stock of today is below the min of the defined order point
 #
 
-from odoo import models, tools
+from koda import models, tools
 
 import logging
 import threading

@@ -3,9 +3,9 @@
 
 from collections import defaultdict
 
-from odoo import models, api
-from odoo.tools import float_is_zero, float_compare
-from odoo.tools.misc import formatLang
+from koda import models, api
+from koda.tools import float_is_zero, float_compare
+from koda.tools.misc import formatLang
 
 
 class AccountMove(models.Model):

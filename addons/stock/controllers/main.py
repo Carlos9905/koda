@@ -2,9 +2,9 @@
 import werkzeug
 from werkzeug.exceptions import InternalServerError
 
-from odoo import http
-from odoo.http import request
-from odoo.tools.misc import html_escape
+from koda import http
+from koda.http import request
+from koda.tools.misc import html_escape
 
 import json
 

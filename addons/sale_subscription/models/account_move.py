@@ -3,7 +3,7 @@
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import models, _
+from koda import models, _
 
 
 class AccountMove(models.Model):

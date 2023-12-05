@@ -3,7 +3,7 @@
 import random
 
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class HrTimesheetTip(models.Model):

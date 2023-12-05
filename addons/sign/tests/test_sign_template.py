@@ -3,9 +3,9 @@
 
 import base64
 
-from odoo import Command
-from odoo.tools import file_open
-from odoo.tests.common import TransactionCase, new_test_user
+from koda import Command
+from koda.tools import file_open
+from koda.tests.common import TransactionCase, new_test_user
 
 class TestSignTemplate(TransactionCase):
     @classmethod

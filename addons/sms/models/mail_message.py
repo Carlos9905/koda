@@ -4,8 +4,8 @@
 from collections import defaultdict
 from operator import itemgetter
 
-from odoo import exceptions, fields, models
-from odoo.tools import groupby
+from koda import exceptions, fields, models
+from koda.tools import groupby
 
 
 class MailMessage(models.Model):

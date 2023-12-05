@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.tools import get_timedelta
+from koda import api, fields, models, _
+from koda.tools import get_timedelta
 
 class SaleOrderTemplate(models.Model):
     _name = "sale.order.template"

@@ -4,8 +4,8 @@
 import json
 import logging
 
-from odoo import api, fields, models, _
-from odoo.tools import float_compare
+from koda import api, fields, models, _
+from koda.tools import float_compare
 
 _logger = logging.getLogger(__name__)
 

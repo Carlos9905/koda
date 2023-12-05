@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
-from odoo.fields import Datetime
-from odoo.tests import Form
-from odoo.addons.sale_stock_renting.tests.test_rental_common import TestRentalCommon
+from koda.fields import Datetime
+from koda.tests import Form
+from koda.addons.sale_stock_renting.tests.test_rental_common import TestRentalCommon
 
 
 class TestRentalWizard(TestRentalCommon):

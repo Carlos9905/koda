@@ -12,9 +12,9 @@ import time
 import xml.etree.ElementTree as XmlElementTree
 from html import unescape
 
-from odoo import models, fields, api, _
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import UserError, AccessError
+from koda import models, fields, api, _
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import UserError, AccessError
 from werkzeug.urls import url_join, url_quote
 
 

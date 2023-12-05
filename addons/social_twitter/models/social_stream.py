@@ -6,8 +6,8 @@ import logging
 import requests
 from html import unescape
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
+from koda import models, fields, api, _
+from koda.exceptions import UserError
 from werkzeug.urls import url_join
 
 _logger = logging.getLogger(__name__)

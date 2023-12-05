@@ -5,8 +5,8 @@ import io
 
 from PyPDF2 import PdfFileWriter
 
-from odoo.exceptions import AccessError
-from odoo.tests import TransactionCase
+from koda.exceptions import AccessError
+from koda.tests import TransactionCase
 
 
 class testAttachmentAccess(TransactionCase):

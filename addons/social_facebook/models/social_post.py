@@ -4,9 +4,9 @@
 import json
 import requests
 
-from odoo import _, api, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import _, api, models
+from koda.exceptions import UserError
+from koda.osv import expression
 from werkzeug.urls import url_join
 
 

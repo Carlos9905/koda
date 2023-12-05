@@ -3,8 +3,8 @@
 
 from ast import literal_eval
 
-from odoo import api, Command, fields, models, _
-from odoo.addons.sale.models.sale_order import SALE_ORDER_STATE
+from koda import api, Command, fields, models, _
+from koda.addons.sale.models.sale_order import SALE_ORDER_STATE
 
 
 class BaseAutomation(models.Model):

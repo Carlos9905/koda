@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import Form
-from odoo.tests.common import TransactionCase
-from odoo.tools import float_round
-from odoo.exceptions import UserError
+from koda.tests import Form
+from koda.tests.common import TransactionCase
+from koda.tools import float_round
+from koda.exceptions import UserError
 
 
 class TestPackingCommon(TransactionCase):

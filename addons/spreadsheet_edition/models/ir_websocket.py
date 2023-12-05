@@ -2,7 +2,7 @@
 
 import re
 
-from odoo import models
+from koda import models
 
 
 class IrWebsocket(models.AbstractModel):

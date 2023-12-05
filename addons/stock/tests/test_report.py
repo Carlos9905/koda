@@ -3,7 +3,7 @@
 
 from datetime import date, datetime, timedelta
 
-from odoo.tests.common import Form, TransactionCase
+from koda.tests.common import Form, TransactionCase
 
 
 class TestReportsCommon(TransactionCase):

@@ -4,7 +4,7 @@
 import dateutil.parser
 import requests
 
-from odoo import models
+from koda import models
 from werkzeug.urls import url_join
 
 

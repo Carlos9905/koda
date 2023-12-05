@@ -9,11 +9,11 @@ import re
 
 from PyPDF2 import PdfFileReader
 
-from odoo import http, models, tools, Command, _, fields
-from odoo.http import request, content_disposition
-from odoo.tools import consteq
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import UserError
+from koda import http, models, tools, Command, _, fields
+from koda.http import request, content_disposition
+from koda.tools import consteq
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import UserError
 
 _logger = logging.getLogger()
 

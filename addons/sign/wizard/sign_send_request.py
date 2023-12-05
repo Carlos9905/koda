@@ -3,8 +3,8 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _, Command
-from odoo.exceptions import UserError
+from koda import api, fields, models, _, Command
+from koda.exceptions import UserError
 
 
 class SignSendRequest(models.TransientModel):

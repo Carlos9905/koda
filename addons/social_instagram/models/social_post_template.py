@@ -3,7 +3,7 @@
 
 import uuid
 
-from odoo import api, fields, models, tools
+from koda import api, fields, models, tools
 
 
 class SocialPostTemplate(models.Model):

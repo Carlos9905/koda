@@ -5,8 +5,8 @@ import requests
 
 from werkzeug.urls import url_encode
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
+from koda import fields, models, _
+from koda.exceptions import UserError
 
 
 class SocialAccountYoutubeRevoke(models.TransientModel):

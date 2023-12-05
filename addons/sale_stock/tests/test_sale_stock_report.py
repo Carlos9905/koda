@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
-from odoo.tools import html2plaintext
+from koda.tools import html2plaintext
 
-from odoo.tests.common import Form, tagged
-from odoo.addons.stock.tests.test_report import TestReportsCommon
-from odoo.addons.sale.tests.common import TestSaleCommon
+from koda.tests.common import Form, tagged
+from koda.addons.stock.tests.test_report import TestReportsCommon
+from koda.addons.sale.tests.common import TestSaleCommon
 
 
 class TestSaleStockReports(TestReportsCommon):

@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import odoo
-from odoo.tests import Form, HttpCase, tagged
+from koda.tests import Form, HttpCase, tagged
 
 
 @tagged('-at_install', 'post_install')

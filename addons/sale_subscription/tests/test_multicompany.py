@@ -1,9 +1,9 @@
 import time
 
-from odoo.fields import Command
-from odoo.tests import tagged
+from koda.fields import Command
+from koda.tests import tagged
 
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
 
 
 @tagged('post_install', '-at_install')

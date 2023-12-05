@@ -8,11 +8,11 @@ import requests
 import urllib.parse
 import werkzeug
 
-from odoo import http, _
-from odoo.http import request
-from odoo.addons.auth_oauth.controllers.main import fragment_to_query_string
-from odoo.addons.social.controllers.main import SocialController
-from odoo.addons.social.controllers.main import SocialValidationException
+from koda import http, _
+from koda.http import request
+from koda.addons.auth_oauth.controllers.main import fragment_to_query_string
+from koda.addons.social.controllers.main import SocialController
+from koda.addons.social.controllers.main import SocialValidationException
 from werkzeug.urls import url_encode, url_join
 
 _logger = logging.getLogger(__name__)

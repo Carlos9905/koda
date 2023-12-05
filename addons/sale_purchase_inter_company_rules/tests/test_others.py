@@ -1,5 +1,5 @@
 from .common import TestInterCompanyRulesCommonSOPO
-from odoo.tests import tagged
+from koda.tests import tagged
 
 
 @tagged('-at_install', 'post_install')

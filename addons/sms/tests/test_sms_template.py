@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from markupsafe import Markup
 
-from odoo.tests.common import TransactionCase, users
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tools import mute_logger, convert_file
+from koda.tests.common import TransactionCase, users
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.exceptions import AccessError
+from koda.tests import tagged
+from koda.tools import mute_logger, convert_file
 
 
 @tagged('post_install', '-at_install')

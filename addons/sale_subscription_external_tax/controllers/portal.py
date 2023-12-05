@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import http
-from odoo.addons.sale_subscription.controllers.portal import CustomerPortal
+from koda import http
+from koda.addons.sale_subscription.controllers.portal import CustomerPortal
 
 
 class CustomerPortalExternalTaxes(CustomerPortal):

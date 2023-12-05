@@ -8,13 +8,13 @@ from ast import literal_eval
 from datetime import date, timedelta
 from collections import defaultdict
 
-from odoo import SUPERUSER_ID, _, api, Command, fields, models
-from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
-from odoo.addons.web.controllers.utils import clean_action
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, format_datetime, format_date, groupby
-from odoo.tools.float_utils import float_compare, float_is_zero, float_round
+from koda import SUPERUSER_ID, _, api, Command, fields, models
+from koda.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
+from koda.addons.web.controllers.utils import clean_action
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT, format_datetime, format_date, groupby
+from koda.tools.float_utils import float_compare, float_is_zero, float_round
 
 
 class PickingType(models.Model):

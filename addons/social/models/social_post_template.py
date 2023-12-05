@@ -3,9 +3,9 @@
 import re
 import json
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import format_datetime
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import format_datetime
 
 
 class SocialPostTemplate(models.Model):

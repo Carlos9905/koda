@@ -6,10 +6,10 @@ import json
 import requests
 
 from datetime import timedelta
-from odoo import _, fields, http
-from odoo.addons.social.controllers.main import SocialController
-from odoo.addons.social.controllers.main import SocialValidationException
-from odoo.http import request
+from koda import _, fields, http
+from koda.addons.social.controllers.main import SocialController
+from koda.addons.social.controllers.main import SocialValidationException
+from koda.http import request
 from werkzeug.urls import url_encode, url_join
 
 

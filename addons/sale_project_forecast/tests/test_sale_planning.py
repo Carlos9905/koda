@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 from freezegun import freeze_time
 
-from odoo.tests import Form, tagged
+from koda.tests import Form, tagged
 
-from odoo.addons.sale_planning.tests.test_sale_planning import TestSalePlanning
+from koda.addons.sale_planning.tests.test_sale_planning import TestSalePlanning
 
 @tagged('post_install', '-at_install')
 class TestSaleForecast(TestSalePlanning):

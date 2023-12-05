@@ -7,8 +7,8 @@ from uuid import uuid4
 
 from werkzeug.urls import url_join
 
-from odoo import api, fields, models, tools, _
-from odoo.addons.sms.tools.sms_api import SmsApi
+from koda import api, fields, models, tools, _
+from koda.addons.sms.tools.sms_api import SmsApi
 
 _logger = logging.getLogger(__name__)
 

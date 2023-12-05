@@ -7,7 +7,7 @@ from urllib.parse import quote
 from datetime import datetime
 from werkzeug.urls import url_join
 
-from odoo import models, fields
+from koda import models, fields
 
 
 class SocialStreamPostLinkedIn(models.Model):

@@ -4,7 +4,7 @@
 import json
 import requests
 
-from odoo import models, fields
+from koda import models, fields
 from werkzeug.urls import url_join
 
 

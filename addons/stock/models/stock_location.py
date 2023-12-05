@@ -6,10 +6,10 @@ import calendar
 from collections import defaultdict, OrderedDict
 from datetime import timedelta
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools.float_utils import float_compare
+from koda import _, api, fields, models
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
+from koda.tools.float_utils import float_compare
 
 
 class Location(models.Model):

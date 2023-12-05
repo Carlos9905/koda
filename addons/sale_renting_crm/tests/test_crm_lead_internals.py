@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.crm.tests import common as crm_common
-from odoo.tests.common import Form, users
+from koda.addons.crm.tests import common as crm_common
+from koda.tests.common import Form, users
 
 
 class TestLead(crm_common.TestCrmCommon):

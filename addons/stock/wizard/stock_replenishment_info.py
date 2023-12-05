@@ -6,10 +6,10 @@ from json import dumps
 from datetime import datetime, time
 
 
-from odoo import api, fields, models, SUPERUSER_ID, _
-from odoo.osv.expression import AND
-from odoo.tools import get_month, subtract, format_date
-from odoo.tools.misc import get_lang
+from koda import api, fields, models, SUPERUSER_ID, _
+from koda.osv.expression import AND
+from koda.tools import get_month, subtract, format_date
+from koda.tools.misc import get_lang
 
 
 class StockReplenishmentInfo(models.TransientModel):

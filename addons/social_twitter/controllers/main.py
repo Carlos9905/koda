@@ -7,10 +7,10 @@ import json
 import logging
 import requests
 
-from odoo import http, _
-from odoo.addons.social.controllers.main import SocialController, SocialValidationException
-from odoo.exceptions import UserError
-from odoo.http import request
+from koda import http, _
+from koda.addons.social.controllers.main import SocialController, SocialValidationException
+from koda.exceptions import UserError
+from koda.http import request
 from werkzeug.exceptions import Forbidden, NotFound
 from werkzeug.urls import url_encode, url_join
 

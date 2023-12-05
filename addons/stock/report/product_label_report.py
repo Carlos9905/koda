@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import _, models
-from odoo.exceptions import UserError
+from koda import _, models
+from koda.exceptions import UserError
 
 
 class ReportProductLabel(models.AbstractModel):

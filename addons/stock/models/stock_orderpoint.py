@@ -8,11 +8,11 @@ from datetime import datetime, time
 from dateutil import relativedelta
 from psycopg2 import OperationalError
 
-from odoo import SUPERUSER_ID, _, api, fields, models, registry
-from odoo.addons.stock.models.stock_rule import ProcurementException
-from odoo.exceptions import RedirectWarning, UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import float_compare, float_is_zero, frozendict, split_every
+from koda import SUPERUSER_ID, _, api, fields, models, registry
+from koda.addons.stock.models.stock_rule import ProcurementException
+from koda.exceptions import RedirectWarning, UserError, ValidationError
+from koda.osv import expression
+from koda.tools import float_compare, float_is_zero, frozendict, split_every
 
 _logger = logging.getLogger(__name__)
 

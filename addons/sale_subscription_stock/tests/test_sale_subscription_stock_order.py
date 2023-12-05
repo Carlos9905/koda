@@ -4,9 +4,9 @@
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.addons.sale_subscription_stock.tests.common_sale_subscription_stock import TestSubscriptionStockCommon
-from odoo.tests import tagged
+from koda import Command
+from koda.addons.sale_subscription_stock.tests.common_sale_subscription_stock import TestSubscriptionStockCommon
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

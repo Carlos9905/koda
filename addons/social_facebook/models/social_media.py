@@ -3,8 +3,8 @@
 
 import requests
 
-from odoo import _, models, fields
-from odoo.exceptions import UserError
+from koda import _, models, fields
+from koda.exceptions import UserError
 from werkzeug.urls import url_encode, url_join
 
 

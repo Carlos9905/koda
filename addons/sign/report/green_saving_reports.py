@@ -1,4 +1,4 @@
-from odoo import api, models
+from koda import api, models
 
 class GreenSavingsReport(models.AbstractModel):
     _name = 'report.sign.green_savings_report'

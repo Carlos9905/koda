@@ -9,9 +9,9 @@ from PyPDF2 import PdfFileReader
 from collections import defaultdict
 from random import randint
 
-from odoo import api, fields, models, Command, _
-from odoo.exceptions import UserError, AccessError, ValidationError
-from odoo.tools import pdf
+from koda import api, fields, models, Command, _
+from koda.exceptions import UserError, AccessError, ValidationError
+from koda.tools import pdf
 
 
 class SignTemplate(models.Model):

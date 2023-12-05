@@ -7,12 +7,12 @@ import requests
 from psycopg2 import IntegrityError
 from unittest.mock import patch
 
-from odoo.addons.social_twitter.models.social_account import SocialAccountTwitter
-from odoo.addons.social_twitter.models.social_stream import SocialStreamTwitter
-from odoo.addons.social.tests.common import SocialCase
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.addons.social_twitter.models.social_account import SocialAccountTwitter
+from koda.addons.social_twitter.models.social_stream import SocialStreamTwitter
+from koda.addons.social.tests.common import SocialCase
+from koda.exceptions import ValidationError
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 
 @tagged('social_post_twitter')

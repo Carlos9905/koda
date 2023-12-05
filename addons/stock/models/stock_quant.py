@@ -8,11 +8,11 @@ from ast import literal_eval
 from collections import defaultdict
 from psycopg2 import Error
 
-from odoo import _, api, fields, models, SUPERUSER_ID
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import check_barcode_encoding, groupby, SQL
-from odoo.tools.float_utils import float_compare, float_is_zero
+from koda import _, api, fields, models, SUPERUSER_ID
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
+from koda.tools import check_barcode_encoding, groupby, SQL
+from koda.tools.float_utils import float_compare, float_is_zero
 
 _logger = logging.getLogger(__name__)
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import  models, api, fields
-from odoo.tools.date_utils import relativedelta
-from odoo.tools import format_date
+from koda import  models, api, fields
+from koda.tools.date_utils import relativedelta
+from koda.tools import format_date
 
 
 class SaleOrderLine(models.Model):

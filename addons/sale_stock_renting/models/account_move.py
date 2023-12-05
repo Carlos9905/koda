@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import models
-from odoo.tools import float_is_zero
+from koda import models
+from koda.tools import float_is_zero
 
 
 class AccountMove(models.Model):

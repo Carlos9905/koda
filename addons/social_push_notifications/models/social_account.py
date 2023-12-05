@@ -7,9 +7,9 @@ import logging
 import requests
 from werkzeug.urls import url_join
 
-from odoo import _, api, fields, models, tools
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import UserError
+from koda import _, api, fields, models, tools
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

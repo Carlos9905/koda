@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools.misc import groupby as tools_groupby
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.tools.misc import groupby as tools_groupby
 
 
 class RentalOrderLine(models.Model):

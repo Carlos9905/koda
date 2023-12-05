@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import AccessError
-from odoo.tools.misc import format_datetime
+from koda import _, api, fields, models
+from koda.exceptions import AccessError
+from koda.tools.misc import format_datetime
 
 
 class SocialPostConvert2Lead(models.TransientModel):

@@ -1,6 +1,6 @@
-from odoo import models, api, fields
+from koda import models, api, fields
 
-from odoo.tools import date_utils
+from koda.tools import date_utils
 
 
 class ResCompany(models.Model):

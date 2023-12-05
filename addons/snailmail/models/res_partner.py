@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, models
-from odoo.addons.snailmail.country_utils import SNAILMAIL_COUNTRIES
+from koda import api, models
+from koda.addons.snailmail.country_utils import SNAILMAIL_COUNTRIES
 
 
 class ResPartner(models.Model):

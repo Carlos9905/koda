@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.social.tests.common import SocialCase
-from odoo.addons.social.tests.tools import mock_void_external_calls
-from odoo.addons.utm.tests.common import TestUTMCommon
-from odoo.exceptions import UserError
-from odoo.tests.common import tagged, users
+from koda.addons.social.tests.common import SocialCase
+from koda.addons.social.tests.tools import mock_void_external_calls
+from koda.addons.utm.tests.common import TestUTMCommon
+from koda.exceptions import UserError
+from koda.tests.common import tagged, users
 
 
 @tagged('post_install', '-at_install', 'utm_consistency')

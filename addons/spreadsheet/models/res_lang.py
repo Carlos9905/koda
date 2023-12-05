@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
+from koda import api, models
 
-from odoo.addons.spreadsheet.utils import (
+from koda.addons.spreadsheet.utils import (
     strftime_format_to_spreadsheet_date_format,
     strftime_format_to_spreadsheet_time_format,
 )

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, models
-from odoo.osv import expression
+from koda import api, models
+from koda.osv import expression
 
 DEFAULT_INVOICED_TIMESHEET = 'all'
 

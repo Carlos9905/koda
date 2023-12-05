@@ -4,11 +4,11 @@
 import requests
 
 from unittest.mock import patch
-from odoo.addons.social.tests.common import SocialCase
-from odoo.addons.social.tests.tools import mock_void_external_calls
-from odoo.addons.social_linkedin.models.social_live_post import SocialLivePostLinkedin
-from odoo.addons.social_linkedin.models.social_account import SocialAccountLinkedin
-from odoo.tools.misc import mute_logger
+from koda.addons.social.tests.common import SocialCase
+from koda.addons.social.tests.tools import mock_void_external_calls
+from koda.addons.social_linkedin.models.social_live_post import SocialLivePostLinkedin
+from koda.addons.social_linkedin.models.social_account import SocialAccountLinkedin
+from koda.tools.misc import mute_logger
 
 
 class SocialLinkedinCase(SocialCase):

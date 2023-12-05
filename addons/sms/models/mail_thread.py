@@ -3,8 +3,8 @@
 
 import logging
 
-from odoo import api, Command, models, fields
-from odoo.tools import html2plaintext, plaintext2html
+from koda import api, Command, models, fields
+from koda.tools import html2plaintext, plaintext2html
 
 _logger = logging.getLogger(__name__)
 

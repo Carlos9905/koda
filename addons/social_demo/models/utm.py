@@ -3,7 +3,7 @@
 
 import random
 
-from odoo import models
+from koda import models
 
 
 class DemoUtmCampaign(models.Model):

@@ -6,11 +6,11 @@ import json
 from unittest.mock import patch
 from hashlib import sha256
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.exceptions import ValidationError
+from koda import Command
+from koda.tests import tagged
+from koda.exceptions import ValidationError
 
-from odoo.addons.sign.tests.test_sign_controllers import TestSignControllerCommon
+from koda.addons.sign.tests.test_sign_controllers import TestSignControllerCommon
 
 @tagged('post_install', '-at_install')
 class SignItsmeCommon(TestSignControllerCommon):

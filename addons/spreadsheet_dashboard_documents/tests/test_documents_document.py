@@ -1,4 +1,4 @@
-from odoo.tests.common import TransactionCase, new_test_user
+from koda.tests.common import TransactionCase, new_test_user
 
 class TestDocumentsDocument(TransactionCase):
     def test_can_add_to_dashboard_admin(self):

@@ -5,12 +5,12 @@ from unittest.mock import patch
 from freezegun import freeze_time
 
 
-from odoo import fields, Command
-from odoo.addons.mail.tests.common import MockEmail
-from odoo.addons.payment.tests.common import PaymentCommon
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda import fields, Command
+from koda.addons.mail.tests.common import MockEmail
+from koda.addons.payment.tests.common import PaymentCommon
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 
 @tagged('post_install', '-at_install')

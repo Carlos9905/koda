@@ -6,12 +6,12 @@ from ast import literal_eval
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools import float_is_zero, check_barcode_encoding
-from odoo.tools.float_utils import float_round
-from odoo.tools.mail import html2plaintext, is_html_empty
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools import float_is_zero, check_barcode_encoding
+from koda.tools.float_utils import float_round
+from koda.tools.mail import html2plaintext, is_html_empty
 
 OPERATORS = {
     '<': py_operator.lt,

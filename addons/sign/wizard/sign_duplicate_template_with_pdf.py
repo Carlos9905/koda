@@ -9,8 +9,8 @@ try:
 except ImportError:
     from PyPDF2.utils import PdfReadError
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError, ValidationError
+from koda import api, models, fields, _
+from koda.exceptions import UserError, ValidationError
 
 class SignDuplicateTemplatePDF(models.TransientModel):
     _name = 'sign.duplicate.template.pdf'

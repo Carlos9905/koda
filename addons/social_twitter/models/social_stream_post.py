@@ -5,9 +5,9 @@ import base64
 import logging
 import requests
 
-from odoo import _, api, models, fields
-from odoo.exceptions import UserError
-from odoo.http import request
+from koda import _, api, models, fields
+from koda.exceptions import UserError
+from koda.http import request
 from werkzeug.urls import url_join
 
 _logger = logging.getLogger(__name__)

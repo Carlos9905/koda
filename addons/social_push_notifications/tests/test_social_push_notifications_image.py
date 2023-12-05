@@ -4,7 +4,7 @@
 import io
 
 from PIL import Image
-from odoo.tests.common import HttpCase
+from koda.tests.common import HttpCase
 
 class SocialPushNotificationsImageCase(HttpCase):
     def test_push_image_is_accessible(self):

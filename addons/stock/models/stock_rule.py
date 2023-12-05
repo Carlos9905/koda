@@ -6,11 +6,11 @@ from collections import defaultdict, namedtuple
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import SUPERUSER_ID, _, api, fields, models, registry
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools import float_compare, float_is_zero, html_escape
-from odoo.tools.misc import split_every
+from koda import SUPERUSER_ID, _, api, fields, models, registry
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools import float_compare, float_is_zero, html_escape
+from koda.tools.misc import split_every
 
 _logger = logging.getLogger(__name__)
 

@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from odoo import fields, models
-from odoo.addons.sale_subscription.models.sale_order import SUBSCRIPTION_STATES
+from koda import fields, models
+from koda.addons.sale_subscription.models.sale_order import SUBSCRIPTION_STATES
 
 class SaleSubscriptionReport(models.Model):
     _inherit = "sale.report"

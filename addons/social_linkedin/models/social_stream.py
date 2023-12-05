@@ -8,8 +8,8 @@ from werkzeug.urls import url_join
 from urllib.parse import urlparse
 import re
 
-from odoo import models, _
-from odoo.exceptions import UserError
+from koda import models, _
+from koda.exceptions import UserError
 
 
 class SocialStreamLinkedIn(models.Model):

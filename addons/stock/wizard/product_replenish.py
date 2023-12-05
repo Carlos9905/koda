@@ -3,10 +3,10 @@
 
 import datetime
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools.misc import clean_context
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools.misc import clean_context
 
 
 class ProductReplenish(models.TransientModel):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import AccessError
-from odoo.tools import is_html_empty
+from koda import _, api, fields, models
+from koda.exceptions import AccessError
+from koda.tools import is_html_empty
 
 
 class SaleOrderCloseReason(models.Model):

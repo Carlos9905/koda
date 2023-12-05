@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.osv import expression
+from koda import api, fields, models
+from koda.osv import expression
 
-from odoo.addons.project.models.project_task import CLOSED_STATES
-from odoo.addons.resource.models.utils import filter_domain_leaf
+from koda.addons.project.models.project_task import CLOSED_STATES
+from koda.addons.resource.models.utils import filter_domain_leaf
 
 class PlanningSlot(models.Model):
     _inherit = 'planning.slot'

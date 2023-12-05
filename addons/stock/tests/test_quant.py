@@ -5,11 +5,11 @@ from datetime import datetime, timedelta
 from unittest.mock import patch
 from ast import literal_eval
 
-from odoo import Command, fields
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.exceptions import ValidationError
-from odoo.tests.common import Form, TransactionCase
-from odoo.exceptions import AccessError, UserError
+from koda import Command, fields
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.exceptions import ValidationError
+from koda.tests.common import Form, TransactionCase
+from koda.exceptions import AccessError, UserError
 
 
 class StockQuant(TransactionCase):
@@ -596,7 +596,7 @@ class StockQuant(TransactionCase):
             'company_id': self.env.company.id,
         })
 
-        from odoo.fields import Datetime
+        from koda.fields import Datetime
         in_date1 = Datetime.now()
         self.env['stock.quant']._update_available_quantity(self.product_lot, self.stock_location, 1.0, lot_id=lot1, in_date=in_date1)
 

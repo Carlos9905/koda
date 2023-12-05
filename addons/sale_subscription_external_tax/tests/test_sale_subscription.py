@@ -2,8 +2,8 @@
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo.tests.common import tagged
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.tests.common import tagged
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
 
 
 class TestSaleSubscriptionExternalCommon:

@@ -4,7 +4,7 @@
 import base64
 from binascii import Error as binascii_error
 
-from odoo import _, api, fields, models
+from koda import _, api, fields, models
 
 
 class SocialPostTemplate(models.Model):

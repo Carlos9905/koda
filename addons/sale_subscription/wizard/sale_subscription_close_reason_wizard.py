@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class SaleSubscriptionCloseReasonWizard(models.TransientModel):

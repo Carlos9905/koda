@@ -19,7 +19,7 @@ import { useSubEnv, Component } from "@odoo/owl";
 
 /**
  * Component wrapping the <Spreadsheet> component from o-spreadsheet
- * to add user interactions extensions from odoo such as notifications,
+ * to add user interactions extensions from koda such as notifications,
  * error dialogs, etc.
  */
 export class SpreadsheetComponent extends Component {

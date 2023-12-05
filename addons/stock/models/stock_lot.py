@@ -5,9 +5,9 @@ import operator as py_operator
 from operator import attrgetter
 from re import findall as regex_findall, split as regex_split
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
+from koda import _, api, fields, models
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
 
 OPERATORS = {
     '<': py_operator.lt,

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.social.tests import common
-from odoo.addons.social.tests.tools import mock_void_external_calls
-from odoo.tests.common import Form, users
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.social.tests import common
+from koda.addons.social.tests.tools import mock_void_external_calls
+from koda.tests.common import Form, users
 
 
 class TestSocialCrmConvert(common.SocialCase):

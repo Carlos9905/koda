@@ -3,10 +3,10 @@
 
 from freezegun import freeze_time
 
-from odoo.tests import tagged
-from odoo import Command, fields
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
+from koda.tests import tagged
+from koda import Command, fields
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
 
 
 @tagged('-at_install', 'post_install')

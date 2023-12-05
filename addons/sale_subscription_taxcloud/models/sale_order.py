@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models
+from koda import models
 
 class SaleOrder(models.Model):
     """Ensure a correct invoice by validating taxcloud taxes in the subscription before invoice generation."""

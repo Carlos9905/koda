@@ -1,10 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from unittest.mock import patch
 
-from odoo.addons.sale_subscription_external_tax.tests.test_sale_subscription import TestSaleSubscriptionExternalCommon
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.tests.common import tagged
+from koda.addons.sale_subscription_external_tax.tests.test_sale_subscription import TestSaleSubscriptionExternalCommon
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.tests.common import tagged
 
 
 @tagged("post_install", "-at_install")

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import re
-from odoo.tests import common
+from koda.tests import common
 
 
 class TestStockCommon(common.TransactionCase):

@@ -5,9 +5,9 @@ from json import dumps
 from datetime import datetime
 import logging
 
-from odoo import fields, models, api, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.http import request
+from koda import fields, models, api, _
+from koda.exceptions import ValidationError, UserError
+from koda.http import request
 
 _logger = logging.getLogger(__name__)
 

@@ -3,10 +3,10 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, api, _, Command
-from odoo.tools.date_utils import get_timedelta
-from odoo.tools import format_date
-from odoo.exceptions import ValidationError
+from koda import fields, models, api, _, Command
+from koda.tools.date_utils import get_timedelta
+from koda.tools import format_date
+from koda.exceptions import ValidationError
 
 INTERVAL_FACTOR = {
     'day': 30.437,  # average number of days per month over the year,

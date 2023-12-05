@@ -3,9 +3,9 @@
 
 from pytz import timezone, UTC
 
-from odoo import _, api, fields, models
-from odoo.fields import Command
-from odoo.tools import format_datetime, format_time
+from koda import _, api, fields, models
+from koda.fields import Command
+from koda.tools import format_datetime, format_time
 
 
 class SaleOrderLine(models.Model):

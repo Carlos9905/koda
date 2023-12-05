@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.social.tests.tools import mock_void_external_calls
-from odoo.tests import common
+from koda.addons.social.tests.tools import mock_void_external_calls
+from koda.tests import common
 
 
 class SocialTestFullCase(common.TransactionCase):

@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from freezegun import freeze_time
 
-from odoo.tests import tagged
-from odoo.tools import format_amount
-from odoo.addons.project.tests.test_project_update_flow import TestProjectUpdate
+from koda.tests import tagged
+from koda.tools import format_amount
+from koda.addons.project.tests.test_project_update_flow import TestProjectUpdate
 
 @tagged('-at_install', 'post_install')
 class TestProjectUpdateSaleTimesheet(TestProjectUpdate):

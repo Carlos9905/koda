@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.tests import Form
+from koda.addons.stock.tests.common import TestStockCommon
+from koda.tests import Form
 
 
 class StockMoveLine(TestStockCommon):

@@ -4,7 +4,7 @@ import re
 import dateutil.parser
 import requests
 
-from odoo import models, fields, api
+from koda import models, fields, api
 from werkzeug.urls import url_join
 
 

@@ -4,8 +4,8 @@
 import requests
 from werkzeug.urls import url_join
 
-from odoo import http, _, tools
-from odoo.http import request
+from koda import http, _, tools
+from koda.http import request
 
 
 class SocialPushNotificationsController(http.Controller):

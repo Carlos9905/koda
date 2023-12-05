@@ -11,10 +11,10 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.pdfgen.canvas import Canvas
 
-from odoo import fields, models, api, _
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import AccessError, UserError
-from odoo.tools.safe_eval import safe_eval
+from koda import fields, models, api, _
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import AccessError, UserError
+from koda.tools.safe_eval import safe_eval
 
 DEFAULT_ENDPOINT = 'https://iap-snailmail.odoo.com'
 PRINT_ENDPOINT = '/iap/snailmail/1/print'

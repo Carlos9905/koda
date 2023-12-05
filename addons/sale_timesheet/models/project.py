@@ -5,10 +5,10 @@ import json
 
 from collections import defaultdict
 
-from odoo import api, fields, models, _, _lt
-from odoo.osv import expression
-from odoo.tools import SQL
-from odoo.exceptions import ValidationError, UserError
+from koda import api, fields, models, _, _lt
+from koda.osv import expression
+from koda.tools import SQL
+from koda.exceptions import ValidationError, UserError
 
 # YTI PLEASE SPLIT ME
 class Project(models.Model):

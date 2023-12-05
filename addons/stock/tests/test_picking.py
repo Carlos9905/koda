@@ -1,5 +1,5 @@
-from odoo.tests import common
-from odoo.exceptions import UserError
+from koda.tests import common
+from koda.exceptions import UserError
 
 class TestPicking(common.TransactionCase):
 

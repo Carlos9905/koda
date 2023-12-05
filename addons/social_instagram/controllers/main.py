@@ -6,11 +6,11 @@ import json
 import requests
 import werkzeug
 
-from odoo import _, http
-from odoo.addons.auth_oauth.controllers.main import fragment_to_query_string
-from odoo.addons.social.controllers.main import SocialController
-from odoo.addons.social.controllers.main import SocialValidationException
-from odoo.http import request
+from koda import _, http
+from koda.addons.auth_oauth.controllers.main import fragment_to_query_string
+from koda.addons.social.controllers.main import SocialController
+from koda.addons.social.controllers.main import SocialValidationException
+from koda.http import request
 from werkzeug.exceptions import Forbidden
 from werkzeug.urls import url_encode, url_join
 

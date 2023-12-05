@@ -6,7 +6,7 @@ import re
 import requests
 from werkzeug.urls import url_join
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class SocialStreamYoutube(models.Model):

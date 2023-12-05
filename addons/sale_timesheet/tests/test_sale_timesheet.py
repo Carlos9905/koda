@@ -2,13 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import date, timedelta
 
-from odoo.fields import Date
-from odoo.tools import float_is_zero
-from odoo.exceptions import UserError
-from odoo.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
-from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
-from odoo.tests import tagged
-from odoo.tests.common import Form
+from koda.fields import Date
+from koda.tools import float_is_zero
+from koda.exceptions import UserError
+from koda.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
+from koda.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
+from koda.tests import tagged
+from koda.tests.common import Form
 
 @tagged('-at_install', 'post_install')
 class TestSaleTimesheet(TestCommonSaleTimesheet):

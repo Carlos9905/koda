@@ -4,7 +4,7 @@ from . import models
 from . import populate
 from . import wizard
 from . import report
-from odoo.tools.sql import column_exists
+from koda.tools.sql import column_exists
 
 def _pre_init_rental(env):
     """ Allow installing sale_renting in databases with large sale.order / sale.order.line tables.

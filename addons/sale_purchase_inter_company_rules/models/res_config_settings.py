@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from koda import models, fields, api
 from .res_company import new_rule_type
 
 

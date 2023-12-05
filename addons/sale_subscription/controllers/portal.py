@@ -6,16 +6,16 @@ from dateutil.relativedelta import relativedelta
 from math import ceil
 from werkzeug.urls import url_encode
 
-from odoo import http, fields
-from odoo.exceptions import AccessError, MissingError
-from odoo.fields import Command
-from odoo.http import request
-from odoo.tools.translate import _
-from odoo.addons.payment.controllers import portal as payment_portal
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.portal.controllers.portal import pager as portal_pager
-from odoo.addons.sale.controllers import portal as sale_portal
-from odoo.addons.sale_subscription.models.sale_order import SUBSCRIPTION_PROGRESS_STATE
+from koda import http, fields
+from koda.exceptions import AccessError, MissingError
+from koda.fields import Command
+from koda.http import request
+from koda.tools.translate import _
+from koda.addons.payment.controllers import portal as payment_portal
+from koda.addons.payment import utils as payment_utils
+from koda.addons.portal.controllers.portal import pager as portal_pager
+from koda.addons.sale.controllers import portal as sale_portal
+from koda.addons.sale_subscription.models.sale_order import SUBSCRIPTION_PROGRESS_STATE
 
 class CustomerPortal(payment_portal.PaymentPortal):
 

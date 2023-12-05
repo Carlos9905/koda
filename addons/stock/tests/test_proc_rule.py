@@ -3,9 +3,9 @@
 
 from datetime import date, datetime, timedelta
 
-from odoo.tests.common import Form, TransactionCase
-from odoo.tools import mute_logger
-from odoo.exceptions import UserError
+from koda.tests.common import Form, TransactionCase
+from koda.tools import mute_logger
+from koda.exceptions import UserError
 
 
 class TestProcRule(TransactionCase):

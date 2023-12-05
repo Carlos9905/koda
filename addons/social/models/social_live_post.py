@@ -3,7 +3,7 @@
 
 import requests
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class SocialLivePost(models.Model):

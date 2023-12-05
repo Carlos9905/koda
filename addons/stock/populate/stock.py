@@ -7,8 +7,8 @@ from datetime import datetime, timedelta
 from itertools import product as cartesian_product
 from collections import defaultdict
 
-from odoo import models, api
-from odoo.tools import populate, groupby
+from koda import models, api
+from koda.tools import populate, groupby
 
 _logger = logging.getLogger(__name__)
 

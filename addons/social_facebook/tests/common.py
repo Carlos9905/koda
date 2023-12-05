@@ -4,8 +4,8 @@
 
 from unittest.mock import patch
 
-from odoo.addons.social_facebook.models.social_account import SocialAccountFacebook
-from odoo.addons.social.tests.common import SocialCase
+from koda.addons.social_facebook.models.social_account import SocialAccountFacebook
+from koda.addons.social.tests.common import SocialCase
 
 
 class SocialFacebookCommon(SocialCase):

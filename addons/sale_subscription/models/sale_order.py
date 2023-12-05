@@ -8,13 +8,13 @@ from ast import literal_eval
 from collections import defaultdict
 import traceback
 
-from odoo import fields, models, _, api, Command, SUPERUSER_ID, modules
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.float_utils import float_is_zero
-from odoo.osv import expression
-from odoo.tools import config, format_amount, plaintext2html, split_every, str2bool
-from odoo.tools.date_utils import get_timedelta
-from odoo.tools.misc import format_date
+from koda import fields, models, _, api, Command, SUPERUSER_ID, modules
+from koda.exceptions import UserError, ValidationError
+from koda.tools.float_utils import float_is_zero
+from koda.osv import expression
+from koda.tools import config, format_amount, plaintext2html, split_every, str2bool
+from koda.tools.date_utils import get_timedelta
+from koda.tools.misc import format_date
 
 _logger = logging.getLogger(__name__)
 

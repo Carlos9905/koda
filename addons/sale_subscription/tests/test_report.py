@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
-from odoo.tests import tagged
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

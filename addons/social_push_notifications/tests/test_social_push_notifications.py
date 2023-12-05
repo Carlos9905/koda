@@ -7,11 +7,11 @@ import random
 
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.social.tests.common import SocialCase
-from odoo.addons.social.models.social_post import SocialPost
-from odoo.addons.social_push_notifications.models.social_account import SocialAccountPushNotifications
+from koda import fields
+from koda.addons.base.tests.test_ir_cron import CronMixinCase
+from koda.addons.social.tests.common import SocialCase
+from koda.addons.social.models.social_post import SocialPost
+from koda.addons.social_push_notifications.models.social_account import SocialAccountPushNotifications
 
 
 class SocialPushNotificationsCase(SocialCase, CronMixinCase):

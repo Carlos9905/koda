@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import exceptions
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.sales_team.tests.common import TestSalesMC
-from odoo.tests.common import users, TransactionCase
-from odoo.tools import mute_logger
+from koda import exceptions
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.sales_team.tests.common import TestSalesMC
+from koda.tests.common import users, TransactionCase
+from koda.tools import mute_logger
 
 
 class TestCornerCases(TransactionCase):

@@ -5,11 +5,11 @@ from unittest.mock import patch
 from freezegun import freeze_time
 
 from .sign_request_common import SignRequestCommon
-from odoo.tests.common import HttpCase
-from odoo.addons.sign.controllers.main import Sign
-from odoo.exceptions import AccessError, ValidationError
-from odoo.addons.website.tools import MockRequest
-from odoo.tests import tagged
+from koda.tests.common import HttpCase
+from koda.addons.sign.controllers.main import Sign
+from koda.exceptions import AccessError, ValidationError
+from koda.addons.website.tools import MockRequest
+from koda.tests import tagged
 
 class TestSignControllerCommon(SignRequestCommon, HttpCase):
     def setUp(self):

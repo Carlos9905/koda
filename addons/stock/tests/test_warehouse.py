@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.stock.tests.common2 import TestStockCommon
-from odoo.tests import Form
-from odoo.exceptions import UserError
-from odoo.tools import mute_logger
+from koda.addons.stock.tests.common2 import TestStockCommon
+from koda.tests import Form
+from koda.exceptions import UserError
+from koda.tools import mute_logger
 
 
 class TestWarehouse(TestStockCommon):

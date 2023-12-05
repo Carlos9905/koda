@@ -5,8 +5,8 @@ import zipfile
 import base64
 import json
 import re
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError, MissingError
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError, MissingError
 
 class SpreadsheetMixin(models.AbstractModel):
     _name = "spreadsheet.mixin"

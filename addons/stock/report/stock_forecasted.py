@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import api, models
-from odoo.tools import float_is_zero, format_date, float_round, float_compare
+from koda import api, models
+from koda.tools import float_is_zero, format_date, float_round, float_compare
 
 
 class StockForecasted(models.AbstractModel):

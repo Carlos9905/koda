@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import HttpCase, tagged, Form
-from odoo.addons.sale.tests.common import TestSaleCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.tests import HttpCase, tagged, Form
+from koda.addons.sale.tests.common import TestSaleCommon
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 @tagged('post_install', '-at_install')

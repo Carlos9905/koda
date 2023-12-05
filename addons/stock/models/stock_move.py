@@ -7,11 +7,11 @@ from datetime import timedelta
 from operator import itemgetter
 from re import findall as regex_findall
 
-from odoo import _, api, Command, fields, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools.float_utils import float_compare, float_is_zero, float_round
-from odoo.tools.misc import clean_context, OrderedSet, groupby
+from koda import _, api, Command, fields, models
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools.float_utils import float_compare, float_is_zero, float_round
+from koda.tools.misc import clean_context, OrderedSet, groupby
 
 PROCUREMENT_PRIORITIES = [('0', 'Normal'), ('1', 'Urgent')]
 

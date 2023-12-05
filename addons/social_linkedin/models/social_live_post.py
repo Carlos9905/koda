@@ -7,8 +7,8 @@ from urllib.parse import quote, urlparse
 from werkzeug.urls import url_join
 import re
 
-from odoo import models, fields, tools, _
-from odoo.exceptions import UserError
+from koda import models, fields, tools, _
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

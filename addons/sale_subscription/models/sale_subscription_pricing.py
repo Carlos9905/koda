@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
-from odoo.tools import format_amount
+from koda import api, models, fields, _
+from koda.exceptions import UserError
+from koda.tools import format_amount
 
 class SaleSubscriptionPricing(models.Model):
     _name = 'sale.subscription.pricing'

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.account_inter_company_rules.tests.common import TestInterCompanyRulesCommon
+from koda.addons.account_inter_company_rules.tests.common import TestInterCompanyRulesCommon
 
 
 class TestInterCompanyRulesCommonSOPO(TestInterCompanyRulesCommon):

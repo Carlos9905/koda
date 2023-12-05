@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, fields, models
-from odoo.osv import expression
-from odoo.tools.misc import format_datetime
+from koda import _, fields, models
+from koda.osv import expression
+from koda.tools.misc import format_datetime
 
 
 class StockQuantityHistory(models.TransientModel):

@@ -4,7 +4,7 @@
 from dateutil.relativedelta import relativedelta
 from collections import defaultdict
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class SpreadsheetRevision(models.Model):

@@ -29,10 +29,10 @@ from PIL import UnidentifiedImageError
 from dateutil.relativedelta import relativedelta
 from datetime import timedelta
 
-from odoo import api, fields, models, http, _, Command
-from odoo.tools import config, email_normalize, get_lang, is_html_empty, format_date, formataddr, groupby, consteq
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.misc import hmac
+from koda import api, fields, models, http, _, Command
+from koda.tools import config, email_normalize, get_lang, is_html_empty, format_date, formataddr, groupby, consteq
+from koda.exceptions import UserError, ValidationError
+from koda.tools.misc import hmac
 
 TTFSearchPath.append(os.path.join(config["root_path"], "..", "addons", "web", "static", "fonts", "sign"))
 

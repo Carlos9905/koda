@@ -5,11 +5,11 @@ from json import dumps
 from urllib.parse import urlsplit
 from werkzeug.urls import url_join
 
-from odoo import http, _
-from odoo.http import request
-from odoo.addons.iap import jsonrpc
-from odoo.tools import consteq
-from odoo.addons.sign.controllers.main import Sign as SignController
+from koda import http, _
+from koda.http import request
+from koda.addons.iap import jsonrpc
+from koda.tools import consteq
+from koda.addons.sign.controllers.main import Sign as SignController
 
 IAP_DEFAULT_DOMAIN = 'https://itsme.api.odoo.com'
 IAP_SERVICE_NAME = 'itsme_proxy'

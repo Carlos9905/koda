@@ -1,8 +1,8 @@
 import logging
 import json
 
-from odoo import http
-from odoo.http import request, content_disposition, Controller
+from koda import http
+from koda.http import request, content_disposition, Controller
 
 logger = logging.getLogger(__name__)
 

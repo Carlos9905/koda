@@ -4,8 +4,8 @@
 import dateutil.parser
 import requests
 
-from odoo import _, api, models, fields
-from odoo.exceptions import UserError
+from koda import _, api, models, fields
+from koda.exceptions import UserError
 from werkzeug.urls import url_encode, url_join
 
 

@@ -4,9 +4,9 @@
 from dateutil.relativedelta import relativedelta
 from math import ceil
 
-from odoo import _, api, fields, models
-from odoo.osv import expression
-from odoo.tools import float_compare
+from koda import _, api, fields, models
+from koda.osv import expression
+from koda.tools import float_compare
 
 RENTAL_STATUS = [
     ('draft', "Quotation"),

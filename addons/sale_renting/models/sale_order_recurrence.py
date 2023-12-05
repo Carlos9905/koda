@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, _lt, fields, models
+from koda import _, _lt, fields, models
 
 
 class SaleOrderRecurrence(models.Model):

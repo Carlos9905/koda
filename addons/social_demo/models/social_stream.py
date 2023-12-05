@@ -4,7 +4,7 @@
 import datetime
 import random
 
-from odoo import api, models
+from koda import api, models
 
 
 class DemoSocialStream(models.Model):

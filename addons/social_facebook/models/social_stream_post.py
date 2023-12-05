@@ -7,8 +7,8 @@ import requests
 import urllib.parse
 
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from koda import _, api, fields, models
+from koda.exceptions import UserError
 from werkzeug.urls import url_join
 
 _logger = logging.getLogger(__name__)

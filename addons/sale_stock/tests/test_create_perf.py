@@ -6,10 +6,10 @@ import logging
 import random
 import time
 
-from odoo.fields import Command
+from koda.fields import Command
 
-from odoo.tests import common, tagged
-from odoo.tests.common import users, warmup
+from koda.tests import common, tagged
+from koda.tests.common import users, warmup
 
 _logger = logging.getLogger(__name__)
 

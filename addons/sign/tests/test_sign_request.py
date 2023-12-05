@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import Form, new_test_user
+from koda.tests.common import Form, new_test_user
 from .sign_request_common import SignRequestCommon
-from odoo import Command
-from odoo.exceptions import UserError, ValidationError
+from koda import Command
+from koda.exceptions import UserError, ValidationError
 
 
 class TestSignRequest(SignRequestCommon):

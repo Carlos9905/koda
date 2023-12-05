@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.stock.tests.common import TestStockCommon
+from koda.addons.stock.tests.common import TestStockCommon
 
 class TestReturnPicking(TestStockCommon):
 

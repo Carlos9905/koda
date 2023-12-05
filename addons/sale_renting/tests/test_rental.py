@@ -4,9 +4,9 @@
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.tools import float_compare
-from odoo.tests import HttpCase, tagged, TransactionCase
+from koda import fields
+from koda.tools import float_compare
+from koda.tests import HttpCase, tagged, TransactionCase
 
 
 class TestRentalCommon(TransactionCase):

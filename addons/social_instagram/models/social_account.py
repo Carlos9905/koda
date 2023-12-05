@@ -7,7 +7,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from werkzeug.urls import url_join
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class SocialAccountInstagram(models.Model):

@@ -1,4 +1,4 @@
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 class TestSpreadsheetDocumentToDashboardTour(TransactionCase):
     def add_document_to_dashboard_group(self):

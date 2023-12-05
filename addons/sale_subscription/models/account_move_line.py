@@ -3,8 +3,8 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, api
-from odoo.tools.sql import column_exists, create_column
+from koda import fields, models, api
+from koda.tools.sql import column_exists, create_column
 
 
 class AccountMoveLine(models.Model):

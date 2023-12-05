@@ -2,7 +2,7 @@
 
 from datetime import datetime, time
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class PaymentTransaction(models.Model):

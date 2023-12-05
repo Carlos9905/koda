@@ -3,10 +3,10 @@
 
 from .sign_request_common import SignRequestCommon
 
-from odoo import Command
+from koda import Command
 
-from odoo.addons.mail.tests.common import MockEmail
-from odoo.tests import tagged
+from koda.addons.mail.tests.common import MockEmail
+from koda.tests import tagged
 
 
 @tagged('multi_company')

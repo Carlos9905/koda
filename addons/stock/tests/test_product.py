@@ -4,9 +4,9 @@
 # Author: Leonardo Pistone
 # Copyright 2015 Camptocamp SA
 
-from odoo.addons.stock.tests.common2 import TestStockCommon
-from odoo.exceptions import UserError
-from odoo.tests.common import Form
+from koda.addons.stock.tests.common2 import TestStockCommon
+from koda.exceptions import UserError
+from koda.tests.common import Form
 
 
 class TestVirtualAvailable(TestStockCommon):

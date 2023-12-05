@@ -4,10 +4,10 @@
 from dateutil.relativedelta import relativedelta
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.addons.social_youtube.models.social_account import SocialAccountYoutube
-from odoo.addons.social_youtube.models.social_stream import SocialStreamYoutube
-from odoo.tests import common
+from koda import fields
+from koda.addons.social_youtube.models.social_account import SocialAccountYoutube
+from koda.addons.social_youtube.models.social_stream import SocialStreamYoutube
+from koda.tests import common
 
 
 class SocialYouTubeCase(common.TransactionCase):

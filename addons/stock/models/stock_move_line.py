@@ -3,11 +3,11 @@
 
 from collections import Counter, defaultdict
 
-from odoo import _, api, fields, tools, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import OrderedSet, groupby
-from odoo.tools.float_utils import float_compare, float_is_zero, float_round
-from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+from koda import _, api, fields, tools, models
+from koda.exceptions import UserError, ValidationError
+from koda.tools import OrderedSet, groupby
+from koda.tools.float_utils import float_compare, float_is_zero, float_round
+from koda.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
 
 
 class StockMoveLine(models.Model):

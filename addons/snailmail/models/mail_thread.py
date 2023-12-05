@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import models
-from odoo import api
+from koda import models
+from koda import api
 
 
 class MailThread(models.AbstractModel):

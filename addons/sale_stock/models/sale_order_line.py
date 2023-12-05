@@ -4,9 +4,9 @@
 from datetime import timedelta
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.tools import float_compare
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.tools import float_compare
+from koda.exceptions import UserError
 
 
 class SaleOrderLine(models.Model):

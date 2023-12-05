@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.tools.sql import column_exists, create_column
+from koda import api, fields, models, _
+from koda.tools.sql import column_exists, create_column
 
 
 class StockRoute(models.Model):

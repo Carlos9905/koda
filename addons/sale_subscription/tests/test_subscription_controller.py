@@ -5,13 +5,13 @@ from datetime import date
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
-from odoo.addons.payment.tests.common import PaymentCommon
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.tests.common import new_test_user, tagged
-from odoo.tools import mute_logger
-from odoo import Command
-from odoo import http
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.addons.payment.tests.common import PaymentCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.tests.common import new_test_user, tagged
+from koda.tools import mute_logger
+from koda import Command
+from koda import http
 
 
 @tagged("post_install", "-at_install", "subscription_controller")

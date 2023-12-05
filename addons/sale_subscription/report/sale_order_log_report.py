@@ -4,12 +4,12 @@
 import re
 from datetime import date
 
-from odoo import api, fields, models, tools
-from odoo.osv import expression
+from koda import api, fields, models, tools
+from koda.osv import expression
 
-from odoo.addons.resource.models.utils import filter_domain_leaf
-from odoo.addons.sale.models.sale_order import SALE_ORDER_STATE
-from odoo.addons.sale_subscription.models.sale_order import SUBSCRIPTION_PROGRESS_STATE, SUBSCRIPTION_STATES
+from koda.addons.resource.models.utils import filter_domain_leaf
+from koda.addons.sale.models.sale_order import SALE_ORDER_STATE
+from koda.addons.sale_subscription.models.sale_order import SUBSCRIPTION_PROGRESS_STATE, SUBSCRIPTION_STATES
 
 
 

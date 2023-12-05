@@ -3,9 +3,9 @@
 
 from datetime import timedelta
 
-from odoo import fields
-from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
-from odoo.tests import tagged
+from koda import fields
+from koda.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
+from koda.tests import tagged
 
 
 @tagged('-at_install', 'post_install')

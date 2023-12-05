@@ -4,9 +4,9 @@
 from ast import literal_eval
 from uuid import uuid4
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import html2plaintext, plaintext2html
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import html2plaintext, plaintext2html
 
 
 class SendSMS(models.TransientModel):

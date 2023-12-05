@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.tools.float_utils import float_is_zero
+from koda import _, api, fields, models
+from koda.tools.float_utils import float_is_zero
 
 
 class StockPackageLevel(models.Model):

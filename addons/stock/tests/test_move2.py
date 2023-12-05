@@ -3,11 +3,11 @@
 
 from datetime import timedelta
 
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.exceptions import UserError
+from koda.addons.stock.tests.common import TestStockCommon
+from koda.exceptions import UserError
 
-from odoo.tests import Form
-from odoo.tools import float_is_zero, float_compare
+from koda.tests import Form
+from koda.tools import float_is_zero, float_compare
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta

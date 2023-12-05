@@ -3,8 +3,8 @@
 
 from datetime import datetime, timedelta
 
-from odoo import fields, tests
-from odoo.tests.common import Form
+from koda import fields, tests
+from koda.tests.common import Form
 
 
 class TestReportStockQuantity(tests.TransactionCase):

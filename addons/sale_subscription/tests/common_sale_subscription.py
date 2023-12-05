@@ -2,8 +2,8 @@
 
 import datetime
 
-from odoo.addons.sale.tests.common import TestSaleCommon
-from odoo import Command
+from koda.addons.sale.tests.common import TestSaleCommon
+from koda import Command
 
 
 class TestSubscriptionCommon(TestSaleCommon):
