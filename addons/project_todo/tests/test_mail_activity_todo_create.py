@@ -2,7 +2,7 @@
 
 import datetime
 from markupsafe import Markup
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 
 class TestMailActivityTodo(TransactionCase):

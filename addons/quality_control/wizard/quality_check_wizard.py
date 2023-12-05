@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import ast
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 
 class QualityCheckWizard(models.TransientModel):

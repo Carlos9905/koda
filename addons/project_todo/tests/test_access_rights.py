@@ -1,6 +1,6 @@
-from odoo.tests.common import users
-from odoo.exceptions import AccessError
-from odoo.addons.project.tests.test_access_rights import TestAccessRights
+from koda.tests.common import users
+from koda.exceptions import AccessError
+from koda.addons.project.tests.test_access_rights import TestAccessRights
 
 class TestAccessRightsTodo(TestAccessRights):
     @classmethod

@@ -3,9 +3,9 @@
 from textwrap import shorten
 
 from .taxcloud_request import TaxCloudRequest
-from odoo import _, api, models
-from odoo.exceptions import UserError
-from odoo.fields import Command
+from koda import _, api, models
+from koda.exceptions import UserError
+from koda.fields import Command
 
 class SaleOrder(models.Model):
     _inherit = 'sale.order'

@@ -3,9 +3,9 @@
 
 from contextlib import contextmanager
 
-from odoo import fields
+from koda import fields
 
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 
 class TestCommonForecast(TransactionCase):

@@ -4,7 +4,7 @@
 import json
 from unittest.mock import patch
 
-from odoo.addons.mail_plugin.tests.common import TestMailPluginControllerCommon
+from koda.addons.mail_plugin.tests.common import TestMailPluginControllerCommon
 
 
 class TestMailPluginProjectController(TestMailPluginControllerCommon):

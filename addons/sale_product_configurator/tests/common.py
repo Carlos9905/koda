@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import base64
 
-from odoo.tests.common import TransactionCase
-from odoo.tools.misc import file_open
+from koda.tests.common import TransactionCase
+from koda.tools.misc import file_open
 
 class TestProductConfiguratorCommon(TransactionCase):
 

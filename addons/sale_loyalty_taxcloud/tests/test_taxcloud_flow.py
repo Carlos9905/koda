@@ -5,8 +5,8 @@ from unittest.mock import patch
 
 from . import common
 
-from odoo.exceptions import UserError
-from odoo.fields import Command
+from koda.exceptions import UserError
+from koda.fields import Command
 
 class TestSaleCouponTaxCloudFlow(common.TestSaleCouponTaxCloudCommon):
 

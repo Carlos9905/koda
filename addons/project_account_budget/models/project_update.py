@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
-from odoo.tools import format_amount
+from koda import api, models
+from koda.tools import format_amount
 
 class ProjectUpdate(models.Model):
     _inherit = 'project.update'

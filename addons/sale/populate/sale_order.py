@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
 
-from odoo import models
-from odoo.tools import populate, groupby
+from koda import models
+from koda.tools import populate, groupby
 
 _logger = logging.getLogger(__name__)
 

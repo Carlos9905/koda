@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import TransactionCase
-from odoo.osv.expression import normalize_domain
-from odoo.addons.resource.models import utils
+from koda.tests.common import TransactionCase
+from koda.osv.expression import normalize_domain
+from koda.addons.resource.models import utils
 
 
 class TestExpression(TransactionCase):

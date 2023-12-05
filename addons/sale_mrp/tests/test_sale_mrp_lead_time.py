@@ -3,10 +3,10 @@
 
 from datetime import timedelta
 
-from odoo import fields
-from odoo.addons.stock.tests.common2 import TestStockCommon
+from koda import fields
+from koda.addons.stock.tests.common2 import TestStockCommon
 
-from odoo.tests import Form
+from koda.tests import Form
 
 
 class TestSaleMrpLeadTime(TestStockCommon):

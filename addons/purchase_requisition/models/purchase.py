@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models, _, Command
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, get_lang
+from koda import api, fields, models, _, Command
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT, get_lang
 
 
 class PurchaseOrderGroup(models.Model):

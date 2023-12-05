@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.mail.tests.common import MailCase
-from odoo.tests import tagged, Form, new_test_user
-from odoo.tools import mute_logger, format_amount
-from odoo import fields
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.mail.tests.common import MailCase
+from koda.tests import tagged, Form, new_test_user
+from koda.tools import mute_logger, format_amount
+from koda import fields
 
 @tagged('-at_install', 'post_install')
 class TestPurchaseDashboard(AccountTestInvoicingCommon, MailCase):

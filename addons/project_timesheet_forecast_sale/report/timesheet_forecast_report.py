@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 class TimesheetForecastReport(models.Model):
     _inherit = "project.timesheet.forecast.report.analysis"

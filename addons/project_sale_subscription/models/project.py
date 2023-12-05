@@ -4,8 +4,8 @@
 import json
 from collections import defaultdict
 
-from odoo import api, fields, models, _lt
-from odoo.osv import expression
+from koda import api, fields, models, _lt
+from koda.osv import expression
 
 
 class Project(models.Model):

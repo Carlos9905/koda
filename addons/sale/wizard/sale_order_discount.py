@@ -2,8 +2,8 @@
 
 from collections import defaultdict
 
-from odoo import Command, _, api, fields, models
-from odoo.exceptions import ValidationError
+from koda import Command, _, api, fields, models
+from koda.exceptions import ValidationError
 
 
 class SaleOrderDiscount(models.TransientModel):

@@ -3,8 +3,8 @@
 
 import logging
 from datetime import datetime
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
+from koda import models, fields, api, _
+from koda.exceptions import UserError
 from . import product
 
 _logger = logging.getLogger(__name__)

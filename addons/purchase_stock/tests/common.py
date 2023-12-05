@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from datetime import timedelta
 
-from odoo import fields
-from odoo.addons.stock.tests.common2 import TestStockCommon
-from odoo import tools
+from koda import fields
+from koda.addons.stock.tests.common2 import TestStockCommon
+from koda import tools
 
 
 class PurchaseTestCommon(TestStockCommon):

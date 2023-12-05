@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests.common import users
+from koda.tests.common import users
 
-from odoo.addons.sale.tests.common import SaleCommon
-from odoo.addons.sales_team.tests.common import TestSalesCommon
+from koda.addons.sale.tests.common import SaleCommon
+from koda.addons.sales_team.tests.common import TestSalesCommon
 
 
 class TestSaleOrderCancel(SaleCommon, TestSalesCommon):

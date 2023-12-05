@@ -3,9 +3,9 @@
 
 from datetime import datetime, timedelta
 
-from odoo.fields import Command
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
-from odoo.addons.web_gantt.models.models import Base
+from koda.fields import Command
+from koda.addons.project.tests.test_project_base import TestProjectCommon
+from koda.addons.web_gantt.models.models import Base
 
 
 # As the writing of the new planned_dates is only made when planned_date_start is in the future,

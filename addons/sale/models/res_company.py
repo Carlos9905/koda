@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
 
 
 class ResCompany(models.Model):

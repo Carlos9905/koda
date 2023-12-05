@@ -3,10 +3,10 @@
 
 from datetime import timedelta
 
-from odoo.tests.common import Form, TransactionCase
-from odoo.tests import tagged
-from odoo import fields
-from odoo.fields import Command
+from koda.tests.common import Form, TransactionCase
+from koda.tests import tagged
+from koda import fields
+from koda.fields import Command
 
 
 @tagged('post_install', '-at_install')

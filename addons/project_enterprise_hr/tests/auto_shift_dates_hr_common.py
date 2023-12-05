@@ -3,8 +3,8 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.project_enterprise.tests.gantt_reschedule_dates_common import ProjectEnterpriseGanttRescheduleCommon
-from odoo.fields import Command
+from koda.addons.project_enterprise.tests.gantt_reschedule_dates_common import ProjectEnterpriseGanttRescheduleCommon
+from koda.fields import Command
 
 
 class AutoShiftDatesHRCommon(ProjectEnterpriseGanttRescheduleCommon):

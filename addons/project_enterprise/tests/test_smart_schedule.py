@@ -3,8 +3,8 @@
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from odoo.tests import tagged
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
+from koda.tests import tagged
+from koda.addons.project.tests.test_project_base import TestProjectCommon
 from freezegun import freeze_time
 
 

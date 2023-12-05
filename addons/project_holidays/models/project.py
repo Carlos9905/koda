@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.addons.project.models.project_task import CLOSED_STATES
+from koda import api, fields, models, _
+from koda.addons.project.models.project_task import CLOSED_STATES
 from collections import defaultdict
 
 class Task(models.Model):

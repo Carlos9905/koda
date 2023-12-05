@@ -12,10 +12,10 @@ from xml.etree import ElementTree
 import requests
 from werkzeug.urls import url_encode, url_join, url_parse
 
-from odoo import _
-from odoo.exceptions import UserError, ValidationError
+from koda import _
+from koda.exceptions import UserError, ValidationError
 
-from odoo.addons.sale_amazon import const
+from koda.addons.sale_amazon import const
 
 
 _logger = logging.getLogger(__name__)

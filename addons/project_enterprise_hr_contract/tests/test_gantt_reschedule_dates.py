@@ -5,9 +5,9 @@ from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo.fields import Command
-from odoo.addons.project_enterprise_hr.tests.auto_shift_dates_hr_common import AutoShiftDatesHRCommon
-from odoo.addons.project_enterprise.tests.gantt_reschedule_dates_common import fake_now
+from koda.fields import Command
+from koda.addons.project_enterprise_hr.tests.auto_shift_dates_hr_common import AutoShiftDatesHRCommon
+from koda.addons.project_enterprise.tests.gantt_reschedule_dates_common import fake_now
 
 
 @freeze_time(fake_now)

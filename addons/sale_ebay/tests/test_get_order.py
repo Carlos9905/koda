@@ -3,8 +3,8 @@
 from datetime import datetime
 from unittest.mock import patch, Mock
 
-from odoo.tests import TransactionCase
-from odoo.tools import mute_logger
+from koda.tests import TransactionCase
+from koda.tools import mute_logger
 
 from .test_data import EBAY_ANSWER_1
 

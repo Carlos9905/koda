@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.account_taxcloud.models import taxcloud_request
+from koda.addons.account_taxcloud.models import taxcloud_request
 
 class TaxCloudRequest(taxcloud_request.TaxCloudRequest):
 

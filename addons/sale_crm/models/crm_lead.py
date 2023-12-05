@@ -3,8 +3,8 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models
-from odoo.osv import expression
+from koda import api, fields, models
+from koda.osv import expression
 
 
 class CrmLead(models.Model):

@@ -4,8 +4,8 @@ from dateutil.relativedelta import relativedelta
 
 from markupsafe import Markup
 
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
-from odoo.fields import Command
+from koda.addons.project.tests.test_project_base import TestProjectCommon
+from koda.fields import Command
 
 
 class TestPlanningOverlap(TestProjectCommon):

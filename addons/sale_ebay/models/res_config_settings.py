@@ -6,11 +6,11 @@ import uuid
 from ebaysdk.exception import ConnectionError
 from werkzeug import urls
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.addons.sale_ebay.controllers.main import EbayController
-from odoo.addons.sale_ebay.tools.ebaysdk import Trading
-from odoo.tools.misc import str2bool
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.addons.sale_ebay.controllers.main import EbayController
+from koda.addons.sale_ebay.tools.ebaysdk import Trading
+from koda.tools.misc import str2bool
 
 
 class ResConfigSettings(models.TransientModel):

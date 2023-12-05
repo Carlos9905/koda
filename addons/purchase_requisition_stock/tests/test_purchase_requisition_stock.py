@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.purchase_requisition.tests.common import TestPurchaseRequisitionCommon
-from odoo.tests import Form
-from odoo import Command
+from koda.addons.purchase_requisition.tests.common import TestPurchaseRequisitionCommon
+from koda.tests import Form
+from koda import Command
 
 
 class TestPurchaseRequisitionStock(TestPurchaseRequisitionCommon):

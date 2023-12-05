@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sale_loyalty_taxcloud.models import taxcloud_request
+from koda.addons.sale_loyalty_taxcloud.models import taxcloud_request
 
 
 class TaxCloudRequest(taxcloud_request.TaxCloudRequest):

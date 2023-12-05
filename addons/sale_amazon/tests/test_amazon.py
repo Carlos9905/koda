@@ -3,11 +3,11 @@
 from datetime import datetime
 from unittest.mock import Mock, patch
 
-from odoo.exceptions import UserError
-from odoo.tools import mute_logger
+from koda.exceptions import UserError
+from koda.tools import mute_logger
 
-from odoo.addons.sale_amazon import utils as amazon_utils
-from odoo.addons.sale_amazon.tests import common
+from koda.addons.sale_amazon import utils as amazon_utils
+from koda.addons.sale_amazon.tests import common
 
 
 class TestAmazon(common.TestAmazonCommon):

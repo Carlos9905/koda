@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
-from odoo.addons.product.tests.test_product_attribute_value_config import TestProductAttributeValueCommon
-from odoo.tests import tagged
+from koda import fields
+from koda.addons.product.tests.test_product_attribute_value_config import TestProductAttributeValueCommon
+from koda.tests import tagged
 
 
 class TestSaleProductAttributeValueCommon(TestProductAttributeValueCommon):

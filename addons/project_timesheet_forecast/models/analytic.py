@@ -4,8 +4,8 @@
 from dateutil.relativedelta import relativedelta
 from collections import defaultdict
 
-from odoo import fields, models
-from odoo.osv import expression
+from koda import fields, models
+from koda.osv import expression
 
 
 class AccountAnalyticLine(models.Model):

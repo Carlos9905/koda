@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.account_taxcloud.tests.common import TestAccountTaxcloudCommon
-from odoo.tests.common import tagged
+from koda.addons.account_taxcloud.tests.common import TestAccountTaxcloudCommon
+from koda.tests.common import tagged
 
 
 @tagged("external")

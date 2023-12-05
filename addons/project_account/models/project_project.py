@@ -4,8 +4,8 @@
 import json
 from collections import defaultdict
 
-from odoo import models, _lt
-from odoo.tools.misc import OrderedSet
+from koda import models, _lt
+from koda.tools.misc import OrderedSet
 
 
 class Project(models.Model):

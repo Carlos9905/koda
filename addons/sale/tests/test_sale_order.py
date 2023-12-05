@@ -3,13 +3,13 @@
 from datetime import timedelta
 from freezegun import freeze_time
 
-from odoo import fields
-from odoo.fields import Command
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.tests import tagged, Form
-from odoo.tools import float_compare
+from koda import fields
+from koda.fields import Command
+from koda.exceptions import AccessError, UserError, ValidationError
+from koda.tests import tagged, Form
+from koda.tools import float_compare
 
-from odoo.addons.sale.tests.common import SaleCommon
+from koda.addons.sale.tests.common import SaleCommon
 
 
 @tagged('post_install', '-at_install')

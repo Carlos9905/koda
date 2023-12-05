@@ -2,12 +2,12 @@
 
 from unittest.mock import patch, Mock
 
-from odoo import fields
-from odoo.exceptions import UserError
-from odoo.tools import mute_logger
+from koda import fields
+from koda.exceptions import UserError
+from koda.tools import mute_logger
 
-from odoo.addons.sale_amazon.tests import common
-from odoo.addons.stock.tests.common import TestStockCommon
+from koda.addons.sale_amazon.tests import common
+from koda.addons.stock.tests.common import TestStockCommon
 
 
 class TestStock(common.TestAmazonCommon, TestStockCommon):

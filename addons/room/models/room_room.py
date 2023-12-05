@@ -3,8 +3,8 @@
 
 from uuid import uuid4
 
-from odoo import api, fields, models, _
-from odoo.tools.translate import html_translate
+from koda import api, fields, models, _
+from koda.tools.translate import html_translate
 
 class Room(models.Model):
     _name = "room.room"

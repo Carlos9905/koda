@@ -8,8 +8,8 @@ from datetime import datetime, timedelta
 from freezegun import freeze_time
 from psycopg2 import IntegrityError
 
-from odoo.tests import Form, tagged
-from odoo.tools import mute_logger, float_compare
+from koda.tests import Form, tagged
+from koda.tools import mute_logger, float_compare
 
 from .common import TestCommonSalePlanning
 

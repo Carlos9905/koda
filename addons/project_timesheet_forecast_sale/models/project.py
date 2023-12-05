@@ -3,7 +3,7 @@
 
 import json
 
-from odoo import api, fields, models, _, _lt
+from koda import api, fields, models, _, _lt
 
 class Project(models.Model):
     _inherit = 'project.project'

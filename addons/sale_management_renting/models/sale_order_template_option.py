@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
-from odoo.osv import expression
+from koda import api, models
+from koda.osv import expression
 
 
 class SaleOrderTemplateOption(models.Model):

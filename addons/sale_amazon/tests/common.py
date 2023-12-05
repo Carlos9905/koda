@@ -2,7 +2,7 @@
 
 from unittest.mock import patch
 
-from odoo.tests import TransactionCase
+from koda.tests import TransactionCase
 
 AWS_RESPONSE_MOCK = {
     'AssumeRoleResponse': {

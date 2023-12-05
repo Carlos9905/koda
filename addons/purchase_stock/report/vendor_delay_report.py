@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, tools
-from odoo.tools import SQL
+from koda import fields, models, tools
+from koda.tools import SQL
 
 
 class VendorDelayReport(models.Model):

@@ -3,10 +3,10 @@
 
 from collections import defaultdict
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import AccessError
-from odoo.tools import format_amount
-from odoo.tools.sql import column_exists, create_column
+from koda import api, Command, fields, models, _
+from koda.exceptions import AccessError
+from koda.tools import format_amount
+from koda.tools.sql import column_exists, create_column
 
 
 class SaleOrderLine(models.Model):

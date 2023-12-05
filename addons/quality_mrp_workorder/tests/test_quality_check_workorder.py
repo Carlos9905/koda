@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import Form, HttpCase, tagged
-from odoo.addons.mrp.tests.common import TestMrpCommon
-from odoo.addons.mrp_workorder.tests import test_tablet_client_action
+from koda.tests import Form, HttpCase, tagged
+from koda.addons.mrp.tests.common import TestMrpCommon
+from koda.addons.mrp_workorder.tests import test_tablet_client_action
 
 
 class TestQualityCheckWorkorder(TestMrpCommon):

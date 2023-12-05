@@ -4,7 +4,7 @@
 from collections import defaultdict
 from pytz import utc
 
-from odoo import api, fields, models
+from koda import api, fields, models
 from .utils import timezone_datetime
 
 

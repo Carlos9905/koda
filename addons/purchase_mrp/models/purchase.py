@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.tools import OrderedSet
+from koda import api, fields, models, _
+from koda.tools import OrderedSet
 
 
 class PurchaseOrder(models.Model):

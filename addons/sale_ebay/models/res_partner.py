@@ -5,7 +5,7 @@ import logging
 import re
 import uuid
 
-from odoo import _, fields, models
+from koda import _, fields, models
 
 _logger = logging.getLogger(__name__)
 

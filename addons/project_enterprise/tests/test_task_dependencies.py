@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from markupsafe import Markup
-from odoo.fields import Command
-from odoo.tests import tagged
+from koda.fields import Command
+from koda.tests import tagged
 
 from .gantt_reschedule_dates_common import ProjectEnterpriseGanttRescheduleCommon
 

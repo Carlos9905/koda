@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import common
+from koda.tests import common
 
-from odoo.tools import html2plaintext
+from koda.tools import html2plaintext
 
 @common.tagged('post_install', '-at_install')
 class TestSaleMrpInvoices(common.TransactionCase):

@@ -4,7 +4,7 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import models
+from koda import models
 
 
 class SaleOrderLine(models.Model):

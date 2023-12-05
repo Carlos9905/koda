@@ -5,11 +5,11 @@ from collections import defaultdict
 from datetime import timedelta
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.fields import Command
-from odoo.osv import expression
-from odoo.tools import float_is_zero, float_compare, float_round, format_date, groupby
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.fields import Command
+from koda.osv import expression
+from koda.tools import float_is_zero, float_compare, float_round, format_date, groupby
 
 
 class SaleOrderLine(models.Model):

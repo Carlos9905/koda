@@ -5,13 +5,13 @@ import base64
 from collections import OrderedDict
 from datetime import datetime
 
-from odoo import http
-from odoo.exceptions import AccessError, MissingError
-from odoo.http import request, Response
-from odoo.tools import image_process
-from odoo.tools.translate import _
-from odoo.addons.portal.controllers import portal
-from odoo.addons.portal.controllers.portal import pager as portal_pager
+from koda import http
+from koda.exceptions import AccessError, MissingError
+from koda.http import request, Response
+from koda.tools import image_process
+from koda.tools.translate import _
+from koda.addons.portal.controllers import portal
+from koda.addons.portal.controllers.portal import pager as portal_pager
 
 
 class CustomerPortal(portal.CustomerPortal):

@@ -4,9 +4,9 @@
 from datetime import date, timedelta
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.addons.sale_loyalty.tests.common import TestSaleCouponCommon
-from odoo.exceptions import ValidationError
+from koda import Command
+from koda.addons.sale_loyalty.tests.common import TestSaleCouponCommon
+from koda.exceptions import ValidationError
 
 class TestProgramRules(TestSaleCouponCommon):
     # Test all the validity rules to allow a customer to have a reward.

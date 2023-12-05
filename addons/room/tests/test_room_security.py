@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import exceptions
-from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
-from odoo.addons.room.tests.common import RoomCommon
-from odoo.tests.common import tagged, users
+from koda import exceptions
+from koda.addons.mail.tests.common import MailCommon, mail_new_test_user
+from koda.addons.room.tests.common import RoomCommon
+from koda.tests.common import tagged, users
 
 @tagged("room_acl")
 class TestRoomSecurity(RoomCommon, MailCommon):

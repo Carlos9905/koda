@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged, new_test_user
-from odoo.tools.float_utils import float_compare
+from koda import Command
+from koda.exceptions import ValidationError
+from koda.tests import tagged, new_test_user
+from koda.tools.float_utils import float_compare
 
-from odoo.addons.sale_loyalty.tests.common import TestSaleCouponCommon
+from koda.addons.sale_loyalty.tests.common import TestSaleCouponCommon
 
 
 @tagged('post_install', '-at_install')

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import Form
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.stock.tests.test_report import TestReportsCommon
+from koda.tests.common import Form
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.stock.tests.test_report import TestReportsCommon
 
 
 class TestPurchaseStockReports(TestReportsCommon):

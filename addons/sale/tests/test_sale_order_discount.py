@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Command
-from odoo.tests import tagged
+from koda.fields import Command
+from koda.tests import tagged
 
-from odoo.addons.sale.tests.common import SaleCommon
+from koda.addons.sale.tests.common import SaleCommon
 
 
 @tagged('post_install', '-at_install')

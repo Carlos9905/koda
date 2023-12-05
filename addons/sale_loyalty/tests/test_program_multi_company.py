@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sale_loyalty.tests.common import TestSaleCouponCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda.addons.sale_loyalty.tests.common import TestSaleCouponCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

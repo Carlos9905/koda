@@ -1,5 +1,5 @@
-from odoo import _, fields, models, Command
-from odoo.addons.web.controllers.utils import clean_action
+from koda import _, fields, models, Command
+from koda.addons.web.controllers.utils import clean_action
 
 
 class BankRecWidget(models.Model):

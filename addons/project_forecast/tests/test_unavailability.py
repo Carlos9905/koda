@@ -4,7 +4,7 @@
 from datetime import date, datetime
 import pytz
 
-from odoo import fields
+from koda import fields
 
 from .common import TestCommonForecast
 

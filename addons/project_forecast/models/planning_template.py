@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Koda
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class PlanningTemplate(models.Model):

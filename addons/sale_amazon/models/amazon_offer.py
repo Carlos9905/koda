@@ -3,9 +3,9 @@
 import logging
 from xml.etree import ElementTree
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
-from odoo.addons.sale_amazon import utils as amazon_utils
+from koda.addons.sale_amazon import utils as amazon_utils
 
 
 _logger = logging.getLogger(__name__)

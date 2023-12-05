@@ -1,7 +1,7 @@
-from odoo.tests.common import tagged, HttpCase
-from odoo import Command
+from koda.tests.common import tagged, HttpCase
+from koda import Command
 
-from odoo.addons.quality_control.tests.test_common import TestQualityCommon
+from koda.addons.quality_control.tests.test_common import TestQualityCommon
 
 
 @tagged('post_install', '-at_install')

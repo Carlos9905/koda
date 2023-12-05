@@ -5,8 +5,8 @@ import pytz
 from collections import defaultdict
 from datetime import datetime
 
-from odoo import _, api, fields, models
-from odoo.osv import expression
+from koda import _, api, fields, models
+from koda.osv import expression
 
 
 class Forecast(models.Model):

@@ -1,6 +1,6 @@
 
-from odoo import Command, http, _
-from odoo.http import request
+from koda import Command, http, _
+from koda.http import request
 
 
 class ProjectClient(http.Controller):

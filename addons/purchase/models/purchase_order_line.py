@@ -3,10 +3,10 @@ from datetime import datetime, time
 from dateutil.relativedelta import relativedelta
 from pytz import timezone, UTC
 
-from odoo import api, fields, models, _
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, get_lang
-from odoo.tools.float_utils import float_compare, float_round
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT, get_lang
+from koda.tools.float_utils import float_compare, float_round
+from koda.exceptions import UserError
 
 
 class PurchaseOrderLine(models.Model):

@@ -3,9 +3,9 @@
 
 import json
 
-from odoo import api, fields, models, _, _lt
-from odoo.osv import expression
-from odoo.tools.misc import OrderedSet
+from koda import api, fields, models, _, _lt
+from koda.osv import expression
+from koda.tools.misc import OrderedSet
 
 
 class Project(models.Model):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, models, fields
-from odoo.tools.float_utils import float_is_zero, float_round
-from odoo.exceptions import UserError
+from koda import _, models, fields
+from koda.tools.float_utils import float_is_zero, float_round
+from koda.exceptions import UserError
 
 
 class StockMove(models.Model):

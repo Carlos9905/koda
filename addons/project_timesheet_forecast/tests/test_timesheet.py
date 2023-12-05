@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 from datetime import datetime
 
-from odoo.addons.project_forecast.tests.common import TestCommonForecast
+from koda.addons.project_forecast.tests.common import TestCommonForecast
 
 
 class TestPlanningTimesheet(TestCommonForecast):

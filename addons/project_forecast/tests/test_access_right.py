@@ -4,7 +4,7 @@
 from datetime import datetime
 import unittest
 
-from odoo.exceptions import AccessError
+from koda.exceptions import AccessError
 
 from .common import TestCommonForecast
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from dateutil.relativedelta import relativedelta
 
-from odoo import models, fields
+from koda import models, fields
 
 
 class AccountReconcileModel(models.Model):

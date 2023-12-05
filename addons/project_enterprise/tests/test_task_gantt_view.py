@@ -1,10 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Datetime
-from odoo.tests import new_test_user
+from koda.fields import Datetime
+from koda.tests import new_test_user
 
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
-from odoo.addons.project.models.project_task import CLOSED_STATES
+from koda.addons.project.tests.test_project_base import TestProjectCommon
+from koda.addons.project.models.project_task import CLOSED_STATES
 
 
 class TestTaskGanttView(TestProjectCommon):

@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tests.common import Form
-from odoo import Command, fields
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tests.common import Form
+from koda import Command, fields
 
 
 class TestPurchaseToInvoiceCommon(AccountTestInvoicingCommon):

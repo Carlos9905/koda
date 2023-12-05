@@ -7,12 +7,12 @@ import pprint
 from werkzeug.exceptions import Forbidden
 from werkzeug.urls import url_encode
 
-from odoo import _, http
-from odoo.exceptions import UserError, ValidationError
-from odoo.http import request
-from odoo.tools import hmac as hmac_tool
+from koda import _, http
+from koda.exceptions import UserError, ValidationError
+from koda.http import request
+from koda.tools import hmac as hmac_tool
 
-from odoo.addons.sale_amazon import utils as amazon_utils
+from koda.addons.sale_amazon import utils as amazon_utils
 
 
 _logger = logging.getLogger(__name__)

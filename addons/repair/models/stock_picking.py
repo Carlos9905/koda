@@ -3,8 +3,8 @@
 
 import time
 
-from odoo import _, api, fields, models
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import _, api, fields, models
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 
 class PickingType(models.Model):

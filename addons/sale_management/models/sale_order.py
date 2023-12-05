@@ -3,9 +3,9 @@
 
 from datetime import timedelta
 
-from odoo import SUPERUSER_ID, api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools import is_html_empty
+from koda import SUPERUSER_ID, api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.tools import is_html_empty
 
 
 class SaleOrder(models.Model):

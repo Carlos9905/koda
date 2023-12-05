@@ -10,13 +10,13 @@ from PIL import Image
 from datetime import datetime, timedelta
 from ebaysdk.exception import ConnectionError
 from markupsafe import Markup
-from odoo.addons.sale_ebay.tools.ebaysdk import Trading
+from koda.addons.sale_ebay.tools.ebaysdk import Trading
 from xml.sax.saxutils import escape
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError, RedirectWarning, ValidationError
-from odoo.tools import check_barcode_encoding
-from odoo.osv import expression
+from koda import models, fields, api, _
+from koda.exceptions import UserError, RedirectWarning, ValidationError
+from koda.tools import check_barcode_encoding
+from koda.osv import expression
 
 _logger = logging.getLogger(__name__)
 

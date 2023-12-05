@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import AccessError, MissingError
-from odoo.http import request, route
+from koda.exceptions import AccessError, MissingError
+from koda.http import request, route
 
-from odoo.addons.sale.controllers import portal
+from koda.addons.sale.controllers import portal
 
 
 class CustomerPortal(portal.CustomerPortal):

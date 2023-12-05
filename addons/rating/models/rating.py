@@ -3,9 +3,9 @@
 import base64
 import uuid
 
-from odoo import api, fields, models
-from odoo.addons.rating.models import rating_data
-from odoo.tools.misc import file_open
+from koda import api, fields, models
+from koda.addons.rating.models import rating_data
+from koda.tools.misc import file_open
 
 
 class Rating(models.Model):

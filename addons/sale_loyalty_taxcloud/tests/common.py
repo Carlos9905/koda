@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo.tests import TransactionCase
-from odoo.exceptions import ValidationError
+from koda.tests import TransactionCase
+from koda.exceptions import ValidationError
 
 
 class TestSaleCouponTaxCloudCommon(TransactionCase):

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, _, _lt, Command
-from odoo.tools import html2plaintext
+from koda import api, models, _, _lt, Command
+from koda.tools import html2plaintext
 
 class Task(models.Model):
     _inherit = 'project.task'

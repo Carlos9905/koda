@@ -4,7 +4,7 @@
 import datetime
 import markupsafe
 
-from odoo import _, api, fields, models, tools
+from koda import _, api, fields, models, tools
 
 
 class MailThread(models.AbstractModel):

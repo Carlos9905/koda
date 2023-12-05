@@ -5,8 +5,8 @@ import ast
 import datetime
 import json
 
-from odoo import api, fields, models, _, _lt
-from odoo.osv import expression
+from koda import api, fields, models, _, _lt
+from koda.osv import expression
 
 
 class Project(models.Model):

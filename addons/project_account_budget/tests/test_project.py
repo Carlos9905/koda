@@ -4,8 +4,8 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
+from koda import Command
+from koda.addons.project.tests.test_project_base import TestProjectCommon
 
 
 class TestProject(TestProjectCommon):

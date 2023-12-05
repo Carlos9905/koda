@@ -4,10 +4,10 @@
 import ast
 from collections import defaultdict
 
-from odoo import api, fields, models, _, Command
-from odoo.exceptions import UserError
-from odoo.tools.safe_eval import safe_eval
-from odoo.osv.expression import AND
+from koda import api, fields, models, _, Command
+from koda.exceptions import UserError
+from koda.tools.safe_eval import safe_eval
+from koda.osv.expression import AND
 
 
 class SaleOrder(models.Model):

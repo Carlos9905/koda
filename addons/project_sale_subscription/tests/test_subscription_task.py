@@ -3,10 +3,10 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, Command
-from odoo.tests import tagged
+from koda import fields, Command
+from koda.tests import tagged
 
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
 
 
 @tagged('-at_install', 'post_install')

@@ -5,7 +5,7 @@
 # Please note that these reports are not multi-currency !!!
 #
 
-from odoo import fields, models, api
+from koda import fields, models, api
 
 
 class PurchaseReport(models.Model):

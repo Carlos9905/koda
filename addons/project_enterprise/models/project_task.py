@@ -5,18 +5,18 @@ from pytz import utc, timezone
 from collections import defaultdict
 from datetime import timedelta, datetime
 from dateutil.relativedelta import relativedelta
-from odoo.tools.date_utils import get_timedelta
+from koda.tools.date_utils import get_timedelta
 
-from odoo import Command, fields, models, api, _, _lt
-from odoo.osv import expression
-from odoo.exceptions import UserError
-from odoo.tools import topological_sort
-from odoo.addons.resource.models.utils import filter_domain_leaf
-from odoo.osv.expression import is_leaf
+from koda import Command, fields, models, api, _, _lt
+from koda.osv import expression
+from koda.exceptions import UserError
+from koda.tools import topological_sort
+from koda.addons.resource.models.utils import filter_domain_leaf
+from koda.osv.expression import is_leaf
 
-from odoo.addons.resource.models.utils import Intervals, sum_intervals, string_to_datetime
+from koda.addons.resource.models.utils import Intervals, sum_intervals, string_to_datetime
 
-from odoo.addons.project.models.project_task import CLOSED_STATES
+from koda.addons.project.models.project_task import CLOSED_STATES
 
 PROJECT_TASK_WRITABLE_FIELDS = {
     'planned_date_begin',

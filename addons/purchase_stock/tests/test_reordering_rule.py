@@ -5,10 +5,10 @@ from datetime import datetime as dt, time
 from datetime import timedelta as td
 from freezegun import freeze_time
 
-from odoo import SUPERUSER_ID
-from odoo.tests import Form, tagged
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import UserError
+from koda import SUPERUSER_ID
+from koda.tests import Form, tagged
+from koda.tests.common import TransactionCase
+from koda.exceptions import UserError
 
 
 @tagged('post_install', '-at_install')

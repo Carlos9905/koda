@@ -5,12 +5,12 @@ import json
 from collections import defaultdict
 from datetime import date
 
-from odoo import api, fields, models, _, _lt
-from odoo.exceptions import ValidationError, AccessError
-from odoo.osv import expression
-from odoo.tools import Query, SQL, OrderedSet
+from koda import api, fields, models, _, _lt
+from koda.exceptions import ValidationError, AccessError
+from koda.osv import expression
+from koda.tools import Query, SQL, OrderedSet
 
-from odoo.addons.project.models.project_task import CLOSED_STATES
+from koda.addons.project.models.project_task import CLOSED_STATES
 
 
 class Project(models.Model):

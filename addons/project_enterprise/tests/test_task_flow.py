@@ -5,9 +5,9 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from markupsafe import Markup
 
-from odoo.tests import common
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.tests import common
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from koda.addons.mail.tests.common import mail_new_test_user
 
 class TestTaskFlow(common.TransactionCase):
 

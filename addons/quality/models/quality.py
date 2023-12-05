@@ -5,9 +5,9 @@ import ast
 
 from datetime import datetime
 
-from odoo import api, fields, models, _, SUPERUSER_ID
-from odoo.exceptions import UserError
-from odoo.osv.expression import OR
+from koda import api, fields, models, _, SUPERUSER_ID
+from koda.exceptions import UserError
+from koda.osv.expression import OR
 
 
 class TestType(models.Model):

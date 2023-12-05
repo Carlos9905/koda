@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.exceptions import UserError
-from odoo.tests import tagged, common, Form
-from odoo.tools import float_compare, float_is_zero
+from koda.exceptions import UserError
+from koda.tests import tagged, common, Form
+from koda.tools import float_compare, float_is_zero
 
 
 @tagged('post_install', '-at_install')

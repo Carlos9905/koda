@@ -3,8 +3,8 @@
 
 import time
 
-from odoo.tests.common import TransactionCase, Form
-from odoo.tools import mute_logger
+from koda.tests.common import TransactionCase, Form
+from koda.tools import mute_logger
 
 
 class TestSaleMrpProcurement(TransactionCase):

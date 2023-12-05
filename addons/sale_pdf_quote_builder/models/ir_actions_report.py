@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import io
 
-from odoo import models
-from odoo.tools import format_amount, format_date, format_datetime, pdf
+from koda import models
+from koda.tools import format_amount, format_date, format_datetime, pdf
 
 
 class IrActionsReport(models.Model):

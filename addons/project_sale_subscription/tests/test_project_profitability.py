@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
-from odoo import Command
+from koda.tests import tagged
+from koda import Command
 
-from odoo.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon
-from odoo.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
+from koda.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon
+from koda.addons.sale_subscription.tests.common_sale_subscription import TestSubscriptionCommon
 
 
 @tagged('-at_install', 'post_install')

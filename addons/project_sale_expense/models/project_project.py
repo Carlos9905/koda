@@ -3,7 +3,7 @@
 
 import json
 
-from odoo import models, fields
+from koda import models, fields
 from collections import defaultdict
 
 

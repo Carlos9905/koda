@@ -2,9 +2,9 @@
 
 import datetime
 
-from odoo import api, fields, models, _, SUPERUSER_ID
-from odoo.exceptions import ValidationError
-from odoo.tools import float_compare, float_round, ormcache
+from koda import api, fields, models, _, SUPERUSER_ID
+from koda.exceptions import ValidationError
+from koda.tools import float_compare, float_round, ormcache
 
 from .taxcloud_request import TaxCloudRequest
 

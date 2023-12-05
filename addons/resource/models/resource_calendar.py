@@ -12,13 +12,13 @@ from dateutil.relativedelta import relativedelta
 from dateutil.rrule import rrule, DAILY
 from pytz import timezone, utc
 
-from odoo import api, fields, models, _
-from odoo.addons.base.models.res_partner import _tz_get
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
-from odoo.tools.float_utils import float_round
+from koda import api, fields, models, _
+from koda.addons.base.models.res_partner import _tz_get
+from koda.exceptions import ValidationError
+from koda.osv import expression
+from koda.tools.float_utils import float_round
 
-from odoo.tools import date_utils, float_utils
+from koda.tools import date_utils, float_utils
 from .utils import Intervals, float_to_time, make_aware, datetime_to_string, string_to_datetime, ROUNDING_FACTOR
 
 

@@ -2,7 +2,7 @@
 
 from datetime import datetime
 
-from odoo.http import Controller, request, route
+from koda.http import Controller, request, route
 
 
 class ProductConfiguratorController(Controller):

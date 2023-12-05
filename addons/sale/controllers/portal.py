@@ -3,15 +3,15 @@
 
 import binascii
 
-from odoo import fields, http, _
-from odoo.exceptions import AccessError, MissingError, ValidationError
-from odoo.fields import Command
-from odoo.http import request
+from koda import fields, http, _
+from koda.exceptions import AccessError, MissingError, ValidationError
+from koda.fields import Command
+from koda.http import request
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.controllers import portal as payment_portal
-from odoo.addons.portal.controllers.mail import _message_post_helper
-from odoo.addons.portal.controllers.portal import pager as portal_pager
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment.controllers import portal as payment_portal
+from koda.addons.portal.controllers.mail import _message_post_helper
+from koda.addons.portal.controllers.portal import pager as portal_pager
 
 
 class CustomerPortal(payment_portal.PaymentPortal):

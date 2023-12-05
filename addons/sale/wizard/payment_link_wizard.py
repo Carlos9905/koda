@@ -3,8 +3,8 @@
 
 from werkzeug import urls
 
-from odoo import _, api, fields, models
-from odoo.tools import format_amount
+from koda import _, api, fields, models
+from koda.tools import format_amount
 
 
 class PaymentLinkWizard(models.TransientModel):

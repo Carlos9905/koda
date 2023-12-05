@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.onboarding.tests.case import TransactionCaseOnboarding
+from koda.addons.onboarding.tests.case import TransactionCaseOnboarding
 
 
 class TestOnboarding(TransactionCaseOnboarding):

@@ -4,11 +4,11 @@
 from collections import defaultdict
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from odoo.tools import float_compare
+from koda.tools import float_compare
 
-from odoo import api, fields, models, SUPERUSER_ID, _
-from odoo.addons.stock.models.stock_rule import ProcurementException
-from odoo.tools import groupby
+from koda import api, fields, models, SUPERUSER_ID, _
+from koda.addons.stock.models.stock_rule import ProcurementException
+from koda.tools import groupby
 
 
 class StockRule(models.Model):

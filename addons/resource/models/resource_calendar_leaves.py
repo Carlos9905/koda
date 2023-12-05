@@ -5,8 +5,8 @@ from datetime import datetime, time
 from dateutil.relativedelta import relativedelta
 from pytz import timezone, utc
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
 
 
 class ResourceCalendarLeaves(models.Model):

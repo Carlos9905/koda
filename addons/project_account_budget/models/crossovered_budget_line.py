@@ -3,7 +3,7 @@
 
 from ast import literal_eval
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class CrossoveredBudgetLines(models.Model):

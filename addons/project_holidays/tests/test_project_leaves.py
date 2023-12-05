@@ -3,8 +3,8 @@
 import datetime
 from freezegun import freeze_time
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.tests import common
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.tests import common
 
 
 @freeze_time('2020-01-01')

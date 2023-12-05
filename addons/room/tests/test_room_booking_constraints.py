@@ -3,9 +3,9 @@
 
 from datetime import datetime
 
-from odoo.addons.room.tests.common import RoomCommon
-from odoo.exceptions import ValidationError
-from odoo.tests.common import tagged
+from koda.addons.room.tests.common import RoomCommon
+from koda.exceptions import ValidationError
+from koda.tests.common import tagged
 
 @tagged("post_install", "-at_install")
 class TestRoomBookingConstraints(RoomCommon):

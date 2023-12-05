@@ -1,5 +1,5 @@
-from odoo.fields import Command
-from odoo.tests import tagged
+from koda.fields import Command
+from koda.tests import tagged
 
 from .common import TestSaleCommon
 

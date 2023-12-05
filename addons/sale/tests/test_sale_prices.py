@@ -4,12 +4,12 @@
 from freezegun import freeze_time
 from datetime import timedelta
 
-from odoo import fields
-from odoo.fields import Command
-from odoo.tests import Form, tagged
-from odoo.tools import float_compare, mute_logger, float_round
+from koda import fields
+from koda.fields import Command
+from koda.tests import Form, tagged
+from koda.tools import float_compare, mute_logger, float_round
 
-from odoo.addons.sale.tests.common import SaleCommon
+from koda.addons.sale.tests.common import SaleCommon
 
 
 @tagged('post_install', '-at_install')

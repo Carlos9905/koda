@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licens
 
-from odoo import _
-from odoo.addons.planning.controllers.main import ShiftController
-from odoo.http import request
+from koda import _
+from koda.addons.planning.controllers.main import ShiftController
+from koda.http import request
 
 
 class ShiftControllerProject(ShiftController):

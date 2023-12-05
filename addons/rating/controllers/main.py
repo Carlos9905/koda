@@ -4,10 +4,10 @@
 import logging
 import werkzeug
 
-from odoo import http
-from odoo.http import request
-from odoo.tools.translate import _
-from odoo.tools.misc import get_lang
+from koda import http
+from koda.http import request
+from koda.tools.translate import _
+from koda.tools.misc import get_lang
 
 _logger = logging.getLogger(__name__)
 

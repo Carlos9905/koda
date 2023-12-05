@@ -4,9 +4,9 @@
 import logging
 from datetime import datetime, timedelta
 
-from odoo import models
-from odoo.tools import populate, groupby
-from odoo.addons.stock.populate.stock import COMPANY_NB_WITH_STOCK
+from koda import models
+from koda.tools import populate, groupby
+from koda.addons.stock.populate.stock import COMPANY_NB_WITH_STOCK
 
 _logger = logging.getLogger(__name__)
 

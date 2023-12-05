@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.osv.expression import AND
+from koda import api, fields, models, _
+from koda.osv.expression import AND
 from dateutil.relativedelta import relativedelta
 
 

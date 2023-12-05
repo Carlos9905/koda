@@ -7,11 +7,11 @@ import itertools
 
 import random
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.fields import Command
-from odoo.tools.float_utils import float_is_zero, float_round
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.fields import Command
+from koda.tools.float_utils import float_is_zero, float_round
+from koda.osv import expression
 
 def _generate_random_reward_code():
     return str(random.getrandbits(32))

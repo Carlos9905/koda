@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.test_invoice_tax_totals import TestTaxTotals
-from odoo.tests import tagged
+from koda.addons.account.tests.test_invoice_tax_totals import TestTaxTotals
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

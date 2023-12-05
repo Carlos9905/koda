@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import HttpCase, tagged
-from odoo.tools import mute_logger
+from koda.tests import HttpCase, tagged
+from koda.tools import mute_logger
 
-from odoo.addons.base.tests.common import BaseUsersCommon, HttpCaseWithUserPortal
-from odoo.addons.sale.tests.common import SaleCommon
+from koda.addons.base.tests.common import BaseUsersCommon, HttpCaseWithUserPortal
+from koda.addons.sale.tests.common import SaleCommon
 
 
 @tagged('post_install', '-at_install')

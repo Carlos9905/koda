@@ -2,8 +2,8 @@
 
 import base64
 
-from odoo import _, api, Command, models
-from odoo.tools import file_open
+from koda import _, api, Command, models
+from koda.tools import file_open
 
 
 class OnboardingStep(models.Model):

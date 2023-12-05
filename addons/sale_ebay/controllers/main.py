@@ -19,7 +19,7 @@ try:
 except ImportError:
     serialization = hashes = ec = default_backend = InvalidSignature = None
 
-from odoo.http import Controller, request, route
+from koda.http import Controller, request, route
 
 _logger = logging.getLogger(__name__)
 TIMEOUT = 60

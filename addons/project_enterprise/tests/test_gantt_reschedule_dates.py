@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo.fields import Command
-from odoo.tests.common import users, tagged
+from koda.fields import Command
+from koda.tests.common import users, tagged
 from .gantt_reschedule_dates_common import ProjectEnterpriseGanttRescheduleCommon, fake_now
 
 

@@ -3,7 +3,7 @@
 
 from psycopg2 import sql
 
-from odoo import api, fields, models, tools
+from koda import api, fields, models, tools
 
 class TimesheetForecastReport(models.Model):
 

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Date, Datetime
-from odoo.tools import mute_logger
-from odoo.tests import Form, tagged
-from odoo.tests.common import TransactionCase
-from odoo.addons.stock_account.tests.test_stockvaluation import _create_accounting_data
+from koda.fields import Date, Datetime
+from koda.tools import mute_logger
+from koda.tests import Form, tagged
+from koda.tests.common import TransactionCase
+from koda.addons.stock_account.tests.test_stockvaluation import _create_accounting_data
 
 
 @tagged('post_install', '-at_install')

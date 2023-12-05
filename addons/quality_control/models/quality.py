@@ -6,9 +6,9 @@ from datetime import datetime
 
 import random
 
-from odoo import api, models, fields, _
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, float_round
-from odoo.osv.expression import OR
+from koda import api, models, fields, _
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT, float_round
+from koda.osv.expression import OR
 
 
 class QualityPoint(models.Model):

@@ -3,8 +3,8 @@
 from datetime import datetime
 from dateutil import relativedelta
 
-from odoo import _, api, Command, fields, models, SUPERUSER_ID
-from odoo.tools import str2bool
+from koda import _, api, Command, fields, models, SUPERUSER_ID
+from koda.tools import str2bool
 
 
 class PaymentTransaction(models.Model):

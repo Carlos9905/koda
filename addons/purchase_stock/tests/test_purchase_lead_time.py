@@ -4,9 +4,9 @@
 from datetime import datetime, timedelta, time
 from unittest.mock import patch
 
-from odoo import fields
+from koda import fields
 from .common import PurchaseTestCommon
-from odoo.tests.common import Form
+from koda.tests.common import Form
 
 
 class TestPurchaseLeadTime(PurchaseTestCommon):

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models, SUPERUSER_ID
-from odoo.exceptions import UserError
-from odoo.fields import Command
-from odoo.tools import format_date, frozendict
+from koda import _, api, fields, models, SUPERUSER_ID
+from koda.exceptions import UserError
+from koda.fields import Command
+from koda.tools import format_date, frozendict
 
 
 class SaleAdvancePaymentInv(models.TransientModel):

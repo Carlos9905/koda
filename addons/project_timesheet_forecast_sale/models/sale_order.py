@@ -3,8 +3,8 @@
 from collections import defaultdict
 from datetime import datetime
 
-from odoo import api, models
-from odoo.osv import expression
+from koda import api, models
+from koda.osv import expression
 
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'

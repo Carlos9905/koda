@@ -6,9 +6,9 @@ from datetime import time
 from itertools import chain
 from pytz import utc
 
-from odoo import fields
-from odoo.osv.expression import normalize_domain, is_leaf, NOT_OPERATOR
-from odoo.tools.float_utils import float_round
+from koda import fields
+from koda.osv.expression import normalize_domain, is_leaf, NOT_OPERATOR
+from koda.tools.float_utils import float_round
 
 # Default hour per day value. The one should
 # only be used when the one from the calendar

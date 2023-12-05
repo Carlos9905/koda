@@ -4,11 +4,11 @@ import logging
 from datetime import timedelta
 from xml.etree import ElementTree
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from koda import _, api, fields, models
+from koda.exceptions import UserError
 
-from odoo.addons.sale_amazon import const
-from odoo.addons.sale_amazon import utils as amazon_utils
+from koda.addons.sale_amazon import const
+from koda.addons.sale_amazon import utils as amazon_utils
 
 
 _logger = logging.getLogger(__name__)

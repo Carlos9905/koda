@@ -7,12 +7,12 @@ from freezegun import freeze_time
 from unittest.mock import patch
 
 import odoo
-from odoo import fields
-from odoo.tests import Form
-from odoo.tests.common import TransactionCase, tagged
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-from odoo.addons.stock.tests.common import TestStockCommon
+from koda import fields
+from koda.tests import Form
+from koda.tests.common import TransactionCase, tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from koda.addons.stock.tests.common import TestStockCommon
 
 
 class TestStockValuation(TransactionCase):

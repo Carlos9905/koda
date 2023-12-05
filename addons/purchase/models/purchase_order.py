@@ -7,11 +7,11 @@ from dateutil.relativedelta import relativedelta
 from markupsafe import escape, Markup
 from werkzeug.urls import url_encode
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
-from odoo.tools import format_amount, format_date, formatLang, groupby
-from odoo.tools.float_utils import float_is_zero
-from odoo.exceptions import UserError, ValidationError
+from koda import api, fields, models, _
+from koda.osv import expression
+from koda.tools import format_amount, format_date, formatLang, groupby
+from koda.tools.float_utils import float_is_zero
+from koda.exceptions import UserError, ValidationError
 
 
 class PurchaseOrder(models.Model):

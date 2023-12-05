@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from ast import literal_eval
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import api, models, fields, _
+from koda.exceptions import UserError
+from koda.osv import expression
 
 
 class QualityPoint(models.Model):

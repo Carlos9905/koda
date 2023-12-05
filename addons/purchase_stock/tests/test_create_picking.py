@@ -3,9 +3,9 @@
 
 from datetime import date, datetime, timedelta
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.product.tests import common
-from odoo.tests import Form
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.product.tests import common
+from koda.tests import Form
 
 
 class TestCreatePicking(common.TestProductCommon):

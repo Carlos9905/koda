@@ -3,13 +3,13 @@
 
 from datetime import datetime, timedelta
 
-from odoo import Command
-from odoo.tests import tagged
+from koda import Command
+from koda.tests import tagged
 
-from odoo.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon
-from odoo.addons.purchase.tests.test_purchase_invoice import TestPurchaseToInvoiceCommon
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tools.float_utils import float_compare
+from koda.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon
+from koda.addons.purchase.tests.test_purchase_invoice import TestPurchaseToInvoiceCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tools.float_utils import float_compare
 
 
 @tagged('-at_install', 'post_install')

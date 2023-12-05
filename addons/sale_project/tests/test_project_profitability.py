@@ -3,12 +3,12 @@
 
 from datetime import datetime
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.tools.float_utils import float_compare
+from koda import Command
+from koda.tests import tagged
+from koda.tools.float_utils import float_compare
 
-from odoo.addons.sale.tests.common import TestSaleCommon
-from odoo.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon as Common
+from koda.addons.sale.tests.common import TestSaleCommon
+from koda.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon as Common
 
 
 class TestProjectProfitabilityCommon(Common):

@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from .test_common import TestQualityCommon
-from odoo import fields
-from odoo.tests import tagged, users
+from koda import fields
+from koda.tests import tagged, users
 
 
 @tagged('post_install', '-at_install')

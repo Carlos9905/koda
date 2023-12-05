@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from collections import defaultdict
 
-from odoo import models
-from odoo.addons.resource.models.utils import Intervals
+from koda import models
+from koda.addons.resource.models.utils import Intervals
 
 class User(models.Model):
     _inherit = 'res.users'

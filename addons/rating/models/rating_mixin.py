@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.addons.rating.models import rating_data
-from odoo.osv import expression
-from odoo.tools.float_utils import float_compare, float_round
+from koda import api, fields, models
+from koda.addons.rating.models import rating_data
+from koda.osv import expression
+from koda.tools.float_utils import float_compare, float_round
 
 
 class RatingMixin(models.AbstractModel):

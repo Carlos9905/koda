@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from odoo.tests import tagged
-from odoo.fields import Command
+from koda.tests import tagged
+from koda.fields import Command
 from datetime import datetime, timedelta
 
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
+from koda.addons.project.tests.test_project_base import TestProjectCommon
 
 @tagged('-at_install', 'post_install')
 class TestTaskGroupExpand(TestProjectCommon):

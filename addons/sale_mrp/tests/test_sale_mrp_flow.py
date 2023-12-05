@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
-from odoo.tests import common, Form
-from odoo.exceptions import UserError
-from odoo.tools import mute_logger, float_compare
-from odoo.addons.stock_account.tests.test_stockvaluation import _create_accounting_data
+from koda.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
+from koda.tests import common, Form
+from koda.exceptions import UserError
+from koda.tools import mute_logger, float_compare
+from koda.addons.stock_account.tests.test_stockvaluation import _create_accounting_data
 
 
 # these tests create accounting entries, and therefore need a chart of accounts
