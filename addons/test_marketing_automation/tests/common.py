@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.marketing_automation_sms.tests.common import MarketingAutomationSMSCommon
+from koda.addons.marketing_automation_sms.tests.common import MarketingAutomationSMSCommon
 
 
 class TestMACommon(MarketingAutomationSMSCommon):

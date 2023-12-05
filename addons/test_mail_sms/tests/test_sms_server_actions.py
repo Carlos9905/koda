@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sms.tests.common import SMSCommon
-from odoo.addons.test_mail_sms.tests.common import TestSMSRecipients
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.addons.sms.tests.common import SMSCommon
+from koda.addons.test_mail_sms.tests.common import TestSMSRecipients
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 
 @tagged('ir_actions')

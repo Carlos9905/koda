@@ -4,11 +4,11 @@
 from unittest.mock import patch
 import sys
 
-from odoo.tools import mute_logger
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.tests import common, tagged
-from odoo.exceptions import AccessError, ValidationError
-from odoo import Command
+from koda.tools import mute_logger
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.tests import common, tagged
+from koda.exceptions import AccessError, ValidationError
+from koda import Command
 
 
 def create_automation(self, **kwargs):

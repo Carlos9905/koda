@@ -6,12 +6,12 @@ import werkzeug
 from psycopg2.errorcodes import SERIALIZATION_FAILURE
 from psycopg2 import OperationalError
 
-from odoo import http
-from odoo.exceptions import AccessError, UserError
-from odoo.http import request
-from odoo.tools import replace_exceptions
+from koda import http
+from koda.exceptions import AccessError, UserError
+from koda.http import request
+from koda.tools import replace_exceptions
 
-from odoo.addons.web.controllers.utils import ensure_db
+from koda.addons.web.controllers.utils import ensure_db
 
 _logger = logging.getLogger(__name__)
 

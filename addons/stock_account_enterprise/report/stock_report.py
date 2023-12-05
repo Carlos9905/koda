@@ -3,9 +3,9 @@
 
 import re
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv.expression import expression
+from koda import api, fields, models
+from koda.exceptions import UserError
+from koda.osv.expression import expression
 
 
 class StockReport(models.Model):

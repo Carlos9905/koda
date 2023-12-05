@@ -4,10 +4,10 @@
 import socket
 import urllib.parse
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.sms.tests.common import SMSCommon
-from odoo.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
-from odoo.tests import tagged
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.sms.tests.common import SMSCommon
+from koda.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
+from koda.tests import tagged
 from markupsafe import Markup
 from unittest.mock import patch
 

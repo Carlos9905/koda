@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import HttpCase, tagged
-from odoo.addons.website.tests.test_configurator import TestConfiguratorCommon
+from koda.tests import HttpCase, tagged
+from koda.addons.website.tests.test_configurator import TestConfiguratorCommon
 
 # TODO: `test_themes` tag should not be there, runbot config should be adapted
 #       to test this module too. There is a special config for the theme repo.

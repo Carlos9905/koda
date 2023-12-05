@@ -5,12 +5,12 @@ from markupsafe import Markup
 from unittest.mock import patch
 from unittest.mock import DEFAULT
 
-from odoo import exceptions
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail.models.test_mail_models import MailTestSimple
-from odoo.addons.test_mail.tests.common import TestRecipients
-from odoo.tests.common import tagged, Form, users
-from odoo.tools import mute_logger
+from koda import exceptions
+from koda.addons.mail.tests.common import MailCommon
+from koda.addons.test_mail.models.test_mail_models import MailTestSimple
+from koda.addons.test_mail.tests.common import TestRecipients
+from koda.tests.common import tagged, Form, users
+from koda.tools import mute_logger
 
 
 @tagged('mail_thread')

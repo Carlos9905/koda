@@ -3,7 +3,7 @@
 
 from ast import literal_eval
 
-from odoo import models, fields
+from koda import models, fields
 
 
 class StockPicking(models.Model):

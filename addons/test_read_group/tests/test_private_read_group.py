@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo import fields
-from odoo.tests import common
-from odoo import Command
+from koda import fields
+from koda.tests import common
+from koda import Command
 
 
 class TestPrivateReadGroup(common.TransactionCase):

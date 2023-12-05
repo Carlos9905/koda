@@ -12,13 +12,13 @@ from PIL import Image
 from unittest.mock import patch
 import psycopg2
 
-from odoo import models, fields, Command
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.exceptions import AccessError, MissingError, UserError, ValidationError
-from odoo.tests import common
-from odoo.tools import mute_logger, float_repr
-from odoo.tools.date_utils import add, subtract, start_of, end_of
-from odoo.tools.image import image_data_uri
+from koda import models, fields, Command
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.exceptions import AccessError, MissingError, UserError, ValidationError
+from koda.tests import common
+from koda.tools import mute_logger, float_repr
+from koda.tools.date_utils import add, subtract, start_of, end_of
+from koda.tools.image import image_data_uri
 
 
 class TestFields(TransactionCaseWithUserDemo):
@@ -2446,7 +2446,7 @@ class TestFields(TransactionCaseWithUserDemo):
         self.assertFalse(message1.label)
 
     def test_85_binary_guess_zip(self):
-        from odoo.addons.base.tests.test_mimetypes import ZIP
+        from koda.addons.base.tests.test_mimetypes import ZIP
         # Regular ZIP files can be uploaded by non-admin users
         self.env['test_new_api.binary_svg'].with_user(
             self.env.ref('base.user_demo'),
@@ -2456,7 +2456,7 @@ class TestFields(TransactionCaseWithUserDemo):
         })
 
     def test_86_text_base64_guess_svg(self):
-        from odoo.addons.base.tests.test_mimetypes import SVG
+        from koda.addons.base.tests.test_mimetypes import SVG
         with self.assertRaises(UserError) as e:
             self.env['test_new_api.binary_svg'].with_user(
                 self.env.ref('base.user_demo'),
@@ -2467,7 +2467,7 @@ class TestFields(TransactionCaseWithUserDemo):
         self.assertEqual(e.exception.args[0], 'Only admins can upload SVG files.')
 
     def test_90_binary_svg(self):
-        from odoo.addons.base.tests.test_mimetypes import SVG
+        from koda.addons.base.tests.test_mimetypes import SVG
         # This should work without problems
         self.env['test_new_api.binary_svg'].create({
             'name': 'Test without attachment',
@@ -2483,7 +2483,7 @@ class TestFields(TransactionCaseWithUserDemo):
             })
 
     def test_91_binary_svg_attachment(self):
-        from odoo.addons.base.tests.test_mimetypes import SVG
+        from koda.addons.base.tests.test_mimetypes import SVG
         # This doesn't neuter SVG with admin
         record = self.env['test_new_api.binary_svg'].create({
             'name': 'Test without attachment',
@@ -2510,7 +2510,7 @@ class TestFields(TransactionCaseWithUserDemo):
         self.assertEqual(attachment.mimetype, 'text/plain')
 
     def test_92_binary_self_avatar_svg(self):
-        from odoo.addons.base.tests.test_mimetypes import SVG
+        from koda.addons.base.tests.test_mimetypes import SVG
         demo_user = self.user_demo
         # User demo changes his own avatar
         demo_user.with_user(demo_user).image_1920 = SVG
@@ -4505,7 +4505,7 @@ class TestUnlinkConstraints(common.TransactionCase):
         cls.deletable_foo = MODEL.create({'foo': 'formaggio'})
         cls.undeletable_foo = MODEL.create({'foo': 'prosciutto'})
 
-        from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+        from koda.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
         uninstall = {MODULE_UNINSTALL_FLAG: True}
         cls.undeletable_bar_uninstall = cls.undeletable_bar.with_context(**uninstall)
         cls.undeletable_foo_uninstall = cls.undeletable_foo.with_context(**uninstall)

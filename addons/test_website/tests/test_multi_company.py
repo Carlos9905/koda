@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.tests.common import HttpCase, tagged
+from koda.tests.common import HttpCase, tagged
 
 
 @tagged('post_install', '-at_install')

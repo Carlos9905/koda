@@ -1,7 +1,7 @@
 import json
 from unittest.mock import patch
-from odoo.tools import config, mute_logger
-from odoo.addons.test_http.controllers import CT_JSON
+from koda.tools import config, mute_logger
+from koda.addons.test_http.controllers import CT_JSON
 from .test_common import TestHttpBase
 
 

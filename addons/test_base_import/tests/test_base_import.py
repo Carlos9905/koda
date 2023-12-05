@@ -6,11 +6,11 @@ import io
 import pprint
 import unittest
 
-from odoo.tests.common import TransactionCase, can_import, RecordCapturer
-from odoo.tools import mute_logger, pycompat
-from odoo.tools.misc import file_open
-from odoo.addons.base_import.models.base_import import ImportValidationError
-from odoo.addons.test_base_import.models.test_base_import import model as base_import_model
+from koda.tests.common import TransactionCase, can_import, RecordCapturer
+from koda.tools import mute_logger, pycompat
+from koda.tools.misc import file_open
+from koda.addons.base_import.models.base_import import ImportValidationError
+from koda.addons.test_base_import.models.test_base_import import model as base_import_model
 
 ID_FIELD = {
     'id': 'id',

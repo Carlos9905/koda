@@ -4,12 +4,12 @@
 from datetime import timedelta
 from markupsafe import Markup
 
-from odoo import fields
-from odoo.addons.sms.tests.common import SMSCommon
-from odoo.addons.test_mail_sms.tests.common import TestSMSRecipients
-from odoo.tests.common import users
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda import fields
+from koda.addons.sms.tests.common import SMSCommon
+from koda.addons.test_mail_sms.tests.common import TestSMSRecipients
+from koda.tests.common import users
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 
 @tagged('mail_activity')

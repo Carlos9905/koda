@@ -4,11 +4,11 @@
 from markupsafe import Markup
 from unittest.mock import patch
 
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests.common import users, warmup, Form
-from odoo.tests import tagged
-from odoo.tools import mute_logger, formataddr
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.addons.mail.tests.common import MailCommon
+from koda.tests.common import users, warmup, Form
+from koda.tests import tagged
+from koda.tools import mute_logger, formataddr
 
 
 @tagged('mail_performance', 'post_install', '-at_install')

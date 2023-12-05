@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sms.tests import common as sms_common
-from odoo.addons.test_mail.tests.test_performance import BaseMailPerformance
-from odoo.tests.common import users, warmup
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.addons.sms.tests import common as sms_common
+from koda.addons.test_mail.tests.test_performance import BaseMailPerformance
+from koda.tests.common import users, warmup
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 
 @tagged('mail_performance', 'post_install', '-at_install')

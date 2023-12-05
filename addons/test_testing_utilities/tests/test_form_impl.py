@@ -9,8 +9,8 @@ business objects.
 from lxml import etree
 from operator import itemgetter
 
-from odoo.tests import TransactionCase, Form
-from odoo import Command
+from koda.tests import TransactionCase, Form
+from koda import Command
 
 
 class TestBasic(TransactionCase):

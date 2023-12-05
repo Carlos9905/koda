@@ -2,7 +2,7 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class StockQuantPackage(models.Model):

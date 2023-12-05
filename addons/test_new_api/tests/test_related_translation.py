@@ -2,7 +2,7 @@
 import io
 
 import odoo.tests
-from odoo.tools.translate import TranslationImporter
+from koda.tools.translate import TranslationImporter
 
 
 @odoo.tests.tagged('post_install', '-at_install')

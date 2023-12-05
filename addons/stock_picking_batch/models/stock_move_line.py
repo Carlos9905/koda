@@ -3,9 +3,9 @@
 
 from collections import defaultdict
 
-from odoo import _, fields, models
-from odoo import Command
-from odoo.tools.float_utils import float_compare
+from koda import _, fields, models
+from koda import Command
+from koda.tools.float_utils import float_compare
 
 
 class StockMoveLine(models.Model):

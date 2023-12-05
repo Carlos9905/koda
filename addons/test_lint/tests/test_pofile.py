@@ -3,10 +3,10 @@
 
 from collections import Counter
 
-from odoo.modules import get_modules
-from odoo.tests.common import TransactionCase
-from odoo.tools.translate import TranslationFileReader
-from odoo.tools.misc import file_path
+from koda.modules import get_modules
+from koda.tests.common import TransactionCase
+from koda.tools.translate import TranslationFileReader
+from koda.tools.misc import file_path
 
 
 class PotLinter(TransactionCase):

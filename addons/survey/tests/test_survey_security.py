@@ -3,11 +3,11 @@
 
 import datetime
 
-from odoo.addons.survey.tests import common
-from odoo.exceptions import AccessError, UserError
-from odoo.tests import tagged
-from odoo.tests.common import users, HttpCase
-from odoo.tools import mute_logger
+from koda.addons.survey.tests import common
+from koda.exceptions import AccessError, UserError
+from koda.tests import tagged
+from koda.tests.common import users, HttpCase
+from koda.tools import mute_logger
 
 
 @tagged('security')

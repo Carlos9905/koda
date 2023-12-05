@@ -1,11 +1,11 @@
 from lxml import html
-from odoo.addons.http_routing.models.ir_http import slug
+from koda.addons.http_routing.models.ir_http import slug
 
-from odoo.tools import mute_logger
-from odoo.exceptions import AccessError
-from odoo.tests import HttpCase, tagged
+from koda.tools import mute_logger
+from koda.exceptions import AccessError
+from koda.tests import HttpCase, tagged
 
-from odoo.addons.website.controllers.model_page import ModelPageController
+from koda.addons.website.controllers.model_page import ModelPageController
 
 @tagged('post_install', '-at_install')
 class TestWebsiteControllerPage(HttpCase):

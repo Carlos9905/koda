@@ -3,7 +3,7 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.addons.spreadsheet_edition.tests.spreadsheet_test_case import SpreadsheetTestCase
+from koda.addons.spreadsheet_edition.tests.spreadsheet_test_case import SpreadsheetTestCase
 
 
 class SpreadsheetMixinTest(SpreadsheetTestCase):

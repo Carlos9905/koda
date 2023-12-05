@@ -3,11 +3,11 @@
 
 from freezegun import freeze_time
 
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.test_marketing_automation.tests.common import TestMACommon
-from odoo.fields import Datetime
-from odoo.tests import tagged, users
-from odoo.tools import mute_logger
+from koda.addons.base.tests.test_ir_cron import CronMixinCase
+from koda.addons.test_marketing_automation.tests.common import TestMACommon
+from koda.fields import Datetime
+from koda.tests import tagged, users
+from koda.tools import mute_logger
 
 
 @tagged('post_install', '-at_install', 'marketing_automation', 'mass_mailing')

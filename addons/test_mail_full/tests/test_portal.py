@@ -5,13 +5,13 @@ from werkzeug.urls import url_parse, url_decode, url_encode, url_unparse
 
 import json
 
-from odoo import http
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail_full.tests.common import TestMailFullCommon
-from odoo.addons.test_mail_sms.tests.common import TestSMSRecipients
-from odoo.tests import tagged, users
-from odoo.tests.common import HttpCase
-from odoo.tools import html_escape
+from koda import http
+from koda.addons.mail.tests.common import MailCommon
+from koda.addons.test_mail_full.tests.common import TestMailFullCommon
+from koda.addons.test_mail_sms.tests.common import TestSMSRecipients
+from koda.tests import tagged, users
+from koda.tests.common import HttpCase
+from koda.tools import html_escape
 
 
 @tagged('portal')

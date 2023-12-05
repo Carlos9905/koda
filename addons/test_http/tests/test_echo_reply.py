@@ -3,11 +3,11 @@
 import json
 from urllib.parse import urlparse
 
-from odoo.http import Request
-from odoo.tests import tagged
-from odoo.tests.common import new_test_user
-from odoo.tools import mute_logger
-from odoo.addons.test_http.controllers import CT_JSON
+from koda.http import Request
+from koda.tests import tagged
+from koda.tests.common import new_test_user
+from koda.tools import mute_logger
+from koda.addons.test_http.controllers import CT_JSON
 
 from .test_common import TestHttpBase
 

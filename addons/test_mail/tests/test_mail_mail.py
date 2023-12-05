@@ -12,12 +12,12 @@ from OpenSSL.SSL import Error as SSLError
 from socket import gaierror, timeout
 from unittest.mock import call, patch
 
-from odoo import api, Command
-from odoo.addons.base.models.ir_mail_server import MailDeliveryException
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import AccessError
-from odoo.tests import common, tagged, users
-from odoo.tools import formataddr, mute_logger, DEFAULT_SERVER_DATETIME_FORMAT
+from koda import api, Command
+from koda.addons.base.models.ir_mail_server import MailDeliveryException
+from koda.addons.mail.tests.common import MailCommon
+from koda.exceptions import AccessError
+from koda.tests import common, tagged, users
+from koda.tools import formataddr, mute_logger, DEFAULT_SERVER_DATETIME_FORMAT
 
 
 @tagged('mail_mail')

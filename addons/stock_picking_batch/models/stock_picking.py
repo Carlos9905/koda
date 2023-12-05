@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, Command, fields, models
-from odoo.osv import expression
-from odoo.exceptions import ValidationError
+from koda import _, api, Command, fields, models
+from koda.osv import expression
+from koda.exceptions import ValidationError
 
 
 class StockPickingType(models.Model):

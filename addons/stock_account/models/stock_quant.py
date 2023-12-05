@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import itertools
-from odoo import api, fields, models, _
-from odoo.tools.float_utils import float_is_zero
-from odoo.tools.misc import groupby
+from koda import api, fields, models, _
+from koda.tools.float_utils import float_is_zero
+from koda.tools.misc import groupby
 
 
 class StockQuant(models.Model):

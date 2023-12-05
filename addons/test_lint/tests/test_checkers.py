@@ -7,8 +7,8 @@ from contextlib import contextmanager
 from subprocess import run, PIPE
 from textwrap import dedent
 
-from odoo import tools
-from odoo.tests.common import TransactionCase
+from koda import tools
+from koda.tests.common import TransactionCase
 
 from . import _odoo_checker_sql_injection
 

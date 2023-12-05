@@ -5,9 +5,9 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 from unittest.mock import patch, PropertyMock
 
-from odoo import Command, fields
-from odoo.tests.common import users, tagged, HttpCase, warmup
-from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import Command, fields
+from koda.tests.common import users, tagged, HttpCase, warmup
+from koda.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 
 @tagged('post_install', '-at_install')

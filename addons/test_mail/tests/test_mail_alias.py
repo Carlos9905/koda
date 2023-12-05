@@ -5,11 +5,11 @@ import psycopg2
 
 from ast import literal_eval
 
-from odoo import exceptions
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests import tagged
-from odoo.tests.common import users
-from odoo.tools import formataddr, mute_logger
+from koda import exceptions
+from koda.addons.mail.tests.common import MailCommon
+from koda.tests import tagged
+from koda.tests.common import users
+from koda.tools import formataddr, mute_logger
 
 
 class TestMailAliasCommon(MailCommon):

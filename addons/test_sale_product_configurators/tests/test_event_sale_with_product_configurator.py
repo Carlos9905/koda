@@ -2,10 +2,10 @@
 
 from datetime import datetime, timedelta
 
-from odoo import fields
-from odoo.tests import HttpCase, tagged
+from koda import fields
+from koda.tests import HttpCase, tagged
 
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 @tagged('post_install', '-at_install')

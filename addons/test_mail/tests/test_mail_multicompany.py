@@ -8,12 +8,12 @@ from itertools import product
 from unittest.mock import patch
 from werkzeug.urls import url_parse, url_decode
 
-from odoo.addons.mail.models.mail_message import Message
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail.tests.common import TestRecipients
-from odoo.exceptions import AccessError
-from odoo.tests import tagged, users, HttpCase
-from odoo.tools import mute_logger
+from koda.addons.mail.models.mail_message import Message
+from koda.addons.mail.tests.common import MailCommon
+from koda.addons.test_mail.tests.common import TestRecipients
+from koda.exceptions import AccessError
+from koda.tests import tagged, users, HttpCase
+from koda.tools import mute_logger
 
 
 class TestMailMCCommon(MailCommon, TestRecipients):

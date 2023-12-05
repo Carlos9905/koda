@@ -4,8 +4,8 @@ import logging
 from pprint import pformat
 from unittest.mock import patch
 
-from odoo import http
-from odoo.tests import tagged, TransactionCase
+from koda import http
+from koda.tests import tagged, TransactionCase
 
 _logger = logging.getLogger(__name__)
 

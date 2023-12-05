@@ -3,9 +3,9 @@
 
 from datetime import datetime, timedelta
 
-from odoo import Command
-from odoo.addons.web_gantt.models.models import Base
-from odoo.tests.common import TransactionCase
+from koda import Command
+from koda.addons.web_gantt.models.models import Base
+from koda.tests.common import TransactionCase
 
 
 class TestWebGantt(TransactionCase):

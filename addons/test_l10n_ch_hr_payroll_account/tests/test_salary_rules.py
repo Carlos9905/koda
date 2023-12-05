@@ -4,10 +4,10 @@
 import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests.common import tagged
-from odoo.addons.test_l10n_ch_hr_payroll_account.tests.common import TestL10NChHrPayrollAccountCommon
-from odoo.exceptions import ValidationError
-from odoo.tools.float_utils import float_compare
+from koda.tests.common import tagged
+from koda.addons.test_l10n_ch_hr_payroll_account.tests.common import TestL10NChHrPayrollAccountCommon
+from koda.exceptions import ValidationError
+from koda.tools.float_utils import float_compare
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install', 'ch_payslips_validation')

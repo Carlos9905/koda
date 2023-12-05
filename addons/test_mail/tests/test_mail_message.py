@@ -4,11 +4,11 @@ import base64
 from markupsafe import Markup
 from unittest.mock import patch
 
-from odoo.addons.mail.tests.common import mail_new_test_user, MailCommon
-from odoo.addons.test_mail.models.test_mail_models import MailTestSimple
-from odoo.exceptions import AccessError, UserError
-from odoo.tests.common import tagged, users
-from odoo.tools import is_html_empty, mute_logger, formataddr
+from koda.addons.mail.tests.common import mail_new_test_user, MailCommon
+from koda.addons.test_mail.models.test_mail_models import MailTestSimple
+from koda.exceptions import AccessError, UserError
+from koda.tests.common import tagged, users
+from koda.tools import is_html_empty, mute_logger, formataddr
 
 
 @tagged("mail_message", "post_install", "-at_install")

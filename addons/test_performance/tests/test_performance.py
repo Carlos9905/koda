@@ -5,10 +5,10 @@ from collections import defaultdict
 from unittest.mock import patch
 import logging
 
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
-from odoo.tests.common import TransactionCase, users, warmup, tagged
-from odoo.tools import mute_logger, sql
-from odoo import Command
+from koda.addons.base.tests.common import SavepointCaseWithUserDemo
+from koda.tests.common import TransactionCase, users, warmup, tagged
+from koda.tools import mute_logger, sql
+from koda import Command
 
 _logger = logging.getLogger(__name__)
 

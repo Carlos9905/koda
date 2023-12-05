@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import models
-from odoo.osv import expression
+from koda import models
+from koda.osv import expression
 
 
 class AccountBankStatementLine(models.Model):

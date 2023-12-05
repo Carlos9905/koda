@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import odoo.tests
-from odoo.addons.base.tests.test_translate import SPECIAL_CHARACTERS
+from koda.addons.base.tests.test_translate import SPECIAL_CHARACTERS
 
 
 @odoo.tests.tagged('post_install', '-at_install')

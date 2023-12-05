@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.stock_barcode.controllers.stock_barcode import StockBarcodeController
+from koda import http
+from koda.http import request
+from koda.addons.stock_barcode.controllers.stock_barcode import StockBarcodeController
 
 
 class StockBarcodePickingBatchController(StockBarcodeController):

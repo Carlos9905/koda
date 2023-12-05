@@ -1,6 +1,6 @@
-from odoo import models
-from odoo.exceptions import AccessDenied
-from odoo.http import Controller, route
+from koda import models
+from koda.exceptions import AccessDenied
+from koda.http import Controller, route
 
 
 class IrHttp(models.AbstractModel):

@@ -2,9 +2,9 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command, fields
-from odoo.exceptions import AccessError
-from odoo.tests.common import TransactionCase, new_test_user
+from koda import Command, fields
+from koda.exceptions import AccessError
+from koda.tests.common import TransactionCase, new_test_user
 
 
 class TestUnityRead(TransactionCase):

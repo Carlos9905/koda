@@ -3,12 +3,12 @@
 
 from lxml import html
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.test_mass_mailing.data.mail_test_data import MAIL_TEMPLATE
-from odoo.addons.test_mass_mailing.tests.common import TestMassMailCommon
-from odoo.tests.common import users
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.test_mass_mailing.data.mail_test_data import MAIL_TEMPLATE
+from koda.addons.test_mass_mailing.tests.common import TestMassMailCommon
+from koda.tests.common import users
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 
 @tagged('digest', 'mass_mailing')

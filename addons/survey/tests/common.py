@@ -7,8 +7,8 @@ import re
 from collections import Counter
 from contextlib import contextmanager
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.tests import common
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.tests import common
 
 
 class SurveyCase(common.TransactionCase):

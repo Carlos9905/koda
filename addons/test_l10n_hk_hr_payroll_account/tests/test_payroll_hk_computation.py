@@ -2,7 +2,7 @@
 
 from datetime import date, datetime
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
 from .common import TestL10NHkHrPayrollAccountCommon
 

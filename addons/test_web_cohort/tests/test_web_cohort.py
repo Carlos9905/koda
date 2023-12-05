@@ -3,8 +3,8 @@
 
 import datetime
 
-from odoo import fields
-from odoo.tests import common
+from koda import fields
+from koda.tests import common
 
 TYPE_SIZE = 8
 TYPE = ['Type %s' % i for i in range(1,TYPE_SIZE + 1)]

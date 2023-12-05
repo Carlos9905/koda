@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, api
+from koda import models, api
 
 
 class UoM(models.Model):

@@ -3,10 +3,10 @@
 
 """ Implementation of "INVENTORY VALUATION TESTS (With valuation layers)" spreadsheet. """
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.stock_account.tests.test_stockvaluation import _create_accounting_data
-from odoo.tests import Form, tagged
-from odoo.tests.common import TransactionCase
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.stock_account.tests.test_stockvaluation import _create_accounting_data
+from koda.tests import Form, tagged
+from koda.tests.common import TransactionCase
 
 
 class TestStockValuationCommon(TransactionCase):

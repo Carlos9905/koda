@@ -3,7 +3,7 @@
 
 import ast
 
-from odoo import api, models, _
+from koda import api, models, _
 
 
 class SurveyTemplate(models.Model):

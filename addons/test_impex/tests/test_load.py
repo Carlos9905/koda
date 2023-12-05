@@ -5,11 +5,11 @@ import json
 import pkgutil
 import re
 
-from odoo import fields
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
-from odoo.tests import common
-from odoo.tools.misc import mute_logger
-from odoo.tools.translate import code_translations
+from koda import fields
+from koda.addons.base.tests.common import SavepointCaseWithUserDemo
+from koda.tests import common
+from koda.tools.misc import mute_logger
+from koda.tools.translate import code_translations
 
 def message(msg, type='error', from_=0, to_=0, record=0, field='value', **kwargs):
     return dict(kwargs,

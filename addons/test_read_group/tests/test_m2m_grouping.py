@@ -1,8 +1,8 @@
 """ Test read_group grouping with many2many fields """
 
 
-from odoo.fields import Command
-from odoo.tests import common
+from koda.fields import Command
+from koda.tests import common
 
 
 @common.tagged('test_m2m_read_group')

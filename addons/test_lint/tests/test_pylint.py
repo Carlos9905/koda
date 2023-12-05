@@ -11,9 +11,9 @@ import subprocess
 import os
 from os.path import join
 
-from odoo.tests.common import TransactionCase
-from odoo import tools
-from odoo.modules import get_modules, get_module_path
+from koda.tests.common import TransactionCase
+from koda import tools
+from koda.modules import get_modules, get_module_path
 
 HERE = os.path.dirname(os.path.realpath(__file__))
 

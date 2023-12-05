@@ -3,7 +3,7 @@ import inspect
 import itertools
 
 import odoo
-from odoo.tests.common import get_db_name, tagged
+from koda.tests.common import get_db_name, tagged
 from .lint_case import LintCase
 
 

@@ -3,11 +3,11 @@
 
 from datetime import datetime, timedelta, time
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
-from odoo.addons.event_crm.tests.common import EventCrmCase
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.sales_team.tests.common import TestSalesCommon
-from odoo.addons.website.tests.test_website_visitor import MockVisitor
+from koda.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
+from koda.addons.event_crm.tests.common import EventCrmCase
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.sales_team.tests.common import TestSalesCommon
+from koda.addons.website.tests.test_website_visitor import MockVisitor
 
 
 class TestEventFullCommon(EventCrmCase, TestSalesCommon, MockVisitor):

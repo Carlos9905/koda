@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests import Form
-from odoo.tests.common import TransactionCase
+from koda import Command
+from koda.tests import Form
+from koda.tests.common import TransactionCase
 
 
 class TestCarrierPropagation(TransactionCase):

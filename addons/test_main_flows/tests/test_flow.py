@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import Command
-from odoo.tools import mute_logger
+from koda import Command
+from koda.tools import mute_logger
 
 import odoo.tests
 

@@ -3,9 +3,9 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import float_is_zero, float_round, float_compare, OrderedSet
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import float_is_zero, float_round, float_compare, OrderedSet
 
 import logging
 _logger = logging.getLogger(__name__)

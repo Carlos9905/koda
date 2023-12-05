@@ -2,8 +2,8 @@
 # Koda
 
 from datetime import date
-from odoo.tests import common, tagged
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.tests import common, tagged
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 @tagged('dmfa')

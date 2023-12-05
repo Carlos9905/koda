@@ -3,9 +3,9 @@
 
 from datetime import datetime, date
 
-from odoo.tests import tagged
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tools.float_utils import float_compare
+from koda.tests import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tools.float_utils import float_compare
 
 
 @tagged('post_install', '-at_install', 'student')

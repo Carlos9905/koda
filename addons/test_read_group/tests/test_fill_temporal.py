@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Test for fill temporal."""
 
-from odoo.tests import common
+from koda.tests import common
 
 class TestFillTemporal(common.TransactionCase):
     """Test for fill temporal.

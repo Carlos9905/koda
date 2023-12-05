@@ -3,7 +3,7 @@
 
 from operator import itemgetter
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 
 class StockPickingBatch(models.Model):

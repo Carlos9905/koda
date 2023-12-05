@@ -2,9 +2,9 @@
 from urllib.parse import urlencode
 import ast
 
-from odoo import Command
+from koda import Command
 
-from odoo.tests import HttpCase, tagged
+from koda.tests import HttpCase, tagged
 
 
 def _urlencode_kwargs(**kwargs):

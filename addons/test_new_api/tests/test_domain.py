@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from itertools import combinations
 
-from odoo import Command
-from odoo.tests import common
+from koda import Command
+from koda.tests import common
 
 
 class TestDomain(common.TransactionCase):

@@ -3,12 +3,12 @@
 
 from collections import defaultdict
 
-from odoo import http, _
-from odoo.http import request
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools import pdf, split_every
-from odoo.tools.misc import file_open
+from koda import http, _
+from koda.http import request
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools import pdf, split_every
+from koda.tools.misc import file_open
 
 
 class StockBarcodeController(http.Controller):

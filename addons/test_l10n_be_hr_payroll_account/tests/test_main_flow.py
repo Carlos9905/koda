@@ -6,10 +6,10 @@ from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 from contextlib import contextmanager
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.fields import Date, Datetime
-from odoo.tests import common, Form, tagged
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.exceptions import AccessError, UserError, ValidationError
+from koda.fields import Date, Datetime
+from koda.tests import common, Form, tagged
 import time
 
 @contextmanager

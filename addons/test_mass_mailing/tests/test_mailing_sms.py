@@ -3,12 +3,12 @@
 
 from ast import literal_eval
 
-from odoo.addons.phone_validation.tools import phone_validation
-from odoo.addons.test_mass_mailing.tests.common import TestMassSMSCommon
-from odoo import exceptions
-from odoo.tests import tagged
-from odoo.tests.common import users
-from odoo.tools import mute_logger
+from koda.addons.phone_validation.tools import phone_validation
+from koda.addons.test_mass_mailing.tests.common import TestMassSMSCommon
+from koda import exceptions
+from koda.tests import tagged
+from koda.tests.common import users
+from koda.tools import mute_logger
 
 
 @tagged('mass_mailing', 'mass_mailing_sms')

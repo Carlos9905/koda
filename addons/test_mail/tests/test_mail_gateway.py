@@ -10,15 +10,15 @@ from datetime import datetime
 from unittest.mock import DEFAULT
 from unittest.mock import patch
 
-from odoo import exceptions
-from odoo.addons.mail.models.mail_thread import MailThread
-from odoo.addons.mail.tests.common import mail_new_test_user, MailCommon
-from odoo.addons.test_mail.data import test_mail_data
-from odoo.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
-from odoo.addons.test_mail.models.test_mail_models import MailTestGateway
-from odoo.sql_db import Cursor
-from odoo.tests import tagged
-from odoo.tools import email_split_and_format, formataddr, mute_logger
+from koda import exceptions
+from koda.addons.mail.models.mail_thread import MailThread
+from koda.addons.mail.tests.common import mail_new_test_user, MailCommon
+from koda.addons.test_mail.data import test_mail_data
+from koda.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
+from koda.addons.test_mail.models.test_mail_models import MailTestGateway
+from koda.sql_db import Cursor
+from koda.tests import tagged
+from koda.tools import email_split_and_format, formataddr, mute_logger
 
 
 @tagged('mail_gateway')

@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import lxml.html
 
-from odoo.addons.test_mass_mailing.tests.common import TestMassMailCommon
-from odoo.fields import Command
-from odoo.tests.common import users, tagged
-from odoo.tools import mute_logger
+from koda.addons.test_mass_mailing.tests.common import TestMassMailCommon
+from koda.fields import Command
+from koda.tests.common import users, tagged
+from koda.tools import mute_logger
 
 
 @tagged('mailing_manage')

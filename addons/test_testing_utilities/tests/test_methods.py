@@ -5,10 +5,10 @@ from unittest import mock, TestCase
 
 import psycopg2
 
-from odoo.exceptions import AccessError
-from odoo.sql_db import BaseCursor
-from odoo.tests import common
-from odoo.tools import mute_logger
+from koda.exceptions import AccessError
+from koda.sql_db import BaseCursor
+from koda.tests import common
+from koda.tools import mute_logger
 
 
 class CustomError(Exception):

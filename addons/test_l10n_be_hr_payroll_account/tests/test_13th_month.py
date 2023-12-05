@@ -3,8 +3,8 @@
 
 from datetime import datetime, date
 
-from odoo.tests import tagged
-from odoo.addons.test_l10n_be_hr_payroll_account.tests.test_payslip import TestPayslipBase
+from koda.tests import tagged
+from koda.addons.test_l10n_be_hr_payroll_account.tests.test_payslip import TestPayslipBase
 
 
 @tagged('thirteen_month')

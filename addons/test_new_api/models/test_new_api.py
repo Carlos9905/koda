@@ -3,12 +3,12 @@
 
 import logging
 
-from odoo.tools.float_utils import float_round
+from koda.tools.float_utils import float_round
 _logger = logging.getLogger('precompute_setter')
 
-from odoo import models, fields, api, _, Command
-from odoo.exceptions import AccessError, ValidationError
-from odoo.tools.translate import html_translate
+from koda import models, fields, api, _, Command
+from koda.exceptions import AccessError, ValidationError
+from koda.tools.translate import html_translate
 
 
 class Category(models.Model):

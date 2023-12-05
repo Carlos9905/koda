@@ -4,8 +4,8 @@ Tests for various autodetection magics for CSV imports
 """
 import codecs
 
-from odoo.tests import common
-from odoo.addons.test_base_import.models.test_base_import import model as base_import_model
+from koda.tests import common
+from koda.addons.test_base_import.models.test_base_import import model as base_import_model
 
 
 class ImportCase(common.TransactionCase):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Koda
 import odoo
-from odoo.tests import HttpCase, tagged
-from odoo.tools import mute_logger
-from odoo.addons.http_routing.models.ir_http import slug
+from koda.tests import HttpCase, tagged
+from koda.tools import mute_logger
+from koda.addons.http_routing.models.ir_http import slug
 
 from unittest.mock import patch
 from urllib.parse import urlparse

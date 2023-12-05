@@ -5,9 +5,9 @@ import logging
 import re
 import subprocess
 from unittest import skipIf
-from odoo import tools
-from odoo.tests import tagged
-from odoo.tools.misc import file_path
+from koda import tools
+from koda.tests import tagged
+from koda.tools.misc import file_path
 
 from . import lint_case
 

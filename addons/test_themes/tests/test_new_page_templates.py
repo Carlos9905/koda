@@ -6,9 +6,9 @@ from lxml import html
 import logging
 import re
 
-from odoo.addons.website.tools import MockRequest
-from odoo.tests import tagged, TransactionCase
-from odoo.tools import escape_psql
+from koda.addons.website.tools import MockRequest
+from koda.tests import tagged, TransactionCase
+from koda.tools import escape_psql
 
 _logger = logging.getLogger(__name__)
 

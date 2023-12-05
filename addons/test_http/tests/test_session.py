@@ -7,8 +7,8 @@ from urllib.parse import urlparse
 from unittest.mock import patch
 
 import odoo
-from odoo.tests.common import get_db_name
-from odoo.tools import mute_logger
+from koda.tests.common import get_db_name
+from koda.tools import mute_logger
 from .test_common import TestHttpBase
 
 

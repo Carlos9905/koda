@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
-from odoo.exceptions import ValidationError
+from koda import models, fields, api
+from koda.exceptions import ValidationError
 
 
 # We just create a new model

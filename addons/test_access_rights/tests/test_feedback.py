@@ -2,10 +2,10 @@
 from unittest.mock import Mock
 
 import odoo
-from odoo import SUPERUSER_ID, Command
-from odoo.exceptions import AccessError
-from odoo.tests import TransactionCase
-from odoo.tools.misc import mute_logger
+from koda import SUPERUSER_ID, Command
+from koda.exceptions import AccessError
+from koda.tests import TransactionCase
+from koda.tools.misc import mute_logger
 
 
 class Feedback(TransactionCase):

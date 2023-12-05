@@ -3,9 +3,9 @@
 
 from datetime import datetime
 
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.addons.crm_iap_mine.tests.common import MockIAPReveal  # MockIAPEnrich
-from odoo.addons.website.tests.test_website_visitor import MockVisitor
+from koda.addons.crm.tests.common import TestCrmCommon
+from koda.addons.crm_iap_mine.tests.common import MockIAPReveal  # MockIAPEnrich
+from koda.addons.website.tests.test_website_visitor import MockVisitor
 
 
 class TestCrmFullCommon(TestCrmCommon, MockIAPReveal, MockVisitor):

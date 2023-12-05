@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.test_mass_mailing.tests.common import TestMassMailCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tests.common import users
-from odoo.tools import mute_logger
+from koda.addons.test_mass_mailing.tests.common import TestMassMailCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda.tests.common import users
+from koda.tools import mute_logger
 
 
 @tagged('mass_mailing', 'mail_server')

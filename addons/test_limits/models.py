@@ -4,7 +4,7 @@
 import time
 import sys
 
-from odoo import models, api
+from koda import models, api
 
 class m(models.Model):
     """ This model exposes a few methods that will consume between 'almost no

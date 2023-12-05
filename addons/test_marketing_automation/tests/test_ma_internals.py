@@ -3,10 +3,10 @@
 
 from freezegun import freeze_time
 
-from odoo.addons.test_marketing_automation.tests.common import TestMACommon
-from odoo.tests import tagged, users
-from odoo.tools import mute_logger
-from odoo.fields import Datetime
+from koda.addons.test_marketing_automation.tests.common import TestMACommon
+from koda.tests import tagged, users
+from koda.tools import mute_logger
+from koda.fields import Datetime
 
 
 @tagged('marketing_automation')

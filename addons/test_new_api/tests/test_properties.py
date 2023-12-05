@@ -7,12 +7,12 @@ import unittest
 
 from unittest.mock import patch
 
-from odoo import Command
+from koda import Command
 
-from odoo.exceptions import AccessError, UserError
-from odoo.osv import expression
-from odoo.tests.common import Form, TransactionCase, users
-from odoo.tools import mute_logger, get_lang
+from koda.exceptions import AccessError, UserError
+from koda.osv import expression
+from koda.tests.common import Form, TransactionCase, users
+from koda.tools import mute_logger, get_lang
 
 
 class TestPropertiesMixin(TransactionCase):

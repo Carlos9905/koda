@@ -2,7 +2,7 @@
 
 import odoo.tests
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
 
 
 @odoo.tests.common.tagged('post_install', '-at_install')

@@ -3,8 +3,8 @@
 from functools import partial
 from xmlrpc.client import Fault
 
-from odoo.tests import common, tagged
-from odoo.tools.misc import mute_logger
+from koda.tests import common, tagged
+from koda.tools.misc import mute_logger
 
 
 @tagged('-at_install', 'post_install')

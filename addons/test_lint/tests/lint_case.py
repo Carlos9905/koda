@@ -3,8 +3,8 @@ import fnmatch
 import os
 j = os.path.join
 
-from odoo.modules import get_modules, get_module_path
-from odoo.tests import BaseCase
+from koda.modules import get_modules, get_module_path
+from koda.tests import BaseCase
 
 
 class LintCase(BaseCase):

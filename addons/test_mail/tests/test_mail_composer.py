@@ -9,17 +9,17 @@ from freezegun import freeze_time
 from itertools import chain, product
 from unittest.mock import DEFAULT, patch
 
-from odoo import Command
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.mail.tests.common import mail_new_test_user, MailCommon
-from odoo.addons.mail.wizard.mail_compose_message import MailComposer
-from odoo.addons.test_mail.models.test_mail_models import MailTestTicket
-from odoo.addons.test_mail.tests.common import TestRecipients
-from odoo.fields import Datetime as FieldDatetime
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tests.common import users, Form
-from odoo.tools import email_normalize, mute_logger, formataddr
+from koda import Command
+from koda.addons.base.tests.test_ir_cron import CronMixinCase
+from koda.addons.mail.tests.common import mail_new_test_user, MailCommon
+from koda.addons.mail.wizard.mail_compose_message import MailComposer
+from koda.addons.test_mail.models.test_mail_models import MailTestTicket
+from koda.addons.test_mail.tests.common import TestRecipients
+from koda.fields import Datetime as FieldDatetime
+from koda.exceptions import AccessError
+from koda.tests import tagged
+from koda.tests.common import users, Form
+from koda.tools import email_normalize, mute_logger, formataddr
 
 
 @tagged('mail_composer')

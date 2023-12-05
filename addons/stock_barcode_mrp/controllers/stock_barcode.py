@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.http import request
-from odoo.modules.module import get_resource_path
-from odoo.tools.misc import file_open
-from odoo.addons.stock_barcode.controllers.stock_barcode import StockBarcodeController
+from koda import http
+from koda.http import request
+from koda.modules.module import get_resource_path
+from koda.tools.misc import file_open
+from koda.addons.stock_barcode.controllers.stock_barcode import StockBarcodeController
 
 
 class MRPStockBarcode(StockBarcodeController):

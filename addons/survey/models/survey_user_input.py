@@ -7,9 +7,9 @@ import uuid
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import float_is_zero
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError, UserError
+from koda.tools import float_is_zero
 
 _logger = logging.getLogger(__name__)
 

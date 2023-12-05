@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo.tests import common
-from odoo.exceptions import ValidationError
-from odoo import Command
+from koda.tests import common
+from koda.exceptions import ValidationError
+from koda import Command
 
 
 class test_inherits(common.TransactionCase):

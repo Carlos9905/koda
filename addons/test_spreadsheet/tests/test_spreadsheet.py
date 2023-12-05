@@ -1,7 +1,7 @@
 import base64
 import json
-from odoo.tests.common import TransactionCase, Form
-from odoo.exceptions import ValidationError
+from koda.tests.common import TransactionCase, Form
+from koda.exceptions import ValidationError
 
 class ValidateSpreadsheetMixinData(TransactionCase):
     def test_onchange_json_data(self):

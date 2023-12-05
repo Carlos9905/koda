@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import os.path
 
-from odoo.tests.common import BaseCase
-from odoo.tools.misc import file_open
-from odoo.tools.mimetypes import guess_mimetype
+from koda.tests.common import BaseCase
+from koda.tools.misc import file_open
+from koda.tools.mimetypes import guess_mimetype
 
 def contents(extension):
     with file_open(os.path.join(

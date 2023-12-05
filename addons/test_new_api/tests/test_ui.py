@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import odoo.tests
-from odoo.tools import mute_logger
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.tools import mute_logger
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
 
 
 @odoo.tests.common.tagged('post_install', '-at_install')

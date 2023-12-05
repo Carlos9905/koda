@@ -4,8 +4,8 @@
 from dateutil.relativedelta import relativedelta
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.tests.common import tagged, HttpCase
+from koda import fields
+from koda.tests.common import tagged, HttpCase
 
 
 @tagged('post_install', '-at_install')

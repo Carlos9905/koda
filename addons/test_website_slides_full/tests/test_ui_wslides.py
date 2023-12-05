@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from dateutil.relativedelta import relativedelta
-from odoo.fields import Datetime
-from odoo import tests
-from odoo.addons.website_slides.tests.test_ui_wslides import TestUICommon
+from koda.fields import Datetime
+from koda import tests
+from koda.addons.website_slides.tests.test_ui_wslides import TestUICommon
 
 @tests.common.tagged('post_install', '-at_install')
 class TestUi(TestUICommon):

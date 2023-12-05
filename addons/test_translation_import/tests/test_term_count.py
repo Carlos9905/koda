@@ -4,11 +4,11 @@ import base64
 import io
 from markupsafe import Markup
 
-from odoo.tests import common, tagged
-from odoo.tools.misc import file_open, mute_logger, file_path
-from odoo.tools.translate import TranslationModuleReader, TranslationRecordReader, code_translations, CodeTranslations, PYTHON_TRANSLATION_COMMENT, JAVASCRIPT_TRANSLATION_COMMENT, WEB_TRANSLATION_COMMENT, TranslationFileReader
-from odoo import Command
-from odoo.addons.base.models.ir_fields import BOOLEAN_TRANSLATIONS
+from koda.tests import common, tagged
+from koda.tools.misc import file_open, mute_logger, file_path
+from koda.tools.translate import TranslationModuleReader, TranslationRecordReader, code_translations, CodeTranslations, PYTHON_TRANSLATION_COMMENT, JAVASCRIPT_TRANSLATION_COMMENT, WEB_TRANSLATION_COMMENT, TranslationFileReader
+from koda import Command
+from koda.addons.base.models.ir_fields import BOOLEAN_TRANSLATIONS
 
 
 class TestImport(common.TransactionCase):

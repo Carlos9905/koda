@@ -1,8 +1,8 @@
 # Koda
 
-from odoo.tests import HttpCase, tagged
-from odoo.tests.common import HOST
-from odoo.tools import config, mute_logger
+from koda.tests import HttpCase, tagged
+from koda.tests.common import HOST
+from koda.tools import config, mute_logger
 
 
 @tagged('-at_install', 'post_install')

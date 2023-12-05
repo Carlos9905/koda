@@ -1,4 +1,4 @@
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 
 class ManufacturingOrder(models.Model):

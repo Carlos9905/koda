@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.addons.web_editor.controllers.main import Web_Editor
-from odoo.addons.web_unsplash.controllers.main import Web_Unsplash
+from koda.addons.web_editor.controllers.main import Web_Editor
+from koda.addons.web_unsplash.controllers.main import Web_Unsplash
 
 import odoo.tests
 
-from odoo import http
+from koda import http
 
 
 @odoo.tests.common.tagged('post_install', '-at_install')

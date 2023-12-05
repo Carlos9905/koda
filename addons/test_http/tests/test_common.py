@@ -3,10 +3,10 @@
 from unittest.mock import patch
 
 import odoo
-from odoo.http import Session
-from odoo.tests.common import HttpCase
-from odoo.tools.func import lazy_property
-from odoo.addons.test_http.utils import MemoryGeoipResolver, MemorySessionStore
+from koda.http import Session
+from koda.tests.common import HttpCase
+from koda.tools.func import lazy_property
+from koda.addons.test_http.utils import MemoryGeoipResolver, MemorySessionStore
 
 
 class TestHttpBase(HttpCase):

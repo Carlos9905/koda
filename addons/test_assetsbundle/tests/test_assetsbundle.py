@@ -13,17 +13,17 @@ import lxml
 import base64
 
 import odoo
-from odoo import api, http
-from odoo.addons import __path__ as ADDONS_PATH
-from odoo.addons.base.models.assetsbundle import AssetsBundle
-from odoo.addons.base.models.ir_asset import AssetPaths
-from odoo.addons.base.models.ir_attachment import IrAttachment
-from odoo.modules.module import get_manifest
-from odoo.tests import HttpCase, tagged
-from odoo.tests.common import TransactionCase
-from odoo.addons.base.models.ir_qweb import QWebException
-from odoo.tools import mute_logger, func
-from odoo.tools.misc import file_path
+from koda import api, http
+from koda.addons import __path__ as ADDONS_PATH
+from koda.addons.base.models.assetsbundle import AssetsBundle
+from koda.addons.base.models.ir_asset import AssetPaths
+from koda.addons.base.models.ir_attachment import IrAttachment
+from koda.modules.module import get_manifest
+from koda.tests import HttpCase, tagged
+from koda.tests.common import TransactionCase
+from koda.addons.base.models.ir_qweb import QWebException
+from koda.tools import mute_logger, func
+from koda.tools.misc import file_path
 
 GETMTINE = os.path.getmtime
 

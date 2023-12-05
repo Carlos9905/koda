@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.product_matrix.tests.common import TestMatrixCommon
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.product_matrix.tests.common import TestMatrixCommon
 
 
 @tagged('post_install', '-at_install')

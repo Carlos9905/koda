@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.stock.tests.test_packing import TestPackingCommon
-from odoo.tests import Form
+from koda.addons.stock.tests.test_packing import TestPackingCommon
+from koda.tests import Form
 from unittest.mock import patch
 
 class TestPacking(TestPackingCommon):

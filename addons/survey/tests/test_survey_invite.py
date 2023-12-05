@@ -5,12 +5,12 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from lxml import etree
 
-from odoo import fields, Command
-from odoo.addons.survey.tests import common
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import UserError
-from odoo.tests import Form
-from odoo.tests.common import users
+from koda import fields, Command
+from koda.addons.survey.tests import common
+from koda.addons.mail.tests.common import MailCommon
+from koda.exceptions import UserError
+from koda.tests import Form
+from koda.tests.common import users
 
 
 class TestSurveyInvite(common.TestSurveyCommon, MailCommon):

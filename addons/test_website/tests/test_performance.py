@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.addons.website.tests.test_performance import UtilPerf
+from koda.addons.website.tests.test_performance import UtilPerf
 
 
 class TestPerformance(UtilPerf):

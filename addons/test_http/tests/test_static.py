@@ -8,8 +8,8 @@ from unittest.mock import patch
 from freezegun import freeze_time
 
 import odoo
-from odoo.tests import new_test_user, tagged, RecordCapturer
-from odoo.tools import config, file_open, image_process
+from koda.tests import new_test_user, tagged, RecordCapturer
+from koda.tools import config, file_open, image_process
 
 from .test_common import TestHttpBase
 

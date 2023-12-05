@@ -4,10 +4,10 @@
 from datetime import timedelta
 from freezegun import freeze_time
 
-from odoo.addons.test_event_full.tests.common import TestEventFullCommon
-from odoo.addons.website.tests.test_performance import UtilPerf
-from odoo.tests.common import users, warmup, Form
-from odoo.tests import tagged
+from koda.addons.test_event_full.tests.common import TestEventFullCommon
+from koda.addons.website.tests.test_performance import UtilPerf
+from koda.tests.common import users, warmup, Form
+from koda.tests import tagged
 
 
 @tagged('event_performance', 'post_install', '-at_install', '-standard')

@@ -4,10 +4,10 @@
 from datetime import date, timedelta
 from freezegun import freeze_time
 
-from odoo import Command, fields
-from odoo.addons.mail.tests.test_mail_activity import ActivityScheduleCase
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, tagged, users
+from koda import Command, fields
+from koda.addons.mail.tests.test_mail_activity import ActivityScheduleCase
+from koda.exceptions import ValidationError
+from koda.tests import Form, tagged, users
 
 
 @tagged('mail_activity', 'mail_activity_plan')

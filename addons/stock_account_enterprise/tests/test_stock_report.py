@@ -3,9 +3,9 @@
 
 from datetime import timedelta
 
-from odoo import fields
-from odoo.exceptions import UserError
-from odoo.tests import common
+from koda import fields
+from koda.exceptions import UserError
+from koda.tests import common
 
 
 class TestStockReport(common.TransactionCase):

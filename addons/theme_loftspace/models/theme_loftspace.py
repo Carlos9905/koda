@@ -1,4 +1,4 @@
-from odoo import models
+from koda import models
 
 
 class ThemeLoftspace(models.AbstractModel):

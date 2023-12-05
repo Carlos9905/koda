@@ -11,11 +11,11 @@ from unittest.mock import DEFAULT
 import pytz
 import random
 
-from odoo import fields, exceptions, tests
-from odoo.addons.mail.tests.common import mail_new_test_user, MailCommon
-from odoo.addons.test_mail.models.test_mail_models import MailTestActivity
-from odoo.tools import mute_logger
-from odoo.tests.common import Form, users
+from koda import fields, exceptions, tests
+from koda.addons.mail.tests.common import mail_new_test_user, MailCommon
+from koda.addons.test_mail.models.test_mail_models import MailTestActivity
+from koda.tools import mute_logger
+from koda.tests.common import Form, users
 
 
 class TestActivityCommon(MailCommon):

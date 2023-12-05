@@ -4,10 +4,10 @@ import logging
 from ast import literal_eval
 from os.path import join as opj
 
-from odoo.modules import get_modules
-from odoo.modules.module import _DEFAULT_MANIFEST, module_manifest, get_module_path
-from odoo.tests import BaseCase
-from odoo.tools.misc import file_open, file_path
+from koda.modules import get_modules
+from koda.modules.module import _DEFAULT_MANIFEST, module_manifest, get_module_path
+from koda.tests import BaseCase
+from koda.tools.misc import file_open, file_path
 
 _logger = logging.getLogger(__name__)
 

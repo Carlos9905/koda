@@ -1,5 +1,5 @@
-from odoo import models
-from odoo.tools import config
+from koda import models
+from koda.tools import config
 init = config['init']
 
 

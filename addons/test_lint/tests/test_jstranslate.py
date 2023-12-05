@@ -5,8 +5,8 @@
 import logging
 import re
 
-from odoo import tools
-from odoo.modules import get_resource_from_path
+from koda import tools
+from koda.modules import get_resource_from_path
 
 from . import lint_case
 

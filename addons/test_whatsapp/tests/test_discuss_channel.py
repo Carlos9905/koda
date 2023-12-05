@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.whatsapp.tests.common import WhatsAppCommon, MockIncomingWhatsApp
-from odoo.tests import tagged, users
+from koda.addons.whatsapp.tests.common import WhatsAppCommon, MockIncomingWhatsApp
+from koda.tests import tagged, users
 
 
 @tagged('wa_message')

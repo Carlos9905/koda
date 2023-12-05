@@ -4,7 +4,7 @@
 import datetime
 from freezegun import freeze_time
 
-from odoo import fields
+from koda import fields
 import odoo.tests
 from . import common
 

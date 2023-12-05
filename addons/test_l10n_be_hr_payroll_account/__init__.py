@@ -2,8 +2,8 @@
 # Koda
 import logging
 
-from odoo import fields
-from odoo.fields import Datetime
+from koda import fields
+from koda.fields import Datetime
 from dateutil.relativedelta import relativedelta
 
 _logger = logging.getLogger(__name__)

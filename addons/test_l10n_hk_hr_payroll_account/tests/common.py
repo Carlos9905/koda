@@ -2,7 +2,7 @@
 
 from datetime import date
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 class TestL10NHkHrPayrollAccountCommon(AccountTestInvoicingCommon):

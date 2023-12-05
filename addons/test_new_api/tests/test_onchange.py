@@ -3,10 +3,10 @@
 
 from unittest.mock import patch
 
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
-from odoo.tests import common, Form
-from odoo import Command
-from odoo.tools import submap
+from koda.addons.base.tests.common import SavepointCaseWithUserDemo
+from koda.tests import common, Form
+from koda import Command
+from koda.tools import submap
 
 
 def strip_prefix(prefix, names):

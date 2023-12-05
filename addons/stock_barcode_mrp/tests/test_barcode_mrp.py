@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
-from odoo.addons.stock_barcode.tests.test_barcode_client_action import TestBarcodeClientAction
+from koda.tests import tagged
+from koda.addons.stock_barcode.tests.test_barcode_client_action import TestBarcodeClientAction
 
 
 @tagged('post_install', '-at_install')

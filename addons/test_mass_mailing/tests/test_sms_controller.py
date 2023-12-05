@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.test_mass_mailing.tests.common import TestMassSMSCommon
-from odoo.tests.common import HttpCase
-from odoo.tools import mute_logger
+from koda.addons.test_mass_mailing.tests.common import TestMassSMSCommon
+from koda.tests.common import HttpCase
+from koda.tools import mute_logger
 
 
 class TestSmsController(HttpCase, TestMassSMSCommon):

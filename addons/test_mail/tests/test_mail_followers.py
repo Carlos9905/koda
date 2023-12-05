@@ -6,13 +6,13 @@ import re
 from unittest.mock import patch
 from urllib.parse import urlparse, urlencode, parse_qsl
 
-from odoo import tools
-from odoo.addons.mail.models.mail_mail import _UNFOLLOW_REGEX
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import AccessError
-from odoo.tests import tagged, users
-from odoo.tests.common import HttpCase
-from odoo.tools import mute_logger, email_normalize, parse_contact_from_email
+from koda import tools
+from koda.addons.mail.models.mail_mail import _UNFOLLOW_REGEX
+from koda.addons.mail.tests.common import MailCommon
+from koda.exceptions import AccessError
+from koda.tests import tagged, users
+from koda.tests.common import HttpCase
+from koda.tools import mute_logger, email_normalize, parse_contact_from_email
 
 
 @tagged('mail_followers')

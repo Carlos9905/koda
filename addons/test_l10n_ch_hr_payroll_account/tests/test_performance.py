@@ -7,9 +7,9 @@ import time
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests.common import tagged
-from odoo.addons.test_l10n_ch_hr_payroll_account.tests.common import TestL10NChHrPayrollAccountCommon
-from odoo.tests.common import users, warmup
+from koda.tests.common import tagged
+from koda.addons.test_l10n_ch_hr_payroll_account.tests.common import TestL10NChHrPayrollAccountCommon
+from koda.tests.common import users, warmup
 
 _logger = logging.getLogger(__name__)
 

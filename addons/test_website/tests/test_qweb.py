@@ -4,8 +4,8 @@
 from lxml import etree
 import re
 
-from odoo import tools
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda import tools
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
 
 
 class TestQweb(TransactionCaseWithUserDemo):

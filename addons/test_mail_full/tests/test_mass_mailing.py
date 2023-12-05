@@ -3,10 +3,10 @@
 
 import werkzeug
 
-from odoo.addons.test_mail_full.tests.common import TestMailFullCommon
-from odoo.tests.common import users
-from odoo.tools import mute_logger
-from odoo.tests import tagged
+from koda.addons.test_mail_full.tests.common import TestMailFullCommon
+from koda.tests.common import users
+from koda.tools import mute_logger
+from koda.tests import tagged
 
 
 @tagged('mass_mailing')

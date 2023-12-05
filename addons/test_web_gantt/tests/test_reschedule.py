@@ -3,7 +3,7 @@
 
 from datetime import datetime, timedelta
 
-from odoo import Command
+from koda import Command
 from .common import TestWebGantt
 
 

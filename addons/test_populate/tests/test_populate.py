@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import collections
 import logging
-from odoo.tests import common
-from odoo.cli.populate import Populate
-from odoo.tools import mute_logger, populate
+from koda.tests import common
+from koda.cli.populate import Populate
+from koda.tools import mute_logger, populate
 from unittest.mock import patch
 
 

@@ -3,9 +3,9 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError
-from odoo.tools.float_utils import float_is_zero
+from koda import api, fields, models, tools, _
+from koda.exceptions import UserError
+from koda.tools.float_utils import float_is_zero
 
 
 SPLIT_METHOD = [

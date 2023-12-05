@@ -7,10 +7,10 @@ import time
 from freezegun import freeze_time
 from logging import getLogger
 
-from odoo.addons.appointment.tests.test_performance import AppointmentUIPerformanceCase
-from odoo.addons.appointment_hr.tests.test_performance import AppointmenHrPerformanceCase
-from odoo.tests import tagged
-from odoo.tests.common import warmup
+from koda.addons.appointment.tests.test_performance import AppointmentUIPerformanceCase
+from koda.addons.appointment_hr.tests.test_performance import AppointmenHrPerformanceCase
+from koda.tests import tagged
+from koda.tests.common import warmup
 
 _logger = getLogger(__name__)
 

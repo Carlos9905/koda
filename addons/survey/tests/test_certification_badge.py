@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.survey.tests import common
+from koda.addons.survey.tests import common
 from psycopg2 import IntegrityError
-from odoo.exceptions import AccessError
-from odoo.tools import mute_logger
+from koda.exceptions import AccessError
+from koda.tools import mute_logger
 
 
 class TestCertificationBadge(common.TestSurveyCommon):

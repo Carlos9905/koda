@@ -1,7 +1,7 @@
 import json
 
-from odoo import api
-from odoo.tests import tagged, HttpCase, get_db_name
+from koda import api
+from koda.tests import tagged, HttpCase, get_db_name
 
 @tagged('post_install', '-at_install')
 class TestAPIKeys(HttpCase):

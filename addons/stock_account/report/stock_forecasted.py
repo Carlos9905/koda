@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.tools.float_utils import float_is_zero, float_repr
+from koda import models
+from koda.tools.float_utils import float_is_zero, float_repr
 
 
 class StockForecasted(models.AbstractModel):

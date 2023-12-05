@@ -1,4 +1,4 @@
-from odoo.tests import common
+from koda.tests import common
 
 class TestActionBindings(common.TransactionCase):
 

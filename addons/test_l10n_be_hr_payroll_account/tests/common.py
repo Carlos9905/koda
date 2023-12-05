@@ -4,8 +4,8 @@
 import time
 
 import odoo.tests
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.tools import file_open
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.tools import file_open
 
 
 class TestPayrollAccountCommon(odoo.tests.HttpCase):

@@ -3,11 +3,11 @@
 
 from datetime import datetime, timedelta
 
-from odoo.addons.test_event_full.tests.common import TestEventFullCommon
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tests.common import users
-from odoo.tools import mute_logger
+from koda.addons.test_event_full.tests.common import TestEventFullCommon
+from koda.exceptions import AccessError
+from koda.tests import tagged
+from koda.tests.common import users
+from koda.tools import mute_logger
 
 
 @tagged('security')

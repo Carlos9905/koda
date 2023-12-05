@@ -2,7 +2,7 @@
 # Koda
 
 from datetime import date, datetime, time
-from odoo.tests import common
+from koda.tests import common
 
 
 class TestPayslipBase(common.TransactionCase):

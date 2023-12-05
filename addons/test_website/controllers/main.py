@@ -4,10 +4,10 @@
 import json
 import werkzeug
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.portal.controllers.web import Home
-from odoo.exceptions import UserError, ValidationError, AccessError, MissingError, AccessDenied
+from koda import http
+from koda.http import request
+from koda.addons.portal.controllers.web import Home
+from koda.exceptions import UserError, ValidationError, AccessError, MissingError, AccessDenied
 
 
 class WebsiteTest(Home):

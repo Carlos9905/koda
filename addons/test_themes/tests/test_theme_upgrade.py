@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.website.tools import MockRequest
-from odoo.tests import standalone
+from koda.addons.website.tools import MockRequest
+from koda.tests import standalone
 
 
 @standalone('theme_upgrade', 'website_standalone')

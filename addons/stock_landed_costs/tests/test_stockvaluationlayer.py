@@ -3,8 +3,8 @@
 
 """ Implementation of "INVENTORY VALUATION TESTS (With valuation layers)" spreadsheet. """
 
-from odoo.tests import Form, tagged
-from odoo.addons.stock_landed_costs.tests.common import TestStockLandedCostsCommon
+from koda.tests import Form, tagged
+from koda.addons.stock_landed_costs.tests.common import TestStockLandedCostsCommon
 
 
 class TestStockValuationLCCommon(TestStockLandedCostsCommon):

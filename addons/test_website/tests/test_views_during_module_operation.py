@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.addons.website.tools import MockRequest
-from odoo.tests import standalone
+from koda.addons.website.tools import MockRequest
+from koda.tests import standalone
 
 
 @standalone('cow_views', 'website_standalone')

@@ -3,8 +3,8 @@
 
 
 from lxml import etree
-from odoo.tests import common
-from odoo.tools.xml_utils import cleanup_xml_node
+from koda.tests import common
+from koda.tools.xml_utils import cleanup_xml_node
 
 
 class TestXMLTools(common.TransactionCase):

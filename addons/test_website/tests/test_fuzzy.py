@@ -4,10 +4,10 @@
 import logging
 import psycopg2
 
-from odoo.addons.website.controllers.main import Website
-from odoo.addons.website.tools import MockRequest
+from koda.addons.website.controllers.main import Website
+from koda.addons.website.tools import MockRequest
 import odoo.tests
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 _logger = logging.getLogger(__name__)
 

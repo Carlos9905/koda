@@ -8,7 +8,7 @@ import pytz
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests import TransactionCase, warmup
+from koda.tests import TransactionCase, warmup
 
 _logger = logging.getLogger(__name__)
 

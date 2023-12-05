@@ -4,9 +4,9 @@ from collections import defaultdict
 from markupsafe import Markup
 import json
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools.sql import column_exists, create_column
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools.sql import column_exists, create_column
 
 
 class StockPicking(models.Model):

@@ -4,9 +4,9 @@
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command, exceptions
-from odoo.addons.test_event_full.tests.common import TestEventFullCommon
-from odoo.tests.common import users
+from koda import Command, exceptions
+from koda.addons.test_event_full.tests.common import TestEventFullCommon
+from koda.tests.common import users
 
 
 class TestEventEvent(TestEventFullCommon):

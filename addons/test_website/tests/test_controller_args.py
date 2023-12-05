@@ -1,6 +1,6 @@
 # Koda
 import odoo.tests
-from odoo.tools import mute_logger
+from koda.tools import mute_logger
 from unittest.mock import patch
 
 

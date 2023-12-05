@@ -3,9 +3,9 @@
 
 import time
 import datetime
-from odoo.tools.float_utils import float_compare
-from odoo.tests import tagged
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tools.float_utils import float_compare
+from koda.tests import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 @tagged('post_install', '-at_install', 'credit_time')
 class TestCreditTime(AccountTestInvoicingCommon):

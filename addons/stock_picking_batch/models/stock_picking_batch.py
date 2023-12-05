@@ -3,10 +3,10 @@
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv.expression import AND
-from odoo.tools.float_utils import float_compare, float_is_zero, float_round
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.osv.expression import AND
+from koda.tools.float_utils import float_compare, float_is_zero, float_round
 
 class StockPickingBatch(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']

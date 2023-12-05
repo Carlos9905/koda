@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from os import getenv
-from odoo.tests import tagged
+from koda.tests import tagged
 from . import test_static
 
 

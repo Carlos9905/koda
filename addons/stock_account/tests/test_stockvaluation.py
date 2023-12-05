@@ -3,9 +3,9 @@
 
 from datetime import timedelta
 
-from odoo.exceptions import UserError
-from odoo.fields import Datetime
-from odoo.tests.common import Form, TransactionCase
+from koda.exceptions import UserError
+from koda.fields import Datetime
+from koda.tests.common import Form, TransactionCase
 
 
 def _create_accounting_data(env):

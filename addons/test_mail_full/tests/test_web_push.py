@@ -5,12 +5,12 @@ import socket
 from datetime import datetime
 
 import odoo
-from odoo.tools.misc import mute_logger
-from odoo.addons.mail.models.partner_devices import InvalidVapidError
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.sms.tests.common import SMSCommon
-from odoo.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
-from odoo.tests import tagged
+from koda.tools.misc import mute_logger
+from koda.addons.mail.models.partner_devices import InvalidVapidError
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.sms.tests.common import SMSCommon
+from koda.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
+from koda.tests import tagged
 from markupsafe import Markup
 from unittest.mock import patch
 from types import SimpleNamespace

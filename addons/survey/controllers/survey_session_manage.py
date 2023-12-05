@@ -7,9 +7,9 @@ import json
 from dateutil.relativedelta import relativedelta
 from werkzeug.exceptions import NotFound
 
-from odoo import fields, http
-from odoo.http import request
-from odoo.tools import is_html_empty
+from koda import fields, http
+from koda.http import request
+from koda.tools import is_html_empty
 
 
 class UserInputSession(http.Controller):

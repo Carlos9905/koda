@@ -6,10 +6,10 @@ import datetime
 
 from freezegun import freeze_time
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail.tests.common import TestRecipients
-from odoo.tests import tagged, users
-from odoo.tools import mute_logger
+from koda.addons.mail.tests.common import MailCommon
+from koda.addons.test_mail.tests.common import TestRecipients
+from koda.tests import tagged, users
+from koda.tools import mute_logger
 
 
 class TestMailTemplateCommon(MailCommon, TestRecipients):

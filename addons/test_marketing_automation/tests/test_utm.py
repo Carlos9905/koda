@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.test_marketing_automation.tests.common import TestMACommon
-from odoo.addons.utm.tests.common import TestUTMCommon
-from odoo.exceptions import UserError
-from odoo.tests.common import tagged, users
+from koda.addons.test_marketing_automation.tests.common import TestMACommon
+from koda.addons.utm.tests.common import TestUTMCommon
+from koda.exceptions import UserError
+from koda.tests.common import tagged, users
 
 
 @tagged('post_install', '-at_install', 'utm_consistency')

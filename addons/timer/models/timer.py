@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api
-from odoo.exceptions import ValidationError
+from koda import models, fields, api
+from koda.exceptions import ValidationError
 
 class TimerTimer(models.Model):
     _name = 'timer.timer'

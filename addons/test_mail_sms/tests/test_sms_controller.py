@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.test_mail_sms.tests.test_sms_management import TestSMSActionsCommon
-from odoo.tests.common import HttpCase, JsonRpcException
-from odoo.tools import mute_logger
+from koda import Command
+from koda.addons.test_mail_sms.tests.test_sms_management import TestSMSActionsCommon
+from koda.tests.common import HttpCase, JsonRpcException
+from koda.tools import mute_logger
 
 
 class TestSmsController(HttpCase, TestSMSActionsCommon):

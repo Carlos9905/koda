@@ -8,10 +8,10 @@ from collections import defaultdict
 
 import werkzeug
 
-from odoo import api, exceptions, fields, models, _
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import is_html_empty
+from koda import api, exceptions, fields, models, _
+from koda.exceptions import AccessError, UserError, ValidationError
+from koda.osv import expression
+from koda.tools import is_html_empty
 
 
 class Survey(models.Model):

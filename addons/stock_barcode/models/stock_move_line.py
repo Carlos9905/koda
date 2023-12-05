@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models
-from odoo.tools import frozendict
+from koda import api, fields, models
+from koda.tools import frozendict
 
 
 class StockMoveLine(models.Model):

@@ -4,9 +4,9 @@
 from datetime import timedelta
 from freezegun import freeze_time
 
-from odoo.addons.test_marketing_automation.tests.common import TestMACommon
-from odoo.fields import Datetime
-from odoo.tests import tagged, users
+from koda.addons.test_marketing_automation.tests.common import TestMACommon
+from koda.fields import Datetime
+from koda.tests import tagged, users
 
 
 class ActivityTriggersCase(TestMACommon):

@@ -9,17 +9,17 @@ from itertools import product
 from markupsafe import escape, Markup
 from unittest.mock import patch
 
-from odoo import tools
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.mail.tests.common import mail_new_test_user, MailCommon
-from odoo.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE_PLAINTEXT
-from odoo.addons.test_mail.models.test_mail_models import MailTestSimple
-from odoo.addons.test_mail.tests.common import TestRecipients
-from odoo.api import call_kw
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tools import mute_logger, formataddr
-from odoo.tests.common import users
+from koda import tools
+from koda.addons.base.tests.test_ir_cron import CronMixinCase
+from koda.addons.mail.tests.common import mail_new_test_user, MailCommon
+from koda.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE_PLAINTEXT
+from koda.addons.test_mail.models.test_mail_models import MailTestSimple
+from koda.addons.test_mail.tests.common import TestRecipients
+from koda.api import call_kw
+from koda.exceptions import AccessError
+from koda.tests import tagged
+from koda.tools import mute_logger, formataddr
+from koda.tests.common import users
 
 
 class TestMessagePostCommon(MailCommon, TestRecipients):

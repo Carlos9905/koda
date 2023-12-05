@@ -3,10 +3,10 @@
 
 from unittest.mock import patch
 
-from odoo.addons.base.models.ir_mail_server import IrMailServer
-from odoo.addons.survey.tests import common
-from odoo.tests import tagged
-from odoo.tests.common import HttpCase
+from koda.addons.base.models.ir_mail_server import IrMailServer
+from koda.addons.survey.tests import common
+from koda.tests import tagged
+from koda.tests.common import HttpCase
 
 
 @tagged('-at_install', 'post_install', 'functional')

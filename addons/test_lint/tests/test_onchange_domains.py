@@ -3,7 +3,7 @@ import itertools
 import os
 
 from . import lint_case
-from odoo.tools.misc import file_open
+from koda.tools.misc import file_open
 
 class OnchangeChecker(lint_case.NodeVisitor):
     def matches_onchange(self, node):

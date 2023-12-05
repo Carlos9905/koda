@@ -7,13 +7,13 @@ from unittest.mock import patch
 from urllib.parse import urlparse
 
 import odoo
-from odoo.http import root, content_disposition
-from odoo.tests import tagged
-from odoo.tests.common import HOST, new_test_user, get_db_name, BaseCase
-from odoo.tools import config, file_path
-from odoo.addons.test_http.controllers import CT_JSON
+from koda.http import root, content_disposition
+from koda.tests import tagged
+from koda.tests.common import HOST, new_test_user, get_db_name, BaseCase
+from koda.tools import config, file_path
+from koda.addons.test_http.controllers import CT_JSON
 
-from odoo.addons.test_http.utils import TEST_IP
+from koda.addons.test_http.utils import TEST_IP
 from .test_common import TestHttpBase
 
 
@@ -129,7 +129,7 @@ class TestHttpMisc(TestHttpBase):
             })
 
     def test_misc6_upload_file_retry(self):
-        from odoo.addons.test_http import controllers  # pylint: disable=C0415
+        from koda.addons.test_http import controllers  # pylint: disable=C0415
 
         with patch.object(controllers, "should_fail", True), StringIO("Hello world!") as file:
             res = self.url_open("/test_http/upload_file", files={"ufile": file}, timeout=None)

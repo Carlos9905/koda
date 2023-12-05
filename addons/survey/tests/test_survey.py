@@ -3,10 +3,10 @@
 
 from freezegun import freeze_time
 
-from odoo import _, Command, fields
-from odoo.addons.mail.tests.common import MailCase
-from odoo.addons.survey.tests import common
-from odoo.tests.common import users
+from koda import _, Command, fields
+from koda.addons.mail.tests.common import MailCase
+from koda.addons.survey.tests import common
+from koda.tests.common import users
 
 
 class TestSurveyInternals(common.TestSurveyCommon, MailCase):

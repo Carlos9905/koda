@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import MissingError, UserError
-from odoo import Command
-from odoo.tools import mute_logger
+from koda.tests.common import TransactionCase
+from koda.exceptions import MissingError, UserError
+from koda import Command
+from koda.tools import mute_logger
 
 
 class One2manyCase(TransactionCase):

@@ -6,7 +6,7 @@ from freezegun import freeze_time
 import logging
 from unittest.mock import patch
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 _logger = logging.getLogger(__name__)

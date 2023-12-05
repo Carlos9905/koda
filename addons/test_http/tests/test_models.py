@@ -1,10 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import html
-from odoo.tests import tagged
-from odoo.tests.common import new_test_user
-from odoo.tools import mute_logger
-from odoo.addons.test_http.utils import HtmlTokenizer
+from koda.tests import tagged
+from koda.tests.common import new_test_user
+from koda.tools import mute_logger
+from koda.addons.test_http.utils import HtmlTokenizer
 
 from .test_common import TestHttpBase
 

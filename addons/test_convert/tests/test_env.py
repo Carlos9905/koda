@@ -8,9 +8,9 @@ import os.path
 from lxml import etree
 from lxml.builder import E
 
-from odoo.tests import common
-from odoo.tools import config
-from odoo.tools.convert import xml_import
+from koda.tests import common
+from koda.tools import config
+from koda.tools.convert import xml_import
 
 odoo = E.odoo
 data = E.data

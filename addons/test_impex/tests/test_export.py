@@ -5,8 +5,8 @@ import itertools
 import pstats
 from cProfile import Profile
 
-from odoo import fields, Command
-from odoo.tests import common
+from koda import fields, Command
+from koda.tests import common
 
 
 class CreatorCase(common.TransactionCase):

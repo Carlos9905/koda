@@ -2,7 +2,7 @@
 from freezegun import freeze_time
 import json
 
-from odoo.addons.spreadsheet_edition.tests.spreadsheet_test_case import (
+from koda.addons.spreadsheet_edition.tests.spreadsheet_test_case import (
     SpreadsheetTestCase,
 )
 

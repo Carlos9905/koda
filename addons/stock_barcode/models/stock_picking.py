@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import fields, models, api, _
-from odoo.tools import html2plaintext, is_html_empty
-from odoo.exceptions import UserError
+from koda import fields, models, api, _
+from koda.tools import html2plaintext, is_html_empty
+from koda.exceptions import UserError
 
 
 class StockPicking(models.Model):

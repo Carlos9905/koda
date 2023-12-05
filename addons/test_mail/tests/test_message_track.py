@@ -3,11 +3,11 @@
 
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
-from odoo.tests import Form, tagged, users
-from odoo.tools import mute_logger
+from koda import fields
+from koda.addons.mail.tests.common import MailCommon
+from koda.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
+from koda.tests import Form, tagged, users
+from koda.tools import mute_logger
 
 
 @tagged('mail_track')

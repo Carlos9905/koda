@@ -1,10 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, fields, models
+from koda import _, fields, models
 
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.float_utils import float_round
-from odoo.tools.misc import groupby
+from koda.exceptions import UserError, ValidationError
+from koda.tools.float_utils import float_round
+from koda.tools.misc import groupby
 
 from .delivery_request_objects import DeliveryCommodity, DeliveryPackage
 

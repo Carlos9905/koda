@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.survey.controllers.main import Survey
-from odoo.addons.survey.tests import common
-from odoo.addons.website.tools import MockRequest
+from koda.addons.survey.controllers.main import Survey
+from koda.addons.survey.tests import common
+from koda.addons.website.tools import MockRequest
 
 
 class TestSurveyResults(common.TestSurveyResultsCommon):
