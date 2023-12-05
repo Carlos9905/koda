@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from dateutil.relativedelta import relativedelta
 from math import ceil

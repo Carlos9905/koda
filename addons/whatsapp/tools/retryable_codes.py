@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 # Retryable error codes
 WHATSAPP_RETRYABLE_ERROR_CODES = {

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.tests.common import HttpCase
 from koda.addons.sale_product_configurator.tests.common import TestProductConfiguratorCommon

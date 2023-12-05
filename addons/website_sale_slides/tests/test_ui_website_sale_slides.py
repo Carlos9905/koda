@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import fields, tests
 from koda.addons.website_slides.tests import test_ui_wslides
