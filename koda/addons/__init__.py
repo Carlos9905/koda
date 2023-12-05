@@ -10,7 +10,7 @@ Addons are made available under `odoo.addons` after
 odoo.tools.config.parse_config() is called (so that the addons paths are
 known).
 
-This module also conveniently reexports some symbols from odoo.modules.
+This module also conveniently reexports some symbols from koda.modules.
 Importing them from here is deprecated.
 
 """

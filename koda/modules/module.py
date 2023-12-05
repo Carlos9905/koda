@@ -207,7 +207,7 @@ def initialize_sys_path():
         if os.path.isdir(up) and up not in upgrade.__path__:
             upgrade.__path__.append(up)
 
-    # create decrecated module alias from odoo.addons.base.maintenance.migrations to odoo.upgrade
+    # create decrecated module alias from koda.addons.base.maintenance.migrations to odoo.upgrade
     spec = importlib.machinery.ModuleSpec("odoo.addons.base.maintenance", None, is_package=True)
     maintenance_pkg = importlib.util.module_from_spec(spec)
     maintenance_pkg.migrations = upgrade

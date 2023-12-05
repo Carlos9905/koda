@@ -2871,7 +2871,7 @@ def tagged(*tags):
 
     A tag prefixed by '-' will remove the tag e.g. to remove the 'standard' tag.
 
-    By default, all Test classes from odoo.tests.common have a test_tags
+    By default, all Test classes from koda.tests.common have a test_tags
     attribute that defaults to 'standard' and 'at_install'.
 
     When using class inheritance, the tags ARE inherited.

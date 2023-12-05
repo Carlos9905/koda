@@ -96,7 +96,7 @@ else:
     import win32serviceutil as wsu
 
     from contextlib import contextmanager
-    from odoo.release import nt_service_name
+    from koda.release import nt_service_name
 
     def is_running_as_nt_service():
         @contextmanager

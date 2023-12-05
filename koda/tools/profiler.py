@@ -590,7 +590,7 @@ class Profiler:
 
             if self.db:
                 # pylint: disable=import-outside-toplevel
-                from koda.sql_db import db_connect  # only import from odoo if/when needed.
+                from koda.sql_db import db_connect  # only import from koda if/when needed.
                 with db_connect(self.db).cursor() as cr:
                     values = {
                         "name": self.description,
