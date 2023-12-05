@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': 'PoS Order Tracking Customer Display',
     'version': '1.0.0',

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.hr_expense.tests.common import TestExpenseCommon
 from koda.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon

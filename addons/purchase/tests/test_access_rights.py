@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.addons.account.tests.common import AccountTestInvoicingCommon
 from koda.tests import Form, tagged
 from koda.exceptions import AccessError

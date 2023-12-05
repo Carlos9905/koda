@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.project.tests.test_access_rights import TestProjectPortalCommon
 from koda.exceptions import AccessError

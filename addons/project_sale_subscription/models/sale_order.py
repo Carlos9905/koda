@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import models
 from koda.addons.sale_subscription.models.sale_order import SUBSCRIPTION_PROGRESS_STATE

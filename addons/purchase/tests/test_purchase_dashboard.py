@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from datetime import timedelta
 from koda.addons.account.tests.common import AccountTestInvoicingCommon
 from koda.addons.mail.tests.common import MailCase
