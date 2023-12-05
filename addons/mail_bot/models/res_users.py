@@ -3,7 +3,7 @@
 
 from markupsafe import Markup
 
-from odoo import models, fields, _
+from koda import models, fields, _
 
 class Users(models.Model):
     _inherit = 'res.users'

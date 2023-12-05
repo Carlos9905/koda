@@ -1,6 +1,6 @@
 
 
-from odoo import models
+from koda import models
 
 
 class StockValuationLayer(models.Model):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Command
-from odoo.tests import Form, tagged
-from odoo.addons.partner_commission.tests.setup import TestCommissionsSetup
+from koda.fields import Command
+from koda.tests import Form, tagged
+from koda.addons.partner_commission.tests.setup import TestCommissionsSetup
 
 
 @tagged('commission_sale', 'post_install', '-at_install')

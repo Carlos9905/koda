@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from . import common
-from odoo.exceptions import UserError
-from odoo.tests import Form
+from koda.exceptions import UserError
+from koda.tests import Form
 
 
 class TestWarehouseMrp(common.TestMrpCommon):

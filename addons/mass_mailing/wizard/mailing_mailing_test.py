@@ -3,8 +3,8 @@
 
 from markupsafe import Markup
 
-from odoo import _, fields, models, tools
-from odoo.tools.misc import file_open
+from koda import _, fields, models, tools
+from koda.tools.misc import file_open
 
 
 class TestMassMailing(models.TransientModel):

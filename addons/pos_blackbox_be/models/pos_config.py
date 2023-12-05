@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api
-from odoo.exceptions import UserError
-from odoo.exceptions import ValidationError
-from odoo.tools.translate import _
+from koda import models, fields, api
+from koda.exceptions import UserError
+from koda.exceptions import ValidationError
+from koda.tools.translate import _
 
 
 class PosConfig(models.Model):

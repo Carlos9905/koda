@@ -3,8 +3,8 @@
 
 import odoo
 import time
-from odoo import fields
-from odoo.tests import common
+from koda import fields
+from koda.tests import common
 
 class TestAngloSaxonCommon(common.TransactionCase):
 

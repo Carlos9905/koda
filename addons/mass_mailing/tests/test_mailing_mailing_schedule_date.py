@@ -4,10 +4,10 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.mass_mailing.tests.common import MassMailCommon
-from odoo.tests import users, Form
-from odoo.tools import mute_logger
+from koda.addons.base.tests.test_ir_cron import CronMixinCase
+from koda.addons.mass_mailing.tests.common import MassMailCommon
+from koda.tests import users, Form
+from koda.tools import mute_logger
 
 
 class TestMailingScheduleDateWizard(MassMailCommon, CronMixinCase):

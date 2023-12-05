@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.api import model
+from koda.api import model
 from typing import Iterator, Mapping
 from collections import abc
-from odoo.tools import ReadonlyDict
-from odoo.addons.microsoft_calendar.utils.event_id_storage import combine_ids
+from koda.tools import ReadonlyDict
+from koda.addons.microsoft_calendar.utils.event_id_storage import combine_ids
 
 
 class MicrosoftEvent(abc.Set):

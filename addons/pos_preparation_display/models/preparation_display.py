@@ -1,8 +1,8 @@
 import secrets
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
 
-from odoo.addons.pos_preparation_display.models.preparation_display_orderline import PosPreparationDisplayOrderline
+from koda.addons.pos_preparation_display.models.preparation_display_orderline import PosPreparationDisplayOrderline
 
 class PosPreparationDisplay(models.Model):
     _name = 'pos_preparation_display.display'

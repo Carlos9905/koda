@@ -10,12 +10,12 @@ import psycopg2
 from dateutil import relativedelta
 from markupsafe import Markup
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import consteq, format_amount, ustr
-from odoo.tools.misc import hmac as hmac_tool
+from koda import _, api, fields, models
+from koda.exceptions import UserError, ValidationError
+from koda.tools import consteq, format_amount, ustr
+from koda.tools.misc import hmac as hmac_tool
 
-from odoo.addons.payment import utils as payment_utils
+from koda.addons.payment import utils as payment_utils
 
 _logger = logging.getLogger(__name__)
 

@@ -3,8 +3,8 @@
 
 import datetime
 
-from odoo import api, fields, models
-from odoo.tools.sql import column_exists, create_column
+from koda import api, fields, models
+from koda.tools.sql import column_exists, create_column
 
 
 class StockMoveLine(models.Model):

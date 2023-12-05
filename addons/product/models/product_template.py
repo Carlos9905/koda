@@ -5,9 +5,9 @@ import itertools
 import logging
 from collections import defaultdict
 
-from odoo import api, fields, models, tools, _, SUPERUSER_ID
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
+from koda import api, fields, models, tools, _, SUPERUSER_ID
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
 
 _logger = logging.getLogger(__name__)
 PRICE_CONTEXT_KEYS = ['pricelist', 'quantity', 'uom', 'date']

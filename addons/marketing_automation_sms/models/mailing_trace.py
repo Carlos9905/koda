@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
-from odoo.fields import Datetime
+from koda import models, _
+from koda.fields import Datetime
 
 
 class MailingTrace(models.Model):

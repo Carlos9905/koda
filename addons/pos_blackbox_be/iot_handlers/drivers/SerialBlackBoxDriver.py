@@ -4,9 +4,9 @@
 import logging
 import serial
 
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.iot_handlers.drivers.SerialBaseDriver import SerialDriver, SerialProtocol, serial_connection
+from koda.addons.hw_drivers.tools import helpers
+from koda.addons.hw_drivers.event_manager import event_manager
+from koda.addons.hw_drivers.iot_handlers.drivers.SerialBaseDriver import SerialDriver, SerialProtocol, serial_connection
 
 _logger = logging.getLogger(__name__)
 

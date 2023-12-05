@@ -3,8 +3,8 @@
 import logging
 import pprint
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError
+from koda import _, fields, models
+from koda.exceptions import UserError
 
 from .authorize_request import AuthorizeAPI
 

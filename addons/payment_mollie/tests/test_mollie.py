@@ -2,12 +2,12 @@
 
 from unittest.mock import patch
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_mollie.controllers.main import MollieController
-from odoo.addons.payment_mollie.tests.common import MollieCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.payment_mollie.controllers.main import MollieController
+from koda.addons.payment_mollie.tests.common import MollieCommon
 
 
 @tagged('post_install', '-at_install')

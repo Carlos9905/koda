@@ -3,7 +3,7 @@
 
 import time
 
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 class TestCommon(TransactionCase):
     def setUp(self):

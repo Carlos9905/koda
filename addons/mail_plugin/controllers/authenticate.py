@@ -9,8 +9,8 @@ import logging
 import odoo
 import werkzeug
 
-from odoo import _, http
-from odoo.http import request
+from koda import _, http
+from koda.http import request
 from werkzeug.exceptions import NotFound
 
 _logger = logging.getLogger(__name__)

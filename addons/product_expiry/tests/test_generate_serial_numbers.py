@@ -3,9 +3,9 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.addons.stock.tests.test_generate_serial_numbers import StockGenerateCommon
-from odoo.tests.common import Form
-from odoo.tools.misc import get_lang
+from koda.addons.stock.tests.test_generate_serial_numbers import StockGenerateCommon
+from koda.tests.common import Form
+from koda.tools.misc import get_lang
 
 
 class TestStockLot(StockGenerateCommon):

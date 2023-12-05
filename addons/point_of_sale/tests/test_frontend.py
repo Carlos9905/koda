@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.api import Environment
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.addons.account.tests.common import AccountTestInvoicingHttpCommon
-from odoo.addons.point_of_sale.tests.common_setup_methods import setup_pos_combo_items
+from koda import Command
+from koda.api import Environment
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT
+from koda.addons.account.tests.common import AccountTestInvoicingHttpCommon
+from koda.addons.point_of_sale.tests.common_setup_methods import setup_pos_combo_items
 from datetime import date, timedelta
-from odoo.addons.point_of_sale.tests.common import archive_products
+from koda.addons.point_of_sale.tests.common import archive_products
 
 import odoo.tests
 

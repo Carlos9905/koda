@@ -2,10 +2,10 @@
 
 from unittest.mock import patch
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.addons.payment import utils as payment_utils
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 from .common import AuthorizeCommon
 

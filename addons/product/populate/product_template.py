@@ -4,8 +4,8 @@ import logging
 from collections import defaultdict
 from functools import reduce
 
-from odoo import models
-from odoo.tools import populate
+from koda import models
+from koda.tools import populate
 
 _logger = logging.getLogger(__name__)
 

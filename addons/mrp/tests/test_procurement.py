@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
 
-from odoo import fields
-from odoo.tests import Form
-from odoo.addons.mrp.tests.common import TestMrpCommon
-from odoo.exceptions import UserError
+from koda import fields
+from koda.tests import Form
+from koda.addons.mrp.tests.common import TestMrpCommon
+from koda.exceptions import UserError
 
 
 class TestProcurement(TestMrpCommon):

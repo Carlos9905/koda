@@ -3,8 +3,8 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, _
-from odoo.fields import Datetime
+from koda import fields, models, _
+from koda.fields import Datetime
 
 
 class MarketingTrace(models.Model):

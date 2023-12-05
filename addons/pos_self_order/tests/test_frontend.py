@@ -5,8 +5,8 @@ import json
 from uuid import uuid4
 
 import odoo.tests
-from odoo.addons.pos_self_order.tests.self_order_common_test import SelfOrderCommonTest
-from odoo import Command
+from koda.addons.pos_self_order.tests.self_order_common_test import SelfOrderCommonTest
+from koda import Command
 
 
 @odoo.tests.tagged("post_install", "-at_install")

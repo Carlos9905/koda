@@ -2,9 +2,9 @@
 import re
 import uuid
 from datetime import timedelta
-from odoo import http, fields
-from odoo.http import request
-from odoo.tools import float_round
+from koda import http, fields
+from koda.http import request
+from koda.tools import float_round
 from werkzeug.exceptions import NotFound, BadRequest, Unauthorized
 
 class PosSelfOrderController(http.Controller):

@@ -4,13 +4,13 @@ import logging
 
 from werkzeug import urls
 
-from odoo import _, api, models
-from odoo.exceptions import ValidationError
+from koda import _, api, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_aps import utils as aps_utils
-from odoo.addons.payment_aps.const import PAYMENT_STATUS_MAPPING
-from odoo.addons.payment_aps.controllers.main import APSController
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_aps import utils as aps_utils
+from koda.addons.payment_aps.const import PAYMENT_STATUS_MAPPING
+from koda.addons.payment_aps.controllers.main import APSController
 
 
 _logger = logging.getLogger(__name__)

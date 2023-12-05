@@ -2,8 +2,8 @@
 
 from markupsafe import Markup
 
-from odoo.addons.mrp_workorder.tests.common import TestMrpWorkorderCommon
-from odoo.tests import Form, HttpCase, tagged
+from koda.addons.mrp_workorder.tests.common import TestMrpWorkorderCommon
+from koda.tests import Form, HttpCase, tagged
 
 
 class TestWorkorderClientActionCommon(TestMrpWorkorderCommon):

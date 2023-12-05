@@ -5,7 +5,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from dateutil.rrule import MO
 
-from odoo.tests import HttpCase
+from koda.tests import HttpCase
 
 
 class TestUiCommon(HttpCase):

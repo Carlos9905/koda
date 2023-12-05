@@ -3,11 +3,11 @@
 
 from datetime import datetime, timedelta
 
-from odoo.addons.mass_mailing.tests.common import MassMailCommon
-from odoo.tests import users, tagged
-from odoo.tools import mute_logger
-from odoo.tests.common import Form
-from odoo import fields
+from koda.addons.mass_mailing.tests.common import MassMailCommon
+from koda.tests import users, tagged
+from koda.tools import mute_logger
+from koda.tests.common import Form
+from koda import fields
 
 
 @tagged('post_install', '-at_install')

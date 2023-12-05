@@ -2,11 +2,11 @@
 
 from unittest.mock import patch
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_mercado_pago.tests.common import MercadoPagoCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.payment_mercado_pago.tests.common import MercadoPagoCommon
 
 
 @tagged('post_install', '-at_install')

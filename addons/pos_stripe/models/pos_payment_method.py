@@ -4,8 +4,8 @@ import logging
 import requests
 import werkzeug
 
-from odoo import fields, models, api, _
-from odoo.exceptions import ValidationError, UserError, AccessError
+from koda import fields, models, api, _
+from koda.exceptions import ValidationError, UserError, AccessError
 
 _logger = logging.getLogger(__name__)
 TIMEOUT = 10

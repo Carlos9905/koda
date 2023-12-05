@@ -1,4 +1,4 @@
-from odoo import fields, models, Command, api
+from koda import fields, models, Command, api
 
 
 class PosPreparationDisplayOrder(models.Model):

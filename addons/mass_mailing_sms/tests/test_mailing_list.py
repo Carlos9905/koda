@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mass_mailing_sms.tests.common import MassSMSCommon
-from odoo.tests.common import Form, users
+from koda.addons.mass_mailing_sms.tests.common import MassSMSCommon
+from koda.tests.common import Form, users
 
 
 class TestMailingListSms(MassSMSCommon):

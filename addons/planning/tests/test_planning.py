@@ -3,14 +3,14 @@
 from datetime import datetime, time, timedelta
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
-from odoo import fields
-from odoo.exceptions import ValidationError
-from odoo.tests.common import Form
-from odoo.tests import new_test_user
+from koda import fields
+from koda.exceptions import ValidationError
+from koda.tests.common import Form
+from koda.tests import new_test_user
 
-from odoo.addons.mail.tests.common import MockEmail
+from koda.addons.mail.tests.common import MockEmail
 from .common import TestCommonPlanning
 
 class TestPlanning(TestCommonPlanning, MockEmail):

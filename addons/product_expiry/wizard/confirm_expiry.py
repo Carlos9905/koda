@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 
 class ConfirmExpiry(models.TransientModel):

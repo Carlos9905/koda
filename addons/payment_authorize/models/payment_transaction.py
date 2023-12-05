@@ -3,12 +3,12 @@
 import logging
 import pprint
 
-from odoo import _, models
-from odoo.exceptions import UserError, ValidationError
+from koda import _, models
+from koda.exceptions import UserError, ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_authorize.models.authorize_request import AuthorizeAPI
-from odoo.addons.payment_authorize.const import PAYMENT_METHODS_MAPPING, TRANSACTION_STATUS_MAPPING
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_authorize.models.authorize_request import AuthorizeAPI
+from koda.addons.payment_authorize.const import PAYMENT_METHODS_MAPPING, TRANSACTION_STATUS_MAPPING
 
 
 _logger = logging.getLogger(__name__)

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import HttpCase, tagged
-from odoo import tools
+from koda.tests import HttpCase, tagged
+from koda import tools
 
 
 @tagged('post_install', '-at_install')

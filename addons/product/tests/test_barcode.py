@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
-from odoo.tests import TransactionCase, tagged
+from koda.exceptions import ValidationError
+from koda.fields import Command
+from koda.tests import TransactionCase, tagged
 
 
 @tagged('post_install', '-at_install')

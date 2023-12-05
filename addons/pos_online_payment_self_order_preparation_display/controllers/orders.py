@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.pos_self_order_preparation_display.controllers.orders import PosSelfOrderPreparationDisplayController
+from koda.addons.pos_self_order_preparation_display.controllers.orders import PosSelfOrderPreparationDisplayController
 
 class PosOnlineSelfOrderPreparationDisplayController(PosSelfOrderPreparationDisplayController):
     def _get_self_payment_methods(self, pos_config):

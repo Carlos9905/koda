@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import http
-from odoo.addons.pos_self_order.controllers.orders import PosSelfOrderController
+from koda import http
+from koda.addons.pos_self_order.controllers.orders import PosSelfOrderController
 
 class PosSelfOrderPreparationDisplayController(PosSelfOrderController):
     @http.route()

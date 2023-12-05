@@ -5,7 +5,7 @@ import logging
 import pprint
 from uuid import uuid4
 
-from odoo.addons.payment import utils as payment_utils
+from koda.addons.payment import utils as payment_utils
 
 import requests
 

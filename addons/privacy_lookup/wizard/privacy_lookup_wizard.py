@@ -3,9 +3,9 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError
-from odoo.tools import pycompat
+from koda import api, fields, models, tools, _
+from koda.exceptions import UserError
+from koda.tools import pycompat
 
 
 class PrivacyLookupWizard(models.TransientModel):

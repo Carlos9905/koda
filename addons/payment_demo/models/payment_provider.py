@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from koda import _, api, fields, models
+from koda.exceptions import UserError
 
-from odoo.addons.payment_demo import const
+from koda.addons.payment_demo import const
 
 
 class PaymentProvider(models.Model):

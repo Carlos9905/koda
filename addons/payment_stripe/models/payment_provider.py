@@ -7,13 +7,13 @@ import uuid
 import requests
 from werkzeug.urls import url_encode, url_join, url_parse
 
-from odoo import _, api, fields, models
-from odoo.exceptions import RedirectWarning, UserError, ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import RedirectWarning, UserError, ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_stripe import const, utils as stripe_utils
-from odoo.addons.payment_stripe.controllers.main import StripeController
-from odoo.addons.payment_stripe.controllers.onboarding import OnboardingController
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_stripe import const, utils as stripe_utils
+from koda.addons.payment_stripe.controllers.main import StripeController
+from koda.addons.payment_stripe.controllers.onboarding import OnboardingController
 
 
 _logger = logging.getLogger(__name__)

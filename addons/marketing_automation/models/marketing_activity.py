@@ -9,11 +9,11 @@ from ast import literal_eval
 from datetime import timedelta, date, datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.fields import Datetime
-from odoo.exceptions import ValidationError, AccessError
-from odoo.osv import expression
-from odoo.tools.misc import clean_context
+from koda import api, fields, models, _
+from koda.fields import Datetime
+from koda.exceptions import ValidationError, AccessError
+from koda.osv import expression
+from koda.tools.misc import clean_context
 
 _logger = logging.getLogger(__name__)
 

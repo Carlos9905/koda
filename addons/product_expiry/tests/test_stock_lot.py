@@ -4,10 +4,10 @@
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.tests.common import Form
+from koda import fields
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.stock.tests.common import TestStockCommon
+from koda.tests.common import Form
 
 
 class TestStockLot(TestStockCommon):

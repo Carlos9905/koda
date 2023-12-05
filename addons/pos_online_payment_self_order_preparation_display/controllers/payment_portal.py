@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo.http import request
-from odoo.addons.pos_online_payment.controllers.payment_portal import PaymentPortal
+from koda.http import request
+from koda.addons.pos_online_payment.controllers.payment_portal import PaymentPortal
 
 class PosSelfOrderPaymentPortal(PaymentPortal):
 

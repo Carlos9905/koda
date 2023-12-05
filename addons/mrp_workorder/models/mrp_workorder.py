@@ -7,12 +7,12 @@ from collections import defaultdict
 from datetime import datetime
 from pytz import utc
 
-from odoo import Command, api, fields, models, _
-from odoo.addons.web.controllers.utils import clean_action
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_compare, float_is_zero, relativedelta
-from odoo.addons.resource.models.utils import Intervals, sum_intervals, string_to_datetime
-from odoo.http import request
+from koda import Command, api, fields, models, _
+from koda.addons.web.controllers.utils import clean_action
+from koda.exceptions import UserError, ValidationError
+from koda.tools import float_compare, float_is_zero, relativedelta
+from koda.addons.resource.models.utils import Intervals, sum_intervals, string_to_datetime
+from koda.http import request
 
 
 class MrpProductionWorkcenterLine(models.Model):

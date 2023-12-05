@@ -7,10 +7,10 @@ from functools import partial
 from pytz import timezone
 from random import randint
 
-from odoo import api, exceptions, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.addons.resource.models.utils import make_aware, Intervals
-from odoo.tools.float_utils import float_compare
+from koda import api, exceptions, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.addons.resource.models.utils import make_aware, Intervals
+from koda.tools.float_utils import float_compare
 
 
 class MrpWorkcenter(models.Model):

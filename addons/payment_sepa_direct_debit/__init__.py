@@ -3,7 +3,7 @@
 from . import controllers
 from . import models
 
-from odoo.addons.payment import reset_payment_provider
+from koda.addons.payment import reset_payment_provider
 
 
 def uninstall_hook(env):

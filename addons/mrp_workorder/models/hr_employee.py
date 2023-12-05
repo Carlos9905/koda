@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import models
-from odoo.http import request
+from koda import models
+from koda.http import request
 from datetime import datetime
 
 EMPLOYEES_CONNECTED = "employees_connected"

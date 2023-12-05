@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 import datetime
-from odoo import api, fields, models, SUPERUSER_ID, _
+from koda import api, fields, models, SUPERUSER_ID, _
 
 
 class StockLot(models.Model):

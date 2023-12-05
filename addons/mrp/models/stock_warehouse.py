@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import split_every
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError, UserError
+from koda.tools import split_every
 
 
 class StockWarehouse(models.Model):

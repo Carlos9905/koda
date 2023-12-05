@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged, TransactionCase
-from odoo.tools import float_compare
+from koda.tests import tagged, TransactionCase
+from koda.tools import float_compare
 
 
 @tagged('post_install', '-at_install')

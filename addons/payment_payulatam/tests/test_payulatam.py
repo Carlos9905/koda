@@ -5,14 +5,14 @@ from unittest.mock import patch
 from freezegun import freeze_time
 from werkzeug.exceptions import Forbidden
 
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.exceptions import ValidationError
+from koda.fields import Command
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_payulatam.controllers.main import PayuLatamController
-from odoo.addons.payment_payulatam.tests.common import PayULatamCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.payment_payulatam.controllers.main import PayuLatamController
+from koda.addons.payment_payulatam.tests.common import PayULatamCommon
 
 
 @tagged('post_install', '-at_install')

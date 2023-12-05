@@ -6,10 +6,10 @@ import json
 from collections import defaultdict
 from datetime import timedelta
 
-from odoo import api, Command, fields, models, _, _lt
-from odoo.addons.rating.models import rating_data
-from odoo.exceptions import UserError
-from odoo.tools import get_lang, SQL
+from koda import api, Command, fields, models, _, _lt
+from koda.addons.rating.models import rating_data
+from koda.exceptions import UserError
+from koda.tools import get_lang, SQL
 from .project_update import STATUS_COLOR
 from .project_task import CLOSED_STATES
 

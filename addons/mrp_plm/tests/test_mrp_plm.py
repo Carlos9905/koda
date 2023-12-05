@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from .test_common import TestPlmCommon
-from odoo import Command
-from odoo.tests import Form
+from koda import Command
+from koda.tests import Form
 
 class TestMrpPlm(TestPlmCommon):
 

@@ -4,8 +4,8 @@
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, fields, models
-from odoo.tools import formatLang, format_date
+from koda import _, fields, models
+from koda.tools import formatLang, format_date
 
 
 class AccountMove(models.Model):

@@ -4,9 +4,9 @@
 import json
 from unittest.mock import Mock, patch
 
-from odoo.addons.iap.tools import iap_tools
-from odoo.addons.mail_plugin.tests.common import TestMailPluginControllerCommon, mock_auth_method_outlook
-from odoo.exceptions import AccessError
+from koda.addons.iap.tools import iap_tools
+from koda.addons.mail_plugin.tests.common import TestMailPluginControllerCommon, mock_auth_method_outlook
+from koda.exceptions import AccessError
 
 
 class TestMailPluginController(TestMailPluginControllerCommon):

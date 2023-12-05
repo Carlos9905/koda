@@ -4,12 +4,12 @@
 from werkzeug import urls
 from werkzeug.exceptions import NotFound, Forbidden
 
-from odoo import http
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import consteq, plaintext2html
-from odoo.addons.mail.controllers import mail
-from odoo.exceptions import AccessError
+from koda import http
+from koda.http import request
+from koda.osv import expression
+from koda.tools import consteq, plaintext2html
+from koda.addons.mail.controllers import mail
+from koda.exceptions import AccessError
 
 
 def _check_special_access(res_model, res_id, token='', _hash='', pid=False):

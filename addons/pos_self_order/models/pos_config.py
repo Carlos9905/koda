@@ -8,11 +8,11 @@ from os.path import join as opj
 from PIL import Image
 from typing import Optional, List, Dict
 from werkzeug.urls import url_quote
-from odoo.exceptions import UserError
-from odoo.tools import image_to_base64
+from koda.exceptions import UserError
+from koda.tools import image_to_base64
 
-from odoo import api, fields, models, _, service, Command
-from odoo.tools import file_open, split_every
+from koda import api, fields, models, _, service, Command
+from koda.tools import file_open, split_every
 
 
 class PosConfig(models.Model):

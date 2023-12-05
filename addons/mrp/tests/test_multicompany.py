@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import common, Form
-from odoo.exceptions import UserError
+from koda.tests import common, Form
+from koda.exceptions import UserError
 
 
 class TestMrpMulticompany(common.TransactionCase):

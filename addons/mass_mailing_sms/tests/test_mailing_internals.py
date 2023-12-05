@@ -3,8 +3,8 @@
 
 from ast import literal_eval
 
-from odoo.addons.mass_mailing_sms.tests.common import MassSMSCommon
-from odoo.tests.common import users
+from koda.addons.mass_mailing_sms.tests.common import MassSMSCommon
+from koda.tests.common import users
 
 
 class TestMassMailValues(MassSMSCommon):

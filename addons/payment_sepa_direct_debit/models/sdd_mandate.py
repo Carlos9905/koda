@@ -5,8 +5,8 @@ import re
 from markupsafe import Markup
 from random import randint
 
-from odoo import SUPERUSER_ID, _, fields, models
-from odoo.exceptions import ValidationError
+from koda import SUPERUSER_ID, _, fields, models
+from koda.exceptions import ValidationError
 
 
 _logger = logging.getLogger(__name__)

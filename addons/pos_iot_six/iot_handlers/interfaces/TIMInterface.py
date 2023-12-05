@@ -8,9 +8,9 @@ import logging
 import subprocess
 from platform import system
 
-from odoo.addons.hw_drivers.interface import Interface
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.tools.misc import file_path
+from koda.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.tools import helpers
+from koda.tools.misc import file_path
 
 _logger = logging.getLogger(__name__)
 

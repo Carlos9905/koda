@@ -3,9 +3,9 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests.common import Form, tagged
-from odoo.addons.partner_commission.tests.setup import TestCommissionsSetup
-from odoo import fields
+from koda.tests.common import Form, tagged
+from koda.addons.partner_commission.tests.setup import TestCommissionsSetup
+from koda import fields
 
 
 @tagged('commission_subscription')

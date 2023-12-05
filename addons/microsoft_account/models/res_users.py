@@ -4,7 +4,7 @@
 from datetime import timedelta
 
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 
 class User(models.Model):

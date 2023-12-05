@@ -3,7 +3,7 @@
 
 from collections import defaultdict
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class MrpCostStructure(models.AbstractModel):

@@ -3,9 +3,9 @@
 
 import odoo
 
-from odoo import Command
-from odoo.addons.point_of_sale.tests.common import TestPoSCommon
-from odoo.tests.common import Form
+from koda import Command
+from koda.addons.point_of_sale.tests.common import TestPoSCommon
+from koda.tests.common import Form
 
 
 @odoo.tests.tagged('post_install', '-at_install')

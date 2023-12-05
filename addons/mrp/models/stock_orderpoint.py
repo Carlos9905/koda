@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.tools.float_utils import float_is_zero
-from odoo.osv.expression import AND
+from koda import _, api, fields, models
+from koda.tools.float_utils import float_is_zero
+from koda.osv.expression import AND
 from dateutil.relativedelta import relativedelta
 
 

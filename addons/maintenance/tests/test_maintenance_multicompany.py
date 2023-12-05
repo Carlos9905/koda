@@ -3,8 +3,8 @@
 
 import time
 
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import AccessError
+from koda.tests.common import TransactionCase
+from koda.exceptions import AccessError
 
 
 class TestEquipmentMulticompany(TransactionCase):

@@ -4,12 +4,12 @@
 import time
 from psycopg2 import IntegrityError
 
-from odoo.exceptions import UserError, ValidationError
-from odoo.fields import Command
-from odoo.tests import tagged, TransactionCase
-from odoo.tools import mute_logger
+from koda.exceptions import UserError, ValidationError
+from koda.fields import Command
+from koda.tests import tagged, TransactionCase
+from koda.tools import mute_logger
 
-from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT
+from koda.addons.base.tests.common import DISABLED_MAIL_CONTEXT
 
 
 class TestProductAttributeValueCommon(TransactionCase):

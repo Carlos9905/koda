@@ -1,6 +1,6 @@
-from odoo import api, fields, models, _
-from odoo.tools import formatLang, float_is_zero
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.tools import formatLang, float_is_zero
+from koda.exceptions import ValidationError
 
 
 class PosPayment(models.Model):

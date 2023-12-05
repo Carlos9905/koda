@@ -3,7 +3,7 @@
 
 import json
 
-from odoo import api, fields, models, modules, _
+from koda import api, fields, models, modules, _
 
 
 class Users(models.Model):

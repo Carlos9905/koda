@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
-from odoo import api, fields, models
+from koda import api, fields, models
 
 class ProjectStageDelete(models.TransientModel):
     _name = 'project.project.stage.delete.wizard'

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.http import request
-from odoo.tools import format_datetime
+from koda import models
+from koda.http import request
+from koda.tools import format_datetime
 
 
 class MailMessage(models.Model):

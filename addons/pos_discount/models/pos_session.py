@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import models
-from odoo.osv.expression import OR
+from koda import models
+from koda.osv.expression import OR
 
 
 class PosSession(models.Model):

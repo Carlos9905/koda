@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import json
 
-from odoo import models, api, fields
+from koda import models, api, fields
 
 
 class MrpBom(models.Model):

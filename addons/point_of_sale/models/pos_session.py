@@ -6,11 +6,11 @@ from datetime import timedelta
 from itertools import groupby
 from markupsafe import Markup, escape
 
-from odoo import api, fields, models, _, Command
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.tools import float_is_zero, float_compare, convert
-from odoo.service.common import exp_version
-from odoo.osv.expression import AND
+from koda import api, fields, models, _, Command
+from koda.exceptions import AccessError, UserError, ValidationError
+from koda.tools import float_is_zero, float_compare, convert
+from koda.service.common import exp_version
+from koda.osv.expression import AND
 
 
 class PosSession(models.Model):

@@ -4,12 +4,12 @@ import logging
 
 from werkzeug import urls
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_paypal.const import PAYMENT_STATUS_MAPPING
-from odoo.addons.payment_paypal.controllers.main import PaypalController
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_paypal.const import PAYMENT_STATUS_MAPPING
+from koda.addons.payment_paypal.controllers.main import PaypalController
 
 _logger = logging.getLogger(__name__)
 

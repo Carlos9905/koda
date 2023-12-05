@@ -4,13 +4,13 @@
 from unittest.mock import patch
 import threading
 
-from odoo import tools, Command, fields
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.pos_online_payment.models.pos_order import PosOrder
-from odoo.addons.pos_online_payment.tests.online_payment_common import OnlinePaymentCommon
-from odoo.addons.account.models.account_payment_method import AccountPaymentMethod
-from odoo.osv.expression import AND
-from odoo.addons.point_of_sale.tests.common import archive_products
+from koda import tools, Command, fields
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.pos_online_payment.models.pos_order import PosOrder
+from koda.addons.pos_online_payment.tests.online_payment_common import OnlinePaymentCommon
+from koda.addons.account.models.account_payment_method import AccountPaymentMethod
+from koda.osv.expression import AND
+from koda.addons.point_of_sale.tests.common import archive_products
 
 import odoo.tests
 

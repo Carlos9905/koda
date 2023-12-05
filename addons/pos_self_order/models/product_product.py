@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from typing import List, Dict, Optional
 
-from odoo import api, models, fields
+from koda import api, models, fields
 
-from odoo.addons.point_of_sale.models.pos_config import PosConfig
+from koda.addons.point_of_sale.models.pos_config import PosConfig
 
 
 class ProductTemplate(models.Model):

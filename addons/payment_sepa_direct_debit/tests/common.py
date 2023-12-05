@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
+from koda import fields
 
-from odoo.addons.account_payment.tests.common import AccountPaymentCommon
-from odoo.addons.payment_custom.tests.common import PaymentCustomCommon
+from koda.addons.account_payment.tests.common import AccountPaymentCommon
+from koda.addons.payment_custom.tests.common import PaymentCustomCommon
 
 
 class SepaDirectDebitCommon(AccountPaymentCommon, PaymentCustomCommon):

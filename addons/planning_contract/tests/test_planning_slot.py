@@ -3,9 +3,9 @@
 from datetime import datetime
 from pytz import UTC, timezone
 
-from odoo.addons.resource.models.utils import Intervals
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
+from koda.addons.resource.models.utils import Intervals
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
 
 @tagged('post_install', '-at_install')
 class TestPlanningContract(TransactionCase):

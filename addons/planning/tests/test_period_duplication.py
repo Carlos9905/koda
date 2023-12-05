@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 
 from datetime import datetime
-from odoo.addons.planning.tests.common import TestCommonPlanning
+from koda.addons.planning.tests.common import TestCommonPlanning
 
 
 class TestPeriodDuplication(TestCommonPlanning):

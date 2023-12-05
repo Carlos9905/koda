@@ -3,7 +3,7 @@
 from random import randint
 
 from datetime import datetime, time, timedelta
-from odoo import api, fields, models
+from koda import api, fields, models
 
 class ResourceResource(models.Model):
     _inherit = 'resource.resource'

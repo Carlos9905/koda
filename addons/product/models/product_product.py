@@ -5,11 +5,11 @@ import re
 from collections import defaultdict
 from operator import itemgetter
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
-from odoo.tools import float_compare, groupby
-from odoo.tools.misc import unique
+from koda import api, fields, models, tools, _
+from koda.exceptions import ValidationError
+from koda.osv import expression
+from koda.tools import float_compare, groupby
+from koda.tools.misc import unique
 
 
 class ProductProduct(models.Model):

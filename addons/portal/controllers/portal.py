@@ -8,10 +8,10 @@ import re
 
 from werkzeug import urls
 
-from odoo import http, tools, _, SUPERUSER_ID
-from odoo.exceptions import AccessDenied, AccessError, MissingError, UserError, ValidationError
-from odoo.http import content_disposition, Controller, request, route
-from odoo.tools import consteq
+from koda import http, tools, _, SUPERUSER_ID
+from koda.exceptions import AccessDenied, AccessError, MissingError, UserError, ValidationError
+from koda.http import content_disposition, Controller, request, route
+from koda.tools import consteq
 
 # --------------------------------------------------
 # Misc tools

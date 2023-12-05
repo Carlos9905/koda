@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
+from koda import api, models
 
 
 class IrAttachment(models.Model):

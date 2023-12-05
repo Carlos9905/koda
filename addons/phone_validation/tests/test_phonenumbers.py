@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.phone_validation.tools import phone_validation
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tests.common import BaseCase
+from koda.addons.phone_validation.tools import phone_validation
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda.tests.common import BaseCase
 
 
 @tagged('phone_validation')

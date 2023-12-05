@@ -2,10 +2,10 @@
 from random import randint
 from datetime import datetime
 
-from odoo import fields, tools
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
-from odoo.tests.common import Form
-from odoo.tests import tagged
+from koda import fields, tools
+from koda.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
+from koda.tests.common import Form
+from koda.tests import tagged
 
 import logging
 

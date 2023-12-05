@@ -3,9 +3,9 @@
 
 import odoo
 
-from odoo import tools
-from odoo.tests.common import Form
-from odoo.addons.point_of_sale.tests.common import TestPoSCommon
+from koda import tools
+from koda.tests.common import Form
+from koda.addons.point_of_sale.tests.common import TestPoSCommon
 
 @odoo.tests.tagged('post_install', '-at_install')
 class TestPoSOtherCurrencyConfig(TestPoSCommon):

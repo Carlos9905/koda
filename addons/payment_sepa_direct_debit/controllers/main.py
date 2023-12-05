@@ -2,13 +2,13 @@
 
 from werkzeug.exceptions import NotFound
 
-from odoo import _
-from odoo.exceptions import ValidationError
-from odoo.http import Controller, request, route
+from koda import _
+from koda.exceptions import ValidationError
+from koda.http import Controller, request, route
 
-from odoo.addons.base.models.res_bank import sanitize_account_number
-from odoo.addons.base_iban.models.res_partner_bank import validate_iban
-from odoo.addons.payment import utils as payment_utils
+from koda.addons.base.models.res_bank import sanitize_account_number
+from koda.addons.base_iban.models.res_partner_bank import validate_iban
+from koda.addons.payment import utils as payment_utils
 
 
 class SepaDirectDebitController(Controller):

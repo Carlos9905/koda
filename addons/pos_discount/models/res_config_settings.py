@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import fields, models, api
+from koda import fields, models, api
 
 
 class ResConfigSettings(models.TransientModel):

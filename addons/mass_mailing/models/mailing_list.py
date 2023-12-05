@@ -3,8 +3,8 @@
 
 from markupsafe import Markup
 
-from odoo import _, api, Command, fields, models, tools
-from odoo.exceptions import UserError
+from koda import _, api, Command, fields, models, tools
+from koda.exceptions import UserError
 
 
 class MassMailingList(models.Model):

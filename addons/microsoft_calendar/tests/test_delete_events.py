@@ -2,13 +2,13 @@
 from unittest.mock import patch, ANY, call
 from datetime import timedelta
 
-from odoo import fields
+from koda import fields
 
-from odoo.exceptions import UserError
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
-from odoo.addons.microsoft_calendar.models.res_users import User
-from odoo.addons.microsoft_calendar.tests.common import (
+from koda.exceptions import UserError
+from koda.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
+from koda.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
+from koda.addons.microsoft_calendar.models.res_users import User
+from koda.addons.microsoft_calendar.tests.common import (
     TestCommon,
     mock_get_token,
     _modified_date_in_the_future,
@@ -319,7 +319,7 @@ class TestDeleteEvents(TestCommon):
         # Ensure that synchronization is paused, delete wasn't called and record doesn't exist anymore.
         self.assertFalse(self.organizer_user.microsoft_synchronization_stopped)
         self.assertEqual(self.organizer_user._get_microsoft_sync_status(), "sync_paused")
-        self.assertFalse(self.simple_event.exists(), "Event must be deleted from Odoo even though sync configuration is off")
+        self.assertFalse(self.simple_event.exists(), "Event must be deleted from koda even though sync configuration is off")
         mock_delete.assert_not_called()
 
     @patch.object(MicrosoftCalendarService, 'delete')

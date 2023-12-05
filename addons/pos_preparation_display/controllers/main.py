@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
 class PosPreparationDisplayController(http.Controller):
     @http.route(['/pos_preparation_display/web/'], type='http', auth='user', methods=['GET'])

@@ -2,10 +2,10 @@
 
 from hashlib import new as hashnew
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment_asiapay import const
+from koda.addons.payment_asiapay import const
 
 
 class PaymentProvider(models.Model):

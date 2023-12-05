@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
+from koda import Command
 
-from odoo.addons.payment.tests.common import PaymentCommon
+from koda.addons.payment.tests.common import PaymentCommon
 
 
 class AsiaPayCommon(PaymentCommon):

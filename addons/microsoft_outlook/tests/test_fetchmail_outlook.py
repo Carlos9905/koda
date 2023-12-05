@@ -5,8 +5,8 @@ import time
 
 from unittest.mock import ANY, Mock, patch
 
-from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase
+from koda.exceptions import UserError
+from koda.tests.common import TransactionCase
 
 
 class TestFetchmailOutlook(TransactionCase):

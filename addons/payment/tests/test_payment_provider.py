@@ -2,10 +2,10 @@
 
 from unittest.mock import patch
 
-from odoo import Command
-from odoo.tests import tagged
+from koda import Command
+from koda.tests import tagged
 
-from odoo.addons.payment.tests.common import PaymentCommon
+from koda.addons.payment.tests.common import PaymentCommon
 
 
 @tagged('-at_install', 'post_install')

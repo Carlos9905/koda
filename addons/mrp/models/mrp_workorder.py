@@ -6,9 +6,9 @@ from dateutil.relativedelta import relativedelta
 from collections import defaultdict
 import json
 
-from odoo import api, fields, models, _, SUPERUSER_ID
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_compare, float_round, format_datetime
+from koda import api, fields, models, _, SUPERUSER_ID
+from koda.exceptions import UserError, ValidationError
+from koda.tools import float_compare, float_round, format_datetime
 
 
 class MrpWorkorder(models.Model):

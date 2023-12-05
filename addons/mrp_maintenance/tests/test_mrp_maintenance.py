@@ -3,7 +3,7 @@
 
 import time
 from datetime import datetime, timedelta
-from odoo.tests import common, Form
+from koda.tests import common, Form
 
 
 class TestMrpMaintenance(common.TransactionCase):

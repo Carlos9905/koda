@@ -5,7 +5,7 @@ import itertools
 import random
 
 from markupsafe import Markup
-from odoo import models, _
+from koda import models, _
 
 class MailBot(models.AbstractModel):
     _name = 'mail.bot'

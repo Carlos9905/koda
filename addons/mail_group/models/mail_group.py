@@ -10,12 +10,12 @@ from datetime import datetime
 from dateutil import relativedelta
 from werkzeug import urls
 
-from odoo import _, api, fields, models, tools
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.mail.tools.alias_error import AliasError
-from odoo.exceptions import ValidationError, UserError
-from odoo.osv import expression
-from odoo.tools import email_normalize, hmac, generate_tracking_message_id
+from koda import _, api, fields, models, tools
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.mail.tools.alias_error import AliasError
+from koda.exceptions import ValidationError, UserError
+from koda.osv import expression
+from koda.tools import email_normalize, hmac, generate_tracking_message_id
 
 _logger = logging.getLogger(__name__)
 

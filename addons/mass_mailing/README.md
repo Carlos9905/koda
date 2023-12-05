@@ -32,7 +32,7 @@ Integrated with Odoo Apps
 Get access to mass mailing features from every Odoo app to improve the way your
 users communicate.
 
-Send template of emails from Odoo <a href="https://www.odoo.com/app/email-marketing">CRM opportunities</a>, select leads based
+Send template of emails from koda <a href="https://www.odoo.com/app/email-marketing">CRM opportunities</a>, select leads based
 on marketing segments, send <a href="https://www.odoo.com/app/recruitment">job offers</a> and automate
 answers to applicants, reuse email template in the lead automation marketing
 campaigns.

@@ -1,8 +1,8 @@
 # coding: utf-8
 import logging
 import json
-from odoo import http, _
-from odoo.http import request
+from koda import http, _
+from koda.http import request
 
 _logger = logging.getLogger(__name__)
 

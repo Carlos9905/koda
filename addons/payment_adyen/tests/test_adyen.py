@@ -4,14 +4,14 @@ from unittest.mock import patch
 
 from werkzeug.exceptions import Forbidden
 
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_adyen.controllers.main import AdyenController
-from odoo.addons.payment_adyen.tests.common import AdyenCommon
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.payment_adyen.controllers.main import AdyenController
+from koda.addons.payment_adyen.tests.common import AdyenCommon
 
 
 @tagged('post_install', '-at_install')

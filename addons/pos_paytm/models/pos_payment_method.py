@@ -8,8 +8,8 @@ import requests
 import secrets
 import string
 
-from odoo.exceptions import UserError
-from odoo import fields, models, api, _
+from koda.exceptions import UserError
+from koda import fields, models, api, _
 from datetime import datetime
 from dateutil import tz
 

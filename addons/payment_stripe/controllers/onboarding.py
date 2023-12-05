@@ -2,8 +2,8 @@
 
 from werkzeug.urls import url_encode
 
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
 
 class OnboardingController(http.Controller):

@@ -5,14 +5,14 @@ import logging
 import pytz
 from unittest.mock import patch, ANY
 
-from odoo import Command
+from koda import Command
 
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
-from odoo.addons.microsoft_calendar.models.res_users import User
-from odoo.addons.microsoft_calendar.utils.event_id_storage import combine_ids
-from odoo.addons.microsoft_calendar.tests.common import TestCommon, mock_get_token, _modified_date_in_the_future, patch_api
-from odoo.exceptions import UserError, ValidationError
+from koda.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
+from koda.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
+from koda.addons.microsoft_calendar.models.res_users import User
+from koda.addons.microsoft_calendar.utils.event_id_storage import combine_ids
+from koda.addons.microsoft_calendar.tests.common import TestCommon, mock_get_token, _modified_date_in_the_future, patch_api
+from koda.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 
@@ -25,7 +25,7 @@ class TestUpdateEvents(TestCommon):
         self.create_events_for_tests()
 
     # -------------------------------------------------------------------------------
-    # Update from Odoo to Outlook
+    # Update from koda to Outlook
     # -------------------------------------------------------------------------------
 
     # ------ Simple event ------

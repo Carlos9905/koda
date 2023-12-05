@@ -4,10 +4,10 @@
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo import exceptions
-from odoo.addons.iap.tools import iap_tools
-from odoo.addons.partner_autocomplete.models.iap_autocomplete_api import IapAutocompleteEnrichAPI
-from odoo.tests import common
+from koda import exceptions
+from koda.addons.iap.tools import iap_tools
+from koda.addons.partner_autocomplete.models.iap_autocomplete_api import IapAutocompleteEnrichAPI
+from koda.tests import common
 
 
 class MockIAPPartnerAutocomplete(common.BaseCase):

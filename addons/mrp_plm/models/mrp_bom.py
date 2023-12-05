@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models
-from odoo.osv import expression
+from koda import api, fields, models
+from koda.osv import expression
 
 
 class MrpBom(models.Model):

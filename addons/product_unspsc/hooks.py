@@ -3,7 +3,7 @@
 
 import logging
 from os.path import join, dirname, realpath
-from odoo import tools
+from koda import tools
 
 _logger = logging.getLogger(__name__)
 

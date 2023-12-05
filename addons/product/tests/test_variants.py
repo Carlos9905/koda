@@ -9,12 +9,12 @@ import unittest.mock
 
 from PIL import Image
 
-from odoo.fields import Command
-from odoo.exceptions import UserError
-from odoo.tests import tagged, TransactionCase, Form
-from odoo.tools import mute_logger
+from koda.fields import Command
+from koda.exceptions import UserError
+from koda.tests import tagged, TransactionCase, Form
+from koda.tools import mute_logger
 
-from odoo.addons.product.tests.common import ProductVariantsCommon, ProductAttributesCommon
+from koda.addons.product.tests.common import ProductVariantsCommon, ProductAttributesCommon
 
 
 @tagged('post_install', '-at_install')

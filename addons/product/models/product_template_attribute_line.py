@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.fields import Command
+from koda import api, fields, models, tools, _
+from koda.exceptions import UserError, ValidationError
+from koda.fields import Command
 
 
 class ProductTemplateAttributeLine(models.Model):

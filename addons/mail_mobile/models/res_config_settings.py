@@ -3,8 +3,8 @@
 import uuid
 
 import odoo
-from odoo import fields, models, api
-from odoo.addons.iap.tools import iap_tools
+from koda import fields, models, api
+from koda.addons.iap.tools import iap_tools
 
 import logging as logger
 _logger = logger.getLogger(__name__)

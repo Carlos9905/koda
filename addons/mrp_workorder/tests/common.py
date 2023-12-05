@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mrp.tests.common import TestMrpCommon
+from koda.addons.mrp.tests.common import TestMrpCommon
 
 
 class TestMrpWorkorderCommon(TestMrpCommon):

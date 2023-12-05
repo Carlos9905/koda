@@ -5,12 +5,12 @@ import pprint
 
 from werkzeug.urls import url_encode, url_join
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError, ValidationError
+from koda import _, fields, models
+from koda.exceptions import UserError, ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_stripe import const
-from odoo.addons.payment_stripe.controllers.main import StripeController
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_stripe import const
+from koda.addons.payment_stripe.controllers.main import StripeController
 
 
 _logger = logging.getLogger(__name__)

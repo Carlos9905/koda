@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
-from odoo import SUPERUSER_ID, api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.fields import Command
-from odoo.tools import float_compare, float_round, is_html_empty
+from koda import SUPERUSER_ID, api, fields, models, _
+from koda.exceptions import UserError
+from koda.fields import Command
+from koda.tools import float_compare, float_round, is_html_empty
 
 
 class TestType(models.Model):

@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
-from odoo import api, fields, models, _, tools
-from odoo.osv import expression
+from koda import api, fields, models, _, tools
+from koda.osv import expression
 
 
 class MassMailing(models.Model):

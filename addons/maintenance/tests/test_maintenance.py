@@ -3,7 +3,7 @@
 
 import time
 
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 class TestEquipment(TransactionCase):
     """ Test used to check that when doing equipment/maintenance_request/equipment_category creation."""

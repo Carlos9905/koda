@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, tools
-from odoo import fields, models
+from koda import api, tools
+from koda import fields, models
 
 from psycopg2 import sql
 

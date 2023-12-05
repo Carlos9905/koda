@@ -3,8 +3,8 @@
 
 import logging
 
-from odoo import models, fields, api, _
-from odoo.tools.float_utils import float_compare
+from koda import models, fields, api, _
+from koda.tools.float_utils import float_compare
 
 _logger = logging.getLogger(__name__)
 

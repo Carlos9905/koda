@@ -2,9 +2,9 @@
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.tests import Form
-from odoo.addons.mrp_account.tests.test_analytic_account import TestMrpAnalyticAccount
+from koda import Command
+from koda.tests import Form
+from koda.addons.mrp_account.tests.test_analytic_account import TestMrpAnalyticAccount
 
 
 class TestMrpAnalyticAccountHr(TestMrpAnalyticAccount):

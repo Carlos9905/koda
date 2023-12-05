@@ -4,13 +4,13 @@ import urllib.parse
 
 import werkzeug
 
-from odoo import _, http
-from odoo.exceptions import AccessError, ValidationError
-from odoo.http import request
+from koda import _, http
+from koda.exceptions import AccessError, ValidationError
+from koda.http import request
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.controllers.post_processing import PaymentPostProcessing
-from odoo.addons.portal.controllers import portal
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment.controllers.post_processing import PaymentPostProcessing
+from koda.addons.portal.controllers import portal
 
 
 class PaymentPortal(portal.CustomerPortal):

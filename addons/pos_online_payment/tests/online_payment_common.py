@@ -3,9 +3,9 @@
 
 import json
 
-from odoo.tools import mute_logger
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.pos_online_payment.controllers.payment_portal import PaymentPortal
+from koda.tools import mute_logger
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.pos_online_payment.controllers.payment_portal import PaymentPortal
 
 
 class OnlinePaymentCommon(PaymentHttpCommon):

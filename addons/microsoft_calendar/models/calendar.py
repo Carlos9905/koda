@@ -8,11 +8,11 @@ from datetime import datetime, timedelta
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import is_html_empty, email_normalize
-from odoo.addons.microsoft_calendar.utils.event_id_storage import combine_ids
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.tools import is_html_empty, email_normalize
+from koda.addons.microsoft_calendar.utils.event_id_storage import combine_ids
+from koda.osv import expression
 
 ATTENDEE_CONVERTER_O2M = {
     'needsAction': 'notresponded',

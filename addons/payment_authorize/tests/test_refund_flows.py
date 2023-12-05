@@ -2,10 +2,10 @@
 
 from unittest.mock import patch
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment_authorize.tests.common import AuthorizeCommon
+from koda.addons.payment_authorize.tests.common import AuthorizeCommon
 
 
 @tagged('post_install', '-at_install')

@@ -7,12 +7,12 @@ import uuid
 from lxml import etree, objectify
 from werkzeug import urls
 
-from odoo import _, api, models
-from odoo.exceptions import UserError, ValidationError
+from koda import _, api, models
+from koda.exceptions import UserError, ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_ogone import const
-from odoo.addons.payment_ogone.controllers.main import OgoneController
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_ogone import const
+from koda.addons.payment_ogone.controllers.main import OgoneController
 
 
 _logger = logging.getLogger(__name__)

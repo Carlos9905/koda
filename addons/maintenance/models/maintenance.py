@@ -3,9 +3,9 @@
 import ast
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, SUPERUSER_ID, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import api, fields, models, SUPERUSER_ID, _
+from koda.exceptions import UserError
+from koda.osv import expression
 
 
 class MaintenanceStage(models.Model):

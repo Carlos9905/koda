@@ -7,8 +7,8 @@ from concurrent.futures import ThreadPoolExecutor
 from psycopg2 import IntegrityError
 
 import odoo
-from odoo.tests.common import get_db_name, tagged, BaseCase
-from odoo.tools import mute_logger
+from koda.tests.common import get_db_name, tagged, BaseCase
+from koda.tools import mute_logger
 
 
 @tagged('-standard', '-at_install', 'post_install', 'database_breaking')

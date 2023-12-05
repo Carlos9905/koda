@@ -6,13 +6,13 @@ from unittest.mock import patch
 from freezegun import freeze_time
 from werkzeug.exceptions import Forbidden
 
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.exceptions import ValidationError
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_sips.controllers.main import SipsController
-from odoo.addons.payment_sips.tests.common import SipsCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.payment_sips.controllers.main import SipsController
+from koda.addons.payment_sips.tests.common import SipsCommon
 
 
 @tagged('post_install', '-at_install')

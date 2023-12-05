@@ -8,14 +8,14 @@ from datetime import datetime
 
 from werkzeug.exceptions import Forbidden
 
-from odoo import http
-from odoo.exceptions import ValidationError
-from odoo.http import request
-from odoo.tools.misc import file_open
+from koda import http
+from koda.exceptions import ValidationError
+from koda.http import request
+from koda.tools.misc import file_open
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_stripe import utils as stripe_utils
-from odoo.addons.payment_stripe.const import HANDLED_WEBHOOK_EVENTS
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_stripe import utils as stripe_utils
+from koda.addons.payment_stripe.const import HANDLED_WEBHOOK_EVENTS
 
 
 _logger = logging.getLogger(__name__)

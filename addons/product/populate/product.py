@@ -3,9 +3,9 @@
 import logging
 import collections
 
-from odoo import models
-from odoo.tools import populate
-from odoo.addons.stock.populate.stock import COMPANY_NB_WITH_STOCK
+from koda import models
+from koda.tools import populate
+from koda.addons.stock.populate.stock import COMPANY_NB_WITH_STOCK
 
 _logger = logging.getLogger(__name__)
 

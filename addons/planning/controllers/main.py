@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licens
 
-from odoo import http, _
-from odoo.http import request
-from odoo.tools import format_duration
-from odoo.osv import expression
+from koda import http, _
+from koda.http import request
+from koda.tools import format_duration
+from koda.osv import expression
 
 import pytz
-from odoo.tools.misc import get_lang
+from koda.tools.misc import get_lang
 
-from odoo import tools
+from koda import tools
 
 
 class ShiftController(http.Controller):
@@ -291,7 +291,7 @@ class ShiftController(http.Controller):
 
     @staticmethod
     def _format_planning_shifts(color_code):
-        """Take a color code from Odoo's Kanban view and returns an hex code compatible with the fullcalendar library"""
+        """Take a color code from koda's Kanban view and returns an hex code compatible with the fullcalendar library"""
 
         switch_color = {
             0: '#008784',   # No color (doesn't work actually...)

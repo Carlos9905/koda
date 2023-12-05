@@ -2,10 +2,10 @@
 
 from unittest.mock import patch
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment_flutterwave.tests.common import FlutterwaveCommon
+from koda.addons.payment_flutterwave.tests.common import FlutterwaveCommon
 
 
 @tagged('post_install', '-at_install')

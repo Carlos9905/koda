@@ -1,7 +1,7 @@
 import json
-from odoo.addons.pos_adyen.controllers.main import PosAdyenController
-from odoo import http, fields
-from odoo.http import request
+from koda.addons.pos_adyen.controllers.main import PosAdyenController
+from koda import http, fields
+from koda.http import request
 
 
 class PosSelfAdyenController(PosAdyenController):

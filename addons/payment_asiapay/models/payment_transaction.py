@@ -4,12 +4,12 @@ import logging
 
 from werkzeug import urls
 
-from odoo import _, api, models
-from odoo.exceptions import ValidationError
+from koda import _, api, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_asiapay import const
-from odoo.addons.payment_asiapay.controllers.main import AsiaPayController
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_asiapay import const
+from koda.addons.payment_asiapay.controllers.main import AsiaPayController
 
 
 _logger = logging.getLogger(__name__)

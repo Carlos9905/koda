@@ -3,7 +3,7 @@
 
 import re
 
-from odoo import fields, models, tools
+from koda import fields, models, tools
 
 
 class SmsSms(models.Model):

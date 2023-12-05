@@ -10,12 +10,12 @@ from math import modf
 from random import randint, shuffle
 import itertools
 
-from odoo import api, fields, models, _
-from odoo.addons.resource.models.utils import Intervals, sum_intervals, string_to_datetime
-from odoo.addons.resource.models.resource_mixin import timezone_datetime
-from odoo.exceptions import UserError, AccessError
-from odoo.osv import expression
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, float_utils, format_datetime
+from koda import api, fields, models, _
+from koda.addons.resource.models.utils import Intervals, sum_intervals, string_to_datetime
+from koda.addons.resource.models.resource_mixin import timezone_datetime
+from koda.exceptions import UserError, AccessError
+from koda.osv import expression
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT, float_utils, format_datetime
 
 _logger = logging.getLogger(__name__)
 

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from odoo import http, _
-from odoo.http import request
-from odoo.osv.expression import AND
-from odoo.tools import format_amount
-from odoo.addons.account.controllers.portal import PortalAccount
+from koda import http, _
+from koda.http import request
+from koda.osv.expression import AND
+from koda.tools import format_amount
+from koda.addons.account.controllers.portal import PortalAccount
 from datetime import timedelta, datetime
 
 _logger = logging.getLogger(__name__)

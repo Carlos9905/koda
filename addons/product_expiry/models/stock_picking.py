@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import models, _
+from koda import models, _
 
 
 class StockPicking(models.Model):

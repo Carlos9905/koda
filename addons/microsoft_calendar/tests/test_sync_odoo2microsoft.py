@@ -5,12 +5,12 @@ from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 from unittest.mock import MagicMock, patch
 
-from odoo.tests.common import TransactionCase
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.models.res_users import User
-from odoo.addons.microsoft_calendar.models.microsoft_sync import MicrosoftSync
-from odoo.modules.registry import Registry
-from odoo.addons.microsoft_account.models.microsoft_service import TIMEOUT
+from koda.tests.common import TransactionCase
+from koda.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
+from koda.addons.microsoft_calendar.models.res_users import User
+from koda.addons.microsoft_calendar.models.microsoft_sync import MicrosoftSync
+from koda.modules.registry import Registry
+from koda.addons.microsoft_account.models.microsoft_service import TIMEOUT
 
 
 def patch_api(func):

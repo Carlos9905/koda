@@ -2,11 +2,11 @@
 
 from lxml import etree
 
-from odoo import fields
-from odoo.osv import expression
-from odoo.tests import users
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import UserError
+from koda import fields
+from koda.osv import expression
+from koda.tests import users
+from koda.tests.common import TransactionCase
+from koda.exceptions import UserError
 
 
 class TestProjectCommon(TransactionCase):

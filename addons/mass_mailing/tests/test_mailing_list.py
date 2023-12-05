@@ -5,9 +5,9 @@ from datetime import datetime
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo import exceptions
-from odoo.addons.mass_mailing.tests.common import MassMailCommon
-from odoo.tests.common import Form, tagged, users
+from koda import exceptions
+from koda.addons.mass_mailing.tests.common import MassMailCommon
+from koda.tests.common import Form, tagged, users
 
 
 @tagged('mailing_list')

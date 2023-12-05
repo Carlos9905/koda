@@ -2,10 +2,10 @@
 
 from datetime import datetime
 
-from odoo import _, api, fields, models
-from odoo.exceptions import AccessError, ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import AccessError, ValidationError
 
-from odoo.addons.payment_sepa_direct_debit import const
+from koda.addons.payment_sepa_direct_debit import const
 
 
 class PaymentProvider(models.Model):

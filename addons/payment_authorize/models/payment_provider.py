@@ -4,12 +4,12 @@ import json
 import logging
 import pprint
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.fields import Command
+from koda import _, api, fields, models
+from koda.exceptions import UserError, ValidationError
+from koda.fields import Command
 
-from odoo.addons.payment_authorize import const
-from odoo.addons.payment_authorize.models.authorize_request import AuthorizeAPI
+from koda.addons.payment_authorize import const
+from koda.addons.payment_authorize.models.authorize_request import AuthorizeAPI
 
 _logger = logging.getLogger(__name__)
 
@@ -28,7 +28,7 @@ class PaymentProvider(models.Model):
         string="API Signature Key", required_if_provider='authorize', groups='base.group_system')
     authorize_client_key = fields.Char(
         string="API Client Key",
-        help="The public client key. To generate directly from Odoo or from Authorize.Net backend.")
+        help="The public client key. To generate directly from koda or from Authorize.Net backend.")
 
     # === CONSTRAINT METHODS ===#
 

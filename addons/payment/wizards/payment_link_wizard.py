@@ -2,9 +2,9 @@
 
 from werkzeug import urls
 
-from odoo import _, api, fields, models
+from koda import _, api, fields, models
 
-from odoo.addons.payment import utils as payment_utils
+from koda.addons.payment import utils as payment_utils
 
 
 class PaymentLinkWizard(models.TransientModel):

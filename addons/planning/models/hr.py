@@ -4,7 +4,7 @@ import logging
 import uuid
 
 from datetime import datetime, time, timedelta
-from odoo import fields, models, _, api
+from koda import fields, models, _, api
 
 _logger = logging.getLogger(__name__)
 

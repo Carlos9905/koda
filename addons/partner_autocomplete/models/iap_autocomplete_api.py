@@ -3,8 +3,8 @@
 
 import logging
 
-from odoo import api, models, exceptions, _
-from odoo.addons.iap.tools import iap_tools
+from koda import api, models, exceptions, _
+from koda.addons.iap.tools import iap_tools
 from requests.exceptions import HTTPError
 
 _logger = logging.getLogger(__name__)

@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Command
-from odoo.tests import tagged
+from koda.fields import Command
+from koda.tests import tagged
 
-from odoo.addons.payment_sepa_direct_debit.tests.common import SepaDirectDebitCommon
+from koda.addons.payment_sepa_direct_debit.tests.common import SepaDirectDebitCommon
 
 
 @tagged('post_install', '-at_install')

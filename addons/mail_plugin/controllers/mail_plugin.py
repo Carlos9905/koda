@@ -8,10 +8,10 @@ import requests
 from markupsafe import Markup
 from werkzeug.exceptions import Forbidden
 
-from odoo import http, tools, _
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import AccessError
-from odoo.http import request
+from koda import http, tools, _
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import AccessError
+from koda.http import request
 
 _logger = logging.getLogger(__name__)
 

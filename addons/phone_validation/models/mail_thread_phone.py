@@ -3,9 +3,9 @@
 
 import re
 
-from odoo import api, fields, models, _
-from odoo.exceptions import AccessError, UserError
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.exceptions import AccessError, UserError
+from koda.osv import expression
 
 
 class PhoneMixin(models.AbstractModel):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, _
-from odoo.tools.date_utils import start_of, end_of, add, subtract
-from odoo.tools.misc import format_date
+from koda import fields, models, _
+from koda.tools.date_utils import start_of, end_of, add, subtract
+from koda.tools.misc import format_date
 
 
 class Company(models.Model):

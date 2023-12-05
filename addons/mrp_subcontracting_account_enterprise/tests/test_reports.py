@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
-from odoo.fields import Command
-from odoo.tests import Form
+from koda.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
+from koda.fields import Command
+from koda.tests import Form
 
 
 class TestReportsMrpAccountSubcontracting(TestMrpSubcontractingCommon):

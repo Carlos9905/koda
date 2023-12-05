@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import new_test_user, tagged
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import AccessError
-from odoo.fields import Command
+from koda.tests import new_test_user, tagged
+from koda.tests.common import TransactionCase
+from koda.exceptions import AccessError
+from koda.fields import Command
 
 from datetime import datetime
 from freezegun import freeze_time

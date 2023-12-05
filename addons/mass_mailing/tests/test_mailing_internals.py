@@ -11,12 +11,12 @@ from freezegun import freeze_time
 from psycopg2 import IntegrityError
 from unittest.mock import patch
 
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.mass_mailing.tests.common import MassMailCommon
-from odoo.exceptions import ValidationError
-from odoo.sql_db import Cursor
-from odoo.tests.common import users, Form, tagged
-from odoo.tools import mute_logger
+from koda.addons.base.tests.test_ir_cron import CronMixinCase
+from koda.addons.mass_mailing.tests.common import MassMailCommon
+from koda.exceptions import ValidationError
+from koda.sql_db import Cursor
+from koda.tests.common import users, Form, tagged
+from koda.tools import mute_logger
 
 BASE_64_STRING = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII='
 

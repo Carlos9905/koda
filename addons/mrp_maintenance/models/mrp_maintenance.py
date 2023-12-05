@@ -6,9 +6,9 @@ from dateutil.relativedelta import relativedelta
 from collections import defaultdict
 import pytz
 
-from odoo import api, fields, models, Command, _
-from odoo.addons.resource.models.utils import Intervals
-from odoo.exceptions import UserError
+from koda import api, fields, models, Command, _
+from koda.addons.resource.models.utils import Intervals
+from koda.exceptions import UserError
 
 
 class MaintenanceStage(models.Model):

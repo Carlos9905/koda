@@ -4,11 +4,11 @@ from unittest.mock import patch
 
 from werkzeug.exceptions import Forbidden
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment_aps.controllers.main import APSController
-from odoo.addons.payment_aps.tests.common import APSCommon
+from koda.addons.payment_aps.controllers.main import APSController
+from koda.addons.payment_aps.tests.common import APSCommon
 
 
 @tagged('post_install', '-at_install')

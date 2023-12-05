@@ -3,10 +3,10 @@
 
 from psycopg2 import IntegrityError
 
-from odoo import Command
-from odoo.addons.onboarding.tests.common import TestOnboardingCommon
-from odoo.exceptions import ValidationError
-from odoo.tools import mute_logger
+from koda import Command
+from koda.addons.onboarding.tests.common import TestOnboardingCommon
+from koda.exceptions import ValidationError
+from koda.tools import mute_logger
 
 
 class TestOnboarding(TestOnboardingCommon):

@@ -4,7 +4,7 @@
 import itertools
 import time
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class ProductProduct(models.Model):

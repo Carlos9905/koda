@@ -3,9 +3,9 @@
 
 from hashlib import sha256
 
-from odoo import fields, models
+from koda import fields, models
 
-from odoo.addons.payment_sips import const
+from koda.addons.payment_sips import const
 
 
 class PaymentProvider(models.Model):

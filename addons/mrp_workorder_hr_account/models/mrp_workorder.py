@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import _, models, fields
+from koda import _, models, fields
 
 
 class MrpWorkcenterProductivity(models.Model):

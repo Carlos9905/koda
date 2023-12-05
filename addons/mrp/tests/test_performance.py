@@ -5,7 +5,7 @@ import unittest
 import time
 import logging
 
-from odoo.tests import common, Form
+from koda.tests import common, Form
 
 _logger = logging.getLogger(__name__)
 

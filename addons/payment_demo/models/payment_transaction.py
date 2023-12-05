@@ -2,8 +2,8 @@
 
 import logging
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError, ValidationError
+from koda import _, fields, models
+from koda.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 

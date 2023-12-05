@@ -3,9 +3,9 @@
 import hashlib
 import logging
 
-from odoo import fields, models
+from koda import fields, models
 
-from odoo.addons.payment_aps import const
+from koda.addons.payment_aps import const
 
 
 _logger = logging.getLogger(__name__)

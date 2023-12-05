@@ -3,8 +3,8 @@
 
 from markupsafe import Markup
 
-from odoo import fields, models
-from odoo.tools.misc import file_open
+from koda import fields, models
+from koda.tools.misc import file_open
 
 
 class MailComposeMessage(models.TransientModel):

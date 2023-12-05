@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import odoo
-from odoo.addons.point_of_sale.tests.common import TestPoSCommon
+from koda.addons.point_of_sale.tests.common import TestPoSCommon
 
 
 @odoo.tests.tagged('post_install', '-at_install')

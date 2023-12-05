@@ -3,10 +3,10 @@
 
 from datetime import timedelta
 
-from odoo.addons.marketing_automation.tests.common import MarketingAutomationCommon
-from odoo.fields import Datetime
-from odoo.tests import tagged, users
-from odoo.tools import mute_logger
+from koda.addons.marketing_automation.tests.common import MarketingAutomationCommon
+from koda.fields import Datetime
+from koda.tests import tagged, users
+from koda.tools import mute_logger
 
 
 class SyncingCase(MarketingAutomationCommon):

@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged, HttpCase
-from odoo import Command
+from koda.tests import tagged, HttpCase
+from koda import Command
 from .test_project_base import TestProjectCommon
 
 

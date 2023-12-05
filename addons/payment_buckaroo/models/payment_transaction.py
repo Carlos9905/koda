@@ -4,11 +4,11 @@ import logging
 
 from werkzeug import urls
 
-from odoo import _, api, models
-from odoo.exceptions import ValidationError
+from koda import _, api, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment_buckaroo.const import STATUS_CODES_MAPPING
-from odoo.addons.payment_buckaroo.controllers.main import BuckarooController
+from koda.addons.payment_buckaroo.const import STATUS_CODES_MAPPING
+from koda.addons.payment_buckaroo.controllers.main import BuckarooController
 
 _logger = logging.getLogger(__name__)
 

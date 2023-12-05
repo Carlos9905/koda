@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
-from odoo.addons.payment_asiapay import const
-from odoo.addons.payment_asiapay.tests.common import AsiaPayCommon
+from koda.addons.payment_asiapay import const
+from koda.addons.payment_asiapay.tests.common import AsiaPayCommon
 
 
 @tagged('post_install', '-at_install')

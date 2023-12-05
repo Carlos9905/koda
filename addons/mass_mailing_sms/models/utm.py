@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from koda import _, api, fields, models
+from koda.exceptions import UserError
 
 
 class UtmCampaign(models.Model):

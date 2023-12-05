@@ -6,10 +6,10 @@ from freezegun import freeze_time
 from datetime import datetime
 
 import odoo
-from odoo import fields, tools
-from odoo.tools import float_compare, mute_logger, test_reports
-from odoo.tests.common import Form
-from odoo.addons.point_of_sale.tests.common import TestPointOfSaleCommon
+from koda import fields, tools
+from koda.tools import float_compare, mute_logger, test_reports
+from koda.tests.common import Form
+from koda.addons.point_of_sale.tests.common import TestPointOfSaleCommon
 
 
 @odoo.tests.tagged('post_install', '-at_install')

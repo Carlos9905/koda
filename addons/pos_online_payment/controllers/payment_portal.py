@@ -3,10 +3,10 @@
 
 from werkzeug.urls import url_encode
 
-from odoo import _, http, tools
-from odoo.http import request
-from odoo.exceptions import AccessError, ValidationError, UserError
-from odoo.addons.payment.controllers import portal as payment_portal
+from koda import _, http, tools
+from koda.http import request
+from koda.exceptions import AccessError, ValidationError, UserError
+from koda.addons.payment.controllers import portal as payment_portal
 
 
 class PaymentPortal(payment_portal.PaymentPortal):

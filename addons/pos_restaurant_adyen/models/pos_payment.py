@@ -4,7 +4,7 @@
 import json
 import requests
 
-from odoo import models
+from koda import models
 
 TIMEOUT = 10
 

@@ -8,10 +8,10 @@ import werkzeug
 
 from unittest.mock import patch
 
-from odoo import tools
-from odoo.addons.link_tracker.tests.common import MockLinkTracker
-from odoo.addons.mail.tests.common import MailCase, MailCommon, mail_new_test_user
-from odoo.sql_db import Cursor
+from koda import tools
+from koda.addons.link_tracker.tests.common import MockLinkTracker
+from koda.addons.mail.tests.common import MailCase, MailCommon, mail_new_test_user
+from koda.sql_db import Cursor
 
 
 class MassMailCase(MailCase, MockLinkTracker):

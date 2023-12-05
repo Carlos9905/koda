@@ -3,9 +3,9 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.fields import Datetime
-from odoo.osv.expression import NEGATIVE_TERM_OPERATORS
+from koda import api, fields, models, _
+from koda.fields import Datetime
+from koda.osv.expression import NEGATIVE_TERM_OPERATORS
 
 
 class MarketingParticipant(models.Model):

@@ -8,10 +8,10 @@ import requests
 from html import unescape
 from markupsafe import Markup
 
-from odoo import models, api, service
-from odoo.tools.translate import _
-from odoo.exceptions import UserError
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, misc
+from koda import models, api, service
+from koda.tools.translate import _
+from koda.exceptions import UserError
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT, misc
 
 
 class MercuryTransaction(models.Model):

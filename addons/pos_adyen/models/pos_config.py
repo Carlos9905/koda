@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

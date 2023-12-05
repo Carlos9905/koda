@@ -6,8 +6,8 @@ from random import randint
 
 import ast
 
-from odoo import api, fields, models, tools, Command, SUPERUSER_ID, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, tools, Command, SUPERUSER_ID, _
+from koda.exceptions import UserError
 
 
 class MrpEcoType(models.Model):

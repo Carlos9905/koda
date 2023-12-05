@@ -5,11 +5,11 @@ from unittest.mock import patch
 
 from lxml import objectify
 
-from odoo.fields import Command
-from odoo.osv.expression import AND
-from odoo.tools.misc import hmac as hmac_tool
+from koda.fields import Command
+from koda.osv.expression import AND
+from koda.tools.misc import hmac as hmac_tool
 
-from odoo.addons.base.tests.common import BaseCommon
+from koda.addons.base.tests.common import BaseCommon
 
 _logger = logging.getLogger(__name__)
 

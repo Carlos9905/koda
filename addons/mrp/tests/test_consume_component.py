@@ -1,7 +1,7 @@
 import copy
 
-from odoo.exceptions import UserError
-from odoo.tests import common, tagged, Form
+from koda.exceptions import UserError
+from koda.tests import common, tagged, Form
 
 
 class TestConsumeComponentCommon(common.TransactionCase):

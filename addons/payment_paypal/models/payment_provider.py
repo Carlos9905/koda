@@ -2,9 +2,9 @@
 
 import logging
 
-from odoo import _, fields, models
+from koda import _, fields, models
 
-from odoo.addons.payment_paypal import const
+from koda.addons.payment_paypal import const
 
 
 _logger = logging.getLogger(__name__)

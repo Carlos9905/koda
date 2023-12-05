@@ -2,11 +2,11 @@
 
 from datetime import date
 
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.exceptions import AccessError, UserError, ValidationError
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment.tests.common import PaymentCommon
+from koda.addons.payment.tests.common import PaymentCommon
 
 
 @tagged('-at_install', 'post_install')

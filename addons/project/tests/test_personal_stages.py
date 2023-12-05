@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import Command
-from odoo.exceptions import UserError
-from odoo.tests import HttpCase, tagged
+from koda import Command
+from koda.exceptions import UserError
+from koda.tests import HttpCase, tagged
 
 from .test_project_base import TestProjectCommon
 

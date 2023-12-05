@@ -4,7 +4,7 @@
 import hashlib
 import hmac
 
-from odoo import fields, models, _
+from koda import fields, models, _
 
 
 class MailThread(models.AbstractModel):

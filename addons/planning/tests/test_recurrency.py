@@ -6,8 +6,8 @@ from datetime import datetime
 from .common import TestCommonPlanning
 
 import unittest
-from odoo.exceptions import UserError
-from odoo.tests import Form
+from koda.exceptions import UserError
+from koda.tests import Form
 
 
 class TestRecurrencySlotGeneration(TestCommonPlanning):

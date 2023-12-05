@@ -8,8 +8,8 @@ import requests
 import string
 from werkzeug.exceptions import Forbidden
 
-from odoo import fields, models, api, _
-from odoo.exceptions import ValidationError
+from koda import fields, models, api, _
+from koda.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

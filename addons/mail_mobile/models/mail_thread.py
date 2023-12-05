@@ -5,8 +5,8 @@ import logging as logger
 import re
 import urllib.parse
 
-from odoo import models, api, tools
-from odoo.addons.iap.tools import iap_tools
+from koda import models, api, tools
+from koda.addons.iap.tools import iap_tools
 
 _logger = logger.getLogger(__name__)
 

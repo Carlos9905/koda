@@ -8,9 +8,9 @@ from datetime import timedelta
 from markupsafe import Markup, escape
 from werkzeug.exceptions import BadRequest, NotFound, Unauthorized
 
-from odoo import _, fields, http, tools
-from odoo.http import request, Response
-from odoo.tools import consteq
+from koda import _, fields, http, tools
+from koda.http import request, Response
+from koda.tools import consteq
 
 
 class MassMailController(http.Controller):

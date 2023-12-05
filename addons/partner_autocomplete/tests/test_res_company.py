@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import common
-from odoo.addons.partner_autocomplete.tests.common import MockIAPPartnerAutocomplete
+from koda.tests import common
+from koda.addons.partner_autocomplete.tests.common import MockIAPPartnerAutocomplete
 
 class TestResCompany(common.TransactionCase, MockIAPPartnerAutocomplete):
 

@@ -4,8 +4,8 @@
 from contextlib import contextmanager
 from lxml import etree
 
-from odoo.tests.common import TransactionCase, Form
-from odoo.exceptions import AccessError, UserError
+from koda.tests.common import TransactionCase, Form
+from koda.exceptions import AccessError, UserError
 
 class TestMultiCompanyCommon(TransactionCase):
 

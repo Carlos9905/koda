@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
-from odoo import models, fields, api
-from odoo.http import request
+from koda import models, fields, api
+from koda.http import request
 
 
 class MrpWorkcenter(models.Model):

@@ -7,9 +7,9 @@ from time import sleep
 from logging import getLogger
 from threading import Thread
 
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.tools.misc import file_path
+from koda.addons.hw_drivers.driver import Driver
+from koda.addons.hw_drivers.event_manager import event_manager
+from koda.tools.misc import file_path
 
 
 _logger = getLogger(__name__)

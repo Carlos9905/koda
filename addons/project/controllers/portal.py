@@ -4,13 +4,13 @@ from collections import OrderedDict
 from operator import itemgetter
 from markupsafe import Markup
 
-from odoo import conf, http, _
-from odoo.exceptions import AccessError, MissingError
-from odoo.http import request
-from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
-from odoo.tools import groupby as groupbyelem
+from koda import conf, http, _
+from koda.exceptions import AccessError, MissingError
+from koda.http import request
+from koda.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
+from koda.tools import groupby as groupbyelem
 
-from odoo.osv.expression import OR, AND
+from koda.osv.expression import OR, AND
 
 
 class ProjectCustomerPortal(CustomerPortal):

@@ -6,10 +6,10 @@ import pathlib
 
 from markupsafe import Markup
 
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
-from odoo.modules import get_module_path
+from koda.modules import get_module_path
 
 
 BLACKBOX_MODULES = ['pos_blackbox_be']

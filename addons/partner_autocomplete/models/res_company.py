@@ -5,8 +5,8 @@ import json
 import logging
 import threading
 
-from odoo.addons.iap.tools import iap_tools
-from odoo import api, fields, models, tools, _
+from koda.addons.iap.tools import iap_tools
+from koda import api, fields, models, tools, _
 
 _logger = logging.getLogger(__name__)
 

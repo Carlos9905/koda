@@ -5,13 +5,13 @@ import logging
 
 from werkzeug import urls
 
-from odoo import _, api, models
-from odoo.exceptions import ValidationError
-from odoo.tools.float_utils import float_repr
+from koda import _, api, models
+from koda.exceptions import ValidationError
+from koda.tools.float_utils import float_repr
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_payulatam import const
-from odoo.addons.payment_payulatam.controllers.main import PayuLatamController
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_payulatam import const
+from koda.addons.payment_payulatam.controllers.main import PayuLatamController
 
 _logger = logging.getLogger(__name__)
 

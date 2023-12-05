@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail_group.tests.common import TestMailListCommon
-from odoo.addons.mail_group.tests.data import GROUP_TEMPLATE
-from odoo.exceptions import AccessError
-from odoo.tools import mute_logger
+from koda.addons.mail_group.tests.common import TestMailListCommon
+from koda.addons.mail_group.tests.data import GROUP_TEMPLATE
+from koda.exceptions import AccessError
+from koda.tools import mute_logger
 
 
 class TestMailGroupMessage(TestMailListCommon):

@@ -3,8 +3,8 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.tests import Form, common
+from koda import Command
+from koda.tests import Form, common
 
 class TestWorkorderDurationHr(common.TransactionCase):
     @classmethod

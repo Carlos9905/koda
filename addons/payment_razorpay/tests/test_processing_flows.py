@@ -4,12 +4,12 @@ from unittest.mock import patch
 
 from werkzeug.exceptions import Forbidden
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_razorpay.controllers.main import RazorpayController
-from odoo.addons.payment_razorpay.tests.common import RazorpayCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.payment_razorpay.controllers.main import RazorpayController
+from koda.addons.payment_razorpay.tests.common import RazorpayCommon
 
 
 @tagged('post_install', '-at_install')

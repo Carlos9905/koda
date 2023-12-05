@@ -4,8 +4,8 @@
 from markupsafe import Markup
 from werkzeug.urls import url_join
 
-from odoo import fields, models, _
-from odoo.addons.sms.tools.sms_api import SmsApi
+from koda import fields, models, _
+from koda.addons.sms.tools.sms_api import SmsApi
 
 
 class MassSMSTest(models.TransientModel):

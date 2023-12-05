@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api
-from odoo.exceptions import UserError
-from odoo.tools.translate import _
+from koda import models, api
+from koda.exceptions import UserError
+from koda.tools.translate import _
 
 
 class ProductProduct(models.Model):

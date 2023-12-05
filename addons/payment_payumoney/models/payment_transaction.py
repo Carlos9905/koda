@@ -2,11 +2,11 @@
 
 from werkzeug import urls
 
-from odoo import _, api, models
-from odoo.exceptions import ValidationError
+from koda import _, api, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_payumoney.controllers.main import PayUMoneyController
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_payumoney.controllers.main import PayUMoneyController
 
 
 class PaymentTransaction(models.Model):

@@ -3,9 +3,9 @@
 
 import logging
 
-from odoo import api, fields, models, _
-from odoo.fields import Datetime
-from odoo.exceptions import AccessError
+from koda import api, fields, models, _
+from koda.fields import Datetime
+from koda.exceptions import AccessError
 
 _logger = logging.getLogger(__name__)
 

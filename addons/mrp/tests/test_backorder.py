@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import datetime, timedelta
 
-from odoo.addons.mrp.tests.common import TestMrpCommon
-from odoo.tests import Form
-from odoo.tests.common import TransactionCase
+from koda.addons.mrp.tests.common import TestMrpCommon
+from koda.tests import Form
+from koda.tests.common import TransactionCase
 
 
 class TestMrpProductionBackorder(TestMrpCommon):

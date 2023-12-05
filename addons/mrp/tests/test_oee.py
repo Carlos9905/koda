@@ -4,8 +4,8 @@
 from datetime import datetime, timedelta, time
 from pytz import timezone, utc
 
-from odoo import fields
-from odoo.addons.mrp.tests.common import TestMrpCommon
+from koda import fields
+from koda.addons.mrp.tests.common import TestMrpCommon
 
 
 class TestOee(TestMrpCommon):

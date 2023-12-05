@@ -2,9 +2,9 @@
 
 import hashlib
 
-from odoo import fields, models
+from koda import fields, models
 
-from odoo.addons.payment_payulatam.const import DEFAULT_PAYMENT_METHODS_CODES
+from koda.addons.payment_payulatam.const import DEFAULT_PAYMENT_METHODS_CODES
 
 
 class PaymentProvider(models.Model):

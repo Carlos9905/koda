@@ -5,10 +5,10 @@ from collections import defaultdict, namedtuple
 from dateutil.relativedelta import relativedelta
 from math import log10
 
-from odoo import api, fields, models, _
-from odoo.tools.date_utils import add, subtract
-from odoo.tools.float_utils import float_round
-from odoo.osv.expression import OR, AND
+from koda import api, fields, models, _
+from koda.tools.date_utils import add, subtract
+from koda.tools.float_utils import float_round
+from koda.osv.expression import OR, AND
 from collections import OrderedDict
 
 

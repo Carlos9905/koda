@@ -4,12 +4,12 @@ from unittest.mock import patch
 
 from werkzeug.exceptions import Forbidden
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_flutterwave.controllers.main import FlutterwaveController
-from odoo.addons.payment_flutterwave.tests.common import FlutterwaveCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.payment_flutterwave.controllers.main import FlutterwaveController
+from koda.addons.payment_flutterwave.tests.common import FlutterwaveCommon
 
 
 @tagged('post_install', '-at_install')

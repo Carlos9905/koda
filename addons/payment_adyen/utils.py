@@ -1,4 +1,4 @@
-from odoo.addons.payment import utils as payment_utils
+from koda.addons.payment import utils as payment_utils
 
 
 def format_partner_name(partner_name):

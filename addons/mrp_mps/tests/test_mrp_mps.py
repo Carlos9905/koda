@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, datetime, timedelta
-from odoo.tests import common, Form
-from odoo import Command
-from odoo.tools.date_utils import start_of
+from koda.tests import common, Form
+from koda import Command
+from koda.tools.date_utils import start_of
 
 
 class TestMpsMps(common.TransactionCase):

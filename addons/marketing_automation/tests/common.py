@@ -5,8 +5,8 @@ from contextlib import contextmanager
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.mass_mailing.tests.common import MassMailCase, MassMailCommon
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.mass_mailing.tests.common import MassMailCase, MassMailCommon
 
 
 class MarketingAutomationCase(MassMailCase):

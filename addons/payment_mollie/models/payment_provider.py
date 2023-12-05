@@ -6,10 +6,10 @@ import pprint
 import requests
 from werkzeug import urls
 
-from odoo import _, fields, models, service
-from odoo.exceptions import ValidationError
+from koda import _, fields, models, service
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment_mollie import const
+from koda.addons.payment_mollie import const
 
 _logger = logging.getLogger(__name__)
 

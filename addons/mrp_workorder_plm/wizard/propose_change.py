@@ -4,8 +4,8 @@
 import re
 from markupsafe import Markup
 
-from odoo import SUPERUSER_ID, models, _
-from odoo.tools import is_html_empty
+from koda import SUPERUSER_ID, models, _
+from koda.tools import is_html_empty
 
 
 class ProposeChange(models.TransientModel):

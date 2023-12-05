@@ -2,11 +2,11 @@
 
 from unittest.mock import patch
 
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda.exceptions import UserError
+from koda.tests import tagged
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_razorpay.tests.common import RazorpayCommon
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_razorpay.tests.common import RazorpayCommon
 
 
 @tagged('post_install', '-at_install')

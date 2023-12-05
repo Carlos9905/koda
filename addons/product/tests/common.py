@@ -3,10 +3,10 @@
 from contextlib import nullcontext
 from unittest.mock import patch
 
-from odoo.fields import Command
+from koda.fields import Command
 
-from odoo.addons.base.tests.common import BaseCommon
-from odoo.addons.uom.tests.common import UomCommon
+from koda.addons.base.tests.common import BaseCommon
+from koda.addons.uom.tests.common import UomCommon
 
 
 class ProductCommon(

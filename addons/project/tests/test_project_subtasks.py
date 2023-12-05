@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import Command
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
-from odoo.tests import tagged
-from odoo.tests.common import Form
+from koda import Command
+from koda.addons.project.tests.test_project_base import TestProjectCommon
+from koda.tests import tagged
+from koda.tests.common import Form
 
 @tagged('-at_install', 'post_install')
 class TestProjectSubtasks(TestProjectCommon):

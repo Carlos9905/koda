@@ -5,9 +5,9 @@ import base64
 import json
 import logging
 
-from odoo import http
-from odoo.http import request
-from odoo.tools.translate import _
+from koda import http
+from koda.http import request
+from koda.tools.translate import _
 
 logger = logging.getLogger(__name__)
 

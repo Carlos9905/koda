@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models
-from odoo.tools import float_round
+from koda import api, fields, models
+from koda.tools import float_round
 
 
 class MrpCostStructure(models.AbstractModel):

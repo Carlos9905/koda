@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command, _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import Command, _, api, fields, models
+from koda.exceptions import UserError
+from koda.osv import expression
 
 
 class PaymentMethod(models.Model):

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.osv import expression
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tests.common import Form
+from koda import Command
+from koda.osv import expression
+from koda.exceptions import AccessError
+from koda.tests import tagged
+from koda.tests.common import Form
 
 from .test_project_base import TestProjectCommon
 

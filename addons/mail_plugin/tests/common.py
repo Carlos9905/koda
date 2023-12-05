@@ -5,10 +5,10 @@ import json
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.http import request
-from odoo.tests.common import HttpCase
-from odoo import SUPERUSER_ID
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.http import request
+from koda.tests.common import HttpCase
+from koda import SUPERUSER_ID
 
 
 @contextmanager

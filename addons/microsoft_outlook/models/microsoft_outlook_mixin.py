@@ -8,9 +8,9 @@ import requests
 
 from werkzeug.urls import url_encode, url_join
 
-from odoo import _, api, fields, models
-from odoo.exceptions import AccessError, UserError
-from odoo.tools.misc import hmac
+from koda import _, api, fields, models
+from koda.exceptions import AccessError, UserError
+from koda.tools.misc import hmac
 
 _logger = logging.getLogger(__name__)
 

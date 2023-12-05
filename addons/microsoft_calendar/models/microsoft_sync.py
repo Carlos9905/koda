@@ -8,14 +8,14 @@ import pytz
 from dateutil.parser import parse
 from datetime import timedelta
 
-from odoo import api, fields, models, registry
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import api, fields, models, registry
+from koda.exceptions import UserError
+from koda.osv import expression
 
-from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.utils.event_id_storage import IDS_SEPARATOR, combine_ids, split_ids
-from odoo.addons.microsoft_account.models.microsoft_service import TIMEOUT
+from koda.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
+from koda.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
+from koda.addons.microsoft_calendar.utils.event_id_storage import IDS_SEPARATOR, combine_ids, split_ids
+from koda.addons.microsoft_account.models.microsoft_service import TIMEOUT
 
 _logger = logging.getLogger(__name__)
 
@@ -465,7 +465,7 @@ class MicrosoftSync(models.AbstractModel):
 
     def _get_microsoft_records_to_sync(self, full_sync=False):
         """
-        Return records that should be synced from Odoo to Microsoft
+        Return records that should be synced from koda to Microsoft
         :param full_sync: If True, all events attended by the user are returned
         :return: events
         """

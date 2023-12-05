@@ -3,8 +3,8 @@
 
 from random import randint
 
-from odoo import api, fields, models, SUPERUSER_ID
-from odoo.osv import expression
+from koda import api, fields, models, SUPERUSER_ID
+from koda.osv import expression
 
 
 class ProjectTags(models.Model):

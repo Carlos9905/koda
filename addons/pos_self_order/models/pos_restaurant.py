@@ -4,7 +4,7 @@
 import uuid
 from typing import Dict, Callable, List, Optional
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class RestaurantTable(models.Model):

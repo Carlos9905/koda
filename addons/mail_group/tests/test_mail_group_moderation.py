@@ -3,12 +3,12 @@
 
 from psycopg2 import IntegrityError
 
-from odoo import Command, tools
-from odoo.addons.mail_group.tests.data import GROUP_TEMPLATE
-from odoo.addons.mail_group.tests.common import TestMailListCommon
-from odoo.exceptions import AccessError
-from odoo.tests.common import tagged, users
-from odoo.tools import mute_logger
+from koda import Command, tools
+from koda.addons.mail_group.tests.data import GROUP_TEMPLATE
+from koda.addons.mail_group.tests.common import TestMailListCommon
+from koda.exceptions import AccessError
+from koda.tests.common import tagged, users
+from koda.tools import mute_logger
 
 
 @tagged('mail_group_moderation')

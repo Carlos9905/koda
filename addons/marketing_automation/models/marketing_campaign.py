@@ -7,10 +7,10 @@ import threading
 from ast import literal_eval
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, tools, _
-from odoo.fields import Datetime
-from odoo.exceptions import ValidationError
-from odoo.tools import convert
+from koda import api, fields, models, tools, _
+from koda.fields import Datetime
+from koda.exceptions import ValidationError
+from koda.tools import convert
 
 
 class MarketingCampaign(models.Model):

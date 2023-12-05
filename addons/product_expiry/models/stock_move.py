@@ -5,8 +5,8 @@ import datetime
 import dateutil.parser as dparser
 from re import findall as re_findall
 
-from odoo import fields, models
-from odoo.tools import get_lang
+from koda import fields, models
+from koda.tools import get_lang
 
 
 class StockMove(models.Model):

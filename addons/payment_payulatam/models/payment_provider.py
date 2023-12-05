@@ -2,10 +2,10 @@
 
 from hashlib import md5
 
-from odoo import fields, models
-from odoo.tools.float_utils import float_repr, float_split
+from koda import fields, models
+from koda.tools.float_utils import float_repr, float_split
 
-from odoo.addons.payment_payulatam import const
+from koda.addons.payment_payulatam import const
 
 class PaymentProvider(models.Model):
     _inherit = 'payment.provider'

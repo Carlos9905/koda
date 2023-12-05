@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models
+from koda import models
 
 
 class IrHttp(models.AbstractModel):

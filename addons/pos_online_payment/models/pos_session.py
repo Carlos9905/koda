@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
-from odoo import models, tools, _
-from odoo.exceptions import UserError
+from koda import models, tools, _
+from koda.exceptions import UserError
 
 
 class PosSession(models.Model):

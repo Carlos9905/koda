@@ -5,9 +5,9 @@ from collections import defaultdict
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, SUPERUSER_ID, _
-from odoo.osv import expression
-from odoo.tools import float_compare, OrderedSet
+from koda import api, fields, models, SUPERUSER_ID, _
+from koda.osv import expression
+from koda.tools import float_compare, OrderedSet
 
 
 class StockRule(models.Model):

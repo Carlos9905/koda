@@ -3,9 +3,9 @@
 
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
-from odoo import api, Command, fields, models
-from odoo.osv import expression
-from odoo.tools import float_compare, float_round, float_is_zero, OrderedSet
+from koda import api, Command, fields, models
+from koda.osv import expression
+from koda.tools import float_compare, float_round, float_is_zero, OrderedSet
 
 
 class StockMoveLine(models.Model):

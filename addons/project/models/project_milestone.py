@@ -3,7 +3,7 @@
 
 from collections import defaultdict
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 from .project_task import CLOSED_STATES
 

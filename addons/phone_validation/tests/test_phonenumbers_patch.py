@@ -6,9 +6,9 @@ try:
 except ImportError:
     phonenumbers = None
 
-from odoo.tests.common import BaseCase
-from odoo.tools.parse_version import parse_version
-from odoo.addons.phone_validation.lib import phonenumbers_patch
+from koda.tests.common import BaseCase
+from koda.tools.parse_version import parse_version
+from koda.addons.phone_validation.lib import phonenumbers_patch
 
 class TestPhonenumbersPatch(BaseCase):
     def test_region_CI_monkey_patch(self):

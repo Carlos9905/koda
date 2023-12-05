@@ -10,13 +10,13 @@ from ast import literal_eval
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _, Command
-from odoo.addons.web.controllers.utils import clean_action
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_compare, float_round, float_is_zero, format_datetime
-from odoo.tools.misc import OrderedSet, format_date, groupby as tools_groupby
+from koda import api, fields, models, _, Command
+from koda.addons.web.controllers.utils import clean_action
+from koda.exceptions import UserError, ValidationError
+from koda.tools import float_compare, float_round, float_is_zero, format_datetime
+from koda.tools.misc import OrderedSet, format_date, groupby as tools_groupby
 
-from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
+from koda.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
 
 SIZE_BACK_ORDER_NUMERING = 3
 

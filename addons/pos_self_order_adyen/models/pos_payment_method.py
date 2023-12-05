@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 import random
-from odoo import models
+from koda import models
 
 
 class PosPaymentMethod(models.Model):

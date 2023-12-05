@@ -3,9 +3,9 @@
 
 import logging
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.payment_adyen.controllers.main import AdyenController
+from koda import http
+from koda.http import request
+from koda.addons.payment_adyen.controllers.main import AdyenController
 
 _logger = logging.getLogger(__name__)
 

@@ -5,11 +5,11 @@ import pprint
 
 from werkzeug import urls
 
-from odoo import _, models
-from odoo.exceptions import ValidationError
+from koda import _, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment_mollie import const
-from odoo.addons.payment_mollie.controllers.main import MollieController
+from koda.addons.payment_mollie import const
+from koda.addons.payment_mollie.controllers.main import MollieController
 
 
 _logger = logging.getLogger(__name__)

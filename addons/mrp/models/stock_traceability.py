@@ -1,4 +1,4 @@
-from odoo import models, api
+from koda import models, api
 
 class MrpStockReport(models.TransientModel):
     _inherit = 'stock.traceability.report'

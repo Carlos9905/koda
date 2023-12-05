@@ -5,11 +5,11 @@ import logging
 import re
 import requests
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_adyen import const
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment_adyen import const
 
 _logger = logging.getLogger(__name__)
 

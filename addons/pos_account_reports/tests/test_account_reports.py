@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import Command, fields
-from odoo.tests import tagged
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda import Command, fields
+from koda.tests import tagged
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
 from freezegun import freeze_time
 

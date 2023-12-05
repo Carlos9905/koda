@@ -3,9 +3,9 @@
 import logging
 from hashlib import md5
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
-from odoo.addons.payment_alipay import const
+from koda.addons.payment_alipay import const
 
 _logger = logging.getLogger(__name__)
 

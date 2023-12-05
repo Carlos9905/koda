@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mrp_workorder.tests.common import TestMrpWorkorderCommon
-from odoo.addons.base.tests.common import HttpCase
-from odoo.tests import Form, tagged
-from odoo.tools import mute_logger
-from odoo.exceptions import UserError
+from koda.addons.mrp_workorder.tests.common import TestMrpWorkorderCommon
+from koda.addons.base.tests.common import HttpCase
+from koda.tests import Form, tagged
+from koda.tools import mute_logger
+from koda.exceptions import UserError
 import logging
 
 _logger = logging.getLogger(__name__)

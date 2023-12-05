@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from ast import literal_eval
 
-from odoo import api, fields, models, _
-from odoo.tools import float_round
+from koda import api, fields, models, _
+from koda.tools import float_round
 
 
 class MrpProduction(models.Model):

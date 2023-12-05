@@ -1,7 +1,7 @@
-from odoo import models, fields, api
-from odoo.addons.base.models import res_users as ru
-from odoo.exceptions import ValidationError
-from odoo.tools.translate import _
+from koda import models, fields, api
+from koda.addons.base.models import res_users as ru
+from koda.exceptions import ValidationError
+from koda.tools.translate import _
 
 
 class ResUser(models.Model):

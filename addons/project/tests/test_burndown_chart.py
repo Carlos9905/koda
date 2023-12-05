@@ -4,9 +4,9 @@
 from freezegun import freeze_time
 from datetime import datetime
 
-from odoo import Command
-from odoo.osv.expression import AND, OR
-from odoo.tests.common import tagged, HttpCase
+from koda import Command
+from koda.osv.expression import AND, OR
+from koda.tests.common import tagged, HttpCase
 from .test_project_base import TestProjectCommon
 
 

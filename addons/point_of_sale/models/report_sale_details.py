@@ -4,8 +4,8 @@ from datetime import timedelta
 
 import pytz
 
-from odoo import api, fields, models, _
-from odoo.osv.expression import AND
+from koda import api, fields, models, _
+from koda.osv.expression import AND
 
 class ReportSaleDetails(models.AbstractModel):
 

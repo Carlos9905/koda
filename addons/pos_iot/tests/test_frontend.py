@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import odoo.tests
-from odoo.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
+from koda.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
 
 
 @odoo.tests.tagged('post_install', '-at_install')

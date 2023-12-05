@@ -6,13 +6,13 @@ from pytz import UTC
 from collections import defaultdict
 from datetime import timedelta, datetime, time
 
-from odoo import api, Command, fields, models, tools, SUPERUSER_ID, _, _lt
-from odoo.addons.rating.models import rating_data
-from odoo.addons.web_editor.tools import handle_history_divergence
-from odoo.exceptions import UserError, ValidationError, AccessError
-from odoo.osv import expression
-from odoo.tools.misc import get_lang
-from odoo.addons.resource.models.utils import filter_domain_leaf
+from koda import api, Command, fields, models, tools, SUPERUSER_ID, _, _lt
+from koda.addons.rating.models import rating_data
+from koda.addons.web_editor.tools import handle_history_divergence
+from koda.exceptions import UserError, ValidationError, AccessError
+from koda.osv import expression
+from koda.tools.misc import get_lang
+from koda.addons.resource.models.utils import filter_domain_leaf
 
 
 PROJECT_TASK_READABLE_FIELDS = {

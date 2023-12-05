@@ -4,12 +4,12 @@
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command, fields
-from odoo.exceptions import UserError
-from odoo.tests import Form
-from odoo.tools.misc import format_date
+from koda import Command, fields
+from koda.exceptions import UserError
+from koda.tests import Form
+from koda.tools.misc import format_date
 
-from odoo.addons.mrp.tests.common import TestMrpCommon
+from koda.addons.mrp.tests.common import TestMrpCommon
 
 class TestMrpOrder(TestMrpCommon):
 

@@ -11,10 +11,10 @@ import psycopg2
 import pytz
 import re
 
-from odoo import api, fields, models, tools, _
-from odoo.tools import float_is_zero, float_round, float_repr, float_compare
-from odoo.exceptions import ValidationError, UserError
-from odoo.osv.expression import AND
+from koda import api, fields, models, tools, _
+from koda.tools import float_is_zero, float_round, float_repr, float_compare
+from koda.exceptions import ValidationError, UserError
+from koda.osv.expression import AND
 import base64
 
 _logger = logging.getLogger(__name__)

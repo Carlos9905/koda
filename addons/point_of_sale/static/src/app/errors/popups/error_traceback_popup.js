@@ -33,7 +33,7 @@ export class ErrorTracebackPopup extends ErrorPopup {
     }
     emailTraceback() {
         const address = this.pos.company.email;
-        const subject = _t("IMPORTANT: Bug Report From Odoo Point Of Sale");
+        const subject = _t("IMPORTANT: Bug Report from koda Point Of Sale");
         window.open(
             "mailto:" +
                 address +

@@ -3,10 +3,10 @@
 from . import controllers
 from . import models
 
-from odoo.exceptions import UserError
-from odoo.tools import config
+from koda.exceptions import UserError
+from koda.tools import config
 
-from odoo.addons.payment import setup_provider, reset_payment_provider
+from koda.addons.payment import setup_provider, reset_payment_provider
 
 
 def pre_init_hook(env):

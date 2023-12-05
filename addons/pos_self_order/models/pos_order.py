@@ -3,7 +3,7 @@
 
 from typing import Dict
 
-from odoo import models, fields, api
+from koda import models, fields, api
 
 
 class PosOrderLine(models.Model):

@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from .test_project_base import TestProjectCommon
-from odoo import Command
-from odoo.tools import mute_logger
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import AccessError
+from koda import Command
+from koda.tools import mute_logger
+from koda.addons.mail.tests.common import MailCommon
+from koda.exceptions import AccessError
 
 
 EMAIL_TPL = """Return-Path: <whatever-2a840@postmaster.twitter.com>

@@ -3,9 +3,9 @@
 
 import logging
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.osv import expression
 
 _logger = logging.getLogger(__name__)
 

@@ -4,9 +4,9 @@ import qrcode
 import zipfile
 from io import BytesIO
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
-from odoo.tools.misc import split_every
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError
+from koda.tools.misc import split_every
 from werkzeug.urls import url_unquote
 
 

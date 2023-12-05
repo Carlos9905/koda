@@ -1,13 +1,13 @@
 from unittest.mock import patch
 from datetime import timedelta, datetime
 
-from odoo import Command
+from koda import Command
 
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
-from odoo.addons.microsoft_calendar.models.res_users import User
-from odoo.addons.microsoft_calendar.tests.common import TestCommon, mock_get_token
-from odoo.exceptions import ValidationError, UserError
+from koda.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
+from koda.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
+from koda.addons.microsoft_calendar.models.res_users import User
+from koda.addons.microsoft_calendar.tests.common import TestCommon, mock_get_token
+from koda.exceptions import ValidationError, UserError
 
 @patch.object(User, '_get_microsoft_calendar_token', mock_get_token)
 class TestCreateEvents(TestCommon):

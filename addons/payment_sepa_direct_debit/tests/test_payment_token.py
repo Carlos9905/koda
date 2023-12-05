@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
-from odoo.addons.payment_sepa_direct_debit.tests.common import SepaDirectDebitCommon
+from koda.addons.payment_sepa_direct_debit.tests.common import SepaDirectDebitCommon
 
 
 @tagged('-at_install', 'post_install')

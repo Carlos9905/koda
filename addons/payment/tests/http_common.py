@@ -7,9 +7,9 @@ from uuid import uuid4
 from lxml import etree, objectify
 from werkzeug import urls
 
-from odoo.tests import HttpCase, JsonRpcException
+from koda.tests import HttpCase, JsonRpcException
 
-from odoo.addons.payment.tests.common import PaymentCommon
+from koda.addons.payment.tests.common import PaymentCommon
 
 
 class PaymentHttpCommon(PaymentCommon, HttpCase):

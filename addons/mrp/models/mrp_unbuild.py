@@ -2,10 +2,10 @@
 
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import float_compare, float_round
-from odoo.tools.misc import clean_context
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools import float_compare, float_round
+from koda.tools.misc import clean_context
 
 
 class MrpUnbuild(models.Model):

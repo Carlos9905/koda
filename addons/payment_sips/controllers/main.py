@@ -7,9 +7,9 @@ import pprint
 
 from werkzeug.exceptions import Forbidden
 
-from odoo import http
-from odoo.exceptions import ValidationError
-from odoo.http import request
+from koda import http
+from koda.exceptions import ValidationError
+from koda.http import request
 
 _logger = logging.getLogger(__name__)
 

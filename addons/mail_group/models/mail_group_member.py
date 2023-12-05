@@ -3,8 +3,8 @@
 
 import logging
 
-from odoo import api, fields, models
-from odoo.tools import email_normalize
+from koda import api, fields, models
+from koda.tools import email_normalize
 
 _logger = logging.getLogger(__name__)
 

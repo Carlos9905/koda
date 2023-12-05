@@ -3,10 +3,10 @@
 
 import logging
 
-from odoo import _, api, fields, models
-from odoo.exceptions import AccessError, UserError
-from odoo.osv import expression
-from odoo.tools import email_normalize, append_content_to_html, ustr
+from koda import _, api, fields, models
+from koda.exceptions import AccessError, UserError
+from koda.osv import expression
+from koda.tools import email_normalize, append_content_to_html, ustr
 
 _logger = logging.getLogger(__name__)
 

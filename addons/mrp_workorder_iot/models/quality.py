@@ -3,7 +3,7 @@
 
 import json
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class QualityCheck(models.Model):

@@ -8,10 +8,10 @@ import pprint
 import requests
 from werkzeug.urls import url_join
 
-from odoo import _, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, fields, models
+from koda.exceptions import ValidationError
 
-from odoo.addons.payment_razorpay import const
+from koda.addons.payment_razorpay import const
 
 
 _logger = logging.getLogger(__name__)

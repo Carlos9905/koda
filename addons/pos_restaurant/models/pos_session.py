@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, Command, api
-from odoo.tools import convert
+from koda import models, Command, api
+from koda.tools import convert
 from itertools import groupby
-from odoo.osv.expression import AND
+from koda.osv.expression import AND
 import json
 
 class PosSession(models.Model):

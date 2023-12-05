@@ -3,8 +3,8 @@
 
 import psycopg2
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tools import mute_logger
+from koda.addons.mail.tests.common import MailCommon
+from koda.tools import mute_logger
 
 
 class TestResPartnerIap(MailCommon):

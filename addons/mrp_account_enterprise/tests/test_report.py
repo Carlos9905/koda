@@ -3,9 +3,9 @@
 
 from datetime import datetime, timedelta
 
-from odoo.addons.mrp_account.tests.test_mrp_account import TestMrpAccount
-from odoo.tests.common import Form
-from odoo import Command
+from koda.addons.mrp_account.tests.test_mrp_account import TestMrpAccount
+from koda.tests.common import Form
+from koda import Command
 from freezegun import freeze_time
 
 

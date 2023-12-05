@@ -4,13 +4,13 @@
 import babel.dates
 import werkzeug
 
-from odoo import http, fields, tools, models
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.portal.controllers.portal import pager as portal_pager
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools.misc import get_lang
+from koda import http, fields, tools, models
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.portal.controllers.portal import pager as portal_pager
+from koda.exceptions import AccessError
+from koda.http import request
+from koda.osv import expression
+from koda.tools.misc import get_lang
 
 
 class PortalMailGroup(http.Controller):

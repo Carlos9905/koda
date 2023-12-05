@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import Form
-from odoo.tools.float_utils import float_round, float_compare
-from odoo.addons.mrp_account.tests.test_bom_price import TestBomPriceCommon
+from koda.tests import Form
+from koda.tools.float_utils import float_round, float_compare
+from koda.addons.mrp_account.tests.test_bom_price import TestBomPriceCommon
 
 
 class TestBomPrice(TestBomPriceCommon):

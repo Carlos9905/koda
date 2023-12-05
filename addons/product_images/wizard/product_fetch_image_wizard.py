@@ -7,8 +7,8 @@ from datetime import timedelta
 import requests
 from requests.exceptions import ConnectionError as RequestConnectionError
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from koda import _, api, fields, models
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

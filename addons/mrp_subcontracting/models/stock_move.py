@@ -3,9 +3,9 @@
 
 from collections import defaultdict
 
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError, AccessError
-from odoo.tools.float_utils import float_compare, float_is_zero, float_round
+from koda import fields, models, api, _
+from koda.exceptions import UserError, AccessError
+from koda.tools.float_utils import float_compare, float_is_zero, float_round
 
 
 class StockMove(models.Model):

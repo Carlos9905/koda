@@ -18,11 +18,11 @@ from markupsafe import Markup
 from werkzeug.urls import url_join
 from PIL import Image, UnidentifiedImageError
 
-from odoo import api, fields, models, tools, _
-from odoo.addons.base_import.models.base_import import ImportValidationError
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools.float_utils import float_round
+from koda import api, fields, models, tools, _
+from koda.addons.base_import.models.base_import import ImportValidationError
+from koda.exceptions import UserError, ValidationError
+from koda.osv import expression
+from koda.tools.float_utils import float_round
 
 _logger = logging.getLogger(__name__)
 

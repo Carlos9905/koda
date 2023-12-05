@@ -5,11 +5,11 @@ from unittest.mock import patch
 
 from freezegun import freeze_time
 
-from odoo.tests import tagged, JsonRpcException
-from odoo.tools import mute_logger
+from koda.tests import tagged, JsonRpcException
+from koda.tools import mute_logger
 
-from odoo.addons.payment.controllers.portal import PaymentPortal
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.payment.controllers.portal import PaymentPortal
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
 
 
 @tagged('post_install', '-at_install')

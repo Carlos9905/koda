@@ -2,8 +2,8 @@
 
 import logging
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
+from koda import _, api, fields, models
+from koda.exceptions import UserError, ValidationError
 
 
 class PaymentToken(models.Model):
