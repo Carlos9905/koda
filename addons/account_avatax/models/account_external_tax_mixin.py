@@ -2,11 +2,11 @@
 import logging
 from pprint import pformat
 
-from odoo import models, api, fields, _
-from odoo.addons.account_avatax.lib.avatax_client import AvataxClient
-from odoo.exceptions import UserError, ValidationError, RedirectWarning
-from odoo.release import version
-from odoo.tools import float_repr, float_round
+from koda import models, api, fields, _
+from koda.addons.account_avatax.lib.avatax_client import AvataxClient
+from koda.exceptions import UserError, ValidationError, RedirectWarning
+from koda.release import version
+from koda.tools import float_repr, float_round
 
 _logger = logging.getLogger(__name__)
 

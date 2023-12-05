@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Koda
-from odoo.addons.account.tests.common import AccountTestInvoicingHttpCommon
-from odoo.tests.common import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingHttpCommon
+from koda.tests.common import tagged
 
 import json
 
-from odoo import http
-from odoo.tools import mute_logger
+from koda import http
+from koda.tools import mute_logger
 
 
 @tagged('post_install', '-at_install')

@@ -1,9 +1,9 @@
 from collections import defaultdict
 from unittest.mock import patch
 
-from odoo.exceptions import UserError, ValidationError
-from odoo.tests.common import tagged
-from odoo.modules.neutralize import get_neutralization_queries
+from koda.exceptions import UserError, ValidationError
+from koda.tests.common import tagged
+from koda.modules.neutralize import get_neutralization_queries
 from .common import TestAccountAvataxCommon
 
 

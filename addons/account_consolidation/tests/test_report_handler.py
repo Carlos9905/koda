@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 from unittest.mock import patch
 
-from odoo.addons.account_consolidation.report.handler.abstract import AbstractHandler
-from odoo.addons.account_consolidation.report.handler.journals import JournalsHandler
-from odoo.addons.account_consolidation.report.handler.periods import PeriodsHandler
-from odoo.addons.account_consolidation.report.handler.show_zero import ShowZeroHandler
-from odoo.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
+from koda.addons.account_consolidation.report.handler.abstract import AbstractHandler
+from koda.addons.account_consolidation.report.handler.journals import JournalsHandler
+from koda.addons.account_consolidation.report.handler.periods import PeriodsHandler
+from koda.addons.account_consolidation.report.handler.show_zero import ShowZeroHandler
+from koda.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
 
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
 
 
 @tagged('post_install', '-at_install', 'trial_balance_report')

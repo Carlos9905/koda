@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.addons.digest.tests.common import TestDigestCommon
-from odoo.tools import mute_logger
-from odoo.tests import tagged
+from koda.addons.digest.tests.common import TestDigestCommon
+from koda.tools import mute_logger
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

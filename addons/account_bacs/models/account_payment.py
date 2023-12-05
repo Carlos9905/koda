@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError
 
 
 class AccountPayment(models.Model):

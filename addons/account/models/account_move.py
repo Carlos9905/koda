@@ -12,11 +12,11 @@ import re
 from textwrap import shorten
 from unittest.mock import patch
 
-from odoo import api, fields, models, _, Command
-from odoo.addons.base.models.decimal_precision import DecimalPrecision
-from odoo.addons.account.tools import format_structured_reference_iso
-from odoo.exceptions import UserError, ValidationError, AccessError, RedirectWarning
-from odoo.tools import (
+from koda import api, fields, models, _, Command
+from koda.addons.base.models.decimal_precision import DecimalPrecision
+from koda.addons.account.tools import format_structured_reference_iso
+from koda.exceptions import UserError, ValidationError, AccessError, RedirectWarning
+from koda.tools import (
     date_utils,
     email_re,
     email_split,

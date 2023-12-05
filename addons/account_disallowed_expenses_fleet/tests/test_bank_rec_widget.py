@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.addons.account_accountant.tests.test_bank_rec_widget_common import TestBankRecWidgetCommon
+from koda import Command
+from koda.tests import tagged
+from koda.addons.account_accountant.tests.test_bank_rec_widget_common import TestBankRecWidgetCommon
 
 
 @tagged('post_install', '-at_install')

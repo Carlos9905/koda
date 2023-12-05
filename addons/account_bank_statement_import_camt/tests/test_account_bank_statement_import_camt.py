@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tools import file_open
-from odoo.exceptions import UserError
-from odoo.addons.account_bank_statement_import_camt.models.account_journal import _logger as camt_wizard_logger
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tools import file_open
+from koda.exceptions import UserError
+from koda.addons.account_bank_statement_import_camt.models.account_journal import _logger as camt_wizard_logger
 
 NORMAL_AMOUNTS = [100, 150, 250]
 LARGE_AMOUNTS = [10000, 15000, 25000]

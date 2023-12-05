@@ -1,5 +1,5 @@
-from odoo import models, Command, _
-from odoo.exceptions import UserError
+from koda import models, Command, _
+from koda.exceptions import UserError
 
 import re
 

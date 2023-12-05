@@ -1,10 +1,10 @@
 from collections import defaultdict
 from datetime import timedelta
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import groupby
-from odoo.tools.misc import formatLang
+from koda import api, Command, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import groupby
+from koda.tools.misc import formatLang
 
 
 class AccountReconcileWizard(models.TransientModel):

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=W0612
-from odoo.tests import tagged
-from odoo.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
-from odoo.addons.account_consolidation.report.builder.comparison import ComparisonBuilder
-from odoo.addons.account_consolidation.report.builder.comparison import ComparisonBuilder
-from odoo.addons.account_consolidation.report.builder.default import DefaultBuilder
-from odoo.tools.misc import NON_BREAKING_SPACE
+from koda.tests import tagged
+from koda.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
+from koda.addons.account_consolidation.report.builder.comparison import ComparisonBuilder
+from koda.addons.account_consolidation.report.builder.comparison import ComparisonBuilder
+from koda.addons.account_consolidation.report.builder.default import DefaultBuilder
+from koda.tools.misc import NON_BREAKING_SPACE
 
 from unittest.mock import patch
 

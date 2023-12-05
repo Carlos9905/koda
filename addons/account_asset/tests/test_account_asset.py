@@ -4,10 +4,10 @@ import time
 
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
-from odoo import fields, Command
-from odoo.exceptions import UserError, MissingError
-from odoo.tests.common import Form, tagged
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda import fields, Command
+from koda.exceptions import UserError, MissingError
+from koda.tests.common import Form, tagged
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
 
 @freeze_time('2021-07-01')

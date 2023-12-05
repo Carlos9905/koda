@@ -3,12 +3,12 @@
 
 from collections import OrderedDict
 
-from odoo import http, _
-from odoo.osv import expression
-from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
-from odoo.addons.account.controllers.download_docs import _get_zip_headers
-from odoo.exceptions import AccessError, MissingError
-from odoo.http import request
+from koda import http, _
+from koda.osv import expression
+from koda.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
+from koda.addons.account.controllers.download_docs import _get_zip_headers
+from koda.exceptions import AccessError, MissingError
+from koda.http import request
 
 
 class PortalAccount(CustomerPortal):

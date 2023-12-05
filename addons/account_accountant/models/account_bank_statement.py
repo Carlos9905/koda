@@ -1,7 +1,7 @@
-from odoo import _, api, fields, models
-from odoo.addons.base.models.res_bank import sanitize_account_number
-from odoo.exceptions import UserError
-from odoo.tools import html2plaintext
+from koda import _, api, fields, models
+from koda.addons.base.models.res_bank import sanitize_account_number
+from koda.exceptions import UserError
+from koda.tools import html2plaintext
 
 from dateutil.relativedelta import relativedelta
 from itertools import product

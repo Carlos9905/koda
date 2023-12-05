@@ -3,10 +3,10 @@
 import datetime
 import json
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
-from odoo.tools.misc import formatLang
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError
+from koda.osv import expression
+from koda.tools.misc import formatLang
 
 
 class ConsolidationPeriod(models.Model):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import ast
-from odoo import models, _
+from koda import models, _
 
 
 class AccountPayment(models.Model):

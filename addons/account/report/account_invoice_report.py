@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
-from odoo.addons.account.models.account_move import PAYMENT_STATE_SELECTION
+from koda import models, fields, api
+from koda.addons.account.models.account_move import PAYMENT_STATE_SELECTION
 
 from functools import lru_cache
 

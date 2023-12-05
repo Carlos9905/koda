@@ -6,10 +6,10 @@ from dateutil.relativedelta import relativedelta
 import logging
 import re
 
-from odoo import fields, models, api, _, Command
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools import frozendict, SQL
+from koda import fields, models, api, _, Command
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools import frozendict, SQL
 
 
 _logger = logging.getLogger(__name__)

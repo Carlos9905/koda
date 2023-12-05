@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import fields, models, _, Command, tools
+from koda import fields, models, _, Command, tools
 import base64
 from datetime import timedelta
 

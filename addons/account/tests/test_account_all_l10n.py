@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from odoo.tests import standalone
+from koda.tests import standalone
 
 
 _logger = logging.getLogger(__name__)

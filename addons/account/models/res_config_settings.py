@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import _, api, fields, models
+from koda import _, api, fields, models
 
-from odoo.addons.account.models.company import PEPPOL_LIST
+from koda.addons.account.models.company import PEPPOL_LIST
 
 
 class ResConfigSettings(models.TransientModel):

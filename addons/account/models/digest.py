@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import fields, models, _
-from odoo.exceptions import AccessError
+from koda import fields, models, _
+from koda.exceptions import AccessError
 
 
 class Digest(models.Model):

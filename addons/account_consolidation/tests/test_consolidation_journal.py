@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo.tests import tagged
-from odoo.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
-from odoo.exceptions import ValidationError, UserError
+from koda.tests import tagged
+from koda.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
+from koda.exceptions import ValidationError, UserError
 from unittest.mock import patch, Mock
 
 

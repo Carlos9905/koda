@@ -1,8 +1,8 @@
 from importlib import import_module
 from inspect import getmembers, ismodule, isclass, isfunction
 
-from odoo import api, models, fields
-from odoo.tools import get_flag
+from koda import api, models, fields
+from koda.tools import get_flag
 
 
 def templ(env, code, name=None, country='', **kwargs):

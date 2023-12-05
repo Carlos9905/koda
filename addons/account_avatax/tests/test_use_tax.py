@@ -1,4 +1,4 @@
-from odoo.tests.common import tagged
+from koda.tests.common import tagged
 from .common import TestAvataxCommon, TestAccountAvataxCommon
 
 

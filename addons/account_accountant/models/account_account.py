@@ -1,5 +1,5 @@
 import ast
-from odoo import models
+from koda import models
 
 
 class AccountAccount(models.Model):

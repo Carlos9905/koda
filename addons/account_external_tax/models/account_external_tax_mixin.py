@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
 
-from odoo import models, fields, api, registry, SUPERUSER_ID
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import models, fields, api, registry, SUPERUSER_ID
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from datetime import datetime
 
 

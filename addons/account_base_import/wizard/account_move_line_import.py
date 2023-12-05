@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
-from odoo.addons.base_import.models.base_import import FIELDS_RECURSION_LIMIT
+from koda import api, models
+from koda.addons.base_import.models.base_import import FIELDS_RECURSION_LIMIT
 
 
 class AccountMoveLineImport(models.TransientModel):

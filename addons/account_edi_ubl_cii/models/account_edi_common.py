@@ -1,8 +1,8 @@
-from odoo import _, models, Command
-from odoo.tools import float_repr, find_xml_value
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.float_utils import float_round
-from odoo.tools.misc import formatLang
+from koda import _, models, Command
+from koda.tools import float_repr, find_xml_value
+from koda.exceptions import UserError, ValidationError
+from koda.tools.float_utils import float_round
+from koda.tools.misc import formatLang
 
 from markupsafe import Markup
 from zeep import Client
@@ -567,7 +567,7 @@ class AccountEdiCommon(models.AbstractModel):
             reason = allow_charge_el.find(xpath_dict['allowance_charge_reason'])
             if amount is not None:
                 if reason_code is not None and reason_code.text == 'AEO' and reason is not None:
-                    # Handle Fixed Taxes: when exporting from Odoo, we use the allowance_charge node
+                    # Handle Fixed Taxes: when exporting from koda, we use the allowance_charge node
                     fixed_taxes_list.append({
                         'tax_name': reason.text,
                         'tax_amount': float(amount.text),

@@ -3,9 +3,9 @@
 
 import psycopg2
 
-from odoo import _, api, fields, models, Command
-from odoo.exceptions import UserError
-from odoo.addons.base_import.models.base_import import FIELDS_RECURSION_LIMIT
+from koda import _, api, fields, models, Command
+from koda.exceptions import UserError
+from koda.addons.base_import.models.base_import import FIELDS_RECURSION_LIMIT
 
 
 class AccountBankStmtImportCSV(models.TransientModel):

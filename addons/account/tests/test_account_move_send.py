@@ -6,13 +6,13 @@ from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo import Command, fields
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import UserError
-from odoo.tests.common import Form, users, warmup
-from odoo.tests import tagged
-from odoo.tools import formataddr, mute_logger
+from koda import Command, fields
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.mail.tests.common import MailCommon
+from koda.exceptions import UserError
+from koda.tests.common import Form, users, warmup
+from koda.tests import tagged
+from koda.tools import formataddr, mute_logger
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

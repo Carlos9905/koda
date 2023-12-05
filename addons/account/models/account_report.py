@@ -4,8 +4,8 @@
 import re
 from collections import defaultdict
 
-from odoo import models, fields, api, _, osv, Command
-from odoo.exceptions import ValidationError, UserError
+from koda import models, fields, api, _, osv, Command
+from koda.exceptions import ValidationError, UserError
 
 FIGURE_TYPE_SELECTION_VALUES = [
     ('monetary', "Monetary"),

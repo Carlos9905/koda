@@ -2,10 +2,10 @@
 
 from ast import literal_eval
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.addons.base.models.res_bank import sanitize_account_number
-from odoo.tools import remove_accents, groupby
+from koda import api, Command, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.addons.base.models.res_bank import sanitize_account_number
+from koda.tools import remove_accents, groupby
 from collections import defaultdict
 import logging
 import re
@@ -152,7 +152,7 @@ class AccountJournal(models.Model):
         copy=False,
         check_company=True,
         help="Manual: Pay by any method outside of Odoo.\n"
-        "Check: Pay bills by check and print it from Odoo.\n"
+        "Check: Pay bills by check and print it from koda.\n"
         "SEPA Credit Transfer: Pay in the SEPA zone by submitting a SEPA Credit Transfer file to your bank. Module account_sepa is necessary.\n"
     )
     profit_account_id = fields.Many2one(

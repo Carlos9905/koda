@@ -2,9 +2,9 @@
 from markupsafe import Markup
 from werkzeug.urls import url_encode
 
-from odoo import _, api, fields, models, modules, tools, Command
-from odoo.exceptions import UserError
-from odoo.tools.misc import get_lang
+from koda import _, api, fields, models, modules, tools, Command
+from koda.exceptions import UserError
+from koda.tools.misc import get_lang
 
 
 class AccountMoveSend(models.TransientModel):

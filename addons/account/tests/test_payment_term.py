@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
-from odoo import fields, Command
-from odoo.tests.common import Form
-from odoo.tools.safe_eval import datetime
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.exceptions import ValidationError
+from koda.tests import tagged
+from koda import fields, Command
+from koda.tests.common import Form
+from koda.tools.safe_eval import datetime
 
 
 @tagged('post_install', '-at_install')

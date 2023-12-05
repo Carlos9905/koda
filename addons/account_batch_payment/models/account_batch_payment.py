@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import base64
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError, UserError
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError, UserError
 
 
 class AccountBatchPayment(models.Model):

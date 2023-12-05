@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
 
 
 class TestTaxCommon(AccountTestInvoicingCommon):

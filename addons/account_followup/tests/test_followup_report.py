@@ -2,9 +2,9 @@
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo.tests import tagged
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo import Command
+from koda.tests import tagged
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda import Command
 
 
 @tagged('post_install', '-at_install')

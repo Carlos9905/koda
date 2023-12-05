@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
+from koda import models, _
 
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
-from odoo.tools.misc import remove_accents
+from koda.tools.misc import remove_accents
 
 import itertools
 

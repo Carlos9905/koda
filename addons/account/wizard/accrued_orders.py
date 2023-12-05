@@ -2,11 +2,11 @@
 # Koda
 from dateutil.relativedelta import relativedelta
 import json
-from odoo import models, fields, api, _, Command
-from odoo.tools import format_date
-from odoo.exceptions import UserError
-from odoo.tools import date_utils
-from odoo.tools.misc import formatLang
+from koda import models, fields, api, _, Command
+from koda.tools import format_date
+from koda.exceptions import UserError
+from koda.tools import date_utils
+from koda.tools.misc import formatLang
 
 class AccruedExpenseRevenue(models.TransientModel):
     _name = 'account.accrued.orders.wizard'

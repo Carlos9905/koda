@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
 from uuid import uuid4
-from odoo.tests import common
+from koda.tests import common
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 class AccountAutoTransferTestCase(AccountTestInvoicingCommon):

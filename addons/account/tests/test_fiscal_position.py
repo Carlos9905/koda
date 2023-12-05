@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.tests import common
+from koda.tests import common
 
 
 class TestFiscalPosition(common.TransactionCase):

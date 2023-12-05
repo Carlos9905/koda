@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #pylint: disable=too-many-lines
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo import Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda import Command
 
 
 @tagged('post_install', '-at_install')

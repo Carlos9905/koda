@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
-from odoo import fields, Command
-from odoo.tests.common import TransactionCase, HttpCase, tagged, Form
+from koda import fields, Command
+from koda.tests.common import TransactionCase, HttpCase, tagged, Form
 
 import json
 import time

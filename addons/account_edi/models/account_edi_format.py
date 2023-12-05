@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api, _
-from odoo.tools.pdf import OdooPdfFileReader
-from odoo.osv import expression
-from odoo.tools import html_escape
-from odoo.exceptions import RedirectWarning
+from koda import models, fields, api, _
+from koda.tools.pdf import OdooPdfFileReader
+from koda.osv import expression
+from koda.tools import html_escape
+from koda.exceptions import RedirectWarning
 
 from lxml import etree
 from struct import error as StructError

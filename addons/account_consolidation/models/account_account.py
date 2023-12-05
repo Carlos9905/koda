@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
-from odoo.osv import expression
+from koda import models, fields, api
+from koda.osv import expression
 
 
 class Account(models.Model):

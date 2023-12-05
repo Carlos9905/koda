@@ -3,9 +3,9 @@
 
 from datetime import datetime
 
-from odoo import api, models, fields, _
+from koda import api, models, fields, _
 
-from odoo.exceptions import UserError, ValidationError
+from koda.exceptions import UserError, ValidationError
 
 class BACSDirectDebitInstruction(models.Model):
     """ A class containing the data of a Direct Debit Instruction (DDI) sent by a customer to

@@ -1,7 +1,7 @@
-from odoo import fields
-from odoo.tests.common import tagged
-from odoo.tools.misc import formatLang
-from odoo.addons.account_avatax.tests.common import TestAccountAvataxCommon
+from koda import fields
+from koda.tests.common import tagged
+from koda.tools.misc import formatLang
+from koda.addons.account_avatax.tests.common import TestAccountAvataxCommon
 from .mocked_so_response import generate_response
 
 

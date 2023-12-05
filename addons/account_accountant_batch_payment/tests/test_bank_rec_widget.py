@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from unittest.mock import patch
 
-from odoo import Command
-from odoo.addons.account_accountant.tests.test_bank_rec_widget_common import TestBankRecWidgetCommon
-from odoo.tests import tagged
+from koda import Command
+from koda.addons.account_accountant.tests.test_bank_rec_widget_common import TestBankRecWidgetCommon
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

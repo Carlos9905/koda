@@ -2,8 +2,8 @@
 from collections import defaultdict
 from lxml import etree
 
-from odoo import models, _
-from odoo.tools import html2plaintext, cleanup_xml_node
+from koda import models, _
+from koda.tools import html2plaintext, cleanup_xml_node
 
 
 class AccountEdiXmlUBL20(models.AbstractModel):

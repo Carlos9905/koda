@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged, new_test_user
-from odoo.tests.common import Form
-from odoo import Command, fields
-from odoo.exceptions import UserError, RedirectWarning
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged, new_test_user
+from koda.tests.common import Form
+from koda import Command, fields
+from koda.exceptions import UserError, RedirectWarning
 
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time

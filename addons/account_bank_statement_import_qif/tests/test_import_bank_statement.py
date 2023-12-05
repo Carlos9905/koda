@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tools import file_open
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tools import file_open
 
 import base64
 

@@ -1,10 +1,10 @@
 import re
 
-from odoo import Command, fields
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda import Command, fields
+from koda.exceptions import UserError
+from koda.tests import tagged
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 @tagged('post_install', '-at_install')

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api, _
+from koda import models, api, _
 from .builder.comparison import ComparisonBuilder
 from .builder.default import DefaultBuilder
 from .handler.journals import JournalsHandler

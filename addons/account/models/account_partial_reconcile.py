@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models, _, Command
-from odoo.exceptions import UserError, ValidationError
+from koda import api, fields, models, _, Command
+from koda.exceptions import UserError, ValidationError
 
 from datetime import date
 

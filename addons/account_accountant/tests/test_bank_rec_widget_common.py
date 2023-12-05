@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda import Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 class TestBankRecWidgetCommon(AccountTestInvoicingCommon):

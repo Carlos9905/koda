@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api, _
-from odoo.osv import expression
-from odoo.exceptions import ValidationError
+from koda import models, fields, api, _
+from koda.osv import expression
+from koda.exceptions import ValidationError
 
 
 class ConsolidationChart(models.Model):

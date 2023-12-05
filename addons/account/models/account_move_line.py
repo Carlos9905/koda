@@ -4,14 +4,14 @@ from datetime import date
 import logging
 import re
 
-from odoo import api, fields, models, Command, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.osv import expression
-from odoo.tools import frozendict, format_date, float_compare, Query
-from odoo.tools.sql import create_index, SQL
-from odoo.addons.web.controllers.utils import clean_action
+from koda import api, fields, models, Command, _
+from koda.exceptions import ValidationError, UserError
+from koda.osv import expression
+from koda.tools import frozendict, format_date, float_compare, Query
+from koda.tools.sql import create_index, SQL
+from koda.addons.web.controllers.utils import clean_action
 
-from odoo.addons.account.models.account_move import MAX_HASH_VERSION
+from koda.addons.account.models.account_move import MAX_HASH_VERSION
 
 
 _logger = logging.getLogger(__name__)

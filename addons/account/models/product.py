@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
-from odoo.tools import format_amount
+from koda import api, Command, fields, models, _
+from koda.exceptions import ValidationError
+from koda.osv import expression
+from koda.tools import format_amount
 
 ACCOUNT_DOMAIN = "['&', '&', ('deprecated', '=', False), ('account_type', 'not in', ('asset_receivable','liability_payable','asset_cash','liability_credit_card','off_balance')), ('company_id', '=', current_company_id)]"
 

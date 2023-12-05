@@ -1,4 +1,4 @@
-from odoo import models, fields
+from koda import models, fields
 
 
 class AccountMove(models.Model):

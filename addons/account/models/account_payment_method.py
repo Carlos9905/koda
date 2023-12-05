@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.osv import expression
+from koda.exceptions import UserError
 
 
 class AccountPaymentMethod(models.Model):

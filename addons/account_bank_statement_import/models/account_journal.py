@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo import models, tools, _
-from odoo.addons.base.models.res_bank import sanitize_account_number
-from odoo.exceptions import UserError, RedirectWarning
+from koda import models, tools, _
+from koda.addons.base.models.res_bank import sanitize_account_number
+from koda.exceptions import UserError, RedirectWarning
 
 
 class AccountJournal(models.Model):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import fields, models
+from koda import fields, models
 
 import logging
 _logger = logging.getLogger(__name__)

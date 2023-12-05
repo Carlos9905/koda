@@ -1,7 +1,7 @@
-from odoo.tests.common import tagged
+from koda.tests.common import tagged
 from .common import TestAvataxCommon
 from .mocked_address_validation_response import response as address_validation_response
-from odoo.exceptions import ValidationError
+from koda.exceptions import ValidationError
 
 
 class TestAccountAvalaraAddressValidationCommon(TestAvataxCommon):

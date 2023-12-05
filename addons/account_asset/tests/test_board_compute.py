@@ -2,9 +2,9 @@
 
 
 from freezegun import freeze_time
-from odoo.tests.common import tagged
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo import fields
+from koda.tests.common import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda import fields
 
 
 @freeze_time('2022-07-01')

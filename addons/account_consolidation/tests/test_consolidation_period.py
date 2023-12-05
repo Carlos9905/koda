@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo.tests import tagged
-from odoo.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
+from koda.tests import tagged
+from koda.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
 
 import json
 from datetime import datetime, date

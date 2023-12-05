@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models, _
-from odoo import osv
+from koda import api, fields, models, _
+from koda import osv
 
 
 class AccountAccountTag(models.Model):

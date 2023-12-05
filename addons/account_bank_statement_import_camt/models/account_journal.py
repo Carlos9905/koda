@@ -6,10 +6,10 @@ import logging
 
 from lxml import etree
 
-from odoo import models, _
-from odoo.exceptions import UserError
-from odoo.addons.base.models.res_bank import sanitize_account_number
-from odoo.addons.account_bank_statement_import_camt.lib.camt import CAMT
+from koda import models, _
+from koda.exceptions import UserError
+from koda.addons.base.models.res_bank import sanitize_account_number
+from koda.addons.account_bank_statement_import_camt.lib.camt import CAMT
 
 _logger = logging.getLogger(__name__)
 

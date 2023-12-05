@@ -5,9 +5,9 @@ from collections import defaultdict
 from datetime import timedelta
 import itertools
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.osv.expression import AND
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.osv.expression import AND
 
 # ---------------------------------------------------------
 # Budgets

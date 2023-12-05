@@ -1,4 +1,4 @@
-from odoo import models, _
+from koda import models, _
 
 
 class FollowupMissingInformation(models.TransientModel):

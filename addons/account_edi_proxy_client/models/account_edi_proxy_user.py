@@ -1,6 +1,6 @@
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
-from odoo.tools import index_exists
+from koda import api, models, fields, _
+from koda.exceptions import UserError
+from koda.tools import index_exists
 from .account_edi_proxy_auth import OdooEdiProxyAuth
 
 from cryptography.hazmat.backends import default_backend

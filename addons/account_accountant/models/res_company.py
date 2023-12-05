@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, _
-from odoo.tools.misc import DEFAULT_SERVER_DATE_FORMAT
+from koda import models, fields, _
+from koda.tools.misc import DEFAULT_SERVER_DATE_FORMAT
 
 from datetime import timedelta
-from odoo.tools import date_utils
+from koda.tools import date_utils
 
 
 class ResCompany(models.Model):

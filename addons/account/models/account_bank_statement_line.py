@@ -1,8 +1,8 @@
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv.expression import get_unaccent_wrapper
+from koda import api, Command, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.osv.expression import get_unaccent_wrapper
 
-from odoo.addons.base.models.res_bank import sanitize_account_number
+from koda.addons.base.models.res_bank import sanitize_account_number
 
 from xmlrpc.client import MAXINT
 

@@ -3,8 +3,8 @@
 from collections import defaultdict
 import json
 
-from odoo import _, api, fields, models, Command
-from odoo.addons.web.controllers.utils import clean_action
+from koda import _, api, fields, models, Command
+from koda.addons.web.controllers.utils import clean_action
 
 
 class BankRecWidget(models.Model):

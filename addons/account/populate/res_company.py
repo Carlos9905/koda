@@ -3,7 +3,7 @@
 
 Only adding specificities of basic accounting applications.
 """
-from odoo import models
+from koda import models
 
 import logging
 

@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import ast
 import logging
-from odoo import api, fields, models, _
-from odoo.tools.misc import format_date
+from koda import api, fields, models, _
+from koda.tools.misc import format_date
 from datetime import datetime, timedelta
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.exceptions import UserError
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

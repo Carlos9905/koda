@@ -4,9 +4,9 @@ from collections import defaultdict
 
 import werkzeug
 import werkzeug.exceptions
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.image import image_data_uri
+from koda import _, api, fields, models
+from koda.exceptions import UserError, ValidationError
+from koda.tools.image import image_data_uri
 
 
 class ResPartnerBank(models.Model):

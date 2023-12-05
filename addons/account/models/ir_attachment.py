@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import api, models
-from odoo.tools.pdf import OdooPdfFileReader
+from koda import api, models
+from koda.tools.pdf import OdooPdfFileReader
 
 from lxml import etree
 from struct import error as StructError

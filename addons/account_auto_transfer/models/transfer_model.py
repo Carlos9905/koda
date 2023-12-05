@@ -5,10 +5,10 @@ from datetime import date
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, api, _
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
-from odoo.tools.float_utils import float_compare, float_is_zero
+from koda import fields, models, api, _
+from koda.exceptions import ValidationError
+from koda.osv import expression
+from koda.tools.float_utils import float_compare, float_is_zero
 
 
 class TransferModel(models.Model):

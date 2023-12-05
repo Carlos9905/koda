@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo import fields
-from odoo.tests import tagged
-from odoo.tests.common import Form
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda import fields
+from koda.tests import tagged
+from koda.tests.common import Form
 
 
 @tagged('post_install', '-at_install')

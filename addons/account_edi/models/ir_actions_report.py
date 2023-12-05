@@ -2,8 +2,8 @@
 
 import io
 
-from odoo import models
-from odoo.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
+from koda import models
+from koda.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
 
 
 class IrActionsReport(models.Model):

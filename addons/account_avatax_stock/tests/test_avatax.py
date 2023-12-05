@@ -1,5 +1,5 @@
-from odoo.tests.common import tagged
-from odoo.addons.account_avatax.tests.common import TestAccountAvataxCommon
+from koda.tests.common import tagged
+from koda.addons.account_avatax.tests.common import TestAccountAvataxCommon
 
 
 @tagged("-at_install", "post_install")

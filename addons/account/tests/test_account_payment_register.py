@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged, Form
-from odoo import Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.exceptions import UserError
+from koda.tests import tagged, Form
+from koda import Command
 
 
 @tagged('post_install', '-at_install')

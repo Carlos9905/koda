@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import http, _
-from odoo.http import request, content_disposition
+from koda import http, _
+from koda.http import request, content_disposition
 
 
 def _get_zip_headers(content, filename):

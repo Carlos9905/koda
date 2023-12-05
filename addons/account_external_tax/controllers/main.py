@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.http import route
-from odoo.addons.account.controllers.portal import CustomerPortal
+from koda.http import route
+from koda.addons.account.controllers.portal import CustomerPortal
 
 
 class CustomerPortalExternalTax(CustomerPortal):

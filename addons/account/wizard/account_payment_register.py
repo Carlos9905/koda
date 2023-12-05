@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from collections import defaultdict
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
-from odoo.tools import frozendict
+from koda import models, fields, api, _
+from koda.exceptions import UserError
+from koda.tools import frozendict
 
 
 class AccountPaymentRegister(models.TransientModel):
@@ -93,7 +93,7 @@ class AccountPaymentRegister(models.TransientModel):
         domain="[('id', 'in', available_payment_method_line_ids)]",
         help="Manual: Pay or Get paid by any method outside of Odoo.\n"
         "Payment Providers: Each payment provider has its own Payment Method. Request a transaction on/to a card thanks to a payment token saved by the partner when buying or subscribing online.\n"
-        "Check: Pay bills by check and print it from Odoo.\n"
+        "Check: Pay bills by check and print it from koda.\n"
         "Batch Deposit: Collect several customer checks at once generating and submitting a batch deposit to your bank. Module account_batch_payment is necessary.\n"
         "SEPA Credit Transfer: Pay in the SEPA zone by submitting a SEPA Credit Transfer file to your bank. Module account_sepa is necessary.\n"
         "SEPA Direct Debit: Get paid in the SEPA zone thanks to a mandate your partner will have granted to you. Module account_sepa is necessary.\n")

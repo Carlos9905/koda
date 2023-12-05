@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace
 from freezegun import freeze_time
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests.common import Form
-from odoo.tests import tagged
-from odoo import fields, Command
-from odoo.osv import expression
-from odoo.exceptions import ValidationError, RedirectWarning
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests.common import Form
+from koda.tests import tagged
+from koda import fields, Command
+from koda.osv import expression
+from koda.exceptions import ValidationError, RedirectWarning
 from datetime import date
 
 from collections import defaultdict

@@ -1,10 +1,10 @@
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.models import Model
-from odoo.tests import tagged
-from odoo.tests.common import Form
-from odoo import fields
-from odoo.exceptions import UserError
-from odoo.tools import format_date
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.models import Model
+from koda.tests import tagged
+from koda.tests.common import Form
+from koda import fields
+from koda.exceptions import UserError
+from koda.tools import format_date
 
 
 @tagged('post_install', '-at_install')

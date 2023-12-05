@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from odoo.tests import tagged
-from odoo.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
-from odoo.exceptions import UserError
+from koda.tests import tagged
+from koda.addons.account_consolidation.tests.account_consolidation_test_classes import AccountConsolidationTestCase
+from koda.exceptions import UserError
 from unittest.mock import Mock
-from odoo.models import ValidationError
+from koda.models import ValidationError
 
 
 @tagged('post_install', '-at_install')

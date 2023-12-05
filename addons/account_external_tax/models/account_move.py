@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models
-from odoo.tools import float_compare, formatLang
+from koda import models
+from koda.tools import float_compare, formatLang
 
 
 class AccountMove(models.Model):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools.misc import format_date
-from odoo.tools import frozendict, mute_logger
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.tools.misc import format_date
+from koda.tools import frozendict, mute_logger
 
 import re
 from collections import defaultdict

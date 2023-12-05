@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from .common import TestAccountBudgetCommon
-from odoo import Command
-from odoo.tests import tagged
+from koda import Command
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

@@ -2,10 +2,10 @@
 # pylint: disable=C0326
 from contextlib import contextmanager
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tests.common import Form
-from odoo import fields, Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tests.common import Form
+from koda import fields, Command
 
 
 @tagged('post_install', '-at_install')

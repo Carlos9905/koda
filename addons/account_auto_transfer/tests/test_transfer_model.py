@@ -6,11 +6,11 @@ from itertools import chain
 from freezegun import freeze_time
 
 from dateutil.relativedelta import relativedelta
-from odoo.addons.account_auto_transfer.tests.account_auto_transfer_test_classes import AccountAutoTransferTestCase
+from koda.addons.account_auto_transfer.tests.account_auto_transfer_test_classes import AccountAutoTransferTestCase
 
-from odoo import fields
-from odoo.models import ValidationError
-from odoo.tests import tagged
+from koda import fields
+from koda.models import ValidationError
+from koda.tests import tagged
 
 # ############################################################################ #
 #                             FUNCTIONAL TESTS                                 #

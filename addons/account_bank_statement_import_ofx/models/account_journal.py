@@ -17,8 +17,8 @@ except ImportError:
     OfxParser = None
     OfxParserClass = object
 
-from odoo import models, _
-from odoo.exceptions import UserError
+from koda import models, _
+from koda.exceptions import UserError
 
 
 class PatchedOfxParser(OfxParserClass):

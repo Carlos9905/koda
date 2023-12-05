@@ -6,9 +6,9 @@ import logging
 
 import dateutil.parser
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import ustr
+from koda import fields, models, _
+from koda.exceptions import UserError
+from koda.tools import ustr
 
 
 logger = logging.getLogger(__name__)

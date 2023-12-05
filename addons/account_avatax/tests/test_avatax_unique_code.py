@@ -1,6 +1,6 @@
-from odoo.tests.common import tagged
+from koda.tests.common import tagged
 from .common import TestAccountAvataxCommon
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
 
 @tagged("-at_install", "post_install")

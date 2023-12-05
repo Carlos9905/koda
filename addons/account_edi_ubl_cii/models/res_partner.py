@@ -4,9 +4,9 @@
 import re
 from stdnum.fr import siret
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
-from odoo.addons.account_edi_ubl_cii.models.account_edi_common import EAS_MAPPING
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError
+from koda.addons.account_edi_ubl_cii.models.account_edi_common import EAS_MAPPING
 
 
 class ResPartner(models.Model):

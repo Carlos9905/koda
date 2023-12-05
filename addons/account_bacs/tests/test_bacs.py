@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import fields
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.account_bacs.models.account_journal import format_communication
-from odoo.tests import tagged
+from koda import fields
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account_bacs.models.account_journal import format_communication
+from koda.tests import tagged
 
 import itertools
 

@@ -2,9 +2,9 @@ import json
 import logging
 from datetime import timedelta
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from koda import fields, models, _
+from koda.exceptions import UserError
+from koda.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 _logger = logging.getLogger(__name__)
 

@@ -3,9 +3,9 @@ from contextlib import contextmanager, ExitStack
 from unittest import SkipTest
 from unittest.mock import patch
 
-from odoo.addons.account_avatax.lib.avatax_client import AvataxClient
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests.common import TransactionCase
+from koda.addons.account_avatax.lib.avatax_client import AvataxClient
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests.common import TransactionCase
 from .mocked_invoice_1_response import generate_response as generate_response_invoice_1
 from .mocked_invoice_2_response import generate_response as generate_response_invoice_2
 

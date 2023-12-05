@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tests.common import Form
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import mute_logger
+from koda import Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tests.common import Form
+from koda.exceptions import UserError, ValidationError
+from koda.tools import mute_logger
 import psycopg2
 from freezegun import freeze_time
 

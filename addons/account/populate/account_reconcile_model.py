@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Classes defining the populate factory for Bank Statements and related models."""
-from odoo import models
-from odoo.tools import populate
+from koda import models
+from koda.tools import populate
 
 import logging
 

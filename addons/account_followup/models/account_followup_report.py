@@ -3,11 +3,11 @@
 
 import markupsafe
 
-from odoo import models, fields, api
-from odoo.exceptions import UserError
-from odoo.tools.misc import formatLang, format_date, get_lang
-from odoo.tools.translate import _
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT, html2plaintext, plaintext2html
+from koda import models, fields, api
+from koda.exceptions import UserError
+from koda.tools.misc import formatLang, format_date, get_lang
+from koda.tools.translate import _
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT, html2plaintext, plaintext2html
 
 
 class AccountFollowupReport(models.AbstractModel):

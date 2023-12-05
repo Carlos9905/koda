@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from freezegun import freeze_time
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tools.misc import format_amount
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tools.misc import format_amount
 
 @tagged('post_install', '-at_install')
 class TestAccountJournalDashboard(AccountTestInvoicingCommon):

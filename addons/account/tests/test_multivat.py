@@ -1,11 +1,11 @@
 
 from unittest.mock import patch
 
-from odoo import Command
-from odoo.addons.account.models.chart_template import AccountChartTemplate
-from odoo.addons.account.tests.common import instantiate_accountman
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
+from koda import Command
+from koda.addons.account.models.chart_template import AccountChartTemplate
+from koda.addons.account.tests.common import instantiate_accountman
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
 
 
 def _get_chart_template_mapping(self, get_all=False):

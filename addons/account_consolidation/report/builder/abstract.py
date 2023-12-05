@@ -1,7 +1,7 @@
 from abc import ABC
 
-from odoo import _
-from odoo.tools.float_utils import float_is_zero
+from koda import _
+from koda.tools.float_utils import float_is_zero
 from ..handler.show_zero import ShowZeroHandler
 
 

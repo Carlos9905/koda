@@ -2,11 +2,11 @@
 import base64
 import io
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import UserError
-from odoo.tools import pdf
-from odoo.tests import tagged
-from odoo.tools import file_open
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.exceptions import UserError
+from koda.tools import pdf
+from koda.tests import tagged
+from koda.tools import file_open
 
 from PyPDF2 import PdfFileReader, PdfFileWriter
 

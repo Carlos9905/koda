@@ -2,10 +2,10 @@
 
 from unittest.mock import patch
 
-from odoo.addons.account_auto_transfer.tests.account_auto_transfer_test_classes import AccountAutoTransferTestCase
+from koda.addons.account_auto_transfer.tests.account_auto_transfer_test_classes import AccountAutoTransferTestCase
 
-from odoo import fields
-from odoo.tests import tagged
+from koda import fields
+from koda.tests import tagged
 
 # ############################################################################ #
 #                                UNIT TESTS                                    #

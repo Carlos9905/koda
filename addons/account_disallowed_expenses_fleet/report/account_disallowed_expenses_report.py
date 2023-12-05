@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
-from odoo.tools.misc import get_lang
+from koda import models, _
+from koda.tools.misc import get_lang
 
 
 class DisallowedExpensesFleetCustomHandler(models.AbstractModel):

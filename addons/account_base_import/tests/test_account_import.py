@@ -3,11 +3,11 @@
 
 import unittest
 
-from odoo.tests import tagged
-from odoo.tests.common import can_import
-from odoo.tools import file_open
+from koda.tests import tagged
+from koda.tests.common import can_import
+from koda.tools import file_open
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 @tagged("post_install", "-at_install")
 class TestXLSXImport(AccountTestInvoicingCommon):

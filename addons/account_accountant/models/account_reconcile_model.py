@@ -1,4 +1,4 @@
-from odoo import fields, models, Command, tools
+from koda import fields, models, Command, tools
 
 import re
 from collections import defaultdict

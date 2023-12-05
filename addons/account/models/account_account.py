@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models, _, tools
-from odoo.osv import expression
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.float_utils import float_is_zero
-from odoo.tools.sql import SQL
+from koda import api, fields, models, _, tools
+from koda.osv import expression
+from koda.exceptions import UserError, ValidationError
+from koda.tools.float_utils import float_is_zero
+from koda.tools.sql import SQL
 from bisect import bisect_left
 from collections import defaultdict
 import re

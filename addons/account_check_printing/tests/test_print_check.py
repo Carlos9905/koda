@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.account_check_printing.models.account_payment import INV_LINES_PER_STUB
-from odoo.tests import tagged
-from odoo.tools.misc import NON_BREAKING_SPACE
-from odoo import Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account_check_printing.models.account_payment import INV_LINES_PER_STUB
+from koda.tests import tagged
+from koda.tools.misc import NON_BREAKING_SPACE
+from koda import Command
 
 import math
 

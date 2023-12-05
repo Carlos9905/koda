@@ -6,9 +6,9 @@ try:
 except ImportError:
     from PyPDF2.utils import PdfStreamError, PdfReadError
 
-from odoo import models, _
-from odoo.exceptions import UserError
-from odoo.tools import pdf
+from koda import models, _
+from koda.exceptions import UserError
+from koda.tools import pdf
 
 
 class IrActionsReport(models.Model):

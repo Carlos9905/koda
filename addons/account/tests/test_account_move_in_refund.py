@@ -2,10 +2,10 @@
 # pylint: disable=bad-whitespace
 from lxml import etree
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests.common import Form
-from odoo.tests import tagged
-from odoo import fields, Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests.common import Form
+from koda.tests import tagged
+from koda import fields, Command
 
 from collections import defaultdict
 

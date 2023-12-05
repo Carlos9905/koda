@@ -1,7 +1,7 @@
 # coding: utf-8
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError, UserError
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError, UserError
 
 class AvataxValidateAddress(models.TransientModel):
     _name = 'avatax.validate.address'

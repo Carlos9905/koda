@@ -6,9 +6,9 @@ import io
 from lxml import etree
 from xml.sax.saxutils import escape, quoteattr
 
-from odoo import _, api, fields, models, tools, SUPERUSER_ID
-from odoo.tools import cleanup_xml_node
-from odoo.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
+from koda import _, api, fields, models, tools, SUPERUSER_ID
+from koda.tools import cleanup_xml_node
+from koda.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
 
 _logger = logging.getLogger(__name__)
 

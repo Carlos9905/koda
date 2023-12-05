@@ -1,7 +1,7 @@
 from math import copysign
 
-from odoo import _
-from odoo.tools.float_utils import float_is_zero
+from koda import _
+from koda.tools.float_utils import float_is_zero
 from .abstract import AbstractBuilder
 
 

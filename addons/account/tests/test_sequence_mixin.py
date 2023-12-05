@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tests.common import Form, TransactionCase
-from odoo import fields, api, SUPERUSER_ID, Command
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import mute_logger
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tests.common import Form, TransactionCase
+from koda import fields, api, SUPERUSER_ID, Command
+from koda.exceptions import ValidationError, UserError
+from koda.tools import mute_logger
 
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time

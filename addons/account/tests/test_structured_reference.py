@@ -1,7 +1,7 @@
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
 
-from odoo.addons.account.tools import (
+from koda.addons.account.tools import (
     is_valid_structured_reference_be,
     is_valid_structured_reference_fi,
     is_valid_structured_reference_no_se,

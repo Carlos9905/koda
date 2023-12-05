@@ -1,7 +1,7 @@
 from datetime import date
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, Command, fields, models, _
+from koda.exceptions import UserError
 
 
 class AccountAutoReconcileWizard(models.TransientModel):

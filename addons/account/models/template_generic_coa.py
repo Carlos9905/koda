@@ -1,5 +1,5 @@
-from odoo import models
-from odoo.addons.account.models.chart_template import template
+from koda import models
+from koda.addons.account.models.chart_template import template
 
 
 

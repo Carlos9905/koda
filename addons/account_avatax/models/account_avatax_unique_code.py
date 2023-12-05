@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import logging
-from odoo import models, fields, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import models, fields, _
+from koda.exceptions import UserError
+from koda.osv import expression
 
 logger = logging.getLogger(__name__)
 

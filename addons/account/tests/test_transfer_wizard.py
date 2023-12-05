@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged, Form
+from koda import fields, Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged, Form
 import time
 
 

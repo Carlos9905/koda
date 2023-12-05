@@ -1,6 +1,6 @@
 # Koda
 
-from odoo import Command
+from koda import Command
 import odoo.tests
 
 

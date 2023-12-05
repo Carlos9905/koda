@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account_accountant.tests.test_bank_rec_widget_common import TestBankRecWidgetCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tools import html2plaintext
-from odoo import fields, Command
+from koda.addons.account_accountant.tests.test_bank_rec_widget_common import TestBankRecWidgetCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda.tools import html2plaintext
+from koda import fields, Command
 
 from freezegun import freeze_time
 from unittest.mock import patch

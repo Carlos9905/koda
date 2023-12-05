@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models, _, Command
-from odoo.osv import expression
-from odoo.tools.float_utils import float_round
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.misc import clean_context, formatLang
-from odoo.tools import frozendict, groupby, split_every
+from koda import api, fields, models, _, Command
+from koda.osv import expression
+from koda.tools.float_utils import float_round
+from koda.exceptions import UserError, ValidationError
+from koda.tools.misc import clean_context, formatLang
+from koda.tools import frozendict, groupby, split_every
 
 from collections import defaultdict
 from markupsafe import Markup

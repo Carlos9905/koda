@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tests.common import Form
-from odoo.exceptions import ValidationError, UserError
-from odoo import fields, Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tests.common import Form
+from koda.exceptions import ValidationError, UserError
+from koda import fields, Command
 
 import base64
 

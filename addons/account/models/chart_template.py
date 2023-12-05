@@ -11,12 +11,12 @@ import re
 
 from psycopg2.extras import Json
 
-from odoo import Command, _, models, api
-from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
-from odoo.addons.account import SYSCOHADA_LIST
-from odoo.exceptions import AccessError
-from odoo.tools import file_open, groupby
-from odoo.tools.translate import TranslationImporter
+from koda import Command, _, models, api
+from koda.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+from koda.addons.account import SYSCOHADA_LIST
+from koda.exceptions import AccessError
+from koda.tools import file_open, groupby
+from koda.tools.translate import TranslationImporter
 
 _logger = logging.getLogger(__name__)
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.tools.float_utils import float_compare
-from odoo.tools.sql import column_exists, create_column
+from koda import api, fields, models
+from koda.tools.float_utils import float_compare
+from koda.tools.sql import column_exists, create_column
 
 # Available values for the release_to_pay field.
 _release_to_pay_status_list = [('yes', 'Yes'), ('no', 'No'), ('exception', 'Exception')]
