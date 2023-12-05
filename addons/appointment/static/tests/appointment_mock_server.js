@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 
@@ -27,7 +27,7 @@ mockRegistry.add("/appointment/appointment_type/create_custom", function (route,
     });
     return {
         appointment_type_id: customAppointmentTypeID,
-        invite_url: `http://amazing.odoo.com/appointment/3?filter_staff_user_ids=%5B${1}%5D`,
+        invite_url: `http://amazing.koda.com/appointment/3?filter_staff_user_ids=%5B${1}%5D`,
     };
 });
 
@@ -47,7 +47,7 @@ mockRegistry.add("/appointment/appointment_type/search_create_anytime", function
     }
     return {
         appointment_type_id: anytimeAppointmentID,
-        invite_url: `http://amazing.odoo.com/appointment/3?filter_staff_user_ids=%5B${1}%5D`,
+        invite_url: `http://amazing.koda.com/appointment/3?filter_staff_user_ids=%5B${1}%5D`,
     };
 });
 
@@ -55,7 +55,7 @@ mockRegistry.add("/appointment/appointment_type/get_book_url", function (route, 
     const appointment_type_id = args.appointment_type_id;
     return {
         appointment_type_id: appointment_type_id,
-        invite_url: `http://amazing.odoo.com/appointment/${appointment_type_id}?filter_staff_user_ids=%5B${1}%5D`,
+        invite_url: `http://amazing.koda.com/appointment/${appointment_type_id}?filter_staff_user_ids=%5B${1}%5D`,
     }
 });
 

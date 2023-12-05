@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
@@ -25,7 +25,7 @@ import {
     useExternalListener,
     onWillStart,
     onPatched,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 export class AnalyticDistribution extends Component {
     static template = "analytic.AnalyticDistribution";

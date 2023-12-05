@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <record id="calendar_event_view_form_gantt_booking_inherit_appointment_hr" model="ir.ui.view">
         <field name="name">calendar.event.view.form.gantt.booking.inherit.appointment.hr</field>
         <field name="model">calendar.event</field>
@@ -14,4 +14,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

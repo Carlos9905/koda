@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 	<data>
         <record id="account_analytic_line_report_view_grid" model="ir.ui.view">
             <field name="name">account.analytic.line.report.grid</field>
@@ -42,4 +42,4 @@
                    (0, 0, {'view_mode': 'grid', 'view_id': ref('analytic_enterprise.account_analytic_line_report_view_grid')})]"/>
         </record>
 	</data>
-</odoo>
+</koda>

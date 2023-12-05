@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 
     <record id="appointment_type_view_search" model="ir.ui.view">
         <field name="name">appointment.type.search</field>
@@ -434,4 +434,4 @@
             </p>
         </field>
     </record>
-</odoo>
+</koda>

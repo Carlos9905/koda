@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <template id="calendar_booking_view" name="Website Appointment: Booking Not Confirmed">
     <t t-set="no_breadcrumbs" t-value="True"/>
     <t t-call="portal.portal_layout">
@@ -114,4 +114,4 @@
         </div>
     </t>
 </template>
-</odoo>
+</koda>

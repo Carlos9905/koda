@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <template id="appointment_info" inherit_id="appointment.appointment_meeting_details">
     <xpath expr="//div[hasclass('o_appointment_details_location')]" position="before">
         <div t-if="appointment_type.product_id" class="d-flex py-1 px-0 bg-transparent o-cc1-text border-0">
@@ -9,4 +9,4 @@
         </div>
     </xpath>
 </template>
-</odoo>
+</koda>

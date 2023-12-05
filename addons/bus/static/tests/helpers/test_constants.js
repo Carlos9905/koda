@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export const TEST_GROUP_IDS = {
     groupUserId: 11,

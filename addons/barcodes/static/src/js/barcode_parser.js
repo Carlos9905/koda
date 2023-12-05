@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export class BarcodeParser {
     static barcodeNomenclatureFields = ["name", "rule_ids", "upc_ean_conv"];

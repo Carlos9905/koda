@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="approval_purchase_product_line_view_tree_inherit" model="ir.ui.view">
         <field name="name">approval.purchase.product.line.view.tree.inherit</field>
         <field name="model">approval.product.line</field>
@@ -10,4 +10,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

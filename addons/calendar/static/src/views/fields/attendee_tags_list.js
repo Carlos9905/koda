@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { TagsList } from "@web/core/tags_list/tags_list";
 

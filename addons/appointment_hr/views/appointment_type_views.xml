@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <record id="appointment_type_view_form_inherit_appointment_hr" model="ir.ui.view">
         <field name="name">appointment.type.form.inherit.appointment.hr</field>
         <field name="model">appointment.type</field>
@@ -10,4 +10,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

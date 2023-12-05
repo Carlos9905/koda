@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import OnboardingStepFormController from "@onboarding/views/form/onboarding_step_form_controller";
 

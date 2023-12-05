@@ -1,4 +1,4 @@
-/** @odoo-modules */
+/** @koda-modules */
 
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
@@ -17,7 +17,7 @@ import { registry } from "@web/core/registry";
 import { uiService } from "@web/core/ui/ui_service";
 import { getFixture, mount, nextTick, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { BaseAutomationErrorDialog } from "@base_automation/base_automation_error_dialog";
-import { toRaw } from "@odoo/owl";
+import { toRaw } from "@koda/owl";
 
 const serviceRegistry = registry.category("services");
 

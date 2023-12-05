@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>    
+<koda>    
     <record id="appointment_answer_input_view_search" model="ir.ui.view">
         <field name="name">appointment.answer.input.view.search</field>
         <field name="model">appointment.answer.input</field>
@@ -93,4 +93,4 @@
         <field name="view_mode">search,tree,graph,pivot,form</field>
         <field name="context">{'create': False, 'search_default_question_id': active_id}</field>
     </record>
-</odoo>
+</koda>

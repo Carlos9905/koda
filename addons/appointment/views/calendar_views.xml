@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 
     <record id="calendar_event_calendar_view_inherit_appointment" model="ir.ui.view">
         <field name="name">calendar.event.view.calendar.inherit.appointment</field>
@@ -11,4 +11,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

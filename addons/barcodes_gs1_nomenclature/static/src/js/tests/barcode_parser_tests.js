@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { BarcodeParser } from "@barcodes/js/barcode_parser";
 import { barcodeService } from "@barcodes/barcode_service";

@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { localization } from "@web/core/l10n/localization";
-import { useComponent, useEffect, useEnv, useState } from "@odoo/owl";
+import { useComponent, useEffect, useEnv, useState } from "@koda/owl";
 
 /**
  * Common code between common and year renderer for our calendar.

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <data>
         <record model="ir.ui.view" id="view_data_cleaning_field_form">
             <field name="name">Field Cleaning Rule Form</field>
@@ -25,4 +25,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

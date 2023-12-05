@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { getPyEnv } from "@bus/../tests/helpers/mock_python_environment";
 import { addBusServicesToRegistry } from "@bus/../tests/helpers/test_utils";

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 
     <!-- Calendar's appointment menu-->
     <menuitem
@@ -18,4 +18,4 @@
         parent="appointment.reporting_menu_calendar"
         action="calendar_event_action_report_all"/>
 
-</odoo>
+</koda>

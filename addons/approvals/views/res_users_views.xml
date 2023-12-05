@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
   <record id="res_users_view_form" model="ir.ui.view">
     <field name="name">hr.user.preferences.view.form.approval.inherit</field>
     <field name="model">res.users</field>
@@ -10,4 +10,4 @@
       </header>
     </field>
   </record>
-</odoo>
+</koda>

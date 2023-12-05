@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="appointment_validated" name="Website Appointment: Appointment Confirmed">
         <t t-if="request.env.user._is_public()" t-set="no_breadcrumbs" t-value="True"/>
         <t t-call="portal.portal_layout">
@@ -203,4 +203,4 @@
             </article>
         </div>
     </template>
-</odoo>
+</koda>

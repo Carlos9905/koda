@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="data_merge_merged">
         <t t-esc="res_model_label" /> merged into <a t-att-data-oe-model="res_model_name" t-att-data-oe-id="res_id" href="#"><t t-esc="master_record" /></a>
     </template>
@@ -21,4 +21,4 @@
 I've identified <t t-esc="num_records" /> duplicate records with the '<t t-esc="res_model_label" />' deduplication rule.<br/>
 You can merge them <a t-attf-href="/web?#action=data_merge.action_data_merge_record_notification&amp;active_id={{model_id}}&amp;menu_id={{menu_id}}">here</a>.
     </template>
-</odoo>
+</koda>

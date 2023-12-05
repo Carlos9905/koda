@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { ColumnProgress } from "@web/views/view_components/column_progress";
 import { session } from "@web/session";

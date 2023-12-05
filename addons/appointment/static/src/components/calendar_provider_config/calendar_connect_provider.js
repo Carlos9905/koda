@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
 import { CalendarConnectProvider } from "@calendar/components/calendar_provider_config/calendar_connect_provider";

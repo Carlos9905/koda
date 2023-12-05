@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { jsonrpc } from "@web/core/network/rpc_service";
 import publicWidget from "@web/legacy/js/public/public_widget";

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <data>
         <record model="ir.ui.view" id="view_data_cleaning_model_list">
             <field name="name">Field Cleaning Model List</field>
@@ -84,4 +84,4 @@
             <field name="domain">['|', ('active', '=', False), ('active', '=', True)]</field>
         </record>
     </data>
-</odoo>
+</koda>

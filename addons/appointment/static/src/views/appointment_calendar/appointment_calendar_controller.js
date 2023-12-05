@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { AttendeeCalendarController } from "@calendar/views/attendee_calendar/attendee_calendar_controller";
@@ -8,7 +8,7 @@ import { useService } from "@web/core/utils/hooks";
 import { Tooltip } from "@web/core/tooltip/tooltip";
 import { browser } from "@web/core/browser/browser";
 import { serializeDateTime } from "@web/core/l10n/dates";
-import { useRef, useState, useSubEnv, onWillStart } from "@odoo/owl";
+import { useRef, useState, useSubEnv, onWillStart } from "@koda/owl";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 
 patch(AttendeeCalendarController, {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <template id="appointment_payment" name="Appointment Payment Providers">
     <t t-set="no_breadcrumbs" t-value="True"/>
     <t t-call="portal.portal_layout">
@@ -71,4 +71,4 @@
     </t>
 </template>
 
-</odoo>
+</koda>

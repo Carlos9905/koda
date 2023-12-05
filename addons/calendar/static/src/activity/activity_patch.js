@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Activity } from "@mail/core/web/activity";
 import { useService } from "@web/core/utils/hooks";

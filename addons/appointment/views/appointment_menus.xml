@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 
     <!-- Appointment's main menu-->
     <menuitem
@@ -83,4 +83,4 @@
         groups="group_appointment_user"
         name="Share Links"/>
 
-</odoo>
+</koda>

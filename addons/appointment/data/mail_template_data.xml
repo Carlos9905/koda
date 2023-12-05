@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
 
         <record id="appointment_booked_mail_template" model="mail.template">
@@ -317,4 +317,4 @@
             <field name="auto_delete" eval="True"/>
         </record>
     </data>
-</odoo>
+</koda>

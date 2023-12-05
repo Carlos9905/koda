@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <menuitem
         id="menu_data_cleaning_record"
         name="Field Cleaning"
@@ -13,4 +13,4 @@
         parent="data_recycle.menu_data_cleaning_config_rules"
         action="action_data_cleaning_config"
         sequence="10" />
-</odoo>
+</koda>

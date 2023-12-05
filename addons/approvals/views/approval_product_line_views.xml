@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="approval_product_line_view_tree_independent" model="ir.ui.view">
         <field name="name">approval.product.line.view.tree</field>
         <field name="model">approval.product.line</field>
@@ -78,4 +78,4 @@
             </kanban>
         </field>
     </record>
-</odoo>
+</koda>

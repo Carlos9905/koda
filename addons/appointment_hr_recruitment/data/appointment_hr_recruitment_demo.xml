@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="appointment_type_interviews" model="appointment.type">
         <field name="name">Interviews availabilities</field>
         <field name="appointment_duration">0.5</field>
@@ -43,4 +43,4 @@
         <field name="short_code">interview</field>
         <field name="appointment_type_ids" eval="[(6, 0, [ref('appointment_type_interviews')])]"/>
     </record>
-</odoo>
+</koda>

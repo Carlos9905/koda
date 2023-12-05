@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { BoardAction } from "@board/board_action";
 import { click, dragAndDrop, getFixture, patchWithCleanup } from "@web/../tests/helpers/utils";

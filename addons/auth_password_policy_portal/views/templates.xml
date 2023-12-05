@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <template id="portal_my_security" inherit_id="portal.portal_my_security"
               name="Password policy data for portal">
         <xpath expr="//div[input[@name='new1']]" position="attributes">
@@ -9,4 +9,4 @@
             <owl-component name="password_meter" props='{"selector": "input[name=new1]"}'/>
         </xpath>
     </template>
-</odoo>
+</koda>

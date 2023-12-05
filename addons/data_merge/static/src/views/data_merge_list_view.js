@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { DataCleaningCommonListController } from "@data_recycle/views/data_cleaning_common_list";
@@ -6,7 +6,7 @@ import { registry } from '@web/core/registry';
 import { listView } from '@web/views/list/list_view';
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { useService } from "@web/core/utils/hooks";
-import { useSubEnv } from "@odoo/owl";
+import { useSubEnv } from "@koda/owl";
 
 export class DataMergeListModel extends listView.Model {}
 export class DataMergeListRecord extends DataMergeListModel.Record {

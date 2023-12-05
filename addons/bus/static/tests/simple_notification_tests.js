@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { simpleNotificationService } from "@bus/simple_notification_service";
 import { addBusServicesToRegistry } from "@bus/../tests/helpers/test_utils";

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Approval } from "@approvals/web/activity/approval";
 

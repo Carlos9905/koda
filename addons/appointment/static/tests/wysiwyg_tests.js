@@ -1,12 +1,12 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { patchWithCleanup, triggerEvent } from '@web/../tests/helpers/utils';
 import { makeFakeDialogService } from '@web/../tests/helpers/mock_services';
 import { Wysiwyg } from '@web_editor/js/wysiwyg/wysiwyg';
-import { insertText } from '@web_editor/js/editor/odoo-editor/test/utils'
-import { setSelection } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
+import { insertText } from '@web_editor/js/editor/koda-editor/test/utils'
+import { setSelection } from '@web_editor/js/editor/koda-editor/src/utils/utils';
 
 const linkUrl = window.location.origin + '/book/123';
 const serviceRegistry = registry.category("services");
@@ -54,7 +54,7 @@ QUnit.module('appointment.wysiwyg', {
                     }, {
                         id: 2,
                         display_name: "second record",
-                        body: '<p><a href="http://odoo.com">Existing link</a></p>',
+                        body: '<p><a href="http://koda.com">Existing link</a></p>',
                     }],
                 },
             },

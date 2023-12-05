@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record model="ir.module.category" id="base.module_category_human_resources_approvals">
         <field name="sequence">9</field>
     </record>
@@ -194,4 +194,4 @@
         <value eval="[ref('approvals.approval_request_unlink_request_owner_rule')]"/>
         <value eval="{'domain_force': '[(\'request_owner_id.id\', \'=\', user.id), (\'request_status\', \'in\', (\'new\', \'cancel\'))]'}"/>
     </function>
-</odoo>
+</koda>

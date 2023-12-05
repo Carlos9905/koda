@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { DELAY } from "@base_iban/components/iban_widget/iban_widget";
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";

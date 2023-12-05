@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <record id="mt_calendar_event_booked" model="mail.message.subtype">
         <field name="name">Appointment Booked</field>
         <field name="res_model">calendar.event</field>
@@ -32,4 +32,4 @@
         <field name="parent_id" ref="mt_calendar_event_canceled"/>
         <field name="relation_field">appointment_type_id</field>
     </record>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <record id="resource_calendar_leaves_action_show_appointment_resources" model="ir.actions.server">
     <field name="name">Appointment Resource Leaves</field>
@@ -17,4 +17,4 @@ action['domain'] = ['|', '&amp;', ('resource_id', '=', False), ('calendar_id', '
 </record>
 
 
-</odoo>
+</koda>

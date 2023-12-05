@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Domain } from "@web/core/domain";
 import { GanttModel } from "@web_gantt/gantt_model";

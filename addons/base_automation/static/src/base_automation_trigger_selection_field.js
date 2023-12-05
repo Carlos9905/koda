@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 import { _lt, _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { useRecordObserver } from "@web/model/relational_model/utils";

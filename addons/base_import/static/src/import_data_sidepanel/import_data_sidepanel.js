@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { CheckBox } from "@web/core/checkbox/checkbox";
 
 export class ImportDataSidepanel extends Component {

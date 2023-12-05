@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { pick } from "@web/core/utils/objects";
 import { groupBy, sortBy } from "@web/core/utils/arrays";
 import { memoize } from "@web/core/utils/functions";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 import { ImportBlockUI } from "./import_block_ui";
 
 const mainComponentRegistry = registry.category("main_components");
@@ -67,7 +67,7 @@ const strftimeToHumanFormat = memoize(function strftimeToHumanFormat(value) {
  * used in the different base_import components.
  *
  * When uploading a file some "preview data" is returned by the backend, this
- * data consist of the different columns of the file and the odoo fields which
+ * data consist of the different columns of the file and the koda fields which
  * these columns can be mapped to.
  *
  * Only a small selection of the lines are returned so the user can get an idea

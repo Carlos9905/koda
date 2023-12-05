@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { addToBoardItem } from "@board/add_to_board/add_to_board";
 import {
@@ -463,7 +463,7 @@ QUnit.module("Board", (hooks) => {
 
         registry.category("services").add("user", makeFakeUserService());
         patchWithCleanup(browser, { setTimeout: (fn) => fn() }); // makes mouseEnter work
-        patchWithCleanup(odoo, { debug: true });
+        patchWithCleanup(koda, { debug: true });
 
         const mockRPC = (route, args) => {
             if (route === "/board/add_to_dashboard") {

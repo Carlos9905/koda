@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { browser } from "@web/core/browser/browser";
 import {
@@ -16,7 +16,7 @@ import { makeFakeNotificationService } from "@web/../tests/helpers/mock_services
 import { ImportDataProgress } from "../src/import_data_progress/import_data_progress";
 import { ImportAction } from "../src/import_action/import_action";
 import { ImportBlockUI } from "../src/import_block_ui";
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 const serviceRegistry = registry.category("services");
 
@@ -550,7 +550,7 @@ QUnit.module("Base Import Tests", (hooks) => {
     });
 
     QUnit.test("Import view: additional options in debug", async function (assert) {
-        patchWithCleanup(odoo, { debug: true });
+        patchWithCleanup(koda, { debug: true });
         registerFakeHTTPService();
 
         await createImportAction({

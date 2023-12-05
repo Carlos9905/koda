@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Pages -->
     <template id="appointments_list_layout" name="Appointment Types">
         <t t-set="no_breadcrumbs" t-value="True"/>
@@ -393,4 +393,4 @@
             </div>
         </div>
     </template>
-</odoo>
+</koda>

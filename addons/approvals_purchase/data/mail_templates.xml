@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <template id="exception_approval_request_canceled"
     name="Message: Alert on purchase orders when cancel an Approval Request may modify the wanted quantities.">
     <div>
@@ -27,4 +27,4 @@
         </div>
     </div>
 </template>
-</odoo>
+</koda>

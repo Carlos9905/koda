@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, useExternalListener, useEffect, useRef } from "@odoo/owl";
+import { Component, useExternalListener, useEffect, useRef } from "@koda/owl";
 import { _lt, _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { useThrottleForAnimation } from "@web/core/utils/timing";

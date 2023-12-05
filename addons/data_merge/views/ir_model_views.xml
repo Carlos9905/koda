@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <record id="ir_model_view_form" model="ir.ui.view">
         <field name="name">ir.model.view.form.inherit.data.merge</field>
         <field name="model">ir.model</field>
@@ -55,4 +55,4 @@
               action="ir_model_action_merge"
               sequence="1"
               groups="base.group_no_one"/>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 import { parseEmail } from "@mail/js/utils";
 
 /**

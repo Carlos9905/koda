@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { KanbanRenderer } from "@web/views/kanban/kanban_renderer";
 import { AppointmentTypeKanbanRecord } from "@appointment/views/kanban/kanban_record";

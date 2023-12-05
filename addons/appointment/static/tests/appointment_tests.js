@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { click, nextTick, getFixture, patchDate, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { clickAllDaySlot } from "@web/../tests/views/calendar/helpers";
@@ -241,7 +241,7 @@ QUnit.test('create/search anytime appointment type', async function (assert) {
             writeText: (value) => {
                 assert.strictEqual(
                     value,
-                    `http://amazing.odoo.com/appointment/3?filter_staff_user_ids=%5B${uid}%5D`
+                    `http://amazing.koda.com/appointment/3?filter_staff_user_ids=%5B${uid}%5D`
                 );
             }
         },
@@ -273,7 +273,7 @@ QUnit.test('create/search anytime appointment type', async function (assert) {
             }
         },
         session: {
-            'web.base.url': 'http://amazing.odoo.com',
+            'web.base.url': 'http://amazing.koda.com',
         },
     });
 
@@ -409,7 +409,7 @@ QUnit.test("create slots for custom appointment type", async function (assert) {
             writeText: (value) => {
                 assert.strictEqual(
                     value,
-                    `http://amazing.odoo.com/appointment/3?filter_staff_user_ids=%5B${uid}%5D`
+                    `http://amazing.koda.com/appointment/3?filter_staff_user_ids=%5B${uid}%5D`
                 );
             }
         }
@@ -535,7 +535,7 @@ QUnit.test('click & copy appointment type url', async function (assert) {
             writeText: (value) => {
                 assert.strictEqual(
                     value,
-                    `http://amazing.odoo.com/appointment/2?filter_staff_user_ids=%5B${uid}%5D`
+                    `http://amazing.koda.com/appointment/2?filter_staff_user_ids=%5B${uid}%5D`
                 );
             }
         }

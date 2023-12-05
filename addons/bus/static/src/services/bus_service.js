@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { Deferred } from "@web/core/utils/concurrency";
@@ -6,7 +6,7 @@ import { registry } from "@web/core/registry";
 import { session } from "@web/session";
 import { isIosApp } from "@web/core/browser/feature_detection";
 import { WORKER_VERSION } from "@bus/workers/websocket_worker";
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 
 /**
  * Communicate with a SharedWorker in order to provide a single websocket
@@ -99,7 +99,7 @@ export const busService = {
             send("initialize_connection", {
                 websocketURL: `${params.serverURL.replace("http", "ws")}/websocket`,
                 db: session.db,
-                debug: odoo.debug,
+                debug: koda.debug,
                 lastNotificationId: multiTab.getSharedValue("last_notification_id", 0),
                 uid,
                 startTs,
@@ -122,8 +122,8 @@ export const busService = {
             const workerClass = isUsingSharedWorker ? browser.SharedWorker : browser.Worker;
             worker = new workerClass(workerURL, {
                 name: isUsingSharedWorker
-                    ? "odoo:websocket_shared_worker"
-                    : "odoo:websocket_worker",
+                    ? "koda:websocket_shared_worker"
+                    : "koda:websocket_worker",
             });
             worker.addEventListener("error", (e) => {
                 if (!isInitialized && workerClass === browser.SharedWorker) {

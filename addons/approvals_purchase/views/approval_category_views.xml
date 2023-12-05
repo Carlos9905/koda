@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="approval_purchase_category_view_form_inherit" model="ir.ui.view">
         <field name="name">approval.purchase.category.view.form.inherit</field>
         <field name="model">approval.category</field>
@@ -18,4 +18,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

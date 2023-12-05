@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { FormViewDialog } from '@web/views/view_dialogs/form_view_dialog';
 import { Wysiwyg } from '@web_editor/js/wysiwyg/wysiwyg';
-import { preserveCursor, closestElement } from '@web_editor/js/editor/odoo-editor/src/OdooEditor';
+import { preserveCursor, closestElement } from '@web_editor/js/editor/koda-editor/src/OdooEditor';
 import { patch } from "@web/core/utils/patch";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 patch(Wysiwyg.prototype, {
     _getPowerboxOptions() {

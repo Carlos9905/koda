@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <record id="appointment_type_tennis_court_resource_1" model="appointment.resource">
         <field name="name">Court 1</field>
         <field name="appointment_type_ids" eval="[(4, ref('appointment.appointment_type_tennis_court'))]"/>
@@ -16,4 +16,4 @@
         <field name="name">Court 4</field>
         <field name="appointment_type_ids" eval="[(4, ref('appointment.appointment_type_tennis_court'))]"/>
     </record>
-</odoo>
+</koda>
