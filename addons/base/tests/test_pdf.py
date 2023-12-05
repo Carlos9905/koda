@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import TransactionCase
-from odoo.tools import pdf
-from odoo.tools.misc import file_open
+from koda.tests.common import TransactionCase
+from koda.tools import pdf
+from koda.tools.misc import file_open
 import io
 
 

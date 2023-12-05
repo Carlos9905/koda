@@ -4,8 +4,8 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.tests import users
-from odoo.addons.appointment.tests.common import AppointmentCommon
+from koda.tests import users
+from koda.addons.appointment.tests.common import AppointmentCommon
 
 
 class AppointmentManageLeaveTest(AppointmentCommon):

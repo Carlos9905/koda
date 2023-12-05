@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
 class AccountMoveLine(models.Model):
     _name = "account.move.line"

@@ -6,9 +6,9 @@ import platform
 import psutil
 import unittest
 
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.exceptions import CacheMiss
-from odoo.tests.common import TransactionCase
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.exceptions import CacheMiss
+from koda.tests.common import TransactionCase
 
 
 class TestRecordCache(TransactionCaseWithUserDemo):

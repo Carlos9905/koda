@@ -4,9 +4,9 @@
 import json
 from dateutil.relativedelta import relativedelta
 
-from odoo import models, api, fields, _, Command
-from odoo.tools import format_date
-from odoo.exceptions import UserError
+from koda import models, api, fields, _, Command
+from koda.tools import format_date
+from koda.exceptions import UserError
 
 
 class MulticurrencyRevaluationWizard(models.TransientModel):

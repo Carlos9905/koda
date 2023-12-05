@@ -8,10 +8,10 @@ import requests
 from unittest.mock import patch
 
 import odoo
-from odoo.exceptions import UserError, ValidationError, AccessError
-from odoo.tools import mute_logger
-from odoo.tests import common, tagged
-from odoo import Command
+from koda.exceptions import UserError, ValidationError, AccessError
+from koda.tools import mute_logger
+from koda.tests import common, tagged
+from koda import Command
 
 
 class TestServerActionsBase(common.TransactionCase):

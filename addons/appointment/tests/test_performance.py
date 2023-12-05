@@ -8,10 +8,10 @@ from datetime import timedelta
 from freezegun import freeze_time
 from logging import getLogger
 
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.addons.website.tests.test_performance import UtilPerf
-from odoo.tests import tagged
-from odoo.tests.common import warmup
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.addons.website.tests.test_performance import UtilPerf
+from koda.tests import tagged
+from koda.tests.common import warmup
 
 _logger = getLogger(__name__)
 

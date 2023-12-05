@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.tools import mute_logger
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.tools import mute_logger
 
 
 class AppointmentOnboardingTest(AppointmentCommon):

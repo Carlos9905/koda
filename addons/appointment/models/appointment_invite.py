@@ -6,8 +6,8 @@ import uuid
 from markupsafe import Markup
 from werkzeug.urls import url_encode, url_join
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
 
 SHORT_CODE_PATTERN = re.compile(r"^[\w-]+$")
 

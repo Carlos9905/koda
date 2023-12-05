@@ -4,9 +4,9 @@
 import datetime
 
 import pytz
-from odoo import models
-from odoo.addons.appointment.populate import data
-from odoo.tools import populate
+from koda import models
+from koda.addons.appointment.populate import data
+from koda.tools import populate
 
 
 class AppointmentSlot(models.Model):

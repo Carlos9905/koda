@@ -3,10 +3,10 @@
 import datetime
 import logging
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import float_compare, float_round
-from odoo.tests.common import Form
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError, UserError
+from koda.tools import float_compare, float_round
+from koda.tests.common import Form
 
 from .taxcloud_request import TaxCloudRequest
 

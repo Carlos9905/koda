@@ -9,10 +9,10 @@ import logging
 import psycopg2
 import datetime
 
-from odoo import api, fields, models, Command
-from odoo import SUPERUSER_ID, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import mute_logger
+from koda import api, fields, models, Command
+from koda import SUPERUSER_ID, _
+from koda.exceptions import ValidationError, UserError
+from koda.tools import mute_logger
 
 _logger = logging.getLogger('odoo.addons.base.partner.merge')
 

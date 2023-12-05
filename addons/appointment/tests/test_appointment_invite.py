@@ -4,7 +4,7 @@
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo.addons.appointment.tests.common import AppointmentCommon
+from koda.addons.appointment.tests.common import AppointmentCommon
 
 
 class AppointmentInviteTest(AppointmentCommon):

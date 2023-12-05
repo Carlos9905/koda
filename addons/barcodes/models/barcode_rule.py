@@ -1,7 +1,7 @@
 import re
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError
 
 
 class BarcodeRule(models.Model):

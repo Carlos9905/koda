@@ -3,9 +3,9 @@
 
 import datetime
 
-from odoo.addons.approvals_purchase.tests.common import TestApprovalsCommon
-from odoo.exceptions import UserError
-from odoo.tests.common import Form
+from koda.addons.approvals_purchase.tests.common import TestApprovalsCommon
+from koda.exceptions import UserError
+from koda.tests.common import Form
 
 
 class TestApprovalsPurchase(TestApprovalsCommon):

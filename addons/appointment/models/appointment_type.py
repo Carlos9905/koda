@@ -11,11 +11,11 @@ from dateutil.relativedelta import relativedelta
 from babel.dates import format_datetime, format_time
 from werkzeug.urls import url_encode, url_join
 
-from odoo import api, fields, models, _, Command
-from odoo.exceptions import ValidationError
-from odoo.tools import float_compare
-from odoo.tools.misc import babel_locale_parse, get_lang
-from odoo.addons.base.models.res_partner import _tz_get
+from koda import api, fields, models, _, Command
+from koda.exceptions import ValidationError
+from koda.tools import float_compare
+from koda.tools.misc import babel_locale_parse, get_lang
+from koda.addons.base.models.res_partner import _tz_get
 from ..utils import intervals_overlap
 
 

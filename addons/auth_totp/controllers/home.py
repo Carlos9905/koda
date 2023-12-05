@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import re
 
-from odoo import http, _
-from odoo.exceptions import AccessDenied
-from odoo.http import request
-from odoo.addons.web.controllers import home as web_home
+from koda import http, _
+from koda.exceptions import AccessDenied
+from koda.http import request
+from koda.addons.web.controllers import home as web_home
 
 TRUSTED_DEVICE_COOKIE = 'td_id'
 TRUSTED_DEVICE_AGE = 90*86400 # 90 days expiration

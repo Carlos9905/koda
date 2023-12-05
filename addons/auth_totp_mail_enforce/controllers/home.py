@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import odoo.addons.auth_totp.controllers.home
 
-from odoo import http
-from odoo.exceptions import AccessDenied, UserError
-from odoo.http import request
+from koda import http
+from koda.exceptions import AccessDenied, UserError
+from koda.http import request
 
 
 class Home(odoo.addons.auth_totp.controllers.home.Home):

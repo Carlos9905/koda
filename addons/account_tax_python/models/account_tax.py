@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, _
-from odoo.tools.safe_eval import safe_eval
-from odoo.exceptions import UserError
+from koda import models, fields, _
+from koda.tools.safe_eval import safe_eval
+from koda.exceptions import UserError
 
 
 class AccountTaxPython(models.Model):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import fields
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda import fields
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
 
 
 class AccountSalesReportCommon(TestAccountReportsCommon):

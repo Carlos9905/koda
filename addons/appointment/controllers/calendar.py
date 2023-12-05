@@ -8,12 +8,12 @@ from datetime import datetime, timedelta
 from werkzeug.exceptions import Forbidden, BadRequest
 from werkzeug.urls import url_encode
 
-from odoo import fields, _
-from odoo.addons.base.models.ir_qweb import keep_query
-from odoo.addons.calendar.controllers.main import CalendarController
-from odoo.http import request, route
-from odoo.tools import is_html_empty
-from odoo.tools.misc import get_lang
+from koda import fields, _
+from koda.addons.base.models.ir_qweb import keep_query
+from koda.addons.calendar.controllers.main import CalendarController
+from koda.http import request, route
+from koda.tools import is_html_empty
+from koda.tools.misc import get_lang
 
 
 class AppointmentCalendarController(CalendarController):

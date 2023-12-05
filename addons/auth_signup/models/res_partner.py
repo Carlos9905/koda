@@ -7,8 +7,8 @@ import werkzeug.urls
 from collections import defaultdict
 from datetime import datetime, timedelta
 
-from odoo import api, exceptions, fields, models, _
-from odoo.tools import sql
+from koda import api, exceptions, fields, models, _
+from koda.tools import sql
 class SignupError(Exception):
     pass
 

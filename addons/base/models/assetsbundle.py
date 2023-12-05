@@ -26,14 +26,14 @@ except ImportError:
 
 from rjsmin import jsmin as rjsmin
 
-from odoo import release, SUPERUSER_ID, _
-from odoo.http import request
-from odoo.tools import (func, misc, transpile_javascript,
+from koda import release, SUPERUSER_ID, _
+from koda.http import request
+from koda.tools import (func, misc, transpile_javascript,
     is_odoo_module, SourceMapGenerator, profiler,
     apply_inheritance_specs)
-from odoo.tools.constants import SCRIPT_EXTENSIONS, STYLE_EXTENSIONS
-from odoo.tools.misc import file_open, file_path
-from odoo.tools.pycompat import to_text
+from koda.tools.constants import SCRIPT_EXTENSIONS, STYLE_EXTENSIONS
+from koda.tools.misc import file_open, file_path
+from koda.tools.pycompat import to_text
 
 _logger = logging.getLogger(__name__)
 

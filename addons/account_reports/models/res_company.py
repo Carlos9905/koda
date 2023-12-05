@@ -5,10 +5,10 @@ import datetime
 from dateutil.relativedelta import relativedelta
 import itertools
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import date_utils
-from odoo.tools.misc import format_date
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import date_utils
+from koda.tools.misc import format_date
 
 
 class ResCompany(models.Model):

@@ -3,8 +3,8 @@
 import calendar
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError
+from koda import fields, models, api, _
+from koda.exceptions import UserError
 
 
 class ResCompany(models.Model):

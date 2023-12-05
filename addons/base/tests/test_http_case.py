@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import HttpCase, tagged
-from odoo.tools import mute_logger, logging
+from koda.tests.common import HttpCase, tagged
+from koda.tools import mute_logger, logging
 from unittest.mock import patch
 
 @tagged('-at_install', 'post_install')

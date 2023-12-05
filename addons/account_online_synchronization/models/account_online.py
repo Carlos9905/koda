@@ -12,11 +12,11 @@ from dateutil.relativedelta import relativedelta
 from markupsafe import Markup
 
 from requests.exceptions import RequestException, Timeout, ConnectionError
-from odoo import api, fields, models, modules, tools, _
-from odoo.exceptions import UserError, CacheMiss, MissingError, ValidationError, RedirectWarning
-from odoo.http import request
-from odoo.addons.account_online_synchronization.models.odoofin_auth import OdooFinAuth
-from odoo.tools.misc import format_amount, format_date, get_lang
+from koda import api, fields, models, modules, tools, _
+from koda.exceptions import UserError, CacheMiss, MissingError, ValidationError, RedirectWarning
+from koda.http import request
+from koda.addons.account_online_synchronization.models.odoofin_auth import OdooFinAuth
+from koda.tools.misc import format_amount, format_date, get_lang
 
 _logger = logging.getLogger(__name__)
 pattern = re.compile("^[a-z0-9-_]+$")
@@ -291,7 +291,7 @@ class AccountOnlineLink(models.Model):
     company_id = fields.Many2one('res.company', required=True, default=lambda self: self.env.company)
     has_unlinked_accounts = fields.Boolean(default=True, help="True if that connection still has accounts that are not linked to an Odoo journal")
 
-    # Information received from OdooFin, should not be tampered with
+    # Information received from kodaFin, should not be tampered with
     name = fields.Char(help="Institution Name", readonly=True)
     client_id = fields.Char(help="Represent a link for a given user towards a banking institution", readonly=True)
     refresh_token = fields.Char(help="Token used to sign API request, Never disclose it",

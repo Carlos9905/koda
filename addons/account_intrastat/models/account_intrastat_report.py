@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, _
-from odoo.tools import get_lang
+from koda import api, models, _
+from koda.tools import get_lang
 
 from datetime import datetime
 from collections import defaultdict

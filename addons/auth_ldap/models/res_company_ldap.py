@@ -5,10 +5,10 @@ import ldap
 import logging
 from ldap.filter import filter_format
 
-from odoo import _, api, fields, models, tools
-from odoo.exceptions import AccessDenied
-from odoo.tools.misc import str2bool
-from odoo.tools.pycompat import to_text
+from koda import _, api, fields, models, tools
+from koda.exceptions import AccessDenied
+from koda.tools.misc import str2bool
+from koda.tools.pycompat import to_text
 
 _logger = logging.getLogger(__name__)
 

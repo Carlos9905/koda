@@ -3,9 +3,9 @@
 
 import re
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
-from odoo.exceptions import ValidationError
+from koda.exceptions import ValidationError
 
 
 #Regular expression used to parse the creditor identifiers in SDD scheme.

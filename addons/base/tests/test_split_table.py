@@ -1,6 +1,6 @@
-from odoo.tests.common import TransactionCase
-from odoo.tools import file_open
-from odoo.addons.base.models.ir_actions_report import _split_table
+from koda.tests.common import TransactionCase
+from koda.tools import file_open
+from koda.addons.base.models.ir_actions_report import _split_table
 from lxml import etree
 
 def cleanup_string(s):

@@ -6,9 +6,9 @@ import re
 
 from datetime import date, datetime
 
-from odoo import models, fields, api, _
+from koda import models, fields, api, _
 
-from odoo.exceptions import ValidationError, UserError
+from koda.exceptions import ValidationError, UserError
 
 class AccountBatchPayment(models.Model):
     _inherit = 'account.batch.payment'

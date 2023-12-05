@@ -2,8 +2,8 @@ import logging
 import re
 import time
 
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
 
 _logger = logging.getLogger(__name__)
 

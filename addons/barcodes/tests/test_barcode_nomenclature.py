@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo.exceptions import ValidationError
-from odoo.tests import common
+from koda.exceptions import ValidationError
+from koda.tests import common
 
 
 class TestBarcodeNomenclature(common.TransactionCase):

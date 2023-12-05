@@ -13,10 +13,10 @@ from lxml.builder import E
 from psycopg2 import IntegrityError
 from psycopg2.extras import Json
 
-from odoo.exceptions import AccessError, ValidationError
-from odoo.tests import common, tagged
-from odoo.tools import get_cache_key_counter, mute_logger, view_validation, safe_eval
-from odoo.addons.base.models import ir_ui_view
+from koda.exceptions import AccessError, ValidationError
+from koda.tests import common, tagged
+from koda.tools import get_cache_key_counter, mute_logger, view_validation, safe_eval
+from koda.addons.base.models import ir_ui_view
 
 _logger = logging.getLogger(__name__)
 

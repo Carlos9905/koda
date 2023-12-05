@@ -24,13 +24,13 @@ except ImportError:
     from werkzeug.routing.converters import NumberConverter  # moved in werkzeug 2.2.2
 
 import odoo
-from odoo import api, http, models, tools, SUPERUSER_ID
-from odoo.exceptions import AccessDenied, AccessError, MissingError
-from odoo.http import request, Response, ROUTING_KEYS, Stream
-from odoo.modules.registry import Registry
-from odoo.service import security
-from odoo.tools import get_lang, submap
-from odoo.tools.translate import code_translations
+from koda import api, http, models, tools, SUPERUSER_ID
+from koda.exceptions import AccessDenied, AccessError, MissingError
+from koda.http import request, Response, ROUTING_KEYS, Stream
+from koda.modules.registry import Registry
+from koda.service import security
+from koda.tools import get_lang, submap
+from koda.tools.translate import code_translations
 
 _logger = logging.getLogger(__name__)
 

@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import datetime, timedelta
 
-from odoo.tests import users
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.tests import users
+from koda.addons.crm.tests.common import TestCrmCommon
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 class AppointmentCRMTest(TestCrmCommon):

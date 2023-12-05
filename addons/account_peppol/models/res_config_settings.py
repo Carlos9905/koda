@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models, modules, tools
-from odoo.exceptions import UserError, ValidationError
+from koda import _, api, fields, models, modules, tools
+from koda.exceptions import UserError, ValidationError
 
-from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
-from odoo.addons.account_edi_ubl_cii.models.account_edi_common import EAS_MAPPING
-from odoo.addons.account_peppol.tools.demo_utils import handle_demo
+from koda.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
+from koda.addons.account_edi_ubl_cii.models.account_edi_common import EAS_MAPPING
+from koda.addons.account_peppol.tools.demo_utils import handle_demo
 
 # at the moment, only European countries are accepted
 ALLOWED_COUNTRIES = set(EAS_MAPPING.keys()) - {'AU', 'SG', 'NZ'}
@@ -169,7 +169,7 @@ class ResConfigSettings(models.TransientModel):
             edi_user=edi_user,
         )
         # once we sent the migration key over, we don't need it
-        # but we need the field for future in case the user decided to migrate away from Odoo
+        # but we need the field for future in case the user decided to migrate away from koda
         self.account_peppol_migration_key = False
 
     @handle_demo

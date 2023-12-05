@@ -1,5 +1,5 @@
-from odoo.addons.barcodes.tests.test_barcode_nomenclature import TestBarcodeNomenclature
-from odoo.exceptions import ValidationError
+from koda.addons.barcodes.tests.test_barcode_nomenclature import TestBarcodeNomenclature
+from koda.exceptions import ValidationError
 
 
 class TestBarcodeGS1Nomenclature(TestBarcodeNomenclature):

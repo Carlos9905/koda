@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tools.misc import file_open, file_path
+from koda import fields
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
+from koda.tools.misc import file_open, file_path
 
 from lxml import etree
 

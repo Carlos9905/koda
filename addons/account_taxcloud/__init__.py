@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo.exceptions import UserError
-from odoo.tools import config
+from koda.exceptions import UserError
+from koda.tools import config
 from . import models
 
 

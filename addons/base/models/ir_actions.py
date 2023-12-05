@@ -2,12 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import odoo
-from odoo import api, fields, models, tools, _, Command
-from odoo.exceptions import MissingError, ValidationError, AccessError, UserError
-from odoo.tools import frozendict
-from odoo.tools.safe_eval import safe_eval, test_python_expr
-from odoo.tools.float_utils import float_compare
-from odoo.http import request
+from koda import api, fields, models, tools, _, Command
+from koda.exceptions import MissingError, ValidationError, AccessError, UserError
+from koda.tools import frozendict
+from koda.tools.safe_eval import safe_eval, test_python_expr
+from koda.tools.float_utils import float_compare
+from koda.http import request
 import base64
 from collections import defaultdict
 from functools import partial, reduce

@@ -6,13 +6,13 @@ import json
 import textwrap
 import unittest
 
-from odoo import fields
+from koda import fields
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests import tagged
-from odoo.tools import file_open
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin
+from koda.addons.mail.tests.common import MailCommon
+from koda.tests import tagged
+from koda.tools import file_open
 
 from ..models.account_invoice import OCR_VERSION
 

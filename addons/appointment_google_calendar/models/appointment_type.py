@@ -3,7 +3,7 @@
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 
 class AppointmentType(models.Model):

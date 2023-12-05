@@ -7,9 +7,9 @@ import binascii
 
 from PIL import Image, ImageDraw, PngImagePlugin
 
-from odoo import tools
-from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase
+from koda import tools
+from koda.exceptions import UserError
+from koda.tests.common import TransactionCase
 
 
 def img_open(data):

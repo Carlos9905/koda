@@ -4,13 +4,13 @@
 from datetime import datetime
 from operator import itemgetter
 
-from odoo import http, _
-from odoo.http import request
-from odoo.osv.expression import AND, OR
-from odoo.tools import groupby as groupbyelem
+from koda import http, _
+from koda.http import request
+from koda.osv.expression import AND, OR
+from koda.tools import groupby as groupbyelem
 
-from odoo.addons.portal.controllers import portal
-from odoo.addons.portal.controllers.portal import pager as portal_pager
+from koda.addons.portal.controllers import portal
+from koda.addons.portal.controllers.portal import pager as portal_pager
 
 class AppointmentPortal(portal.CustomerPortal):
 

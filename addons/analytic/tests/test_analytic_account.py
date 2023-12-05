@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
-from odoo import Command
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
+from koda import Command
 
 
 @tagged('post_install', '-at_install')

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import _, api, Command, models
-from odoo.exceptions import UserError
+from koda import _, api, Command, models
+from koda.exceptions import UserError
 
 
 class AccountJournal(models.Model):

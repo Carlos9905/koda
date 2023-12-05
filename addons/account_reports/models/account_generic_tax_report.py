@@ -3,11 +3,11 @@
 import ast
 from collections import defaultdict
 
-from odoo import models, api, fields, Command, _
-from odoo.addons.web.controllers.utils import clean_action
-from odoo.exceptions import UserError, RedirectWarning
-from odoo.osv import expression
-from odoo.tools.misc import get_lang
+from koda import models, api, fields, Command, _
+from koda.addons.web.controllers.utils import clean_action
+from koda.exceptions import UserError, RedirectWarning
+from koda.osv import expression
+from koda.tools.misc import get_lang
 
 
 class AccountTaxReportHandler(models.AbstractModel):

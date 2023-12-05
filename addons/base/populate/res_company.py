@@ -1,8 +1,8 @@
 import collections
 import logging
 
-from odoo import models, Command
-from odoo.tools import populate
+from koda import models, Command
+from koda.tools import populate
 
 _logger = logging.getLogger(__name__)
 

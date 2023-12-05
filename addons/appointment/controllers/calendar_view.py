@@ -3,9 +3,9 @@
 
 from werkzeug.exceptions import Forbidden
 
-from odoo import http, fields, _
-from odoo.exceptions import ValidationError
-from odoo.http import request, route
+from koda import http, fields, _
+from koda.exceptions import ValidationError
+from koda.http import request, route
 
 
 class AppointmentCalendarView(http.Controller):

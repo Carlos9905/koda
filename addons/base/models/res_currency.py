@@ -6,9 +6,9 @@ import math
 
 from lxml import etree
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import parse_date
+from koda import api, fields, models, tools, _
+from koda.exceptions import UserError, ValidationError
+from koda.tools import parse_date
 
 _logger = logging.getLogger(__name__)
 

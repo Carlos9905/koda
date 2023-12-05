@@ -3,9 +3,9 @@
 
 from datetime import datetime
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
 
 class SDDMandate(models.Model):

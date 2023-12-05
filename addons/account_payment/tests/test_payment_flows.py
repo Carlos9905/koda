@@ -2,14 +2,14 @@
 
 from unittest.mock import patch
 
-from odoo.exceptions import AccessError
-from odoo.tests import tagged, JsonRpcException
-from odoo.tools import mute_logger
+from koda.exceptions import AccessError
+from koda.tests import tagged, JsonRpcException
+from koda.tools import mute_logger
 
-from odoo.addons.account_payment.controllers.payment import PaymentPortal
-from odoo.addons.account_payment.tests.common import AccountPaymentCommon
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.portal.controllers.portal import CustomerPortal
+from koda.addons.account_payment.controllers.payment import PaymentPortal
+from koda.addons.account_payment.tests.common import AccountPaymentCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.portal.controllers.portal import CustomerPortal
 
 
 @tagged('post_install', '-at_install')

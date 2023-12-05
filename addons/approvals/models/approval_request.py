@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import UserError, ValidationError
+from koda import api, Command, fields, models, _
+from koda.exceptions import UserError, ValidationError
 
 from collections import defaultdict
 

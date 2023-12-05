@@ -14,11 +14,11 @@ from psycopg2 import sql
 from psycopg2.extras import Json
 from psycopg2.sql import Identifier, SQL, Placeholder
 
-from odoo import api, fields, models, tools, _, _lt, Command
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import pycompat, unique, OrderedSet
-from odoo.tools.safe_eval import safe_eval, datetime, dateutil, time
+from koda import api, fields, models, tools, _, _lt, Command
+from koda.exceptions import AccessError, UserError, ValidationError
+from koda.osv import expression
+from koda.tools import pycompat, unique, OrderedSet
+from koda.tools.safe_eval import safe_eval, datetime, dateutil, time
 
 _logger = logging.getLogger(__name__)
 

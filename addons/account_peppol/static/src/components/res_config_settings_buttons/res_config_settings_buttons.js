@@ -91,7 +91,7 @@ class PeppolSettingsButtons extends Component {
 
     migrate() {
         this.showConfirmation(
-            "This will migrate your Peppol registration away from Odoo. A migration key will be generated. \
+            "This will migrate your Peppol registration away from koda. A migration key will be generated. \
             If the other service does not support migration, consider deregistering instead.",
             "button_migrate_peppol_registration"
         )

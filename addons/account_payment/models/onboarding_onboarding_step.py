@@ -1,6 +1,6 @@
 # Koda
 
-from odoo import api, models
+from koda import api, models
 
 
 class OnboardingStep(models.Model):

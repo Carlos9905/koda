@@ -5,11 +5,11 @@ from markupsafe import Markup
 
 import re
 
-from odoo.addons.base.models.ir_mail_server import extract_rfc2822_addresses
-from odoo.addons.base.models.ir_qweb_fields import nl2br_enclose
-from odoo.tests import tagged
-from odoo.tests.common import BaseCase
-from odoo.tools import (
+from koda.addons.base.models.ir_mail_server import extract_rfc2822_addresses
+from koda.addons.base.models.ir_qweb_fields import nl2br_enclose
+from koda.tests import tagged
+from koda.tests.common import BaseCase
+from koda.tools import (
     is_html_empty, html_to_inner_content, html_sanitize, append_content_to_html, plaintext2html,
     email_domain_normalize, email_normalize, email_re,
     email_split, email_split_and_format, email_split_tuples,

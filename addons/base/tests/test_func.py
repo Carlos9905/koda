@@ -3,9 +3,9 @@
 
 import functools
 
-from odoo.tests.common import BaseCase
-from odoo.tools import frozendict, lazy
-from odoo import Command
+from koda.tests.common import BaseCase
+from koda.tools import frozendict, lazy
+from koda import Command
 
 
 class TestFrozendict(BaseCase):

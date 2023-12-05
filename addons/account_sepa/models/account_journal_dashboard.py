@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, api, _
+from koda import models, api, _
 
 class account_journal(models.Model):
     _inherit = "account.journal"

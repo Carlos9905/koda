@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models
+from koda import models
 
 class IrActionsAccountReportDownload(models.AbstractModel):
     # This model is a a hack: it's sole purpose is to override _get_readable_fields

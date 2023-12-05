@@ -6,8 +6,8 @@ from dateutil.relativedelta import relativedelta
 import os.path
 import pytz
 
-from odoo.tools import config, misc, date_utils, file_open, file_path, merge_sequences, remove_accents
-from odoo.tests.common import TransactionCase, BaseCase
+from koda.tools import config, misc, date_utils, file_open, file_path, merge_sequences, remove_accents
+from koda.tests.common import TransactionCase, BaseCase
 
 
 class TestCountingStream(BaseCase):

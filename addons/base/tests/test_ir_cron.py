@@ -11,9 +11,9 @@ from unittest.mock import call, patch
 from freezegun import freeze_time
 
 import odoo
-from odoo import api, fields
-from odoo.tests.common import BaseCase, TransactionCase, RecordCapturer, get_db_name, tagged
-from odoo.tools import mute_logger
+from koda import api, fields
+from koda.tests.common import BaseCase, TransactionCase, RecordCapturer, get_db_name, tagged
+from koda.tools import mute_logger
 
 
 class CronMixinCase:

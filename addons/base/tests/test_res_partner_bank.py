@@ -3,7 +3,7 @@
 
 # Copyright (c) 2015 ACSONE SA/NV (<http://acsone.eu>)
 
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
+from koda.addons.base.tests.common import SavepointCaseWithUserDemo
 
 
 class TestResPartnerBank(SavepointCaseWithUserDemo):

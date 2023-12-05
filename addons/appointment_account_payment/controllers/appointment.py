@@ -6,12 +6,12 @@ import pytz
 from babel.dates import format_datetime
 from werkzeug.exceptions import NotFound
 
-from odoo import Command, fields, http
-from odoo.http import request
-from odoo.addons.appointment.controllers.appointment import AppointmentController
-from odoo.addons.base.models.ir_qweb import keep_query
-from odoo.addons.payment import utils as payment_utils
-from odoo.tools.misc import get_lang
+from koda import Command, fields, http
+from koda.http import request
+from koda.addons.appointment.controllers.appointment import AppointmentController
+from koda.addons.base.models.ir_qweb import keep_query
+from koda.addons.payment import utils as payment_utils
+from koda.tools.misc import get_lang
 
 
 class AppointmentAccountPayment(AppointmentController):

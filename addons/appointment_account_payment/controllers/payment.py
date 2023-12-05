@@ -6,10 +6,10 @@ import json
 from urllib.parse import unquote_plus
 from werkzeug.exceptions import NotFound
 
-from odoo import http
-from odoo.addons.account_payment.controllers import portal as account_payment_portal
-from odoo.addons.base.models.ir_qweb import keep_query
-from odoo.http import request
+from koda import http
+from koda.addons.account_payment.controllers import portal as account_payment_portal
+from koda.addons.base.models.ir_qweb import keep_query
+from koda.http import request
 
 
 class AppointmentAccountPaymentPortal(account_payment_portal.PaymentPortal):

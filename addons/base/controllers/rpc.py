@@ -8,10 +8,10 @@ from collections import defaultdict
 from markupsafe import Markup
 
 import odoo
-from odoo.http import Controller, route, dispatch_rpc, request, Response
-from odoo.fields import Date, Datetime, Command
-from odoo.tools import lazy, ustr
-from odoo.tools.misc import frozendict
+from koda.http import Controller, route, dispatch_rpc, request, Response
+from koda.fields import Date, Datetime, Command
+from koda.tools import lazy, ustr
+from koda.tools.misc import frozendict
 
 # ==========================================================
 # XML-RPC helpers

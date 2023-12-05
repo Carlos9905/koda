@@ -7,10 +7,10 @@ import pytz
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command, http
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.tests import common, tagged, users
+from koda import Command, http
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.tests import common, tagged, users
 
 
 class AppointmentUICommon(AppointmentCommon, common.HttpCase):

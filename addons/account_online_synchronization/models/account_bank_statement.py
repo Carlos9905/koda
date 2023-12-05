@@ -2,8 +2,8 @@
 import threading
 import time
 
-from odoo import api, fields, models, SUPERUSER_ID, tools, _
-from odoo.tools import date_utils
+from koda import api, fields, models, SUPERUSER_ID, tools, _
+from koda.tools import date_utils
 
 STATEMENT_LINE_CREATION_BATCH_SIZE = 500  # When importing transactions, batch the process to commit after importing batch_size
 

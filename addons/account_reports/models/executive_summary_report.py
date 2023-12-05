@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models
-from odoo.exceptions import UserError
+from koda import fields, models
+from koda.exceptions import UserError
 
 class ExecutiveSummaryReport(models.Model):
     _inherit = 'account.report'

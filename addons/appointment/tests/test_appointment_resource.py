@@ -4,10 +4,10 @@
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, tagged, users
+from koda import Command
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.exceptions import ValidationError
+from koda.tests import Form, tagged, users
 
 
 @tagged('appointment_resources')

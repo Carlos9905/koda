@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.appointment.tests.common import AppointmentCommon
+from koda.addons.appointment.tests.common import AppointmentCommon
 
 
 class AppointmentHrCommon(AppointmentCommon):

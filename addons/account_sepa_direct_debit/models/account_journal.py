@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class AccountJournal(models.Model):

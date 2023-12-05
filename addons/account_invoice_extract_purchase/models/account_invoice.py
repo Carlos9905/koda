@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 
-from odoo import models, _
+from koda import models, _
 
 
 class AccountMove(models.Model):

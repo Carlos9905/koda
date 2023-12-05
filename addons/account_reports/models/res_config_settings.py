@@ -3,10 +3,10 @@
 
 from calendar import monthrange
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 from dateutil.relativedelta import relativedelta
-from odoo.tools.misc import format_date
-from odoo.tools import date_utils
+from koda.tools.misc import format_date
+from koda.tools import date_utils
 
 
 class ResConfigSettings(models.TransientModel):

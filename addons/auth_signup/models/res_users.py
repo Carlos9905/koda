@@ -8,14 +8,14 @@ from ast import literal_eval
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools.misc import ustr
-from odoo.http import request
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools.misc import ustr
+from koda.http import request
 
-from odoo.addons.base.models.ir_mail_server import MailDeliveryException
-from odoo.addons.auth_signup.models.res_partner import SignupError, now
+from koda.addons.base.models.ir_mail_server import MailDeliveryException
+from koda.addons.auth_signup.models.res_partner import SignupError, now
 
 _logger = logging.getLogger(__name__)
 

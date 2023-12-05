@@ -2,10 +2,10 @@
 # pylint: disable=C0326
 from .common import TestAccountReportsCommon
 
-from odoo import fields
-from odoo.tests import tagged
+from koda import fields
+from koda.tests import tagged
 
-from odoo import Command
+from koda import Command
 
 @tagged('post_install', '-at_install')
 class TestCashFlowReport(TestAccountReportsCommon):

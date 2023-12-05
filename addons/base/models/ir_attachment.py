@@ -16,11 +16,11 @@ import uuid
 from collections import defaultdict
 from PIL import Image
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import AccessError, ValidationError, UserError
-from odoo.tools import config, human_size, ImageProcess, str2bool, consteq
-from odoo.tools.mimetypes import guess_mimetype
-from odoo.osv import expression
+from koda import api, fields, models, tools, _
+from koda.exceptions import AccessError, ValidationError, UserError
+from koda.tools import config, human_size, ImageProcess, str2bool, consteq
+from koda.tools.mimetypes import guess_mimetype
+from koda.osv import expression
 
 _logger = logging.getLogger(__name__)
 

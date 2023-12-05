@@ -8,9 +8,9 @@ import os
 from PIL import Image
 
 import odoo
-from odoo.exceptions import AccessError
-from odoo.tests.common import TransactionCase
-from odoo.tools import image_to_base64
+from koda.exceptions import AccessError
+from koda.tests.common import TransactionCase
+from koda.tools import image_to_base64
 
 HASH_SPLIT = 2      # FIXME: testing implementations detail is not a good idea
 

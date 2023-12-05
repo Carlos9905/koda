@@ -4,9 +4,9 @@
 from datetime import date, datetime, timedelta
 from freezegun import freeze_time
 
-from odoo.addons.appointment_hr.tests.common import AppointmentHrCommon
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged, users
+from koda.addons.appointment_hr.tests.common import AppointmentHrCommon
+from koda.exceptions import ValidationError
+from koda.tests import tagged, users
 
 
 @tagged('appointment_slots')

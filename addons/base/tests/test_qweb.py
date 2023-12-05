@@ -12,11 +12,11 @@ from lxml.builder import E
 from copy import deepcopy
 from textwrap import dedent
 
-from odoo.tests.common import TransactionCase
-from odoo.addons.base.models.ir_qweb import QWebException, render
-from odoo.tools import misc, mute_logger
-from odoo.tools.json import scriptsafe as json_scriptsafe
-from odoo.exceptions import UserError, ValidationError, MissingError
+from koda.tests.common import TransactionCase
+from koda.addons.base.models.ir_qweb import QWebException, render
+from koda.tools import misc, mute_logger
+from koda.tools.json import scriptsafe as json_scriptsafe
+from koda.exceptions import UserError, ValidationError, MissingError
 
 unsafe_eval = eval
 

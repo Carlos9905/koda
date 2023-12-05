@@ -3,7 +3,7 @@
 
 from werkzeug.urls import url_join
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class AppointmentOnboardingLink(models.TransientModel):

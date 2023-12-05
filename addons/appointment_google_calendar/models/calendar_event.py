@@ -3,8 +3,8 @@
 
 import uuid
 
-from odoo import models
-from odoo.addons.google_calendar.utils.google_calendar import GoogleCalendarService
+from koda import models
+from koda.addons.google_calendar.utils.google_calendar import GoogleCalendarService
 
 
 class CalendarEvent(models.Model):

@@ -3,10 +3,10 @@
 
 import ast
 
-from odoo import Command
-from odoo.tests.common import TransactionCase, BaseCase
-from odoo.tools import mute_logger
-from odoo.tools.safe_eval import safe_eval, const_eval, expr_eval
+from koda import Command
+from koda.tests.common import TransactionCase, BaseCase
+from koda.tools import mute_logger
+from koda.tools.safe_eval import safe_eval, const_eval, expr_eval
 
 
 class TestSafeEval(BaseCase):

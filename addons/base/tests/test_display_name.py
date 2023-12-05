@@ -1,7 +1,7 @@
 import contextlib
 
-from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase, tagged
+from koda.exceptions import UserError
+from koda.tests.common import TransactionCase, tagged
 
 
 IGNORE_MODEL_NAMES = {

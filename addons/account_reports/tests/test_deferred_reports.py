@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0326
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo import fields, Command
-from odoo.exceptions import UserError
-from odoo.tests import tagged, HttpCase, Form
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda import fields, Command
+from koda.exceptions import UserError
+from koda.tests import tagged, HttpCase, Form
 
 
 @tagged('post_install', '-at_install')

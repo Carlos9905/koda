@@ -5,8 +5,8 @@ import json
 
 from datetime import datetime, timedelta
 
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.tests import common, tagged, users
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.tests import common, tagged, users
 
 
 @tagged('appointment_ui', 'post_install', '-at_install')

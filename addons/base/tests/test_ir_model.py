@@ -3,10 +3,10 @@
 
 from psycopg2 import IntegrityError
 
-from odoo.exceptions import ValidationError
-from odoo.tests.common import Form, TransactionCase, HttpCase, tagged
-from odoo.tools import mute_logger
-from odoo import Command
+from koda.exceptions import ValidationError
+from koda.tests.common import Form, TransactionCase, HttpCase, tagged
+from koda.tools import mute_logger
+from koda import Command
 
 
 class TestXMLID(TransactionCase):

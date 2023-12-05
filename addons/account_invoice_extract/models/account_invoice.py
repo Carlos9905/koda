@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models, _, _lt, Command
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import AccessError
-from odoo.tools import float_compare, mute_logger
-from odoo.tools.misc import clean_context
+from koda import api, fields, models, _, _lt, Command
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import AccessError
+from koda.tools import float_compare, mute_logger
+from koda.tools.misc import clean_context
 from difflib import SequenceMatcher
 import logging
 import re

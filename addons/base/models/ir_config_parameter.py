@@ -7,9 +7,9 @@ Store database-specific configuration parameters
 import uuid
 import logging
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools import config, ormcache, mute_logger
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.tools import config, ormcache, mute_logger
 
 _logger = logging.getLogger(__name__)
 

@@ -4,10 +4,10 @@
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.tests import users
-from odoo.addons.mail.tests.common import MailCase
-from odoo.addons.appointment.tests.common import AppointmentCommon
+from koda import Command
+from koda.tests import users
+from koda.addons.mail.tests.common import MailCase
+from koda.addons.appointment.tests.common import AppointmentCommon
 
 class AppointmentTestTracking(AppointmentCommon, MailCase):
 

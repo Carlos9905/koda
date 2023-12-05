@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import BaseCase
-from odoo.tools import SQL
+from koda.tests.common import BaseCase
+from koda.tools import SQL
 
 
 class TestSQL(BaseCase):

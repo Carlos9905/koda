@@ -3,8 +3,8 @@
 from freezegun import freeze_time
 
 from .common import TestAccountReportsCommon
-from odoo import fields, Command
-from odoo.tests import tagged, Form
+from koda import fields, Command
+from koda.tests import tagged, Form
 
 
 @tagged('post_install', '-at_install')

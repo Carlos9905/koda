@@ -3,8 +3,8 @@
 
 from .common import TestAccountReportsCommon
 
-from odoo import fields, Command
-from odoo.tests import tagged
+from koda import fields, Command
+from koda.tests import tagged
 
 from freezegun import freeze_time
 

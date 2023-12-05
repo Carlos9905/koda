@@ -3,9 +3,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from freezegun import freeze_time
 
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import tagged
-from odoo import fields, Command
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
+from koda import fields, Command
 
 
 @tagged('post_install', '-at_install')

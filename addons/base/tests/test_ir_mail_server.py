@@ -6,13 +6,13 @@ import email.policy
 
 from unittest.mock import patch
 
-from odoo import tools
-from odoo.addons.base.tests import test_mail_examples
-from odoo.addons.base.tests.common import MockSmtplibCase
-from odoo.tests import tagged, users
-from odoo.tests.common import TransactionCase
-from odoo.tools import mute_logger
-from odoo.tools import config
+from koda import tools
+from koda.addons.base.tests import test_mail_examples
+from koda.addons.base.tests.common import MockSmtplibCase
+from koda.tests import tagged, users
+from koda.tests.common import TransactionCase
+from koda.tools import mute_logger
+from koda.tools import config
 
 
 class _FakeSMTP:
@@ -391,7 +391,7 @@ class TestIrMailServer(TransactionCase, MockSmtplibCase):
                         from_filter="dummy@example.com, test.mycompany.com, dummy2@example.com",
                     )
 
-        # for from_filter in ICP, overwrite the one from odoo-bin
+        # for from_filter in ICP, overwrite the one from koda-bin
         self.env['ir.config_parameter'].sudo().set_param('mail.default.from_filter', 'icp.example.com')
 
         # Use an email in the domain of the config parameter "mail.default.from_filter"

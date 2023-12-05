@@ -3,7 +3,7 @@
 
 from datetime import date
 
-from odoo import _, api, fields, models
+from koda import _, api, fields, models
 
 
 class FinancialYearOpeningWizard(models.TransientModel):

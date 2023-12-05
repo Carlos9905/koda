@@ -4,10 +4,10 @@ import calendar
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import models, fields, _, api, Command
-from odoo.exceptions import UserError
-from odoo.tools import groupby
-from odoo.addons.account_accountant.models.account_move import DEFERRED_DATE_MIN, DEFERRED_DATE_MAX
+from koda import models, fields, _, api, Command
+from koda.exceptions import UserError
+from koda.tools import groupby
+from koda.addons.account_accountant.models.account_move import DEFERRED_DATE_MIN, DEFERRED_DATE_MAX
 
 
 class DeferredReportCustomHandler(models.AbstractModel):

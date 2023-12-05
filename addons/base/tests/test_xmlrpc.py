@@ -4,14 +4,14 @@ import collections
 import time
 from xmlrpc.client import Binary
 
-from odoo.exceptions import AccessDenied, AccessError
-from odoo.http import _request_stack
+from koda.exceptions import AccessDenied, AccessError
+from koda.http import _request_stack
 
 import odoo
 import odoo.tools
-from odoo.tests import common
-from odoo.service import common as auth, model
-from odoo.tools import DotDict
+from koda.tests import common
+from koda.service import common as auth, model
+from koda.tools import DotDict
 
 
 @common.tagged('post_install', '-at_install')

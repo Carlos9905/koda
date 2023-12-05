@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError
-from odoo.tools.misc import format_date
-from odoo.tools import date_utils
+from koda import models, fields, _
+from koda.exceptions import UserError
+from koda.tools.misc import format_date
+from koda.tools import date_utils
 
 from dateutil.relativedelta import relativedelta
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _, fields
-from odoo.tools import float_compare
-from odoo.tools.misc import DEFAULT_SERVER_DATE_FORMAT
+from koda import models, _, fields
+from koda.tools import float_compare
+from koda.tools.misc import DEFAULT_SERVER_DATE_FORMAT
 
 
 class TrialBalanceCustomHandler(models.AbstractModel):

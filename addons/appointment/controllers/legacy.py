@@ -1,7 +1,7 @@
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.base.models.ir_qweb import keep_query
+from koda import http
+from koda.http import request
+from koda.addons.base.models.ir_qweb import keep_query
 
 class AppointmentLegacy(http.Controller):
     """

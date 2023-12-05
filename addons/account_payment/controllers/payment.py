@@ -1,12 +1,12 @@
 # Koda
 
-from odoo import _
-from odoo.exceptions import AccessError, MissingError, ValidationError
-from odoo.fields import Command
-from odoo.http import request, route
+from koda import _
+from koda.exceptions import AccessError, MissingError, ValidationError
+from koda.fields import Command
+from koda.http import request, route
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.controllers import portal as payment_portal
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment.controllers import portal as payment_portal
 
 
 class PaymentPortal(payment_portal.PaymentPortal):

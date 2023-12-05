@@ -5,8 +5,8 @@ import logging
 import xml.dom.minidom
 import zipfile
 
-from odoo import api, models
-from odoo.tools.lru import LRU
+from koda import api, models
+from koda.tools.lru import LRU
 
 _logger = logging.getLogger(__name__)
 

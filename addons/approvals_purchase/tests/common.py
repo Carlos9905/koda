@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
-from odoo.tests.common import Form, TransactionCase
+from koda import fields
+from koda.tests.common import Form, TransactionCase
 
 
 class TestApprovalsCommon(TransactionCase):

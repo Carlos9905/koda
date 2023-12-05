@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo.http import request
-from odoo.addons.auth_signup.controllers.main import AuthSignupHome
+from koda.http import request
+from koda.addons.auth_signup.controllers.main import AuthSignupHome
 
 class AddPolicyData(AuthSignupHome):
     def get_auth_signup_config(self):

@@ -7,13 +7,13 @@ import logging
 import os
 import re
 
-from odoo import _, api, fields, models
-from odoo.addons.base.models.res_users import check_identity
-from odoo.exceptions import AccessDenied, UserError
-from odoo.http import request
-from odoo.tools import sql
+from koda import _, api, fields, models
+from koda.addons.base.models.res_users import check_identity
+from koda.exceptions import AccessDenied, UserError
+from koda.http import request
+from koda.tools import sql
 
-from odoo.addons.auth_totp.models.totp import TOTP, TOTP_SECRET_SIZE
+from koda.addons.auth_totp.models.totp import TOTP, TOTP_SECRET_SIZE
 
 _logger = logging.getLogger(__name__)
 

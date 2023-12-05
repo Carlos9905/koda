@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models, _, SUPERUSER_ID
+from koda import api, fields, models, _, SUPERUSER_ID
 
 
 class res_company(models.Model):

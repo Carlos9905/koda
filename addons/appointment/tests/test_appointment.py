@@ -8,12 +8,12 @@ from freezegun import freeze_time
 from werkzeug.urls import url_encode, url_join
 
 import odoo
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, tagged, users, HttpCase
-from odoo.tools import mute_logger
-from odoo.fields import Command
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.exceptions import ValidationError
+from koda.tests import Form, tagged, users, HttpCase
+from koda.tools import mute_logger
+from koda.fields import Command
 
 
 

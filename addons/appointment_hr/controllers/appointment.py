@@ -3,8 +3,8 @@
 
 import json
 
-from odoo.addons.appointment.controllers.appointment import AppointmentController
-from odoo.http import request, route
+from koda.addons.appointment.controllers.appointment import AppointmentController
+from koda.http import request, route
 
 
 class AppointmentHr(AppointmentController):

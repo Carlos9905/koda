@@ -7,9 +7,9 @@ import operator
 from tempfile import TemporaryFile
 from os.path import splitext
 
-from odoo import api, fields, models, tools, sql_db, _
-from odoo.exceptions import UserError
-from odoo.tools.translate import TranslationImporter
+from koda import api, fields, models, tools, sql_db, _
+from koda.exceptions import UserError
+from koda.tools.translate import TranslationImporter
 
 _logger = logging.getLogger(__name__)
 

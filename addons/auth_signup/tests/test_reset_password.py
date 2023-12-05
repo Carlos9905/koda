@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from unittest.mock import patch
-from odoo.exceptions import UserError
-from odoo.addons.mail.models.mail_mail import MailDeliveryException
-from odoo.tests.common import HttpCase
+from koda.exceptions import UserError
+from koda.addons.mail.models.mail_mail import MailDeliveryException
+from koda.tests.common import HttpCase
 from werkzeug.urls import url_parse
 
 

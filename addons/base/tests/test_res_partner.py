@@ -4,11 +4,11 @@
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo import Command
-from odoo.addons.base.models.res_partner import Partner
-from odoo.exceptions import AccessError, RedirectWarning, UserError, ValidationError
-from odoo.tests import Form
-from odoo.tests.common import TransactionCase, tagged
+from koda import Command
+from koda.addons.base.models.res_partner import Partner
+from koda.exceptions import AccessError, RedirectWarning, UserError, ValidationError
+from koda.tests import Form
+from koda.tests.common import TransactionCase, tagged
 
 # samples use effective TLDs from the Mozilla public suffix
 # list at http://publicsuffix.org

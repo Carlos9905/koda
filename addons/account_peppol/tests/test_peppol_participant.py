@@ -5,9 +5,9 @@ from freezegun import freeze_time
 from unittest.mock import Mock, patch
 from psycopg2 import IntegrityError
 
-from odoo.exceptions import ValidationError, UserError
-from odoo.tests.common import tagged, TransactionCase
-from odoo.tools import mute_logger
+from koda.exceptions import ValidationError, UserError
+from koda.tests.common import tagged, TransactionCase
+from koda.tools import mute_logger
 
 ID_CLIENT = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 FAKE_UUID = 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy'

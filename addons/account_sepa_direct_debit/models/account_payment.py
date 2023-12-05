@@ -5,14 +5,14 @@ import time
 
 from datetime import datetime
 
-from odoo import models, fields, api, _
+from koda import models, fields, api, _
 
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
-from odoo.tools.float_utils import float_repr
-from odoo.tools.xml_utils import create_xml_node, create_xml_node_chain
-from odoo.tools.misc import remove_accents
-from odoo.addons.account_batch_payment.models.sepa_mapping import _replace_characters_SEPA
+from koda.tools.float_utils import float_repr
+from koda.tools.xml_utils import create_xml_node, create_xml_node_chain
+from koda.tools.misc import remove_accents
+from koda.addons.account_batch_payment.models.sepa_mapping import _replace_characters_SEPA
 
 from lxml import etree
 

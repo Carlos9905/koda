@@ -4,9 +4,9 @@
 from unittest.mock import patch
 
 import odoo
-from odoo.tests import HttpCase
-from odoo import http
-from odoo.exceptions import AccessError
+from koda.tests import HttpCase
+from koda import http
+from koda.exceptions import AccessError
 
 class TestAuthSignupFlow(HttpCase):
 

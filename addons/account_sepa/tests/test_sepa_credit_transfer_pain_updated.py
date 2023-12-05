@@ -4,9 +4,9 @@
 from base64 import b64decode
 from lxml import etree
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.tools.misc import file_path
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import tagged
+from koda.tools.misc import file_path
 
 
 @tagged('post_install', '-at_install')

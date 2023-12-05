@@ -15,9 +15,9 @@ from lxml import etree
 from random import randint
 from werkzeug import urls
 
-from odoo import api, fields, models, tools, SUPERUSER_ID, _, Command
-from odoo.osv.expression import get_unaccent_wrapper
-from odoo.exceptions import RedirectWarning, UserError, ValidationError
+from koda import api, fields, models, tools, SUPERUSER_ID, _, Command
+from koda.osv.expression import get_unaccent_wrapper
+from koda.exceptions import RedirectWarning, UserError, ValidationError
 
 # Global variables used for the warning fields declared on the res.partner
 # in the following modules : sale, purchase, account, stock

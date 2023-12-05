@@ -3,7 +3,7 @@
 import os
 from unittest import skipIf
 
-from odoo.tests.common import tagged, TransactionCase
+from koda.tests.common import tagged, TransactionCase
 
 
 @tagged("external")

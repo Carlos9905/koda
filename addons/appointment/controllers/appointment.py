@@ -13,14 +13,14 @@ from urllib.parse import unquote_plus
 from werkzeug.exceptions import Forbidden, NotFound
 from werkzeug.urls import url_encode
 
-from odoo import Command, exceptions, http, fields, _
-from odoo.http import request, route
-from odoo.osv import expression
-from odoo.tools import plaintext2html, DEFAULT_SERVER_DATETIME_FORMAT as dtf
-from odoo.tools.mail import is_html_empty
-from odoo.tools.misc import babel_locale_parse, get_lang
-from odoo.addons.base.models.ir_qweb import keep_query
-from odoo.addons.http_routing.models.ir_http import unslug
+from koda import Command, exceptions, http, fields, _
+from koda.http import request, route
+from koda.osv import expression
+from koda.tools import plaintext2html, DEFAULT_SERVER_DATETIME_FORMAT as dtf
+from koda.tools.mail import is_html_empty
+from koda.tools.misc import babel_locale_parse, get_lang
+from koda.addons.base.models.ir_qweb import keep_query
+from koda.addons.http_routing.models.ir_http import unslug
 
 
 def _formated_weekdays(locale):

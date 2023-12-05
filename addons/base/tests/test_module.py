@@ -6,10 +6,10 @@ from os.path import join as opj
 from unittest.mock import patch
 
 import odoo.addons
-from odoo.modules.module import load_manifest
-from odoo.modules.module import get_manifest
-from odoo.release import major_version
-from odoo.tests.common import BaseCase
+from koda.modules.module import load_manifest
+from koda.modules.module import get_manifest
+from koda.release import major_version
+from koda.tests.common import BaseCase
 
 
 class TestModuleManifest(BaseCase):

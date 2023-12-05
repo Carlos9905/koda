@@ -2,11 +2,11 @@
 # pylint: disable=C0326
 import odoo.tests
 
-from odoo.tests import tagged
-from odoo import Command, fields
+from koda.tests import tagged
+from koda import Command, fields
 from .common import TestAccountReportsCommon
-from odoo.tools import date_utils
-from odoo.tools.misc import formatLang, format_date
+from koda.tools import date_utils
+from koda.tools.misc import formatLang, format_date
 
 from dateutil.relativedelta import relativedelta
 from unittest.mock import patch

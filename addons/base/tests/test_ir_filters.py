@@ -4,9 +4,9 @@
 import ast
 import logging
 
-from odoo import exceptions
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.tests.common import TransactionCase, ADMIN_USER_ID, tagged
+from koda import exceptions
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.tests.common import TransactionCase, ADMIN_USER_ID, tagged
 
 _logger = logging.getLogger(__name__)
 

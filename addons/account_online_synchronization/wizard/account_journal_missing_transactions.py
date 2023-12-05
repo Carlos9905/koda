@@ -2,9 +2,9 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import format_date
+from koda import fields, models, _
+from koda.exceptions import UserError
+from koda.tools import format_date
 
 
 class AccountMissingTransaction(models.TransientModel):

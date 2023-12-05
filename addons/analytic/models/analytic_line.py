@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from lxml.builder import E
 
-from odoo import api, fields, models
-from odoo.osv.expression import OR
+from koda import api, fields, models
+from koda.osv.expression import OR
 
 
 class AccountAnalyticLine(models.Model):

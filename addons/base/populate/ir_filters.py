@@ -1,5 +1,5 @@
-from odoo import models
-from odoo.tools import populate
+from koda import models
+from koda.tools import populate
 
 
 class Filter(models.Model):

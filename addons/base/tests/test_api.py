@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, Command
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
-from odoo.tools import mute_logger, unique, lazy
-from odoo.exceptions import AccessError
+from koda import api, models, Command
+from koda.addons.base.tests.common import SavepointCaseWithUserDemo
+from koda.tools import mute_logger, unique, lazy
+from koda.exceptions import AccessError
 
 
 class TestAPI(SavepointCaseWithUserDemo):

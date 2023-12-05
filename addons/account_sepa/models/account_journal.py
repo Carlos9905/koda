@@ -5,12 +5,12 @@ import time
 from collections import defaultdict
 from lxml import etree
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_repr, float_round
+from koda import _, api, fields, models
+from koda.exceptions import UserError, ValidationError
+from koda.tools import float_repr, float_round
 
 import odoo.addons.account.tools.structured_reference as sr
-from odoo.addons.account_batch_payment.models.sepa_mapping import _replace_characters_SEPA
+from koda.addons.account_batch_payment.models.sepa_mapping import _replace_characters_SEPA
 
 
 def sanitize_communication(communication):

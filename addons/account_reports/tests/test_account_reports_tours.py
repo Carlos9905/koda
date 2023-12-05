@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 # pylint: disable=C0326
 
-from odoo import Command
+from koda import Command
 
-from odoo.tests import tagged
-from odoo.addons.account.tests.common import AccountTestInvoicingHttpCommon
+from koda.tests import tagged
+from koda.addons.account.tests.common import AccountTestInvoicingHttpCommon
 
 @tagged('post_install', '-at_install')
 class TestAccountReportsTours(AccountTestInvoicingHttpCommon):

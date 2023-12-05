@@ -4,9 +4,9 @@
 import re
 from stdnum import get_cc_module, ean
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.addons.account.models.company import PEPPOL_LIST
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.addons.account.models.company import PEPPOL_LIST
 
 try:
     import phonenumbers

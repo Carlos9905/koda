@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.tests import tagged
+from koda.tools import mute_logger
 
-from odoo.addons.account_payment.tests.common import AccountPaymentCommon
-from odoo.addons.appointment_account_payment.tests.common import AppointmentAccountPaymentCommon
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.account_payment.tests.common import AccountPaymentCommon
+from koda.addons.appointment_account_payment.tests.common import AppointmentAccountPaymentCommon
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
 
 
 class AppointmentAccountPaymentFlowsCommon(AccountPaymentCommon, AppointmentAccountPaymentCommon, PaymentHttpCommon):

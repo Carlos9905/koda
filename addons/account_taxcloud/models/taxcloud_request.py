@@ -9,7 +9,7 @@ import requests
 from zeep import Client
 from zeep.exceptions import Fault
 
-from odoo import modules, fields, _
+from koda import modules, fields, _
 
 _logger = logging.getLogger(__name__)
 

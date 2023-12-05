@@ -6,11 +6,11 @@ import json
 import requests
 import werkzeug.http
 
-from odoo import api, fields, models
-from odoo.exceptions import AccessDenied, UserError
-from odoo.addons.auth_signup.models.res_users import SignupError
+from koda import api, fields, models
+from koda.exceptions import AccessDenied, UserError
+from koda.addons.auth_signup.models.res_users import SignupError
 
-from odoo.addons import base
+from koda.addons import base
 base.models.res_users.USER_PRIVATE_FIELDS.append('oauth_access_token')
 
 class ResUsers(models.Model):

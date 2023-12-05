@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import common
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.tests import common
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 class TestInterCompanyRulesCommon(AccountTestInvoicingCommon):

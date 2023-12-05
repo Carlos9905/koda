@@ -15,8 +15,8 @@ from tempfile import TemporaryDirectory
 
 from dbfread import DBF
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError, RedirectWarning
+from koda import models, fields, _
+from koda.exceptions import UserError, RedirectWarning
 
 _logger = logging.getLogger(__name__)
 

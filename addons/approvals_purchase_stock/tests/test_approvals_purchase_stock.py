@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
-from odoo.addons.approvals_purchase_stock.tests.common import TestApprovalsCommon
-from odoo.tests.common import Form
+from koda import fields
+from koda.addons.approvals_purchase_stock.tests.common import TestApprovalsCommon
+from koda.tests.common import Form
 
 class TestApprovalsPurchaseStock(TestApprovalsCommon):
 

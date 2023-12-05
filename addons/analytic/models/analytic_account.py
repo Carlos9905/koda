@@ -3,9 +3,9 @@
 
 from collections import defaultdict
 import itertools
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import groupby
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import groupby
 
 
 class AccountAnalyticAccount(models.Model):

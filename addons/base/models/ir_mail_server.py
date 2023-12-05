@@ -20,9 +20,9 @@ from OpenSSL import crypto as SSLCrypto
 from OpenSSL.crypto import Error as SSLCryptoError, FILETYPE_PEM
 from OpenSSL.SSL import Context as SSLContext, Error as SSLError
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError
-from odoo.tools import ustr, pycompat, formataddr, email_normalize, encapsulate_email, email_domain_extract, email_domain_normalize
+from koda import api, fields, models, tools, _
+from koda.exceptions import UserError
+from koda.tools import ustr, pycompat, formataddr, email_normalize, encapsulate_email, email_domain_extract, email_domain_normalize
 
 
 _logger = logging.getLogger(__name__)

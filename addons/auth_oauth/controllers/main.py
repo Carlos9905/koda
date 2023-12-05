@@ -10,14 +10,14 @@ import werkzeug.urls
 import werkzeug.utils
 from werkzeug.exceptions import BadRequest
 
-from odoo import api, http, SUPERUSER_ID, _
-from odoo.exceptions import AccessDenied
-from odoo.http import request, Response
-from odoo import registry as registry_get
-from odoo.tools.misc import clean_context
+from koda import api, http, SUPERUSER_ID, _
+from koda.exceptions import AccessDenied
+from koda.http import request, Response
+from koda import registry as registry_get
+from koda.tools.misc import clean_context
 
-from odoo.addons.auth_signup.controllers.main import AuthSignupHome as Home
-from odoo.addons.web.controllers.utils import ensure_db, _get_login_redirect_url
+from koda.addons.auth_signup.controllers.main import AuthSignupHome as Home
+from koda.addons.web.controllers.utils import ensure_db, _get_login_redirect_url
 
 
 _logger = logging.getLogger(__name__)

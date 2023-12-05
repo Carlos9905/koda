@@ -387,21 +387,21 @@ from lxml import etree
 from dateutil.relativedelta import relativedelta
 from psycopg2.extensions import TransactionRollbackError
 
-from odoo import api, models, tools
-from odoo.modules import registry
-from odoo.tools import config, safe_eval, pycompat
-from odoo.tools.constants import SUPPORTED_DEBUGGER, EXTERNAL_ASSET
-from odoo.tools.safe_eval import assert_valid_codeobj, _BUILTINS, to_opcodes, _EXPR_OPCODES, _BLACKLIST
-from odoo.tools.json import scriptsafe
-from odoo.tools.lru import LRU
-from odoo.tools.misc import str2bool
-from odoo.tools.image import image_data_uri, FILETYPE_BASE64_MAGICWORD
-from odoo.http import request
-from odoo.tools.profiler import QwebTracker
-from odoo.exceptions import UserError, AccessDenied, AccessError, MissingError, ValidationError
+from koda import api, models, tools
+from koda.modules import registry
+from koda.tools import config, safe_eval, pycompat
+from koda.tools.constants import SUPPORTED_DEBUGGER, EXTERNAL_ASSET
+from koda.tools.safe_eval import assert_valid_codeobj, _BUILTINS, to_opcodes, _EXPR_OPCODES, _BLACKLIST
+from koda.tools.json import scriptsafe
+from koda.tools.lru import LRU
+from koda.tools.misc import str2bool
+from koda.tools.image import image_data_uri, FILETYPE_BASE64_MAGICWORD
+from koda.http import request
+from koda.tools.profiler import QwebTracker
+from koda.exceptions import UserError, AccessDenied, AccessError, MissingError, ValidationError
 
-from odoo.addons.base.models.assetsbundle import AssetsBundle
-from odoo.tools.constants import SCRIPT_EXTENSIONS, STYLE_EXTENSIONS, TEMPLATE_EXTENSIONS
+from koda.addons.base.models.assetsbundle import AssetsBundle
+from koda.tools.constants import SCRIPT_EXTENSIONS, STYLE_EXTENSIONS, TEMPLATE_EXTENSIONS
 
 _logger = logging.getLogger(__name__)
 

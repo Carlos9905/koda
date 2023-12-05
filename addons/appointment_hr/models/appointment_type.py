@@ -4,8 +4,8 @@
 import pytz
 
 from datetime import timedelta
-from odoo import api, fields, models
-from odoo.tools import groupby
+from koda import api, fields, models
+from koda.tools import groupby
 
 
 class AppointmentType(models.Model):

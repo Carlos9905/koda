@@ -5,9 +5,9 @@ import base64
 import logging
 import warnings
 
-from odoo import api, fields, models, tools, _, Command, SUPERUSER_ID
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import html2plaintext, file_open, ormcache
+from koda import api, fields, models, tools, _, Command, SUPERUSER_ID
+from koda.exceptions import ValidationError, UserError
+from koda.tools import html2plaintext, file_open, ormcache
 
 _logger = logging.getLogger(__name__)
 

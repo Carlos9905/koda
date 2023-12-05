@@ -4,8 +4,8 @@
 import uuid
 import logging
 
-from odoo import _, api, Command, fields, models, SUPERUSER_ID
-from odoo.tools import html2plaintext, email_normalize, email_split_tuples
+from koda import _, api, Command, fields, models, SUPERUSER_ID
+from koda.tools import html2plaintext, email_normalize, email_split_tuples
 from ..utils import interval_from_events, intervals_overlap
 
 _logger = logging.getLogger(__name__)

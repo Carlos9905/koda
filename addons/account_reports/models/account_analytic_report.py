@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from psycopg2 import sql
 
-from odoo import models, fields, api, osv
-from odoo.addons.web.controllers.utils import clean_action
-from odoo.tools import SQL
+from koda import models, fields, api, osv
+from koda.addons.web.controllers.utils import clean_action
+from koda.tools import SQL
 
 
 class AccountReport(models.AbstractModel):

@@ -6,8 +6,8 @@ import logging
 import warnings
 import traceback
 
-from odoo import api, models
-from odoo.exceptions import AccessDenied
+from koda import api, models
+from koda.exceptions import AccessDenied
 
 _logger = logging.getLogger(__name__)
 

@@ -1,9 +1,9 @@
 # Koda
 
-from odoo import api, fields, models
-from odoo.tools import str2bool
+from koda import api, fields, models
+from koda.tools import str2bool
 
-from odoo.addons.payment import utils as payment_utils
+from koda.addons.payment import utils as payment_utils
 
 
 class AccountMove(models.Model):

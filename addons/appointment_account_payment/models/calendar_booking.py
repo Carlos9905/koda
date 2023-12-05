@@ -5,9 +5,9 @@ import uuid
 from collections import defaultdict
 from markupsafe import escape, Markup
 
-from odoo import api, Command, fields, models, _
-from odoo.addons.appointment.utils import interval_from_events
-from odoo.tools import format_date, format_time
+from koda import api, Command, fields, models, _
+from koda.addons.appointment.utils import interval_from_events
+from koda.tools import format_date, format_time
 
 
 class CalendarBooking(models.Model):

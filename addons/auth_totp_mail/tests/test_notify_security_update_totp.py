@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.test_res_users import TestNotifySecurityUpdate
-from odoo.tests import users
+from koda.addons.mail.tests.test_res_users import TestNotifySecurityUpdate
+from koda.tests import users
 
 
 class TestNotifySecurityUpdateTotp(TestNotifySecurityUpdate):

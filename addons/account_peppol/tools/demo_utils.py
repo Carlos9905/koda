@@ -5,8 +5,8 @@ from base64 import b64encode
 from decorator import decorator
 import uuid
 
-from odoo import _, fields, modules, tools
-from odoo.tools.misc import file_open
+from koda import _, fields, modules, tools
+from koda.tools.misc import file_open
 
 DEMO_BILL_PATH = 'account_peppol/tools/demo_bill'
 DEMO_ENC_KEY = 'account_peppol/tools/enc_key'

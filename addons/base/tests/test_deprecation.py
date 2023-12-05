@@ -2,7 +2,7 @@
 
 import inspect
 
-from odoo.tests.common import TransactionCase, tagged
+from koda.tests.common import TransactionCase, tagged
 
 DEPRECATED_MODEL_ATTRIBUTES = [
     'view_init',

@@ -9,10 +9,10 @@ from psycopg2 import IntegrityError
 from psycopg2.extras import Json
 import io
 
-from odoo.exceptions import UserError
-from odoo.tools import sql
-from odoo.tools.translate import quote, unquote, xml_translate, html_translate, TranslationImporter, TranslationModuleReader
-from odoo.tests.common import TransactionCase, BaseCase, new_test_user, tagged
+from koda.exceptions import UserError
+from koda.tools import sql
+from koda.tools.translate import quote, unquote, xml_translate, html_translate, TranslationImporter, TranslationModuleReader
+from koda.tests.common import TransactionCase, BaseCase, new_test_user, tagged
 
 _stats_logger = logging.getLogger('odoo.tests.stats')
 

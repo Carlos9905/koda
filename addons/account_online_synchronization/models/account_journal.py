@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError, RedirectWarning
+from koda import api, fields, models, _
+from koda.exceptions import UserError, ValidationError, RedirectWarning
 
 
 class AccountJournal(models.Model):

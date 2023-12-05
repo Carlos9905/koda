@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.base.models.res_bank import sanitize_account_number
-from odoo.addons.account_online_synchronization.tests.common import AccountOnlineSynchronizationCommon
-from odoo.exceptions import RedirectWarning
-from odoo.tests import tagged
-from odoo import fields, Command
+from koda.addons.base.models.res_bank import sanitize_account_number
+from koda.addons.account_online_synchronization.tests.common import AccountOnlineSynchronizationCommon
+from koda.exceptions import RedirectWarning
+from koda.tests import tagged
+from koda import fields, Command
 from unittest.mock import MagicMock, patch
 
 

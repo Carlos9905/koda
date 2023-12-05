@@ -3,8 +3,8 @@
 # pylint: disable=bad-whitespace
 from .common import TestAccountReportsCommon
 
-from odoo import fields, Command
-from odoo.tests import tagged
+from koda import fields, Command
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

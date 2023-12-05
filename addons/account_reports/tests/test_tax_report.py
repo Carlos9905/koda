@@ -4,9 +4,9 @@ from unittest.mock import patch
 from freezegun import freeze_time
 
 from .common import TestAccountReportsCommon
-from odoo import fields, Command
-from odoo.tests import tagged
-from odoo.tests.common import Form
+from koda import fields, Command
+from koda.tests import tagged
+from koda.tests.common import Form
 
 
 @tagged('post_install', '-at_install')

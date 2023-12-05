@@ -3,7 +3,7 @@
 
 from base64 import b64decode
 
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 class TestAvatarMixin(TransactionCase):
 

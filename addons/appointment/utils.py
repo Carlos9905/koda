@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.resource.models.utils import Intervals, timezone_datetime
+from koda.addons.resource.models.utils import Intervals, timezone_datetime
 
 def intervals_overlap(interval_a, interval_b):
     """Check whether an interval of time intersects another.

@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import json
 
-from odoo import models, fields, api, _
-from odoo.tools.misc import format_date
-from odoo.tools import get_lang
-from odoo.exceptions import UserError
+from koda import models, fields, api, _
+from koda.tools.misc import format_date
+from koda.tools import get_lang
+from koda.exceptions import UserError
 
 from datetime import timedelta
 from collections import defaultdict

@@ -2,9 +2,9 @@
 from datetime import date, timedelta
 from unittest.mock import patch
 
-from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import tagged
-from odoo import fields
+from koda.addons.account_reports.tests.common import TestAccountReportsCommon
+from koda.tests import tagged
+from koda import fields
 
 
 @tagged('post_install', '-at_install')

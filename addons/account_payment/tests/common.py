@@ -2,9 +2,9 @@
 
 from unittest.mock import patch
 
-from odoo.addons.account.models.account_payment_method import AccountPaymentMethod
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.payment.tests.common import PaymentCommon
+from koda.addons.account.models.account_payment_method import AccountPaymentMethod
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.payment.tests.common import PaymentCommon
 
 
 class AccountPaymentCommon(PaymentCommon, AccountTestInvoicingCommon):

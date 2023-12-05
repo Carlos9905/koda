@@ -6,8 +6,8 @@ import threading
 from contextlib import contextmanager
 from unittest.mock import patch, Mock
 
-from odoo.tests.common import TransactionCase, HttpCase
-from odoo import Command
+from koda.tests.common import TransactionCase, HttpCase
+from koda import Command
 
 DISABLED_MAIL_CONTEXT = {
     'tracking_disable': True,

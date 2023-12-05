@@ -2,10 +2,10 @@
 
 import re
 
-from odoo import _, api, fields, models
-from odoo.tools.misc import remove_accents
+from koda import _, api, fields, models
+from koda.tools.misc import remove_accents
 
-from odoo.addons.account_qr_code_emv.const import CURRENCY_MAPPING
+from koda.addons.account_qr_code_emv.const import CURRENCY_MAPPING
 
 
 class ResPartnerBank(models.Model):

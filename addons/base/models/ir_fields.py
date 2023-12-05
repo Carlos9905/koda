@@ -8,9 +8,9 @@ import itertools
 import psycopg2
 import pytz
 
-from odoo import api, Command, fields, models, _
-from odoo.tools import ustr, OrderedSet
-from odoo.tools.translate import code_translations, _lt
+from koda import api, Command, fields, models, _
+from koda.tools import ustr, OrderedSet
+from koda.tools.translate import code_translations, _lt
 
 REFERENCING_FIELDS = {None, 'id', '.id'}
 def only_ref_fields(record):

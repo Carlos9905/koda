@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
-from odoo.models import check_method_name
+from koda import api, models, fields, _
+from koda.exceptions import UserError
+from koda.models import check_method_name
 
 import json
 import base64

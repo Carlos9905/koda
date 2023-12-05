@@ -6,11 +6,11 @@
 from contextlib import contextmanager
 import unittest
 
-from odoo import api, registry, SUPERUSER_ID
-from odoo.tests import common
-from odoo.tests.common import BaseCase
+from koda import api, registry, SUPERUSER_ID
+from koda.tests import common
+from koda.tests.common import BaseCase
 
-from odoo.modules.registry import Registry
+from koda.modules.registry import Registry
 
 
 @contextmanager

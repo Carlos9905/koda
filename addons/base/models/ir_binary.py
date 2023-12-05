@@ -3,12 +3,12 @@ import werkzeug.http
 from datetime import datetime
 from mimetypes import guess_extension
 
-from odoo import models
-from odoo.exceptions import MissingError, UserError
-from odoo.http import Stream, request
-from odoo.tools import file_open, replace_exceptions
-from odoo.tools.image import image_process, image_guess_size_from_field_name
-from odoo.tools.mimetypes import guess_mimetype, get_extension
+from koda import models
+from koda.exceptions import MissingError, UserError
+from koda.http import Stream, request
+from koda.tools import file_open, replace_exceptions
+from koda.tools.image import image_process, image_guess_size_from_field_name
+from koda.tools.mimetypes import guess_mimetype, get_extension
 
 
 DEFAULT_PLACEHOLDER_PATH = 'web/static/img/placeholder.png'

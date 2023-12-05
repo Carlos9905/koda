@@ -3,11 +3,11 @@
 
 from lxml import etree
 
-from odoo.exceptions import AccessError
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.tests.common import TransactionCase
-from odoo.tools.misc import mute_logger
-from odoo import Command
+from koda.exceptions import AccessError
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.tests.common import TransactionCase
+from koda.tools.misc import mute_logger
+from koda import Command
 
 # test group that demo user should not have
 GROUP_SYSTEM = 'base.group_system'

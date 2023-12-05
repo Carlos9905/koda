@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import Command, fields
-from odoo.tests import common
-from odoo.exceptions import UserError
+from koda import Command, fields
+from koda.tests import common
+from koda.exceptions import UserError
 
 
 class TestRequest(common.TransactionCase):

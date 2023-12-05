@@ -1,8 +1,8 @@
 from .common import TestAccountReportsCommon
 
-from odoo import fields, Command
-from odoo.tests import tagged
-from odoo.tools import frozendict
+from koda import fields, Command
+from koda.tests import tagged
+from koda.tools import frozendict
 
 from unittest.mock import patch
 

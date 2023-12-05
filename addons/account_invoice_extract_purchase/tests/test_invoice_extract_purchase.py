@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin
-from odoo.tests import tagged
-from odoo.tests.common import Form
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin
+from koda.tests import tagged
+from koda.tests.common import Form
 
 
 @tagged('post_install', '-at_install')

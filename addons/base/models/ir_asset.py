@@ -6,9 +6,9 @@ from werkzeug import urls
 
 import odoo
 import odoo.modules.module  # get_manifest, don't from-import it
-from odoo import api, fields, models, tools
-from odoo.tools import misc
-from odoo.tools.constants import ASSET_EXTENSIONS, EXTERNAL_ASSET
+from koda import api, fields, models, tools
+from koda.tools import misc
+from koda.tools.constants import ASSET_EXTENSIONS, EXTERNAL_ASSET
 
 _logger = getLogger(__name__)
 

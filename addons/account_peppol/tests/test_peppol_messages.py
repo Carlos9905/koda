@@ -5,10 +5,10 @@ from contextlib import contextmanager
 from freezegun import freeze_time
 from unittest.mock import Mock, patch
 
-from odoo.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
-from odoo.exceptions import UserError
-from odoo.tests.common import tagged
-from odoo.tools.misc import file_open
+from koda.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
+from koda.exceptions import UserError
+from koda.tests.common import tagged
+from koda.tools.misc import file_open
 
 
 ID_CLIENT = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'

@@ -7,10 +7,10 @@ from os.path import join as opj
 import operator
 import re
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError
-from odoo.http import request
-from odoo.osv import expression
+from koda import api, fields, models, tools, _
+from koda.exceptions import ValidationError
+from koda.http import request
+from koda.osv import expression
 
 MENU_ITEM_SEPARATOR = "/"
 NUMBER_PARENS = re.compile(r"\(([0-9]+)\)")

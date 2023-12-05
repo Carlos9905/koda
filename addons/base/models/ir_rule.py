@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import AccessError, ValidationError
-from odoo.osv import expression
-from odoo.tools import config
-from odoo.tools.safe_eval import safe_eval, time
+from koda import api, fields, models, tools, _
+from koda.exceptions import AccessError, ValidationError
+from koda.osv import expression
+from koda.tools import config
+from koda.tools.safe_eval import safe_eval, time
 
 _logger = logging.getLogger(__name__)
 class IrRule(models.Model):

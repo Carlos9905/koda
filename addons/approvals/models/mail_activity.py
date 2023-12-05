@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import models
+from koda import models
 
 
 class MailActivity(models.Model):

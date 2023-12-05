@@ -5,12 +5,12 @@ import logging
 
 from datetime import datetime, timedelta
 
-from odoo import _, models
-from odoo.exceptions import AccessDenied, UserError
-from odoo.http import request
-from odoo.tools.misc import babel_locale_parse, hmac
+from koda import _, models
+from koda.exceptions import AccessDenied, UserError
+from koda.http import request
+from koda.tools.misc import babel_locale_parse, hmac
 
-from odoo.addons.auth_totp.models.totp import hotp, TOTP
+from koda.addons.auth_totp.models.totp import hotp, TOTP
 
 _logger = logging.getLogger(__name__)
 

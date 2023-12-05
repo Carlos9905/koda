@@ -8,11 +8,11 @@ import logging
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError
-from odoo.http import request
-from odoo.tools.profiler import make_session
-from odoo.tools.speedscope import Speedscope
+from koda import fields, models, api, _
+from koda.exceptions import UserError
+from koda.http import request
+from koda.tools.profiler import make_session
+from koda.tools.speedscope import Speedscope
 
 _logger = logging.getLogger(__name__)
 

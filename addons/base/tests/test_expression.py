@@ -8,13 +8,13 @@ from unittest.mock import patch
 
 import psycopg2
 
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
-from odoo.fields import Date
-from odoo.models import BaseModel
-from odoo.tests.common import BaseCase, TransactionCase
-from odoo.tools import mute_logger
-from odoo.osv import expression
-from odoo import Command
+from koda.addons.base.tests.common import SavepointCaseWithUserDemo
+from koda.fields import Date
+from koda.models import BaseModel
+from koda.tests.common import BaseCase, TransactionCase
+from koda.tools import mute_logger
+from koda.osv import expression
+from koda import Command
 
 
 class TestExpression(SavepointCaseWithUserDemo):

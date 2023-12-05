@@ -7,9 +7,9 @@ import psycopg2
 import psycopg2.errorcodes
 
 import odoo
-from odoo.tests import common
-from odoo.tests.common import BaseCase
-from odoo.tools.misc import mute_logger
+from koda.tests import common
+from koda.tests.common import BaseCase
+from koda.tools.misc import mute_logger
 
 ADMIN_USER_ID = common.ADMIN_USER_ID
 

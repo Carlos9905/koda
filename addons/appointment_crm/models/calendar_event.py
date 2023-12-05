@@ -3,7 +3,7 @@
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, Command, _
+from koda import api, fields, models, Command, _
 
 
 class CalendarEventCrm(models.Model):

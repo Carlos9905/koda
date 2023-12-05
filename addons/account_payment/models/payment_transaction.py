@@ -1,6 +1,6 @@
 # Koda
 
-from odoo import api, fields, models, SUPERUSER_ID, _
+from koda import api, fields, models, SUPERUSER_ID, _
 
 
 class PaymentTransaction(models.Model):

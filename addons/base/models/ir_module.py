@@ -24,15 +24,15 @@ import lxml.html
 import psycopg2
 
 import odoo
-from odoo import api, fields, models, modules, tools, _
-from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
-from odoo.exceptions import AccessDenied, UserError
-from odoo.osv import expression
-from odoo.tools.parse_version import parse_version
-from odoo.tools.misc import topological_sort, get_flag
-from odoo.tools.translate import TranslationImporter, get_po_paths
-from odoo.http import request
-from odoo.modules import get_module_path
+from koda import api, fields, models, modules, tools, _
+from koda.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+from koda.exceptions import AccessDenied, UserError
+from koda.osv import expression
+from koda.tools.parse_version import parse_version
+from koda.tools.misc import topological_sort, get_flag
+from koda.tools.translate import TranslationImporter, get_po_paths
+from koda.http import request
+from koda.modules import get_module_path
 
 _logger = logging.getLogger(__name__)
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import AccessDenied
+from koda.exceptions import AccessDenied
 
-from odoo import api, models, registry, SUPERUSER_ID
+from koda import api, models, registry, SUPERUSER_ID
 
 
 class Users(models.Model):

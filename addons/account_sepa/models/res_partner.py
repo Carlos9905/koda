@@ -3,8 +3,8 @@
 
 import re
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from koda import _, api, fields, models
+from koda.exceptions import UserError
 
 LEI_REGEX = '[A-Z0-9]{18,18}[0-9]{2,2}'
 

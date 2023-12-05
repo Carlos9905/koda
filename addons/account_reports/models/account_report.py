@@ -17,14 +17,14 @@ import markupsafe
 from babel.dates import get_quarter_names
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.web.controllers.utils import clean_action
-from odoo import models, fields, api, _, osv, _lt
-from odoo.exceptions import RedirectWarning, UserError, ValidationError
-from odoo.tools import config, date_utils, get_lang, float_compare, float_is_zero
-from odoo.tools.float_utils import float_round
-from odoo.tools.misc import formatLang, format_date, xlsxwriter
-from odoo.tools.safe_eval import expr_eval, safe_eval
-from odoo.models import check_method_name
+from koda.addons.web.controllers.utils import clean_action
+from koda import models, fields, api, _, osv, _lt
+from koda.exceptions import RedirectWarning, UserError, ValidationError
+from koda.tools import config, date_utils, get_lang, float_compare, float_is_zero
+from koda.tools.float_utils import float_round
+from koda.tools.misc import formatLang, format_date, xlsxwriter
+from koda.tools.safe_eval import expr_eval, safe_eval
+from koda.models import check_method_name
 
 _logger = logging.getLogger(__name__)
 

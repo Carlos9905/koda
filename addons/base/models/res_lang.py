@@ -8,8 +8,8 @@ import logging
 import re
 from operator import itemgetter
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError, ValidationError
+from koda import api, fields, models, tools, _
+from koda.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 
@@ -188,7 +188,7 @@ class Lang(models.Model):
     def install_lang(self):
         """
 
-        This method is called from odoo/addons/base/data/res_lang_data.xml to load
+        This method is called from koda/addons/base/data/res_lang_data.xml to load
         some language and set it as the default for every partners. The
         language is set via tools.config by the '_initialize_db' method on the
         'db' object. This is a fragile solution and something else should be

@@ -2,8 +2,8 @@
 # pylint: disable=C0326
 from .common import TestAccountReportsCommon
 
-from odoo import Command, fields
-from odoo.tests import tagged
+from koda import Command, fields
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

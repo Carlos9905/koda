@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.tools import get_lang
+from koda import _, api, fields, models
+from koda.tools import get_lang
 
 
 class ECSalesReportCustomHandler(models.AbstractModel):

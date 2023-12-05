@@ -1,10 +1,10 @@
 import json
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.portal.controllers.portal import CustomerPortal
-from odoo.tools import format_amount, format_date
-from odoo.exceptions import AccessError, MissingError, UserError
+from koda import http
+from koda.http import request
+from koda.addons.portal.controllers.portal import CustomerPortal
+from koda.tools import format_amount, format_date
+from koda.exceptions import AccessError, MissingError, UserError
 
 
 class OnlineSynchronizationPortal(CustomerPortal):

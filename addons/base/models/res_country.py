@@ -3,11 +3,11 @@
 
 import re
 import logging
-from odoo import api, fields, models, tools
-from odoo.osv import expression
-from odoo.exceptions import UserError
+from koda import api, fields, models, tools
+from koda.osv import expression
+from koda.exceptions import UserError
 from psycopg2 import IntegrityError
-from odoo.tools.translate import _
+from koda.tools.translate import _
 _logger = logging.getLogger(__name__)
 
 

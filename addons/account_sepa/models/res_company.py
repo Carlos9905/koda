@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api, _
+from koda import models, fields, api, _
 from .account_journal import sanitize_communication
 
 class ResCompany(models.Model):

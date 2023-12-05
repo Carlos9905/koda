@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import time
 
-from odoo.exceptions import AccessError
-from odoo.tests.common import BaseCase, TransactionCase, tagged, new_test_user
-from odoo.tools import profiler
-from odoo.tools.profiler import Profiler, ExecutionContext
-from odoo.tools.speedscope import Speedscope
+from koda.exceptions import AccessError
+from koda.tests.common import BaseCase, TransactionCase, tagged, new_test_user
+from koda.tools import profiler
+from koda.tools.profiler import Profiler, ExecutionContext
+from koda.tools.speedscope import Speedscope
 
 
 @tagged('post_install', '-at_install', 'profiling')

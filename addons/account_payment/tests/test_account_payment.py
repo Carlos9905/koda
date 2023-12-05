@@ -2,10 +2,10 @@
 
 from unittest.mock import patch
 
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda.exceptions import UserError
+from koda.tests import tagged
 
-from odoo.addons.account_payment.tests.common import AccountPaymentCommon
+from koda.addons.account_payment.tests.common import AccountPaymentCommon
 
 
 @tagged('-at_install', 'post_install')

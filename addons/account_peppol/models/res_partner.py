@@ -6,8 +6,8 @@ from lxml import etree
 from hashlib import md5
 from urllib import parse
 
-from odoo import api, fields, models
-from odoo.addons.account_peppol.tools.demo_utils import handle_demo
+from koda import api, fields, models
+from koda.addons.account_peppol.tools.demo_utils import handle_demo
 
 TIMEOUT = 10
 

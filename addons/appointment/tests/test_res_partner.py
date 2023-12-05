@@ -3,8 +3,8 @@
 
 from datetime import timedelta
 
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.tests import users
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.tests import users
 
 
 class ResPartnerTest(AppointmentCommon):

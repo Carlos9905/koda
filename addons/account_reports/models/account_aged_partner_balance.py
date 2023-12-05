@@ -3,8 +3,8 @@
 
 import datetime
 
-from odoo import models, fields, _
-from odoo.tools.misc import format_date
+from koda import models, fields, _
+from koda.tools.misc import format_date
 
 from dateutil.relativedelta import relativedelta
 from itertools import chain

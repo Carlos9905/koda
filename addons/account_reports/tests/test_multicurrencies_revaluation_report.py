@@ -2,9 +2,9 @@
 from freezegun import freeze_time
 from .common import TestAccountReportsCommon
 
-from odoo import fields, Command
-from odoo.tests import tagged
-from odoo.exceptions import UserError
+from koda import fields, Command
+from koda.tests import tagged
+from koda.exceptions import UserError
 
 
 @tagged('post_install', '-at_install')

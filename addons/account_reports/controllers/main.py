@@ -3,11 +3,11 @@
 import werkzeug
 from werkzeug.exceptions import InternalServerError
 
-from odoo.addons.account_reports.models.account_report import AccountReportFileDownloadException
-from odoo import http
-from odoo.models import check_method_name
-from odoo.http import content_disposition, request
-from odoo.tools.misc import html_escape
+from koda.addons.account_reports.models.account_report import AccountReportFileDownloadException
+from koda import http
+from koda.models import check_method_name
+from koda.http import content_disposition, request
+from koda.tools.misc import html_escape
 
 import json
 

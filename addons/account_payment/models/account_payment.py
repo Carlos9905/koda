@@ -1,7 +1,7 @@
 # Koda
 
-from odoo import _, api, Command, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, api, Command, fields, models
+from koda.exceptions import ValidationError
 
 
 class AccountPayment(models.Model):

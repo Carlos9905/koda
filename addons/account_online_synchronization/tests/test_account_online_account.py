@@ -5,9 +5,9 @@ from datetime import timedelta
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo import fields, tools
-from odoo.addons.account_online_synchronization.tests.common import AccountOnlineSynchronizationCommon
-from odoo.tests import tagged
+from koda import fields, tools
+from koda.addons.account_online_synchronization.tests.common import AccountOnlineSynchronizationCommon
+from koda.tests import tagged
 
 _logger = logging.getLogger(__name__)
 

@@ -4,8 +4,8 @@ from unittest.mock import patch
 
 from .common import TestAccountReportsCommon
 
-from odoo import fields
-from odoo.tests import tagged
+from koda import fields
+from koda.tests import tagged
 
 import json
 

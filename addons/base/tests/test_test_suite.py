@@ -11,13 +11,13 @@ from pathlib import PurePath
 from unittest import SkipTest, skip
 from unittest.mock import patch
 
-from odoo.tests.case import TestCase
-from odoo.tests.common import BaseCase, TransactionCase, users, warmup
-from odoo.tests.result import OdooTestResult
+from koda.tests.case import TestCase
+from koda.tests.common import BaseCase, TransactionCase, users, warmup
+from koda.tests.result import OdooTestResult
 
 _logger = logging.getLogger(__name__)
 
-from odoo.tests import MetaCase
+from koda.tests import MetaCase
 
 
 if sys.version_info >= (3, 8):

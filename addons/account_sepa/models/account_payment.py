@@ -2,8 +2,8 @@
 
 from uuid import uuid4
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError, ValidationError
+from koda import models, fields, api, _
+from koda.exceptions import UserError, ValidationError
 
 
 class AccountPayment(models.Model):

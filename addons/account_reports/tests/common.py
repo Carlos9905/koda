@@ -4,12 +4,12 @@ from contextlib import contextmanager
 from datetime import datetime, date
 from unittest.mock import patch
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
 
-from odoo import Command, fields
-from odoo.exceptions import UserError
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.tools.misc import formatLang
+from koda import Command, fields
+from koda.exceptions import UserError
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT
+from koda.tools.misc import formatLang
 
 class TestAccountReportsCommon(AccountTestInvoicingCommon):
 

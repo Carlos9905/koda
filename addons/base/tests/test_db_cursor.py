@@ -7,10 +7,10 @@ import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_REPEATABLE_READ
 
 import odoo
-from odoo.sql_db import db_connect, TestCursor
-from odoo.tests import common
-from odoo.tests.common import BaseCase
-from odoo.tools.misc import config
+from koda.sql_db import db_connect, TestCursor
+from koda.tests import common
+from koda.tests.common import BaseCase
+from koda.tools.misc import config
 
 ADMIN_USER_ID = common.ADMIN_USER_ID
 

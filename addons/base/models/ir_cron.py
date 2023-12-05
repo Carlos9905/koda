@@ -10,8 +10,8 @@ from dateutil.relativedelta import relativedelta
 from psycopg2 import sql
 
 import odoo
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

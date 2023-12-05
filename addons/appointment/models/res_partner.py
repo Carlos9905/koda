@@ -3,7 +3,7 @@
 
 from datetime import datetime, time
 
-from odoo import models
+from koda import models
 
 
 class Partner(models.Model):

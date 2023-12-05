@@ -1,9 +1,9 @@
 # Koda
 
-from odoo.http import request
+from koda.http import request
 
-from odoo.addons.account.controllers import portal
-from odoo.addons.payment.controllers.portal import PaymentPortal
+from koda.addons.account.controllers import portal
+from koda.addons.payment.controllers.portal import PaymentPortal
 
 
 class PortalAccount(portal.PortalAccount, PaymentPortal):

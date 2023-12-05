@@ -3,11 +3,11 @@
 import re
 from collections import defaultdict
 
-from odoo.addons.account_reports.models.account_report import AccountReportFileDownloadException
-from odoo.exceptions import UserError
-from odoo.tools import float_repr, get_lang
+from koda.addons.account_reports.models.account_report import AccountReportFileDownloadException
+from koda.exceptions import UserError
+from koda.tools import float_repr, get_lang
 
-from odoo import api, fields, models, release, _
+from koda import api, fields, models, release, _
 
 
 class GeneralLedgerCustomHandler(models.AbstractModel):

@@ -3,8 +3,8 @@
 
 from base64 import b64encode
 
-from odoo import api, fields, models, _
-from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
+from koda import api, fields, models, _
+from koda.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
 
 
 class AccountMoveSend(models.TransientModel):
