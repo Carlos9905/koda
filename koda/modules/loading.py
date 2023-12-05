@@ -20,7 +20,7 @@ from .. import SUPERUSER_ID, api, tools
 from .module import adapt_version, initialize_sys_path, load_openerp_module
 
 _logger = logging.getLogger(__name__)
-_test_logger = logging.getLogger('odoo.tests')
+_test_logger = logging.getLogger('koda.tests')
 
 
 def load_data(cr, idref, mode, kind, package):
@@ -188,7 +188,7 @@ def load_module_graph(cr, graph, status=None, perform_checks=True,
         load_openerp_module(package.name)
 
         if new_install:
-            py_module = sys.modules['odoo.addons.%s' % (module_name,)]
+            py_module = sys.modules['koda.addons.%s' % (module_name,)]
             pre_init = package.info.get('pre_init_hook')
             if pre_init:
                 registry.setup_models(cr)
@@ -561,7 +561,7 @@ def load_modules(registry, force_demo=False, status=None, update_module=False):
                 for pkg in pkgs:
                     uninstall_hook = pkg.info.get('uninstall_hook')
                     if uninstall_hook:
-                        py_module = sys.modules['odoo.addons.%s' % (pkg.name,)]
+                        py_module = sys.modules['koda.addons.%s' % (pkg.name,)]
                         getattr(py_module, uninstall_hook)(cr, registry)
                         env.flush_all()
 

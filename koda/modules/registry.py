@@ -28,7 +28,7 @@ from koda.tools.func import locked
 from koda.tools.lru import LRU
 
 _logger = logging.getLogger(__name__)
-_schema = logging.getLogger('odoo.schema')
+_schema = logging.getLogger('koda.schema')
 
 
 class Registry(Mapping):
@@ -66,7 +66,7 @@ class Registry(Mapping):
                 return cls.new(db_name)
             finally:
                 # set db tracker - cleaned up at the WSGI dispatching phase in
-                # odoo.http.root
+                # koda.http.root
                 threading.current_thread().dbname = db_name
 
     @classmethod

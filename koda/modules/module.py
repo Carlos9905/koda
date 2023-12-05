@@ -63,12 +63,12 @@ _DEFAULT_MANIFEST = {
 _logger = logging.getLogger(__name__)
 
 # addons path as a list
-# ad_paths is a deprecated alias, please use odoo.addons.__path__
+# ad_paths is a deprecated alias, please use koda.addons.__path__
 @tools.lazy
 def ad_paths():
     warnings.warn(
-        '"odoo.modules.module.ad_paths" is a deprecated proxy to '
-        '"odoo.addons.__path__".', DeprecationWarning, stacklevel=2)
+        '"koda.modules.module.ad_paths" is a deprecated proxy to '
+        '"koda.addons.__path__".', DeprecationWarning, stacklevel=2)
     return koda.addons.__path__
 
 # Modules already loaded
@@ -80,21 +80,21 @@ class AddonsHook(object):
     def find_module(self, name, path=None):
         if name.startswith('openerp.addons.') and name.count('.') == 2:
             warnings.warn(
-                '"openerp.addons" is a deprecated alias to "odoo.addons".',
+                '"openerp.addons" is a deprecated alias to "koda.addons".',
                 DeprecationWarning, stacklevel=2)
             return self
 
     def find_spec(self, fullname, path=None, target=None):
         if fullname.startswith('openerp.addons.') and fullname.count('.') == 2:
             warnings.warn(
-                '"openerp.addons" is a deprecated alias to "odoo.addons".',
+                '"openerp.addons" is a deprecated alias to "koda.addons".',
                 DeprecationWarning, stacklevel=2)
             return importlib.util.spec_from_loader(fullname, self)
 
     def load_module(self, name):
         assert name not in sys.modules
 
-        odoo_name = re.sub(r'^openerp.addons.(\w+)$', r'odoo.addons.\g<1>', name)
+        odoo_name = re.sub(r'^openerp.addons.(\w+)$', r'koda.addons.\g<1>', name)
 
         odoo_module = sys.modules.get(odoo_name)
         if not odoo_module:
@@ -105,14 +105,14 @@ class AddonsHook(object):
         return odoo_module
 
 class OdooHook(object):
-    """ Makes odoo package also available as openerp """
+    """ Makes koda package also available as openerp """
 
     def find_module(self, name, path=None):
         # openerp.addons.<identifier> should already be matched by AddonsHook,
         # only framework and subdirectories of modules should match
         if re.match(r'^openerp\b', name):
             warnings.warn(
-                'openerp is a deprecated alias to odoo.',
+                'openerp is a deprecated alias to koda.',
                 DeprecationWarning, stacklevel=2)
             return self
 
@@ -121,14 +121,14 @@ class OdooHook(object):
         # only framework and subdirectories of modules should match
         if re.match(r'^openerp\b', fullname):
             warnings.warn(
-                'openerp is a deprecated alias to odoo.',
+                'openerp is a deprecated alias to koda.',
                 DeprecationWarning, stacklevel=2)
             return importlib.util.spec_from_loader(fullname, self)
 
     def load_module(self, name):
         assert name not in sys.modules
 
-        canonical = re.sub(r'^openerp(.*)', r'odoo\g<1>', name)
+        canonical = re.sub(r'^openerp(.*)', r'koda\g<1>', name)
 
         if canonical in sys.modules:
             mod = sys.modules[canonical]
@@ -145,10 +145,10 @@ class OdooHook(object):
 
 
 class UpgradeHook(object):
-    """Makes the legacy `migrations` package being `odoo.upgrade`"""
+    """Makes the legacy `migrations` package being `koda.upgrade`"""
 
     def find_module(self, name, path=None):
-        if re.match(r"^odoo\.addons\.base\.maintenance\.migrations\b", name):
+        if re.match(r"^koda\.addons\.base\.maintenance\.migrations\b", name):
             # We can't trigger a DeprecationWarning in this case.
             # In order to be cross-versions, the multi-versions upgrade scripts (0.0.0 scripts),
             # the tests, and the common files (utility functions) still needs to import from the
@@ -156,7 +156,7 @@ class UpgradeHook(object):
             return self
 
     def find_spec(self, fullname, path=None, target=None):
-        if re.match(r"^odoo.addons.base.maintenance.migrations\b", fullname):
+        if re.match(r"^koda.addons.base.maintenance.migrations\b", fullname):
             # We can't trigger a DeprecationWarning in this case.
             # In order to be cross-versions, the multi-versions upgrade scripts (0.0.0 scripts),
             # the tests, and the common files (utility functions) still needs to import from the
@@ -166,7 +166,7 @@ class UpgradeHook(object):
     def load_module(self, name):
         assert name not in sys.modules
 
-        canonical_upgrade = name.replace("odoo.addons.base.maintenance.migrations", "odoo.upgrade")
+        canonical_upgrade = name.replace("koda.addons.base.maintenance.migrations", "koda.upgrade")
 
         if canonical_upgrade in sys.modules:
             mod = sys.modules[canonical_upgrade]
@@ -180,26 +180,26 @@ class UpgradeHook(object):
 
 def initialize_sys_path():
     """
-    Setup the addons path ``odoo.addons.__path__`` with various defaults
+    Setup the addons path ``koda.addons.__path__`` with various defaults
     and explicit directories.
     """
-    # hook odoo.addons on data dir
+    # hook koda.addons on data dir
     dd = os.path.normcase(tools.config.addons_data_dir)
     if os.access(dd, os.R_OK) and dd not in koda.addons.__path__:
         koda.addons.__path__.append(dd)
 
-    # hook odoo.addons on addons paths
+    # hook koda.addons on addons paths
     for ad in tools.config['addons_path'].split(','):
         ad = os.path.normcase(os.path.abspath(tools.ustr(ad.strip())))
         if ad not in koda.addons.__path__:
             koda.addons.__path__.append(ad)
 
-    # hook odoo.addons on base module path
+    # hook koda.addons on base module path
     base_path = os.path.normcase(os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'addons')))
     if base_path not in koda.addons.__path__ and os.path.isdir(base_path):
         koda.addons.__path__.append(base_path)
 
-    # hook odoo.upgrade on upgrade-path
+    # hook koda.upgrade on upgrade-path
     from koda import upgrade
     legacy_upgrade_path = os.path.join(base_path, 'base', 'maintenance', 'migrations')
     for up in (tools.config['upgrade_path'] or legacy_upgrade_path).split(','):
@@ -207,14 +207,14 @@ def initialize_sys_path():
         if os.path.isdir(up) and up not in upgrade.__path__:
             upgrade.__path__.append(up)
 
-    # create decrecated module alias from koda.addons.base.maintenance.migrations to odoo.upgrade
-    spec = importlib.machinery.ModuleSpec("odoo.addons.base.maintenance", None, is_package=True)
+    # create decrecated module alias from koda.addons.base.maintenance.migrations to koda.upgrade
+    spec = importlib.machinery.ModuleSpec("koda.addons.base.maintenance", None, is_package=True)
     maintenance_pkg = importlib.util.module_from_spec(spec)
     maintenance_pkg.migrations = upgrade
-    sys.modules["odoo.addons.base.maintenance"] = maintenance_pkg
-    sys.modules["odoo.addons.base.maintenance.migrations"] = upgrade
+    sys.modules["koda.addons.base.maintenance"] = maintenance_pkg
+    sys.modules["koda.addons.base.maintenance.migrations"] = upgrade
 
-    # hook deprecated module alias from openerp to odoo and "crm"-like to odoo.addons
+    # hook deprecated module alias from openerp to koda and "crm"-like to koda.addons
     if not getattr(initialize_sys_path, 'called', False): # only initialize once
         sys.meta_path.insert(0, UpgradeHook())
         sys.meta_path.insert(0, OdooHook())
@@ -468,14 +468,14 @@ def load_openerp_module(module_name):
         return
 
     try:
-        __import__('odoo.addons.' + module_name)
+        __import__('koda.addons.' + module_name)
 
         # Call the module's post-load hook. This can done before any model or
         # data has been initialized. This is ok as the post-load hook is for
         # server-wide (instead of registry-specific) functionalities.
         info = get_manifest(module_name)
         if info['post_load']:
-            getattr(sys.modules['odoo.addons.' + module_name], info['post_load'])()
+            getattr(sys.modules['koda.addons.' + module_name], info['post_load'])()
 
     except Exception as e:
         msg = "Couldn't load module %s" % (module_name)
