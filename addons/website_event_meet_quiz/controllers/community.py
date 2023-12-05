@@ -3,8 +3,8 @@
 
 from werkzeug.exceptions import Forbidden
 
-from odoo.addons.website_event.controllers.community import EventCommunityController
-from odoo.http import request, route
+from koda.addons.website_event.controllers.community import EventCommunityController
+from koda.http import request, route
 
 
 class WebsiteEventTrackQuizMeetController(EventCommunityController):

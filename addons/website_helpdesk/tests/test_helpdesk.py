@@ -1,4 +1,4 @@
-from odoo.tests.common import TransactionCase, Form
+from koda.tests.common import TransactionCase, Form
 
 
 class HelpdeskWebsite(TransactionCase):

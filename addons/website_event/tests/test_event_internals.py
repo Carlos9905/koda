@@ -3,11 +3,11 @@
 
 from datetime import datetime, timedelta
 
-from odoo.fields import Datetime as FieldsDatetime
-from odoo.tests.common import users
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_event.controllers.main import WebsiteEventController
-from odoo.addons.website_event.tests.common import TestEventQuestionCommon
+from koda.fields import Datetime as FieldsDatetime
+from koda.tests.common import users
+from koda.addons.website.tools import MockRequest
+from koda.addons.website_event.controllers.main import WebsiteEventController
+from koda.addons.website_event.tests.common import TestEventQuestionCommon
 
 
 class TestEventData(TestEventQuestionCommon):

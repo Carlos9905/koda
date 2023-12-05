@@ -4,9 +4,9 @@
 import base64
 import re
 
-from odoo import api, models
-from odoo.tools import misc
-from odoo.addons.base.models.assetsbundle import EXTENSIONS
+from koda import api, models
+from koda.tools import misc
+from koda.addons.base.models.assetsbundle import EXTENSIONS
 
 _match_asset_file_url_regex = re.compile(r"^(/_custom/([^/]+))?/(\w+)/([/\w]+\.\w+)$")
 

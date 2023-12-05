@@ -5,7 +5,7 @@ import json
 import logging
 
 import requests
-from odoo import api, fields, models
+from koda import api, fields, models
 
 API_ENDPOINT = 'https://api.twitter.com'
 API_VERSION = '1.1'

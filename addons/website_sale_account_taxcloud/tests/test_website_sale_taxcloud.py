@@ -4,8 +4,8 @@
 import json
 from unittest.mock import patch
 
-from odoo import Command
-from odoo.addons.base.tests.common import HttpCase
+from koda import Command
+from koda.addons.base.tests.common import HttpCase
 
 
 class TestWebsiteSaleTaxCloud(HttpCase):

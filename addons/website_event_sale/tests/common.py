@@ -3,8 +3,8 @@
 
 from datetime import timedelta
 
-from odoo.fields import Datetime
-from odoo.tests.common import TransactionCase
+from koda.fields import Datetime
+from koda.tests.common import TransactionCase
 
 
 class TestWebsiteEventSaleCommon(TransactionCase):

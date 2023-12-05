@@ -3,7 +3,7 @@
 
 import werkzeug.urls
 
-from odoo import models, fields, api
+from koda import models, fields, api
 
 class Partner(models.Model):
     _name = 'res.partner'

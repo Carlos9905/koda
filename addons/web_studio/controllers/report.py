@@ -4,10 +4,10 @@ import json
 from lxml import etree, html
 from psycopg2 import OperationalError
 
-from odoo import http, _, Command, models
-from odoo.http import request, serialize_exception
-from odoo.addons.web_studio.controllers import main
-from odoo.tools.safe_eval import safe_eval
+from koda import http, _, Command, models
+from koda.http import request, serialize_exception
+from koda.addons.web_studio.controllers import main
+from koda.tools.safe_eval import safe_eval
 
 def api_tree_or_string(func):
     def from_tree_or_string(tree_or_string, *args, **kwargs):

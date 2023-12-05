@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.osv import expression
+from koda import models
+from koda.osv import expression
 
-from odoo.addons.website.models import ir_http
+from koda.addons.website.models import ir_http
 
 class ProductProduct(models.Model):
     _inherit = 'product.product'

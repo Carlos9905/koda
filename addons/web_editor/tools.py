@@ -10,10 +10,10 @@ import requests
 from markupsafe import Markup
 from werkzeug.urls import url_encode
 
-from odoo import _
-from odoo.exceptions import ValidationError
-from odoo.http import request
-from odoo.tools import image_process
+from koda import _
+from koda.exceptions import ValidationError
+from koda.http import request
+from koda.tools import image_process
 
 logger = logging.getLogger(__name__)
 

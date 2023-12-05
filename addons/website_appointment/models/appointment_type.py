@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.addons.website_appointment.controllers.appointment import WebsiteAppointment
+from koda import api, fields, models
+from koda.addons.website_appointment.controllers.appointment import WebsiteAppointment
 
 
 class AppointmentType(models.Model):

@@ -7,7 +7,7 @@ import base64
 from PIL import Image
 from werkzeug.urls import url_quote
 
-from odoo.tests.common import HttpCase, tagged
+from koda.tests.common import HttpCase, tagged
 
 
 @tagged('-at_install', 'post_install')

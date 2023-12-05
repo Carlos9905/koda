@@ -4,8 +4,8 @@ import re
 
 from lxml import html
 
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
 
 class WebsiteStudioController(http.Controller):

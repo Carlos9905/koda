@@ -4,10 +4,10 @@
 
 import base64
 
-from odoo import api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools import ImageProcess
-from odoo.tools.translate import _
+from koda import api, fields, models
+from koda.exceptions import ValidationError
+from koda.tools import ImageProcess
+from koda.tools.translate import _
 
 
 class Website(models.Model):

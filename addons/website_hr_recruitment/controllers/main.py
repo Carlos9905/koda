@@ -4,11 +4,11 @@
 import warnings
 from datetime import datetime, timedelta
 
-from odoo import http, _
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.osv.expression import AND
-from odoo.http import request
-from odoo.tools.misc import groupby
+from koda import http, _
+from koda.addons.http_routing.models.ir_http import slug
+from koda.osv.expression import AND
+from koda.http import request
+from koda.tools.misc import groupby
 
 
 class WebsiteHrRecruitment(http.Controller):

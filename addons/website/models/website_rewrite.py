@@ -4,8 +4,8 @@
 import re
 import werkzeug
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
+from koda import models, fields, api, _
+from koda.exceptions import ValidationError
 
 import logging
 _logger = logging.getLogger(__name__)

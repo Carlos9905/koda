@@ -3,8 +3,8 @@
 
 import psycopg2
 
-from odoo import api, models, fields
-from odoo.tools.translate import CodeTranslations
+from koda import api, models, fields
+from koda.tools.translate import CodeTranslations
 
 
 class TransifexCodeTranslation(models.Model):

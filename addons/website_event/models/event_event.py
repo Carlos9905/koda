@@ -8,11 +8,11 @@ import werkzeug.urls
 
 from pytz import utc, timezone
 
-from odoo import api, fields, models, _
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
-from odoo.tools.misc import get_lang, format_date
+from koda import api, fields, models, _
+from koda.addons.http_routing.models.ir_http import slug
+from koda.exceptions import ValidationError
+from koda.osv import expression
+from koda.tools.misc import get_lang, format_date
 
 GOOGLE_CALENDAR_URL = 'https://www.google.com/calendar/render?'
 

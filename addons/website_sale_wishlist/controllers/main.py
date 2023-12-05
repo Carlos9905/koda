@@ -2,8 +2,8 @@
 
 import json
 
-from odoo.http import request, route
-from odoo.addons.website_sale.controllers.main import WebsiteSale
+from koda.http import request, route
+from koda.addons.website_sale.controllers.main import WebsiteSale
 
 
 class WebsiteSaleWishlist(WebsiteSale):

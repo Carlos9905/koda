@@ -8,23 +8,23 @@ from datetime import datetime
 from werkzeug.exceptions import Forbidden, NotFound
 from werkzeug.urls import url_decode, url_encode, url_parse
 
-from odoo import fields, http, SUPERUSER_ID, tools, _
-from odoo.fields import Command
-from odoo.http import request, route
-from odoo.addons.base.models.ir_qweb_fields import nl2br_enclose
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.controllers import portal as payment_portal
-from odoo.addons.website.controllers.main import QueryURL
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.exceptions import AccessError, MissingError, ValidationError
-from odoo.addons.portal.controllers.portal import _build_url_w_params
-from odoo.addons.website.controllers import main
-from odoo.addons.website.controllers.form import WebsiteForm
-from odoo.addons.sale.controllers import portal as sale_portal
-from odoo.osv import expression
-from odoo.tools import lazy, str2bool
-from odoo.tools.json import scriptsafe as json_scriptsafe
+from koda import fields, http, SUPERUSER_ID, tools, _
+from koda.fields import Command
+from koda.http import request, route
+from koda.addons.base.models.ir_qweb_fields import nl2br_enclose
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment.controllers import portal as payment_portal
+from koda.addons.website.controllers.main import QueryURL
+from koda.addons.website.models.ir_http import sitemap_qs2dom
+from koda.exceptions import AccessError, MissingError, ValidationError
+from koda.addons.portal.controllers.portal import _build_url_w_params
+from koda.addons.website.controllers import main
+from koda.addons.website.controllers.form import WebsiteForm
+from koda.addons.sale.controllers import portal as sale_portal
+from koda.osv import expression
+from koda.tools import lazy, str2bool
+from koda.tools.json import scriptsafe as json_scriptsafe
 
 _logger = logging.getLogger(__name__)
 

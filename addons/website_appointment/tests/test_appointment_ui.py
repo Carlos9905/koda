@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.tests import tagged
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.tests import tagged
 
 
 @tagged('appointment_ui', '-at_install', 'post_install')

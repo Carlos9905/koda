@@ -3,7 +3,7 @@
 
 from werkzeug.urls import url_quote
 
-from odoo import api, models, fields, tools
+from koda import api, models, fields, tools
 
 SUPPORTED_IMAGE_MIMETYPES = {
     'image/gif': '.gif',

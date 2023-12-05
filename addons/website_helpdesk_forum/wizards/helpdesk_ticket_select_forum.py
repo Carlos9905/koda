@@ -3,8 +3,8 @@
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 
 class HelpdeskTicketSelectForumWizard(models.TransientModel):

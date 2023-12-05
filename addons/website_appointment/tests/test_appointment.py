@@ -4,12 +4,12 @@
 from collections import Counter
 from datetime import datetime
 
-from odoo.addons.appointment.tests.common import AppointmentCommon
-from odoo.addons.website_appointment.controllers.appointment import WebsiteAppointment
-from odoo.addons.website.tests.test_website_visitor import MockVisitor
-from odoo.addons.website.tools import MockRequest
-from odoo.exceptions import ValidationError
-from odoo.tests import users, tagged
+from koda.addons.appointment.tests.common import AppointmentCommon
+from koda.addons.website_appointment.controllers.appointment import WebsiteAppointment
+from koda.addons.website.tests.test_website_visitor import MockVisitor
+from koda.addons.website.tools import MockRequest
+from koda.exceptions import ValidationError
+from koda.tests import users, tagged
 from unittest.mock import patch
 
 

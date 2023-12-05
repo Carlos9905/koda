@@ -3,9 +3,9 @@
 
 from werkzeug.exceptions import Forbidden
 
-from odoo import http
-from odoo.addons.website_event_track.controllers.event_track import EventTrackController
-from odoo.http import request
+from koda import http
+from koda.addons.website_event_track.controllers.event_track import EventTrackController
+from koda.http import request
 
 
 class WebsiteEventTrackQuiz(EventTrackController):

@@ -3,9 +3,9 @@
 
 from werkzeug.urls import url_encode
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools.mimetypes import get_extension
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.tools.mimetypes import get_extension
 
 
 class SlideResource(models.Model):

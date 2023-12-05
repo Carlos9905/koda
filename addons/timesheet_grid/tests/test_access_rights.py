@@ -1,9 +1,9 @@
-from odoo import fields
+from koda import fields
 
-from odoo.exceptions import AccessError
+from koda.exceptions import AccessError
 
-from odoo.tests.common import new_test_user
-from odoo.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
+from koda.tests.common import new_test_user
+from koda.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
 from datetime import timedelta
 
 

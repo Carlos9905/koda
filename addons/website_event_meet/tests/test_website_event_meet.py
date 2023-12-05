@@ -3,9 +3,9 @@
 
 from datetime import datetime, timedelta
 
-from odoo import fields
-from odoo.addons.event.tests.common import EventCase
-from odoo.tests import Form
+from koda import fields
+from koda.addons.event.tests.common import EventCase
+from koda.tests import Form
 
 
 class TestWebsiteEventMeet(EventCase):

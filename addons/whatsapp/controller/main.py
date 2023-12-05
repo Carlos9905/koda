@@ -8,9 +8,9 @@ from markupsafe import Markup
 from werkzeug.exceptions import Forbidden
 
 from http import HTTPStatus
-from odoo import http, _
-from odoo.http import request
-from odoo.tools import consteq
+from koda import http, _
+from koda.http import request
+from koda.tools import consteq
 
 _logger = logging.getLogger(__name__)
 

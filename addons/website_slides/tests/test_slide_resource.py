@@ -4,11 +4,11 @@
 from psycopg2 import IntegrityError
 from werkzeug.urls import url_quote
 
-from odoo.addons.website_slides.tests import common
-from odoo.exceptions import ValidationError
-from odoo.tests import HttpCase
-from odoo.tests.common import users
-from odoo.tools import mute_logger
+from koda.addons.website_slides.tests import common
+from koda.exceptions import ValidationError
+from koda.tests import HttpCase
+from koda.tests.common import users
+from koda.tools import mute_logger
 
 
 class TestResources(common.SlidesCase, HttpCase):

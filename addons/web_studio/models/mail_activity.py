@@ -1,5 +1,5 @@
-from odoo import models
-from odoo.exceptions import UserError
+from koda import models
+from koda.exceptions import UserError
 
 
 class MailActivity(models.Model):

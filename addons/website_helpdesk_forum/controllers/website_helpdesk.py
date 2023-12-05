@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.website_helpdesk.controllers.main import WebsiteHelpdesk
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.website_helpdesk.controllers.main import WebsiteHelpdesk
 
 
 class WebsiteHelpdeskForum(WebsiteHelpdesk):

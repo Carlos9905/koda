@@ -3,8 +3,8 @@
 
 import datetime
 
-from odoo import api, fields, models
-from odoo.addons.http_routing.models.ir_http import slug
+from koda import api, fields, models
+from koda.addons.http_routing.models.ir_http import slug
 
 
 class EventMeetingRoom(models.Model):

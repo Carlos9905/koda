@@ -4,12 +4,12 @@
 import json
 import pytz
 
-from odoo import http
-from odoo.addons.http_routing.models.ir_http import url_for
-from odoo.http import request
-from odoo.tools import ustr
-from odoo.tools.misc import file_open
-from odoo.tools.translate import _
+from koda import http
+from koda.addons.http_routing.models.ir_http import url_for
+from koda.http import request
+from koda.tools import ustr
+from koda.tools.misc import file_open
+from koda.tools.translate import _
 
 
 class TrackManifest(http.Controller):

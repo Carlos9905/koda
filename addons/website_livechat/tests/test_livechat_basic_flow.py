@@ -3,10 +3,10 @@
 
 import datetime
 
-from odoo import tests, _
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.website_livechat.tests.common import TestLivechatCommon
-from odoo.tests.common import new_test_user
+from koda import tests, _
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.addons.website_livechat.tests.common import TestLivechatCommon
+from koda.tests.common import new_test_user
 
 
 @tests.tagged('post_install', '-at_install')

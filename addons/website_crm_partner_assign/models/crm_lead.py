@@ -4,9 +4,9 @@
 import random
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import AccessDenied, AccessError, UserError
-from odoo.tools import html_escape
+from koda import api, fields, models, _
+from koda.exceptions import AccessDenied, AccessError, UserError
+from koda.tools import html_escape
 
 
 

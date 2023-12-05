@@ -8,12 +8,12 @@ import time
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
-from odoo.addons.whatsapp.tools.whatsapp_api import WhatsAppApi
-from odoo.addons.whatsapp.models.whatsapp_message import WhatsAppMessage
-from odoo.addons.whatsapp.tests.template_data import template_data
-from odoo.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
-from odoo.tests import common
+from koda.addons.mail.tests.common import MailCommon, mail_new_test_user
+from koda.addons.whatsapp.tools.whatsapp_api import WhatsAppApi
+from koda.addons.whatsapp.models.whatsapp_message import WhatsAppMessage
+from koda.addons.whatsapp.tests.template_data import template_data
+from koda.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
+from koda.tests import common
 
 
 class MockOutgoingWhatsApp(common.BaseCase):

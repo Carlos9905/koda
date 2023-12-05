@@ -8,13 +8,13 @@ from copy import deepcopy
 from lxml import etree
 
 import odoo
-from odoo import http, _
-from odoo.http import content_disposition, request
-from odoo.exceptions import UserError, AccessError, ValidationError
-from odoo.addons.web_studio.controllers import export
-from odoo.osv import expression
-from odoo.tools import ustr, sql
-from odoo.models import check_method_name
+from koda import http, _
+from koda.http import content_disposition, request
+from koda.exceptions import UserError, AccessError, ValidationError
+from koda.addons.web_studio.controllers import export
+from koda.osv import expression
+from koda.tools import ustr, sql
+from koda.models import check_method_name
 
 _logger = logging.getLogger(__name__)
 

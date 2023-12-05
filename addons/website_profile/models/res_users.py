@@ -6,7 +6,7 @@ import uuid
 
 from datetime import datetime
 from werkzeug import urls
-from odoo import api, models
+from koda import api, models
 
 VALIDATION_KARMA_GAIN = 3
 

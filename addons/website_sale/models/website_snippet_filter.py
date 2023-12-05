@@ -2,8 +2,8 @@
 
 from collections import Counter
 
-from odoo import models, fields, api, _
-from odoo.osv import expression
+from koda import models, fields, api, _
+from koda.osv import expression
 
 
 class WebsiteSnippetFilter(models.Model):

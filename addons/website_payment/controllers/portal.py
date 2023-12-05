@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http, _
-from odoo.exceptions import ValidationError
-from odoo.http import request
-from odoo.tools.json import scriptsafe as json_safe
+from koda import http, _
+from koda.exceptions import ValidationError
+from koda.http import request
+from koda.tools.json import scriptsafe as json_safe
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.controllers import portal as payment_portal
+from koda.addons.payment import utils as payment_utils
+from koda.addons.payment.controllers import portal as payment_portal
 
 
 class PaymentPortal(payment_portal.PaymentPortal):

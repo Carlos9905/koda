@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
-from odoo.http import request
+from koda import models, fields, api, _
+from koda.exceptions import UserError
+from koda.http import request
 
 class ProductTemplate(models.Model):
     _inherit = 'product.template'

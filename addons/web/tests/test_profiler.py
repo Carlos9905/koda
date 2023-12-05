@@ -5,8 +5,8 @@ import json
 
 from unittest.mock import patch
 
-from odoo.tools import mute_logger
-from odoo.tests.common import HttpCase, tagged
+from koda.tools import mute_logger
+from koda.tests.common import HttpCase, tagged
 
 
 class ProfilingHttpCase(HttpCase):

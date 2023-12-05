@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.addons.website_sale_picking import const
+from koda import api, fields, models
+from koda.addons.website_sale_picking import const
 
 class PaymentProvider(models.Model):
     _inherit = 'payment.provider'

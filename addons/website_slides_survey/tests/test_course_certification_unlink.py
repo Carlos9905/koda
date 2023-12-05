@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from odoo.addons.website_slides.tests.common import SlidesCase
-from odoo.exceptions import ValidationError
-from odoo.tests.common import users
+from koda.addons.website_slides.tests.common import SlidesCase
+from koda.exceptions import ValidationError
+from koda.tests.common import users
 
 
 class TestSurvey(SlidesCase):

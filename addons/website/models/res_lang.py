@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, tools, _
-from odoo.exceptions import UserError
-from odoo.http import request
+from koda import api, models, tools, _
+from koda.exceptions import UserError
+from koda.http import request
 
 
 class Lang(models.Model):

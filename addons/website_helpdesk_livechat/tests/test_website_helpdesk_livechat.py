@@ -3,9 +3,9 @@
 
 import json
 
-from odoo import Command
-from odoo.tests.common import HttpCase
-from odoo.addons.helpdesk.tests.common import HelpdeskCommon
+from koda import Command
+from koda.tests.common import HttpCase
+from koda.addons.helpdesk.tests.common import HelpdeskCommon
 
 
 class TestWebsiteHelpdeskLivechat(HttpCase, HelpdeskCommon):

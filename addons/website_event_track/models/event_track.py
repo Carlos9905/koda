@@ -5,11 +5,11 @@ from datetime import timedelta
 from pytz import utc
 from random import randint
 
-from odoo import api, fields, models, tools
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.osv import expression
-from odoo.tools.mail import is_html_empty
-from odoo.tools.translate import _, html_translate
+from koda import api, fields, models, tools
+from koda.addons.http_routing.models.ir_http import slug
+from koda.osv import expression
+from koda.tools.mail import is_html_empty
+from koda.tools.translate import _, html_translate
 
 
 class Track(models.Model):

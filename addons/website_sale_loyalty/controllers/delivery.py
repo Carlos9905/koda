@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
-from odoo.http import request, route
+from koda.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
+from koda.http import request, route
 
 
 class WebsiteSaleLoyaltyDelivery(WebsiteSaleDelivery):

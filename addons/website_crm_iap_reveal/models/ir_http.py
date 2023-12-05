@@ -4,8 +4,8 @@
 import logging
 import time
 
-from odoo import models
-from odoo.http import request
+from koda import models
+from koda.http import request
 
 _logger = logging.getLogger(__name__)
 

@@ -5,14 +5,14 @@ import werkzeug
 import werkzeug.utils
 import werkzeug.exceptions
 
-from odoo import _
-from odoo import http
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.osv import expression
+from koda import _
+from koda import http
+from koda.addons.http_routing.models.ir_http import slug
+from koda.exceptions import AccessError
+from koda.http import request
+from koda.osv import expression
 
-from odoo.addons.website_slides.controllers.main import WebsiteSlides
+from koda.addons.website_slides.controllers.main import WebsiteSlides
 
 
 class WebsiteSlidesSurvey(WebsiteSlides):

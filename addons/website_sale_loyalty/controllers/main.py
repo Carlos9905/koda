@@ -2,11 +2,11 @@
 
 from werkzeug.urls import url_encode, url_parse
 
-from odoo import http, _
-from odoo.exceptions import UserError
-from odoo.http import request
+from koda import http, _
+from koda.exceptions import UserError
+from koda.http import request
 
-from odoo.addons.website_sale.controllers import main
+from koda.addons.website_sale.controllers import main
 
 
 class WebsiteSale(main.WebsiteSale):

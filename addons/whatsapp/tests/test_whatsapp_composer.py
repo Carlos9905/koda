@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import exceptions
-from odoo.addons.whatsapp.tests.common import WhatsAppCommon
-from odoo.tests import tagged, users
+from koda import exceptions
+from koda.addons.whatsapp.tests.common import WhatsAppCommon
+from koda.tests import tagged, users
 
 
 @tagged('wa_composer')

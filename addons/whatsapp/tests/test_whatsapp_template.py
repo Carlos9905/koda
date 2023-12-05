@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo import exceptions
-from odoo.addons.whatsapp.tests.common import WhatsAppCommon, MockIncomingWhatsApp
-from odoo.tests import tagged, users
+from koda import Command
+from koda import exceptions
+from koda.addons.whatsapp.tests.common import WhatsAppCommon, MockIncomingWhatsApp
+from koda.tests import tagged, users
 
 
 @tagged('wa_template')
@@ -279,7 +279,7 @@ class WhatsAppTemplateSync(WhatsAppCommon, MockIncomingWhatsApp):
                 'header_type': 'text',
                 'header_text': 'Hello {{1}}',
                 'body': 'Greetings of the day! I hope you are safe and doing well. \n '
-                        'This is {{1}} from Odoo. My mobile number is {{2}}.\n'
+                        'This is {{1}} from koda. My mobile number is {{2}}.\n'
                         'I will be happy to help you with any queries you may have.\n'
                         'Thank you',
                 'wa_template_uid': '778510144283702',
@@ -318,7 +318,7 @@ class WhatsAppTemplateSync(WhatsAppCommon, MockIncomingWhatsApp):
                 'header_type': 'text',
                 'header_text': 'Hello {{1}}',
                 'body': 'Greetings of the day! I hope you are safe and doing well. \n '
-                        'This is {{1}} from Odoo. My mobile number is {{2}}.\n'
+                        'This is {{1}} from koda. My mobile number is {{2}}.\n'
                         'I will be happy to help you with any queries you may have.\n'
                         'Thank you',
                 'wa_template_uid': '605909939256361'
@@ -372,7 +372,7 @@ class WhatsAppTemplateSync(WhatsAppCommon, MockIncomingWhatsApp):
                 'header_type': 'text',
                 'header_text': 'Hello {{1}}',
                 'body': 'Greetings of the day! I hope you are safe and doing well. \n '
-                        'This is {{1}} from Odoo. My mobile number is {{2}}.\n'
+                        'This is {{1}} from koda. My mobile number is {{2}}.\n'
                         'I will be happy to help you with any queries you may have.\n'
                         'Thank you',
                 'wa_template_uid': '605909939256361'
@@ -441,7 +441,7 @@ class WhatsAppTemplateSync(WhatsAppCommon, MockIncomingWhatsApp):
                 'header_type': 'text',
                 'header_text': 'Hello {{1}}',
                 'body': 'Greetings of the day! I hope you are safe and doing well. \n '
-                        'This is {{1}} from Odoo. My mobile number is {{2}}.\n'
+                        'This is {{1}} from koda. My mobile number is {{2}}.\n'
                         'I will be happy to help you with any queries you may have.\n'
                         'Thank you',
             },

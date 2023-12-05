@@ -14,11 +14,11 @@ import json
 import operator
 import pytz
 
-from odoo import exceptions, http, fields, tools, _
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import is_html_empty, plaintext2html
-from odoo.tools.misc import babel_locale_parse
+from koda import exceptions, http, fields, tools, _
+from koda.http import request
+from koda.osv import expression
+from koda.tools import is_html_empty, plaintext2html
+from koda.tools.misc import babel_locale_parse
 
 
 class EventTrackController(http.Controller):

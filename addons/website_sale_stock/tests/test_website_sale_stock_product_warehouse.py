@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
-from odoo.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
-from odoo.addons.website.tools import MockRequest
+from koda.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
+from koda.addons.website.tools import MockRequest
 
 
 @tagged('post_install', '-at_install')

@@ -2,8 +2,8 @@
 
 from werkzeug.urls import url_encode
 
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError, ValidationError
+from koda import fields, models, api, _
+from koda.exceptions import UserError, ValidationError
 
 
 class CouponShare(models.TransientModel):

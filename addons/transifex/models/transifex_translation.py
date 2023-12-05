@@ -7,7 +7,7 @@ from os import pardir
 from os.path import isfile, join as opj
 
 import odoo
-from odoo import models, tools
+from koda import models, tools
 
 
 class TransifexTranslation(models.AbstractModel):

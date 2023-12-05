@@ -3,14 +3,14 @@
 
 from unittest.mock import patch
 
-from odoo.exceptions import UserError
-from odoo.fields import Command
-from odoo.tests import tagged
+from koda.exceptions import UserError
+from koda.fields import Command
+from koda.tests import tagged
 
-from odoo.addons.payment.tests.common import PaymentCommon
-from odoo.addons.sale.tests.common import SaleCommon
-from odoo.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
-from odoo.addons.website.tools import MockRequest
+from koda.addons.payment.tests.common import PaymentCommon
+from koda.addons.sale.tests.common import SaleCommon
+from koda.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
+from koda.addons.website.tools import MockRequest
 
 @tagged('post_install', '-at_install')
 class TestWebsiteSaleDeliveryController(PaymentCommon, SaleCommon):

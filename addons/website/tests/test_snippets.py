@@ -4,10 +4,10 @@
 from lxml import html
 from werkzeug.urls import url_encode
 
-from odoo.tests import HttpCase, tagged
-from odoo.addons.website.tools import MockRequest
-from odoo.tests.common import HOST
-from odoo.tools import config
+from koda.tests import HttpCase, tagged
+from koda.addons.website.tools import MockRequest
+from koda.tests.common import HOST
+from koda.tools import config
 
 
 @tagged('post_install', '-at_install', 'website_snippets')

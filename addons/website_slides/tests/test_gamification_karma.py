@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website_slides.tests import common
-from odoo.tests import tagged
-from odoo.tests.common import users
-from odoo.tools import mute_logger
+from koda.addons.website_slides.tests import common
+from koda.tests import tagged
+from koda.tests.common import users
+from koda.tools import mute_logger
 
 
 @tagged('gamification')

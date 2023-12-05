@@ -3,10 +3,10 @@
 
 import base64
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, tools, _
+from koda.exceptions import ValidationError
 
-from odoo.addons.web_editor.tools import get_video_embed_code, get_video_thumbnail
+from koda.addons.web_editor.tools import get_video_embed_code, get_video_thumbnail
 
 
 class ProductImage(models.Model):

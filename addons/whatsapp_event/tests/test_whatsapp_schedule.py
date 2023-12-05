@@ -2,10 +2,10 @@
 
 from datetime import datetime, timedelta
 
-from odoo import fields
-from odoo.addons.event.tests.common import EventCase
-from odoo.addons.whatsapp.tests.common import WhatsAppCommon
-from odoo.tests import users
+from koda import fields
+from koda.addons.event.tests.common import EventCase
+from koda.addons.whatsapp.tests.common import WhatsAppCommon
+from koda.tests import users
 
 
 class TestWhatsappSchedule(EventCase, WhatsAppCommon):

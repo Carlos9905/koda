@@ -6,11 +6,11 @@ from collections import OrderedDict
 from random import randint, sample
 from werkzeug.exceptions import NotFound, Forbidden
 
-from odoo import exceptions, http
-from odoo.addons.website_event.controllers.main import WebsiteEventController
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import format_duration
+from koda import exceptions, http
+from koda.addons.website_event.controllers.main import WebsiteEventController
+from koda.http import request
+from koda.osv import expression
+from koda.tools import format_duration
 
 
 class ExhibitorController(WebsiteEventController):

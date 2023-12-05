@@ -7,11 +7,11 @@ import requests
 import werkzeug.utils
 from werkzeug.urls import url_encode
 
-from odoo import http, tools, _
-from odoo.http import request
-from odoo.tools.mimetypes import guess_mimetype
+from koda import http, tools, _
+from koda.http import request
+from koda.tools.mimetypes import guess_mimetype
 
-from odoo.addons.web_editor.controllers.main import Web_Editor
+from koda.addons.web_editor.controllers.main import Web_Editor
 
 logger = logging.getLogger(__name__)
 

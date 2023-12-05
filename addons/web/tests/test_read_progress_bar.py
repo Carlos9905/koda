@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import common
+from koda.tests import common
 
 
 @common.tagged('post_install', '-at_install')

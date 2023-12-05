@@ -3,11 +3,11 @@
 
 import werkzeug
 
-from odoo import http, _
-from odoo.http import request
-from odoo.addons.knowledge.controllers.main import KnowledgeController
-from odoo.exceptions import AccessError
-from odoo.osv import expression
+from koda import http, _
+from koda.http import request
+from koda.addons.knowledge.controllers.main import KnowledgeController
+from koda.exceptions import AccessError
+from koda.osv import expression
 
 
 class KnowledgeWebsiteController(KnowledgeController):

@@ -13,11 +13,11 @@ from dateutil.relativedelta import relativedelta
 from markupsafe import Markup
 from werkzeug import urls
 
-from odoo import api, fields, models, _
-from odoo.addons.http_routing.models.ir_http import slug, url_for
-from odoo.exceptions import RedirectWarning, UserError, AccessError
-from odoo.http import request
-from odoo.tools import html2plaintext, sql
+from koda import api, fields, models, _
+from koda.addons.http_routing.models.ir_http import slug, url_for
+from koda.exceptions import RedirectWarning, UserError, AccessError
+from koda.http import request
+from koda.tools import html2plaintext, sql
 
 _logger = logging.getLogger(__name__)
 

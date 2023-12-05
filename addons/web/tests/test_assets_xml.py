@@ -9,9 +9,9 @@ from lxml import etree
 import logging
 
 import odoo
-from odoo.tests.common import BaseCase, HttpCase, tagged
-from odoo.tools import topological_sort
-from odoo.addons.base.models.assetsbundle import AssetsBundle, WebAsset
+from koda.tests.common import BaseCase, HttpCase, tagged
+from koda.tools import topological_sort
+from koda.addons.base.models.assetsbundle import AssetsBundle, WebAsset
 
 
 _logger = logging.getLogger(__name__)

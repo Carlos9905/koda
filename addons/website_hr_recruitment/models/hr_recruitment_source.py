@@ -3,7 +3,7 @@
 
 from werkzeug import urls
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class RecruitmentSource(models.Model):

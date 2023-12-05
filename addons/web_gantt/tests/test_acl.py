@@ -3,7 +3,7 @@
 
 from lxml import etree
 
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
 
 
 class TestACL(TransactionCaseWithUserDemo):

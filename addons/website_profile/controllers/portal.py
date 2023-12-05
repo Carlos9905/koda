@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.portal.controllers import portal
-from odoo.http import request
+from koda.addons.portal.controllers import portal
+from koda.http import request
 
 
 class CustomerPortal(portal.CustomerPortal):

@@ -3,9 +3,9 @@
 
 import psycopg2
 
-from odoo.addons.website_slides.tests import common as slides_common
-from odoo.tests.common import users
-from odoo.tools import mute_logger
+from koda.addons.website_slides.tests import common as slides_common
+from koda.tests.common import users
+from koda.tools import mute_logger
 
 
 class TestSlideInternals(slides_common.SlidesCase):

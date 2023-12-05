@@ -3,12 +3,12 @@
 
 import werkzeug.urls
 
-from odoo import fields
+from koda import fields
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.http_routing.models.ir_http import unslug
-from odoo.tools.translate import _
+from koda import http
+from koda.http import request
+from koda.addons.http_routing.models.ir_http import unslug
+from koda.tools.translate import _
 
 
 class WebsiteMembership(http.Controller):

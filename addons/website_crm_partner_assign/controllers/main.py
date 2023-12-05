@@ -7,15 +7,15 @@ import werkzeug.urls
 from collections import OrderedDict
 from werkzeug.exceptions import NotFound
 
-from odoo import fields
-from odoo import http
-from odoo.http import request
-from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.addons.portal.controllers.portal import CustomerPortal
-from odoo.addons.website_partner.controllers.main import WebsitePartnerPage
+from koda import fields
+from koda import http
+from koda.http import request
+from koda.addons.http_routing.models.ir_http import slug, unslug
+from koda.addons.website.models.ir_http import sitemap_qs2dom
+from koda.addons.portal.controllers.portal import CustomerPortal
+from koda.addons.website_partner.controllers.main import WebsitePartnerPage
 
-from odoo.tools.translate import _
+from koda.tools.translate import _
 
 
 class WebsiteAccount(CustomerPortal):

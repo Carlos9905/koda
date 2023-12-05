@@ -10,13 +10,13 @@ from lxml import html
 
 import odoo
 import odoo.modules.registry
-from odoo import http
-from odoo.http import content_disposition, dispatch_rpc, request, Response
-from odoo.service import db
-from odoo.tools.misc import file_open, str2bool
-from odoo.tools.translate import _
+from koda import http
+from koda.http import content_disposition, dispatch_rpc, request, Response
+from koda.service import db
+from koda.tools.misc import file_open, str2bool
+from koda.tools.translate import _
 
-from odoo.addons.base.models.ir_qweb import render as qweb_render
+from koda.addons.base.models.ir_qweb import render as qweb_render
 
 
 _logger = logging.getLogger(__name__)

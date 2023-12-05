@@ -10,15 +10,15 @@ import logging
 import math
 import werkzeug
 
-from odoo import fields, http, tools, _
-from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.addons.website.controllers.main import QueryURL
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.addons.website_profile.controllers.main import WebsiteProfile
-from odoo.exceptions import AccessError, ValidationError, UserError, MissingError
-from odoo.http import request, Response
-from odoo.osv import expression
-from odoo.tools import consteq, email_split
+from koda import fields, http, tools, _
+from koda.addons.http_routing.models.ir_http import slug, unslug
+from koda.addons.website.controllers.main import QueryURL
+from koda.addons.website.models.ir_http import sitemap_qs2dom
+from koda.addons.website_profile.controllers.main import WebsiteProfile
+from koda.exceptions import AccessError, ValidationError, UserError, MissingError
+from koda.http import request, Response
+from koda.osv import expression
+from koda.tools import consteq, email_split
 
 _logger = logging.getLogger(__name__)
 
@@ -76,11 +76,11 @@ class WebsiteSlides(WebsiteProfile):
                 # Compatibility layer with Odoo 15.0,
                 # where `viewed_slides` are stored as `list` in sessions.
                 # For performance concerns, `viewed_slides` is changed to a dict,
-                # but sessions coming from Odoo 15.0 after an upgrade should still be compatible.
-                # This compatibility layer regarding `viewed_slides` must remain from Odoo 16.0 and above,
+                # but sessions coming from koda 15.0 after an upgrade should still be compatible.
+                # This compatibility layer regarding `viewed_slides` must remain from koda 16.0 and above,
                 # as this is possible to do a jump of multiple versions in one go,
                 # and carry the sessions with the upgrade.
-                # e.g. upgrade from Odoo 15.0 to 18.0.
+                # e.g. upgrade from koda 15.0 to 18.0.
                 request.session.viewed_slides = dict.fromkeys(request.session.get('viewed_slides', []), 1)
             viewed_slides = request.session['viewed_slides']
             if slide.id not in viewed_slides:

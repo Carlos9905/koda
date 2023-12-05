@@ -4,12 +4,12 @@ import io
 import logging
 import unittest
 import zipfile
-from odoo.fields import Command
+from koda.fields import Command
 
-from odoo.tests.common import HttpCase, tagged
+from koda.tests.common import HttpCase, tagged
 from base64 import b64decode
 
-from odoo.tools import mute_logger
+from koda.tools import mute_logger
 _logger = logging.getLogger(__name__)
 
 try:

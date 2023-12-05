@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from werkzeug import urls
 
-from odoo import api, fields, models
-from odoo.http import request
-from odoo.tools.json import scriptsafe as json_scriptsafe
+from koda import api, fields, models
+from koda.http import request
+from koda.tools.json import scriptsafe as json_scriptsafe
 
 
 class ServerAction(models.Model):

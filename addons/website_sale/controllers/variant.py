@@ -2,7 +2,7 @@
 
 import json
 
-from odoo.http import request, route, Controller
+from koda.http import request, route, Controller
 
 
 class WebsiteSaleVariantController(Controller):

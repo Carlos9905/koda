@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.website_slides.tests import common
-from odoo.tests import tagged, users
+from koda import fields
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.base.tests.common import HttpCaseWithUserPortal
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.website_slides.tests import common
+from koda.tests import tagged, users
 
 from werkzeug.urls import url_decode
 

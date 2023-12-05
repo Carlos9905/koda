@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import datetime
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class Event(models.Model):

@@ -5,9 +5,9 @@ import json
 import lxml.html
 from urllib.parse import urlparse
 
-from odoo.addons.http_routing.models.ir_http import url_lang
-from odoo.addons.website.tools import MockRequest
-from odoo.tests import HttpCase, tagged
+from koda.addons.http_routing.models.ir_http import url_lang
+from koda.addons.website.tools import MockRequest
+from koda.tests import HttpCase, tagged
 
 
 @tagged('-at_install', 'post_install')

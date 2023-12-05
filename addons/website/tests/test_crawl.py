@@ -10,7 +10,7 @@ from werkzeug import urls
 import odoo
 import re
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
 
 _logger = logging.getLogger(__name__)
 

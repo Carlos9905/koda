@@ -7,13 +7,13 @@ from markupsafe import Markup
 
 from datetime import timedelta
 
-from odoo import models, fields, api, _, Command
-from odoo.addons.phone_validation.tools import phone_validation
-from odoo.addons.whatsapp.tools.retryable_codes import WHATSAPP_RETRYABLE_ERROR_CODES
-from odoo.addons.whatsapp.tools.whatsapp_api import WhatsAppApi
-from odoo.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import groupby, html2plaintext
+from koda import models, fields, api, _, Command
+from koda.addons.phone_validation.tools import phone_validation
+from koda.addons.whatsapp.tools.retryable_codes import WHATSAPP_RETRYABLE_ERROR_CODES
+from koda.addons.whatsapp.tools.whatsapp_api import WhatsAppApi
+from koda.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
+from koda.exceptions import ValidationError, UserError
+from koda.tools import groupby, html2plaintext
 
 _logger = logging.getLogger(__name__)
 

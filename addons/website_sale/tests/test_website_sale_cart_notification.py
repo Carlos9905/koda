@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Command
-from odoo.tests import HttpCase, tagged
+from koda.fields import Command
+from koda.tests import HttpCase, tagged
 
-from odoo.addons.product.tests.common import ProductAttributesCommon
+from koda.addons.product.tests.common import ProductAttributesCommon
 
 
 @tagged('post_install', '-at_install')

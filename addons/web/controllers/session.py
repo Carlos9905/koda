@@ -8,11 +8,11 @@ from werkzeug.urls import url_encode
 
 import odoo
 import odoo.modules.registry
-from odoo import http
-from odoo.modules import module
-from odoo.exceptions import AccessError, UserError, AccessDenied
-from odoo.http import request
-from odoo.tools.translate import _
+from koda import http
+from koda.modules import module
+from koda.exceptions import AccessError, UserError, AccessDenied
+from koda.http import request
+from koda.tools.translate import _
 
 
 _logger = logging.getLogger(__name__)

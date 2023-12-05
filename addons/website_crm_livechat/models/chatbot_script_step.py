@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import _, models
+from koda import _, models
 
 
 class ChatbotScriptStep(models.Model):

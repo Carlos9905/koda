@@ -6,10 +6,10 @@ import logging
 import werkzeug.exceptions
 from werkzeug.urls import url_parse
 
-from odoo import http
-from odoo.http import content_disposition, request
-from odoo.tools.misc import html_escape
-from odoo.tools.safe_eval import safe_eval, time
+from koda import http
+from koda.http import content_disposition, request
+from koda.tools.misc import html_escape
+from koda.tools.safe_eval import safe_eval, time
 
 
 _logger = logging.getLogger(__name__)

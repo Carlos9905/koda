@@ -5,12 +5,12 @@ import logging
 import uuid
 import werkzeug
 
-from odoo import api, fields, models
-from odoo import tools
-from odoo.addons.website.tools import add_form_signature
-from odoo.exceptions import AccessError
-from odoo.osv import expression
-from odoo.http import request
+from koda import api, fields, models
+from koda import tools
+from koda.addons.website.tools import add_form_signature
+from koda.exceptions import AccessError
+from koda.osv import expression
+from koda.http import request
 
 _logger = logging.getLogger(__name__)
 

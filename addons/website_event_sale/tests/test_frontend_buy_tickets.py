@@ -5,9 +5,9 @@ import odoo.tests
 
 from datetime import timedelta
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
-from odoo.fields import Datetime
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
+from koda.fields import Datetime
 
 
 @odoo.tests.common.tagged('post_install', '-at_install')

@@ -1,7 +1,7 @@
 # Koda
 
-from odoo.http import request, route
-from odoo.addons.web_studio.controllers import main
+from koda.http import request, route
+from koda.addons.web_studio.controllers import main
 
 class WebStudioController(main.WebStudioController):
 

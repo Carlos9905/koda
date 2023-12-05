@@ -9,8 +9,8 @@ from itertools import zip_longest
 from lxml import etree as ET, html
 from lxml.html import builder as h
 
-from odoo.modules.module import _DEFAULT_MANIFEST
-from odoo.tests import common, HttpCase, tagged
+from koda.modules.module import _DEFAULT_MANIFEST
+from koda.tests import common, HttpCase, tagged
 
 
 def attrs(**kwargs):

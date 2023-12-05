@@ -3,10 +3,10 @@
 
 from datetime import datetime, timedelta
 
-from odoo import Command, fields
-from odoo.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
-from odoo.tests import HttpCase
-from odoo.tests.common import tagged
+from koda import Command, fields
+from koda.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
+from koda.tests import HttpCase
+from koda.tests.common import tagged
 
 
 

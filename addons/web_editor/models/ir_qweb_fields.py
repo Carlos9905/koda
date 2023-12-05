@@ -25,11 +25,11 @@ from werkzeug import urls
 
 import odoo.modules
 
-from odoo import _, api, models, fields
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import ustr, posix_to_ldml, pycompat
-from odoo.tools import html_escape as escape
-from odoo.tools.misc import file_open, get_lang, babel_locale_parse
+from koda import _, api, models, fields
+from koda.exceptions import UserError, ValidationError
+from koda.tools import ustr, posix_to_ldml, pycompat
+from koda.tools import html_escape as escape
+from koda.tools.misc import file_open, get_lang, babel_locale_parse
 
 REMOTE_CONNECTION_TIMEOUT = 2.5
 

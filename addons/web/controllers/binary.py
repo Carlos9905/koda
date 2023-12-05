@@ -11,17 +11,17 @@ import unicodedata
 try:
     from werkzeug.utils import send_file
 except ImportError:
-    from odoo.tools._vendor.send_file import send_file
+    from koda.tools._vendor.send_file import send_file
 
 import odoo
 import odoo.modules.registry
-from odoo import SUPERUSER_ID, _, http
-from odoo.addons.base.models.assetsbundle import ANY_UNIQUE
-from odoo.exceptions import AccessError, UserError
-from odoo.http import request, Response
-from odoo.tools import file_open, file_path, replace_exceptions
-from odoo.tools.image import image_guess_size_from_field_name
-from odoo.tools.mimetypes import guess_mimetype
+from koda import SUPERUSER_ID, _, http
+from koda.addons.base.models.assetsbundle import ANY_UNIQUE
+from koda.exceptions import AccessError, UserError
+from koda.http import request, Response
+from koda.tools import file_open, file_path, replace_exceptions
+from koda.tools.image import image_guess_size_from_field_name
+from koda.tools.mimetypes import guess_mimetype
 
 _logger = logging.getLogger(__name__)
 

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website_sale.controllers import main as website_sale_controller
-from odoo.tools import email_re
-from odoo import http, _
-from odoo.http import request
+from koda.addons.website_sale.controllers import main as website_sale_controller
+from koda.tools import email_re
+from koda import http, _
+from koda.http import request
 from werkzeug.exceptions import BadRequest
 
 

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import route
+from koda.http import route
 
-from odoo.addons.website_sale.controllers import main as website_sale_portal
-from odoo.addons.website_sale.controllers.variant import WebsiteSaleVariantController
+from koda.addons.website_sale.controllers import main as website_sale_portal
+from koda.addons.website_sale.controllers.variant import WebsiteSaleVariantController
 
 
 class WebsiteSaleRentingVariantController(WebsiteSaleVariantController):

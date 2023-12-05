@@ -1,6 +1,6 @@
-from odoo import http
-from odoo.http import request
-from odoo.addons.web.controllers.binary import Binary
+from koda import http
+from koda.http import request
+from koda.addons.web.controllers.binary import Binary
 
 
 class WebsiteBinary(Binary):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
+from koda import api, models
 
-from odoo.addons.http_routing.models.ir_http import unslug
+from koda.addons.http_routing.models.ir_http import unslug
 
 
 class SlideSlide(models.Model):

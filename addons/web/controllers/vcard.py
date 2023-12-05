@@ -7,8 +7,8 @@ import zipfile
 
 import odoo.http as http
 
-from odoo.exceptions import UserError
-from odoo.http import request, content_disposition
+from koda.exceptions import UserError
+from koda.http import request, content_disposition
 
 
 class Partner(http.Controller):

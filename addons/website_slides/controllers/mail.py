@@ -5,10 +5,10 @@ import werkzeug
 
 from werkzeug.exceptions import NotFound, Forbidden
 
-from odoo import http, _
-from odoo.http import request
-from odoo.addons.portal.controllers.mail import _check_special_access, PortalChatter
-from odoo.tools import plaintext2html, html2plaintext
+from koda import http, _
+from koda.http import request
+from koda.addons.portal.controllers.mail import _check_special_access, PortalChatter
+from koda.tools import plaintext2html, html2plaintext
 
 
 class SlidesPortalChatter(PortalChatter):

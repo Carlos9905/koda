@@ -5,9 +5,9 @@ import requests
 import threading
 import json
 
-from odoo import _
-from odoo.exceptions import RedirectWarning
-from odoo.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
+from koda import _
+from koda.exceptions import RedirectWarning
+from koda.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
 
 _logger = logging.getLogger(__name__)
 

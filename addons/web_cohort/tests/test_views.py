@@ -1,4 +1,4 @@
-from odoo.addons.base.tests.test_views import ViewCase
+from koda.addons.base.tests.test_views import ViewCase
 
 
 class TestViews(ViewCase):

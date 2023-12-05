@@ -6,12 +6,12 @@ import logging
 
 import odoo
 import odoo.modules.registry
-from odoo import http
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.service import security
-from odoo.tools import ustr
-from odoo.tools.translate import _
+from koda import http
+from koda.exceptions import AccessError
+from koda.http import request
+from koda.service import security
+from koda.tools import ustr
+from koda.tools.translate import _
 from .utils import ensure_db, _get_login_redirect_url, is_user_internal
 
 

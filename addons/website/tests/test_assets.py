@@ -4,7 +4,7 @@ import re
 
 import odoo.tests
 
-from odoo.tools import config
+from koda.tools import config
 
 
 @odoo.tests.common.tagged('post_install', '-at_install')

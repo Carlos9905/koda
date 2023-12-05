@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.http import request
+from koda import api, fields, models
+from koda.http import request
 
 
 class PaymentProvider(models.Model):

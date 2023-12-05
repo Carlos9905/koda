@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import base64
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.website_slides.tests import common
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.website_slides.tests import common
+from koda.exceptions import AccessError
+from koda.tests import tagged
+from koda.tools import mute_logger
 
 
 @tagged('security')

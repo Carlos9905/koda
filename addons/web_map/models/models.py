@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, models
+from koda import _, api, models
 from lxml.builder import E
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
 
 class Base(models.AbstractModel):

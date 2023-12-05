@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.account_taxcloud.tests.common import TestAccountTaxcloudCommon
-from odoo.tests.common import HttpCase
-from odoo.tests import tagged
+from koda.addons.account_taxcloud.tests.common import TestAccountTaxcloudCommon
+from koda.tests.common import HttpCase
+from koda.tests import tagged
 
 @tagged("external")
 class TestWebsiteSaleGiftCard(TestAccountTaxcloudCommon, HttpCase):

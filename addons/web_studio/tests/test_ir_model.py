@@ -3,12 +3,12 @@ from unittest.mock import patch
 
 import odoo
 
-from odoo.tests.common import TransactionCase
-from odoo.addons.web_studio.controllers.export import MODELS_TO_EXPORT, FIELDS_TO_EXPORT, \
+from koda.tests.common import TransactionCase
+from koda.addons.web_studio.controllers.export import MODELS_TO_EXPORT, FIELDS_TO_EXPORT, \
      FIELDS_NOT_TO_EXPORT, CDATA_FIELDS, XML_FIELDS
-from odoo.addons.web_studio.models.ir_model import OPTIONS_WL
-from odoo.exceptions import ValidationError
-from odoo import Command
+from koda.addons.web_studio.models.ir_model import OPTIONS_WL
+from koda.exceptions import ValidationError
+from koda import Command
 
 class TestStudioIrModel(TransactionCase):
 

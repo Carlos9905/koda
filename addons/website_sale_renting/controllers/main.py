@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
+from koda import fields
 
-from odoo.http import request, route
+from koda.http import request, route
 
-from odoo.addons.website_sale.controllers.main import WebsiteSale
+from koda.addons.website_sale.controllers.main import WebsiteSale
 
 
 class WebsiteSaleRenting(WebsiteSale):

@@ -1,7 +1,7 @@
 # coding: utf-8
-from odoo.tests import tagged
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
+from koda.tests import tagged
+from koda.addons.website.tools import MockRequest
+from koda.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
 
 @tagged('post_install', '-at_install')
 class WebsiteSaleProductTests(TestSaleProductAttributeValueCommon):

@@ -3,7 +3,7 @@
 
 from markupsafe import escape, Markup
 
-from odoo import _, fields, models
+from koda import _, fields, models
 
 
 class CalendarBooking(models.Model):

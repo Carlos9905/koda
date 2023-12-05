@@ -19,17 +19,17 @@ from xml.etree import ElementTree as ET
 
 import odoo
 
-from odoo import http, models, fields, _
-from odoo.exceptions import AccessError
-from odoo.http import request, SessionExpiredException
-from odoo.osv import expression
-from odoo.tools import OrderedSet, escape_psql, html_escape as escape
-from odoo.addons.base.models.ir_qweb import QWebException
-from odoo.addons.http_routing.models.ir_http import slug, slugify, _guess_mimetype
-from odoo.addons.portal.controllers.portal import pager as portal_pager
-from odoo.addons.portal.controllers.web import Home
-from odoo.addons.web.controllers.binary import Binary
-from odoo.addons.website.tools import get_base_domain
+from koda import http, models, fields, _
+from koda.exceptions import AccessError
+from koda.http import request, SessionExpiredException
+from koda.osv import expression
+from koda.tools import OrderedSet, escape_psql, html_escape as escape
+from koda.addons.base.models.ir_qweb import QWebException
+from koda.addons.http_routing.models.ir_http import slug, slugify, _guess_mimetype
+from koda.addons.portal.controllers.portal import pager as portal_pager
+from koda.addons.portal.controllers.web import Home
+from koda.addons.web.controllers.binary import Binary
+from koda.addons.website.tools import get_base_domain
 
 logger = logging.getLogger(__name__)
 

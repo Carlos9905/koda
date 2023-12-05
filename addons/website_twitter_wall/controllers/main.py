@@ -2,9 +2,9 @@
 
 from logging import getLogger
 
-from odoo import http
-from odoo.http import request
-from odoo.tools import is_html_empty
+from koda import http
+from koda.http import request
+from koda.tools import is_html_empty
 
 _logger = getLogger(__name__)
 

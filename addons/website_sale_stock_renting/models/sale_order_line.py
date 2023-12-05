@@ -2,7 +2,7 @@
 
 from collections import defaultdict
 
-from odoo import _, models
+from koda import _, models
 
 
 class SaleOrderLine(models.Model):

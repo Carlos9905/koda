@@ -8,10 +8,10 @@ import re
 from dateutil.relativedelta import relativedelta
 
 import odoo
-from odoo import api, fields, models, tools, _
-from odoo.addons.iap.tools import iap_tools
-from odoo.addons.crm.models import crm_stage
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, tools, _
+from koda.addons.iap.tools import iap_tools
+from koda.addons.crm.models import crm_stage
+from koda.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

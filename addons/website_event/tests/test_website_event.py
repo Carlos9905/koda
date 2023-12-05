@@ -4,15 +4,15 @@
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.website.tests.test_base_url import TestUrlCommon
-from odoo.addons.website_event.tests.common import OnlineEventCase
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
-from odoo.tests.common import users
+from koda import fields
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.addons.website.tests.test_base_url import TestUrlCommon
+from koda.addons.website_event.tests.common import OnlineEventCase
+from koda.exceptions import AccessError
+from koda.tests import tagged
+from koda.tools import mute_logger
+from koda.tests.common import users
 
 @tagged('post_install', '-at_install')
 class TestUi(HttpCaseWithUserDemo):

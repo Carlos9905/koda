@@ -3,7 +3,7 @@
 
 from uuid import uuid4
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class ChatRoom(models.Model):

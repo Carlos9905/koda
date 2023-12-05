@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request
-from odoo.addons.website_slides.controllers.main import WebsiteSlides
+from koda.http import request
+from koda.addons.website_slides.controllers.main import WebsiteSlides
 
 
 class WebsiteSlidesForum(WebsiteSlides):

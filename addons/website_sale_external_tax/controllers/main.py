@@ -1,8 +1,8 @@
 # coding: utf-8
-from odoo import _
-from odoo.exceptions import UserError
+from koda import _
+from koda.exceptions import UserError
 
-from odoo.addons.website_sale.controllers.main import WebsiteSale
+from koda.addons.website_sale.controllers.main import WebsiteSale
 
 
 class WebsiteSaleExternalTaxCalculation(WebsiteSale):

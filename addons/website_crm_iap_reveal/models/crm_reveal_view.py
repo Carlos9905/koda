@@ -3,7 +3,7 @@
 
 import datetime
 from dateutil.relativedelta import relativedelta
-from odoo import api, fields, models
+from koda import api, fields, models
 
 DEFAULT_REVEAL_VIEW_WEEKS_VALID = 5
 

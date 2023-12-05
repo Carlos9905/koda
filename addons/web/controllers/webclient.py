@@ -12,11 +12,11 @@ import werkzeug.wsgi
 
 import odoo
 import odoo.modules.registry
-from odoo import http
-from odoo.modules import get_manifest
-from odoo.http import request
-from odoo.tools import lazy
-from odoo.tools.misc import file_open, file_path
+from koda import http
+from koda.modules import get_manifest
+from koda.http import request
+from koda.tools import lazy
+from koda.tools.misc import file_open, file_path
 from .utils import _local_web_translations
 
 

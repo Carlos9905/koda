@@ -4,12 +4,12 @@
 from psycopg2 import sql
 import re
 
-from odoo.addons.http_routing.models.ir_http import slugify
-from odoo.addons.website.tools import text_from_html
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.tools import escape_psql
-from odoo.tools.translate import _
+from koda.addons.http_routing.models.ir_http import slugify
+from koda.addons.website.tools import text_from_html
+from koda import api, fields, models
+from koda.osv import expression
+from koda.tools import escape_psql
+from koda.tools.translate import _
 
 
 class Page(models.Model):

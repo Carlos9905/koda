@@ -3,7 +3,7 @@
 
 import re
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class Track(models.Model):

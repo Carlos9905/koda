@@ -7,9 +7,9 @@ from operator import itemgetter
 
 from markupsafe import Markup
 
-from odoo import _, api, fields, models
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.tools.translate import html_translate
+from koda import _, api, fields, models
+from koda.addons.http_routing.models.ir_http import slug
+from koda.tools.translate import html_translate
 
 MOST_USED_TAGS_COUNT = 5  # Number of tags to track as "most used" to display on frontend
 

@@ -4,8 +4,8 @@
 import re
 from markupsafe import Markup
 
-from odoo import Command, fields, models, _
-from odoo.tools import html_escape, is_html_empty, plaintext2html
+from koda import Command, fields, models, _
+from koda.tools import html_escape, is_html_empty, plaintext2html
 
 
 class HelpdeskTeam(models.Model):

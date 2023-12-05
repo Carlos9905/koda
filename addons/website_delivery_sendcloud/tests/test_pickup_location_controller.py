@@ -6,9 +6,9 @@ import json
 
 from unittest.mock import patch
 from contextlib import contextmanager
-from odoo.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
-from odoo.addons.website.tools import MockRequest
-from odoo.tests import TransactionCase, tagged
+from koda.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
+from koda.addons.website.tools import MockRequest
+from koda.tests import TransactionCase, tagged
 
 
 @contextmanager

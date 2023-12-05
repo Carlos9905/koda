@@ -1,11 +1,11 @@
 import json
 
 import odoo
-from odoo import api
-from odoo.tools import DotDict
-from odoo.http import _request_stack
-from odoo.tests.common import TransactionCase
-from odoo.addons.web_studio.controllers.main import WebStudioController
+from koda import api
+from koda.tools import DotDict
+from koda.http import _request_stack
+from koda.tests.common import TransactionCase
+from koda.addons.web_studio.controllers.main import WebStudioController
 from copy import deepcopy
 from lxml import etree
 

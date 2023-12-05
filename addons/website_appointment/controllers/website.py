@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.addons.website.controllers import main
+from koda import http
+from koda.addons.website.controllers import main
 
 
 class Website(main.Website):

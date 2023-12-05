@@ -3,10 +3,10 @@
 
 import math
 
-from odoo import http
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.website_event.controllers.community import EventCommunityController
-from odoo.http import request
+from koda import http
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.website_event.controllers.community import EventCommunityController
+from koda.http import request
 
 
 class WebsiteEventTrackQuizCommunityController(EventCommunityController):

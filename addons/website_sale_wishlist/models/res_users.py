@@ -1,5 +1,5 @@
-from odoo import api, fields, models
-from odoo.http import request
+from koda import api, fields, models
+from koda.http import request
 
 
 class ResUsers(models.Model):

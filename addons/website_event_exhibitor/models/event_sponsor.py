@@ -4,11 +4,11 @@
 from datetime import datetime, timedelta
 from pytz import timezone, utc
 
-from odoo import api, fields, models, _
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.resource.models.utils import float_to_time
-from odoo.tools import is_html_empty
-from odoo.tools.translate import html_translate
+from koda import api, fields, models, _
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.resource.models.utils import float_to_time
+from koda.tools import is_html_empty
+from koda.tools.translate import html_translate
 
 
 class Sponsor(models.Model):

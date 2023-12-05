@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from unittest.mock import patch
 
-from odoo.fields import Command
-from odoo.tests import tagged, TransactionCase
+from koda.fields import Command
+from koda.tests import tagged, TransactionCase
 
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo, HttpCaseWithUserPortal
-from odoo.addons.website.tools import MockRequest
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo, HttpCaseWithUserPortal
+from koda.addons.website.tools import MockRequest
 
 ''' /!\/!\
 Calling `get_pricelist_available` after setting `property_product_pricelist` on

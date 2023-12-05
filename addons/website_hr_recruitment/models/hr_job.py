@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, api
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.tools import mute_logger
-from odoo.tools.translate import html_translate
+from koda import fields, models, api
+from koda.addons.http_routing.models.ir_http import slug
+from koda.tools import mute_logger
+from koda.tools.translate import html_translate
 
 
 class Job(models.Model):

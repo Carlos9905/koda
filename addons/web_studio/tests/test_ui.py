@@ -5,9 +5,9 @@ from lxml.builder import E
 import json
 
 import odoo.tests
-from odoo import Command, api, http
-from odoo.tools import mute_logger
-from odoo.addons.web_studio.controllers.main import WebStudioController
+from koda import Command, api, http
+from koda.tools import mute_logger
+from koda.addons.web_studio.controllers.main import WebStudioController
 
 
 @odoo.tests.tagged('post_install', '-at_install')

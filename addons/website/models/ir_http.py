@@ -12,16 +12,16 @@ import werkzeug.routing
 import werkzeug.utils
 
 import odoo
-from odoo import api, models, tools
-from odoo import SUPERUSER_ID
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.tools.json import scriptsafe as json_scriptsafe
-from odoo.tools.safe_eval import safe_eval
-from odoo.osv.expression import FALSE_DOMAIN
-from odoo.addons.http_routing.models import ir_http
-from odoo.addons.http_routing.models.ir_http import _guess_mimetype
-from odoo.addons.portal.controllers.portal import _build_url_w_params
+from koda import api, models, tools
+from koda import SUPERUSER_ID
+from koda.exceptions import AccessError
+from koda.http import request
+from koda.tools.json import scriptsafe as json_scriptsafe
+from koda.tools.safe_eval import safe_eval
+from koda.osv.expression import FALSE_DOMAIN
+from koda.addons.http_routing.models import ir_http
+from koda.addons.http_routing.models.ir_http import _guess_mimetype
+from koda.addons.portal.controllers.portal import _build_url_w_params
 
 logger = logging.getLogger(__name__)
 
@@ -51,7 +51,7 @@ def get_request_website():
 
     Don't import directly the method or it won't be mocked during tests, do:
     ```
-    from odoo.addons.website.models import ir_http
+    from koda.addons.website.models import ir_http
     my_var = ir_http.get_request_website()
     ```
     """

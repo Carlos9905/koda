@@ -3,10 +3,10 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command, fields
-from odoo.tests import tagged
-from odoo.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
-from odoo.addons.website.tools import MockRequest
+from koda import Command, fields
+from koda.tests import tagged
+from koda.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
+from koda.addons.website.tools import MockRequest
 
 
 @tagged('post_install', '-at_install', 'product_attribute')

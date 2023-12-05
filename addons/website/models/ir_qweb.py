@@ -5,13 +5,13 @@ import logging
 
 from collections import OrderedDict
 
-from odoo import models
-from odoo.http import request
-from odoo.tools import lazy
-from odoo.addons.base.models.assetsbundle import AssetsBundle
-from odoo.addons.http_routing.models.ir_http import url_for
-from odoo.osv import expression
-from odoo.addons.website.models import ir_http
+from koda import models
+from koda.http import request
+from koda.tools import lazy
+from koda.addons.base.models.assetsbundle import AssetsBundle
+from koda.addons.http_routing.models.ir_http import url_for
+from koda.osv import expression
+from koda.addons.website.models import ir_http
 
 
 _logger = logging.getLogger(__name__)

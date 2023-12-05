@@ -1,4 +1,4 @@
-from odoo import api, fields, models, Command, _
+from koda import api, fields, models, Command, _
 
 from lxml import etree
 

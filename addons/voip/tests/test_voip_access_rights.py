@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import AccessError
-from odoo.tests import common, tagged
+from koda.exceptions import AccessError
+from koda.tests import common, tagged
 
 
 @tagged("voip")

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request
-from odoo.addons.appointment_account_payment.controllers.appointment import AppointmentAccountPayment
-from odoo.addons.base.models.ir_qweb import keep_query
+from koda.http import request
+from koda.addons.appointment_account_payment.controllers.appointment import AppointmentAccountPayment
+from koda.addons.base.models.ir_qweb import keep_query
 
 
 class WebsiteAppointmentSale(AppointmentAccountPayment):

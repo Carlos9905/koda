@@ -10,10 +10,10 @@ import json
 import uuid
 import random
 
-from odoo import api, models, _
-from odoo.exceptions import UserError
+from koda import api, models, _
+from koda.exceptions import UserError
 
-from odoo.addons.web_studio.controllers.report import get_report_view_copy
+from koda.addons.web_studio.controllers.report import get_report_view_copy
 
 
 CONTAINER_TYPES = (

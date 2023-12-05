@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import json
-from odoo import _
-from odoo import http
-from odoo.http import request
+from koda import _
+from koda import http
+from koda.http import request
 
 
 class Twitter(http.Controller):

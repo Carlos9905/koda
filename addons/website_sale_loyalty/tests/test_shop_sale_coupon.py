@@ -1,10 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
 
-from odoo import fields
-from odoo.exceptions import ValidationError
-from odoo.tests import HttpCase, tagged, TransactionCase
-from odoo.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
+from koda import fields
+from koda.exceptions import ValidationError
+from koda.tests import HttpCase, tagged, TransactionCase
+from koda.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
 
 
 @tagged('post_install', '-at_install')

@@ -5,13 +5,13 @@ from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo import fields, Command
-from odoo.osv import expression
-from odoo.tools.float_utils import float_compare
+from koda import fields, Command
+from koda.osv import expression
+from koda.tools.float_utils import float_compare
 
-from odoo.addons.mail.tests.common import MockEmail
-from odoo.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
-from odoo.exceptions import AccessError
+from koda.addons.mail.tests.common import MockEmail
+from koda.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
+from koda.exceptions import AccessError
 
 try:
     from unittest.mock import patch

@@ -3,7 +3,7 @@
 
 from random import randint
 
-from odoo import fields, models
+from koda import fields, models
 
 
 class UtmTag(models.Model):

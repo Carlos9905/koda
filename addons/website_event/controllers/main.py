@@ -8,13 +8,13 @@ from ast import literal_eval
 from werkzeug.datastructures import OrderedMultiDict
 from werkzeug.exceptions import NotFound
 
-from odoo import fields, http, _
-from odoo.addons.website.controllers.main import QueryURL
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools.misc import get_lang
-from odoo.tools import lazy
-from odoo.exceptions import UserError
+from koda import fields, http, _
+from koda.addons.website.controllers.main import QueryURL
+from koda.http import request
+from koda.osv import expression
+from koda.tools.misc import get_lang
+from koda.tools import lazy
+from koda.exceptions import UserError
 
 class WebsiteEventController(http.Controller):
 

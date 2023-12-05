@@ -3,7 +3,7 @@
 
 from collections import OrderedDict
 from lxml import etree
-from odoo import tools
+from koda import tools
 
 import odoo.tests
 

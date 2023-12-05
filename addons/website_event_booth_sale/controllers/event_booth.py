@@ -3,8 +3,8 @@
 
 import json
 
-from odoo.http import request, route
-from odoo.addons.website_event.controllers.main import WebsiteEventController
+from koda.http import request, route
+from koda.addons.website_event.controllers.main import WebsiteEventController
 
 
 class WebsiteEventBoothController(WebsiteEventController):

@@ -2,9 +2,9 @@
 
 from urllib.parse import urlparse
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.addons.phone_validation.tools import phone_validation
+from koda import api, Command, fields, models, _
+from koda.exceptions import ValidationError
+from koda.addons.phone_validation.tools import phone_validation
 
 
 class WhatsAppTemplateButton(models.Model):

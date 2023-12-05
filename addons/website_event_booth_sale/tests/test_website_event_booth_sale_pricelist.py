@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
-from odoo.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
-from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.addons.website.tools import MockRequest
-from odoo.tests import tagged
+from koda.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
+from koda.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
+from koda.addons.website_sale.controllers.main import WebsiteSale
+from koda.addons.website.tools import MockRequest
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

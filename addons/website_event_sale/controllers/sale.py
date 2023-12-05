@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.http import request
+from koda.addons.website_sale.controllers.main import WebsiteSale
+from koda.http import request
 
 
 class WebsiteEventSale(WebsiteSale):

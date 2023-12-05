@@ -9,14 +9,14 @@ import werkzeug.exceptions
 import werkzeug.urls
 import werkzeug.wrappers
 
-from odoo import _, http, tools
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.portal.controllers.portal import _build_url_w_params
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.addons.website_profile.controllers.main import WebsiteProfile
-from odoo.exceptions import AccessError, UserError
-from odoo.http import request
-from odoo.osv import expression
+from koda import _, http, tools
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.portal.controllers.portal import _build_url_w_params
+from koda.addons.website.models.ir_http import sitemap_qs2dom
+from koda.addons.website_profile.controllers.main import WebsiteProfile
+from koda.exceptions import AccessError, UserError
+from koda.http import request
+from koda.osv import expression
 
 _logger = logging.getLogger(__name__)
 

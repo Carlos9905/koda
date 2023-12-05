@@ -4,8 +4,8 @@
 from unittest.mock import patch
 
 import odoo
-from odoo.tests import tagged
-from odoo.tests.common import HttpCase
+from koda.tests import tagged
+from koda.tests.common import HttpCase
 
 
 @tagged('post_install', '-at_install')

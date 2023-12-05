@@ -28,7 +28,7 @@ template_data = {
                 },
                 {
                     "type": "BODY",
-                    "text": "Greetings of the day! I hope you are safe and doing well. \n This is {{1}} from Odoo. My mobile number is {{2}}.\nI will be happy to help you with any queries you may have.\nThank you",
+                    "text": "Greetings of the day! I hope you are safe and doing well. \n This is {{1}} from koda. My mobile number is {{2}}.\nI will be happy to help you with any queries you may have.\nThank you",
                     "example": {
                         "body_text": [
                             [
@@ -76,7 +76,7 @@ template_data = {
                 },
                 {
                     "type": "BODY",
-                    "text": "Greetings of the day! I hope you are safe and doing well. \n This is {{1}} from Odoo. My mobile number is {{2}}.\nI will be happy to help you with any queries you may have.\nThank you",
+                    "text": "Greetings of the day! I hope you are safe and doing well. \n This is {{1}} from koda. My mobile number is {{2}}.\nI will be happy to help you with any queries you may have.\nThank you",
                     "example": {
                         "body_text": [
                             [

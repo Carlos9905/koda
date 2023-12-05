@@ -3,11 +3,11 @@
 from psycopg2 import IntegrityError
 from unittest import TestCase
 
-from odoo.tests.common import TransactionCase, new_test_user
-from odoo.exceptions import ValidationError
-from odoo.tools import mute_logger
-from odoo.service.model import retrying
-from odoo.addons.website.tools import MockRequest
+from koda.tests.common import TransactionCase, new_test_user
+from koda.exceptions import ValidationError
+from koda.tools import mute_logger
+from koda.service.model import retrying
+from koda.addons.website.tools import MockRequest
 
 
 class TestWebsiteResUsers(TransactionCase):

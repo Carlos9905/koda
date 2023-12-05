@@ -8,9 +8,9 @@ import re
 import requests
 import tarfile
 
-from odoo import api, fields, models, _lt
-from odoo.addons.iap.tools.iap_tools import iap_jsonrpc
-from odoo.exceptions import AccessError
+from koda import api, fields, models, _lt
+from koda.addons.iap.tools.iap_tools import iap_jsonrpc
+from koda.exceptions import AccessError
 from urllib.parse import urljoin, urlparse
 
 DEFAULT_WSS_ENDPOINT = 'https://iap-scraper.odoo.com/'

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website_helpdesk.controllers.main import WebsiteHelpdesk
-from odoo.addons.website_slides.controllers.main import WebsiteSlides
-from odoo.http import route, request
+from koda.addons.website_helpdesk.controllers.main import WebsiteHelpdesk
+from koda.addons.website_slides.controllers.main import WebsiteSlides
+from koda.http import route, request
 
-from odoo.addons.http_routing.models.ir_http import slug
+from koda.addons.http_routing.models.ir_http import slug
 
 
 class WebsiteHelpdeskSlides(WebsiteHelpdesk):

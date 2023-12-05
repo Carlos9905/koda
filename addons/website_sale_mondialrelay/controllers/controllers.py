@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from odoo import http, _
-from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
+from koda import http, _
+from koda.addons.website_sale.controllers.main import WebsiteSale
+from koda.addons.website_sale.controllers.delivery import WebsiteSaleDelivery
 
-from odoo.exceptions import AccessDenied, UserError
-from odoo.http import request
+from koda.exceptions import AccessDenied, UserError
+from koda.http import request
 
 
 class MondialRelay(http.Controller):

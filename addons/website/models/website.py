@@ -15,18 +15,18 @@ from werkzeug import urls
 from werkzeug.datastructures import OrderedMultiDict
 from werkzeug.exceptions import NotFound
 
-from odoo import api, fields, models, tools, http, release, registry
-from odoo.addons.http_routing.models.ir_http import RequestUID, slugify, url_for
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.addons.website.tools import similarity_score, text_from_html, get_base_domain
-from odoo.addons.portal.controllers.portal import pager
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import AccessError, MissingError, UserError, ValidationError
-from odoo.http import request
-from odoo.modules.module import get_manifest
-from odoo.osv.expression import AND, OR, FALSE_DOMAIN, get_unaccent_wrapper
-from odoo.tools.translate import _, xml_translate
-from odoo.tools import escape_psql, pycompat
+from koda import api, fields, models, tools, http, release, registry
+from koda.addons.http_routing.models.ir_http import RequestUID, slugify, url_for
+from koda.addons.website.models.ir_http import sitemap_qs2dom
+from koda.addons.website.tools import similarity_score, text_from_html, get_base_domain
+from koda.addons.portal.controllers.portal import pager
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import AccessError, MissingError, UserError, ValidationError
+from koda.http import request
+from koda.modules.module import get_manifest
+from koda.osv.expression import AND, OR, FALSE_DOMAIN, get_unaccent_wrapper
+from koda.tools.translate import _, xml_translate
+from koda.tools import escape_psql, pycompat
 
 logger = logging.getLogger(__name__)
 

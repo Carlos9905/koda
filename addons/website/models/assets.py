@@ -7,7 +7,7 @@ import requests
 
 from werkzeug.urls import url_parse
 
-from odoo import api, models
+from koda import api, models
 
 
 class Assets(models.AbstractModel):

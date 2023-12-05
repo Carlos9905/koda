@@ -3,9 +3,9 @@
 
 import re
 
-from odoo import http
-from odoo.exceptions import ValidationError
-from odoo.tests.common import HttpCase, tagged
+from koda import http
+from koda.exceptions import ValidationError
+from koda.tests.common import HttpCase, tagged
 
 
 @tagged('-at_install', 'post_install')

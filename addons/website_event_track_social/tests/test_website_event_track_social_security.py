@@ -3,9 +3,9 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.addons.website_event.tests.common import TestEventOnlineCommon
-from odoo.tests.common import users
+from koda import fields
+from koda.addons.website_event.tests.common import TestEventOnlineCommon
+from koda.tests.common import users
 
 
 class TestTrackPushSecurity(TestEventOnlineCommon):

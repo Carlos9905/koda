@@ -2,7 +2,7 @@
 
 from datetime import timedelta
 
-from odoo import _, fields, models
+from koda import _, fields, models
 
 
 class SaleOrder(models.Model):

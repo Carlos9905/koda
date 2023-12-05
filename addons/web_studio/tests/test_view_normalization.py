@@ -1,9 +1,9 @@
 import random
 import textwrap
-from odoo.http import _request_stack
-from odoo.tests.common import TransactionCase, tagged
-from odoo.tools import DotDict
-from odoo.addons.web_studio.controllers.main import WebStudioController
+from koda.http import _request_stack
+from koda.tests.common import TransactionCase, tagged
+from koda.tools import DotDict
+from koda.addons.web_studio.controllers.main import WebStudioController
 
 
 @tagged('web_studio_normalization')

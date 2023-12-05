@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools.translate import _
+from koda import api, fields, models
+from koda.exceptions import UserError
+from koda.tools.translate import _
 
 from werkzeug import urls
 

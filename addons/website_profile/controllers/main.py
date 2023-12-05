@@ -11,9 +11,9 @@ import math
 from dateutil.relativedelta import relativedelta
 from operator import itemgetter
 
-from odoo import _, fields, http, tools
-from odoo.http import request
-from odoo.osv import expression
+from koda import _, fields, http, tools
+from koda.http import request
+from koda.osv import expression
 
 
 class WebsiteProfile(http.Controller):

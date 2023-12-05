@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http, _
-from odoo.http import Controller, request
-from odoo.exceptions import ValidationError
-from odoo.tools.misc import mute_logger
+from koda import http, _
+from koda.http import Controller, request
+from koda.exceptions import ValidationError
+from koda.tools.misc import mute_logger
 
 class Domain(Controller):
 

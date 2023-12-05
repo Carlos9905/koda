@@ -4,11 +4,11 @@
 from werkzeug.exceptions import NotFound
 from werkzeug.utils import redirect
 
-from odoo import http, _
-from odoo.http import request
-from odoo.osv import expression
+from koda import http, _
+from koda.http import request
+from koda.osv import expression
 
-from odoo.addons.website.controllers import form
+from koda.addons.website.controllers import form
 
 class WebsiteHelpdesk(http.Controller):
 

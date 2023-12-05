@@ -3,13 +3,13 @@
 from lxml import html
 from unittest.mock import patch
 
-from odoo.addons.website.controllers.main import Website
-from odoo.addons.website.tools import MockRequest
-from odoo.fields import Command
-from odoo.http import root
-from odoo.tests import common, HttpCase, tagged
-from odoo.tests.common import HOST
-from odoo.tools import config, mute_logger
+from koda.addons.website.controllers.main import Website
+from koda.addons.website.tools import MockRequest
+from koda.fields import Command
+from koda.http import root
+from koda.tests import common, HttpCase, tagged
+from koda.tests.common import HOST
+from koda.tools import config, mute_logger
 
 
 @tagged('-at_install', 'post_install')

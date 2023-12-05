@@ -3,8 +3,8 @@
 import json
 from uuid import uuid4
 
-from odoo import Command
-from odoo.tests import common
+from koda import Command
+from koda.tests import common
 
 
 class TestSessionInfo(common.HttpCase):

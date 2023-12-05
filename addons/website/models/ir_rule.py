@@ -1,6 +1,6 @@
 # coding: utf-8
-from odoo import api, models
-from odoo.addons.website.models import ir_http
+from koda import api, models
+from koda.addons.website.models import ir_http
 
 
 class IrRule(models.Model):

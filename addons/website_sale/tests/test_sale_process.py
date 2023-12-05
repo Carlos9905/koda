@@ -5,10 +5,10 @@ from werkzeug.exceptions import Forbidden
 
 import odoo.tests
 
-from odoo import api, Command
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo, TransactionCaseWithUserDemo, HttpCaseWithUserPortal
-from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.addons.website.tools import MockRequest
+from koda import api, Command
+from koda.addons.base.tests.common import HttpCaseWithUserDemo, TransactionCaseWithUserDemo, HttpCaseWithUserPortal
+from koda.addons.website_sale.controllers.main import WebsiteSale
+from koda.addons.website.tools import MockRequest
 
 
 @odoo.tests.tagged('post_install', '-at_install')

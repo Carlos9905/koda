@@ -3,9 +3,9 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.addons.website_sale_stock.tests.test_website_sale_stock_abandoned_cart_email import TestWebsiteSaleCartAbandonedCommon
-from odoo.tests.common import tagged
+from koda import fields
+from koda.addons.website_sale_stock.tests.test_website_sale_stock_abandoned_cart_email import TestWebsiteSaleCartAbandonedCommon
+from koda.tests.common import tagged
 
 @tagged('post_install', '-at_install')
 

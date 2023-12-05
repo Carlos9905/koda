@@ -6,8 +6,8 @@ import os
 
 from lxml import etree
 
-from odoo.loglevels import ustr
-from odoo.tools import misc, view_validation
+from koda.loglevels import ustr
+from koda.tools import misc, view_validation
 
 _logger = logging.getLogger(__name__)
 

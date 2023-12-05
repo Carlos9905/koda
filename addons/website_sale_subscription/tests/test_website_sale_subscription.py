@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
-from odoo.addons.website.tools import MockRequest
-from odoo.exceptions import UserError
+from koda.tests import tagged
+from koda.addons.website.tools import MockRequest
+from koda.exceptions import UserError
 from .common import TestWebsiteSaleSubscriptionCommon
 
 @tagged('post_install', '-at_install')

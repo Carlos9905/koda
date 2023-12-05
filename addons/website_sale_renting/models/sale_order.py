@@ -2,8 +2,8 @@
 
 from datetime import timedelta
 
-from odoo import _, fields, models
-from odoo.exceptions import ValidationError
+from koda import _, fields, models
+from koda.exceptions import ValidationError
 
 
 class SaleOrder(models.Model):

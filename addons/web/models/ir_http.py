@@ -4,10 +4,10 @@ import hashlib
 import json
 
 import odoo
-from odoo import api, models
-from odoo.http import request, DEFAULT_MAX_CONTENT_LENGTH
-from odoo.tools import ormcache, ustr
-from odoo.tools.misc import str2bool
+from koda import api, models
+from koda.http import request, DEFAULT_MAX_CONTENT_LENGTH
+from koda.tools import ormcache, ustr
+from koda.tools.misc import str2bool
 
 
 """

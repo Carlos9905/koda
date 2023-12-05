@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website_helpdesk_livechat.tests.helpdesk_livechat_chatbot_common import HelpdeskChatbotCase
-from odoo.tests.common import users
+from koda.addons.website_helpdesk_livechat.tests.helpdesk_livechat_chatbot_common import HelpdeskChatbotCase
+from koda.tests.common import users
 
 
 class TestChatbotCreateTicket(HelpdeskChatbotCase):

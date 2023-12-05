@@ -5,12 +5,12 @@ import logging
 import os
 from collections import defaultdict, OrderedDict
 
-from odoo import api, fields, models
-from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
-from odoo.exceptions import MissingError
-from odoo.http import request
-from odoo.modules.module import get_manifest
-from odoo.tools import escape_psql, split_every
+from koda import api, fields, models
+from koda.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+from koda.exceptions import MissingError
+from koda.http import request
+from koda.modules.module import get_manifest
+from koda.tools import escape_psql, split_every
 
 _logger = logging.getLogger(__name__)
 

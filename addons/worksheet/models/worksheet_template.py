@@ -6,9 +6,9 @@ from collections import defaultdict
 from lxml import etree
 from random import randint
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+from koda import api, fields, models, tools, _
+from koda.exceptions import ValidationError, UserError
+from koda.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
 
 
 class WorksheetTemplate(models.Model):

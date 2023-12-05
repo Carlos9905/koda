@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
+from koda import models, _
 
-from odoo.addons.phone_validation.tools import phone_validation
+from koda.addons.phone_validation.tools import phone_validation
 
 
 class ResPartner(models.Model):

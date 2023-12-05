@@ -4,11 +4,11 @@
 import logging
 from werkzeug.exceptions import Forbidden, NotFound
 
-from odoo import exceptions, http
-from odoo.http import request
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.website_event.controllers.community import EventCommunityController
-from odoo.osv import expression
+from koda import exceptions, http
+from koda.http import request
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.website_event.controllers.community import EventCommunityController
+from koda.osv import expression
 
 _logger = logging.getLogger(__name__)
 

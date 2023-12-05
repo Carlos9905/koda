@@ -3,8 +3,8 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.addons.whatsapp.tests.common import WhatsAppCommon
-from odoo.tests import tagged
+from koda.addons.whatsapp.tests.common import WhatsAppCommon
+from koda.tests import tagged
 
 
 @tagged('wa_message')

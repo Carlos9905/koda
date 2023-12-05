@@ -3,8 +3,8 @@
 
 from datetime import timedelta
 
-from odoo import api, fields, tools, models, _
-from odoo.exceptions import UserError, ValidationError
+from koda import api, fields, tools, models, _
+from koda.exceptions import UserError, ValidationError
 
 
 class UoMCategory(models.Model):

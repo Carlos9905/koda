@@ -16,10 +16,10 @@ import werkzeug.wsgi
 from lxml import etree
 from werkzeug.urls import iri_to_uri
 
-from odoo.tools.translate import JAVASCRIPT_TRANSLATION_COMMENT, WEB_TRANSLATION_COMMENT
-from odoo.tools.misc import file_open
-from odoo import http
-from odoo.http import request
+from koda.tools.translate import JAVASCRIPT_TRANSLATION_COMMENT, WEB_TRANSLATION_COMMENT
+from koda.tools.misc import file_open
+from koda import http
+from koda.http import request
 
 
 _logger = logging.getLogger(__name__)

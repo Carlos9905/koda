@@ -9,8 +9,8 @@ from io import BytesIO
 from uuid import uuid4
 from unittest.mock import patch
 
-from odoo.tests.common import HttpCase, tagged, get_db_name
-from odoo.tools import config, mute_logger
+from koda.tests.common import HttpCase, tagged, get_db_name
+from koda.tools import config, mute_logger
 
 
 @tagged("-at_install", "post_install")

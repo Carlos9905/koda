@@ -7,9 +7,9 @@ from contextlib import contextmanager
 from datetime import datetime, timedelta
 from unittest.mock import patch
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.website.models.website_visitor import WebsiteVisitor
-from odoo.tests import common, tagged
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.addons.website.models.website_visitor import WebsiteVisitor
+from koda.tests import common, tagged
 
 
 class MockVisitor(common.BaseCase):

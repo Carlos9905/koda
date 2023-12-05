@@ -2,10 +2,10 @@
 
 import base64
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
-from odoo.fields import Command
-from odoo.tests import tagged
-from odoo.tools.misc import file_open
+from koda.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
+from koda.fields import Command
+from koda.tests import tagged
+from koda.tools.misc import file_open
 
 
 @tagged('post_install', '-at_install')

@@ -3,9 +3,9 @@
 
 from freezegun import freeze_time
 
-from odoo.addons.appointment_account_payment.tests.common import AppointmentAccountPaymentCommon
-from odoo.tests import users
-from odoo.tools import mute_logger
+from koda.addons.appointment_account_payment.tests.common import AppointmentAccountPaymentCommon
+from koda.tests import users
+from koda.tools import mute_logger
 
 
 class WebsiteAppointmentSaleTest(AppointmentAccountPaymentCommon):

@@ -3,11 +3,11 @@
 from datetime import datetime, timedelta
 import json
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import UserError
-from odoo.http import request
-from odoo.tools import get_lang
-from odoo.tools.sql import column_exists, create_column
+from koda import api, Command, fields, models, _
+from koda.exceptions import UserError
+from koda.http import request
+from koda.tools import get_lang
+from koda.tools.sql import column_exists, create_column
 
 
 class WebsiteVisitor(models.Model):

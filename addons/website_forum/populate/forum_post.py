@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
-from odoo import fields, models
-from odoo.tools import populate
+from koda import fields, models
+from koda.tools import populate
 
 QA_WEIGHTS = {0: 25, 1: 35, 2: 20, 3: 10, 4: 4, 5: 3, 6: 2, 7: 1}
 _logger = logging.getLogger(__name__)

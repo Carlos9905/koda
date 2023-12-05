@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Command
-from odoo.tests.common import Form
+from koda.fields import Command
+from koda.tests.common import Form
 
-from odoo.addons.helpdesk.tests.common import HelpdeskCommon
-from odoo.addons.website_forum.tests.common import TestForumCommon
+from koda.addons.helpdesk.tests.common import HelpdeskCommon
+from koda.addons.website_forum.tests.common import TestForumCommon
 
 class TestHelpdeskForum(HelpdeskCommon, TestForumCommon):
     @classmethod

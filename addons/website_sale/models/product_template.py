@@ -2,12 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
 
-from odoo import api, fields, models
-from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.addons.website.models import ir_http
-from odoo.tools import float_is_zero, is_html_empty
-from odoo.tools.translate import html_translate
-from odoo.osv import expression
+from koda import api, fields, models
+from koda.addons.http_routing.models.ir_http import slug, unslug
+from koda.addons.website.models import ir_http
+from koda.tools import float_is_zero, is_html_empty
+from koda.tools.translate import html_translate
+from koda.osv import expression
 
 _logger = logging.getLogger(__name__)
 

@@ -3,8 +3,8 @@
 
 import odoo.tests
 
-from odoo.tests.common import BaseCase
-from odoo.addons.web_editor.models.diff_utils import (
+from koda.tests.common import BaseCase
+from koda.addons.web_editor.models.diff_utils import (
     generate_patch,
     generate_comparison,
     apply_patch,

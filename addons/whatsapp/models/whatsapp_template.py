@@ -5,14 +5,14 @@ import re
 
 from markupsafe import Markup
 
-from odoo import api, models, fields, _, Command
-from odoo.addons.http_routing.models.ir_http import slugify
-from odoo.addons.whatsapp.tools.lang_list import Languages
-from odoo.addons.whatsapp.tools.whatsapp_api import WhatsAppApi
-from odoo.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
-from odoo.exceptions import UserError, ValidationError, AccessError
-from odoo.tools import plaintext2html
-from odoo.tools.safe_eval import safe_eval
+from koda import api, models, fields, _, Command
+from koda.addons.http_routing.models.ir_http import slugify
+from koda.addons.whatsapp.tools.lang_list import Languages
+from koda.addons.whatsapp.tools.whatsapp_api import WhatsAppApi
+from koda.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
+from koda.exceptions import UserError, ValidationError, AccessError
+from koda.tools import plaintext2html
+from koda.tools.safe_eval import safe_eval
 
 LATITUDE_LONGITUDE_REGEX = r'^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$'
 

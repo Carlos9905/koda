@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models
-from odoo.http import request
-from odoo.tools.translate import html_translate
+from koda import fields, models
+from koda.http import request
+from koda.tools.translate import html_translate
 
 
 class ProductTemplate(models.Model):

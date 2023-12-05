@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website.tests.test_website_visitor import WebsiteVisitorTests
-from odoo.tests import tagged
+from koda.addons.website.tests.test_website_visitor import WebsiteVisitorTests
+from koda.tests import tagged
 
 
 @tagged('website_visitor')

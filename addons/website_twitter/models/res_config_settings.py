@@ -5,8 +5,8 @@ import logging
 
 import requests
 
-from odoo import api, fields, models, _, _lt
-from odoo.exceptions import UserError
+from koda import api, fields, models, _, _lt
+from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

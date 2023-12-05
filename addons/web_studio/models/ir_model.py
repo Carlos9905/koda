@@ -4,10 +4,10 @@ import unicodedata
 import uuid
 import re
 import xml.etree.ElementTree as ET
-from odoo.osv import expression
-from odoo import api, fields, models, _, Command
-from odoo.tools import ustr
-from odoo.exceptions import ValidationError
+from koda.osv import expression
+from koda import api, fields, models, _, Command
+from koda.tools import ustr
+from koda.exceptions import ValidationError
 
 OPTIONS_WL = [
     'use_mail',          # add mail_thread to record

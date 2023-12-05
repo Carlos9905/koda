@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
-from odoo import _
-from odoo.exceptions import MissingError
-from odoo.http import Controller, request, route
+from koda import _
+from koda.exceptions import MissingError
+from koda.http import Controller, request, route
 from .utils import clean_action
 
 

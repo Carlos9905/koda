@@ -4,10 +4,10 @@
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo import fields
-from odoo.tests import Form, tagged
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_sale_renting.tests.common import TestWebsiteSaleRentingCommon
+from koda import fields
+from koda.tests import Form, tagged
+from koda.addons.website.tools import MockRequest
+from koda.addons.website_sale_renting.tests.common import TestWebsiteSaleRentingCommon
 
 @tagged('post_install', '-at_install')
 class TestWebsiteSaleStockRenting(TestWebsiteSaleRentingCommon):

@@ -6,10 +6,10 @@ import logging
 from zeep import Client, Settings, helpers
 from zeep.exceptions import Fault
 
-from odoo.exceptions import UserError
-from odoo.addons.delivery_fedex.models.fedex_request import remove_accents, FedexRequest, LogPlugin, STATECODE_REQUIRED_COUNTRIES
-from odoo.models import _
-from odoo.tools.misc import file_path
+from koda.exceptions import UserError
+from koda.addons.delivery_fedex.models.fedex_request import remove_accents, FedexRequest, LogPlugin, STATECODE_REQUIRED_COUNTRIES
+from koda.models import _
+from koda.tools.misc import file_path
 
 
 class AllStringEncoder(json.JSONEncoder):

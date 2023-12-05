@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.addons.website.tools import MockRequest
-from odoo.tests.common import TransactionCase
+from koda import http
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.addons.website.tools import MockRequest
+from koda.tests.common import TransactionCase
 
 
 class TestQweb(TransactionCaseWithUserDemo):

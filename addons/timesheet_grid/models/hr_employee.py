@@ -3,10 +3,10 @@
 from datetime import datetime, time, timedelta
 from pytz import UTC
 
-from odoo import api, fields, models, _
-from odoo.tools import float_round
-from odoo.addons.resource.models.utils import sum_intervals, HOURS_PER_DAY
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.tools import float_round
+from koda.addons.resource.models.utils import sum_intervals, HOURS_PER_DAY
+from koda.exceptions import UserError
 
 
 class Employee(models.Model):

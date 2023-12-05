@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.osv import expression
+from koda import _, api, fields, models
+from koda.osv import expression
 
-from odoo.addons.http_routing.models.ir_http import unslug
+from koda.addons.http_routing.models.ir_http import unslug
 
 
 class SlideChannel(models.Model):

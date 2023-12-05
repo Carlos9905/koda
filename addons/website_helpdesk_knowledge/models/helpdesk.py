@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, models, fields, _
+from koda import api, models, fields, _
 
 class HelpdeskTeam(models.Model):
     _inherit = "helpdesk.team"

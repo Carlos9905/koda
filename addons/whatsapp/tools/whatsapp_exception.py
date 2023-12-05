@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _
+from koda import _
 
 class WhatsAppError(Exception):
     def __init__(self, message='', error_code=False, failure_type=False):

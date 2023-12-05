@@ -4,10 +4,10 @@ import base64
 import json
 import mimetypes
 
-from odoo import http
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.tools import ustr, file_open
+from koda import http
+from koda.exceptions import AccessError
+from koda.http import request
+from koda.tools import ustr, file_open
 
 
 class WebManifest(http.Controller):

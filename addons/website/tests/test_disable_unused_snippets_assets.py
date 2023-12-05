@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import TransactionCase, tagged
+from koda.tests import TransactionCase, tagged
 from unittest.mock import patch
 
 @tagged('post_install', '-at_install')

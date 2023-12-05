@@ -3,9 +3,9 @@
 
 from psycopg2 import IntegrityError
 
-from odoo.addons.website_forum.tests.common import KARMA, TestForumCommon
-from odoo.exceptions import UserError, AccessError
-from odoo.tools import mute_logger
+from koda.addons.website_forum.tests.common import KARMA, TestForumCommon
+from koda.exceptions import UserError, AccessError
+from koda.tools import mute_logger
 
 
 class TestForumCRUD(TestForumCommon):

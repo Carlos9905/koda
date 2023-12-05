@@ -5,8 +5,8 @@ import copy
 
 from contextlib import nullcontext
 
-from odoo.tools import mute_logger
-from odoo.tests.common import HttpCase, tagged
+from koda.tools import mute_logger
+from koda.tests.common import HttpCase, tagged
 
 EXTRA_REQUEST = 2 - 1
 """ During tests, the query on 'base_registry_signaling, base_cache_signaling'

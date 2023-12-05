@@ -3,11 +3,11 @@
 from collections import defaultdict
 from datetime import timedelta
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import float_is_zero
+from koda import api, fields, models
+from koda.exceptions import UserError
+from koda.http import request
+from koda.osv import expression
+from koda.tools import float_is_zero
 
 
 class SaleOrder(models.Model):

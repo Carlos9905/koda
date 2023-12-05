@@ -9,8 +9,8 @@ from werkzeug.exceptions import NotFound
 from werkzeug.test import EnvironBuilder
 
 import odoo
-from odoo.tests.common import HttpCase, HOST
-from odoo.tools.misc import hmac, DotDict, frozendict
+from koda.tests.common import HttpCase, HOST
+from koda.tools.misc import hmac, DotDict, frozendict
 
 
 @contextlib.contextmanager

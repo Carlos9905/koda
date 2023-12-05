@@ -3,7 +3,7 @@
 
 from datetime import timedelta
 
-from odoo import models, fields, _
+from koda import models, fields, _
 
 
 class WebsiteSnippetFilter(models.Model):

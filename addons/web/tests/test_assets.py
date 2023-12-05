@@ -6,9 +6,9 @@ import time
 import odoo
 import odoo.tests
 
-from odoo.tests.common import HttpCase
-from odoo.modules.module import get_manifest
-from odoo.tools import mute_logger
+from koda.tests.common import HttpCase
+from koda.modules.module import get_manifest
+from koda.tools import mute_logger
 
 from unittest.mock import patch
 

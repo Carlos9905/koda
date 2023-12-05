@@ -2,7 +2,7 @@
 
 from collections import defaultdict
 
-from odoo import models, fields
+from koda import models, fields
 
 
 class EventMailRegistration(models.Model):

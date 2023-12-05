@@ -3,10 +3,10 @@
 
 from datetime import datetime, timedelta
 
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.addons.website.tests.test_website_visitor import WebsiteVisitorTests
-from odoo.tests import tagged
-from odoo.tests.common import users
+from koda.addons.crm.tests.common import TestCrmCommon
+from koda.addons.website.tests.test_website_visitor import WebsiteVisitorTests
+from koda.tests import tagged
+from koda.tests.common import users
 
 
 @tagged('website_visitor')

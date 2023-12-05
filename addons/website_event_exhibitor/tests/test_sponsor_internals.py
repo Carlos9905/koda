@@ -4,8 +4,8 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.addons.website_event_exhibitor.tests.common import TestEventExhibitorCommon
-from odoo.tests.common import users
+from koda.addons.website_event_exhibitor.tests.common import TestEventExhibitorCommon
+from koda.tests.common import users
 
 
 class TestSponsorData(TestEventExhibitorCommon):

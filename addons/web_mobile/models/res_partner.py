@@ -1,4 +1,4 @@
-from odoo import fields, models
+from koda import fields, models
 
 class Partners(models.Model):
     _inherit = 'res.partner'

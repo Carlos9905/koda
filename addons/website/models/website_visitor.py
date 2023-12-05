@@ -8,13 +8,13 @@ import hashlib
 import pytz
 import threading
 
-from odoo import fields, models, api, _
-from odoo.addons.base.models.res_partner import _tz_get
-from odoo.exceptions import UserError
-from odoo.tools import split_every
-from odoo.tools.misc import _format_time_ago
-from odoo.http import request
-from odoo.osv import expression
+from koda import fields, models, api, _
+from koda.addons.base.models.res_partner import _tz_get
+from koda.exceptions import UserError
+from koda.tools import split_every
+from koda.tools.misc import _format_time_ago
+from koda.http import request
+from koda.osv import expression
 
 
 class WebsiteTrack(models.Model):

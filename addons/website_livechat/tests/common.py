@@ -3,8 +3,8 @@
 
 import random
 
-from odoo import fields
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda import fields
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
 
 
 class TestLivechatCommon(TransactionCaseWithUserDemo):

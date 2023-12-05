@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import route, request
-from odoo.osv import expression
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.website_forum.controllers.website_forum import WebsiteForum
+from koda.http import route, request
+from koda.osv import expression
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.website_forum.controllers.website_forum import WebsiteForum
 
 
 class WebsiteForumHelpdesk(WebsiteForum):

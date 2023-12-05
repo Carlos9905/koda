@@ -1,7 +1,7 @@
 from lxml import etree
 
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
 class WebStudioController(http.Controller):
 

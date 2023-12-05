@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.addons.website.tools import MockRequest
-from odoo.exceptions import ValidationError
-from odoo.tests import HttpCase, tagged
+from koda import Command
+from koda.addons.website_sale.controllers.main import WebsiteSale
+from koda.addons.website.tools import MockRequest
+from koda.exceptions import ValidationError
+from koda.tests import HttpCase, tagged
 
 ATTACHMENT_DATA = [
     b"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAEElEQVR4nGKqf3geEAAA//8EGgIyYKYzzgAAAABJRU5ErkJggg==",

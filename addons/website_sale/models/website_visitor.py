@@ -3,7 +3,7 @@
 
 from datetime import datetime, timedelta
 
-from odoo import fields, models, api
+from koda import fields, models, api
 
 class WebsiteTrack(models.Model):
     _inherit = 'website.track'

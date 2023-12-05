@@ -7,10 +7,10 @@ from dateutil.relativedelta import relativedelta
 
 import babel.dates
 
-from odoo import api, fields, models
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.osv import expression
-from odoo.tools.misc import get_lang
+from koda import api, fields, models
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT
+from koda.osv import expression
+from koda.tools.misc import get_lang
 
 DISPLAY_FORMATS = {
     'day': '%d %b %Y',

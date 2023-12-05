@@ -3,8 +3,8 @@
 
 import re
 
-from odoo import models
-from odoo.exceptions import AccessDenied
+from koda import models
+from koda.exceptions import AccessDenied
 
 
 class IrWebsocket(models.AbstractModel):

@@ -3,8 +3,8 @@
 from functools import reduce
 from werkzeug.urls import url_join
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError, ValidationError
+from koda import api, models, fields, _
+from koda.exceptions import UserError, ValidationError
 
 class WhatsAppTemplateVariable(models.Model):
     _name = 'whatsapp.template.variable'

@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from ast import literal_eval
 
-from odoo import api, models, fields, _
-from odoo.http import request
+from koda import api, models, fields, _
+from koda.http import request
 
 class IrUiMenu(models.Model):
     _name = 'ir.ui.menu'

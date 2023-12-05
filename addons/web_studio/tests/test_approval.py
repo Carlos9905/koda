@@ -1,10 +1,10 @@
 from psycopg2 import IntegrityError
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.tests.common import TransactionCase
-from odoo.tools import mute_logger
-from odoo.tests import tagged
+from koda.addons.mail.tests.common import mail_new_test_user
+from koda.exceptions import AccessError, UserError, ValidationError
+from koda.tests.common import TransactionCase
+from koda.tools import mute_logger
+from koda.tests import tagged
 
 @tagged('post_install', '-at_install')
 class TestStudioApproval(TransactionCase):

@@ -6,14 +6,14 @@ import re
 
 from werkzeug.urls import url_join
 
-from odoo import api, fields, models, _
-from odoo.addons.http_routing.models.ir_http import url_for
-from odoo.addons.website.tools import text_from_html
-from odoo.http import request
-from odoo.osv import expression
-from odoo.exceptions import AccessError
-from odoo.tools import escape_psql
-from odoo.tools.json import scriptsafe as json_safe
+from koda import api, fields, models, _
+from koda.addons.http_routing.models.ir_http import url_for
+from koda.addons.website.tools import text_from_html
+from koda.http import request
+from koda.osv import expression
+from koda.exceptions import AccessError
+from koda.tools import escape_psql
+from koda.tools.json import scriptsafe as json_safe
 
 logger = logging.getLogger(__name__)
 

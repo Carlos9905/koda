@@ -4,8 +4,8 @@
 from ast import literal_eval
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.addons.website_event.tests.common import TestEventOnlineCommon
+from koda import fields
+from koda.addons.website_event.tests.common import TestEventOnlineCommon
 from werkzeug.urls import url_join
 
 

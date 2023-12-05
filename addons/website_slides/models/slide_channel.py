@@ -9,11 +9,11 @@ from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 from markupsafe import Markup
 
-from odoo import api, fields, models, tools, _
-from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.exceptions import AccessError, UserError
-from odoo.osv import expression
-from odoo.tools import is_html_empty
+from koda import api, fields, models, tools, _
+from koda.addons.http_routing.models.ir_http import slug, unslug
+from koda.exceptions import AccessError, UserError
+from koda.osv import expression
+from koda.tools import is_html_empty
 
 _logger = logging.getLogger(__name__)
 

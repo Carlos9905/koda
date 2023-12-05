@@ -5,7 +5,7 @@ import re
 from contextlib import suppress
 
 import odoo.tests
-from odoo.tools.misc import file_open
+from koda.tools.misc import file_open
 
 RE_ONLY = re.compile(r'QUnit\.(only|debug)\(')
 

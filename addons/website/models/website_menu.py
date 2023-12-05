@@ -6,10 +6,10 @@ import werkzeug.urls
 
 from werkzeug.urls import url_parse
 
-from odoo import api, fields, models
-from odoo.addons.http_routing.models.ir_http import unslug_url
-from odoo.http import request
-from odoo.tools.translate import html_translate
+from koda import api, fields, models
+from koda.addons.http_routing.models.ir_http import unslug_url
+from koda.http import request
+from koda.tools.translate import html_translate
 
 
 class Menu(models.Model):

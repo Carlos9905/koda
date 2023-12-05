@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests import tagged
+from koda import Command
+from koda.tests import tagged
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
-from odoo.addons.website.tools import MockRequest
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
+from koda.addons.website.tools import MockRequest
 
 
 @tagged('post_install', '-at_install', 'product_attribute')

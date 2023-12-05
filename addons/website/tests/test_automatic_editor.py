@@ -1,5 +1,5 @@
-from odoo.tests import tagged
-from odoo.addons.website.tests.test_configurator import TestConfiguratorCommon
+from koda.tests import tagged
+from koda.addons.website.tests.test_configurator import TestConfiguratorCommon
 
 @tagged('post_install', '-at_install')
 class TestAutomaticEditor(TestConfiguratorCommon):

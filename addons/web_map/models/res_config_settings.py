@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models,api, _
-from odoo.exceptions import UserError
+from koda import fields, models,api, _
+from koda.exceptions import UserError
 import requests
-from odoo.http import request
+from koda.http import request
 
 
 class ResConfigSettings(models.TransientModel):

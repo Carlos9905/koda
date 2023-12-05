@@ -2,8 +2,8 @@
 
 from itertools import zip_longest
 
-from odoo import models
-from odoo.addons.website_slides.populate.slide_channel import SlideChannel
+from koda import models
+from koda.addons.website_slides.populate.slide_channel import SlideChannel
 
 
 class SlidesForum(models.Model):

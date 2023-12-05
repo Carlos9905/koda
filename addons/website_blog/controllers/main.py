@@ -7,15 +7,15 @@ import pytz
 import babel.dates
 from collections import defaultdict
 
-from odoo import http, fields, tools, models
-from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.addons.website.controllers.main import QueryURL
-from odoo.addons.portal.controllers.portal import _build_url_w_params
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import html2plaintext
-from odoo.tools.misc import get_lang
-from odoo.tools import sql
+from koda import http, fields, tools, models
+from koda.addons.http_routing.models.ir_http import slug, unslug
+from koda.addons.website.controllers.main import QueryURL
+from koda.addons.portal.controllers.portal import _build_url_w_params
+from koda.http import request
+from koda.osv import expression
+from koda.tools import html2plaintext
+from koda.tools.misc import get_lang
+from koda.tools import sql
 
 
 class WebsiteBlog(http.Controller):

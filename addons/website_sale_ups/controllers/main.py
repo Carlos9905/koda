@@ -1,7 +1,7 @@
-from odoo import http
-from odoo.addons.website_sale.controllers import main
-from odoo.addons.portal.controllers import portal
-from odoo.http import request
+from koda import http
+from koda.addons.website_sale.controllers import main
+from koda.addons.portal.controllers import portal
+from koda.http import request
 
 
 class WebsiteSale(main.WebsiteSale):

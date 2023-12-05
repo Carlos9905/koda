@@ -3,8 +3,8 @@
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from odoo.addons.website_sale.tests.test_website_sale_cart_abandoned import TestWebsiteSaleCartAbandonedCommon
-from odoo.tests.common import tagged
+from koda.addons.website_sale.tests.test_website_sale_cart_abandoned import TestWebsiteSaleCartAbandonedCommon
+from koda.tests.common import tagged
 
 
 @tagged('post_install', '-at_install')

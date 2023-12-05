@@ -3,8 +3,8 @@
 
 import json
 
-from odoo.tests import HttpCase, tagged
-from odoo.tools import mute_logger
+from koda.tests import HttpCase, tagged
+from koda.tools import mute_logger
 
 @tagged('post_install', '-at_install')
 class DomainTest(HttpCase):

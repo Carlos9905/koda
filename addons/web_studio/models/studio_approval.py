@@ -4,9 +4,9 @@
 from ast import literal_eval
 import logging
 
-from odoo import api, models, fields, _
-from odoo.osv import expression
-from odoo.exceptions import ValidationError, UserError
+from koda import api, models, fields, _
+from koda.osv import expression
+from koda.exceptions import ValidationError, UserError
 from collections import defaultdict
 
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, _
-from odoo.osv import expression
-from odoo.exceptions import RedirectWarning, UserError
+from koda import api, models, _
+from koda.osv import expression
+from koda.exceptions import RedirectWarning, UserError
 
 
 class AnalyticLine(models.Model):

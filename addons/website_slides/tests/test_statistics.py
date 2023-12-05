@@ -5,12 +5,12 @@ import math
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.addons.website_slides.tests import common
-from odoo.exceptions import UserError
-from odoo.tests import HttpCase, tagged
-from odoo.tests.common import users
-from odoo.tools import mute_logger, float_compare
+from koda import fields
+from koda.addons.website_slides.tests import common
+from koda.exceptions import UserError
+from koda.tests import HttpCase, tagged
+from koda.tests.common import users
+from koda.tools import mute_logger, float_compare
 
 
 @tagged('functional')

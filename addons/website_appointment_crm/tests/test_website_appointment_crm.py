@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.appointment_crm.tests.test_appointment_crm import AppointmentCRMTest
-from odoo.addons.website.tests.test_website_visitor import MockVisitor
+from koda.addons.appointment_crm.tests.test_appointment_crm import AppointmentCRMTest
+from koda.addons.website.tests.test_website_visitor import MockVisitor
 
 
 class WebsiteAppointmentCRMTest(AppointmentCRMTest, MockVisitor):

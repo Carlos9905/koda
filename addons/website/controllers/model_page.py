@@ -2,9 +2,9 @@ import ast
 
 import werkzeug
 
-from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.http import Controller, request, route
-from odoo.osv.expression import AND, OR
+from koda.addons.http_routing.models.ir_http import slug, unslug
+from koda.http import Controller, request, route
+from koda.osv.expression import AND, OR
 
 
 class ModelPageController(Controller):

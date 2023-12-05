@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website_event.controllers.main import WebsiteEventController
+from koda.addons.website_event.controllers.main import WebsiteEventController
 
 
 class EventOnlineController(WebsiteEventController):

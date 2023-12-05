@@ -3,9 +3,9 @@
 
 from datetime import datetime, timedelta
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.addons.http_routing.models.ir_http import slug
+from koda import _, api, fields, models
+from koda.exceptions import ValidationError
+from koda.addons.http_routing.models.ir_http import slug
 
 
 class HelpdeskTeam(models.Model):

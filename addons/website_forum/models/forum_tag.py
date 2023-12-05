@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.exceptions import AccessError
+from koda import api, fields, models, _
+from koda.addons.http_routing.models.ir_http import slug, unslug
+from koda.exceptions import AccessError
 
 
 class Tags(models.Model):

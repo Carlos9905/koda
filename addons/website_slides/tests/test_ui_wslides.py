@@ -4,12 +4,12 @@ import base64
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import tests
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal
-from odoo.addons.gamification.tests.common import HttpCaseGamification
-from odoo.fields import Datetime
-from odoo.tools import mute_logger
-from odoo.tools.misc import file_open
+from koda import tests
+from koda.addons.base.tests.common import HttpCaseWithUserPortal
+from koda.addons.gamification.tests.common import HttpCaseGamification
+from koda.fields import Datetime
+from koda.tools import mute_logger
+from koda.tools.misc import file_open
 
 
 class TestUICommon(HttpCaseGamification, HttpCaseWithUserPortal):

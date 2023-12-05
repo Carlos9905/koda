@@ -5,10 +5,10 @@ from collections import deque
 import io
 import json
 
-from odoo import http, _
-from odoo.http import content_disposition, request
-from odoo.tools import ustr, osutil
-from odoo.tools.misc import xlsxwriter
+from koda import http, _
+from koda.http import content_disposition, request
+from koda.tools import ustr, osutil
+from koda.tools.misc import xlsxwriter
 
 
 class TableExporter(http.Controller):

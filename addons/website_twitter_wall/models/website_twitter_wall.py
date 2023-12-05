@@ -9,9 +9,9 @@ from logging import getLogger
 from psycopg2 import InternalError, OperationalError
 from werkzeug.urls import url_encode, url_join
 
-from odoo import api, fields, models, _
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.addons.http_routing.models.ir_http import slug
+from koda.exceptions import UserError
 
 _logger = getLogger(__name__)
 

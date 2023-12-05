@@ -5,13 +5,13 @@ from uuid import uuid4
 from unittest.mock import Mock, patch
 from werkzeug import urls
 
-from odoo import Command
-from odoo.http import root
-from odoo.tests import tagged
+from koda import Command
+from koda.http import root
+from koda.tests import tagged
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.website_sale.controllers.delivery import WebsiteSaleDelivery as WebsiteSaleDeliveryController
-from odoo.addons.website_sale.controllers.main import WebsiteSale
+from koda.addons.base.tests.common import HttpCaseWithUserDemo
+from koda.addons.website_sale.controllers.delivery import WebsiteSaleDelivery as WebsiteSaleDeliveryController
+from koda.addons.website_sale.controllers.main import WebsiteSale
 
 
 @tagged('post_install', '-at_install')

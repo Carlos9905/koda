@@ -7,11 +7,11 @@ import string
 from datetime import timedelta
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.addons.whatsapp.tools.whatsapp_api import WhatsAppApi
-from odoo.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
-from odoo.tools import plaintext2html
+from koda import api, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.addons.whatsapp.tools.whatsapp_api import WhatsAppApi
+from koda.addons.whatsapp.tools.whatsapp_exception import WhatsAppError
+from koda.tools import plaintext2html
 
 _logger = logging.getLogger(__name__)
 

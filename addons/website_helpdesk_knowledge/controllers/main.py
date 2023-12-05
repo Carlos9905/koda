@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.addons.website_helpdesk.controllers.main import WebsiteHelpdesk
-from odoo.addons.website_knowledge.controllers.main import KnowledgeWebsiteController
+from koda.addons.website_helpdesk.controllers.main import WebsiteHelpdesk
+from koda.addons.website_knowledge.controllers.main import KnowledgeWebsiteController
 
-from odoo.http import request, route
-from odoo.tools import config
+from koda.http import request, route
+from koda.tools import config
 
 
 class WebsiteHelpdeskKnowledge(WebsiteHelpdesk):

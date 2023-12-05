@@ -125,6 +125,6 @@ In Odoo, the configuration should be done in the user's preferences.
 
 The VoIP username / Extension number is the number you configured previously in the sip.conf file. In our example, 1060.
 The VoIP secret is the secret you chose in the sip.conf file.
-The external device number is not a required field but it is used if you want to transfer your call from Odoo to an external phone also configured in the sip.conf file.
+The external device number is not a required field but it is used if you want to transfer your call from koda to an external phone also configured in the sip.conf file.
 
 The configuration needs also to be done in the sale settings under the title "PBX Configuration". You need to put the IP you define in the http.conf file and the WebSocket should be: ws://127.0.0.1:8088/ws. The part "127.0.0.1" needs to be the same as the IP defined previously and the "8088" is the port you defined in the http.conf file.

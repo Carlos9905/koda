@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import _, http
-from odoo.addons.website_sale.controllers import main
-from odoo.exceptions import AccessError, MissingError, ValidationError
+from koda import _, http
+from koda.addons.website_sale.controllers import main
+from koda.exceptions import AccessError, MissingError, ValidationError
 
 
 class WebsiteSale(main.WebsiteSale):

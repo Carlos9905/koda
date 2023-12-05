@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields
+from koda import api, models, fields
 
 
 # List of the VoIP-related fields that are configurable by the user using the

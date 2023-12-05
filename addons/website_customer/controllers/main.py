@@ -3,11 +3,11 @@
 
 import werkzeug.urls
 
-from odoo import http
-from odoo.addons.http_routing.models.ir_http import unslug, slug
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.tools.translate import _
-from odoo.http import request
+from koda import http
+from koda.addons.http_routing.models.ir_http import unslug, slug
+from koda.addons.website.models.ir_http import sitemap_qs2dom
+from koda.tools.translate import _
+from koda.http import request
 
 
 class WebsiteCustomer(http.Controller):

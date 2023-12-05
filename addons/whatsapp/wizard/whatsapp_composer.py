@@ -5,9 +5,9 @@ import logging
 
 from ast import literal_eval
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError, RedirectWarning
-from odoo.addons.phone_validation.tools import phone_validation
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError, RedirectWarning
+from koda.addons.phone_validation.tools import phone_validation
 
 _logger = logging.getLogger(__name__)
 

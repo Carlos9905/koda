@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
+from koda import models, _
 from lxml import etree
 
 GANTT_VALID_ATTRIBUTES = set([

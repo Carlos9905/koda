@@ -1,15 +1,15 @@
 import json
 from psycopg2.extras import Json
 
-from odoo import Command
-from odoo.addons.base.models.ir_actions_report import IrActionsReport
-from odoo.addons.web_studio.controllers.main import WebStudioController
-from odoo.addons.web_studio.controllers.report import WebStudioReportController, get_report_view_copy
-from odoo.addons.web.controllers.report import ReportController
-from odoo.http import _request_stack, route
-from odoo.tests.common import HttpCase, TransactionCase
-from odoo.tests import tagged
-from odoo.tools import DotDict, mute_logger
+from koda import Command
+from koda.addons.base.models.ir_actions_report import IrActionsReport
+from koda.addons.web_studio.controllers.main import WebStudioController
+from koda.addons.web_studio.controllers.report import WebStudioReportController, get_report_view_copy
+from koda.addons.web.controllers.report import ReportController
+from koda.http import _request_stack, route
+from koda.tests.common import HttpCase, TransactionCase
+from koda.tests import tagged
+from koda.tools import DotDict, mute_logger
 
 class TestReportEditor(TransactionCase):
 

@@ -3,12 +3,12 @@
 from dateutil.relativedelta import relativedelta
 from math import ceil
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.http import request
-from odoo.tools import format_amount
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.http import request
+from koda.tools import format_amount
 
-from odoo.addons.sale_renting.models.product_pricing import PERIOD_RATIO
+from koda.addons.sale_renting.models.product_pricing import PERIOD_RATIO
 
 
 class ProductTemplate(models.Model):

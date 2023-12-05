@@ -13,12 +13,12 @@ from werkzeug.exceptions import InternalServerError
 
 import odoo
 import odoo.modules.registry
-from odoo import http
-from odoo.exceptions import UserError
-from odoo.http import content_disposition, request
-from odoo.tools import lazy_property, osutil, pycompat
-from odoo.tools.misc import xlsxwriter
-from odoo.tools.translate import _
+from koda import http
+from koda.exceptions import UserError
+from koda.http import content_disposition, request
+from koda.tools import lazy_property, osutil, pycompat
+from koda.tools.misc import xlsxwriter
+from koda.tools.translate import _
 
 
 _logger = logging.getLogger(__name__)
@@ -452,7 +452,7 @@ class ExportFormat(object):
         return f"{model_description} ({base})"
 
     def from_data(self, fields, rows):
-        """ Conversion method from Odoo's export data to whatever the
+        """ Conversion method from koda's export data to whatever the
         current export class outputs
 
         :params list fields: a list of fields to export

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, models, _
-from odoo.osv import expression
-from odoo.exceptions import ValidationError
+from koda import api, models, _
+from koda.osv import expression
+from koda.exceptions import ValidationError
 
-from odoo.addons.http_routing.models.ir_http import unslug
+from koda.addons.http_routing.models.ir_http import unslug
 
 
 class Article(models.Model):

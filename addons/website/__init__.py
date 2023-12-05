@@ -5,8 +5,8 @@ from . import models
 from . import wizard
 
 import odoo
-from odoo import api, SUPERUSER_ID
-from odoo.http import request
+from koda import api, SUPERUSER_ID
+from koda.http import request
 from functools import partial
 
 

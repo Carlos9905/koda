@@ -4,9 +4,9 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from unittest.mock import patch
-from odoo.tests import tagged
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal
-from odoo.addons.mail.models.mail_template import MailTemplate
+from koda.tests import tagged
+from koda.addons.base.tests.common import HttpCaseWithUserPortal
+from koda.addons.mail.models.mail_template import MailTemplate
 
 
 class TestWebsiteSaleCartAbandonedCommon(HttpCaseWithUserPortal):

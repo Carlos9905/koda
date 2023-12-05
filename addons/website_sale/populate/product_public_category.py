@@ -3,9 +3,9 @@
 from collections import defaultdict
 import logging
 
-from odoo import models
-from odoo.fields import Command
-from odoo.tools import populate
+from koda import models
+from koda.fields import Command
+from koda.tools import populate
 
 _logger = logging.getLogger(__name__)
 

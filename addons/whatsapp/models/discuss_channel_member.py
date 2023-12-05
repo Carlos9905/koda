@@ -2,7 +2,7 @@
 
 from datetime import datetime, timedelta
 
-from odoo import api, models
+from koda import api, models
 
 
 class DiscussChannelMember(models.Model):

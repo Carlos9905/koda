@@ -4,9 +4,9 @@
 import re
 from collections import defaultdict
 
-from odoo import api, fields, models
-from odoo.http import request
-from odoo.osv import expression
+from koda import api, fields, models
+from koda.http import request
+from koda.osv import expression
 
 
 class UtmMixin(models.AbstractModel):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.delivery_sendcloud.models.sendcloud_service import SendCloud
+from koda.addons.delivery_sendcloud.models.sendcloud_service import SendCloud
 
 LOCATION_URL = "https://servicepoints.sendcloud.sc/api/v2/"
 

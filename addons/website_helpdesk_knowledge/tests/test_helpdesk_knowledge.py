@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.exceptions import ValidationError
+from koda.exceptions import ValidationError
 
-from odoo.tests import tagged, HttpCase
-from odoo.addons.helpdesk.tests.common import HelpdeskCommon
+from koda.tests import tagged, HttpCase
+from koda.addons.helpdesk.tests.common import HelpdeskCommon
 
 @tagged('-at_install', 'post_install')
 class TestHelpdeskKnowledgeTour(HttpCase, HelpdeskCommon):

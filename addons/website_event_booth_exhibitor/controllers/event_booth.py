@@ -3,8 +3,8 @@
 
 import base64
 
-from odoo.addons.website_event.controllers.main import WebsiteEventController
-from odoo.tools import plaintext2html
+from koda.addons.website_event.controllers.main import WebsiteEventController
+from koda.tools import plaintext2html
 
 
 class WebsiteEventBoothController(WebsiteEventController):

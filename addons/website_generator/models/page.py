@@ -3,9 +3,9 @@ import logging
 
 from lxml import html, etree
 
-from odoo import models
-from odoo.tools import pycompat
-from odoo.tools.translate import _
+from koda import models
+from koda.tools import pycompat
+from koda.tools.translate import _
 
 logger = logging.getLogger(__name__)
 

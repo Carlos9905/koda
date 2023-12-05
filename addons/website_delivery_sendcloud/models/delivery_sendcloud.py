@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
 from .sendcloud_locations_request import SendcloudLocationsRequest
 
 # As Sendcloud API's schemas may evolve, hardcoded values are defined as static const to ease futur updates.

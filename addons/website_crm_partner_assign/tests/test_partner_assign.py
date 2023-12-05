@@ -3,10 +3,10 @@
 
 from unittest.mock import patch
 
-from odoo.exceptions import AccessError
-from odoo.tests.common import TransactionCase
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.exceptions import AccessError
+from koda.tests.common import TransactionCase
+from koda.addons.crm.tests.common import TestCrmCommon
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 class TestPartnerAssign(TransactionCase):

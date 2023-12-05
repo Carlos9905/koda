@@ -1,11 +1,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.models import Command
-from odoo.tests.common import tagged, JsonRpcException
-from odoo.tools import mute_logger
+from koda.models import Command
+from koda.tests.common import tagged, JsonRpcException
+from koda.tools import mute_logger
 
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.website.tools import MockRequest
+from koda.addons.payment.tests.http_common import PaymentHttpCommon
+from koda.addons.website.tools import MockRequest
 
 
 @tagged('post_install', '-at_install')

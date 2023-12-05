@@ -2,11 +2,11 @@
 import markupsafe
 from markupsafe import Markup
 
-from odoo import api, fields, models, tools
+from koda import api, fields, models, tools
 
-from odoo.addons.base.models.ir_qweb_fields import nl2br
-from odoo.tools import html2plaintext, is_html_empty
-from odoo.tools.misc import file_path
+from koda.addons.base.models.ir_qweb_fields import nl2br
+from koda.tools import html2plaintext, is_html_empty
+from koda.tools.misc import file_path
 
 try:
     import sass as libsass
@@ -279,7 +279,7 @@ class BaseDocumentLayout(models.TransientModel):
     def _compile_scss(self, scss_source):
         """
         This code will compile valid scss into css.
-        Parameters are the same from odoo/addons/base/models/assetsbundle.py
+        Parameters are the same from koda/addons/base/models/assetsbundle.py
         Simply copied and adapted slightly
         """
 

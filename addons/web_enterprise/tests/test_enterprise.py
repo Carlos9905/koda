@@ -1,6 +1,6 @@
 import base64
 
-from odoo.tests.common import HttpCase
+from koda.tests.common import HttpCase
 
 
 class LoadMenusTests(HttpCase):

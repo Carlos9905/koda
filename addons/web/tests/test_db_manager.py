@@ -9,8 +9,8 @@ from unittest.mock import patch
 import requests
 
 import odoo
-from odoo.tests.common import BaseCase, HttpCase, tagged
-from odoo.tools import config
+from koda.tests.common import BaseCase, HttpCase, tagged
+from koda.tools import config
 
 
 class TestDatabaseManager(HttpCase):

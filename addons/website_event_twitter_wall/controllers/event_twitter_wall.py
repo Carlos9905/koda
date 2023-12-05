@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.addons.website_event.controllers.main import WebsiteEventController
-from odoo.tools import is_html_empty
+from koda import http
+from koda.http import request
+from koda.addons.http_routing.models.ir_http import slug
+from koda.addons.website_event.controllers.main import WebsiteEventController
+from koda.tools import is_html_empty
 
 
 class WebsiteEventTwitterWallController(WebsiteEventController):

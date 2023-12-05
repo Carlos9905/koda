@@ -2,7 +2,7 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models
+from koda import fields, models
 
 class ResCompany(models.Model):
     _inherit = 'res.company'

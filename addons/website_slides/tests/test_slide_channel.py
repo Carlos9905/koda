@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.website_slides.tests import common as slides_common
-from odoo.exceptions import UserError
-from odoo.tests.common import users
+from koda.addons.website_slides.tests import common as slides_common
+from koda.exceptions import UserError
+from koda.tests.common import users
 from unittest.mock import patch
 
 

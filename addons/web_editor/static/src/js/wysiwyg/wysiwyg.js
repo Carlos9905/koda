@@ -2697,8 +2697,8 @@ export class Wysiwyg extends Component {
             return Promise.resolve();
         }
 
-        // remove ZeroWidthSpace from odoo field value
-        // ZeroWidthSpace may be present from OdooEditor edition process
+        // remove ZeroWidthSpace from koda field value
+        // ZeroWidthSpace may be present from kodaEditor edition process
         let escapedHtml = this._getEscapedElement($el).prop('outerHTML');
 
         const result = this.orm.call('ir.ui.view', 'save', [

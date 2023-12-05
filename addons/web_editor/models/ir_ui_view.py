@@ -6,9 +6,9 @@ import logging
 import uuid
 from lxml import etree, html
 
-from odoo import api, models, _
-from odoo.osv import expression
-from odoo.exceptions import ValidationError
+from koda import api, models, _
+from koda.osv import expression
+from koda.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

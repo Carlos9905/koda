@@ -3,10 +3,10 @@
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo import exceptions
-from odoo.addons.crm.models.crm_lead import Lead
-from odoo.addons.iap.tests.common import MockIAPEnrich
-from odoo.addons.website_crm_iap_reveal.models.crm_reveal_rule import CRMRevealRule
+from koda import exceptions
+from koda.addons.crm.models.crm_lead import Lead
+from koda.addons.iap.tests.common import MockIAPEnrich
+from koda.addons.website_crm_iap_reveal.models.crm_reveal_rule import CRMRevealRule
 
 
 class MockIAPReveal(MockIAPEnrich):

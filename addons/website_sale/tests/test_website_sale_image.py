@@ -4,8 +4,8 @@ import base64
 import io
 
 from PIL import Image
-from odoo.tests.common import HOST
-from odoo.tools import config
+from koda.tests.common import HOST
+from koda.tools import config
 
 import odoo.tests
 

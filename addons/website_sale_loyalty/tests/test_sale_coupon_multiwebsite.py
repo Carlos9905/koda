@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sale_loyalty.tests.common import TestSaleCouponNumbersCommon
-from odoo.addons.website.tools import MockRequest
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda.addons.sale_loyalty.tests.common import TestSaleCouponNumbersCommon
+from koda.addons.website.tools import MockRequest
+from koda.exceptions import UserError
+from koda.tests import tagged
 
 
 @tagged('-at_install', 'post_install')

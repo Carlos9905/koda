@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import json
 
-from odoo.exceptions import UserError
-from odoo.http import Controller, request, Response, route
+from koda.exceptions import UserError
+from koda.http import Controller, request, Response, route
 
 class Profiling(Controller):
 

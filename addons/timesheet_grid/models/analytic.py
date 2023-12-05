@@ -8,11 +8,11 @@ from dateutil.relativedelta import relativedelta
 from dateutil.rrule import SU
 from collections import defaultdict
 
-from odoo import tools, models, fields, api, _
-from odoo.addons.resource.models.utils import make_aware
-from odoo.addons.resource.models.utils import filter_domain_leaf
-from odoo.exceptions import UserError, AccessError
-from odoo.osv import expression
+from koda import tools, models, fields, api, _
+from koda.addons.resource.models.utils import make_aware
+from koda.addons.resource.models.utils import filter_domain_leaf
+from koda.exceptions import UserError, AccessError
+from koda.osv import expression
 
 
 class AnalyticLine(models.Model):

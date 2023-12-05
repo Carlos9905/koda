@@ -4,8 +4,8 @@
 from lxml import etree
 from markupsafe import Markup
 
-from odoo import api, models, _
-from odoo.addons.website.tools import add_form_signature
+from koda import api, models, _
+from koda.addons.website.tools import add_form_signature
 
 
 class Contact(models.AbstractModel):

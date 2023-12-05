@@ -3,10 +3,10 @@
 import logging
 import warnings
 
-from odoo import http
-from odoo.api import call_kw
-from odoo.http import request
-from odoo.models import check_method_name
+from koda import http
+from koda.api import call_kw
+from koda.http import request
+from koda.models import check_method_name
 from .utils import clean_action
 
 

@@ -3,7 +3,7 @@
 
 from ast import literal_eval
 
-from odoo.addons.website_event.tests.common import TestEventOnlineCommon
+from koda.addons.website_event.tests.common import TestEventOnlineCommon
 
 
 class TestTrackPush(TestEventOnlineCommon):

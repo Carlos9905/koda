@@ -8,12 +8,12 @@ from markupsafe import Markup
 from psycopg2 import IntegrityError
 from werkzeug.exceptions import BadRequest
 
-from odoo import http, SUPERUSER_ID, _, _lt
-from odoo.addons.base.models.ir_qweb_fields import nl2br, nl2br_enclose
-from odoo.http import request
-from odoo.tools import plaintext2html
-from odoo.exceptions import AccessDenied, ValidationError, UserError
-from odoo.tools.misc import hmac, consteq
+from koda import http, SUPERUSER_ID, _, _lt
+from koda.addons.base.models.ir_qweb_fields import nl2br, nl2br_enclose
+from koda.http import request
+from koda.tools import plaintext2html
+from koda.exceptions import AccessDenied, ValidationError, UserError
+from koda.tools.misc import hmac, consteq
 
 
 class WebsiteForm(http.Controller):

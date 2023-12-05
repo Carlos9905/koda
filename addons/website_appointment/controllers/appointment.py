@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
-from odoo.addons.base.models.ir_qweb import keep_query
-from odoo.addons.appointment.controllers.appointment import AppointmentController
-from odoo.osv import expression
+from koda.addons.base.models.ir_qweb import keep_query
+from koda.addons.appointment.controllers.appointment import AppointmentController
+from koda.osv import expression
 
 
 class WebsiteAppointment(AppointmentController):

@@ -8,9 +8,9 @@ from lxml.builder import E
 import os.path
 import zipfile
 
-from odoo import models
-from odoo.osv.expression import OR
-from odoo.tools import topological_sort
+from koda import models
+from koda.osv.expression import OR
+from koda.tools import topological_sort
 
 # list of models to export (the order ensures that dependencies are satisfied)
 MODELS_TO_EXPORT = [

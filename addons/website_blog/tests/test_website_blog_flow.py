@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import UserError
-from odoo.tests.common import users
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_blog.tests.common import TestWebsiteBlogCommon
-from odoo.addons.portal.controllers.mail import PortalChatter
+from koda.exceptions import UserError
+from koda.tests.common import users
+from koda.addons.website.tools import MockRequest
+from koda.addons.website_blog.tests.common import TestWebsiteBlogCommon
+from koda.addons.portal.controllers.mail import PortalChatter
 
 
 class TestWebsiteBlogFlow(TestWebsiteBlogCommon):

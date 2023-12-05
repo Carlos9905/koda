@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
-from odoo.addons.helpdesk.tests.test_helpdesk_portal import TestHelpdeskPortal
+from koda.addons.helpdesk.tests.test_helpdesk_portal import TestHelpdeskPortal
 
 @tagged('-at_install', 'post_install')
 class TestHelpdeskKnowledgePortalTour(TestHelpdeskPortal):
