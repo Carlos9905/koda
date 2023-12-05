@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': "Spreadsheet dashboard for eLearning",
     'version': '1.0',

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.social_test_full.tests.common import SocialTestFullCase
 from koda.addons.social.tests.tools import mock_void_external_calls
