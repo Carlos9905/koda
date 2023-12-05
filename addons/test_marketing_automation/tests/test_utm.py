@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.test_marketing_automation.tests.common import TestMACommon
 from koda.addons.utm.tests.common import TestUTMCommon

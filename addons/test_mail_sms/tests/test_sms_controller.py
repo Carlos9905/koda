@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import Command
 from koda.addons.test_mail_sms.tests.test_sms_management import TestSMSActionsCommon

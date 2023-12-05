@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.tests import Form, tagged
 from koda.addons.stock_barcode.tests.test_barcode_client_action import TestBarcodeClientAction

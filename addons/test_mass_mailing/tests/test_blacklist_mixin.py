@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.test_mass_mailing.models.mailing_models import MailingBLacklist
 from koda.addons.test_mass_mailing.tests import common

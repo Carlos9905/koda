@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.stock.tests.test_packing import TestPackingCommon
 from koda.tests import Form

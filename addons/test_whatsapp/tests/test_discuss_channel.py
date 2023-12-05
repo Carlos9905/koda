@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.whatsapp.tests.common import WhatsAppCommon, MockIncomingWhatsApp
 from koda.tests import tagged, users

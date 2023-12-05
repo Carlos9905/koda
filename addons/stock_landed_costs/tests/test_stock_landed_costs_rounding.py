@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.stock_landed_costs.tests.common import TestStockLandedCostsCommon
 from koda.tests import tagged, Form

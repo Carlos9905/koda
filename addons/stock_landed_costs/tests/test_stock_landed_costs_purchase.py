@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 import unittest
 from koda.addons.stock_landed_costs.tests.common import TestStockLandedCostsCommon
 from koda.addons.stock_landed_costs.tests.test_stockvaluationlayer import TestStockValuationLCCommon

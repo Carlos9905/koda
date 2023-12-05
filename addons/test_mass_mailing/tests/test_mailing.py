@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.test_mass_mailing.data.mail_test_data import MAIL_TEMPLATE
 from koda.addons.test_mass_mailing.tests.common import TestMassMailCommon
