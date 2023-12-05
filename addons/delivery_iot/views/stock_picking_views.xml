@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="view_picking_type_form_inherit" model="ir.ui.view">
         <field name="name">stock.picking.type.inherit</field>
         <field name="model">stock.picking.type</field>
@@ -19,7 +19,7 @@
                             If you connect your scales through the IoT App, the
                             weight of the package will be set automatically when
                             you do a "Put in Pack" operation.
-                            <a href="https://www.odoo.com/documentation/17.0/applications/productivity/iot/devices/scale.html"
+                            <a href="https://www.koda.com/documentation/17.0/applications/productivity/iot/devices/scale.html"
                                 target="_blank" class="fa fa-arrow-right">
                                 How to connect scales?
                             </a>
@@ -29,4 +29,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

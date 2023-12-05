@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { DeviceController } from '@iot/device_controller';

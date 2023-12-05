@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { nextTick } from "@web/../tests/helpers/utils";
 

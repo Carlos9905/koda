@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { SpreadsheetPivotModel } from "@spreadsheet/pivot/pivot_model";
 import { patch } from "@web/core/utils/patch";

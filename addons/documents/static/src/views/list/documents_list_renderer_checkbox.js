@@ -1,4 +1,4 @@
-/* @odoo-module **/
+/* @koda-module **/
 
 import { CheckBox } from "@web/core/checkbox/checkbox";
 

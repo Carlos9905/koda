@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
 import { DocumentsKanbanController } from "@documents/views/kanban/documents_kanban_controller";

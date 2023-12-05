@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ActivityRenderer } from "@mail/views/web/activity/activity_renderer";
 
 import { DocumentsInspector } from "../inspector/documents_inspector";
 import { DocumentsFileViewer } from "../helper/documents_file_viewer";
 
-import { useRef } from "@odoo/owl";
+import { useRef } from "@koda/owl";
 
 export class DocumentsActivityRenderer extends ActivityRenderer {
     static props = {

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { busService } from "@bus/services/bus_service";
 import { busParametersService } from "@bus/bus_parameters_service";
@@ -25,7 +25,7 @@ import { makeFakeSpreadsheetService } from "@spreadsheet_edition/../tests/utils/
 const serviceRegistry = registry.category("services");
 const favoriteMenuRegistry = registry.category("favoriteMenu");
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { Grid } = spreadsheet.components;
 
 let serverData;

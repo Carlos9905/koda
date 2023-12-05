@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getBasicServerData } from "@spreadsheet/../tests/utils/data";
 import { createWebClient, doAction } from "@web/../tests/webclient/helpers";

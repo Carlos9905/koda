@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <template id="usps_price_request" name="USPS">
         <t t-if="api == 'RateV4'">
@@ -294,4 +294,4 @@
         </t>
     </template>
 
-</odoo>
+</koda>

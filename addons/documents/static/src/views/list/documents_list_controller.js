@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ListController } from "@web/views/list/list_controller";
 import { _t } from "@web/core/l10n/translation";
 import { preSuperSetup, useDocumentView } from "@documents/views/hooks";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 export class DocumentsListController extends ListController {
     setup() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="documents_applicant_rule" model="documents.workflow.rule" forcecreate="0">
             <field name="sequence">20</field>
@@ -9,4 +9,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

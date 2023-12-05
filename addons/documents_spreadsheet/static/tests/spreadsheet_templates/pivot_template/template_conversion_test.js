@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { DataSources } from "@spreadsheet/data_sources/data_sources";
 import { CommandResult } from "@spreadsheet/o_spreadsheet/cancelled_reason";
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 import { createSpreadsheetWithPivot } from "@spreadsheet/../tests/utils/pivot";
 import { setCellContent } from "@spreadsheet/../tests/utils/commands";
 import { getCellContent } from "@spreadsheet/../tests/utils/getters";

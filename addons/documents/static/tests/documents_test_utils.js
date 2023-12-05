@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { makeView } from "@web/../tests/views/helpers";
 import { start } from "@mail/../tests/helpers/test_utils";

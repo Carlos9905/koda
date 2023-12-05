@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <template id="sendcloud_label_tracking">
             <t t-out="type" /> created in Sendcloud. <br/>
@@ -9,4 +9,4 @@
             </t>
         </template>
     </data>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <record id="document_view_search" model="ir.ui.view">
         <field name="name">Document search view</field>
         <field name="model">documents.document</field>
@@ -308,4 +308,4 @@
             <p class="o_view_nocontent_smiling_face">Upload <span class="fw-normal">a file or</span> drag <span class="fw-normal">it here.</span></p>
         </field>
     </record>
-</odoo>
+</koda>

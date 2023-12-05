@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- documents search view -->
     <record id="document_view_search_inherit_documents_product" model="ir.ui.view">
         <field name="name">documents.view.search.inherit.documents_product</field>
@@ -12,4 +12,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <record id='hr_expense_view_form_inherit_documents_hr_expense' model='ir.ui.view'>
         <field name="name">hr.expense.view.form.inherit.documents.hr.expense</field>
         <field name="model">hr.expense</field>
@@ -18,4 +18,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

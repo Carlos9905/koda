@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
@@ -114,7 +114,7 @@ patch(DocumentsInspector.prototype, {
         for (const document of selection) {
             if (document.data.handler === "spreadsheet") {
                 const resId = document.resId;
-                const { fetchSpreadsheetModel, freezeOdooData } = odoo.loader.modules.get("@spreadsheet/helpers/model");
+                const { fetchSpreadsheetModel, freezeOdooData } = koda.loader.modules.get("@spreadsheet/helpers/model");
                 const model = await fetchSpreadsheetModel(this.env, "documents.document", resId);
                 const data = await freezeOdooData(model);
                 spreadsheetShares.push({

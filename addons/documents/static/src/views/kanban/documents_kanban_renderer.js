@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { KanbanRenderer } from "@web/views/kanban/kanban_renderer";
@@ -12,7 +12,7 @@ import { DocumentsKanbanRecord } from "./documents_kanban_record";
 import { DocumentsActionHelper } from "../helper/documents_action_helper";
 import { DocumentsFileViewer } from "../helper/documents_file_viewer";
 import { useCommand } from "@web/core/commands/command_hook";
-import { useRef } from "@odoo/owl";
+import { useRef } from "@koda/owl";
 
 export class DocumentsKanbanRenderer extends KanbanRenderer {
     static props = [...KanbanRenderer.props, "inspectedDocuments", "previewStore"];

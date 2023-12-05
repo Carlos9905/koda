@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patchGraphSpreadsheet } from "@spreadsheet_edition/assets/graph_view/graph_view";
 import { SpreadsheetAction } from "@documents_spreadsheet/bundle/actions/spreadsheet_action";

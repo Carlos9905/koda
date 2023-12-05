@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="action_folder_settings_installer" model="ir.actions.act_window">
          <field name="name">Journals to synchronize</field>
          <field name="res_model">documents.account.folder.setting</field>
@@ -35,4 +35,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

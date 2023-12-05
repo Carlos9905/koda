@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
     <data>
         <record id="documents.documents_kanban_view_mobile_scss" model="ir.asset">
             <field name="name">Documents kanban view mobile SCSS</field>
@@ -8,4 +8,4 @@
             <field name="sequence" eval="17"/>
         </record>
     </data>
-</odoo>
+</koda>

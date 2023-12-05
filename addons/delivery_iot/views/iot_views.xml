@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <record id="iot_device_view_form_inherit" model="ir.ui.view">
         <field name="name">iot.device.view.form.inherit</field>
         <field name="model">iot.device</field>
@@ -13,4 +13,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

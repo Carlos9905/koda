@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { browser } from "@web/core/browser/browser";
@@ -7,7 +7,7 @@ import { useNestedSortable } from "@web/core/utils/nested_sortable";
 import { usePopover } from "@web/core/popover/popover_hook";
 import { useService } from "@web/core/utils/hooks";
 import { utils as uiUtils } from "@web/core/ui/ui_service";
-import { Component, onWillStart, useState } from "@odoo/owl";
+import { Component, onWillStart, useState } from "@koda/owl";
 import { toggleArchive } from "@documents/views/hooks";
 
 const VALUE_SELECTOR = [".o_search_panel_category_value", ".o_search_panel_filter_value"].join();

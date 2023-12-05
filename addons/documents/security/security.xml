@@ -1,4 +1,4 @@
-<odoo>
+<koda>
 
         <record id="module_category_documents_management" model="ir.module.category">
             <field name="name">Documents</field>
@@ -156,4 +156,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

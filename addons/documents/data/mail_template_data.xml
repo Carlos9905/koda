@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <!--Email template -->
         <record id="mail_template_document_request" model="mail.template">
@@ -104,7 +104,7 @@
                             <t t-if="object.date_deadline">
                                 This link expires on <b t-out="object.date_deadline or ''">2021-05-17</b>.<br/>
                             </t>
-                            Powered by <a target="_blank" href="https://www.odoo.com/app/documents" style="color: #875A7B;">Odoo Documents</a>
+                            Powered by <a target="_blank" href="https://www.koda.com/app/documents" style="color: #875A7B;">Odoo Documents</a>
                           </td></tr>
                         </table>
                     </td></tr>
@@ -219,7 +219,7 @@
                             <t t-if="object.create_share_id.date_deadline">
                                 This link expires on <b t-out="object.create_share_id.date_deadline">2021-05-17</b>.<br/>
                             </t>
-                            Powered by <a target="_blank" href="https://www.odoo.com/app/documents" style="color: #875A7B;">Odoo Documents</a>
+                            Powered by <a target="_blank" href="https://www.koda.com/app/documents" style="color: #875A7B;">Odoo Documents</a>
                           </td></tr>
                         </table>
                     </td></tr>
@@ -227,4 +227,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

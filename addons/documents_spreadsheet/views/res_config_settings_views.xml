@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="res_config_settings_view_form_inherit_documents_spreadsheet" model="ir.ui.view">
         <field name="name">res.config.settings.view.form.inherit.documents.spreadsheet</field>
         <field name="model">res.config.settings</field>
@@ -23,4 +23,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

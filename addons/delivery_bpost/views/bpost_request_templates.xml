@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
   <data noupdate="0">
     <template id="bpost_shipping_request" name="bpost shipping request">
       <tns:order xmlns:tns="http://schema.post.be/shm/deepintegration/v3/" xmlns="http://schema.post.be/shm/deepintegration/v3/national" xmlns:common="http://schema.post.be/shm/deepintegration/v3/common" xmlns:international="http://schema.post.be/shm/deepintegration/v3/international" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.post.be/shm/deepintegration/v3/">
@@ -73,4 +73,4 @@
       </tns:order>
     </template>
   </data>
-</odoo>
+</koda>

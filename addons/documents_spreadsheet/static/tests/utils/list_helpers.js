@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { createWebClient, doAction } from "@web/../tests/webclient/helpers";
 import {
@@ -21,7 +21,7 @@ import { waitForDataSourcesLoaded } from "@spreadsheet/../tests/utils/model";
 import { registry } from "@web/core/registry";
 import { fieldService } from "@web/core/field_service";
 import { browser } from "@web/core/browser/browser";
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@koda/owl";
 
 /** @typedef {import("@spreadsheet/o_spreadsheet/o_spreadsheet").Model} Model */
 

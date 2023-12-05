@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 
@@ -11,7 +11,7 @@ import { mockActionService } from "@documents_spreadsheet/../tests/spreadsheet_t
 
 import { start } from "@mail/../tests/helpers/test_utils";
 
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 
 import { loadBundle } from "@web/core/assets";
 import { browser } from "@web/core/browser/browser";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { PdfGroupName } from '@documents/owl/components/pdf_group_name/pdf_group_name';
 import { PdfPage } from '@documents/owl/components/pdf_page/pdf_page';
@@ -13,7 +13,7 @@ import { useService } from "@web/core/utils/hooks";
 
 import { ExitSplitToolsDialog } from "@documents/owl/components/pdf_exit_dialog/pdf_exit_dialog";
 
-import { Component, onWillStart, toRaw, useRef, useState, useEffect } from "@odoo/owl";
+import { Component, onWillStart, toRaw, useRef, useState, useEffect } from "@koda/owl";
 
 export class PdfManager extends Component {
     static components = {
@@ -264,7 +264,7 @@ export class PdfManager extends Component {
      * @return {Boolean}
      */
     get isDebugMode() {
-        return Boolean(odoo.debug);
+        return Boolean(koda.debug);
     }
     /**
      * @return {String[]}
@@ -709,7 +709,7 @@ export class PdfManager extends Component {
         // Http request
         const document = this.props.documents[0];
         const data = new FormData();
-        data.append("csrf_token", odoo.csrf_token);
+        data.append("csrf_token", koda.csrf_token);
         for (const file of files) {
             data.append("ufile", file);
         }

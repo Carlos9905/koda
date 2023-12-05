@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import {
     getBasicData,
@@ -33,7 +33,7 @@ import {
     THIS_YEAR_GLOBAL_FILTER,
     LAST_YEAR_GLOBAL_FILTER,
 } from "@spreadsheet/../tests/utils/global_filter";
-import { helpers } from "@odoo/o-spreadsheet";
+import { helpers } from "@koda/o-spreadsheet";
 
 const { toZone } = helpers;
 

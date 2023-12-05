@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Document } from "./document_model";
 import { registry } from "@web/core/registry";

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { registries, components } from "@odoo/o-spreadsheet";
+import { registries, components } from "@koda/o-spreadsheet";
 
 import { spreadsheetLinkMenuCellService } from "@spreadsheet/ir_ui_menu/index";
 import { registry } from "@web/core/registry";
@@ -77,7 +77,7 @@ QUnit.module("spreadsheet > menu link ui", { beforeEach }, () => {
         const cell = getCell(model, "A1");
         assert.equal(
             cell.content,
-            "[menu with xmlid](odoo://ir_menu_xml_id/test_menu)",
+            "[menu with xmlid](koda://ir_menu_xml_id/test_menu)",
             "The content should be the complete markdown link"
         );
         assert.equal(
@@ -162,7 +162,7 @@ QUnit.module("spreadsheet > menu link ui", { beforeEach }, () => {
             const cell = getCell(model, "A1");
             assert.equal(
                 cell.content,
-                "[menu without xmlid](odoo://ir_menu_id/12)",
+                "[menu without xmlid](koda://ir_menu_id/12)",
                 "The content should be the complete markdown link"
             );
             assert.equal(
@@ -197,7 +197,7 @@ QUnit.module("spreadsheet > menu link ui", { beforeEach }, () => {
         const { model } = await createSpreadsheet({
             serverData: getMenuServerData(),
         });
-        setCellContent(model, "A1", "[menu with xmlid](odoo://ir_menu_xml_id/test_menu)");
+        setCellContent(model, "A1", "[menu with xmlid](koda://ir_menu_xml_id/test_menu)");
         setSelection(model, "A1");
         await nextTick();
         const link = document.querySelector("a.o-link");

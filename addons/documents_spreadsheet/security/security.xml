@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
 
         <record id="spreadsheet_manager_templates" model="ir.rule">
@@ -34,4 +34,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

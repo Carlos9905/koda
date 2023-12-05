@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Messaging } from "@mail/core/common/messaging_service";
 

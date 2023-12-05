@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { ListRenderer } from "@web/views/list/list_renderer";
@@ -12,7 +12,7 @@ import { DocumentsActionHelper } from "../helper/documents_action_helper";
 import { DocumentsFileViewer } from "../helper/documents_file_viewer";
 import { DocumentsListRendererCheckBox } from "./documents_list_renderer_checkbox";
 import { useCommand } from "@web/core/commands/command_hook";
-import { useRef } from "@odoo/owl";
+import { useRef } from "@koda/owl";
 
 export class DocumentsListRenderer extends ListRenderer {
     static props = [...ListRenderer.props, "inspectedDocuments", "previewStore"];

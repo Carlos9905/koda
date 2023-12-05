@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <record id="folder_view_search" model="ir.ui.view">
         <field name="name">Workspace search</field>
         <field name="model">documents.folder</field>
@@ -136,4 +136,4 @@
               (0, 0, {'view_mode': 'tree', 'view_id': ref('documents.folder_view_tree')}),
               (0, 0, {'view_mode': 'form', 'view_id': ref('documents.folder_view_form')})]"/>
       </record>
-</odoo>
+</koda>

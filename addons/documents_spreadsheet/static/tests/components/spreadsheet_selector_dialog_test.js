@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { SpreadsheetSelectorDialog } from "@spreadsheet_edition/assets/components/spreadsheet_selector_dialog/spreadsheet_selector_dialog";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";

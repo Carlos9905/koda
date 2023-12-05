@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 import { click, nextTick, getFixture } from "@web/../tests/helpers/utils";
 
 import { selectCell } from "@spreadsheet/../tests/utils/commands";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { getBasicData, getBasicServerData } from "@spreadsheet/../tests/utils/data";
 import { createSpreadsheetFromPivotView } from "../../utils/pivot_helpers";
 

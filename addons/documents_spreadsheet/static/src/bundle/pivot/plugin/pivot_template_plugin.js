@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { CommandResult } from "@spreadsheet/o_spreadsheet/cancelled_reason";
 import { pivotFormulaRegex } from "@spreadsheet/pivot/pivot_helpers";
 const { parse, astToFormula } = spreadsheet;

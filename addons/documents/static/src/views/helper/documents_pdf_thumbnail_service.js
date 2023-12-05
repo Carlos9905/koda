@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { useBus } from "@web/core/utils/hooks";
 import { Mutex } from "@web/core/utils/concurrency";
 import { loadBundle } from "@web/core/assets";
-import { useComponent } from "@odoo/owl";
+import { useComponent } from "@koda/owl";
 
 export const documentsPdfThumbnailService = {
     dependencies: ["orm"],

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { nextTick, click } from "@web/../tests/helpers/utils";
 import { getBasicData } from "@spreadsheet/../tests/utils/data";
 import { getCell, getCellFormula } from "@spreadsheet/../tests/utils/getters";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <record id="action_view_search" model="ir.ui.view">
         <field name="name">Action search view</field>
         <field name="model">documents.workflow.rule</field>
@@ -130,4 +130,4 @@
         <field name="res_model">documents.workflow.rule</field>
         <field name="view_mode">tree,form</field>
     </record>
-</odoo>
+</koda>

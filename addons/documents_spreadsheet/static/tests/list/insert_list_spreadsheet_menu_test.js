@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { spawnListViewForSpreadsheet, toggleCogMenuSpreadsheet } from "../utils/list_helpers";
 import { SpreadsheetAction } from "@documents_spreadsheet/bundle/actions/spreadsheet_action";

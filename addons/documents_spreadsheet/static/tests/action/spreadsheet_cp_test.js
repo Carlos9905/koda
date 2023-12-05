@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { doAction } from "@web/../tests/webclient/helpers";
 import {
@@ -15,7 +15,7 @@ import { browser } from "@web/core/browser/browser";
 import { createSpreadsheet } from "../spreadsheet_test_utils";
 import { getBasicData, getBasicServerData } from "@spreadsheet/../tests/utils/data";
 import { createSpreadsheetFromPivotView } from "../utils/pivot_helpers";
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 
 let target;
 

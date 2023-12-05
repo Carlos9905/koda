@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Domain } from '@web/core/domain';
 import { patch } from "@web/core/utils/patch";

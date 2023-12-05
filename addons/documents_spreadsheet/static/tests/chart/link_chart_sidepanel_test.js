@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import {
     click,
@@ -155,7 +155,7 @@ QUnit.module(
 
     () => {
         QUnit.test(
-            "can link an odoo menu to a basic chart chart in the side panel",
+            "can link an koda menu to a basic chart chart in the side panel",
             async function (assert) {
                 const { model } = await createSpreadsheet({
                     serverData: this.serverData,
@@ -169,7 +169,7 @@ QUnit.module(
                 const irMenuField = target.querySelector(".o-ir-menu-selector input");
                 assert.ok(
                     irMenuField,
-                    "A menu to link charts to odoo menus was added to the side panel"
+                    "A menu to link charts to koda menus was added to the side panel"
                 );
                 await click(irMenuField);
                 await editInput(irMenuField, null, "");
@@ -184,7 +184,7 @@ QUnit.module(
         );
 
         QUnit.test(
-            "can link an odoo menu to a scorecard chart chart in the side panel",
+            "can link an koda menu to a scorecard chart chart in the side panel",
             async function (assert) {
                 const { model } = await createSpreadsheet({
                     serverData: this.serverData,
@@ -198,7 +198,7 @@ QUnit.module(
                 const irMenuField = target.querySelector(".o-ir-menu-selector input");
                 assert.ok(
                     irMenuField,
-                    "A menu to link charts to odoo menus was added to the side panel"
+                    "A menu to link charts to koda menus was added to the side panel"
                 );
                 await click(irMenuField);
                 await editInput(irMenuField, null, "");
@@ -213,7 +213,7 @@ QUnit.module(
         );
 
         QUnit.test(
-            "can link an odoo menu to a gauge chart chart in the side panel",
+            "can link an koda menu to a gauge chart chart in the side panel",
             async function (assert) {
                 const { model } = await createSpreadsheet({
                     serverData: this.serverData,
@@ -227,7 +227,7 @@ QUnit.module(
                 const irMenuField = target.querySelector(".o-ir-menu-selector input");
                 assert.ok(
                     irMenuField,
-                    "A menu to link charts to odoo menus was added to the side panel"
+                    "A menu to link charts to koda menus was added to the side panel"
                 );
                 await click(irMenuField);
                 await editInput(irMenuField, null, "");
@@ -242,7 +242,7 @@ QUnit.module(
         );
 
         QUnit.test(
-            "can remove link between an odoo menu and a chart in the side panel",
+            "can remove link between an koda menu and a chart in the side panel",
             async function (assert) {
                 const { model } = await createSpreadsheet({
                     serverData: this.serverData,

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { session } from "@web/session";
@@ -27,7 +27,7 @@ import {
     onPatched,
     onWillUpdateProps,
     onWillStart,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 const { DateTime } = luxon;
 
@@ -190,7 +190,7 @@ export class DocumentsInspector extends Component {
     }
 
     get isDebugMode() {
-        return Boolean(odoo.debug);
+        return Boolean(koda.debug);
     }
 
     get isMobile() {

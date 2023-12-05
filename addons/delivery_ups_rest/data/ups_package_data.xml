@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
 
         <record id="ups_packaging_01" model="stock.package.type">
@@ -76,4 +76,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

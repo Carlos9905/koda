@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { setCellContent, setSelection } from "@spreadsheet/../tests/utils/commands";
 import { getCellFormula } from "@spreadsheet/../tests/utils/getters";

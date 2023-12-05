@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { PdfManager } from "@documents/owl/components/pdf_manager/pdf_manager";
 import { getFixture, nextTick, click, patchWithCleanup, mount } from "@web/../tests/helpers/utils";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo><data noupdate="1">
+<koda><data noupdate="1">
 
     <!-- Email layout: encapsulation when sending (not used in backend display) -->
     <template id="digest_mail_layout">
@@ -396,7 +396,7 @@
                                                     <t t-out="preference" />
                                                 </div>
                                                 <div class="by_odoo" style="margin-bottom: 15px;">
-                                                    Sent by <a href="https://www.odoo.com" target="_blank">
+                                                    Sent by <a href="https://www.koda.com" target="_blank">
                                                     <span class="odoo_link_text">Odoo</span></a>
                                                     <t t-if="unsubscribe_token">
                                                         –
@@ -434,7 +434,7 @@
                             <div id="footer">
                                 <p style="font-weight: bold;" t-esc="company.name" />
                                 <p class="by_odoo" id="powered">
-                                    Powered by <a href="https://www.odoo.com" target="_blank" class="odoo_link">
+                                    Powered by <a href="https://www.koda.com" target="_blank" class="odoo_link">
                                         <span class="odoo_link_text">Odoo</span></a>
                                 </p>
                             </div>
@@ -456,7 +456,7 @@
         <tbody>
             <tr>
                 <td align="right" style="width: 50%;">
-                    <img src="https://www.odoo.com/web/image/24717933/odoo-mobile.png" alt="Odoo Mobile" />
+                    <img src="https://www.koda.com/web/image/24717933/koda-mobile.png" alt="Odoo Mobile" />
                 </td>
                 <td align="left" style="width: 50%;">
                     <table>
@@ -468,7 +468,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="https://play.google.com/store/apps/details?id=com.odoo.mobile"
+                                    <a href="https://play.google.com/store/apps/details?id=com.koda.mobile"
                                         target="_blank">
                                             <img class="download_app" height="40" width="135"
                                                     src="https://download.odoocdn.com/digests/digest/static/src/img/google_play.png" />
@@ -477,7 +477,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="https://itunes.apple.com/us/app/odoo/id1272543640" target="_blank">
+                                    <a href="https://itunes.apple.com/us/app/koda/id1272543640" target="_blank">
                                         <img class="download_app" height="40" width="135"
                                                 src="https://download.odoocdn.com/digests/digest/static/src/img/app_store.png" />
                                     </a>
@@ -513,4 +513,4 @@
     </template>
 
 </data>
-</odoo>
+</koda>

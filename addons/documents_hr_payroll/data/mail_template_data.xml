@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="mail_template_new_declaration" model="mail.template">
             <field name="name">Payroll: New Declaration</field>
@@ -21,4 +21,4 @@
                 <field name="auto_delete" eval="True"/>
           </record>
     </data>
-</odoo>
+</koda>

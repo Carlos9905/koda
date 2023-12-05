@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { TemplateDialog } from "@documents_spreadsheet/spreadsheet_template/spreadsheet_template_dialog";
 import { useService } from "@web/core/utils/hooks";
@@ -45,7 +45,7 @@ export const DocumentsSpreadsheetControllerMixin = () => ({
             if (doc.data.handler === "spreadsheet") {
                 const resId = doc.resId;
                 await loadBundle("spreadsheet.o_spreadsheet");
-                const { fetchSpreadsheetModel, freezeOdooData } = odoo.loader.modules.get("@spreadsheet/helpers/model");
+                const { fetchSpreadsheetModel, freezeOdooData } = koda.loader.modules.get("@spreadsheet/helpers/model");
                 const model = await fetchSpreadsheetModel(this.env, "documents.document", resId);
                 const data = await freezeOdooData(model);
                 spreadsheetShares.push({

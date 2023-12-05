@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 export default {
     async get_link_proportion(orm, documents_ids = false, domain = false){

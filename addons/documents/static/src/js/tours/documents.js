@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 registry.category("web_tour.tours").add("documents_tour", {
     url: "/web",

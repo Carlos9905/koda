@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { listView } from "@web/views/list/list_view";
 import { DocumentsModelMixin, DocumentsRecordMixin } from "../documents_model_mixin";

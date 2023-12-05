@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import {
     click,
@@ -33,7 +33,7 @@ import {
 } from "@spreadsheet/../tests/utils/getters";
 import { session } from "@web/session";
 import { createWebClient, doAction } from "@web/../tests/webclient/helpers";
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 
 QUnit.module("spreadsheet pivot view", {}, () => {
     QUnit.test("simple pivot export", async (assert) => {

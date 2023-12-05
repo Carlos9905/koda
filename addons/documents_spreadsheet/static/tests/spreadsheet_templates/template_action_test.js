@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getBasicServerData } from "@spreadsheet/../tests/utils/data";
 import { createSpreadsheetTemplate } from "../spreadsheet_test_utils";
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 import { setCellContent } from "@spreadsheet/../tests/utils/commands";
 import { getCellValue } from "@spreadsheet/../tests/utils/getters";
 

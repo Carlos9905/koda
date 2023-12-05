@@ -1,18 +1,18 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { registry } from "@web/core/registry";
 import { x2ManyCommands } from "@web/core/orm_service";
 
 import { SpreadsheetComponent } from "@spreadsheet_edition/bundle/actions/spreadsheet_component";
 import { SpreadsheetName } from "@spreadsheet_edition/bundle/actions/control_panel/spreadsheet_name";
 
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 import { UNTITLED_SPREADSHEET_NAME } from "@spreadsheet/helpers/constants";
 import { convertFromSpreadsheetTemplate } from "@documents_spreadsheet/bundle/helpers";
 import { AbstractSpreadsheetAction } from "@spreadsheet_edition/bundle/actions/abstract_spreadsheet_action";
 import { DocumentsSpreadsheetControlPanel } from "../components/control_panel/spreadsheet_control_panel";
 import { _t } from "@web/core/l10n/translation";
 
-import { useState, useSubEnv } from "@odoo/owl";
+import { useState, useSubEnv } from "@koda/owl";
 
 export class SpreadsheetAction extends AbstractSpreadsheetAction {
     resModel = "documents.document";

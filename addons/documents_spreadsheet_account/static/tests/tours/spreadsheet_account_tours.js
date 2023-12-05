@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registerTemplateTour } from "@documents_spreadsheet/../tests/utils/tour";
 

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ActivityMenu } from "@mail/core/web/activity_menu";
 

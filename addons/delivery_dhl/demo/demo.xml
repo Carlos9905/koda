@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
 
         <!-- These credentials work only if the shipper is located in the US -->
@@ -90,4 +90,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

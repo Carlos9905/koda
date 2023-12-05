@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { insertList } from "@spreadsheet_edition/bundle/list/list_init_callback";
 import { InsertListSpreadsheetMenu } from "@spreadsheet_edition/assets/list_view/insert_list_spreadsheet_menu_owl";
 import { selectCell, setCellContent } from "@spreadsheet/../tests/utils/commands";
@@ -382,7 +382,7 @@ QUnit.module("document_spreadsheet > list view", {}, () => {
         selectCell(model, "B2");
         const root = cellMenuRegistry.getAll().find((item) => item.id === "list_see_record");
         assert.ok(root.isVisible(env));
-        setCellContent(model, "B2", getCellFormula(model, "B2").replace("ODOO.LIST", "odoo.list"));
+        setCellContent(model, "B2", getCellFormula(model, "B2").replace("ODOO.LIST", "koda.list"));
         assert.ok(root.isVisible(env));
     });
 

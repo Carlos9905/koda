@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { SearchBar } from "@web/search/search_bar/search_bar";
@@ -11,7 +11,7 @@ import { useHotkey } from "@web/core/hotkeys/hotkey_hook";
 import { getDefaultConfig } from "@web/views/view";
 import { _t } from "@web/core/l10n/translation";
 
-import { Component, useState, useSubEnv, useChildSubEnv, onWillStart } from "@odoo/owl";
+import { Component, useState, useSubEnv, useChildSubEnv, onWillStart } from "@koda/owl";
 
 export class TemplateDialog extends Component {
     setup() {

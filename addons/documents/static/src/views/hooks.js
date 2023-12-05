@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useBus, useService } from "@web/core/utils/hooks";
@@ -9,7 +9,7 @@ import { FormViewDialog } from "@web/views/view_dialogs/form_view_dialog";
 import { useSetupView } from "@web/views/view_hook";
 import { PdfManager } from "@documents/owl/components/pdf_manager/pdf_manager";
 import { x2ManyCommands } from "@web/core/orm_service";
-import { EventBus, onWillStart, markup, useComponent, useEnv, useRef, useSubEnv } from "@odoo/owl";
+import { EventBus, onWillStart, markup, useComponent, useEnv, useRef, useSubEnv } from "@koda/owl";
 
 /**
  * Controller/View hooks

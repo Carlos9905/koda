@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { downloadFile } from "@web/core/network/download";
 import { getFixture, nextTick, click, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { contains } from "@web/../tests/utils";

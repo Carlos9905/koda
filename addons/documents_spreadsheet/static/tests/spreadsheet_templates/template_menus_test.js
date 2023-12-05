@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { nextTick, getFixture, editInput } from "@web/../tests/helpers/utils";
 import { registry } from "@web/core/registry";
 
 import { actionService } from "@web/webclient/actions/action_service";
 import { createSpreadsheet, createSpreadsheetTemplate } from "../spreadsheet_test_utils";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { getBasicData } from "@spreadsheet/../tests/utils/data";
 import { doMenuAction } from "@spreadsheet/../tests/utils/ui";
 import { createSpreadsheetFromPivotView } from "../utils/pivot_helpers";

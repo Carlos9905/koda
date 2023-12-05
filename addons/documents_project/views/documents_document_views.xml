@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="document_view_search_inherit" model="ir.ui.view">
         <field name="name">Document search view inherit</field>
         <field name="model">documents.document</field>
@@ -11,4 +11,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

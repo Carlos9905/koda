@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { getBasicServerData } from "@spreadsheet/../tests/utils/data";
 import { doMenuAction } from "@spreadsheet/../tests/utils/ui";
 import { click, mockDownload, nextTick, triggerEvent } from "@web/../tests/helpers/utils";
@@ -122,7 +122,7 @@ QUnit.module("documents_spreadsheet > Topbar Menu Items", {}, function () {
         assert.verifySteps(["currencies-loaded"]);
     });
 
-    QUnit.test("Can Insert odoo formulas from Insert > Functions > Odoo", async function (assert) {
+    QUnit.test("Can Insert koda formulas from Insert > Functions > Odoo", async function (assert) {
         const { model } = await createSpreadsheet();
 
         setCellContent(model, "A1", `Hi :)`);

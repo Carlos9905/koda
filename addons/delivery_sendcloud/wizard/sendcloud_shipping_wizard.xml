@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <record id="view_shipping_method_sendcloud" model="ir.ui.view">
         <field name="name">SendCloud Shipping Wizard</field>
         <field name="model">sendcloud.shipping.wizard</field>
@@ -20,4 +20,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

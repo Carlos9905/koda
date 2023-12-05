@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { nextTick, getFixture } from "@web/../tests/helpers/utils";
 import { createSpreadsheet } from "../spreadsheet_test_utils";
 import {
@@ -388,7 +388,7 @@ QUnit.module(
                 setCellContent(
                     model,
                     "B4",
-                    getCellFormula(model, "B4").replace("ODOO.PIVOT", "odoo.pivot")
+                    getCellFormula(model, "B4").replace("ODOO.PIVOT", "koda.pivot")
                 );
                 assert.ok(root.isVisible(env));
             }

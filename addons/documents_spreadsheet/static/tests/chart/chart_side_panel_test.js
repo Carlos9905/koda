@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import {
     click,
@@ -56,7 +56,7 @@ QUnit.module("documents_spreadsheet > chart side panel", { beforeEach }, () => {
         }
     );
 
-    QUnit.test("Change odoo chart type", async (assert) => {
+    QUnit.test("Change koda chart type", async (assert) => {
         const { model, env } = await createSpreadsheetFromGraphView();
         const sheetId = model.getters.getActiveSheetId();
         const chartId = model.getters.getChartIds(sheetId)[0];
@@ -126,7 +126,7 @@ QUnit.module("documents_spreadsheet > chart side panel", { beforeEach }, () => {
         assert.strictEqual(model.getters.getChart(chartId).title, "bla");
     });
 
-    QUnit.test("Open chart odoo's data properties", async function (assert) {
+    QUnit.test("Open chart koda's data properties", async function (assert) {
         const target = getFixture();
         const { model, env } = await createSpreadsheetFromGraphView();
         const sheetId = model.getters.getActiveSheetId();

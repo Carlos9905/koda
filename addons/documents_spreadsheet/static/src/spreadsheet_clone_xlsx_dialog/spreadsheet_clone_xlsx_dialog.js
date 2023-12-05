@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { omit } from "@web/core/utils/objects";
 import { useService } from "@web/core/utils/hooks";
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 export class SpreadsheetCloneXlsxDialog extends ConfirmationDialog {
     static template = "documents_spreadsheet.SpreadsheetCloneXlsxDialog";

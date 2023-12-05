@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="documents_project.portal_tasks_list" inherit_id="project.portal_tasks_list">
         <xpath expr="//div[@name='project_name']" position="inside">
             <span t-if="tasks[0].project_id.use_documents and tasks[0].project_id.shared_document_count" class="ms-auto">
@@ -9,4 +9,4 @@
             </span>
         </xpath>
     </template>
-</odoo>
+</koda>

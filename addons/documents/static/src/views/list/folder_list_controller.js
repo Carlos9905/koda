@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ListController } from '@web/views/list/list_controller';
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";

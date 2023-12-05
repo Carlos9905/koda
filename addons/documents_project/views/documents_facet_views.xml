@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="facet_view_form_with_folder_inherit" model="ir.ui.view">
         <field name="name">facet.view.form.with.folder.inherit</field>
         <field name="model">documents.facet</field>
@@ -12,4 +12,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

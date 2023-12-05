@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ActivityModel } from "@mail/views/web/activity/activity_model";
 import { DocumentsModelMixin, DocumentsRecordMixin } from "../documents_model_mixin";
