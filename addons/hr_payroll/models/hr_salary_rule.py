@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools.safe_eval import safe_eval
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools.safe_eval import safe_eval
 
 
 class HrSalaryRule(models.Model):

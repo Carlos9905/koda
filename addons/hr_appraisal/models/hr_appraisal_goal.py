@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, api, models, _
-from odoo.exceptions import UserError
-from odoo.tools.misc import get_lang
+from koda import fields, api, models, _
+from koda.exceptions import UserError
+from koda.tools.misc import get_lang
 
 
 class HrAppraisalGoal(models.Model):

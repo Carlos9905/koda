@@ -3,7 +3,7 @@
 
 from usb import core
 
-from odoo.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.interface import Interface
 
 
 class USBInterface(Interface):

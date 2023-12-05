@@ -1,9 +1,9 @@
 # # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import UserError
-from odoo.tests import tagged, HttpCase
-from odoo.tools import file_open
+from koda.exceptions import UserError
+from koda.tests import tagged, HttpCase
+from koda.tools import file_open
 
 @tagged('post_install', '-at_install')
 class TestHrRecruitmentSign(HttpCase):

@@ -16,12 +16,12 @@ import time
 import urllib3
 from usb import util
 
-from odoo import http, _
-from odoo.addons.hw_drivers.controllers.proxy import proxy_drivers
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
+from koda import http, _
+from koda.addons.hw_drivers.controllers.proxy import proxy_drivers
+from koda.addons.hw_drivers.driver import Driver
+from koda.addons.hw_drivers.event_manager import event_manager
+from koda.addons.hw_drivers.main import iot_devices
+from koda.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 xlib = ctypes.cdll.LoadLibrary('libX11.so.6')

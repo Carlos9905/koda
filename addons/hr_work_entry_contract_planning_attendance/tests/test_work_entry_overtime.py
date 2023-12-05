@@ -4,8 +4,8 @@
 from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.hr_work_entry_contract_attendance.tests.common import HrWorkEntryAttendanceCommon
-from odoo.tests import tagged
+from koda.addons.hr_work_entry_contract_attendance.tests.common import HrWorkEntryAttendanceCommon
+from koda.tests import tagged
 
 
 @tagged('-at_install', 'post_install', 'work_entry_overtime')

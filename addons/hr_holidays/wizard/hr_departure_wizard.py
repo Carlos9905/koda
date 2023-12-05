@@ -3,7 +3,7 @@
 
 from datetime import datetime, timedelta
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class HrDepartureWizard(models.TransientModel):

@@ -5,7 +5,7 @@ from cups import Connection as cups_connection
 from re import sub
 from threading import Lock
 
-from odoo.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.interface import Interface
 
 conn = cups_connection()
 PPDs = conn.getPPDs()

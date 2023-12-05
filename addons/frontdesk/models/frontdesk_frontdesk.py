@@ -6,7 +6,7 @@ import uuid
 from werkzeug.urls import url_join
 from datetime import datetime, timedelta
 
-from odoo import models, fields, api, tools, _
+from koda import models, fields, api, tools, _
 
 ASK_FIELDS_SELECTION = [
     ("required", "Required"),

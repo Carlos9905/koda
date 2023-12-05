@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.tools.misc import format_amount
+from koda import api, fields, models, _
+from koda.tools.misc import format_amount
 from werkzeug.urls import url_encode
 
 

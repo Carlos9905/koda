@@ -4,7 +4,7 @@
 import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class Department(models.Model):

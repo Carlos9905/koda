@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from psycopg2 import sql
 
-from odoo import api, tools, fields, models
+from koda import api, tools, fields, models
 
 
 class TimesheetsAnalysisReport(models.Model):

@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 
 class EventBoothRegistration(models.Model):

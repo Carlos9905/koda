@@ -3,11 +3,11 @@ from datetime import date
 
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.addons.hr_expense.tests.common import TestExpenseCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged, Form
-from odoo.tools.misc import formatLang
+from koda import Command
+from koda.addons.hr_expense.tests.common import TestExpenseCommon
+from koda.exceptions import UserError
+from koda.tests import tagged, Form
+from koda.tools.misc import formatLang
 
 
 @tagged('-at_install', 'post_install')

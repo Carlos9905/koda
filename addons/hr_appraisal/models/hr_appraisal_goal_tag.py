@@ -3,7 +3,7 @@
 
 from random import randint
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 class HrAppraisalGoalTag(models.Model):
     _name = 'hr.appraisal.goal.tag'

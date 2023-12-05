@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, models
-from odoo.exceptions import AccessError
+from koda import _, api, models
+from koda.exceptions import AccessError
 
 class HrPayslip(models.Model):
     _inherit = 'hr.payslip'

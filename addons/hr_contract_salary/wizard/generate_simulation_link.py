@@ -5,8 +5,8 @@ import uuid
 from dateutil.relativedelta import relativedelta
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.exceptions import UserError
 
 from werkzeug.urls import url_encode
 

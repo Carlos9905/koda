@@ -2,10 +2,10 @@
 
 from markupsafe import Markup
 
-from odoo.addons.iap.tools import iap_tools
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import is_html_empty
+from koda.addons.iap.tools import iap_tools
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools import is_html_empty
 
 import time
 

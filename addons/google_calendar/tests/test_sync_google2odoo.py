@@ -5,11 +5,11 @@ import pytz
 from datetime import datetime, date
 
 from dateutil.relativedelta import relativedelta
-from odoo.tests.common import new_test_user
-from odoo.exceptions import ValidationError
-from odoo.addons.google_calendar.tests.test_sync_common import TestSyncGoogle, patch_api
-from odoo.addons.google_calendar.utils.google_calendar import GoogleEvent
-from odoo import Command, tools
+from koda.tests.common import new_test_user
+from koda.exceptions import ValidationError
+from koda.addons.google_calendar.tests.test_sync_common import TestSyncGoogle, patch_api
+from koda.addons.google_calendar.utils.google_calendar import GoogleEvent
+from koda import Command, tools
 
 class TestSyncGoogle2Odoo(TestSyncGoogle):
 

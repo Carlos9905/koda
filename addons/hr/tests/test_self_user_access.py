@@ -5,9 +5,9 @@ from collections import OrderedDict
 from itertools import chain
 from lxml import etree
 
-from odoo.addons.hr.tests.common import TestHrCommon
-from odoo.tests import new_test_user, tagged, Form
-from odoo.exceptions import AccessError
+from koda.addons.hr.tests.common import TestHrCommon
+from koda.tests import new_test_user, tagged, Form
+from koda.exceptions import AccessError
 
 @tagged('post_install', '-at_install')
 class TestSelfAccessProfile(TestHrCommon):

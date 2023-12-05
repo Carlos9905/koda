@@ -6,7 +6,7 @@ import subprocess
 from vcgencmd import Vcgencmd
 import RPi.GPIO as GPIO
 
-from odoo.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.interface import Interface
 
 
 class DisplayInterface(Interface):

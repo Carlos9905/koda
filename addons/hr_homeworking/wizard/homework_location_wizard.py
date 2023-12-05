@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, api
+from koda import fields, models, api
 
-from odoo.addons.hr_homeworking.models.hr_homeworking import DAYS
+from koda.addons.hr_homeworking.models.hr_homeworking import DAYS
 
 class HomeworkLocationWizard(models.TransientModel):
     _name = 'homework.location.wizard'

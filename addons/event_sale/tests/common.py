@@ -3,9 +3,9 @@
 
 from datetime import datetime, timedelta
 
-from odoo import fields
-from odoo.addons.event.tests.common import EventCase
-from odoo.addons.sales_team.tests.common import TestSalesCommon
+from koda import fields
+from koda.addons.event.tests.common import EventCase
+from koda.addons.sales_team.tests.common import TestSalesCommon
 
 
 class TestEventSaleCommon(EventCase, TestSalesCommon):

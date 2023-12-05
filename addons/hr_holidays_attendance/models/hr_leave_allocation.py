@@ -3,9 +3,9 @@
 
 from datetime import datetime
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.osv import expression
 
 
 class HolidaysAllocation(models.Model):

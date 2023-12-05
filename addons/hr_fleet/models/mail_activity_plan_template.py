@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo import exceptions
+from koda import api, fields, models, _
+from koda import exceptions
 
 
 class MailActivityPlanTemplate(models.Model):

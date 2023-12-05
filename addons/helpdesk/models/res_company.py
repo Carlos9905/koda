@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command, api, models, _
+from koda import Command, api, models, _
 
 
 class ResCompany(models.Model):

@@ -3,8 +3,8 @@
 
 from datetime import date
 
-from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase, new_test_user
+from koda.exceptions import UserError
+from koda.tests.common import TransactionCase, new_test_user
 
 
 class TestHrAppraisalRequest(TransactionCase):

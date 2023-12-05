@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details
 from ast import literal_eval
 
-from odoo import models, api, fields, _
+from koda import models, api, fields, _
 
 class HelpdeskTicket(models.Model):
     _inherit = 'helpdesk.ticket'

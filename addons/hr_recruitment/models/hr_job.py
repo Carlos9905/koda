@@ -3,7 +3,7 @@
 import ast
 from collections import defaultdict
 
-from odoo import api, fields, models, SUPERUSER_ID, _
+from koda import api, fields, models, SUPERUSER_ID, _
 
 
 class Job(models.Model):

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import AccessError
-from odoo.tests import new_test_user
+from koda.exceptions import AccessError
+from koda.tests import new_test_user
 
 from .common import HelpdeskCommon
 

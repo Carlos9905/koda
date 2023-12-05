@@ -6,12 +6,12 @@ import datetime
 from dateutil import relativedelta
 from collections import defaultdict
 from pytz import timezone
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
-from odoo.tools import float_round
-from odoo.addons.rating.models.rating_data import RATING_LIMIT_MIN
-from odoo.addons.web.controllers.utils import clean_action
+from koda import api, Command, fields, models, _
+from koda.exceptions import ValidationError
+from koda.osv import expression
+from koda.tools import float_round
+from koda.addons.rating.models.rating_data import RATING_LIMIT_MIN
+from koda.addons.web.controllers.utils import clean_action
 
 
 class HelpdeskTeam(models.Model):

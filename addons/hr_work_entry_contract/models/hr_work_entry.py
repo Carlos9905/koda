@@ -6,9 +6,9 @@ import pytz
 from collections import defaultdict
 from itertools import chain
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
+from koda import api, fields, models, _
+from koda.exceptions import ValidationError
+from koda.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
 
 
 class HrWorkEntry(models.Model):

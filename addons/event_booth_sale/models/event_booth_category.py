@@ -3,8 +3,8 @@
 
 import logging
 
-from odoo import api, fields, models
-from odoo.addons.product.models.product_template import PRICE_CONTEXT_KEYS
+from koda import api, fields, models
+from koda.addons.product.models.product_template import PRICE_CONTEXT_KEYS
 
 _logger = logging.getLogger(__name__)
 

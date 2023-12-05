@@ -4,9 +4,9 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.exceptions import ValidationError
-from odoo.tests.common import TransactionCase, new_test_user
+from koda import fields
+from koda.exceptions import ValidationError
+from koda.tests.common import TransactionCase, new_test_user
 
 
 class TestHrAppraisal(TransactionCase):

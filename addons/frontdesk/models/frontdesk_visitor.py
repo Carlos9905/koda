@@ -4,7 +4,7 @@
 from werkzeug.urls import url_encode, url_join
 from markupsafe import Markup
 
-from odoo import models, fields, api, _, SUPERUSER_ID
+from koda import models, fields, api, _, SUPERUSER_ID
 
 class FrontdeskVisitor(models.Model):
     _name = 'frontdesk.visitor'

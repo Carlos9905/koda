@@ -6,9 +6,9 @@ from ast import literal_eval
 from pytz import timezone, UTC, utc
 from datetime import timedelta
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import format_time
+from koda import _, api, fields, models
+from koda.exceptions import UserError
+from koda.tools import format_time
 
 
 class HrEmployeeBase(models.AbstractModel):

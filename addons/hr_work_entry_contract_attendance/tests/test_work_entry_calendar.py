@@ -1,11 +1,11 @@
 #-*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.hr_work_entry_contract_attendance.tests.common import HrWorkEntryAttendanceCommon
+from koda.addons.hr_work_entry_contract_attendance.tests.common import HrWorkEntryAttendanceCommon
 
 from datetime import datetime, date
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
 @tagged('-at_install', 'post_install', 'work_entry_overtime')
 class TestPayslipOvertime(HrWorkEntryAttendanceCommon):

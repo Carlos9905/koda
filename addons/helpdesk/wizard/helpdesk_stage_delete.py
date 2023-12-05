@@ -3,7 +3,7 @@
 
 import ast
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
 
 class HelpdeskStageDelete(models.TransientModel):

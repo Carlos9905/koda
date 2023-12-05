@@ -4,9 +4,9 @@
 import logging
 
 from ast import literal_eval
-from odoo import fields, models, _, api
-from odoo.exceptions import UserError
-from odoo.fields import Datetime
+from koda import fields, models, _, api
+from koda.exceptions import UserError
+from koda.fields import Datetime
 
 _logger = logging.getLogger(__name__)
 

@@ -5,9 +5,9 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 
 from .common import HelpdeskCommon
-from odoo.tests.common import HttpCase
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.tests.common import HttpCase
+from koda.addons.mail.tests.common import MailCommon
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 class TestHelpdeskRating(HelpdeskCommon, HttpCase, MailCommon):

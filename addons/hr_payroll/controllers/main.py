@@ -6,8 +6,8 @@ import re
 
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
-from odoo.http import request, route, Controller, content_disposition
-from odoo.tools.safe_eval import safe_eval
+from koda.http import request, route, Controller, content_disposition
+from koda.tools.safe_eval import safe_eval
 
 
 class HrPayroll(Controller):

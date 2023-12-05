@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api
-from odoo.addons.resource.models.utils import string_to_datetime
-from odoo.osv import expression
-from odoo.tools import float_is_zero
+from koda import models, fields, api
+from koda.addons.resource.models.utils import string_to_datetime
+from koda.osv import expression
+from koda.tools import float_is_zero
 from dateutil.relativedelta import relativedelta
 
 class HrAttendance(models.Model):

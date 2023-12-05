@@ -4,9 +4,9 @@
 from collections import defaultdict
 import re
 
-from odoo import api, fields, models, _, _lt
-from odoo.exceptions import UserError, AccessError, ValidationError
-from odoo.osv import expression
+from koda import api, fields, models, _, _lt
+from koda.exceptions import UserError, AccessError, ValidationError
+from koda.osv import expression
 
 class AccountAnalyticLine(models.Model):
     _inherit = 'account.analytic.line'

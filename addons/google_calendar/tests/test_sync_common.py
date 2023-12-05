@@ -3,11 +3,11 @@
 
 from unittest.mock import MagicMock, patch
 
-from odoo.addons.google_calendar.utils.google_calendar import GoogleCalendarService
-from odoo.addons.google_account.models.google_service import GoogleService
-from odoo.addons.google_calendar.models.res_users import User
-from odoo.addons.google_calendar.models.google_sync import GoogleSync
-from odoo.tests.common import HttpCase
+from koda.addons.google_calendar.utils.google_calendar import GoogleCalendarService
+from koda.addons.google_account.models.google_service import GoogleService
+from koda.addons.google_calendar.models.res_users import User
+from koda.addons.google_calendar.models.google_sync import GoogleSync
+from koda.tests.common import HttpCase
 
 def patch_api(func):
     @patch.object(GoogleSync, '_google_insert', MagicMock(spec=GoogleSync._google_insert))

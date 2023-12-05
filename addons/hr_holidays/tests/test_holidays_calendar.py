@@ -3,11 +3,11 @@
 
 from datetime import date, timedelta
 
-from odoo.addons.base.tests.common import HttpCase
-from odoo.tests.common import tagged
-from odoo.tests.common import users
+from koda.addons.base.tests.common import HttpCase
+from koda.tests.common import tagged
+from koda.tests.common import users
 
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 @tagged('post_install', '-at_install', 'holiday_calendar')
 class TestHolidaysCalendar(HttpCase, TestHrHolidaysCommon):

@@ -5,8 +5,8 @@ from collections import defaultdict
 from datetime import datetime, date, time
 import pytz
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
+from koda import fields, models, _
+from koda.exceptions import UserError
 
 class HrWorkEntry(models.Model):
     _inherit = 'hr.work.entry'

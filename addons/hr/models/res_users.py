@@ -3,9 +3,9 @@
 
 from markupsafe import Markup
 
-from odoo import api, models, fields, _, SUPERUSER_ID
-from odoo.exceptions import AccessError
-from odoo.tools.misc import clean_context
+from koda import api, models, fields, _, SUPERUSER_ID
+from koda.exceptions import AccessError
+from koda.tools.misc import clean_context
 
 
 HR_READABLE_FIELDS = [

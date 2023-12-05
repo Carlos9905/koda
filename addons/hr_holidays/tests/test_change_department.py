@@ -4,7 +4,7 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta, MO, FR
 
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 
 class TestChangeDepartment(TestHrHolidaysCommon):

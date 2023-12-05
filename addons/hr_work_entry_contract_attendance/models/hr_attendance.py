@@ -4,8 +4,8 @@
 from datetime import datetime, time
 from collections import defaultdict
 
-from odoo import api, models
-from odoo.fields import Datetime
+from koda import api, models
+from koda.fields import Datetime
 
 class HrAttendance(models.Model):
     _inherit = 'hr.attendance'

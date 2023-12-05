@@ -6,9 +6,9 @@ from freezegun import freeze_time
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests import HttpCase, tagged, TransactionCase
+from koda.tests import HttpCase, tagged, TransactionCase
 
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.addons.mail.tests.common import mail_new_test_user
 
 @tagged('-at_install', 'post_install', 'payroll_dashboard_ui')
 class TestDashboardUi(HttpCase):

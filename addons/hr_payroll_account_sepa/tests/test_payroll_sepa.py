@@ -6,10 +6,10 @@ import base64
 from datetime import datetime, timedelta
 from lxml import etree
 
-from odoo.fields import Date
-from odoo.addons.hr_payroll_account.tests.test_hr_payroll_account import TestHrPayrollAccountCommon
-from odoo.tests import common, tagged
-from odoo.tools.misc import file_path
+from koda.fields import Date
+from koda.addons.hr_payroll_account.tests.test_hr_payroll_account import TestHrPayrollAccountCommon
+from koda.tests import common, tagged
+from koda.tools.misc import file_path
 
 
 @tagged('post_install', '-at_install')

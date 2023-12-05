@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See ICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class ReturnPicking(models.TransientModel):

@@ -4,7 +4,7 @@
 import logging
 from datetime import date
 
-from odoo import api, fields, models, _, exceptions
+from koda import api, fields, models, _, exceptions
 
 _logger = logging.getLogger(__name__)
 

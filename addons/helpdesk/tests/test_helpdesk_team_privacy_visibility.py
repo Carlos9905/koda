@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from .common import HelpdeskCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 class TestHelpdeskTeamPrivacyVisibility(HelpdeskCommon):

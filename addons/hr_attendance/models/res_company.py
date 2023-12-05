@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import fields, models, api
-from odoo.osv.expression import OR
+from koda import fields, models, api
+from koda.osv.expression import OR
 import uuid
 from werkzeug.urls import url_join
 

@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import pytz
 
-from odoo import api, models
-from odoo.addons.resource.models.utils import Intervals
+from koda import api, models
+from koda.addons.resource.models.utils import Intervals
 
 
 class HelpdeskTeam(models.Model):

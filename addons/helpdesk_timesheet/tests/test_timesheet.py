@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.exceptions import ValidationError
+from koda import Command
+from koda.tests import tagged
+from koda.exceptions import ValidationError
 
 from .common import TestHelpdeskTimesheetCommon
 

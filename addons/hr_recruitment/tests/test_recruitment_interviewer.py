@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import AccessError
-from odoo.tests.common import new_test_user
+from koda.exceptions import AccessError
+from koda.tests.common import new_test_user
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests import tagged
+from koda.addons.mail.tests.common import MailCommon
+from koda.tests import tagged
 
 
 @tagged('recruitment_interviewer')

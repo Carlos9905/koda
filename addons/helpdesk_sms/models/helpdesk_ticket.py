@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import api, models
+from koda import api, models
 
 
 class HelpdeskTicket(models.Model):

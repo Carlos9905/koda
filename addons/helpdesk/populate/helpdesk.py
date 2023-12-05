@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, Command
-from odoo.tools import populate
+from koda import models, Command
+from koda.tools import populate
 
 class HelpdeskStage(models.Model):
     _inherit = "helpdesk.stage"

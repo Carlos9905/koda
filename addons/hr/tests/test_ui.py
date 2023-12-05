@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import HttpCase, tagged, new_test_user
+from koda.tests import HttpCase, tagged, new_test_user
 
 @tagged('-at_install', 'post_install')
 class TestEmployeeUi(HttpCase):

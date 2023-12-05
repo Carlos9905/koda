@@ -7,9 +7,9 @@ import pytz
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools.misc import format_date
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools.misc import format_date
 
 _logger = logging.getLogger(__name__)
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, _
-from odoo.exceptions import AccessError, ValidationError
-from odoo.addons.base_iban.models.res_partner_bank import validate_iban
+from koda import api, models, _
+from koda.exceptions import AccessError, ValidationError
+from koda.addons.base_iban.models.res_partner_bank import validate_iban
 
 
 def valid_iban(iban):

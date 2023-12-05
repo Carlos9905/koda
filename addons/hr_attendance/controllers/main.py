@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import http, _
-from odoo.http import request
-from odoo.tools import float_round
+from koda import http, _
+from koda.http import request
+from koda.tools import float_round
 import datetime
 
 class HrAttendance(http.Controller):

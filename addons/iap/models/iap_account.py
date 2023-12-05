@@ -6,9 +6,9 @@ import threading
 import uuid
 import werkzeug.urls
 
-from odoo import api, fields, models
-from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import AccessError
+from koda import api, fields, models
+from koda.addons.iap.tools import iap_tools
+from koda.exceptions import AccessError
 
 _logger = logging.getLogger(__name__)
 

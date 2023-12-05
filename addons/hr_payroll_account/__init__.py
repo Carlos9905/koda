@@ -6,7 +6,7 @@ from . import report
 from . import wizard
 
 from collections import defaultdict
-from odoo import api, SUPERUSER_ID, _
+from koda import api, SUPERUSER_ID, _
 
 def _hr_payroll_account_post_init(env):
     for company in env['res.company'].search([('chart_template', '!=', False)]):

@@ -6,11 +6,11 @@ import unittest
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import tests
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.tools import date_utils
-from odoo.tools import mute_logger
+from koda import tests
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.exceptions import AccessError, UserError, ValidationError
+from koda.tools import date_utils
+from koda.tools import mute_logger
 
 
 @tests.tagged('access_rights', 'post_install', '-at_install')

@@ -4,8 +4,8 @@ from collections import defaultdict
 
 from pytz import timezone
 
-from odoo import models
-from odoo.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
+from koda import models
+from koda.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
 
 
 class HrContract(models.Model):

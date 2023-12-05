@@ -10,13 +10,13 @@ from collections import defaultdict, Counter
 from datetime import date, datetime, time
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv.expression import AND
-from odoo.tools import float_round, date_utils, convert_file, format_amount
-from odoo.tools.float_utils import float_compare
-from odoo.tools.misc import format_date
-from odoo.tools.safe_eval import safe_eval
+from koda import api, Command, fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.osv.expression import AND
+from koda.tools import float_round, date_utils, convert_file, format_amount
+from koda.tools.float_utils import float_compare
+from koda.tools.misc import format_date
+from koda.tools.safe_eval import safe_eval
 
 _logger = logging.getLogger(__name__)
 

@@ -3,7 +3,7 @@
 
 import win32print
 
-from odoo.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.interface import Interface
 
 class PrinterInterface(Interface):
     _loop_delay = 30

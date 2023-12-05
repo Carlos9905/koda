@@ -6,9 +6,9 @@ from dateutil.relativedelta import relativedelta
 from psycopg2 import IntegrityError
 import pytz
 
-from odoo.tests.common import tagged
-from odoo.tools import mute_logger
-from odoo.addons.hr_work_entry_contract.tests.common import TestWorkEntryBase
+from koda.tests.common import tagged
+from koda.tools import mute_logger
+from koda.addons.hr_work_entry_contract.tests.common import TestWorkEntryBase
 
 
 @tagged('work_entry')

@@ -3,10 +3,10 @@
 
 from datetime import date, datetime
 
-from odoo.exceptions import ValidationError, UserError
-from odoo.fields import Datetime
-from odoo.tests.common import tagged
-from odoo.addons.hr_payroll_holidays.tests.common import TestPayrollHolidaysBase
+from koda.exceptions import ValidationError, UserError
+from koda.fields import Datetime
+from koda.tests.common import tagged
+from koda.addons.hr_payroll_holidays.tests.common import TestPayrollHolidaysBase
 
 from dateutil.relativedelta import relativedelta
 

@@ -2,10 +2,10 @@
 
 from datetime import datetime
 
-from odoo.tests import new_test_user
-from odoo.tests.common import TransactionCase, tagged
+from koda.tests import new_test_user
+from koda.tests.common import TransactionCase, tagged
 
-from odoo.exceptions import AccessError, ValidationError
+from koda.exceptions import AccessError, ValidationError
 
 from freezegun import freeze_time
 import time

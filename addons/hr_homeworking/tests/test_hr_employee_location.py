@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.hr_homeworking.tests.common import TestHrHomeworkingCommon
+from koda.addons.hr_homeworking.tests.common import TestHrHomeworkingCommon
 
-from odoo.tests import tagged
+from koda.tests import tagged
 from datetime import datetime
 
 @tagged('post_install', '-at_install', "homeworking_tests")

@@ -7,8 +7,8 @@ import json
 
 from passlib.context import CryptContext
 
-from odoo import http
-from odoo.tools.config import config
+from koda import http
+from koda.tools.config import config
 
 _logger = logging.getLogger(__name__)
 

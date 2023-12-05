@@ -3,8 +3,8 @@
 
 from datetime import datetime
 
-from odoo.tests import tagged
-from odoo.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
+from koda.tests import tagged
+from koda.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
 
 @tagged('post_install', '-at_install')
 class TestTimesheetAttendance(TestCommonTimesheet):

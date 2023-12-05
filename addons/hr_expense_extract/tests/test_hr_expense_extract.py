@@ -1,7 +1,7 @@
-from odoo.addons.hr_expense.tests.common import TestExpenseCommon
-from odoo.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin
-from odoo.tests import tagged
-from odoo.tools import float_compare
+from koda.addons.hr_expense.tests.common import TestExpenseCommon
+from koda.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin
+from koda.tests import tagged
+from koda.tools import float_compare
 
 from ..models.hr_expense import OCR_VERSION
 

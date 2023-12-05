@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import models, fields, _
+from koda import models, fields, _
 
 class User(models.Model):
     _inherit = ['res.users']

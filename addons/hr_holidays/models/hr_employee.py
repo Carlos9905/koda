@@ -5,10 +5,10 @@ from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 import pytz
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.float_utils import float_round
-from odoo.addons.resource.models.utils import HOURS_PER_DAY
+from koda import _, api, fields, models
+from koda.exceptions import UserError, ValidationError
+from koda.tools.float_utils import float_round
+from koda.addons.resource.models.utils import HOURS_PER_DAY
 
 
 class HrEmployeeBase(models.AbstractModel):

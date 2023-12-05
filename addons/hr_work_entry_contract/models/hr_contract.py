@@ -8,11 +8,11 @@ import pytz
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.addons.resource.models.utils import string_to_datetime, Intervals
-from odoo.osv import expression
-from odoo.tools import ormcache
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.addons.resource.models.utils import string_to_datetime, Intervals
+from koda.osv import expression
+from koda.tools import ormcache
+from koda.exceptions import UserError
 
 
 class HrContract(models.Model):

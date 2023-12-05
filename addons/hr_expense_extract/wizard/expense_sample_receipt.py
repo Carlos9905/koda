@@ -3,8 +3,8 @@
 import base64
 import datetime
 
-from odoo import models, _, Command
-from odoo.tools.misc import file_open
+from koda import models, _, Command
+from koda.tools.misc import file_open
 
 
 class ExpenseSampleReceipt(models.Model):

@@ -3,9 +3,9 @@
 
 from lxml import etree
 
-from odoo.fields import Command
-from odoo.tests.common import TransactionCase, Form
-from odoo.exceptions import AccessError, RedirectWarning, UserError, ValidationError
+from koda.fields import Command
+from koda.tests.common import TransactionCase, Form
+from koda.exceptions import AccessError, RedirectWarning, UserError, ValidationError
 
 
 class TestCommonTimesheet(TransactionCase):

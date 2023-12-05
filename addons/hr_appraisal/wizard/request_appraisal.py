@@ -3,9 +3,9 @@
 
 import logging
 
-from odoo import api, Command, fields, models, tools
-from odoo.exceptions import UserError
-from odoo.tools import html_sanitize, is_html_empty
+from koda import api, Command, fields, models, tools
+from koda.exceptions import UserError
+from koda.tools import html_sanitize, is_html_empty
 
 _logger = logging.getLogger(__name__)
 

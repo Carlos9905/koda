@@ -8,9 +8,9 @@ import struct
 import json
 from functools import reduce
 
-from odoo import http
-from odoo.addons.hw_drivers.iot_handlers.drivers.SerialBaseDriver import SerialDriver, SerialProtocol, serial_connection
-from odoo.addons.hw_drivers.main import iot_devices
+from koda import http
+from koda.addons.hw_drivers.iot_handlers.drivers.SerialBaseDriver import SerialDriver, SerialProtocol, serial_connection
+from koda.addons.hw_drivers.main import iot_devices
 
 _logger = logging.getLogger(__name__)
 

@@ -2,8 +2,8 @@
 
 from collections import Counter, defaultdict
 
-from odoo import models, fields, api
-from odoo.exceptions import ValidationError
+from koda import models, fields, api
+from koda.exceptions import ValidationError
 
 
 class RegistrationEditor(models.TransientModel):

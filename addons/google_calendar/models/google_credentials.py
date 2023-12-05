@@ -5,9 +5,9 @@ import logging
 import requests
 from datetime import timedelta
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError
-from odoo.addons.google_account.models.google_service import GOOGLE_TOKEN_ENDPOINT
+from koda import fields, models, _
+from koda.exceptions import UserError
+from koda.addons.google_account.models.google_service import GOOGLE_TOKEN_ENDPOINT
 
 _logger = logging.getLogger(__name__)
 

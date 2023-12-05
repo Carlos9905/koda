@@ -6,10 +6,10 @@ from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
 from uuid import uuid4
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError
+from koda import api, fields, models, tools, _
+from koda.exceptions import ValidationError
 
-from odoo.addons.google_calendar.utils.google_calendar import GoogleCalendarService
+from koda.addons.google_calendar.utils.google_calendar import GoogleCalendarService
 
 class Meeting(models.Model):
     _name = 'calendar.event'

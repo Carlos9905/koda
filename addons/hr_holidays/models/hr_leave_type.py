@@ -8,10 +8,10 @@ import pytz
 from collections import defaultdict
 from datetime import time, datetime
 
-from odoo import api, fields, models
-from odoo.tools import format_date
-from odoo.tools.translate import _
-from odoo.tools.float_utils import float_round
+from koda import api, fields, models
+from koda.tools import format_date
+from koda.tools.translate import _
+from koda.tools.float_utils import float_round
 
 _logger = logging.getLogger(__name__)
 

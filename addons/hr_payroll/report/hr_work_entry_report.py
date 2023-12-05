@@ -1,6 +1,6 @@
 from psycopg2 import sql
 
-from odoo import fields, models, tools
+from koda import fields, models, tools
 
 
 class HrWorkEntryReport(models.Model):

@@ -5,8 +5,8 @@ from contextlib import contextmanager
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo.addons.mail.tests.common import MockEmail
-from odoo.tests.common import TransactionCase
+from koda.addons.mail.tests.common import MockEmail
+from koda.tests.common import TransactionCase
 
 
 class HelpdeskCommon(TransactionCase, MockEmail):

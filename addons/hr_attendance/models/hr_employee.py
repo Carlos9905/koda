@@ -4,8 +4,8 @@
 import pytz
 from dateutil.relativedelta import relativedelta
 
-from odoo import models, fields, api, exceptions, _
-from odoo.tools import float_round
+from koda import models, fields, api, exceptions, _
+from koda.tools import float_round
 
 
 class HrEmployee(models.Model):

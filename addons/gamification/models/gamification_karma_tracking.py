@@ -3,8 +3,8 @@
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models
-from odoo.tools import date_utils
+from koda import _, api, fields, models
+from koda.tools import date_utils
 
 
 class KarmaTracking(models.Model):

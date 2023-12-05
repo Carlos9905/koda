@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.helpdesk.tests.common import HelpdeskCommon
-from odoo.tests.common import Form
+from koda.addons.helpdesk.tests.common import HelpdeskCommon
+from koda.tests.common import Form
 
 class TestHelpdeskFsm(HelpdeskCommon):
     def test_helpdesk_fsm(self):

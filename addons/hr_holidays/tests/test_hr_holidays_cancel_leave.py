@@ -5,7 +5,7 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo.exceptions import UserError, ValidationError
+from koda.exceptions import UserError, ValidationError
 
 from .common import TestHrHolidaysCommon
 

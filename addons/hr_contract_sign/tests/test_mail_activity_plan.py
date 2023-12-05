@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.hr.tests.test_mail_activity_plan import ActivityScheduleHRCase
-from odoo.addons.sign.tests.sign_request_common import SignRequestCommon
-from odoo.tests import tagged, users
+from koda import Command
+from koda.addons.hr.tests.test_mail_activity_plan import ActivityScheduleHRCase
+from koda.addons.sign.tests.sign_request_common import SignRequestCommon
+from koda.tests import tagged, users
 
 
 @tagged('mail_activity', 'mail_activity_plan')

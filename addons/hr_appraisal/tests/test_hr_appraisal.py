@@ -5,7 +5,7 @@ from freezegun import freeze_time
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests.common import TransactionCase
+from koda.tests.common import TransactionCase
 
 
 class TestHrAppraisal(TransactionCase):

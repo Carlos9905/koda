@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools
-from odoo.addons.helpdesk.models.helpdesk_ticket import TICKET_PRIORITY
-from odoo.addons.rating.models.rating_data import RATING_LIMIT_MIN
+from koda import api, fields, models, tools
+from koda.addons.helpdesk.models.helpdesk_ticket import TICKET_PRIORITY
+from koda.addons.rating.models.rating_data import RATING_LIMIT_MIN
 
 
 class HelpdeskSLAReport(models.Model):

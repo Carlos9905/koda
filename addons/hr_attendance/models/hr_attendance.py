@@ -8,13 +8,13 @@ from datetime import datetime, timedelta
 from operator import itemgetter
 from pytz import timezone
 
-from odoo import models, fields, api, exceptions, _
-from odoo.addons.resource.models.utils import Intervals
-from odoo.tools import format_datetime
-from odoo.osv.expression import AND, OR
-from odoo.tools.float_utils import float_is_zero
-from odoo.exceptions import AccessError
-from odoo.tools import format_duration
+from koda import models, fields, api, exceptions, _
+from koda.addons.resource.models.utils import Intervals
+from koda.tools import format_datetime
+from koda.osv.expression import AND, OR
+from koda.tools.float_utils import float_is_zero
+from koda.exceptions import AccessError
+from koda.tools import format_duration
 
 def get_google_maps_url(latitude, longitude):
     return "https://maps.google.com?q=%s,%s" % (latitude, longitude)

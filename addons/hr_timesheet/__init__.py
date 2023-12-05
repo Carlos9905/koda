@@ -7,9 +7,9 @@ from . import report
 from . import wizard
 from . import populate
 
-from odoo import fields, _
+from koda import fields, _
 
-from odoo.addons.project import _check_exists_collaborators_for_project_sharing
+from koda.addons.project import _check_exists_collaborators_for_project_sharing
 
 
 def create_internal_project(env):

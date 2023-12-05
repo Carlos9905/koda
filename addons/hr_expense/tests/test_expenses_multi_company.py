@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import Command
-from odoo.addons.hr_expense.tests.common import TestExpenseCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from koda import Command
+from koda.addons.hr_expense.tests.common import TestExpenseCommon
+from koda.exceptions import UserError
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

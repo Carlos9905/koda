@@ -2,8 +2,8 @@
 
 from markupsafe import Markup
 
-from odoo import fields, models, _
-from odoo.tools.misc import clean_context
+from koda import fields, models, _
+from koda.tools.misc import clean_context
 
 
 class SurveyInvite(models.TransientModel):

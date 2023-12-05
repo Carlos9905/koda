@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.helpdesk.tests.common import HelpdeskCommon
-from odoo.tests import users
-from odoo.tools import formataddr
+from koda.addons.helpdesk.tests.common import HelpdeskCommon
+from koda.tests import users
+from koda.tools import formataddr
 
 
 class TestHelpdeskMailFeatures(HelpdeskCommon):

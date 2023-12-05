@@ -3,9 +3,9 @@ from datetime import datetime
 
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda import Command
+from koda.addons.account.tests.common import AccountTestInvoicingCommon
+from koda.addons.mail.tests.common import mail_new_test_user
 
 
 class TestExpenseCommon(AccountTestInvoicingCommon):

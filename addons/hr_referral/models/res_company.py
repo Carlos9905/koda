@@ -2,8 +2,8 @@
 
 from base64 import encodebytes
 
-from odoo import fields, models
-from odoo.tools.misc import file_open
+from koda import fields, models
+from koda.tools.misc import file_open
 
 class ResCompany(models.Model):
     _inherit = 'res.company'

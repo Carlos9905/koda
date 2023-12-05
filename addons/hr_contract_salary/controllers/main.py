@@ -4,13 +4,13 @@
 import hashlib
 
 from collections import defaultdict, OrderedDict
-from odoo import fields, http, models, _, Command, SUPERUSER_ID
+from koda import fields, http, models, _, Command, SUPERUSER_ID
 
-from odoo.addons.sign.controllers.main import Sign
-from odoo.exceptions import UserError
-from odoo.http import request
-from odoo.tools import consteq
-from odoo.tools.image import image_data_uri
+from koda.addons.sign.controllers.main import Sign
+from koda.exceptions import UserError
+from koda.http import request
+from koda.tools import consteq
+from koda.tools.image import image_data_uri
 from werkzeug.exceptions import NotFound
 from werkzeug.wsgi import get_current_url
 from urllib.parse import urlparse, parse_qs

@@ -4,8 +4,8 @@
 from collections import defaultdict
 import pytz
 
-from odoo import fields, models
-from odoo.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
+from koda import fields, models
+from koda.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
 
 class HrContract(models.Model):
     _inherit = 'hr.contract'

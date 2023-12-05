@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
+from koda import api, fields, models, _
 
-from odoo.addons.hr_holidays.models.hr_leave_accrual_plan_level import _get_selection_days
+from koda.addons.hr_holidays.models.hr_leave_accrual_plan_level import _get_selection_days
 
 DAY_SELECT_VALUES = [str(i) for i in range(1, 29)] + ['last']
 DAY_SELECT_SELECTION_NO_LAST = tuple(zip(DAY_SELECT_VALUES, (str(i) for i in range(1, 29))))

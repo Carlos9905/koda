@@ -1,6 +1,6 @@
-from odoo import fields, Command
-from odoo.exceptions import AccessError
-from odoo.tests.common import TransactionCase
+from koda import fields, Command
+from koda.exceptions import AccessError
+from koda.tests.common import TransactionCase
 
 class TestTokenAccess(TransactionCase):
 

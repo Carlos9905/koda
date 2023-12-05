@@ -2,7 +2,7 @@
 
 import time
 
-from odoo.tests.common import tagged, TransactionCase
+from koda.tests.common import tagged, TransactionCase
 
 
 @tagged('jesaispas')

@@ -9,8 +9,8 @@ from threading import Thread
 import time
 import urllib3
 
-from odoo.addons.hw_drivers.main import iot_devices, manager
-from odoo.addons.hw_drivers.tools import helpers
+from koda.addons.hw_drivers.main import iot_devices, manager
+from koda.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 

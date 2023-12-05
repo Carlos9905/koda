@@ -4,10 +4,10 @@
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo import exceptions
-from odoo.addons.iap.tools import iap_tools
-from odoo.addons.iap.models.iap_enrich_api import IapEnrichAPI
-from odoo.tests import common
+from koda import exceptions
+from koda.addons.iap.tools import iap_tools
+from koda.addons.iap.models.iap_enrich_api import IapEnrichAPI
+from koda.tests import common
 
 
 class MockIAPEnrich(common.TransactionCase):

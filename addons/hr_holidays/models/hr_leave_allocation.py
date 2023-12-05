@@ -6,13 +6,13 @@
 from datetime import datetime, date, time
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.addons.resource.models.utils import HOURS_PER_DAY
-from odoo.addons.hr_holidays.models.hr_leave import get_employee_from_context
-from odoo.exceptions import AccessError, UserError
-from odoo.tools.float_utils import float_round
-from odoo.tools.date_utils import get_timedelta
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.addons.resource.models.utils import HOURS_PER_DAY
+from koda.addons.hr_holidays.models.hr_leave import get_employee_from_context
+from koda.exceptions import AccessError, UserError
+from koda.tools.float_utils import float_round
+from koda.tools.date_utils import get_timedelta
+from koda.osv import expression
 
 
 MONTHS_TO_INTEGER = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12}

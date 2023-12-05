@@ -1,4 +1,4 @@
-from odoo import api, models
+from koda import api, models
 
 
 class HrPayslipWorkedDays(models.Model):

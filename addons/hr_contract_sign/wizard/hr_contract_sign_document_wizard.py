@@ -3,7 +3,7 @@
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, _, Command
+from koda import api, fields, models, _, Command
 
 
 class HrContractSignDocumentWizard(models.TransientModel):

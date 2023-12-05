@@ -21,9 +21,9 @@ import contextlib
 import requests
 import secrets
 
-from odoo import _, http, service
-from odoo.tools.func import lazy_property
-from odoo.tools.misc import file_path
+from koda import _, http, service
+from koda.tools.func import lazy_property
+from koda.tools.misc import file_path
 
 _logger = logging.getLogger(__name__)
 

@@ -4,10 +4,10 @@ import re
 from markupsafe import Markup
 import werkzeug
 
-from odoo import api, fields, Command, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.misc import format_date
-from odoo.tools import email_split, float_repr, float_round, is_html_empty
+from koda import api, fields, Command, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.tools.misc import format_date
+from koda.tools import email_split, float_repr, float_round, is_html_empty
 
 
 class HrExpense(models.Model):

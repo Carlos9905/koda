@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import datetime
 
-from odoo import fields, models
-from odoo.osv.expression import AND
+from koda import fields, models
+from koda.osv.expression import AND
 
 
 class ResourceCalendar(models.Model):

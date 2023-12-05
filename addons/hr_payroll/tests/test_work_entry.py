@@ -5,8 +5,8 @@ from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 import pytz
 
-from odoo.tests.common import tagged
-from odoo.addons.hr_payroll.tests.common import TestPayslipBase
+from koda.tests.common import tagged
+from koda.addons.hr_payroll.tests.common import TestPayslipBase
 
 
 @tagged('work_entry')

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tools import email_normalize, ReadonlyDict
+from koda.tools import email_normalize, ReadonlyDict
 import logging
 from typing import Iterator, Mapping
 from collections import abc

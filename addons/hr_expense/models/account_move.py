@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api, _
-from odoo.api import ondelete
-from odoo.exceptions import UserError
-from odoo.tools.misc import frozendict
+from koda import models, fields, api, _
+from koda.api import ondelete
+from koda.exceptions import UserError
+from koda.tools.misc import frozendict
 
 
 class AccountMove(models.Model):

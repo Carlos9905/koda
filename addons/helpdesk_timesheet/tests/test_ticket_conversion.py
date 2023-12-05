@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import Form
+from koda.tests.common import Form
 
-from odoo.addons.helpdesk.tests.common import HelpdeskCommon
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
+from koda.addons.helpdesk.tests.common import HelpdeskCommon
+from koda.addons.project.tests.test_project_base import TestProjectCommon
 
 class TestTicketConversion(TestProjectCommon, HelpdeskCommon):
 

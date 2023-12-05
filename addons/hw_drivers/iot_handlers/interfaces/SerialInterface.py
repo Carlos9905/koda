@@ -3,7 +3,7 @@
 
 import serial.tools.list_ports
 
-from odoo.addons.hw_drivers.interface import Interface
+from koda.addons.hw_drivers.interface import Interface
 
 
 class SerialInterface(Interface):

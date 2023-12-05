@@ -7,8 +7,8 @@ import odoo.tests
 from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, Command
-from odoo.addons.hr_payroll.tests.common import TestPayslipContractBase
+from koda import fields, Command
+from koda.addons.hr_payroll.tests.common import TestPayslipContractBase
 
 
 @odoo.tests.tagged('post_install', '-at_install')

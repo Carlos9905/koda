@@ -4,8 +4,8 @@
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
+from koda import api, fields, models, _
+from koda.exceptions import UserError, ValidationError
 
 
 class HrPayslipRun(models.Model):

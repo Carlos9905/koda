@@ -1,5 +1,5 @@
-from odoo.tests import tagged, HttpCase
-from odoo.tests.common import new_test_user
+from koda.tests import tagged, HttpCase
+from koda.tests.common import new_test_user
 
 
 @tagged('post_install', '-at_install')

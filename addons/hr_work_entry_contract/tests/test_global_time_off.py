@@ -5,7 +5,7 @@ from .common import TestWorkEntryBase
 
 from datetime import datetime
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
 @tagged('-at_install', 'post_install')
 class TestGlobalTimeOff(TestWorkEntryBase):

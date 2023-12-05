@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, _
+from koda import fields, models, _
 from werkzeug.urls import url_encode
 
 class SurveySurvey(models.Model):

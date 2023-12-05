@@ -4,10 +4,10 @@
 import ast
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, Command, fields, models, tools, _
-from odoo.exceptions import AccessError
-from odoo.osv import expression
-from odoo.addons.web.controllers.utils import clean_action
+from koda import api, Command, fields, models, tools, _
+from koda.exceptions import AccessError
+from koda.osv import expression
+from koda.addons.web.controllers.utils import clean_action
 
 TICKET_PRIORITY = [
     ('0', 'Low priority'),

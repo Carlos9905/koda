@@ -8,9 +8,9 @@ from datetime import date, timedelta
 from dateutil.relativedelta import relativedelta, MO
 from markupsafe import Markup
 
-from odoo import _, api, exceptions, fields, models
-from odoo.http import SESSION_LIFETIME
-from odoo.tools import ustr
+from koda import _, api, exceptions, fields, models
+from koda.http import SESSION_LIFETIME
+from koda.tools import ustr
 
 _logger = logging.getLogger(__name__)
 

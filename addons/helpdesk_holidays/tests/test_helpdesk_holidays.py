@@ -4,10 +4,10 @@
 from datetime import date, datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command
+from koda import Command
 
-from odoo.addons.helpdesk.tests.common import HelpdeskCommon
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.addons.helpdesk.tests.common import HelpdeskCommon
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 
 class TestHelpdeskHolidays(HelpdeskCommon, TestHrHolidaysCommon):

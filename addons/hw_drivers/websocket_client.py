@@ -6,8 +6,8 @@ import websocket
 
 from threading import Thread
 
-from odoo.addons.hw_drivers import main
-from odoo.addons.hw_drivers.tools import helpers
+from koda.addons.hw_drivers import main
+from koda.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 

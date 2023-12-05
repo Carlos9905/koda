@@ -4,10 +4,10 @@ import datetime
 from freezegun import freeze_time
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command
-from odoo.tests import tagged
+from koda import Command
+from koda.tests import tagged
 
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 
 @tagged('post_install', '-at_install', 'accruals')

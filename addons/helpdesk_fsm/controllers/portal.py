@@ -3,14 +3,14 @@
 from collections import OrderedDict
 from werkzeug.exceptions import NotFound
 
-from odoo import _
-from odoo.http import request, route
-from odoo.exceptions import AccessError, MissingError
-from odoo.osv.expression import AND
+from koda import _
+from koda.http import request, route
+from koda.exceptions import AccessError, MissingError
+from koda.osv.expression import AND
 
-from odoo.addons.helpdesk.controllers.portal import CustomerPortal
-from odoo.addons.portal.controllers.portal import pager as portal_pager
-from odoo.addons.project.controllers.portal import ProjectCustomerPortal
+from koda.addons.helpdesk.controllers.portal import CustomerPortal
+from koda.addons.portal.controllers.portal import pager as portal_pager
+from koda.addons.project.controllers.portal import ProjectCustomerPortal
 
 
 class ProjectHelpdeskPortal(ProjectCustomerPortal, CustomerPortal):

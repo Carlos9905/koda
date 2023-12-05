@@ -3,9 +3,9 @@
 
 import datetime
 
-from odoo import http
-from odoo.http import request
-from odoo.osv.expression import AND
+from koda import http
+from koda.http import request
+from koda.osv.expression import AND
 
 
 class WebsiteHelpdesk(http.Controller):

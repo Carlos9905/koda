@@ -3,7 +3,7 @@
 
 from werkzeug.urls import url_encode
 
-from odoo import _, fields, models
+from koda import _, fields, models
 
 
 class HrReferralAlertMailWizard(models.TransientModel):

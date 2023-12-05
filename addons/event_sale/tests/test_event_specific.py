@@ -5,8 +5,8 @@ import datetime
 
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.event_sale.tests.common import TestEventSaleCommon
-from odoo.tests.common import Form
+from koda.addons.event_sale.tests.common import TestEventSaleCommon
+from koda.tests.common import Form
 
 
 class TestEventSpecific(TestEventSaleCommon):

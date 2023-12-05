@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from collections import defaultdict
 
-from odoo import api, Command, fields, models, _
+from koda import api, Command, fields, models, _
 
 class HelpdeskTeam(models.Model):
     _inherit = 'helpdesk.team'

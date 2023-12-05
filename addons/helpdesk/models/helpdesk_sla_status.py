@@ -3,8 +3,8 @@
 
 import math
 
-from odoo import fields, models, api
-from odoo.osv import expression
+from koda import fields, models, api
+from koda.osv import expression
 
 class HelpdeskSLAStatus(models.Model):
     _name = 'helpdesk.sla.status'

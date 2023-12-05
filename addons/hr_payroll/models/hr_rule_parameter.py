@@ -3,9 +3,9 @@
 
 import ast
 
-from odoo import api, fields, models, _
-from odoo.tools import ormcache
-from odoo.exceptions import UserError
+from koda import api, fields, models, _
+from koda.tools import ormcache
+from koda.exceptions import UserError
 
 
 class HrSalaryRuleParameterValue(models.Model):

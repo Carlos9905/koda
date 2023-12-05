@@ -3,8 +3,8 @@
 
 from datetime import date, datetime
 from collections import defaultdict
-from odoo import _, api, fields, models
-from odoo.osv import expression
+from koda import _, api, fields, models
+from koda.osv import expression
 
 import pytz
 

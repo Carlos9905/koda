@@ -6,8 +6,8 @@ from dateutil.relativedelta import relativedelta
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo import Command, fields
-from odoo.tests.common import TransactionCase
+from koda import Command, fields
+from koda.tests.common import TransactionCase
 
 NOW = datetime(2018, 10, 10, 9, 18)
 NOW2 = datetime(2019, 1, 8, 9, 0)

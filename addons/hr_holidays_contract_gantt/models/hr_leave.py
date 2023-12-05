@@ -5,9 +5,9 @@ from collections import defaultdict
 from datetime import datetime, time, timedelta
 from pytz import timezone
 
-from odoo import api, fields, models
-from odoo.addons.resource.models.utils import timezone_datetime
-from odoo.addons.hr_holidays_gantt.models.hr_leave import tag_employee_rows, traverse
+from koda import api, fields, models
+from koda.addons.resource.models.utils import timezone_datetime
+from koda.addons.hr_holidays_gantt.models.hr_leave import tag_employee_rows, traverse
 
 
 class HrLeave(models.Model):

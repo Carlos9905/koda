@@ -3,7 +3,7 @@
 
 import uuid
 
-from odoo import api, fields, models
+from koda import api, fields, models
 
 
 class HrReferralLinkToShare(models.TransientModel):

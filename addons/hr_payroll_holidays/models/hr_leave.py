@@ -4,10 +4,10 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.fields import Datetime
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.float_utils import float_compare
+from koda import api, fields, models, _
+from koda.fields import Datetime
+from koda.exceptions import UserError, ValidationError
+from koda.tools.float_utils import float_compare
 
 class HrLeave(models.Model):
     _inherit = 'hr.leave'

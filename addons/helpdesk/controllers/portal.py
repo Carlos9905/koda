@@ -5,14 +5,14 @@ from operator import itemgetter
 
 from markupsafe import Markup
 
-from odoo import http
-from odoo.exceptions import AccessError, MissingError, UserError
-from odoo.http import request
-from odoo.tools.translate import _
-from odoo.tools import groupby as groupbyelem
-from odoo.addons.portal.controllers import portal
-from odoo.addons.portal.controllers.portal import pager as portal_pager
-from odoo.osv.expression import OR, AND
+from koda import http
+from koda.exceptions import AccessError, MissingError, UserError
+from koda.http import request
+from koda.tools.translate import _
+from koda.tools import groupby as groupbyelem
+from koda.addons.portal.controllers import portal
+from koda.addons.portal.controllers.portal import pager as portal_pager
+from koda.osv.expression import OR, AND
 
 
 class CustomerPortal(portal.CustomerPortal):

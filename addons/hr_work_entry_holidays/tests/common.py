@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import datetime
 
-from odoo import Command
-from odoo.fields import Datetime
-from odoo.addons.hr_work_entry_contract.tests.common import TestWorkEntryBase
+from koda import Command
+from koda.fields import Datetime
+from koda.addons.hr_work_entry_contract.tests.common import TestWorkEntryBase
 
 
 class TestWorkEntryHolidaysBase(TestWorkEntryBase):

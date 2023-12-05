@@ -4,10 +4,10 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo import tests
-from odoo.tests import new_test_user
-from odoo.tests.common import Form, TransactionCase
-from odoo.exceptions import ValidationError
+from koda import tests
+from koda.tests import new_test_user
+from koda.tests.common import Form, TransactionCase
+from koda.exceptions import ValidationError
 
 
 @tests.tagged('access_rights', 'post_install', '-at_install')

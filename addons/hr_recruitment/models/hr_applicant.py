@@ -3,11 +3,11 @@
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, tools, SUPERUSER_ID
-from odoo.exceptions import AccessError, UserError
-from odoo.osv import expression
-from odoo.tools import Query
-from odoo.tools.translate import _
+from koda import api, fields, models, tools, SUPERUSER_ID
+from koda.exceptions import AccessError, UserError
+from koda.osv import expression
+from koda.tools import Query
+from koda.tools.translate import _
 
 from dateutil.relativedelta import relativedelta
 

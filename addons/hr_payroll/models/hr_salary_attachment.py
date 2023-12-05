@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools.date_utils import start_of
-from odoo.tools.misc import formatLang
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.tools.date_utils import start_of
+from koda.tools.misc import formatLang
 
 from dateutil.relativedelta import relativedelta
 from math import ceil

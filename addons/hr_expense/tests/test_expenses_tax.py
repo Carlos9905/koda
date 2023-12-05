@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import Command
-from odoo.addons.hr_expense.tests.common import TestExpenseCommon
-from odoo.tests import tagged
+from koda import Command
+from koda.addons.hr_expense.tests.common import TestExpenseCommon
+from koda.tests import tagged
 
 
 @tagged('post_install', '-at_install')

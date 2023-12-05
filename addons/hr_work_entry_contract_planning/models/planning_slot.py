@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
-from odoo import api, models
+from koda import api, models
 
 def batch(iterable, batch_size):
     l = len(iterable)

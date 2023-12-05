@@ -3,9 +3,9 @@
 import datetime
 from freezegun import freeze_time
 
-from odoo.addons.gamification.tests.common import TransactionCaseGamification
-from odoo.exceptions import UserError
-from odoo.tools import mute_logger
+from koda.addons.gamification.tests.common import TransactionCaseGamification
+from koda.exceptions import UserError
+from koda.tools import mute_logger
 
 
 class TestGamificationCommon(TransactionCaseGamification):

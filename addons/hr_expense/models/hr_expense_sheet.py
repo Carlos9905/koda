@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, Command, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.misc import clean_context
+from koda import api, fields, Command, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.tools.misc import clean_context
 
 
 class HrExpenseSheet(models.Model):

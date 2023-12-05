@@ -5,9 +5,9 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command
-from odoo.tests.common import tagged, TransactionCase
-from odoo.tools.misc import DEFAULT_SERVER_DATE_FORMAT
+from koda import Command
+from koda.tests.common import tagged, TransactionCase
+from koda.tools.misc import DEFAULT_SERVER_DATE_FORMAT
 
 @tagged('post_install', '-at_install')
 class TestPartner(TransactionCase):

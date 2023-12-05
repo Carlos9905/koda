@@ -4,8 +4,8 @@
 import json
 from werkzeug.exceptions import BadRequest
 
-from odoo import http
-from odoo.http import request
+from koda import http
+from koda.http import request
 
 
 class GoogleAuth(http.Controller):

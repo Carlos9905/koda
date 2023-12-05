@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from collections import defaultdict
 
-from odoo import models, fields, api, _, _lt
-from odoo.exceptions import ValidationError, RedirectWarning
+from koda import models, fields, api, _, _lt
+from koda.exceptions import ValidationError, RedirectWarning
 
 class Project(models.Model):
     _inherit = "project.project"

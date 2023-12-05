@@ -8,11 +8,11 @@ import os
 import subprocess
 import time
 
-from odoo import http, tools
+from koda import http, tools
 
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.main import iot_devices, manager
-from odoo.addons.hw_drivers.tools import helpers
+from koda.addons.hw_drivers.event_manager import event_manager
+from koda.addons.hw_drivers.main import iot_devices, manager
+from koda.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 

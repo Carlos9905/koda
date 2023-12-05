@@ -3,10 +3,10 @@
 
 from datetime import datetime, time
 
-from odoo import _
-from odoo.addons.hr_contract_salary.controllers import main
-from odoo.http import route, request
-from odoo.tools.float_utils import float_compare
+from koda import _
+from koda.addons.hr_contract_salary.controllers import main
+from koda.http import route, request
+from koda.tools.float_utils import float_compare
 
 
 class HrContractSalary(main.HrContractSalary):

@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import date, datetime
 
-from odoo.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
-from odoo.tests.common import users, warmup, tagged
+from koda.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
+from koda.tests.common import users, warmup, tagged
 
 
 @tagged('work_entry_holidays_perf')

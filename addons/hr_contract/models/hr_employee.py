@@ -4,8 +4,8 @@
 from pytz import UTC
 from datetime import date, datetime, time
 
-from odoo import api, fields, models
-from odoo.osv import expression
+from koda import api, fields, models
+from koda.osv import expression
 
 class EmployeePublic(models.Model):
     _inherit = 'hr.employee.public'

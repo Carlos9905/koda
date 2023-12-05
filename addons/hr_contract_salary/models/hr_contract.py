@@ -6,11 +6,11 @@ import logging
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.models import MAGIC_COLUMNS
-from odoo.fields import Date
-from odoo.exceptions import ValidationError
-from odoo.tools import html_sanitize
+from koda import api, fields, models, _
+from koda.models import MAGIC_COLUMNS
+from koda.fields import Date
+from koda.exceptions import ValidationError
+from koda.tools import html_sanitize
 
 _logger = logging.getLogger(__name__)
 

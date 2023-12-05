@@ -5,13 +5,13 @@ from collections import OrderedDict
 from dateutil.relativedelta import relativedelta
 from operator import itemgetter
 
-from odoo import fields, http, _
-from odoo.http import request
-from odoo.tools import date_utils, groupby as groupbyelem
-from odoo.osv.expression import AND, OR
+from koda import fields, http, _
+from koda.http import request
+from koda.tools import date_utils, groupby as groupbyelem
+from koda.osv.expression import AND, OR
 
-from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
-from odoo.addons.project.controllers.portal import ProjectCustomerPortal
+from koda.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
+from koda.addons.project.controllers.portal import ProjectCustomerPortal
 
 
 class TimesheetCustomerPortal(CustomerPortal):

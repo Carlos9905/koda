@@ -4,9 +4,9 @@
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_compare, float_is_zero, plaintext2html
+from koda import fields, models, _
+from koda.exceptions import UserError, ValidationError
+from koda.tools import float_compare, float_is_zero, plaintext2html
 
 
 class HrPayslip(models.Model):

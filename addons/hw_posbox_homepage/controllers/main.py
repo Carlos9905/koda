@@ -12,13 +12,13 @@ import subprocess
 import sys
 import threading
 
-from odoo import http, service, tools
-from odoo.http import Response, request
-from odoo.addons.hw_drivers.connection_manager import connection_manager
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.web.controllers.home import Home
-from odoo.tools.misc import file_path
+from koda import http, service, tools
+from koda.http import Response, request
+from koda.addons.hw_drivers.connection_manager import connection_manager
+from koda.addons.hw_drivers.main import iot_devices
+from koda.addons.hw_drivers.tools import helpers
+from koda.addons.web.controllers.home import Home
+from koda.tools.misc import file_path
 
 _logger = logging.getLogger(__name__)
 

@@ -5,7 +5,7 @@ import logging
 
 from collections import defaultdict
 
-from odoo import models, fields, api, _
+from koda import models, fields, api, _
 
 _logger = logging.getLogger(__name__)
 

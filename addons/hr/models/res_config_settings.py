@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import threading
-from odoo import fields, models, api, _
-from odoo.exceptions import ValidationError
+from koda import fields, models, api, _
+from koda.exceptions import ValidationError
 
 
 class ResConfigSettings(models.TransientModel):

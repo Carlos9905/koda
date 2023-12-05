@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests.common import Form, tagged
+from koda import Command
+from koda.tests.common import Form, tagged
 
-from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
+from koda.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
 
 
 @tagged('post_install', '-at_install')

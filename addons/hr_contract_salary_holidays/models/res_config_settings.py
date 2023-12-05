@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import threading
-from odoo import fields, models
+from koda import fields, models
 
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'

@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, date, time
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
-from odoo.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
+from koda.exceptions import ValidationError
+from koda.tests import tagged
+from koda.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
 
 
 @tagged('work_entry_multi_contract')

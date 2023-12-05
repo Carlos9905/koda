@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Koda
 
-from odoo import fields, models
+from koda import fields, models
 
 class HrEmployeePublic(models.Model):
     _inherit = 'hr.employee.public'

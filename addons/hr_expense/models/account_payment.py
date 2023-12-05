@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _
-from odoo.api import ondelete
-from odoo.exceptions import UserError
+from koda import models, _
+from koda.api import ondelete
+from koda.exceptions import UserError
 
 
 class AccountPayment(models.Model):

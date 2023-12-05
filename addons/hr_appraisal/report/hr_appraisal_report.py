@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools
+from koda import api, fields, models, tools
 
-from odoo.addons.hr_appraisal.models.hr_appraisal import HrAppraisal
+from koda.addons.hr_appraisal.models.hr_appraisal import HrAppraisal
 
 COLORS_BY_STATE = {
     'new': 0,

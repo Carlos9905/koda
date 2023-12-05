@@ -3,7 +3,7 @@
 
 from datetime import date, datetime
 
-from odoo.tests import tagged, TransactionCase
+from koda.tests import tagged, TransactionCase
 
 @tagged('-at_install', 'post_install', 'work_entry_planning')
 class TestWorkEntryPlanning(TransactionCase):

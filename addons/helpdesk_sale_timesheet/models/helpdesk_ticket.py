@@ -3,8 +3,8 @@
 
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.osv import expression
+from koda import _, api, fields, models
+from koda.osv import expression
 
 class HelpdeskTicket(models.Model):
     _inherit = 'helpdesk.ticket'

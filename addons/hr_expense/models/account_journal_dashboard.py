@@ -1,7 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.addons.account.models.account_journal_dashboard import group_by_journal
+from koda import models
+from koda.addons.account.models.account_journal_dashboard import group_by_journal
 
 
 class AccountJournal(models.Model):

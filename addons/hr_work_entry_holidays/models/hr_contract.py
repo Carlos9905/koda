@@ -4,9 +4,9 @@
 import pytz
 
 from datetime import date
-from odoo import api, models, _
-from odoo.exceptions import ValidationError
-from odoo.osv.expression import OR
+from koda import api, models, _
+from koda.exceptions import ValidationError
+from koda.osv.expression import OR
 
 
 class HrContract(models.Model):

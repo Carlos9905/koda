@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, date
-from odoo.addons.hr_payroll.tests.common import TestPayslipContractBase
+from koda.addons.hr_payroll.tests.common import TestPayslipContractBase
 
 
 class TestPayslipComputation(TestPayslipContractBase):

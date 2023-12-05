@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _
-from odoo.http import request
+from koda import _
+from koda.http import request
 
-from odoo.addons.hr_contract_salary.controllers import main
-from odoo.addons.sign.controllers.main import Sign
+from koda.addons.hr_contract_salary.controllers import main
+from koda.addons.sign.controllers.main import Sign
 
 class SignContract(Sign):
 

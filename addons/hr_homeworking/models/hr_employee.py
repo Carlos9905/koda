@@ -2,8 +2,8 @@
 
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
+from koda import _, api, fields, models
+from koda.tools import DEFAULT_SERVER_DATE_FORMAT
 
 from .hr_homeworking import DAYS
 

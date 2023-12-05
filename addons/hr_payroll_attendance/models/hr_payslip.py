@@ -6,8 +6,8 @@ from collections import defaultdict
 from datetime import datetime
 import pytz
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
+from koda import api, fields, models, _
+from koda.osv import expression
 
 class HrPayslip(models.Model):
     _inherit = 'hr.payslip'

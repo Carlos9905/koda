@@ -5,10 +5,10 @@ from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 import pytz
 
-from odoo.exceptions import ValidationError
-from odoo.tests.common import tagged
-from odoo.fields import Date
-from odoo.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
+from koda.exceptions import ValidationError
+from koda.tests.common import tagged
+from koda.fields import Date
+from koda.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
 
 
 @tagged('work_entry')

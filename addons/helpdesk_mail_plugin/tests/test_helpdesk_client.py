@@ -3,8 +3,8 @@
 
 import json
 
-from odoo.addons.mail_plugin.tests.common import TestMailPluginControllerCommon, mock_auth_method_outlook
-from odoo.addons.mail.tests.common import MailCase
+from koda.addons.mail_plugin.tests.common import TestMailPluginControllerCommon, mock_auth_method_outlook
+from koda.addons.mail.tests.common import MailCase
 
 
 class TestHelpdeskClient(TestMailPluginControllerCommon, MailCase):

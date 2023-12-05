@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _
-from odoo.http import request
-from odoo.exceptions import AccessError, MissingError
-from odoo.addons.helpdesk.controllers import portal
+from koda import _
+from koda.http import request
+from koda.exceptions import AccessError, MissingError
+from koda.addons.helpdesk.controllers import portal
 
 
 class CustomerPortal(portal.CustomerPortal):

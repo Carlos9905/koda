@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.hr.tests.common import TestHrCommon
-from odoo.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin
+from koda.addons.hr.tests.common import TestHrCommon
+from koda.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin
 
 from ..models.hr_applicant import OCR_VERSION
 

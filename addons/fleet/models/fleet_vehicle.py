@@ -4,9 +4,9 @@
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
-from odoo.addons.fleet.models.fleet_vehicle_model import FUEL_TYPES
+from koda import api, fields, models, _
+from koda.osv import expression
+from koda.addons.fleet.models.fleet_vehicle_model import FUEL_TYPES
 
 
 #Some fields don't have the exact same name

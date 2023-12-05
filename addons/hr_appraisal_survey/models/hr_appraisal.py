@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, _, api
+from koda import fields, models, _, api
 
 
 class HrAppraisal(models.Model):

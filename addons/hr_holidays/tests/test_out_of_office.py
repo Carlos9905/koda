@@ -4,10 +4,10 @@
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.tests.common import tagged, users, warmup
-from odoo.tools.misc import DEFAULT_SERVER_DATE_FORMAT
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.addons.base.tests.common import TransactionCaseWithUserDemo
+from koda.tests.common import tagged, users, warmup
+from koda.tools.misc import DEFAULT_SERVER_DATE_FORMAT
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 
 @tagged('out_of_office')

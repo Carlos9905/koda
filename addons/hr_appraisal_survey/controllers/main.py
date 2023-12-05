@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.survey.controllers.main import Survey
-from odoo import http
-from odoo.exceptions import AccessDenied
-from odoo.http import request
-from odoo.osv import expression
+from koda.addons.survey.controllers.main import Survey
+from koda import http
+from koda.exceptions import AccessDenied
+from koda.http import request
+from koda.osv import expression
 
 
 class AppraisalSurvey(Survey):

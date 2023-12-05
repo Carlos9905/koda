@@ -3,8 +3,8 @@
 
 from threading import Thread, Event
 
-from odoo.addons.hw_drivers.main import drivers, iot_devices
-from odoo.tools.lru import LRU
+from koda.addons.hw_drivers.main import drivers, iot_devices
+from koda.tools.lru import LRU
 
 
 class DriverMetaClass(type):

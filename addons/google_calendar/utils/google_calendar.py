@@ -6,9 +6,9 @@ import requests
 import json
 import logging
 
-from odoo import fields
-from odoo.addons.google_calendar.utils.google_event import GoogleEvent
-from odoo.addons.google_account.models.google_service import TIMEOUT
+from koda import fields
+from koda.addons.google_calendar.utils.google_event import GoogleEvent
+from koda.addons.google_account.models.google_service import TIMEOUT
 
 
 _logger = logging.getLogger(__name__)

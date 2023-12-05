@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 class TestHolidaysWarning(TestHrHolidaysCommon):
 

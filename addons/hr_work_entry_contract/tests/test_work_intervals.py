@@ -1,5 +1,5 @@
-from odoo.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
-from odoo.tests.common import TransactionCase
+from koda.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
+from koda.tests.common import TransactionCase
 
 
 class TestIntervals(TransactionCase):

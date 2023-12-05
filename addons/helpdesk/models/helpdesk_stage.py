@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, _
-from odoo.tools.misc import unique
+from koda import fields, models, _
+from koda.tools.misc import unique
 
 class HelpdeskStage(models.Model):
     _name = 'helpdesk.stage'

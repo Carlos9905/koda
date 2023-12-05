@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, api, _
-from odoo.addons.helpdesk.models.helpdesk_ticket import TICKET_PRIORITY
+from koda import fields, models, api, _
+from koda.addons.helpdesk.models.helpdesk_ticket import TICKET_PRIORITY
 
 class HelpdeskSLA(models.Model):
     _name = "helpdesk.sla"

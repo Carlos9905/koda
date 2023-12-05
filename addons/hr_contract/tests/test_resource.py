@@ -3,8 +3,8 @@
 from datetime import date, datetime
 from pytz import utc, timezone
 
-from odoo.addons.resource.models.utils import Intervals, sum_intervals
-from odoo.fields import Date
+from koda.addons.resource.models.utils import Intervals, sum_intervals
+from koda.fields import Date
 
 from .common import TestContractCommon
 

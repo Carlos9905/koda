@@ -7,8 +7,8 @@ from dateutil.relativedelta import relativedelta
 import itertools
 from psycopg2 import OperationalError
 
-from odoo import api, fields, models, tools, _
-from odoo.osv import expression
+from koda import api, fields, models, tools, _
+from koda.osv import expression
 
 
 class HrWorkEntry(models.Model):

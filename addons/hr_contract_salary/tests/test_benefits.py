@@ -3,8 +3,8 @@
 
 from unittest.mock import patch
 
-from odoo.tests.common import TransactionCase, tagged
-from odoo.addons.hr_contract_salary.models.hr_contract import HrContract
+from koda.tests.common import TransactionCase, tagged
+from koda.addons.hr_contract_salary.models.hr_contract import HrContract
 
 
 @tagged('benefits')

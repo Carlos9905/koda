@@ -4,10 +4,10 @@
 from unittest.mock import patch
 from datetime import date
 
-from odoo import tests
-from odoo.fields import Date
-from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase, new_test_user
+from koda import tests
+from koda.fields import Date
+from koda.exceptions import UserError
+from koda.tests.common import TransactionCase, new_test_user
 
 @tests.tagged('post_install', '-at_install')
 class TestRuleParameter(TransactionCase):

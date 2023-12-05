@@ -7,15 +7,15 @@ from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 from pytz import timezone
 
-from odoo import fields, Command
-from odoo.exceptions import ValidationError
-from odoo.tools import mute_logger
-from odoo.tests.common import Form
-from odoo.tests import tagged
+from koda import fields, Command
+from koda.exceptions import ValidationError
+from koda.tools import mute_logger
+from koda.tests.common import Form
+from koda.tests import tagged
 
-from odoo.exceptions import UserError
+from koda.exceptions import UserError
 
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 @tagged('leave_requests')
 class TestLeaveRequests(TestHrHolidaysCommon):

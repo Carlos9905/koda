@@ -6,10 +6,10 @@ from datetime import datetime, date, time
 from dateutil.relativedelta import relativedelta
 import pytz
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools import format_date
+from koda import api, fields, models, _
+from koda.exceptions import UserError
+from koda.osv import expression
+from koda.tools import format_date
 
 
 class HrPayslipEmployees(models.TransientModel):

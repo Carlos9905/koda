@@ -8,12 +8,12 @@ import io
 import win32print
 import ghostscript
 
-from odoo.addons.hw_drivers.controllers.proxy import proxy_drivers
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.tools.mimetypes import guess_mimetype
+from koda.addons.hw_drivers.controllers.proxy import proxy_drivers
+from koda.addons.hw_drivers.driver import Driver
+from koda.addons.hw_drivers.event_manager import event_manager
+from koda.addons.hw_drivers.main import iot_devices
+from koda.addons.hw_drivers.tools import helpers
+from koda.tools.mimetypes import guess_mimetype
 
 _logger = logging.getLogger(__name__)
 

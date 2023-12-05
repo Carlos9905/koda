@@ -4,9 +4,9 @@
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.tests.common import tagged
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
-from odoo.models import ValidationError
+from koda.tests.common import tagged
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.models import ValidationError
 
 
 @tagged('negative_time_off')

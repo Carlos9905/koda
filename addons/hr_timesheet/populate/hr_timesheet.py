@@ -3,8 +3,8 @@
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import models
-from odoo.tools import populate
+from koda import models
+from koda.tools import populate
 
 class AccountAnalyticLine(models.Model):
     _inherit = "account.analytic.line"

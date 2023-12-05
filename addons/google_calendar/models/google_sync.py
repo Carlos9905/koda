@@ -9,14 +9,14 @@ import pytz
 from dateutil.parser import parse
 from markupsafe import Markup
 
-from odoo import api, fields, models, registry, _
-from odoo.tools import ormcache_context, email_normalize
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from koda import api, fields, models, registry, _
+from koda.tools import ormcache_context, email_normalize
+from koda.exceptions import UserError
+from koda.osv import expression
 
-from odoo.addons.google_calendar.utils.google_event import GoogleEvent
-from odoo.addons.google_calendar.utils.google_calendar import GoogleCalendarService
-from odoo.addons.google_account.models.google_service import TIMEOUT
+from koda.addons.google_calendar.utils.google_event import GoogleEvent
+from koda.addons.google_calendar.utils.google_calendar import GoogleCalendarService
+from koda.addons.google_account.models.google_service import TIMEOUT
 
 _logger = logging.getLogger(__name__)
 
@@ -282,7 +282,7 @@ class GoogleSync(models.AbstractModel):
                         self.with_context(dont_notify=True).need_sync = False
 
     def _get_records_to_sync(self, full_sync=False):
-        """Return records that should be synced from Odoo to Google
+        """Return records that should be synced from koda to Google
 
         :param full_sync: If True, all events attended by the user are returned
         :return: events

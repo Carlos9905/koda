@@ -9,8 +9,8 @@ from threading import Thread
 import time
 import urllib3
 
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_drivers.websocket_client import WebsocketClient
+from koda.addons.hw_drivers.tools import helpers
+from koda.addons.hw_drivers.websocket_client import WebsocketClient
 
 _logger = logging.getLogger(__name__)
 

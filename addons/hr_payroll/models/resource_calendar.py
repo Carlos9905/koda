@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tools import float_compare
-from odoo import models, fields, api
+from koda.tools import float_compare
+from koda import models, fields, api
 
 
 class ResourceCalendar(models.Model):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http, fields
-from odoo.http import request
-from odoo.tools import consteq
+from koda import http, fields
+from koda.http import request
+from koda.tools import consteq
 
 class Frontdesk(http.Controller):
     def _get_additional_info(self, frontdesk, lang, is_mobile=False):

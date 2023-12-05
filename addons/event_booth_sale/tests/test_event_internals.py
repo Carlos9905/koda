@@ -3,10 +3,10 @@
 
 from datetime import datetime, timedelta
 
-from odoo import Command
-from odoo.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
-from odoo.fields import Datetime as FieldsDatetime
-from odoo.tests.common import users, Form
+from koda import Command
+from koda.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
+from koda.fields import Datetime as FieldsDatetime
+from koda.tests.common import users, Form
 
 
 class TestEventData(TestEventBoothSaleCommon):

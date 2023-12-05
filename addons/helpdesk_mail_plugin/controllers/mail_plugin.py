@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request
+from koda.http import request
 
-from odoo.addons.mail_plugin.controllers import mail_plugin
+from koda.addons.mail_plugin.controllers import mail_plugin
 
 
 class MailPluginController(mail_plugin.MailPluginController):

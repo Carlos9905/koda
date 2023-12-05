@@ -4,9 +4,9 @@
 import base64
 from lxml import etree
 
-from odoo.addons.hr_payroll_account_sepa.tests.test_payroll_sepa import TestPayrollSEPACreditTransfer
-from odoo.tests import tagged
-from odoo.tools.misc import file_path
+from koda.addons.hr_payroll_account_sepa.tests.test_payroll_sepa import TestPayrollSEPACreditTransfer
+from koda.tests import tagged
+from koda.tools.misc import file_path
 
 
 @tagged('post_install', '-at_install')

@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
-from odoo import api, Command, fields, models, _
-from odoo.osv import expression
-from odoo.exceptions import ValidationError
+from koda import api, Command, fields, models, _
+from koda.osv import expression
+from koda.exceptions import ValidationError
 
 
 class AccountAnalyticLine(models.Model):

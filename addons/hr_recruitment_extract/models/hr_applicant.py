@@ -4,8 +4,8 @@
 import re
 import string
 
-from odoo import api, models, _
-from odoo.addons.iap.tools import iap_tools
+from koda import api, models, _
+from koda.addons.iap.tools import iap_tools
 
 
 OCR_VERSION = 102

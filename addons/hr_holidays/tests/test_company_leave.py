@@ -3,9 +3,9 @@
 
 from datetime import date, datetime
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
+from koda import Command
+from koda.tests import tagged
+from koda.tests.common import TransactionCase
 
 
 @tagged('company_leave')

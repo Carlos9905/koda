@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.helpdesk.tests import common
-from odoo.exceptions import UserError
-from odoo.tests.common import Form, tagged
+from koda.addons.helpdesk.tests import common
+from koda.exceptions import UserError
+from koda.tests.common import Form, tagged
 
 
 @tagged('post_install', '-at_install')

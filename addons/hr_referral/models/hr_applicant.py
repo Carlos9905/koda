@@ -5,9 +5,9 @@ import json
 from markupsafe import Markup, escape
 from werkzeug.urls import url_encode
 
-from odoo import api, fields, models, _
-from odoo.exceptions import AccessError, UserError
-from odoo.tools.misc import str2bool
+from koda import api, fields, models, _
+from koda.exceptions import AccessError, UserError
+from koda.tools.misc import str2bool
 
 
 class Applicant(models.Model):

@@ -4,10 +4,10 @@
 import re
 import logging
 
-from odoo import api, models, Command
-from odoo.tools import email_normalize
+from koda import api, models, Command
+from koda.tools import email_normalize
 
-from odoo.addons.google_calendar.utils.google_calendar import GoogleCalendarService
+from koda.addons.google_calendar.utils.google_calendar import GoogleCalendarService
 
 _logger = logging.getLogger(__name__)
 

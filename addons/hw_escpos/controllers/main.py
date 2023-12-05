@@ -26,8 +26,8 @@ try:
 except ImportError:
     usb = None
 
-from odoo import http, _
-from odoo.addons.hw_drivers.controllers import proxy
+from koda import http, _
+from koda.addons.hw_drivers.controllers import proxy
 
 _logger = logging.getLogger(__name__)
 

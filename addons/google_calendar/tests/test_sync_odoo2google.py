@@ -5,13 +5,13 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from unittest.mock import patch
 
-from odoo.addons.google_calendar.utils.google_calendar import GoogleCalendarService
-from odoo.addons.google_account.models.google_service import GoogleService
-from odoo.addons.google_calendar.models.res_users import User
-from odoo.addons.google_calendar.tests.test_sync_common import TestSyncGoogle, patch_api
-from odoo.tests.common import users, warmup
-from odoo.tests import tagged
-from odoo import tools
+from koda.addons.google_calendar.utils.google_calendar import GoogleCalendarService
+from koda.addons.google_account.models.google_service import GoogleService
+from koda.addons.google_calendar.models.res_users import User
+from koda.addons.google_calendar.tests.test_sync_common import TestSyncGoogle, patch_api
+from koda.tests.common import users, warmup
+from koda.tests import tagged
+from koda import tools
 
 @tagged('odoo2google')
 @patch.object(User, '_get_google_calendar_token', lambda user: 'dummy-token')

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.event.tests.common import EventCase
-from odoo.exceptions import UserError, ValidationError
-from odoo.tests import Form, users
+from koda.addons.event.tests.common import EventCase
+from koda.exceptions import UserError, ValidationError
+from koda.tests import Form, users
 
 
 class EventSocialCase(EventCase):

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, _
-from odoo.exceptions import ValidationError
+from koda import api, models, _
+from koda.exceptions import ValidationError
 
-from odoo.addons.account.models.chart_template import template
+from koda.addons.account.models.chart_template import template
 
 
 class AccountChartTemplate(models.AbstractModel):

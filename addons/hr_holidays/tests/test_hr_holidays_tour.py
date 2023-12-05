@@ -2,8 +2,8 @@
 
 from freezegun import freeze_time
 
-from odoo.tests import HttpCase
-from odoo.tests.common import tagged
+from koda.tests import HttpCase
+from koda.tests.common import tagged
 
 from datetime import date
 

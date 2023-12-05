@@ -3,7 +3,7 @@
 
 import datetime
 
-from odoo.addons.hr_payroll.tests.common import TestPayslipBase
+from koda.addons.hr_payroll.tests.common import TestPayslipBase
 from dateutil.relativedelta import relativedelta
 
 

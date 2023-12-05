@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, datetime
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
-from odoo.exceptions import ValidationError
+from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from koda.exceptions import ValidationError
 from freezegun import freeze_time
 
-from odoo.tests import tagged
+from koda.tests import tagged
 
 @tagged('global_leaves')
 class TestGlobalLeaves(TestHrHolidaysCommon):

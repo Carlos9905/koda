@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import date, datetime
 
-from odoo.addons.hr_payroll.tests.common import TestPayslipBase
-from odoo.tests.common import users, warmup, tagged
+from koda.addons.hr_payroll.tests.common import TestPayslipBase
+from koda.tests.common import users, warmup, tagged
 
 
 @tagged('payslip_perf')

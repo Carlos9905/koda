@@ -4,9 +4,9 @@
 import logging
 
 from dateutil.relativedelta import relativedelta
-from odoo import api, fields, models, Command, _
-from odoo.exceptions import UserError
-from odoo.tools import html_sanitize, is_html_empty
+from koda import api, fields, models, Command, _
+from koda.exceptions import UserError
+from koda.tools import html_sanitize, is_html_empty
 
 _logger = logging.getLogger(__name__)
 

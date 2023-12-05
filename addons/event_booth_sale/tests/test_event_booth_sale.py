@@ -3,11 +3,11 @@
 
 from datetime import datetime, timedelta
 
-from odoo import Command, fields
-from odoo.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
-from odoo.addons.sales_team.tests.common import TestSalesCommon
-from odoo.tests.common import tagged, users
-from odoo.tools import float_compare
+from koda import Command, fields
+from koda.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
+from koda.addons.sales_team.tests.common import TestSalesCommon
+from koda.tests.common import tagged, users
+from koda.tools import float_compare
 
 
 class TestEventBoothSaleWData(TestEventBoothSaleCommon, TestSalesCommon):

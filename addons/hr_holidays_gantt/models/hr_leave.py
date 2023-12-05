@@ -8,8 +8,8 @@ from datetime import timedelta
 from itertools import groupby
 from pytz import timezone, utc
 
-from odoo import api, fields, models, _
-from odoo.tools.misc import get_lang
+from koda import api, fields, models, _
+from koda.tools.misc import get_lang
 
 
 def format_time(env, time):

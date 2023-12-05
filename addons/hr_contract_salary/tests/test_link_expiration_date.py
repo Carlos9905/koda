@@ -5,9 +5,9 @@ import datetime
 from freezegun import freeze_time
 from dateutil.relativedelta import relativedelta
 
-from odoo.addons.mail.tests.common import mail_new_test_user
+from koda.addons.mail.tests.common import mail_new_test_user
 
-from odoo.tests.common import HttpCase, tagged
+from koda.tests.common import HttpCase, tagged
 
 
 @tagged('-at_install', 'post_install')

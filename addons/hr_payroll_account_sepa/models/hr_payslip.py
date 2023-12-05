@@ -4,8 +4,8 @@
 from uuid import uuid4
 import base64
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
+from koda import api, models, fields, _
+from koda.exceptions import UserError
 
 
 class HrPayslip(models.Model):

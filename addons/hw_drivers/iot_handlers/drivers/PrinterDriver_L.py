@@ -13,14 +13,14 @@ import re
 import subprocess
 from uuid import getnode as get_mac
 
-from odoo import http
-from odoo.addons.hw_drivers.connection_manager import connection_manager
-from odoo.addons.hw_drivers.controllers.proxy import proxy_drivers
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.iot_handlers.interfaces.PrinterInterface_L import PPDs, conn, cups_lock
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
+from koda import http
+from koda.addons.hw_drivers.connection_manager import connection_manager
+from koda.addons.hw_drivers.controllers.proxy import proxy_drivers
+from koda.addons.hw_drivers.driver import Driver
+from koda.addons.hw_drivers.event_manager import event_manager
+from koda.addons.hw_drivers.iot_handlers.interfaces.PrinterInterface_L import PPDs, conn, cups_lock
+from koda.addons.hw_drivers.main import iot_devices
+from koda.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 

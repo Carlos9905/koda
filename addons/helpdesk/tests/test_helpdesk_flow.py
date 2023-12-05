@@ -6,7 +6,7 @@ from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
 from .common import HelpdeskCommon
-from odoo.exceptions import AccessError
+from koda.exceptions import AccessError
 
 
 class TestHelpdeskFlow(HelpdeskCommon):

@@ -3,11 +3,11 @@
 
 from datetime import datetime, timedelta
 
-from odoo import fields
-from odoo.addons.event.tests.common import EventCase
-from odoo.addons.phone_validation.tools import phone_validation
-from odoo.addons.sms.tests.common import SMSCase
-from odoo.tests import users
+from koda import fields
+from koda.addons.event.tests.common import EventCase
+from koda.addons.phone_validation.tools import phone_validation
+from koda.addons.sms.tests.common import SMSCase
+from koda.tests import users
 
 
 class TestSMSSchedule(EventCase, SMSCase):

@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
-from odoo.addons.hr_payroll.tests.common import TestPayslipContractBase
-from odoo.tests import tagged
+from koda.addons.hr_payroll.tests.common import TestPayslipContractBase
+from koda.tests import tagged
 
 @tagged('2_weeks_calendar')
 class TestPayslipContractCalendar2Weeks(TestPayslipContractBase):

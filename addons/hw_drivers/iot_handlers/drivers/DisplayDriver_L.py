@@ -12,13 +12,13 @@ import time
 
 import urllib3
 
-from odoo import http
-from odoo.addons.hw_drivers.connection_manager import connection_manager
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.tools.misc import file_open
+from koda import http
+from koda.addons.hw_drivers.connection_manager import connection_manager
+from koda.addons.hw_drivers.driver import Driver
+from koda.addons.hw_drivers.event_manager import event_manager
+from koda.addons.hw_drivers.main import iot_devices
+from koda.addons.hw_drivers.tools import helpers
+from koda.tools.misc import file_open
 
 path = os.path.realpath(os.path.join(os.path.dirname(__file__), '../../views'))
 loader = jinja2.FileSystemLoader(path)

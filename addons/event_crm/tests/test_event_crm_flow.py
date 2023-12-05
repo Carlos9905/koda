@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.event_crm.tests.common import TestEventCrmCommon
-from odoo.tests import tagged
-from odoo.tests.common import users
-from odoo.tools import mute_logger
+from koda.addons.event_crm.tests.common import TestEventCrmCommon
+from koda.tests import tagged
+from koda.tests.common import users
+from koda.tools import mute_logger
 
 
 @tagged('event_flow')

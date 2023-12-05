@@ -19,13 +19,13 @@ except ImportError:
     slugify_lib = None
 
 import odoo
-from odoo import api, models, exceptions, tools, http
-from odoo.addons.base.models import ir_http
-from odoo.addons.base.models.ir_http import RequestUID
-from odoo.addons.base.models.ir_qweb import QWebException
-from odoo.http import request, Response
-from odoo.osv import expression
-from odoo.tools import config, ustr, pycompat
+from koda import api, models, exceptions, tools, http
+from koda.addons.base.models import ir_http
+from koda.addons.base.models.ir_http import RequestUID
+from koda.addons.base.models.ir_qweb import QWebException
+from koda.http import request, Response
+from koda.osv import expression
+from koda.tools import config, ustr, pycompat
 
 _logger = logging.getLogger(__name__)
 

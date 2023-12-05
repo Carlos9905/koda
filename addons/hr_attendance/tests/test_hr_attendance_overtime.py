@@ -1,8 +1,8 @@
 # Koda
 from datetime import date, datetime
 
-from odoo.tests import new_test_user
-from odoo.tests.common import tagged, TransactionCase
+from koda.tests import new_test_user
+from koda.tests.common import tagged, TransactionCase
 
 @tagged('post_install', '-at_install', 'hr_attendance_overtime')
 class TestHrAttendanceOvertime(TransactionCase):

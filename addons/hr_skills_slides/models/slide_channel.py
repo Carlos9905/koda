@@ -3,8 +3,8 @@
 
 from markupsafe import Markup
 
-from odoo import fields, models, _
-from odoo.tools import html2plaintext
+from koda import fields, models, _
+from koda.tools import html2plaintext
 
 
 class SlideChannelPartner(models.Model):

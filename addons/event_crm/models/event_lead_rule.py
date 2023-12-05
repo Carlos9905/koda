@@ -4,7 +4,7 @@
 from ast import literal_eval
 from collections import defaultdict
 
-from odoo import fields, models, _
+from koda import fields, models, _
 
 
 class EventLeadRule(models.Model):

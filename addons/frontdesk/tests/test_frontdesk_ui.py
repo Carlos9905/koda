@@ -4,7 +4,7 @@
 from datetime import datetime
 
 import odoo.tests
-from odoo.tests.common import HttpCase
+from koda.tests.common import HttpCase
 
 
 @odoo.tests.tagged('post_install', '-at_install')

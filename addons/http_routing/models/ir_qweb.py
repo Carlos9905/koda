@@ -1,9 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
-from odoo import models
-from odoo.http import request
-from odoo.addons.http_routing.models.ir_http import slug, unslug_url, url_for
+from koda import models
+from koda.http import request
+from koda.addons.http_routing.models.ir_http import slug, unslug_url, url_for
 
 _logger = logging.getLogger(__name__)
 BAD_REQUEST = """Missing request.is_frontend attribute.

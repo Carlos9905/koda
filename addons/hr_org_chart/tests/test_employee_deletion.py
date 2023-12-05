@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import Form, tagged, TransactionCase
-from odoo.exceptions import MissingError
+from koda.tests import Form, tagged, TransactionCase
+from koda.exceptions import MissingError
 
 @tagged('post_install', '-at_install')
 class TestEmployeeDeletion(TransactionCase):

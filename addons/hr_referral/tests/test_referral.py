@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import json
 
-from odoo.exceptions import UserError
-from odoo.addons.hr_referral.tests.common import TestHrReferralBase
+from koda.exceptions import UserError
+from koda.addons.hr_referral.tests.common import TestHrReferralBase
 
 
 class TestHrReferral(TestHrReferralBase):

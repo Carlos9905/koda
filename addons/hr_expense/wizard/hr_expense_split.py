@@ -1,8 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from copy import deepcopy
 
-from odoo import fields, models, api, Command
-from odoo.tools import float_compare
+from koda import fields, models, api, Command
+from koda.tools import float_compare
 
 
 class HrExpenseSplit(models.TransientModel):
