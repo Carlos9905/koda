@@ -71,7 +71,7 @@ class SocialMediaYoutube(models.Model):
         ).text
 
         if iap_add_accounts_url == 'unauthorized':
-            raise UserError(_("You don't have an active subscription. Please buy one here: %s", 'https://www.odoo.com/buy'))
+            raise UserError(_("You don't have an active subscription. Please buy one here: %s", 'https://www.koda.com/buy'))
         elif iap_add_accounts_url == 'youtube_missing_configuration':
             raise UserError(_("The url that this service requested returned an error. Please contact the author of the app."))
 

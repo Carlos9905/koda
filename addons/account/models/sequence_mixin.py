@@ -274,7 +274,7 @@ class SequenceMixin(models.AbstractModel):
             format_values['seq'] = format_values['seq'] + 1
             sequence = format_string.format(**format_values)
             try:
-                with self.env.cr.savepoint(flush=False), mute_logger('odoo.sql_db'):
+                with self.env.cr.savepoint(flush=False), mute_logger('koda.sql_db'):
                     self[self._sequence_field] = sequence
                     self.flush_recordset([self._sequence_field])
                     break

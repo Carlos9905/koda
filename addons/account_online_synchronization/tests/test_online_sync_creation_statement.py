@@ -94,8 +94,8 @@ class TestSynchStatementCreation(AccountOnlineSynchronizationCommon):
             ]
         )
 
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_transactions')
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineLink._get_consent_expiring_date')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_transactions')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._get_consent_expiring_date')
     def test_automatic_journal_assignment(self, patched_get_consent, patched_fetch_transactions):
         def create_online_account(name, link_id, iban, currency_id):
             return self.env['account.online.account'].create({
@@ -157,7 +157,7 @@ class TestSynchStatementCreation(AccountOnlineSynchronizationCommon):
         self.assertEqual(bank_journal_with_account_usd.bank_account_id, bank_account_2, "Bank Account should not have changed")
         self.assertEqual(bank_journal_with_account_usd.currency_id, self.currency_data['currency'], "Currency should have changed")
 
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
     def test_fetch_transaction_date_start(self, patched_fetch):
         """ This test verifies that the start_date params used when fetching transaction is correct """
         patched_fetch.return_value = {'transactions': []}
@@ -189,7 +189,7 @@ class TestSynchStatementCreation(AccountOnlineSynchronizationCommon):
         self.account_online_account._retrieve_transactions()
         patched_fetch.assert_called_with('/proxy/v1/transactions', data=data)
 
-    @patch('odoo.addons.account_online_synchronization.models.account_online.requests')
+    @patch('koda.addons.account_online_synchronization.models.account_online.requests')
     def test_fetch_receive_error_message(self, patched_request):
         # We want to test that when we receive an error, a redirectWarning with the correct parameter is thrown
         # However the method _log_information that we need to test for that is performing a rollback as it needs
@@ -211,7 +211,7 @@ class TestSynchStatementCreation(AccountOnlineSynchronizationCommon):
         }
         patched_request.post.return_value = mock_response
 
-        generated_url = 'https://www.odoo.com/help?stage=bank_sync&summary=Bank+sync+error+ref%3A+abc123+-+Provider%3A+theonlyone+-+Client+ID%3A+client_id_1&description=ClientID%3A+client_id_1%0AInstitution%3A+Test+Bank%0AError+Reference%3A+abc123%0AError+Message%3A+This+kind+of+things+can+happen%0A'
+        generated_url = 'https://www.koda.com/help?stage=bank_sync&summary=Bank+sync+error+ref%3A+abc123+-+Provider%3A+theonlyone+-+Client+ID%3A+client_id_1&description=ClientID%3A+client_id_1%0AInstitution%3A+Test+Bank%0AError+Reference%3A+abc123%0AError+Message%3A+This+kind+of+things+can+happen%0A'
         return_act_url = {
             'type': 'ir.actions.act_url',
             'url': generated_url

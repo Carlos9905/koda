@@ -150,8 +150,8 @@ class TestDiscussChannelAccess(MailCommon):
                     raise AssertionError(f"{user_key, channel_key, membership, operation} should not raise") from e
             else:
                 try:
-                    with self.assertRaises(Exception), mute_logger("odoo.sql_db"), mute_logger(
-                        "odoo.addons.base.models.ir_rule"
+                    with self.assertRaises(Exception), mute_logger("koda.sql_db"), mute_logger(
+                        "koda.addons.base.models.ir_rule"
                     ):
                         self._execute_action_channel(user_key, channel_key, membership, operation, result)
                 except AssertionError as e:
@@ -390,8 +390,8 @@ class TestDiscussChannelAccess(MailCommon):
                     ) from e
             else:
                 try:
-                    with self.assertRaises(Exception), mute_logger("odoo.sql_db"), mute_logger(
-                        "odoo.addons.base.models.ir_rule"
+                    with self.assertRaises(Exception), mute_logger("koda.sql_db"), mute_logger(
+                        "koda.addons.base.models.ir_rule"
                     ):
                         self._execute_action_member(channel_id, user_key, target, operation, result)
                 except AssertionError as e:

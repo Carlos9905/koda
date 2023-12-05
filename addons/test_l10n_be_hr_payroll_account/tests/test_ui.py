@@ -3,11 +3,11 @@
 
 from freezegun import freeze_time
 
-import odoo.tests
+import koda.tests
 from . import common
 
 
-@odoo.tests.tagged('-at_install', 'post_install', 'salary')
+@koda.tests.tagged('-at_install', 'post_install', 'salary')
 class TestUi(common.TestPayrollAccountCommon):
     def test_ui(self):
         with freeze_time("2022-01-01"):

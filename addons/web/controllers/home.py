@@ -4,8 +4,8 @@ import json
 import logging
 
 
-import odoo
-import odoo.modules.registry
+import koda
+import koda.modules.registry
 from koda import http
 from koda.exceptions import AccessError
 from koda.http import request
@@ -105,7 +105,7 @@ class Home(http.Controller):
         values = {k: v for k, v in request.params.items() if k in SIGN_UP_REQUEST_PARAMS}
         try:
             values['databases'] = http.db_list()
-        except odoo.exceptions.AccessDenied:
+        except koda.exceptions.AccessDenied:
             values['databases'] = None
 
         if request.httprequest.method == 'POST':
@@ -113,8 +113,8 @@ class Home(http.Controller):
                 uid = request.session.authenticate(request.db, request.params['login'], request.params['password'])
                 request.params['login_success'] = True
                 return request.redirect(self._login_redirect(uid, redirect=redirect))
-            except odoo.exceptions.AccessDenied as e:
-                if e.args == odoo.exceptions.AccessDenied().args:
+            except koda.exceptions.AccessDenied as e:
+                if e.args == koda.exceptions.AccessDenied().args:
                     values['error'] = _("Wrong login/password")
                 else:
                     values['error'] = e.args[0]
@@ -125,7 +125,7 @@ class Home(http.Controller):
         if 'login' not in values and request.session.get('auth_login'):
             values['login'] = request.session.get('auth_login')
 
-        if not odoo.tools.config['list_db']:
+        if not koda.tools.config['list_db']:
             values['disable_database_manager'] = True
 
         response = request.render('web.login', values)
@@ -143,7 +143,7 @@ class Home(http.Controller):
     def switch_to_admin(self):
         uid = request.env.user.id
         if request.env.user._is_system():
-            uid = request.session.uid = odoo.SUPERUSER_ID
+            uid = request.session.uid = koda.SUPERUSER_ID
             # invalidate session token cache as we've changed the uid
             request.env.registry.clear_cache()
             request.session.session_token = security.compute_session_token(request.session, request.env)

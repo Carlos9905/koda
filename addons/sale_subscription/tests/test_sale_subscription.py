@@ -35,7 +35,7 @@ class TestSubscription(TestSubscriptionCommon):
                   }
         return values
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_automatic(self):
         self.assertTrue(True)
         sub = self.subscription
@@ -111,7 +111,7 @@ class TestSubscription(TestSubscriptionCommon):
             self.assertEqual(invoice_periods, "03/03/2021 to 04/02/2021")
             self.assertEqual(inv.invoice_line_ids[0].date, datetime.date(2021, 3, 3))
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_template(self):
         """ Test behaviour of on_change_template """
         Subscription = self.env['sale.order']
@@ -255,7 +255,7 @@ class TestSubscription(TestSubscriptionCommon):
             {'display_type': 'line_note', 'name': '...', 'product_id': False},
         ])
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_unlimited_sale_order(self):
         """ Test behaviour of on_change_template """
         with freeze_time("2021-01-03"):
@@ -306,7 +306,7 @@ class TestSubscription(TestSubscriptionCommon):
             self.assertEqual(invoice_periods, "03/03/2021 to 04/02/2021")
             self.assertEqual(inv.invoice_line_ids.date, datetime.date(2021, 3, 3))
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_renewal(self):
         """ Test subscription renewal """
         with freeze_time("2021-11-18"):
@@ -2464,7 +2464,7 @@ class TestSubscription(TestSubscriptionCommon):
             self1.call_count += 1
             return action_confirm_orig(*args, **kwargs)
 
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder.action_confirm', _action_confirm_mock):
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder.action_confirm', _action_confirm_mock):
             sub.partner_id = self.partner_a_invoice.id
             self.assertEqual(sub.partner_id, self.partner_a_invoice)
             self.assertEqual(self.call_count, 0)
@@ -2690,7 +2690,7 @@ class TestSubscription(TestSubscriptionCommon):
         def patched_reset(self):
             self.name = "Called"
 
-        with patch('odoo.addons.sale_subscription.models.sale_order_line.SaleOrderLine._reset_subscription_quantity_post_invoice', patched_reset), freeze_time("2021-01-01"):
+        with patch('koda.addons.sale_subscription.models.sale_order_line.SaleOrderLine._reset_subscription_quantity_post_invoice', patched_reset), freeze_time("2021-01-01"):
             sub = self.subscription
             sub.action_confirm()
             self.env['sale.order']._cron_recurring_create_invoice()
@@ -2705,7 +2705,7 @@ class TestSubscription(TestSubscriptionCommon):
         sub.action_confirm()
 
         with freeze_time(start_date + relativedelta(days=sub.plan_id.auto_close_limit)):
-            with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment_rejected):
+            with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment_rejected):
                 sub._create_recurring_invoice()
         self.assertEqual(sub.close_reason_id.id, self.env.ref('sale_subscription.close_reason_auto_close_limit_reached').id)
 

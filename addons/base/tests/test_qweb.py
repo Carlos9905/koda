@@ -654,7 +654,7 @@ class TestQWebNS(TransactionCase):
             'type': 'qweb',
             'arch': """
                 <t t-name="base.dummy">
-                    <Invoice xmlns:od="http://odoo.com/od">
+                    <Invoice xmlns:od="http://koda.com/od">
                         <od:name t-att-test="'a' + 1"/>
                     </Invoice>
                 </t>
@@ -888,10 +888,10 @@ class TestQWebBasic(TransactionCase):
             </t>'''
         })
         result = """
-                <a href="/link/odoo/sub">link</a>
-                <a href="/link/odoo/">link2</a>
+                <a href="/link/koda/sub">link</a>
+                <a href="/link/koda/">link2</a>
             """
-        values = {'url': 'odoo', 'other': True}
+        values = {'url': 'koda', 'other': True}
         rendered = self.env['ir.qweb']._render(t.id, values)
         self.assertEqual(rendered.strip(), result.strip())
 
@@ -1416,7 +1416,7 @@ class TestQWebBasic(TransactionCase):
         with self.assertRaises(MissingError, msg="Not Found"):
             self.env['ir.qweb']._render(-9999)
 
-    @mute_logger('odoo.addons.base.models.ir_qweb') # warning for template not found
+    @mute_logger('koda.addons.base.models.ir_qweb') # warning for template not found
     def test_error_message_6(self):
         # Error not found a second rendering (first rendering with option hide this error).
         html = self.env['ir.qweb']._render(-9999, raise_if_not_found=False)
@@ -1435,7 +1435,7 @@ class TestQWebBasic(TransactionCase):
         with self.assertRaises(UserError, msg="Not Found"):
             self.env['ir.qweb']._render(-9999)
 
-    @mute_logger('odoo.addons.base.models.ir_qweb') # warning for template not found
+    @mute_logger('koda.addons.base.models.ir_qweb') # warning for template not found
     def test_error_message_8(self):
         # UserError not found a second rendering (first rendering with option hide this error).
         html = self.env['ir.qweb']._render(-9999, raise_if_not_found=False)

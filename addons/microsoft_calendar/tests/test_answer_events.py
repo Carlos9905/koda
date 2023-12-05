@@ -74,7 +74,7 @@ class TestAnswerEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'get_events')
     def test_attendee_accepts_event_from_outlook_calendar(self, mock_get_events):
         """
-        In his Outlook calendar, the attendee accepts the event and sync with his odoo calendar.
+        In his Outlook calendar, the attendee accepts the event and sync with his koda calendar.
         """
         mock_get_events.return_value = (
             MicrosoftEvent([dict(
@@ -98,7 +98,7 @@ class TestAnswerEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'get_events')
     def test_attendee_accepts_event_from_outlook_calendar_synced_by_organizer(self, mock_get_events):
         """
-        In his Outlook calendar, the attendee accepts the event and the organizer syncs his odoo calendar.
+        In his Outlook calendar, the attendee accepts the event and the organizer syncs his koda calendar.
         """
         mock_get_events.return_value = (
             MicrosoftEvent([dict(

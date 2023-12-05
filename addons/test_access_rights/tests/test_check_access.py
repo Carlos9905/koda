@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-import odoo.tests
+import koda.tests
 from koda import Command
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestAccess(odoo.tests.HttpCase):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestAccess(koda.tests.HttpCase):
     def setUp(self):
         super(TestAccess, self).setUp()
 

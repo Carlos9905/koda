@@ -33,7 +33,7 @@ class TestMailingTest(TestMassMailCommon):
         })
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mail.models.mail_render_mixin')
+    @mute_logger('koda.addons.mail.models.mail_render_mixin')
     def test_mailing_test_button(self):
         mailing = self.test_mailing_bl.with_env(self.env)
         mailing_test = self.env['mailing.mailing.test'].create({

@@ -2,9 +2,9 @@
 from koda import Command
 from koda.tools import mute_logger
 
-import odoo.tests
+import koda.tests
 
-class BaseTestUi(odoo.tests.HttpCase):
+class BaseTestUi(koda.tests.HttpCase):
 
     def main_flow_tour(self):
         # Enable Make to Order
@@ -68,7 +68,7 @@ class BaseTestUi(odoo.tests.HttpCase):
 
         self.start_tour("/web", 'main_flow_tour', login="admin", timeout=180)
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUi(BaseTestUi):
 
     def test_01_main_flow_tour(self):
@@ -102,11 +102,11 @@ class TestUi(BaseTestUi):
         })
 
         current_companies = "%s-%s" % (company1.id, company2.id)
-        with mute_logger("odoo.http"):
+        with mute_logger("koda.http"):
             self.start_tour(f"/web#action={act_window.id}&cids={current_companies}", "test_company_switch_access_error", login="admin")
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUiMobile(BaseTestUi):
 
     browser_size = '375x667'

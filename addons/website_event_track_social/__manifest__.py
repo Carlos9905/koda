@@ -8,7 +8,7 @@
     'sequence': 1021,
     'version': '1.1',
     'summary': 'Send reminder push notifications to event attendees based on favorites tracks.',
-    'website': 'https://www.odoo.com/app/events',
+    'website': 'https://www.koda.com/app/events',
     'depends': [
         'website_event_social',
         'website_event_track',

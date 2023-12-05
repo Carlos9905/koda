@@ -149,8 +149,8 @@ class MetaModel(api.Meta):
             # determine '_module'
             if '_module' not in attrs:
                 module = attrs['__module__']
-                assert module.startswith('odoo.addons.'), \
-                    f"Invalid import of {module}.{name}, it should start with 'odoo.addons'."
+                assert module.startswith('koda.addons.'), \
+                    f"Invalid import of {module}.{name}, it should start with 'koda.addons'."
                 attrs['_module'] = module.split('.')[2]
 
             # determine model '_name' and normalize '_inherits'
@@ -434,20 +434,20 @@ class BaseModel(metaclass=MetaModel):
     record.
 
     To create a class that should not be instantiated,
-    the :attr:`~odoo.models.BaseModel._register` attribute may be set to False.
+    the :attr:`~koda.models.BaseModel._register` attribute may be set to False.
     """
     __slots__ = ['env', '_ids', '_prefetch_ids']
 
     _auto = False
     """Whether a database table should be created.
-    If set to ``False``, override :meth:`~odoo.models.BaseModel.init`
+    If set to ``False``, override :meth:`~koda.models.BaseModel.init`
     to create the database table.
 
     Automatically defaults to `True` for :class:`Model` and
     :class:`TransientModel`, `False` for :class:`AbstractModel`.
 
     .. tip:: To create a model without any table, inherit
-            from :class:`~odoo.models.AbstractModel`.
+            from :class:`~koda.models.AbstractModel`.
     """
     _register = False           #: registry visibility
     _abstract = True
@@ -492,7 +492,7 @@ class BaseModel(metaclass=MetaModel):
     .. warning::
 
       if multiple fields with the same name are defined in the
-      :attr:`~odoo.models.Model._inherits`-ed models, the inherited field will
+      :attr:`~koda.models.Model._inherits`-ed models, the inherited field will
       correspond to the last one (in the inherits list order).
     """
     _table = None               #: SQL table name used by model if :attr:`_auto`
@@ -3380,9 +3380,9 @@ class BaseModel(metaclass=MetaModel):
         :param list fnames: names of relational fields to check
         :raises UserError: if the `company_id` of the value of any field is not
             in `[False, self.company_id]` (or `self` if
-            :class:`~odoo.addons.base.models.res_company`).
+            :class:`~koda.addons.base.models.res_company`).
 
-        For :class:`~odoo.addons.base.models.res_users` relational fields,
+        For :class:`~koda.addons.base.models.res_users` relational fields,
         verifies record company is in `company_ids` fields.
 
         User with main company A, having access to company A and B, could be
@@ -3639,36 +3639,36 @@ class BaseModel(metaclass=MetaModel):
         :raise ValidationError: if invalid values are specified for selection fields
         :raise UserError: if a loop would be created in a hierarchy of objects a result of the operation (such as setting an object as its own parent)
 
-        * For numeric fields (:class:`~odoo.fields.Integer`,
-          :class:`~odoo.fields.Float`) the value should be of the
+        * For numeric fields (:class:`~koda.fields.Integer`,
+          :class:`~koda.fields.Float`) the value should be of the
           corresponding type
-        * For :class:`~odoo.fields.Boolean`, the value should be a
+        * For :class:`~koda.fields.Boolean`, the value should be a
           :class:`python:bool`
-        * For :class:`~odoo.fields.Selection`, the value should match the
+        * For :class:`~koda.fields.Selection`, the value should match the
           selection values (generally :class:`python:str`, sometimes
           :class:`python:int`)
-        * For :class:`~odoo.fields.Many2one`, the value should be the
+        * For :class:`~koda.fields.Many2one`, the value should be the
           database identifier of the record to set
-        * The expected value of a :class:`~odoo.fields.One2many` or
-          :class:`~odoo.fields.Many2many` relational field is a list of
-          :class:`~odoo.fields.Command` that manipulate the relation the
+        * The expected value of a :class:`~koda.fields.One2many` or
+          :class:`~koda.fields.Many2many` relational field is a list of
+          :class:`~koda.fields.Command` that manipulate the relation the
           implement. There are a total of 7 commands:
-          :meth:`~odoo.fields.Command.create`,
-          :meth:`~odoo.fields.Command.update`,
-          :meth:`~odoo.fields.Command.delete`,
-          :meth:`~odoo.fields.Command.unlink`,
-          :meth:`~odoo.fields.Command.link`,
-          :meth:`~odoo.fields.Command.clear`, and
-          :meth:`~odoo.fields.Command.set`.
-        * For :class:`~odoo.fields.Date` and `~odoo.fields.Datetime`,
+          :meth:`~koda.fields.Command.create`,
+          :meth:`~koda.fields.Command.update`,
+          :meth:`~koda.fields.Command.delete`,
+          :meth:`~koda.fields.Command.unlink`,
+          :meth:`~koda.fields.Command.link`,
+          :meth:`~koda.fields.Command.clear`, and
+          :meth:`~koda.fields.Command.set`.
+        * For :class:`~koda.fields.Date` and `~koda.fields.Datetime`,
           the value should be either a date(time), or a string.
 
           .. warning::
 
             If a string is provided for Date(time) fields,
             it must be UTC-only and formatted according to
-            :const:`odoo.tools.misc.DEFAULT_SERVER_DATE_FORMAT` and
-            :const:`odoo.tools.misc.DEFAULT_SERVER_DATETIME_FORMAT`
+            :const:`koda.tools.misc.DEFAULT_SERVER_DATE_FORMAT` and
+            :const:`koda.tools.misc.DEFAULT_SERVER_DATETIME_FORMAT`
 
         * Other non-relational fields use a string for value
         """
@@ -5157,7 +5157,7 @@ class BaseModel(metaclass=MetaModel):
     def ensure_one(self):
         """Verify that the current recordset holds a single record.
 
-        :raise odoo.exceptions.ValueError: ``len(self) != 1``
+        :raise koda.exceptions.ValueError: ``len(self) != 1``
         """
         try:
             # unpack to ensure there is only one value is faster than len when true and
@@ -5171,7 +5171,7 @@ class BaseModel(metaclass=MetaModel):
         """Return a new version of this recordset attached to the provided environment.
 
         :param env:
-        :type env: :class:`~odoo.api.Environment`
+        :type env: :class:`~koda.api.Environment`
 
         .. note::
             The returned recordset has the same prefetch object as ``self``.
@@ -5224,7 +5224,7 @@ class BaseModel(metaclass=MetaModel):
             result.env.companies = self.env.companies | company
 
         :param company: main company of the new environment.
-        :type company: :class:`~odoo.addons.base.models.res_company` or int
+        :type company: :class:`~koda.addons.base.models.res_company` or int
 
         .. warning::
 
@@ -5324,7 +5324,7 @@ class BaseModel(metaclass=MetaModel):
                     continue
                 for invf in self.pool.field_inverses[field]:
                     # DLE P98: `test_40_new_fields`
-                    # /home/dle/src/odoo/master-nochange-fp/odoo/addons/test_new_api/tests/test_new_fields.py
+                    # /home/dle/src/koda/master-nochange-fp/koda/addons/test_new_api/tests/test_new_fields.py
                     # Be careful to not break `test_onchange_taxes_1`, `test_onchange_taxes_2`, `test_onchange_taxes_3`
                     # If you attempt to find a better solution
                     for inv_rec in inv_recs:
@@ -6613,7 +6613,7 @@ class BaseModel(metaclass=MetaModel):
                     # values.update(dict())
                     yield values
 
-        See :mod:`odoo.tools.populate` for population tools and applications.
+        See :mod:`koda.tools.populate` for population tools and applications.
 
         :returns: list of pairs(field_name, factory) where `factory` is a generator function.
         :rtype: list(tuple(str, generator))

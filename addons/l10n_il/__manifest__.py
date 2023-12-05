@@ -14,7 +14,7 @@ This module consists of:
  - Taxes and tax report
  - Multiple Fiscal positions
  """,
-    'website': 'https://www.odoo.com/documentation/17.0/applications/finance/fiscal_localizations.html',
+    'website': 'https://www.koda.com/documentation/17.0/applications/finance/fiscal_localizations.html',
     'depends': [
         'account',
     ],

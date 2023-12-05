@@ -23,7 +23,7 @@ try:
 except ImportError:
     from werkzeug.routing.converters import NumberConverter  # moved in werkzeug 2.2.2
 
-import odoo
+import koda
 from koda import api, http, models, tools, SUPERUSER_ID
 from koda.exceptions import AccessDenied, AccessError, MissingError
 from koda.http import request, Response, ROUTING_KEYS, Stream
@@ -193,12 +193,12 @@ class IrHttp(models.AbstractModel):
                 # explicitly crash now, instead of crashing later
                 args[key].check_access_rights('read')
                 args[key].check_access_rule('read')
-            except (odoo.exceptions.AccessError, odoo.exceptions.MissingError) as e:
+            except (koda.exceptions.AccessError, koda.exceptions.MissingError) as e:
                 # custom behavior in case a record is not accessible / has been removed
                 if handle_error := rule.endpoint.original_routing.get('handle_params_access_error'):
                     if response := handle_error(e):
                         werkzeug.exceptions.abort(response)
-                if isinstance(e, odoo.exceptions.MissingError):
+                if isinstance(e, koda.exceptions.MissingError):
                     raise werkzeug.exceptions.NotFound() from e
                 raise
 
@@ -239,9 +239,9 @@ class IrHttp(models.AbstractModel):
     def routing_map(self, key=None):
         _logger.info("Generating routing map for key %s", str(key))
         registry = Registry(threading.current_thread().dbname)
-        installed = registry._init_modules.union(odoo.conf.server_wide_modules)
-        if tools.config['test_enable'] and odoo.modules.module.current_test:
-            installed.add(odoo.modules.module.current_test)
+        installed = registry._init_modules.union(koda.conf.server_wide_modules)
+        if tools.config['test_enable'] and koda.modules.module.current_test:
+            installed.add(koda.modules.module.current_test)
         mods = sorted(installed)
         # Note : when routing map is generated, we put it on the class `cls`
         # to make it available for all instance. Since `env` create an new instance

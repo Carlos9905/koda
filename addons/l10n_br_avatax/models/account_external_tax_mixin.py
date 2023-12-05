@@ -12,8 +12,8 @@ from koda.tools import float_round, DEFAULT_SERVER_DATETIME_FORMAT, json_float_r
 logger = logging.getLogger(__name__)
 
 IAP_SERVICE_NAME = 'l10n_br_avatax_proxy'
-DEFAULT_IAP_ENDPOINT = 'https://l10n-br-avatax.api.odoo.com'
-DEFAULT_IAP_TEST_ENDPOINT = 'https://l10n-br-avatax.test.odoo.com'
+DEFAULT_IAP_ENDPOINT = 'https://l10n-br-avatax.api.koda.com'
+DEFAULT_IAP_TEST_ENDPOINT = 'https://l10n-br-avatax.test.koda.com'
 ICP_LOG_NAME = 'l10n_br_avatax.log.end.date'
 AVATAX_PRECISION_DIGITS = 2  # defined by API
 

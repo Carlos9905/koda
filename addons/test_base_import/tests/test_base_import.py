@@ -304,7 +304,7 @@ class TestPreview(TransactionCase):
         })
         return import_wizard
 
-    @mute_logger('odoo.addons.base_import.models.base_import')
+    @mute_logger('koda.addons.base_import.models.base_import')
     def test_encoding(self):
         import_wizard = self.make_import()
         result = import_wizard.parse_preview({
@@ -313,7 +313,7 @@ class TestPreview(TransactionCase):
         })
         self.assertFalse('error' in result)
 
-    @mute_logger('odoo.addons.base_import.models.base_import')
+    @mute_logger('koda.addons.base_import.models.base_import')
     def test_csv_errors(self):
         import_wizard = self.make_import()
 

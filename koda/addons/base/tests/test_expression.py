@@ -166,7 +166,7 @@ class TestExpression(SavepointCaseWithUserDemo):
         self.assertEqual(len(cats), 0)
 
         # test hierarchical search in m2m with 'False' value
-        with self.assertLogs('odoo.osv.expression'):
+        with self.assertLogs('koda.osv.expression'):
             cats = self._search(Category, [('id', 'child_of', False)])
         self.assertEqual(len(cats), 0)
 
@@ -195,11 +195,11 @@ class TestExpression(SavepointCaseWithUserDemo):
         self.assertEqual(len(cats), 0)
 
         # test hierarchical search in m2m with 'False' value
-        with self.assertLogs('odoo.osv.expression'):
+        with self.assertLogs('koda.osv.expression'):
             cats = self._search(Category, [('id', 'parent_of', False)])
         self.assertEqual(len(cats), 0)
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_10_hierarchy_access(self):
         Partner = self.env['res.partner'].with_user(self.user_demo)
         top = Partner.create({'name': 'Top'})
@@ -694,7 +694,7 @@ class TestExpression(SavepointCaseWithUserDemo):
         ])
         self.assertEqual(nicostratus.parent_path, f'{helen.id}/{nicostratus.id}/')
 
-        with patch('odoo.osv.expression.get_unaccent_wrapper') as w:
+        with patch('koda.osv.expression.get_unaccent_wrapper') as w:
             w().side_effect = lambda x: x
             rs = Model.search([('parent_path', 'like', f'{helen.id}/%')], order='id asc')
             self.assertEqual(rs, helen | hermione | nicostratus)
@@ -766,7 +766,7 @@ class TestExpression(SavepointCaseWithUserDemo):
         all_countries = self._search(Country, [])
         self.assertEqual(countries, all_countries)
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     def test_invalid(self):
         """ verify that invalid expressions are refused, even for magic fields """
         Country = self.env['res.country']
@@ -1183,7 +1183,7 @@ class TestQueries(TransactionCase):
         ''']):
             Model.search_count([('id', '=', 1)])
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_access_rules(self):
         Model = self.env['res.users'].with_user(self.env.ref('base.user_admin'))
         self.env['ir.rule'].search([]).unlink()

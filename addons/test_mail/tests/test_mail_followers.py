@@ -164,7 +164,7 @@ class BaseFollowersTest(MailCommon):
         self.assertEqual(document.message_follower_ids.partner_id, self.partner_portal | customer)
 
     @users('employee')
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_followers_inverse_message_partner(self):
         test_record = self.test_record.with_env(self.env)
         partner0, partner1, partner2, partner3 = self.env['res.partner'].create(
@@ -203,7 +203,7 @@ class BaseFollowersTest(MailCommon):
         test_record.write({'message_partner_ids': [(4, partner0.id), (4, partner1.id)]})
         self.assertEqual(test_record.message_follower_ids.partner_id, partner1)
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_followers_inverse_message_partner_access_rights(self):
         """ Make sure we're not bypassing security checks by setting a partner
         instead of a follower """
@@ -324,7 +324,7 @@ class AdvancedFollowersTest(MailCommon):
         """ Creator of records are automatically added as followers """
         self.assertEqual(self.test_track.message_partner_ids, self.user_employee.partner_id)
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_auto_subscribe_inactive(self):
         """ Test inactive are not added as followers in automated subscription """
         self.test_track.user_id = False
@@ -372,7 +372,7 @@ class AdvancedFollowersTest(MailCommon):
         })
         self.assertEqual(sub.message_partner_ids, (self.user_employee.partner_id | self.user_admin.partner_id))
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_auto_subscribe_defaults(self):
         """ Test auto subscription based on an container record. This mimics
         the behavior of addons like project and task where subscribing to
@@ -608,7 +608,7 @@ class RecipientsNotificationTest(MailCommon):
                                   partner_to_users={self.common_partner.id: self.user_2})
 
     @users('employee')
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_notification_unlink(self):
         """ Check that we unlink the created user_notification after unlinked the
         related document. """
@@ -852,7 +852,7 @@ class UnfollowFromInboxTest(MailCommon):
             MailMessage._message_fetch(domain=[('needaction', '=', True)])["messages"]._message_format_personalize(partner_id)))
 
     @users('employee')
-    @mute_logger('odoo.models')
+    @mute_logger('koda.models')
     def test_inbox_notification_follower(self):
         """ Check follow-up information for displaying inbox messages used to
         implement "unfollow" in the inbox.
@@ -902,7 +902,7 @@ class UnfollowFromEmailTest(MailCommon, HttpCase):
             {'name': 'unfollow'})
         cls.partner_without_user = cls.env['res.partner'].create({
             'name': 'Dave',
-            'email': 'dave@odoo.com',
+            'email': 'dave@koda.com',
         })
         cls.user_employee.write({'notification_type': 'email'})
 
@@ -999,7 +999,7 @@ class UnfollowFromEmailTest(MailCommon, HttpCase):
                 self.assertIn('/mail/unfollow', mail_template_arch)
                 self.assertNotIn('/mail/unfollow', re.sub(_UNFOLLOW_REGEX, '', mail_template_arch))
 
-    @mute_logger('odoo.addons.base.models', 'odoo.addons.mail.controllers.mail', 'odoo.http', 'odoo.models')
+    @mute_logger('koda.addons.base.models', 'koda.addons.mail.controllers.mail', 'koda.http', 'koda.models')
     def test_unfollow_internal_user(self):
         """ Internal user must receive an unfollow URL, that cannot be tampered
         and redirects to the correct page.
@@ -1027,7 +1027,7 @@ class UnfollowFromEmailTest(MailCommon, HttpCase):
             unfollow_url = self._post_message_and_get_unfollow_urls(test_record, test_partner)[0]
             self.assertFalse(unfollow_url)
 
-    @mute_logger('odoo.models')
+    @mute_logger('koda.models')
     def test_unfollow_partner_with_no_user(self):
         """ External partner must not receive an unfollow URL. """
         test_partner = self.partner_without_user
@@ -1038,7 +1038,7 @@ class UnfollowFromEmailTest(MailCommon, HttpCase):
             unfollow_url = self._post_message_and_get_unfollow_urls(test_record, test_partner)[0]
             self.assertFalse(unfollow_url)
 
-    @mute_logger('odoo.addons.mail.controllers.mail', 'odoo.models', 'odoo.http')
+    @mute_logger('koda.addons.mail.controllers.mail', 'koda.models', 'koda.http')
     def test_unfollow_partner_without_access_on_record_unfollow_enabled(self):
         """ Partner without access must receive an unfollow URL for message
         related to record with unfollow enabled.

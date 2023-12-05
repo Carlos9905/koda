@@ -87,7 +87,7 @@ class TestStudioApproval(TransactionCase):
             self.rule.method = 'atomize'
         # check that there cannot be 2 entries for the same rule+record
         self.rule.with_user(self.manager).set_approval(res_id=self.record.id, approved=False)
-        with mute_logger('odoo.sql_db'):
+        with mute_logger('koda.sql_db'):
             with self.assertRaises(IntegrityError, msg="Shouldn't have 2 entries for the same rule+record"):
                 with self.cr.savepoint():
                     self.env['studio.approval.entry'].with_user(self.manager).create({

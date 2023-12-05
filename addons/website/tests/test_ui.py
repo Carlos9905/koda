@@ -5,12 +5,12 @@ import base64
 
 from werkzeug.urls import url_encode
 
-import odoo
-import odoo.tests
+import koda
+import koda.tests
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestUiCustomizeTheme(odoo.tests.HttpCase):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestUiCustomizeTheme(koda.tests.HttpCase):
     def test_01_attachment_website_unlink(self):
         ''' Some ir.attachment needs to be unlinked when a website is unlink,
             otherwise some flows will just crash. That's the case when 2 website
@@ -60,8 +60,8 @@ class TestUiCustomizeTheme(odoo.tests.HttpCase):
         self.assertFalse(so_attachment.website_id, 'Website should be removed')
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestUiHtmlEditor(odoo.tests.HttpCase):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestUiHtmlEditor(koda.tests.HttpCase):
     def test_html_editor_multiple_templates(self):
         Website = self.env['website']
         View = self.env['ir.ui.view']
@@ -114,8 +114,8 @@ class TestUiHtmlEditor(odoo.tests.HttpCase):
         self.start_tour("/", 'website_media_dialog_undraw', login='admin')
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestUiTranslate(odoo.tests.HttpCase):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestUiTranslate(koda.tests.HttpCase):
     def test_admin_tour_rte_translator(self):
         self.env['res.lang'].create({
             'name': 'Parseltongue',
@@ -192,8 +192,8 @@ class TestUiTranslate(odoo.tests.HttpCase):
         self.start_tour(f"/website/force/{website_2.id}", 'snippet_translation_changing_lang', login='admin')
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestUi(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestUi(koda.tests.HttpCase):
 
     def test_01_admin_tour_homepage(self):
         self.start_tour("/web", 'homepage', login='admin')

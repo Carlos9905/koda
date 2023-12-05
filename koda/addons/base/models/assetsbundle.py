@@ -411,7 +411,7 @@ class AssetsBundle(object):
                     *  Templates                               *
                     *******************************************/
 
-                    odoo.define('{self.name}.bundle.xml', function(require){{
+                    koda.define('{self.name}.bundle.xml', function(require){{
                         'use strict';
                         const {{ loadXML }} = require('@web/core/assets');
                         const templates = `{templates}`;
@@ -496,7 +496,7 @@ class AssetsBundle(object):
             # Load content.
             try:
                 content = asset.content.strip()
-                template = content if content.startswith('<odoo>') else f'<templates>{asset.content}</templates>'
+                template = content if content.startswith('<koda>') else f'<templates>{asset.content}</templates>'
                 io_content = io.BytesIO(template.encode('utf-8'))
                 content_templates_tree = etree.parse(io_content, parser=parser).getroot()
             except etree.ParseError as e:
@@ -686,16 +686,16 @@ class AssetsBundle(object):
                 }
 
                 async function onDOMContentLoaded() {
-                    var odoo = window.top.odoo;
-                    if (!odoo || !odoo.define) {
+                    var koda = window.top.koda;
+                    if (!koda || !koda.define) {
                         useAlert();
                         return;
                     }
 
                     // Wait for potential JS loading
                     await new Promise(resolve => {
-                        const noLazyTimeout = setTimeout(() => resolve(), 10); // 10 since need to wait for promise resolutions of odoo.define
-                        odoo.define('AssetsBundle.PotentialLazyLoading', function (require) {
+                        const noLazyTimeout = setTimeout(() => resolve(), 10); // 10 since need to wait for promise resolutions of koda.define
+                        koda.define('AssetsBundle.PotentialLazyLoading', function (require) {
                             'use strict';
 
                             const lazyloader = require('web.public.lazyloader');
@@ -705,8 +705,8 @@ class AssetsBundle(object):
                         });
                     });
 
-                    var alertTimeout = setTimeout(useAlert, 10); // 10 since need to wait for promise resolutions of odoo.define
-                    odoo.define('AssetsBundle.ErrorMessage', function (require) {
+                    var alertTimeout = setTimeout(useAlert, 10); // 10 since need to wait for promise resolutions of koda.define
+                    koda.define('AssetsBundle.ErrorMessage', function (require) {
                         'use strict';
 
                         require('web.dom_ready');

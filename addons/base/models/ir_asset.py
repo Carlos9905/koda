@@ -4,8 +4,8 @@ from glob import glob
 from logging import getLogger
 from werkzeug import urls
 
-import odoo
-import odoo.modules.module  # get_manifest, don't from-import it
+import koda
+import koda.modules.module  # get_manifest, don't from-import it
 from koda import api, fields, models, tools
 from koda.tools import misc
 from koda.tools.constants import ASSET_EXTENSIONS, EXTERNAL_ASSET
@@ -182,7 +182,7 @@ class IrAsset(models.Model):
 
         # 2. Process all addons' manifests.
         for addon in addons:
-            for command in odoo.modules.module.get_manifest(addon)['assets'].get(bundle, ()):
+            for command in koda.modules.module.get_manifest(addon)['assets'].get(bundle, ()):
                 directive, target, path_def = self._process_command(command)
                 self._process_path(bundle, directive, target, path_def, asset_paths, seen, addons, installed, bundle_start_index, **assets_params)
 
@@ -284,7 +284,7 @@ class IrAsset(models.Model):
         IrModule = self.env['ir.module.module']
 
         def mapper(addon):
-            manif = odoo.modules.module.get_manifest(addon)
+            manif = koda.modules.module.get_manifest(addon)
             from_terp = IrModule.get_values_from_terp(manif)
             from_terp['name'] = addon
             from_terp['depends'] = manif.get('depends', ['base'])
@@ -308,7 +308,7 @@ class IrAsset(models.Model):
         """
         # Main source: the current registry list
         # Second source of modules: server wide modules
-        return self.env.registry._init_modules.union(odoo.conf.server_wide_modules or [])
+        return self.env.registry._init_modules.union(koda.conf.server_wide_modules or [])
 
     def _get_paths(self, path_def, installed):
         """
@@ -317,7 +317,7 @@ class IrAsset(models.Model):
 
         If the path_def matches a (list of) file, the result will contain the full_path
         and the modified time.
-        Ex: ('/base/static/file.js', '/home/user/source/odoo/odoo/addons/base/static/file.js', 643636800)
+        Ex: ('/base/static/file.js', '/home/user/source/koda/koda/addons/base/static/file.js', 643636800)
 
         If the path_def looks like a non aggregable path (http://, /web/assets), only return the path
         Ex: ('http://example.com/lib.js', None, -1)
@@ -336,7 +336,7 @@ class IrAsset(models.Model):
         path_def = fs2web(path_def)  # we expect to have all path definition unix style or url style, this is a safety
         path_parts = [part for part in path_def.split('/') if part]
         addon = path_parts[0]
-        addon_manifest = odoo.modules.module.get_manifest(addon)
+        addon_manifest = koda.modules.module.get_manifest(addon)
 
         safe_path = True
         if addon_manifest:

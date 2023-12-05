@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import koda
 import time
 from koda import fields
 from koda.tests import common
@@ -62,7 +62,7 @@ class TestAngloSaxonCommon(common.TransactionCase):
         self.pos_config.write({'payment_method_ids': [(6, 0, self.cash_payment_method.ids)]})
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestAngloSaxonFlow(TestAngloSaxonCommon):
 
     def test_create_account_move_line(self):

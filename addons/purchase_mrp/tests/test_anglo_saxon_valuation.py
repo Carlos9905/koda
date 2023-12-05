@@ -163,7 +163,7 @@ class TestAngloSaxonValuationPurchaseMRP(TransactionCase):
         self.assertEqual(component01.stock_valuation_layer_ids.mapped('value'), [25, -25])
         self.assertEqual(component02.stock_valuation_layer_ids.mapped('value'), [75, -75])
 
-        with mute_logger('odoo.tests.form.onchange'):
+        with mute_logger('koda.tests.form.onchange'):
             with Form(bom_kit) as kit_form:
                 with kit_form.bom_line_ids.edit(0) as line:
                     line.cost_share = 30

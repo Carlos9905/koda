@@ -179,7 +179,7 @@ def generate_module(module, data):
                 record_node, record_skipped = generate_record(record, get_xmlid)
                 nodes.append(record_node)
                 skipped.extend(record_skipped)
-        root = E.odoo(*nodes)
+        root = E.koda(*nodes)
         xml = etree.tostring(root, pretty_print=True, encoding='UTF-8', xml_declaration=True)
 
         # add the XML file to the archive

@@ -26,7 +26,7 @@ class TestPurchaseDashboard(AccountTestInvoicingCommon, MailCase):
         cls.product_100 = cls.env['product.product'].create({**product_data, 'standard_price': 100})
         cls.product_250 = cls.env['product.product'].create({**product_data, 'standard_price': 250})
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_purchase_dashboard(self):
         '''
         Test purchase dashboard values with multiple users.

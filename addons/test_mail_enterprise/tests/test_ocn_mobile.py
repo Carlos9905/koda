@@ -19,7 +19,7 @@ class TestMailMobile(SMSCommon):
     def setUpClass(cls):
         super(TestMailMobile, cls).setUpClass()
         cls.original_domain = cls.env['ir.config_parameter'].sudo().get_param('web.base.url')
-        cls.env['ir.config_parameter'].sudo().set_param('web.base.url', 'http://yourcompany.odoo.com')
+        cls.env['ir.config_parameter'].sudo().set_param('web.base.url', 'http://yourcompany.koda.com')
 
     @classmethod
     def tearDownClass(cls):
@@ -28,10 +28,10 @@ class TestMailMobile(SMSCommon):
 
     def test_override_url_in_mail(self):
         url = self.env['mail.thread']._notify_get_action_link('view', model='mail.activity', res_id=1)
-        original_expected_link = 'http://yourcompany.odoo.com/mail/view?model=mail.activity&res_id=1'
+        original_expected_link = 'http://yourcompany.koda.com/mail/view?model=mail.activity&res_id=1'
         expected_url = 'https://redirect-url.email/?link={0}&apn={1}&afl={0}&ibi={1}&ifl={0}'.format(
             urllib.parse.quote(original_expected_link, safe=''),
-            'com.odoo.mobile',
+            'com.koda.mobile',
         )
         self.assertEqual(url, expected_url)
 
@@ -83,7 +83,7 @@ class TestPushNotification(SMSCommon):
         cls.group_channel = cls.env['discuss.channel'].channel_create(name='Channel', group_id=None)
         cls.group_channel.add_members((cls.user_email + cls.user_inbox).partner_id.ids)
 
-    @patch('odoo.addons.mail_mobile.models.mail_thread.iap_tools.iap_jsonrpc')
+    @patch('koda.addons.mail_mobile.models.mail_thread.iap_tools.iap_jsonrpc')
     def test_push_notifications(self, jsonrpc):
         # Test No Inbox Condition
         self.record_simple.with_user(self.user_inbox).message_notify(
@@ -152,7 +152,7 @@ class TestPushNotification(SMSCommon):
             'No Tracking Message found'
         )
 
-    @patch('odoo.addons.mail_mobile.models.mail_thread.iap_tools.iap_jsonrpc')
+    @patch('koda.addons.mail_mobile.models.mail_thread.iap_tools.iap_jsonrpc')
     def test_push_notifications_android_channel(self, jsonrpc):
         # Test Direct Message
         self.direct_message_channel.with_user(self.user_email).message_post(
@@ -210,7 +210,7 @@ class TestPushNotification(SMSCommon):
             'The type of Android channel must be AtMention'
         )
 
-    @patch('odoo.addons.mail_mobile.models.mail_thread.iap_tools.iap_jsonrpc')
+    @patch('koda.addons.mail_mobile.models.mail_thread.iap_tools.iap_jsonrpc')
     def test_push_notifications_mail_replay(self, jsonrpc):
         test_record = self.env['mail.test.gateway'].with_context(self._test_context).create({
             'name': 'Test',

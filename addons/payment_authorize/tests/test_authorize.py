@@ -28,15 +28,15 @@ class AuthorizeTest(AuthorizeCommon):
     def test_processing_values(self):
         """Test custom 'access_token' processing_values for authorize provider."""
         tx = self._create_transaction(flow='direct')
-        with mute_logger('odoo.addons.payment.models.payment_transaction'), \
+        with mute_logger('koda.addons.payment.models.payment_transaction'), \
             patch(
-                'odoo.addons.payment.utils.generate_access_token',
+                'koda.addons.payment.utils.generate_access_token',
                 new=self._generate_test_access_token
             ):
             processing_values = tx._get_processing_values()
 
         with patch(
-            'odoo.addons.payment.utils.generate_access_token', new=self._generate_test_access_token
+            'koda.addons.payment.utils.generate_access_token', new=self._generate_test_access_token
         ):
             self.assertTrue(payment_utils.check_access_token(
                 processing_values['access_token'], self.reference, self.partner.id,

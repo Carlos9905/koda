@@ -11,7 +11,7 @@ except ImportError:
 
 class OdooBaseChecker(checkers.BaseChecker):
     __implements__ = interfaces.IAstroidChecker
-    name = 'odoo'
+    name = 'koda'
 
     msgs = {
         'E8504': (

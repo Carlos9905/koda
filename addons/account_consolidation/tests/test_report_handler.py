@@ -17,7 +17,7 @@ class TestAbstractHandler(TransactionCase):
     Tested with a PeriodBuilder as AbstractBuilder is abstract
     """
 
-    @patch('odoo.addons.account_consolidation.report.handler.abstract.AbstractHandler.get_selected_values')
+    @patch('koda.addons.account_consolidation.report.handler.abstract.AbstractHandler.get_selected_values')
     def test__is_set(self, patched):
         combinations = (
             ([], False),
@@ -43,8 +43,8 @@ class TestJournalHandler(AccountConsolidationTestCase):
             'chart_id': self.chart.id,
         })
 
-    @patch('odoo.addons.account_consolidation.report.handler.periods.PeriodsHandler.is_set')
-    @patch('odoo.addons.account_consolidation.report.handler.journals.JournalsHandler.get_option_values')
+    @patch('koda.addons.account_consolidation.report.handler.periods.PeriodsHandler.is_set')
+    @patch('koda.addons.account_consolidation.report.handler.journals.JournalsHandler.get_option_values')
     def test_handle(self, patched_options, patched_isset):
         patched_options.return_value = [{'id': 1, 'selected': True}, {'id': 2, 'selected': False}]
         patched_isset.return_value = True
@@ -144,7 +144,7 @@ class TestPeriodsHandler(AccountConsolidationTestCase):
         res = self.periods_handler.get_selected_values(options)
         self.assertListEqual(res, [])
 
-    @patch('odoo.addons.account_consolidation.report.handler.periods.PeriodsHandler.get_selected_values',
+    @patch('koda.addons.account_consolidation.report.handler.periods.PeriodsHandler.get_selected_values',
            return_value=[1, 3])
     def test_to_option_dict(self, patched_method):
         ap = self._create_analysis_period()
@@ -175,7 +175,7 @@ class TestPeriodsHandler(AccountConsolidationTestCase):
 
 @tagged('post_install', '-at_install', 'trial_balance_report')
 class TestShowZeroHandler(AccountConsolidationTestCase):
-    @patch('odoo.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler._line_is_not_zero')
+    @patch('koda.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler._line_is_not_zero')
     def test_account_line_should_be_added(self, patched_line_not_zero):
         will_be_ignored = {}
         options_enabled = {'consolidation_show_zero_balance_accounts': True}
@@ -193,8 +193,8 @@ class TestShowZeroHandler(AccountConsolidationTestCase):
                              patched_value)
             self.assertEqual(patched_line_not_zero.call_count, 3)
 
-    @patch('odoo.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler._section_line_is_not_zero')
-    @patch('odoo.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler._section_line_has_children')
+    @patch('koda.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler._section_line_is_not_zero')
+    @patch('koda.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler._section_line_has_children')
     def test_section_line_should_be_added(self, patched_children, patched_zero):
         will_be_ignored = []
         options_enabled = {'consolidation_show_zero_balance_accounts': True}
@@ -237,7 +237,7 @@ class TestShowZeroHandler(AccountConsolidationTestCase):
         self.assertFalse(ShowZeroHandler._section_line_has_children([{'id': 'section-1'}]))
         self.assertTrue(ShowZeroHandler._section_line_has_children([{'id': 'section-1'}, {'id': 1}]))
 
-    @patch('odoo.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler._line_is_not_zero')
+    @patch('koda.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler._line_is_not_zero')
     def test__section_line_is_not_zero(self, patched):
         patched.return_value = False
         empty = []

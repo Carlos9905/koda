@@ -11,8 +11,8 @@ from collections import OrderedDict
 
 from werkzeug.exceptions import InternalServerError
 
-import odoo
-import odoo.modules.registry
+import koda
+import koda.modules.registry
 from koda import http
 from koda.exceptions import UserError
 from koda.http import content_disposition, request
@@ -324,7 +324,7 @@ class Export(http.Controller):
             fields['id'] = parent_field
 
         fields_sequence = sorted(fields.items(),
-            key=lambda field: odoo.tools.ustr(field[1].get('string', '').lower()))
+            key=lambda field: koda.tools.ustr(field[1].get('string', '').lower()))
 
         records = []
         for field_name, field in fields_sequence:

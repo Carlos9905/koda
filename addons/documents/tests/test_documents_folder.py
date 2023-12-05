@@ -289,7 +289,7 @@ class TestDocumentsFolderSequence(TransactionCase):
         #    - Child2
         # - Root2
         #
-        with mute_logger('odoo.models.unlink'):
+        with mute_logger('koda.models.unlink'):
             cls.env['documents.document'].search([]).unlink()
             cls.env['documents.document'].flush_model()
             cls.env['documents.folder'].search([]).unlink()

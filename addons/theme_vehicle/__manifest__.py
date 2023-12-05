@@ -38,7 +38,7 @@
         },
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-vehicle.odoo.com',
+    'live_test_url': 'https://theme-vehicle.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_vehicle/static/src/js/tour.js',

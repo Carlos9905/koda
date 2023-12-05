@@ -3,14 +3,14 @@
 
 import base64
 
-import odoo.tests
+import koda.tests
 from koda.tools import mute_logger
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestMedia(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestMedia(koda.tests.HttpCase):
 
-    @mute_logger('odoo.addons.http_routing.models.ir_http', 'odoo.http')
+    @mute_logger('koda.addons.http_routing.models.ir_http', 'koda.http')
     def test_01_replace_media(self):
         SVG = base64.b64encode(b'<svg xmlns="http://www.w3.org/2000/svg"></svg>')
         self.env['ir.attachment'].create({

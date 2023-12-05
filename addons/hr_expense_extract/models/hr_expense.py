@@ -31,7 +31,7 @@ class HrExpense(models.Model):
     def _contact_iap_extract(self, pathinfo, params):
         params['version'] = OCR_VERSION
         params['account_token'] = self._get_iap_account().account_token
-        endpoint = self.env['ir.config_parameter'].sudo().get_param('iap_extract_endpoint', 'https://extract.api.odoo.com')
+        endpoint = self.env['ir.config_parameter'].sudo().get_param('iap_extract_endpoint', 'https://extract.api.koda.com')
         return iap_tools.iap_jsonrpc(endpoint + '/api/extract/expense/2/' + pathinfo, params=params)
 
     def _autosend_for_digitization(self):
@@ -116,10 +116,10 @@ class HrExpense(models.Model):
 </p>
 <p>Snap pictures of your receipts and let Odoo<br/> automatically create expenses for you.</p>
 <p class="d-none d-md-block">
-    <a href="https://apps.apple.com/be/app/odoo/id1272543640" target="_blank" class="o_expense_mobile_app">
+    <a href="https://apps.apple.com/be/app/koda/id1272543640" target="_blank" class="o_expense_mobile_app">
         <img alt="Apple App Store" class="img img-fluid h-100 o_expense_apple_store" src="/hr_expense/static/img/app_store.png"/>
     </a>
-    <a href="https://play.google.com/store/apps/details?id=com.odoo.mobile" target="_blank" class="o_expense_mobile_app">
+    <a href="https://play.google.com/store/apps/details?id=com.koda.mobile" target="_blank" class="o_expense_mobile_app">
         <img alt="Google Play Store" class="img img-fluid h-100 o_expense_google_store" src="/hr_expense/static/img/play_store.png"/>
     </a>
 </p>"""))

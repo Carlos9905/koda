@@ -85,7 +85,7 @@ class UtilPerf(HttpCase):
 
 
 class TestStandardPerformance(UtilPerf):
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_10_perf_sql_img_controller(self):
         self.authenticate('demo', 'demo')
         # not published user, get the not found image placeholder
@@ -94,7 +94,7 @@ class TestStandardPerformance(UtilPerf):
         self.assertEqual(self._get_url_hot_query(url), 8)
         self.assertEqual(self._get_url_hot_query(url, cache=False), 8)
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_11_perf_sql_img_controller(self):
         self.authenticate('demo', 'demo')
         self.env['res.users'].sudo().browse(2).website_published = True
@@ -108,7 +108,7 @@ class TestStandardPerformance(UtilPerf):
         self._check_url_hot_query(url, 6, select_tables_perf)
         self.assertEqual(self._get_url_hot_query(url, cache=False), 6)
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_20_perf_sql_img_controller_bis(self):
         url = '/web/image/website/1/favicon'
         select_tables_perf = {
@@ -275,7 +275,7 @@ class TestWebsitePerformance(UtilPerf):
 
 @tagged('-at_install', 'post_install')
 class TestWebsitePerformancePost(UtilPerf):
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_50_perf_sql_web_assets(self):
         # assets route /web/assets/..
         assets_url = self.env['ir.qweb']._get_asset_bundle('web.assets_frontend_lazy', css=False, js=True).get_links()[0]

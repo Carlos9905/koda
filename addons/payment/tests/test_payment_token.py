@@ -12,7 +12,7 @@ from koda.addons.payment.tests.common import PaymentCommon
 @tagged('-at_install', 'post_install')
 class TestPaymentToken(PaymentCommon):
 
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     def test_users_have_no_access_to_other_users_tokens(self):
         users = [self.public_user, self.portal_user, self.internal_user]
         token = self._create_token(partner_id=self.admin_partner.id)

@@ -4,7 +4,7 @@ from . import controllers
 from . import models
 from . import wizard
 
-import odoo
+import koda
 from koda import api, SUPERUSER_ID
 from koda.http import request
 from functools import partial
@@ -27,7 +27,7 @@ def uninstall_hook(env):
 
     # Properly unlink website_id from ir.model.fields
     def rem_website_id_null(dbname):
-        db_registry = odoo.modules.registry.Registry.new(dbname)
+        db_registry = koda.modules.registry.Registry.new(dbname)
         with db_registry.cursor() as cr:
             env = api.Environment(cr, SUPERUSER_ID, {})
             env['ir.model.fields'].search([

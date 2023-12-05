@@ -3,10 +3,10 @@
 import threading
 from unittest.mock import patch
 
-import odoo.tests
+import koda.tests
 
-@odoo.tests.tagged('website_nightly', '-standard')
-class TestIap(odoo.tests.HttpCase):
+@koda.tests.tagged('website_nightly', '-standard')
+class TestIap(koda.tests.HttpCase):
 
     def test_01_industries_lang(self):
         """Ensure that the industries are translated in all the languages

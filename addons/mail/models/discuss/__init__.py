@@ -11,7 +11,7 @@ from . import discuss_gif_favorite
 from . import discuss_voice_metadata
 from . import mail_guest
 
-# odoo models
+# koda models
 from . import ir_attachment
 from . import ir_websocket
 from . import res_groups

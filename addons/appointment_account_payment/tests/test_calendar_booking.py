@@ -11,7 +11,7 @@ from freezegun import freeze_time
 
 class AppointmentAccountPaymentTest(AppointmentAccountPaymentCommon):
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('apt_manager')
     def test_booking_to_event_on_invoice_paid_resource(self):
         """ Replace booking with Event when invoice is paid - resource appointment """
@@ -91,7 +91,7 @@ class AppointmentAccountPaymentTest(AppointmentAccountPaymentCommon):
             self.assertEqual(booking_line.event_start, calendar_booking.start)
             self.assertEqual(booking_line.event_stop, calendar_booking.stop)
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @freeze_time('2022-2-13 20:00:00')
     @users('apt_manager')
     def test_booking_to_event_on_invoice_paid_users(self):

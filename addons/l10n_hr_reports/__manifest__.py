@@ -18,6 +18,6 @@ Accounting reports for Croatia
     ],
     'installable': True,
     'auto_install': ['l10n_hr', 'account_reports'],
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'license': 'OEEL-1',
 }

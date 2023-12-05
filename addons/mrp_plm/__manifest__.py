@@ -7,7 +7,7 @@
     'category': 'Manufacturing/Product Lifecycle Management (PLM)',
     'sequence': 155,
     'summary': """Manage engineering change orders on products, bills of material""",
-    'website': 'https://www.odoo.com/app/plm',
+    'website': 'https://www.koda.com/app/plm',
     'depends': ['mrp'],
     'description': """
 Product Life Management

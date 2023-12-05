@@ -293,7 +293,7 @@ class TestReportEditorUIUnit(HttpCase):
             <t t-name="web_studio.test_report">
                <t t-call="web.html_container">
                  <div class="">
-                   <p>edited with odoo editor</p>
+                   <p>edited with koda editor</p>
                  </div>
                  <t t-foreach="docs" t-as="doc">
                    <t t-call="web_studio.test_report_document"/>
@@ -309,7 +309,7 @@ class TestReportEditorUIUnit(HttpCase):
                <div>
                  <p t-field="doc.name"/>
                </div>
-               <p>edited with odoo editor 2</p>
+               <p>edited with koda editor 2</p>
              </t>
         """)
         copied_view = get_report_view_copy(self.main_view_document)
@@ -429,7 +429,7 @@ class TestReportEditorUIUnit(HttpCase):
         main_view_arch = self.main_view.arch
         document_view_arch = self.main_view_document.arch
 
-        with mute_logger("odoo.http"):
+        with mute_logger("koda.http"):
             self.start_tour(self.tour_url, "web_studio.test_basic_report_edition_error", login="admin")
 
         self.assertTrue(error)
@@ -460,7 +460,7 @@ class TestReportEditorUIUnit(HttpCase):
         main_view_arch = self.main_view.arch
         document_view_arch = self.main_view_document.arch
 
-        with mute_logger("odoo.http"):
+        with mute_logger("koda.http"):
             self.start_tour(self.tour_url, "web_studio.test_basic_report_edition_xml_error", login="admin")
 
         self.assertTrue(error)
@@ -747,7 +747,7 @@ class TestReportEditorUIUnit(HttpCase):
             (Json({"en_US": arch}), bad_view.id)
         )
 
-        with mute_logger("odoo.http"):
+        with mute_logger("koda.http"):
             self.start_tour(self.tour_url, "web_studio.test_error_at_loading", login="admin")
 
     def test_xml_and_form_diff(self):

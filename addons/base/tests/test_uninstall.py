@@ -30,7 +30,7 @@ MODEL = 'test_uninstall.model'
 class TestUninstall(BaseCase):
     """
     Test the install/uninstall of a test module. The module is available in
-    `odoo.tests` which should be present in the addons-path.
+    `koda.tests` which should be present in the addons-path.
     """
 
     def test_01_install(self):

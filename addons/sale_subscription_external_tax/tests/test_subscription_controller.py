@@ -14,7 +14,7 @@ class TestExternalTaxSubscriptionController(TestSaleSubscriptionExternalCommon, 
         self.subscription._portal_ensure_token()
 
         url = "/my/subscriptions/%s?access_token=%s" % (self.subscription.id, self.subscription.access_token)
-        with patch('odoo.addons.sale_external_tax.models.sale_order.SaleOrder._set_external_taxes', autospec=True) as mocked_set, \
+        with patch('koda.addons.sale_external_tax.models.sale_order.SaleOrder._set_external_taxes', autospec=True) as mocked_set, \
              self.patch_set_external_taxes():
             self.url_open(url, allow_redirects=False)
 

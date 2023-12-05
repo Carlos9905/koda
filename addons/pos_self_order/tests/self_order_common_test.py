@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import koda.tests
 
 from koda import Command
 from koda.addons.point_of_sale.tests.common import archive_products
 
-@odoo.tests.tagged("post_install", "-at_install")
-class SelfOrderCommonTest(odoo.tests.HttpCase):
+@koda.tests.tagged("post_install", "-at_install")
+class SelfOrderCommonTest(koda.tests.HttpCase):
     browser_size = "375x667"
     touch_enabled = True
 

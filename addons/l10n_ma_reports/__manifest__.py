@@ -24,6 +24,6 @@ This module has been built with the help of Caudigef.
         'l10n_ma',
         'account_reports',
     ],
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'license': 'OEEL-1',
 }

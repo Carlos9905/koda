@@ -14,7 +14,7 @@ from koda.tools import sql
 from koda.tools.translate import quote, unquote, xml_translate, html_translate, TranslationImporter, TranslationModuleReader
 from koda.tests.common import TransactionCase, BaseCase, new_test_user, tagged
 
-_stats_logger = logging.getLogger('odoo.tests.stats')
+_stats_logger = logging.getLogger('koda.tests.stats')
 
 # a string with various unicode characters
 SPECIAL_CHARACTERS = " ¥®°²Æçéðπ⁉€∇⓵▲☑♂♥✓➔『にㄅ㊀中한︸🌈🌍👌😀"
@@ -337,7 +337,7 @@ class TestLanguageInstall(TransactionCase):
         def _load_module_terms(self, modules, langs, overwrite=False):
             loaded.append((modules, langs, overwrite))
 
-        with patch('odoo.addons.base.models.ir_module.Module._load_module_terms', _load_module_terms):
+        with patch('koda.addons.base.models.ir_module.Module._load_module_terms', _load_module_terms):
             wizard.lang_install()
 
         # _load_module_terms is called once with lang='fr_FR' and overwrite=True
@@ -351,7 +351,7 @@ class TestTranslationExport(TransactionCase):
 
     def test_export_translatable_resources(self):
         """Read files of installed modules and export translatable terms"""
-        with self.assertNoLogs('odoo.tools.translate', "ERROR"):
+        with self.assertNoLogs('koda.tools.translate', "ERROR"):
             TranslationModuleReader(self.env.cr)
 
 
@@ -531,11 +531,11 @@ class TestTranslation(TransactionCase):
     #     country_1.flush_recordset()
     #
     #     country_2 = Country.create({'name': 'Odoo2'})
-    #     with self.assertRaises(IntegrityError), mute_logger('odoo.sql_db'):
+    #     with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
     #         country_2.name = 'Odoo'
     #         country_2.flush_recordset()
     #
-    #     with self.assertRaises(IntegrityError), mute_logger('odoo.sql_db'):
+    #     with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
     #         country_3 = Country.create({'name': 'Odoo'})
 
 class TestTranslationWrite(TransactionCase):

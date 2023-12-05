@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import odoo
+import koda
 
 def migrate(cr, version):
-    registry = odoo.registry(cr.dbname)
+    registry = koda.registry(cr.dbname)
     from koda.addons.account.models.chart_template import migrate_set_tags_and_taxes_updatable
     migrate_set_tags_and_taxes_updatable(cr, registry, 'l10n_nl')

@@ -151,7 +151,7 @@ class AccountJournal(models.Model):
             vals_bank_statement.append({
                 'transactions': transactions,
                 # WARNING: the provided ledger balance is not necessarily the ending balance of the statement
-                # see https://github.com/odoo/odoo/issues/3003
+                # see https://github.com/koda/koda/issues/3003
                 'balance_start': float(account.statement.balance) - total_amt,
                 'balance_end_real': account.statement.balance,
             })

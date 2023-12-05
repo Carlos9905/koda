@@ -158,7 +158,7 @@ class TestMenu(common.TransactionCase):
             url = a_menu.url
             self.request_url_mock = 'http://localhost:8069' + url
             with MockRequest(self.env, website=website_1), \
-                 patch('odoo.addons.website.models.website_menu.url_parse', new=url_parse_mock):
+                 patch('koda.addons.website.models.website_menu.url_parse', new=url_parse_mock):
                 self.assertTrue(a_menu._is_active(), "Same path, no domain, no qs, should match")
                 a_menu.url = f'{url}#anchor'
                 self.assertTrue(a_menu._is_active(), "Same path, no domain, no qs, should match (anchor should be ignored)")
@@ -200,7 +200,7 @@ class TestMenu(common.TransactionCase):
         # Second, test a nested menu configuration (simple URL, no qs/anchor)
         self.request_url_mock = 'http://localhost:8069/'
         with MockRequest(self.env, website=website_1), \
-             patch('odoo.addons.website.models.website_menu.url_parse', new=url_parse_mock):
+             patch('koda.addons.website.models.website_menu.url_parse', new=url_parse_mock):
             self.assertFalse(menu._is_active(), "Same path but it's a container menu, its URL shouldn't be considered")
             self.assertTrue(menu2._is_active(), "Same path and no child -> Should be active")
             self.assertFalse(menu3._is_active(), "Not same path + children")

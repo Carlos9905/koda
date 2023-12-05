@@ -7,7 +7,7 @@
     'category': 'Services/Helpdesk',
     'sequence': 110,
     'summary': 'Track, prioritize, and solve customer tickets',
-    'website': 'https://www.odoo.com/app/helpdesk',
+    'website': 'https://www.koda.com/app/helpdesk',
     'depends': [
         'base_setup',
         'mail',

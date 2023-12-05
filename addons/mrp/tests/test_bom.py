@@ -1896,7 +1896,7 @@ class TestBoM(TestMrpCommon):
         ]])
 
         # simulate resequence from UI (reverse C->D and C->E)
-        # (see odoo/addons/web/controllers/main.py:1352)
+        # (see koda/addons/web/controllers/main.py:1352)
         boms.invalidate_recordset()
         for i, record in enumerate(boms[0] | boms[1] | boms[3] | boms[2] | boms[4] | boms[5]):
             record.write({'sequence': i})

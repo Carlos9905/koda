@@ -135,7 +135,7 @@ class TestAccountPayment(AccountPaymentCommon):
         payment_with_token.payment_token_id = payment_token.id
 
         with patch(
-            'odoo.addons.payment.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment.models.payment_transaction.PaymentTransaction'
             '._send_payment_request'
         ) as patched:
             payment_without_token.action_post()

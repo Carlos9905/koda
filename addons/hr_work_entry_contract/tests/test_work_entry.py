@@ -202,7 +202,7 @@ class TestWorkEntry(TestWorkEntryBase):
         work_entry_2 = self.create_work_entry(datetime(2018, 10, 10, 8, 0), datetime(2018, 10, 10, 10, 0))
         self.assertEqual(work_entry_1.state, 'conflict')
 
-        with mute_logger('odoo.sql_db'):
+        with mute_logger('koda.sql_db'):
             with self.assertRaises(IntegrityError):
                 with self.cr.savepoint():
                     (work_entry_1 + work_entry_2).write({'state': 'validated'})

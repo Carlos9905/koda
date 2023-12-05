@@ -143,7 +143,7 @@ class AccountEdiFormat(models.Model):
             error_codes = [e.get("code") for e in error]
             if "238" in error_codes:
                 # Invalid token eror then create new token and send generate request again.
-                # This happen when authenticate called from another odoo instance with same credentials (like. Demo/Test)
+                # This happen when authenticate called from another koda instance with same credentials (like. Demo/Test)
                 authenticate_response = self._l10n_in_edi_ewaybill_authenticate(invoices.company_id)
                 if not authenticate_response.get("error"):
                     error = []
@@ -205,7 +205,7 @@ class AccountEdiFormat(models.Model):
             error_codes = [e.get("code") for e in error]
             if "1005" in error_codes:
                 # Invalid token eror then create new token and send generate request again.
-                # This happen when authenticate called from another odoo instance with same credentials (like. Demo/Test)
+                # This happen when authenticate called from another koda instance with same credentials (like. Demo/Test)
                 authenticate_response = self._l10n_in_edi_authenticate(invoices.company_id)
                 if not authenticate_response.get("error"):
                     error = []
@@ -289,7 +289,7 @@ class AccountEdiFormat(models.Model):
             error_codes = [e.get("code") for e in error]
             if "238" in error_codes:
                 # Invalid token eror then create new token and send generate request again.
-                # This happen when authenticate called from another odoo instance with same credentials (like. Demo/Test)
+                # This happen when authenticate called from another koda instance with same credentials (like. Demo/Test)
                 authenticate_response = self._l10n_in_edi_ewaybill_authenticate(invoices.company_id)
                 if not authenticate_response.get("error"):
                     error = []

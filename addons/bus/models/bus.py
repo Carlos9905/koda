@@ -10,7 +10,7 @@ import threading
 import time
 from psycopg2 import InterfaceError, sql
 
-import odoo
+import koda
 from koda import api, fields, models
 from koda.service.server import CommonServer
 from koda.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
@@ -80,7 +80,7 @@ class ImBus(models.Model):
             # nothing to fetch, and the websocket will return no notification.
             @self.env.cr.postcommit.add
             def notify():
-                with odoo.sql_db.db_connect('postgres').cursor() as cr:
+                with koda.sql_db.db_connect('postgres').cursor() as cr:
                     query = sql.SQL("SELECT {}('imbus', %s)").format(sql.Identifier(ODOO_NOTIFY_FUNCTION))
                     cr.execute(query, (json_dump(list(channels)), ))
 
@@ -157,7 +157,7 @@ class ImDispatch(threading.Thread):
     def loop(self):
         """ Dispatch postgres notifications to the relevant websockets """
         _logger.info("Bus.loop listen imbus on db postgres")
-        with odoo.sql_db.db_connect('postgres').cursor() as cr, \
+        with koda.sql_db.db_connect('postgres').cursor() as cr, \
              selectors.DefaultSelector() as sel:
             cr.execute("listen imbus")
             cr.commit()

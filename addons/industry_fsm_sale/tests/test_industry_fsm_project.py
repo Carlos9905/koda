@@ -27,7 +27,7 @@ class TestIndustryFsmProject(TestFsmFlowSaleCommon):
             =========
             Remove the timesheet product in the billable fsm project and check if an exception is raise.
         """
-        with mute_logger('odoo.sql_db'):
+        with mute_logger('koda.sql_db'):
             with self.assertRaises(IntegrityError):
                 self.fsm_project.write({'timesheet_product_id': False})
                 self.env.flush_all()

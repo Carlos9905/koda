@@ -8,8 +8,8 @@ arriving on the WSGI entrypoint to a :class:`~http.Request`: arriving at
 a module controller with a fully setup ORM available.
 
 Application developers mostly know this module thanks to the
-:class:`~odoo.http.Controller`: class and its companion the
-:func:`~odoo.http.route`: method decorator. Together they are used to
+:class:`~koda.http.Controller`: class and its companion the
+:func:`~koda.http.route`: method decorator. Together they are used to
 register methods responsible of delivering web content to matching URLS.
 
 Those two are only the tip of the iceberg, below is an ascii graph that
@@ -227,7 +227,7 @@ No CSRF validation token provided for path %r
 
 Odoo URLs are CSRF-protected by default (when accessed with unsafe
 HTTP methods). See
-https://www.odoo.com/documentation/16.0/developer/reference/addons/http.html#csrf
+https://www.koda.com/documentation/16.0/developer/reference/addons/http.html#csrf
 for more details.
 
 * if this endpoint is accessed through Odoo via py-QWeb form, embed a CSRF
@@ -290,7 +290,7 @@ def db_list(force=False, host=None):
     """
     Get the list of available databases.
 
-    :param bool force: See :func:`~odoo.service.db.list_dbs`:
+    :param bool force: See :func:`~koda.service.db.list_dbs`:
     :param host: The Host used to replace %h and %d in the dbfilters
         regexp. Taken from the current request when omitted.
     :returns: the list of available databases
@@ -389,7 +389,7 @@ def serialize_exception(exception):
 
 def send_file(filepath_or_fp, mimetype=None, as_attachment=False, filename=None, mtime=None,
               add_etags=True, cache_timeout=STATIC_CACHE, conditional=True):
-    warnings.warn('odoo.http.send_file is deprecated, please use odoo.http.Stream instead.', DeprecationWarning, stacklevel=2)
+    warnings.warn('koda.http.send_file is deprecated, please use koda.http.Stream instead.', DeprecationWarning, stacklevel=2)
     return _send_file(
         filepath_or_fp,
         request.httprequest.environ,
@@ -536,7 +536,7 @@ class Stream:
             proxies to aggressively cache the response. This option
             also set the ``max-age`` directive to 1 year.
         :param send_file_kwargs: Other keyword arguments to send to
-            :func:`odoo.tools._vendor.send_file.send_file` instead of
+            :func:`koda.tools._vendor.send_file.send_file` instead of
             the stream sensitive values. Discouraged.
         """
         assert self.type in ('url', 'data', 'path'), "Invalid type: {self.type!r}, should be 'url', 'data' or 'path'."
@@ -600,25 +600,25 @@ class Controller:
     content over http and to be extended in child modules.
 
     Each class :ref:`inheriting <python:tut-inheritance>` from
-    :class:`~odoo.http.Controller` can use the :func:`~odoo.http.route`:
+    :class:`~koda.http.Controller` can use the :func:`~koda.http.route`:
     decorator to route matching incoming web requests to decorated
     methods.
 
     Like models, controllers can be extended by other modules. The
     extension mechanism is different because controllers can work in a
     database-free environment and therefore cannot use
-    :class:~odoo.api.Registry:.
+    :class:~koda.api.Registry:.
 
     To *override* a controller, :ref:`inherit <python:tut-inheritance>`
     from its class, override relevant methods and re-expose them with
-    :func:`~odoo.http.route`:. Please note that the decorators of all
+    :func:`~koda.http.route`:. Please note that the decorators of all
     methods are combined, if the overriding method’s decorator has no
     argument all previous ones will be kept, any provided argument will
     override previously defined ones.
 
     .. code-block:
 
-        class GreetingController(odoo.http.Controller):
+        class GreetingController(koda.http.Controller):
             @route('/greet', type='http', auth='public')
             def greeting(self):
                 return 'Hello'
@@ -635,7 +635,7 @@ class Controller:
         super().__init_subclass__()
         if Controller in cls.__bases__:
             path = cls.__module__.split('.')
-            module = path[2] if path[:2] == ['odoo', 'addons'] else ''
+            module = path[2] if path[:2] == ['koda', 'addons'] else ''
             Controller.children_classes[module].append(cls)
 
 
@@ -647,7 +647,7 @@ def route(route=None, **routing):
     .. warning::
         It is mandatory to re-decorate any method that is overridden in
         controller extensions but the arguments can be omitted. See
-        :class:`~odoo.http.Controller` for more details.
+        :class:`~koda.http.Controller` for more details.
 
     :param Union[str, Iterable[str]] route: The paths that the decorated
         method is serving. Incoming HTTP request paths matching this
@@ -715,7 +715,7 @@ def _generate_routing_rules(modules, nodb_only, converters=None):
     def is_valid(cls):
         """ Determine if the class is defined in an addon. """
         path = cls.__module__.split('.')
-        return path[:2] == ['odoo', 'addons'] and path[2] in modules
+        return path[:2] == ['koda', 'addons'] and path[2] in modules
 
     def get_leaf_classes(cls):
         """
@@ -736,11 +736,11 @@ def _generate_routing_rules(modules, nodb_only, converters=None):
         defined at the given ``modules`` (often system wide modules or
         installed modules). Modules in this context are Odoo addons.
         """
-        # Controllers defined outside of odoo addons are outside of the
+        # Controllers defined outside of koda addons are outside of the
         # controller inheritance/extension mechanism.
         yield from (ctrl() for ctrl in Controller.children_classes.get('', []))
 
-        # Controllers defined inside of odoo addons can be extended in
+        # Controllers defined inside of koda addons can be extended in
         # other installed addons. Rebuild the class inheritance here.
         highest_controllers = []
         for module in modules:
@@ -1054,7 +1054,7 @@ class Response(werkzeug.wrappers.Response):
             werkzeug.exceptions.HTTPException, str, bytes, NoneType]
         :param str fname: The endpoint function name wherefrom the
             result emanated, used for logging.
-        :returns: The created :class:`~odoo.http.Response`.
+        :returns: The created :class:`~koda.http.Response`.
         :rtype: Response
         :raises TypeError: When ``result`` type is none of the above-
             mentioned type.
@@ -1200,7 +1200,7 @@ class Request:
         """ Update the environment of the current request.
 
         :param user: optional user/user id to change the current user
-        :type user: int or :class:`res.users record<~odoo.addons.base.models.res_users.Users>`
+        :type user: int or :class:`res.users record<~koda.addons.base.models.res_users.Users>`
         :param dict context: optional context dictionary to change the current context
         :param bool su: optional boolean to change the superuser mode
         """
@@ -1422,7 +1422,7 @@ class Request:
         :type headers: ``[(name, value)]``
         :param collections.abc.Mapping cookies: cookies to set on the client
         :returns: a response object.
-        :rtype: :class:`~odoo.http.Response`
+        :rtype: :class:`~koda.http.Response`
         """
         response = Response(data, status=status, headers=headers)
         if cookies:
@@ -1438,7 +1438,7 @@ class Request:
         :param int status: http status code
         :param List[(str, str)] headers: HTTP headers to set on the response
         :param collections.abc.Mapping cookies: cookies to set on the client
-        :rtype: :class:`~odoo.http.Response`
+        :rtype: :class:`~koda.http.Response`
         """
         data = json.dumps(data, ensure_ascii=False, default=date_utils.json_default)
 
@@ -1589,7 +1589,7 @@ class Request:
                 return service_model.retrying(self._serve_ir_http, self.env)
             except Exception as exc:
                 if isinstance(exc, HTTPException) and exc.code is None:
-                    raise  # bubble up to odoo.http.Application.__call__
+                    raise  # bubble up to koda.http.Application.__call__
                 exc.error_response = self.registry['ir.http']._handle_error(exc)
                 raise
 
@@ -1708,7 +1708,7 @@ class HttpDispatcher(Dispatcher):
         body and query-string and checking cors/csrf while dispatching a
         request to a ``type='http'`` route.
 
-        See :meth:`~odoo.http.Response.load` method for the compatible
+        See :meth:`~koda.http.Response.load` method for the compatible
         endpoint return types.
         """
         self.request.params = dict(self.request.get_http_params(), **args)

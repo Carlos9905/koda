@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-The module :mod:`odoo.tests.common` provides unittest test cases and a few
+The module :mod:`koda.tests.common` provides unittest test cases and a few
 helpers and classes to write tests.
 
 """
@@ -81,7 +81,7 @@ except ImportError:
 
 _logger = logging.getLogger(__name__)
 
-# The odoo library is supposed already configured.
+# The koda library is supposed already configured.
 ADDONS_PATH = koda.tools.config['addons_path']
 HOST = '127.0.0.1'
 # Useless constant, tests are aware of the content of demo data
@@ -112,8 +112,8 @@ def standalone(*tags):
     ``tags`` and the corresponding Odoo module name.
     """
     def register(func):
-        # register func by odoo module name
-        if func.__module__.startswith('odoo.addons.'):
+        # register func by koda module name
+        if func.__module__.startswith('koda.addons.'):
             module = func.__module__.split('.')[2]
             standalone_tests[module].append(func)
         # register func with aribitrary name, if any
@@ -146,7 +146,7 @@ def new_test_user(env, login='', groups='base.group_user', context=None, **kwarg
      * name: "login (groups)" by default as it is required;
      * email: it is either the login (if it is a valid email) or a generated
        string 'x.x@example.com' (x being the first login letter). This is due
-       to email being required for most odoo operations;
+       to email being required for most koda operations;
     """
     if not login:
         raise ValueError('New users require at least a login')
@@ -204,7 +204,7 @@ class MetaCase(type):
     def __init__(cls, name, bases, attrs):
         super(MetaCase, cls).__init__(name, bases, attrs)
         # assign default test tags
-        if cls.__module__.startswith('odoo.addons.'):
+        if cls.__module__.startswith('koda.addons.'):
             if getattr(cls, 'test_tags', None) is None:
                 cls.test_tags = {'standard', 'at_install'}
             cls.test_module = cls.__module__.split('.')[2]
@@ -237,7 +237,7 @@ class BaseCase(case.TestCase, metaclass=MetaCase):
     expects self.registry, self.cr and self.uid to be initialized by subclasses.
     """
 
-    longMessage = True      # more verbose error message by default: https://www.odoo.com/r/Vmh
+    longMessage = True      # more verbose error message by default: https://www.koda.com/r/Vmh
     warm = True             # False during warm-up phase (see :func:`warmup`)
     _python_version = sys.version_info
 
@@ -301,7 +301,7 @@ class BaseCase(case.TestCase, metaclass=MetaCase):
         :param xid: fully-qualified :term:`external identifier`, in the form
                     :samp:`{module}.{identifier}`
         :raise: ValueError if not found
-        :returns: :class:`~odoo.models.BaseModel`
+        :returns: :class:`~koda.models.BaseModel`
         """
         assert "." in xid, "this method requires a fully qualified parameter, in the following form: 'module.identifier'"
         return self.env.ref(xid)
@@ -360,7 +360,7 @@ class BaseCase(case.TestCase, metaclass=MetaCase):
                 return not group_set or origin_user_has_groups(self, ','.join(group_set))
             return origin_user_has_groups(self, groups)
 
-        with patch('odoo.models.BaseModel.user_has_groups', user_has_groups):
+        with patch('koda.models.BaseModel.user_has_groups', user_has_groups):
             yield
 
     @contextmanager
@@ -426,8 +426,8 @@ class BaseCase(case.TestCase, metaclass=MetaCase):
             self.env.flush_all()
             self.env.cr.flush()
 
-        with patch('odoo.sql_db.Cursor.execute', execute):
-            with patch('odoo.osv.expression.get_unaccent_wrapper', get_unaccent_wrapper):
+        with patch('koda.sql_db.Cursor.execute', execute):
+            with patch('koda.osv.expression.get_unaccent_wrapper', get_unaccent_wrapper):
                 yield actual_queries
                 if flush:
                     self.env.flush_all()
@@ -480,8 +480,8 @@ class BaseCase(case.TestCase, metaclass=MetaCase):
                     # add some info on caller to allow semi-automatic update of query count
                     frame, filename, linenum, funcname, lines, index = inspect.stack()[2]
                     filename = filename.replace('\\', '/')
-                    if "/odoo/addons/" in filename:
-                        filename = filename.rsplit("/odoo/addons/", 1)[1]
+                    if "/koda/addons/" in filename:
+                        filename = filename.rsplit("/koda/addons/", 1)[1]
                     if count > expected:
                         msg = "Query count more than expected for user %s: %d > %d in %s at %s:%s"
                         # add a subtest in order to continue the test_method in case of failures
@@ -1631,7 +1631,7 @@ class HttpCase(TransactionCase):
     def _wait_remaining_requests(self, timeout=10):
 
         def get_http_request_threads():
-            return [t for t in threading.enumerate() if t.name.startswith('odoo.service.http.request.')]
+            return [t for t in threading.enumerate() if t.name.startswith('koda.service.http.request.')]
 
         start_time = time.time()
         request_threads = get_http_request_threads()
@@ -1780,8 +1780,8 @@ class HttpCase(TransactionCase):
         optional delay between steps `step_delay`. Other arguments from
         `browser_js` can be passed as keyword arguments."""
         step_delay = ', %s' % step_delay if step_delay else ''
-        code = kwargs.pop('code', "odoo.startTour('%s'%s)" % (tour_name, step_delay))
-        ready = kwargs.pop('ready', "odoo.__DEBUG__.services['web_tour.tour'].tours['%s'].ready" % tour_name)
+        code = kwargs.pop('code', "koda.startTour('%s'%s)" % (tour_name, step_delay))
+        ready = kwargs.pop('ready', "koda.__DEBUG__.services['web_tour.tour'].tours['%s'].ready" % tour_name)
         return self.browser_js(url_path=url_path, code=code, ready=ready, **kwargs)
 
     def profile(self, **kwargs):
@@ -1792,7 +1792,7 @@ class HttpCase(TransactionCase):
         _profiler = sup.profile(**kwargs)
         def route_profiler(request):
             return sup.profile(description=request.httprequest.full_path)
-        return profiler.Nested(_profiler, patch('odoo.http.Request._get_profiler_context_manager', route_profiler))
+        return profiler.Nested(_profiler, patch('koda.http.Request._get_profiler_context_manager', route_profiler))
 
 
 # kept for backward compatibility
@@ -1891,7 +1891,7 @@ class Form(object):
     Saving the form returns the created record if in creation mode.
 
     Regular fields can just be assigned directly to the form, for
-    :class:`~odoo.fields.Many2one` fields assign a singleton recordset::
+    :class:`~koda.fields.Many2one` fields assign a singleton recordset::
 
         # empty recordset => creation mode
         f = Form(self.env['sale.order'])
@@ -1905,21 +1905,21 @@ class Form(object):
             f2.payment_term_id = env.ref('account.account_payment_term_15days')
             # f2 is saved here
 
-    For :class:`~odoo.fields.Many2many` fields, the field itself is a
-    :class:`~odoo.tests.common.M2MProxy` and can be altered by adding or
+    For :class:`~koda.fields.Many2many` fields, the field itself is a
+    :class:`~koda.tests.common.M2MProxy` and can be altered by adding or
     removing records::
 
         with Form(user) as u:
             u.groups_id.add(env.ref('account.group_account_manager'))
             u.groups_id.remove(id=env.ref('base.group_portal').id)
 
-    Finally :class:`~odoo.fields.One2many` are reified as
-    :class:`~odoo.tests.common.O2MProxy`.
+    Finally :class:`~koda.fields.One2many` are reified as
+    :class:`~koda.tests.common.O2MProxy`.
 
-    Because the :class:`~odoo.fields.One2many` only exists through its
+    Because the :class:`~koda.fields.One2many` only exists through its
     parent, it is manipulated more directly by creating "sub-forms"
-    with the :meth:`~odoo.tests.common.O2MProxy.new` and
-    :meth:`~odoo.tests.common.O2MProxy.edit` methods. These would
+    with the :meth:`~koda.tests.common.O2MProxy.new` and
+    :meth:`~koda.tests.common.O2MProxy.edit` methods. These would
     normally be used as context managers since they get saved in the
     parent record::
 
@@ -1941,11 +1941,11 @@ class Form(object):
                     put the view in "creation" mode and trigger calls to
                     default_get and on-load onchanges, a singleton will
                     put it in "edit" mode and only load the view's data.
-    :type recordp: odoo.models.Model
+    :type recordp: koda.models.Model
     :param view: the id, xmlid or actual view object to use for
                     onchanges and view constraints. If none is provided,
                     simply loads the default view for the model.
-    :type view: int | str | odoo.model.Model
+    :type view: int | str | koda.model.Model
 
     .. versionadded:: 12.0
     """
@@ -2694,7 +2694,7 @@ class O2MProxy(X2MProxy):
 
     def new(self):
         """ Returns a :class:`Form` for a new
-        :class:`~odoo.fields.One2many` record, properly initialised.
+        :class:`~koda.fields.One2many` record, properly initialised.
 
         The form is created from the list view if editable, or the field's
         form view otherwise.
@@ -2706,7 +2706,7 @@ class O2MProxy(X2MProxy):
 
     def edit(self, index):
         """ Returns a :class:`Form` to edit the pre-existing
-        :class:`~odoo.fields.One2many` record.
+        :class:`~koda.fields.One2many` record.
 
         The form is created from the list view if editable, or the field's
         form view otherwise.

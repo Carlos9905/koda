@@ -2,7 +2,7 @@ import collections
 import inspect
 import itertools
 
-import odoo
+import koda
 from koda.tests.common import get_db_name, tagged
 from .lint_case import LintCase
 
@@ -27,7 +27,7 @@ Incompatible definition in {child_module}:
 
 methods_to_sanitize = {
     method_name
-    for method_name in dir(odoo.models.BaseModel)
+    for method_name in dir(koda.models.BaseModel)
     if not method_name.startswith('_')
 } - {
     # Not yet sanitized...
@@ -46,10 +46,10 @@ counter = collections.defaultdict(HitMiss)
 
 
 def get_odoo_module_name(python_module_name):
-    if python_module_name.startswith('odoo.addons.'):
+    if python_module_name.startswith('koda.addons.'):
         return python_module_name.split('.')[2]
-    if python_module_name == 'odoo.models':
-        return 'odoo'
+    if python_module_name == 'koda.models':
+        return 'koda'
 
     return python_module_name
 
@@ -114,7 +114,7 @@ def assert_valid_override(parent_signature, child_signature):
 class TestLintOverrideSignatures(LintCase):
     def test_lint_override_signature(self):
         self.failureException = TypeError
-        registry = odoo.registry(get_db_name())
+        registry = koda.registry(get_db_name())
         for model_name, model_cls in registry.items():
             for method_name, _ in inspect.getmembers(model_cls, inspect.isroutine):
                 if method_name not in methods_to_sanitize:
@@ -156,7 +156,7 @@ class TestLintOverrideSignatures(LintCase):
                             )
                             raise TypeError(msg) from None
 
-        #with open('/tmp/odoo-override-signatures.md', 'w') as f:
+        #with open('/tmp/koda-override-signatures.md', 'w') as f:
         #    f.write('method|hit|miss|ratio\n')
         #    f.write('------|---|----|-----\n')
         #    for method_name, hm in sorted(counter.items(), key=lambda x: x[1].miss):

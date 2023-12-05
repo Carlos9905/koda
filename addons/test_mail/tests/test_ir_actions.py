@@ -19,7 +19,7 @@ class TestServerActionsEmail(MailCommon, TestServerActionsBase):
             }
         )
 
-    @mute_logger('odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('koda.addons.mail.models.mail_mail', 'koda.models.unlink')
     def test_action_email(self):
         # initial state
         self.assertEqual(len(self.test_partner.message_ids), 1,

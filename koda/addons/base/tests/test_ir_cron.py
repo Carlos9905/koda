@@ -70,7 +70,7 @@ class TestIrCron(TransactionCase, CronMixinCase):
         def patched_now(*args, **kwargs):
             return '2020-10-22 08:00:00'
 
-        with patch('odoo.fields.Datetime.now', patched_now):
+        with patch('koda.fields.Datetime.now', patched_now):
             self.cron.method_direct_trigger()
 
         self.assertEqual(fields.Datetime.to_string(self.cron.lastcall), '2020-10-22 08:00:00')

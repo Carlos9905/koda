@@ -33,10 +33,10 @@ from .misc import file_open, get_iso_codes, SKIPPED_ELEMENT_TYPES
 
 _logger = logging.getLogger(__name__)
 
-PYTHON_TRANSLATION_COMMENT = 'odoo-python'
+PYTHON_TRANSLATION_COMMENT = 'koda-python'
 
 # translation used for javascript code in web client
-JAVASCRIPT_TRANSLATION_COMMENT = 'odoo-javascript'
+JAVASCRIPT_TRANSLATION_COMMENT = 'koda-javascript'
 # used to notify web client that these translations should be loaded in the UI
 # deprecated comment since Odoo 16.0
 WEB_TRANSLATION_COMMENT = "openerp-web"
@@ -882,7 +882,7 @@ def _extract_translatable_qweb_terms(element, callback):
             # and a widespread convention and good practice for DOM tags is to write
             # them all lower case.
             # https://www.w3schools.com/html/html5_syntax.asp
-            # https://github.com/odoo/owl/blob/master/doc/reference/component.md#composition
+            # https://github.com/koda/owl/blob/master/doc/reference/component.md#composition
             if not el.tag[0].isupper() and 't-component' not in el.attrib:
                 for att in ('title', 'alt', 'label', 'placeholder', 'aria-label'):
                     if att in el.attrib:
@@ -1199,11 +1199,11 @@ class TranslationModuleReader:
                                                   extract_keywords={'_t': None, '_lt': None})
                     # QWeb template files
                     for fname in fnmatch.filter(files, '*.xml'):
-                        self._babel_extract_terms(fname, path, root, 'odoo.tools.translate:babel_extract_qweb',
+                        self._babel_extract_terms(fname, path, root, 'koda.tools.translate:babel_extract_qweb',
                                                   extra_comments=[JAVASCRIPT_TRANSLATION_COMMENT])
                 if fnmatch.fnmatch(root, '*/data/*'):
                     for fname in fnmatch.filter(files, '*_dashboard.json'):
-                        self._babel_extract_terms(fname, path, root, 'odoo.tools.translate:extract_spreadsheet_terms',
+                        self._babel_extract_terms(fname, path, root, 'koda.tools.translate:extract_spreadsheet_terms',
                                                   extra_comments=[JAVASCRIPT_TRANSLATION_COMMENT])
                 if not recursive:
                     # due to topdown, first iteration is in first level

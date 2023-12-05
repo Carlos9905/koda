@@ -79,7 +79,7 @@ class TestSignController(TestSignControllerCommon):
         self.assertEqual(sign_request_item.role_id.auth_method, 'sms')
 
         sign_vals = self.create_sign_values(sign_request.template_id.sign_item_ids, sign_request_item.role_id.id)
-        with patch('odoo.addons.iap.models.iap_account.IapAccount.get_credits', lambda self, x: 10):
+        with patch('koda.addons.iap.models.iap_account.IapAccount.get_credits', lambda self, x: 10):
             response = self._json_url_open(
                 '/sign/sign/%d/%s' % (sign_request.id, sign_request_item.access_token),
                 data={'signature': sign_vals}
@@ -97,7 +97,7 @@ class TestSignController(TestSignControllerCommon):
         self.assertEqual(sign_request_item.role_id.auth_method, 'sms')
 
         sign_vals = self.create_sign_values(sign_request.template_id.sign_item_ids, sign_request_item.role_id.id)
-        with patch('odoo.addons.iap.models.iap_account.IapAccount.get_credits', lambda self, x: 0):
+        with patch('koda.addons.iap.models.iap_account.IapAccount.get_credits', lambda self, x: 0):
             response = self._json_url_open(
                 '/sign/sign/%d/%s' % (sign_request.id, sign_request_item.access_token),
                 data={'signature': sign_vals}

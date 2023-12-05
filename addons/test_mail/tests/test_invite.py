@@ -9,7 +9,7 @@ from koda.tools import mute_logger
 @tagged('mail_followers')
 class TestInvite(MailCommon):
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_invite_email(self):
         test_record = self.env['mail.test.simple'].with_context(self._test_context).create({'name': 'Test', 'email_from': 'ignasse@example.com'})
         test_partner = self.env['res.partner'].with_context(self._test_context).create({

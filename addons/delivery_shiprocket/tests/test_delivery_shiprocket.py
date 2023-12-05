@@ -24,7 +24,7 @@ class TestDeliveryShiprocket(TransactionCase):
             'city': 'Ahmedabad',
             'zip': 382418,
             'phone': '+91 9227411196',
-            'email': 'partner@odoo.com'
+            'email': 'partner@koda.com'
         })
         cls.product_to_ship1 = cls.env["product.product"].create({
             'name': 'Door with wings',
@@ -73,7 +73,7 @@ class TestDeliveryShiprocket(TransactionCase):
             'billing_pincode': '382418',
             'billing_state': 'Gujarat',
             'billing_country': 'India',
-            'billing_email': 'partner@odoo.com',
+            'billing_email': 'partner@koda.com',
             'billing_phone': '919227411196',
             'shipping_is_billing': True,
             'shipping_customer_name': 'Partner IN',
@@ -84,7 +84,7 @@ class TestDeliveryShiprocket(TransactionCase):
             'shipping_pincode': '382418',
             'shipping_country': 'India',
             'shipping_state': 'Gujarat',
-            'shipping_email': 'partner@odoo.com',
+            'shipping_email': 'partner@koda.com',
             'shipping_phone': '919227411196',
             'order_items': [
                 {

@@ -12,7 +12,7 @@ class DomainTest(HttpCase):
     def test_domain_validate(self):
         self.authenticate("demo", "demo")
 
-        with mute_logger('odoo.http'):
+        with mute_logger('koda.http'):
             resp = self.url_open(
                 '/web/domain/validate',
                 headers={'Content-Type': 'application/json'},

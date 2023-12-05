@@ -337,7 +337,7 @@ class AssetsBundle(object):
                     *  Templates                               *
                     *******************************************/
 
-                    odoo.define('{self.name}.bundle.xml', ['@web/core/registry'], function(require){{
+                    koda.define('{self.name}.bundle.xml', ['@web/core/registry'], function(require){{
                         'use strict';
                         const {{ registry }} = require('@web/core/registry');
                         registry.category(`xml_templates`).add(`{self.name}`, `{templates}`);
@@ -421,7 +421,7 @@ class AssetsBundle(object):
             # Load content.
             try:
                 content = asset.content.strip()
-                template = content if content.startswith('<odoo>') else f'<templates>{asset.content}</templates>'
+                template = content if content.startswith('<koda>') else f'<templates>{asset.content}</templates>'
                 io_content = io.BytesIO(template.encode('utf-8'))
                 content_templates_tree = etree.parse(io_content, parser=parser).getroot()
             except etree.ParseError as e:

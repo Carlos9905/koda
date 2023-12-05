@@ -1391,7 +1391,7 @@ class MailCommon(common.TransactionCase, MailCase):
         """
         # activate translations
         cls.env['res.lang']._activate_lang(lang_code)
-        with mute_logger("odoo.addons.base.models.ir_module", "odoo.tools.translate"):
+        with mute_logger("koda.addons.base.models.ir_module", "koda.tools.translate"):
             cls.env.ref('base.module_base')._update_translations([lang_code])
             cls.env.ref('base.module_mail')._update_translations([lang_code])
             cls.env.ref('base.module_test_mail')._update_translations([lang_code])

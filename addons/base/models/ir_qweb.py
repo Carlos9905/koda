@@ -24,7 +24,7 @@ which executes its directive but doesn't generate any output in and of
 itself.
 
 To create new XML template, please see :doc:`QWeb Templates documentation
-<https://www.odoo.com/documentation/17.0/developer/reference/frontend/qweb.html>`
+<https://www.koda.com/documentation/17.0/developer/reference/frontend/qweb.html>`
 
 Rendering process
 =================
@@ -187,7 +187,7 @@ Only validate the **input**, the compilation if inside the ``t-if`` directive.
 
 ``t-groups`` (``groups`` is an alias)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-**Values**: name of the allowed odoo user group, or preceded by ``!`` for
+**Values**: name of the allowed koda user group, or preceded by ``!`` for
 prohibited groups
 
 The generated code uses ``user_has_groups`` Odoo method.

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import koda.tests
 from koda.addons.point_of_sale.tests.common_setup_methods import setup_pos_combo_items
 from koda.addons.point_of_sale.tests.common import archive_products
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestFrontend(odoo.tests.HttpCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestFrontend(koda.tests.HttpCase):
     def setUp(self):
         super().setUp()
         self.env = self.env(user=self.env.ref('base.user_admin'))

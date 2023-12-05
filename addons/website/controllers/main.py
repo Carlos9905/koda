@@ -17,7 +17,7 @@ from textwrap import shorten
 from werkzeug.exceptions import NotFound
 from xml.etree import ElementTree as ET
 
-import odoo
+import koda
 
 from koda import http, models, fields, _
 from koda.exceptions import AccessError
@@ -317,7 +317,7 @@ class Website(Home):
         values = {
             'apps': apps,
             'l10n': l10n,
-            'version': odoo.service.common.exp_version()
+            'version': koda.service.common.exp_version()
         }
         return request.render('website.website_info', values)
 

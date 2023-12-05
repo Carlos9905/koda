@@ -28,7 +28,7 @@ class TestGetDiscussChannel(TestImLivechatCommon):
 
         # ensure visitor info are correct with anonymous
         operator = self.operators[0]
-        with patch('odoo.http.GeoIP.country_code', new_callable=PropertyMock(return_value=belgium.code)):
+        with patch('koda.http.GeoIP.country_code', new_callable=PropertyMock(return_value=belgium.code)):
             channel_info = self.make_jsonrpc_request(
                 '/im_livechat/get_session',
                 {

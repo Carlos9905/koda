@@ -2774,7 +2774,7 @@ class Model(models.AbstractModel):
         """
         .. deprecated:: saas-15.4
 
-            Use :meth:`~odoo.models.Model.get_view()` instead.
+            Use :meth:`~koda.models.Model.get_view()` instead.
         """
         warnings.warn(
             'Method `fields_view_get` is deprecated, use `get_view` instead',

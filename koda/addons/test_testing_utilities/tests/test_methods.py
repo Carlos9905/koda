@@ -76,7 +76,7 @@ class TestBasic(common.TransactionCase):
         self.env.cr.execute("SHOW test_testing_utilities.a_flag")
         self.assertEqual(self.env.cr.fetchone(), ('',))
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     def test_assertRaises_clear_recovery(self):
         """Checks that the savepoint is correctly rolled back if an error occurs
         during the assertRaises setup

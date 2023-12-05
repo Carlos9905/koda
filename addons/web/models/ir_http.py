@@ -3,7 +3,7 @@
 import hashlib
 import json
 
-import odoo
+import koda
 from koda import api, models
 from koda.http import request, DEFAULT_MAX_CONTENT_LENGTH
 from koda.tools import ormcache, ustr
@@ -69,7 +69,7 @@ class Http(models.AbstractModel):
     def session_info(self):
         user = self.env.user
         session_uid = request.session.uid
-        version_info = odoo.service.common.exp_version()
+        version_info = koda.service.common.exp_version()
 
         if session_uid:
             user_context = dict(self.env['res.users'].context_get())
@@ -83,7 +83,7 @@ class Http(models.AbstractModel):
             'web.max_file_upload_size',
             default=DEFAULT_MAX_CONTENT_LENGTH,
         ))
-        mods = odoo.conf.server_wide_modules or []
+        mods = koda.conf.server_wide_modules or []
         if request.db:
             mods = list(request.registry._init_modules) + mods
         is_internal_user = user.has_group('base.group_user')
@@ -97,7 +97,7 @@ class Http(models.AbstractModel):
             "user_settings": self.env['res.users.settings']._find_or_create_for_user(user)._res_users_settings_format(),
             "server_version": version_info.get('server_version'),
             "server_version_info": version_info.get('server_version_info'),
-            "support_url": "https://www.odoo.com/buy",
+            "support_url": "https://www.koda.com/buy",
             "name": user.name,
             "username": user.login,
             "partner_display_name": user.partner_id.display_name,
@@ -185,7 +185,7 @@ class Http(models.AbstractModel):
         if request.session.debug:
             session_info['bundle_params']['debug'] = request.session.debug
         if session_uid:
-            version_info = odoo.service.common.exp_version()
+            version_info = koda.service.common.exp_version()
             session_info.update({
                 'server_version': version_info.get('server_version'),
                 'server_version_info': version_info.get('server_version_info')

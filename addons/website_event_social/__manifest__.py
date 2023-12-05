@@ -8,7 +8,7 @@
     'sequence': 1020,
     'version': '1.1',
     'summary': 'Bridge module to push notifications to event attendees',
-    'website': 'https://www.odoo.com/app/events',
+    'website': 'https://www.koda.com/app/events',
     'depends': [
         'website_event',
         'social_push_notifications',

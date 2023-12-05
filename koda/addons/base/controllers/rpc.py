@@ -19,7 +19,7 @@ from koda.tools.misc import frozendict
 
 # XML-RPC fault codes. Some care must be taken when changing these: the
 # constants are also defined client-side and must remain in sync.
-# User code must use the exceptions defined in ``odoo.exceptions`` (not
+# User code must use the exceptions defined in ``koda.exceptions`` (not
 # create directly ``xmlrpc.client.Fault`` objects).
 RPC_FAULT_CODE_CLIENT_ERROR = 1 # indistinguishable from app. error.
 RPC_FAULT_CODE_APPLICATION_ERROR = 1
@@ -77,7 +77,7 @@ class OdooMarshaller(xmlrpc.client.Marshaller):
         self.dump_struct(value, write)
 
     # By default, in xmlrpc, bytes are converted to xmlrpc.client.Binary object.
-    # Historically, odoo is sending binary as base64 string.
+    # Historically, koda is sending binary as base64 string.
     # In python 3, base64.b64{de,en}code() methods now works on bytes.
     # Convert them to str to have a consistent behavior between python 2 and python 3.
     def dump_bytes(self, value, write):

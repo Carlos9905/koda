@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import koda.tests
 from koda.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUi(TestPointOfSaleHttpCommon):
 
     def test_01_pos_iot_payment_terminal(self):

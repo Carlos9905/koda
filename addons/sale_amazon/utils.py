@@ -80,7 +80,7 @@ def make_proxy_request(endpoint, env, payload=None):
     """ Make a request to the Amazon proxy at the specified endpoint.
 
     :param str endpoint: The proxy endpoint to be reached by the request.
-    :param Environment env: An `odoo.api.Environment`.
+    :param Environment env: An `koda.api.Environment`.
     :param dict payload: The Amazon-specific payload of the request.
     :return: The JSON-formatted content of the response.
     :rtype: dict

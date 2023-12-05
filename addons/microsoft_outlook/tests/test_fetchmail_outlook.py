@@ -11,7 +11,7 @@ from koda.tests.common import TransactionCase
 
 class TestFetchmailOutlook(TransactionCase):
 
-    @patch('odoo.addons.mail.models.fetchmail.IMAP4_SSL')
+    @patch('koda.addons.mail.models.fetchmail.IMAP4_SSL')
     def test_connect(self, mock_imap):
         """Test that the connect method will use the right
         authentication method with the right arguments.

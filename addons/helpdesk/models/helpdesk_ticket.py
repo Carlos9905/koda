@@ -318,7 +318,7 @@ class HelpdeskTicket(models.Model):
     @api.depends('close_hours')
     def _compute_open_hours(self):
         for ticket in self:
-            if ticket.create_date:  # fix from https://github.com/odoo/enterprise/commit/928fbd1a16e9837190e9c172fa50828fae2a44f7
+            if ticket.create_date:  # fix from https://github.com/koda/enterprise/commit/928fbd1a16e9837190e9c172fa50828fae2a44f7
                 if ticket.close_date:
                     time_difference = ticket.close_date - fields.Datetime.from_string(ticket.create_date)
                 else:

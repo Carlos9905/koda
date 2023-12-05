@@ -21,7 +21,7 @@ class TestShareController(SpreadsheetTestCommon, HttpCase):
     def test_documents_share_portal_wrong_token(self):
         spreadsheet = self.create_spreadsheet()
         share = self.share_spreadsheet(spreadsheet)
-        with mute_logger('odoo.http'):
+        with mute_logger('koda.http'):
             response = self.url_open(f"/document/share/{share.id}/a-random-token")
         # should probably be 403
         self.assertEqual(response.status_code, 404)
@@ -48,7 +48,7 @@ class TestShareController(SpreadsheetTestCommon, HttpCase):
     def test_public_spreadsheet_wrong_token(self):
         spreadsheet = self.create_spreadsheet()
         share = self.share_spreadsheet(spreadsheet)
-        with mute_logger('odoo.http'):  # mute 403 warning
+        with mute_logger('koda.http'):  # mute 403 warning
             response = self.url_open(f"/document/spreadsheet/share/{share.id}/a-random-token/{spreadsheet.id}")
         self.assertEqual(response.status_code, 403)
 
@@ -71,7 +71,7 @@ class TestShareController(SpreadsheetTestCommon, HttpCase):
         spreadsheet = self.create_spreadsheet()
         share = self.share_spreadsheet(spreadsheet)
         shared_spreadsheet = share.freezed_spreadsheet_ids
-        with mute_logger('odoo.http'):  # mute 403 warning
+        with mute_logger('koda.http'):  # mute 403 warning
             response = self.url_open(f"/document/spreadsheet/data/{shared_spreadsheet.id}/a-random-token")
         self.assertEqual(response.status_code, 403)
 
@@ -89,7 +89,7 @@ class TestShareController(SpreadsheetTestCommon, HttpCase):
         share = self.share_spreadsheet(spreadsheet)
         shared_spreadsheet = share.freezed_spreadsheet_ids
         shared_spreadsheet.excel_export = base64.b64encode(b"test")
-        with mute_logger('odoo.http'):  # mute 403 warning
+        with mute_logger('koda.http'):  # mute 403 warning
             response = self.url_open(f"/document/download/{share.id}/a-random-token/{spreadsheet.id}")
         self.assertEqual(response.status_code, 403)
 
@@ -99,7 +99,7 @@ class TestShareController(SpreadsheetTestCommon, HttpCase):
         share = self.share_spreadsheet(spreadsheet)
         shared_spreadsheet = share.freezed_spreadsheet_ids
         shared_spreadsheet.excel_export = base64.b64encode(b"test")
-        with mute_logger('odoo.http'):  # mute 403 warning
+        with mute_logger('koda.http'):  # mute 403 warning
             response = self.url_open(f"/document/download/{share.id}/{share.access_token}/{other_spreadsheet.id}")
         self.assertEqual(response.status_code, 403)
 
@@ -133,6 +133,6 @@ class TestShareController(SpreadsheetTestCommon, HttpCase):
         folder = spreadsheet.folder_id
         spreadsheet.unlink()
         folder.unlink()
-        with mute_logger('odoo.http'):
+        with mute_logger('koda.http'):
             response = self.url_open(url)
         self.assertEqual(response.status_code, 404)

@@ -1,7 +1,7 @@
 
 from unittest.mock import patch
 
-import odoo
+import koda
 
 from koda.tests.common import TransactionCase
 from koda.addons.web_studio.controllers.export import MODELS_TO_EXPORT, FIELDS_TO_EXPORT, \
@@ -446,12 +446,12 @@ class TestStudioIrModel(TransactionCase):
     def test_performance_01_fields_batch(self):
         """Test number of call to setup_models when creating a model with multiple"""
         count_setup_models = 0
-        orig_setup_models = odoo.modules.registry.Registry.setup_models
+        orig_setup_models = koda.modules.registry.Registry.setup_models
         def setup_models(registry, cr):
             nonlocal count_setup_models
             count_setup_models += 1
             orig_setup_models(registry, cr)
-        with patch('odoo.modules.registry.Registry.setup_models', new=setup_models):
+        with patch('koda.modules.registry.Registry.setup_models', new=setup_models):
             # not: using a specific model (PerformanceIssues and not Rockets) is important since after the rollback of the test,
             # the model will be missing but x_rockets is still in the pool, breaking some optimizations
             self.env['ir.model'].with_context(studio=True).studio_model_create('PerformanceIssues', options=OPTIONS_WL)

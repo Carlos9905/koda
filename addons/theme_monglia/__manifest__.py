@@ -42,7 +42,7 @@
         },
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-monglia.odoo.com',
+    'live_test_url': 'https://theme-monglia.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_monglia/static/src/js/tour.js',

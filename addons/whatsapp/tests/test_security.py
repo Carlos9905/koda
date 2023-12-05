@@ -24,7 +24,7 @@ class WhatsAppSecurityCase(WhatsAppCommon):
 @tagged('wa_account', 'security')
 class WhatsAppAccountSecurity(WhatsAppSecurityCase):
 
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     def test_account_access(self):
         """ Test MC-enabled access on whastapp account model """
         # main company access only
@@ -64,7 +64,7 @@ class WhatsAppControllerSecurity(MockIncomingWhatsApp, WhatsAppSecurityCase):
         super().setUpClass()
         cls.whatsapp_account.app_secret = '1234567890abcdef'
 
-    @mute_logger('odoo.addons.whatsapp.controller.main')
+    @mute_logger('koda.addons.whatsapp.controller.main')
     def test_signature_verification(self):
         # valid signature for
         # >>> {"entry": [{"id": "abcdef123456"}]}
@@ -92,7 +92,7 @@ class WhatsAppControllerSecurity(MockIncomingWhatsApp, WhatsAppSecurityCase):
 class WhatsAppDiscussSecurity(WhatsAppSecurityCase):
 
     @users('admin')
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     def test_member_creation(self):
         channel_channel, channel_wa = self.env['discuss.channel'].create([
             {
@@ -119,7 +119,7 @@ class WhatsAppDiscussSecurity(WhatsAppSecurityCase):
 @tagged('wa_message', 'security')
 class WhatsAppMessageSecurity(WhatsAppSecurityCase):
 
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     def test_message_signup_token(self):
         """Assert the template values sent to the whatsapp API are not fetched
         as sudo/SUPERUSER, even when going through the cron/queue. """
@@ -148,7 +148,7 @@ class WhatsAppMessageSecurity(WhatsAppSecurityCase):
         # Ask for the reset password of the admin
         # This mimics what the `/web/reset_password` URL does, which is publicly available, you just have to know
         # the login of your targeted user ('admin').
-        # https://github.com/odoo/odoo/blob/554e6b0898727b6c08a9702e19ea8f2d67632c38/addons/auth_signup/controllers/main.py#L91
+        # https://github.com/koda/koda/blob/554e6b0898727b6c08a9702e19ea8f2d67632c38/addons/auth_signup/controllers/main.py#L91
         # We could also directly call `/web/reset_password` within this unit test, but this would require:
         # - to convert the test to an httpcase
         # - to get and send the CSRF token.
@@ -204,7 +204,7 @@ class WhatsAppMessageSecurity(WhatsAppSecurityCase):
 @tagged('wa_template', 'security')
 class WhatsAppTemplateSecurity(WhatsAppSecurityCase):
 
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     def test_tpl_create(self):
         """ Creation is for WA admins only """
         Template_admin = self.env['whatsapp.template'].with_user(self.user_wa_admin)
@@ -215,7 +215,7 @@ class WhatsAppTemplateSecurity(WhatsAppSecurityCase):
         with self.assertRaises(exceptions.AccessError):
             template = Template_emp.create({'body': 'Hello', 'name': 'Test'})
 
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     def test_tpl_read_allowed_users(self):
         """ Test 'allowed_users' that restricts access to the template """
         Template_admin = self.env['whatsapp.template'].with_user(self.user_wa_admin)

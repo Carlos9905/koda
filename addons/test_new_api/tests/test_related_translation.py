@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 import io
 
-import odoo.tests
+import koda.tests
 from koda.tools.translate import TranslationImporter
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestRelatedTranslation(odoo.tests.TransactionCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestRelatedTranslation(koda.tests.TransactionCase):
 
     @classmethod
     def setUpClass(cls):

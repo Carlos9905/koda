@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 import requests
 
-import odoo
+import koda
 from koda.tests.common import BaseCase, HttpCase, tagged
 from koda.tools import config
 
@@ -37,7 +37,7 @@ class TestDatabaseOperations(BaseCase):
 
         # monkey-patch password verification
         self.verify_admin_password_patcher = patch(
-            'odoo.tools.config.verify_admin_password', self.password.__eq__,
+            'koda.tools.config.verify_admin_password', self.password.__eq__,
         )
         self.startPatcher(self.verify_admin_password_patcher)
 
@@ -60,7 +60,7 @@ class TestDatabaseOperations(BaseCase):
         )
 
     def list_dbs_filtered(self):
-        return set(db for db in odoo.service.db.list_dbs(True) if re.match(config['dbfilter'], db))
+        return set(db for db in koda.service.db.list_dbs(True) if re.match(config['dbfilter'], db))
 
     def url(self, path):
         return HttpCase.base_url() + path
@@ -70,7 +70,7 @@ class TestDatabaseOperations(BaseCase):
 
     def test_database_creation(self):
         # check verify_admin_password patch
-        self.assertTrue(odoo.tools.config.verify_admin_password(self.password))
+        self.assertTrue(koda.tools.config.verify_admin_password(self.password))
 
         # create a database
         test_db_name = self.db_name + '-test-database-creation'

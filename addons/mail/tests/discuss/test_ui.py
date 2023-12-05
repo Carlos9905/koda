@@ -1,11 +1,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import koda.tests
 from koda import Command
 from koda.addons.base.tests.common import HttpCaseWithUserDemo
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUi(HttpCaseWithUserDemo):
 
     def test_01_mail_tour(self):

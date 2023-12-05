@@ -6,7 +6,7 @@ import pytz
 from urllib.parse import urlparse
 from unittest.mock import patch
 
-import odoo
+import koda
 from koda.tests.common import get_db_name
 from koda.tools import mute_logger
 from .test_common import TestHttpBase
@@ -25,7 +25,7 @@ GEOIP_ODOO_FARM_2 = {
 
 class TestHttpSession(TestHttpBase):
 
-    @mute_logger('odoo.http')  # greeting_none called ignoring args {'debug'}
+    @mute_logger('koda.http')  # greeting_none called ignoring args {'debug'}
     def test_session0_debug_mode(self):
         session = self.authenticate(None, None)
         self.assertEqual(session.debug, '')
@@ -40,7 +40,7 @@ class TestHttpSession(TestHttpBase):
 
     def test_session1_default_session(self):
         # The default session should not be saved on the filestore.
-        with patch.object(odoo.http.root.session_store, 'save') as mock_save:
+        with patch.object(koda.http.root.session_store, 'save') as mock_save:
             res = self.db_url_open('/test_http/geoip')
             res.raise_for_status()
             try:
@@ -53,13 +53,13 @@ class TestHttpSession(TestHttpBase):
         session = self.authenticate(None, None)
         session['db'] = 'idontexist'
         session['geoip'] = {}  # Until saas-15.2 geoip was directly stored in the session
-        odoo.http.root.session_store.save(session)
+        koda.http.root.session_store.save(session)
 
-        with self.assertLogs('odoo.http', level='WARNING') as (_, warnings):
+        with self.assertLogs('koda.http', level='WARNING') as (_, warnings):
             res = self.multidb_url_open('/test_http/ensure_db', dblist=['db1', 'db2'])
 
         self.assertEqual(warnings, [
-            "WARNING:odoo.http:Logged into database 'idontexist', but dbfilter rejects it; logging session out.",
+            "WARNING:koda.http:Logged into database 'idontexist', but dbfilter rejects it; logging session out.",
         ])
         self.assertFalse(session['db'])
         self.assertEqual(res.status_code, 303)
@@ -123,13 +123,13 @@ class TestHttpSession(TestHttpBase):
 
         with self.subTest(case='fr saved and fr_FR enabled'):
             session.context['lang'] = 'fr_FR'
-            odoo.http.root.session_store.save(session)
+            koda.http.root.session_store.save(session)
             res = self.url_open('/test_http/echo-http-context-lang')
             self.assertEqual(res.text, 'fr_FR')
 
         with self.subTest(case='fr saved but fr_FR disabled'):
             session['lang'] = 'fr_FR'
-            odoo.http.root.session_store.save(session)
+            koda.http.root.session_store.save(session)
             lang_fr.active = False
             res = self.url_open('/test_http/echo-http-context-lang')
             self.assertEqual(res.text, 'en_US')
@@ -165,7 +165,7 @@ class TestHttpSession(TestHttpBase):
             self.assertEqual(session.foo, value)
             session.pop('foo')
 
-        # Values forbidden by odoo, raising a warning
+        # Values forbidden by koda, raising a warning
         for value in [
             str,
             int,
@@ -184,7 +184,7 @@ class TestHttpSession(TestHttpBase):
             with self.assertLogs(level="WARNING"):
                 # testing you cannot set a non-serializable value at the creation of the session
                 # e.g. in the __init__ of the session class
-                self.assertFalse(odoo.http.root.session_store.session_class({'foo': value}, 1234).foo)
+                self.assertFalse(koda.http.root.session_store.session_class({'foo': value}, 1234).foo)
             with self.assertRaises(TypeError):
                 dict.update(session, foo=value)
             self.assertFalse(session.foo)
@@ -202,7 +202,7 @@ class TestHttpSession(TestHttpBase):
             with self.assertRaises(AttributeError):
                 # testing you cannot set a non-serializable value at the creation of the session
                 # e.g. in the __init__ of the session class
-                self.assertFalse(odoo.http.root.session_store.session_class({'foo': value}, 1234).foo)
+                self.assertFalse(koda.http.root.session_store.session_class({'foo': value}, 1234).foo)
             with self.assertRaises(TypeError):
                 dict.update(session, foo=value)
             self.assertFalse(session.foo)

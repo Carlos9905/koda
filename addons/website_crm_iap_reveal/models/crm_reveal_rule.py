@@ -7,7 +7,7 @@ import logging
 import re
 from dateutil.relativedelta import relativedelta
 
-import odoo
+import koda
 from koda import api, fields, models, tools, _
 from koda.addons.iap.tools import iap_tools
 from koda.addons.crm.models import crm_stage
@@ -15,7 +15,7 @@ from koda.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 
-DEFAULT_ENDPOINT = 'https://iap-services.odoo.com'
+DEFAULT_ENDPOINT = 'https://iap-services.koda.com'
 DEFAULT_REVEAL_BATCH_LIMIT = 25
 DEFAULT_REVEAL_MONTH_VALID = 6
 
@@ -384,7 +384,7 @@ class CRMRevealRule(models.Model):
 
         return lead
 
-    # Methods responsible for format response data in to valid odoo lead data
+    # Methods responsible for format response data in to valid koda lead data
     def _lead_vals_from_response(self, result):
         self.ensure_one()
         company_data = result['reveal_data']

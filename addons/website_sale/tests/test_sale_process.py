@@ -3,7 +3,7 @@
 
 from werkzeug.exceptions import Forbidden
 
-import odoo.tests
+import koda.tests
 
 from koda import api, Command
 from koda.addons.base.tests.common import HttpCaseWithUserDemo, TransactionCaseWithUserDemo, HttpCaseWithUserPortal
@@ -11,7 +11,7 @@ from koda.addons.website_sale.controllers.main import WebsiteSale
 from koda.addons.website.tools import MockRequest
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUi(HttpCaseWithUserDemo):
 
     def setUp(self):
@@ -135,7 +135,7 @@ class TestUi(HttpCaseWithUserDemo):
         self.start_tour("/shop", 'google_analytics_add_to_cart')
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestWebsiteSaleCheckoutAddress(TransactionCaseWithUserDemo, HttpCaseWithUserPortal):
     ''' The goal of this method class is to test the address management on
         the checkout (new/edit billing/shipping, company_id, website_id..).

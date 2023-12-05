@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestIrAsset(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestIrAsset(koda.tests.HttpCase):
 
     def test_01_website_specific_assets(self):
         IrAsset = self.env['ir.asset']

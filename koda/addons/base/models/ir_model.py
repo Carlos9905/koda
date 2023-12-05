@@ -316,7 +316,7 @@ class IrModel(models.Model):
         res = super(IrModel, self).unlink()
 
         # Reload registry for normal unlink only. For module uninstall, the
-        # reload is done independently in odoo.modules.loading.
+        # reload is done independently in koda.modules.loading.
         if not self._context.get(MODULE_UNINSTALL_FLAG):
             # setup models; this automatically removes model from registry
             self.env.flush_all()
@@ -1456,7 +1456,7 @@ class IrModelSelection(models.Model):
         result = super().unlink()
 
         # Reload registry for normal unlink only. For module uninstall, the
-        # reload is done independently in odoo.modules.loading.
+        # reload is done independently in koda.modules.loading.
         if not self._context.get(MODULE_UNINSTALL_FLAG):
             # setup models; this re-initializes model in registry
             self.env.flush_all()

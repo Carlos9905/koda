@@ -4,12 +4,12 @@
 import json
 from uuid import uuid4
 
-import odoo.tests
+import koda.tests
 from koda.addons.pos_self_order.tests.self_order_common_test import SelfOrderCommonTest
 from koda import Command
 
 
-@odoo.tests.tagged("post_install", "-at_install")
+@koda.tests.tagged("post_install", "-at_install")
 class TestFrontendMobile(SelfOrderCommonTest):
     def test_order_fiscal_position(self):
         """ Orders made in take away should have the alternative fiscal position. """

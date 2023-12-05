@@ -110,7 +110,7 @@ def constrains(*args):
 
     Invoked on the records on which one of the named fields has been modified.
 
-    Should raise :exc:`~odoo.exceptions.ValidationError` if the
+    Should raise :exc:`~koda.exceptions.ValidationError` if the
     validation failed.
 
     .. warning::
@@ -137,7 +137,7 @@ def constrains(*args):
 
 def ondelete(*, at_uninstall):
     """
-    Mark a method to be executed during :meth:`~odoo.models.BaseModel.unlink`.
+    Mark a method to be executed during :meth:`~koda.models.BaseModel.unlink`.
 
     The goal of this decorator is to allow client-side errors when unlinking
     records if, from a business point of view, it does not make sense to delete
@@ -237,7 +237,7 @@ def onchange(*args):
     .. warning::
 
         It is not possible for a ``one2many`` or ``many2many`` field to modify
-        itself via onchange. This is a webclient limitation - see `#2693 <https://github.com/odoo/odoo/issues/2693>`_.
+        itself via onchange. This is a webclient limitation - see `#2693 <https://github.com/koda/koda/issues/2693>`_.
 
     """
     return attrsetter('_onchange', args)
@@ -562,9 +562,9 @@ class Environment(Mapping):
         """ Return an environment based on ``self`` with modified parameters.
 
         :param cr: optional database cursor to change the current cursor
-        :type cursor: :class:`~odoo.sql_db.Cursor`
+        :type cursor: :class:`~koda.sql_db.Cursor`
         :param user: optional user/user id to change the current user
-        :type user: int or :class:`res.users record<~odoo.addons.base.models.res_users.Users>`
+        :type user: int or :class:`res.users record<~koda.addons.base.models.res_users.Users>`
         :param dict context: optional context dictionary to change the current context
         :param bool su: optional boolean to change the superuser mode
         :returns: environment with specified args (new or existing one)
@@ -615,7 +615,7 @@ class Environment(Mapping):
         """Return the current user (as an instance).
 
         :returns: current user - sudoed
-        :rtype: :class:`res.users record<~odoo.addons.base.models.res_users.Users>`"""
+        :rtype: :class:`res.users record<~koda.addons.base.models.res_users.Users>`"""
         return self(su=True)['res.users'].browse(self.uid)
 
     @lazy_property
@@ -627,7 +627,7 @@ class Environment(Mapping):
 
         :raise AccessError: invalid or unauthorized `allowed_company_ids` context key content.
         :return: current company (default=`self.user.company_id`), with the current environment
-        :rtype: :class:`res.company record<~odoo.addons.base.models.res_company.Company>`
+        :rtype: :class:`res.company record<~koda.addons.base.models.res_company.Company>`
 
         .. warning::
 
@@ -657,7 +657,7 @@ class Environment(Mapping):
 
         :raise AccessError: invalid or unauthorized `allowed_company_ids` context key content.
         :return: current companies (default=`self.user.company_ids`), with the current environment
-        :rtype: :class:`res.company recordset<~odoo.addons.base.models.res_company.Company>`
+        :rtype: :class:`res.company recordset<~koda.addons.base.models.res_company.Company>`
 
         .. warning::
 

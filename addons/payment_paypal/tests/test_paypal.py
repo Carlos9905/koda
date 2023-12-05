@@ -44,11 +44,11 @@ class PaypalTest(PaypalCommon, PaymentHttpCommon):
             'zip': '1000',
         }
 
-    @mute_logger('odoo.addons.payment.models.payment_transaction')
+    @mute_logger('koda.addons.payment.models.payment_transaction')
     def test_redirect_form_values(self):
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment.utils.generate_access_token', new=self._generate_test_access_token
+            'koda.addons.payment.utils.generate_access_token', new=self._generate_test_access_token
         ):
             processing_values = tx._get_processing_values()
 
@@ -100,28 +100,28 @@ class PaypalTest(PaypalCommon, PaymentHttpCommon):
         notification_data = PaypalController._parse_pdt_validation_response(response_content)
         self.assertIsNone(notification_data)
 
-    @mute_logger('odoo.addons.payment_paypal.controllers.main')
+    @mute_logger('koda.addons.payment_paypal.controllers.main')
     def test_webhook_notification_confirms_transaction(self):
         """ Test the processing of a webhook notification. """
         tx = self._create_transaction('redirect')
         url = self._build_url(PaypalController._webhook_url)
         with patch(
-            'odoo.addons.payment_paypal.controllers.main.PaypalController'
+            'koda.addons.payment_paypal.controllers.main.PaypalController'
             '._verify_webhook_notification_origin'
         ):
             self._make_http_post_request(url, data=self.notification_data)
         self.assertEqual(tx.state, 'done')
 
-    @mute_logger('odoo.addons.payment_paypal.controllers.main')
+    @mute_logger('koda.addons.payment_paypal.controllers.main')
     def test_webhook_notification_triggers_origin_check(self):
         """ Test that receiving a webhook notification triggers an origin check. """
         self._create_transaction('redirect')
         url = self._build_url(PaypalController._webhook_url)
         with patch(
-            'odoo.addons.payment_paypal.controllers.main.PaypalController'
+            'koda.addons.payment_paypal.controllers.main.PaypalController'
             '._verify_webhook_notification_origin'
         ) as origin_check_mock, patch(
-            'odoo.addons.payment.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment.models.payment_transaction.PaymentTransaction'
             '._handle_notification_data'
         ):
             self._make_http_post_request(url, data=self.notification_data)

@@ -7,7 +7,7 @@ from koda.addons.iap.tools import iap_tools
 from datetime import timedelta
 import json
 
-ENDPOINT = "https://l10n-fr-aspone.api.odoo.com"
+ENDPOINT = "https://l10n-fr-aspone.api.koda.com"
 
 # Allows to translate the errors returned by IAP
 ERROR_CODE_TO_MSG = {

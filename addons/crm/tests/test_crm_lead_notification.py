@@ -220,7 +220,7 @@ class NewLeadNotification(TestCrmCommon):
         lead_user = lead.with_user(self.user_sales_manager)
         self.assertTrue(lead_user.message_needaction)
 
-    @mute_logger('odoo.addons.mail.models.mail_thread')
+    @mute_logger('koda.addons.mail.models.mail_thread')
     def test_new_lead_from_email_multicompany(self):
         company0 = self.env.company
         company1 = self.company_2

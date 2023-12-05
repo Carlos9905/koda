@@ -99,7 +99,7 @@ class TestDocumentsRoutes(HttpCase):
 
         self.authenticate('test_doc', 'test_doc')
 
-        with mute_logger('odoo.http'):
+        with mute_logger('koda.http'):
             response = self.url_open('/document/zip', data={
                 'file_ids': f'{private_doc.id},{document_public.id}',
                 'zip_name': 'testZip.zip',
@@ -107,7 +107,7 @@ class TestDocumentsRoutes(HttpCase):
             })
             self.assertNotEqual(response.status_code, 200)
 
-        with mute_logger('odoo.http'):
+        with mute_logger('koda.http'):
             response = self.url_open('/document/zip', data={
                 'file_ids': f'{document_public.id},{private_doc.id}',
                 'zip_name': 'testZip.zip',

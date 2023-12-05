@@ -162,7 +162,7 @@ class TestXMLID(TransactionCase):
         self.assertEqual(self.get_data('test_convert.foo').noupdate, True)
         self.assertEqual(self.get_data('test_convert.bar').noupdate, True)
 
-    @mute_logger('odoo.sql_db', 'odoo.addons.base.models.ir_model')
+    @mute_logger('koda.sql_db', 'koda.addons.base.models.ir_model')
     def test_create_external_id_with_space(self):
         model = self.env['res.partner.category']
         data_list = [{

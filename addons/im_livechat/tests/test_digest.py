@@ -10,7 +10,7 @@ from koda.tests import tagged
 class TestLiveChatDigest(TestDigestCommon):
 
     @classmethod
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def setUpClass(cls):
         super().setUpClass()
 

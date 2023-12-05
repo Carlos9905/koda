@@ -44,7 +44,7 @@
         },
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-kiddo.odoo.com',
+    'live_test_url': 'https://theme-kiddo.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_kiddo/static/src/js/tour.js',

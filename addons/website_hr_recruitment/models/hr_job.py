@@ -16,11 +16,11 @@ class Job(models.Model):
         'website.searchable.mixin',
     ]
 
-    @mute_logger('odoo.addons.base.models.ir_qweb')
+    @mute_logger('koda.addons.base.models.ir_qweb')
     def _get_default_description(self):
         return self.env['ir.qweb']._render('website_hr_recruitment.default_description', raise_if_not_found=False)
 
-    @mute_logger('odoo.addons.base.models.ir_qweb')
+    @mute_logger('koda.addons.base.models.ir_qweb')
     def _get_default_website_description(self):
         return self.env['ir.qweb']._render("website_hr_recruitment.default_website_description", raise_if_not_found=False)
 

@@ -99,7 +99,7 @@ class TestAccountOnlineAccount(AccountOnlineSynchronizationCommon):
         )
 
     @freeze_time('2023-07-25')
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
     def test_retrieve_pending_transactions(self, patched_fetch_odoofin):
         self.account_online_link.state = 'connected'
         patched_fetch_odoofin.side_effect = [{
@@ -162,8 +162,8 @@ class TestAccountOnlineAccount(AccountOnlineSynchronizationCommon):
         )
 
     @freeze_time('2023-01-01 01:10:15')
-    @patch('odoo.addons.base.models.ir_cron.ir_cron._trigger')
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
+    @patch('koda.addons.base.models.ir_cron.ir_cron._trigger')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
     def test_basic_flow_cron_fetching_transactions(self, patched_transactions, patched_trigger):
         self.addCleanup(self.env.registry.leave_test_mode)
         # flush and clear everything for the new "transaction"
@@ -185,9 +185,9 @@ class TestAccountOnlineAccount(AccountOnlineSynchronizationCommon):
             self.assertEqual(test_link_account.account_online_account_ids[0].fetching_status, 'done')
 
     @freeze_time('2023-01-01 01:10:15')
-    @patch('odoo.addons.base.models.ir_cron.ir_cron._trigger')
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._refresh', return_value=True)
+    @patch('koda.addons.base.models.ir_cron.ir_cron._trigger')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._refresh', return_value=True)
     def test_basic_flow_manual_fetching_transactions(self, patched_refresh, patched_transactions, patched_trigger):
         # Call fetch_transaction in manual mode and check that a call was made to refresh, nothing to transaction and that
         # one trigger was created immediately to fetch transactions.
@@ -198,9 +198,9 @@ class TestAccountOnlineAccount(AccountOnlineSynchronizationCommon):
         self.assertEqual(self.account_online_account.fetching_status, 'waiting')
 
     @freeze_time('2023-01-01 01:10:15')
-    @patch('odoo.addons.base.models.ir_cron.ir_cron._trigger')
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
+    @patch('koda.addons.base.models.ir_cron.ir_cron._trigger')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
     def test_refresh_incomplete_fetching_transactions(self, patched_refresh, patched_transactions, patched_trigger):
         patched_refresh.return_value = {'success': False}
         # Call fetch_transaction and if call result is false, don't call transaction
@@ -217,11 +217,11 @@ class TestAccountOnlineAccount(AccountOnlineSynchronizationCommon):
         self.assertEqual(self.account_online_account.fetching_status, 'waiting')
 
     @freeze_time('2023-01-01 01:10:15')
-    @patch('odoo.addons.base.models.ir_cron.ir_cron._trigger')
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
-    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._refresh', return_value=True)
+    @patch('koda.addons.base.models.ir_cron.ir_cron._trigger')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._refresh', return_value=True)
     def test_currently_processing_fetching_transactions(self, patched_refresh, patched_transactions, patched_trigger):
-        self.account_online_account.fetching_status = 'processing'  # simulate the fact that we are currently creating entries in odoo
+        self.account_online_account.fetching_status = 'processing'  # simulate the fact that we are currently creating entries in koda
         # Call to fetch_transaction should be skipped
         self.account_online_link._fetch_transactions()
         patched_refresh.assert_not_called()

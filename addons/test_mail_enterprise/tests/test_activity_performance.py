@@ -160,7 +160,7 @@ class TestActivityPerformance(BaseMailPerformance):
         # check business information (to benefits from this test)
         self.assertEqual(activity.activity_type_id, self.phonecall_activity)
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     @users('employee')
     @warmup
     def test_generic_activities_misc_batch(self):
@@ -203,7 +203,7 @@ class TestActivityPerformance(BaseMailPerformance):
             )
             self.env.flush_all()
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     @users('employee')
     @warmup
     def test_voip_activities_misc_batch(self):

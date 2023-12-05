@@ -5,14 +5,14 @@ import time
 from freezegun import freeze_time
 from datetime import datetime
 
-import odoo
+import koda
 from koda import fields, tools
 from koda.tools import float_compare, mute_logger, test_reports
 from koda.tests.common import Form
 from koda.addons.point_of_sale.tests.common import TestPointOfSaleCommon
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestPointOfSaleFlow(TestPointOfSaleCommon):
 
     def compute_tax(self, product, price, qty=1, taxes=None):
@@ -674,7 +674,7 @@ class TestPointOfSaleFlow(TestPointOfSaleCommon):
         self.assertFalse(self.pos_config.current_session_id, "Current session not properly recomputed")
 
         # I keep selling after the session is closed
-        with mute_logger('odoo.addons.point_of_sale.models.pos_order'):
+        with mute_logger('koda.addons.point_of_sale.models.pos_order'):
             self.PosOrder.create_from_ui([zucchini_order, newspaper_rack_order])
         rescue_session = self.PosSession.search([
             ('config_id', '=', self.pos_config.id),

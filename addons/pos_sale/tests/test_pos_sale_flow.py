@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import koda
 
 from koda.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
 from koda.tests.common import Form
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestPoSSale(TestPointOfSaleHttpCommon):
     def test_settle_order_with_kit(self):
         if not self.env["ir.module.module"].search([("name", "=", "mrp"), ("state", "=", "installed")]):
@@ -90,14 +90,14 @@ class TestPoSSale(TestPointOfSaleHttpCommon):
             'available_in_pos': True,
             'type': 'product',
             'lst_price': 10,
-            'taxes_id': [odoo.Command.clear()],
+            'taxes_id': [koda.Command.clear()],
         })
         product2 = self.env['product.product'].create({
             'name': 'product2',
             'available_in_pos': True,
             'type': 'product',
             'lst_price': 11,
-            'taxes_id': [odoo.Command.clear()],
+            'taxes_id': [koda.Command.clear()],
         })
         self.env['sale.order'].create({
             'partner_id': self.env.ref('base.res_partner_1').id,

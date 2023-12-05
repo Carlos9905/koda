@@ -20,7 +20,7 @@ class MarketingCampaignTest(TestMACommon):
         cls.env['res.lang']._activate_lang('fr_FR')
 
     @users('user_marketing_automation')
-    @mute_logger('odoo.addons.base.ir.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.ir.ir_model', 'koda.models')
     def test_campaign_archive(self):
         """ Ensures that campaigns are stopped when archived. """
         campaign = self.env['marketing.campaign'].create({
@@ -37,7 +37,7 @@ class MarketingCampaignTest(TestMACommon):
         self.assertEqual(campaign.state, 'stopped')
 
     @users('user_marketing_automation')
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.addons.mail.models.mail_mail')
     def test_campaign_domain_with_translated_terms(self):
         """ Test that a campaign with a domain containing translated terms in
         the language of the responsible does correctly sync participant and
@@ -80,7 +80,7 @@ class MarketingCampaignTest(TestMACommon):
         self.assertEqual(set(campaign.participant_ids.mapped('state')), {'running'})
 
     @users('user_marketing_automation')
-    @mute_logger('odoo.addons.base.ir.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.ir.ir_model', 'koda.models')
     def test_campaign_duplicate(self):
         """ The copy/duplicate of a campaign :
             - COPY activities, new activities related to the new campaign
@@ -145,7 +145,7 @@ class MarketingCampaignTest(TestMACommon):
         self.assertEqual(activity2_dup.parent_id, activity_dup)
 
     @users('user_marketing_automation')
-    @mute_logger('odoo.addons.base.ir.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.ir.ir_model', 'koda.models')
     def test_campaign_participants_compute(self):
         """Check that the participant count compute method works."""
         empty_campaign = self.env['marketing.campaign'].create({
@@ -185,7 +185,7 @@ class MarketingCampaignTest(TestMACommon):
         self.assertEqual(campaign2.test_participant_count, 2)
 
     @users('user_marketing_automation')
-    @mute_logger('odoo.addons.base.ir.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.ir.ir_model', 'koda.models')
     def test_campaign_unique_field(self):
         # initial data: 0-1-2 have unique partners, 3-4 are void, 4 will receive same partner as 0 to test uniqueness
         test_records = self.test_records[:5]
@@ -219,7 +219,7 @@ class MarketingCampaignTest(TestMACommon):
         self.assertEqual(campaign.participant_ids.mapped('res_id'), test_records.ids)
 
     @users('user_marketing_automation')
-    @mute_logger('odoo.addons.base.ir.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.ir.ir_model', 'koda.models')
     def test_campaign_unique_field_many2one(self):
         # initial data: 0-1-2 have unique partners, 3-4 are void, 4 will receive same partner as 0 to test uniqueness
         test_records = self.test_records[:5]

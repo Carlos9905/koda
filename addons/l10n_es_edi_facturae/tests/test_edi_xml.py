@@ -47,7 +47,7 @@ class TestEdiFacturaeXmls(AccountTestInvoicingCommon):
 
         cls.password = "test"
 
-        cls.certificate_module = "odoo.addons.l10n_es_edi_facturae.models.l10n_es_edi_facturae_certificate"
+        cls.certificate_module = "koda.addons.l10n_es_edi_facturae.models.l10n_es_edi_facturae_certificate"
         with freeze_time(cls.frozen_today), patch(f"{cls.certificate_module}.fields.datetime.now", lambda x=None: cls.frozen_today):
             cls.certificate = cls.env["l10n_es_edi_facturae.certificate"].sudo().create({
                 "content": b64encode(file_open('l10n_es_edi_facturae/tests/data/certificate_test.pfx', 'rb').read()),

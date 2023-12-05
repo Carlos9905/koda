@@ -91,7 +91,7 @@ class TestItEdiImport(TestItEdi):
 
         with (patch.object(proxy_user.__class__, '_decrypt_data', return_value=self.fake_test_content),
               patch.object(sql_db.Cursor, "commit", mock_commit),
-              tools.mute_logger("odoo.addons.l10n_it_edi.models.account_move")):
+              tools.mute_logger("koda.addons.l10n_it_edi.models.account_move")):
             for dummy in range(2):
                 self.env['account.move']._l10n_it_edi_process_downloads({
                     '999999999': {

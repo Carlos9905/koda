@@ -8,7 +8,7 @@
 
     """,
 
-    'website': "https://www.odoo.com",
+    'website': "https://www.koda.com",
 
     'category': 'Sales/Sales',
     'version': '1.0',

@@ -55,9 +55,9 @@ class AccountMove(models.Model):
     @api.model
     def _l10n_in_edi_is_managing_invoice_negative_lines_allowed(self):
         """ Negative lines are not allowed by the Indian government making some features unavailable like sale_coupon
-        or global discounts. This method allows odoo to distribute the negative discount lines to each others lines
+        or global discounts. This method allows koda to distribute the negative discount lines to each others lines
         with same HSN code making such features available even for Indian people.
-        :return: True if odoo needs to distribute the negative discount lines, False otherwise.
+        :return: True if koda needs to distribute the negative discount lines, False otherwise.
         """
         param_name = 'l10n_in_edi.manage_invoice_negative_lines'
         return bool(self.env['ir.config_parameter'].sudo().get_param(param_name))

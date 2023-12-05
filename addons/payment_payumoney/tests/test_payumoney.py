@@ -27,7 +27,7 @@ class PayUMoneyTest(PayumoneyCommon, PaymentHttpCommon):
 
     def test_redirect_form_values(self):
         tx = self._create_transaction(flow='redirect')
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = tx._get_processing_values()
 
         form_info = self._extract_values_from_html_form(processing_values['redirect_form_html'])
@@ -64,7 +64,7 @@ class PayUMoneyTest(PayumoneyCommon, PaymentHttpCommon):
             tx,
         )
 
-    @mute_logger('odoo.addons.payment_payumoney.controllers.main')
+    @mute_logger('koda.addons.payment_payumoney.controllers.main')
     def test_reject_notification_with_missing_signature(self):
         """ Test the verification of a notification with a missing signature. """
         tx = self._create_transaction('redirect')
@@ -73,7 +73,7 @@ class PayUMoneyTest(PayumoneyCommon, PaymentHttpCommon):
             Forbidden, PayUMoneyController._verify_notification_signature, payload, tx
         )
 
-    @mute_logger('odoo.addons.payment_payumoney.controllers.main')
+    @mute_logger('koda.addons.payment_payumoney.controllers.main')
     def test_reject_notification_with_invalid_signature(self):
         """ Test the verification of a notification with an invalid signature. """
         tx = self._create_transaction('redirect')

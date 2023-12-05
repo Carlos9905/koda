@@ -9,7 +9,7 @@ treated as a 'Server error'.
 
 .. note::
     If you consider introducing new exceptions,
-    check out the :mod:`odoo.addons.test_exceptions` module.
+    check out the :mod:`koda.addons.test_exceptions` module.
 """
 
 import warnings

@@ -195,7 +195,7 @@ class TestIrMailServer(TransactionCase, MockSmtplibCase):
         for email, from_filter in tests:
             self.assertFalse(self.env['ir.mail_server']._match_from_filter(email, from_filter))
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_mail_server_priorities(self):
         """ Test if we choose the right mail server to send an email. Simulates
         simple Odoo DB so we have to spoof the FROM otherwise we cannot send
@@ -217,7 +217,7 @@ class TestIrMailServer(TransactionCase, MockSmtplibCase):
                 self.assertEqual(mail_server, expected_mail_server)
                 self.assertEqual(mail_from, expected_email_from)
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_mail_server_send_email(self):
         """ Test main 'send_email' usage: check mail_server choice based on from
         filters, encapsulation, spoofing. """
@@ -287,7 +287,7 @@ class TestIrMailServer(TransactionCase, MockSmtplibCase):
                 from_filter=False,
             )
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_mail_server_send_email_context_force(self):
         """ Allow to force notifications_email / bounce_address from context
         to allow higher-level apps to send values until end of mail stack
@@ -317,7 +317,7 @@ class TestIrMailServer(TransactionCase, MockSmtplibCase):
             from_filter=context_server.from_filter,
         )
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_mail_server_send_email_IDNA(self):
         """ Test that the mail from / recipient envelop are encoded using IDNA """
         with self.mock_smtplib_connection():
@@ -332,22 +332,22 @@ class TestIrMailServer(TransactionCase, MockSmtplibCase):
             from_filter=False,
         )
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     @patch.dict(config.options, {
         "from_filter": "dummy@example.com, test.mycompany.com, dummy2@example.com",
         "smtp_server": "example.com",
     })
     def test_mail_server_config_bin(self):
-        """ Test the configuration provided in the odoo-bin arguments. This config
+        """ Test the configuration provided in the koda-bin arguments. This config
         is used when no mail server exists. Test with and without giving a
         pre-configured SMTP session, should not impact results.
 
         Also check "mail.default.from_filter" parameter usage that should overwrite
-        odoo-bin argument "--from-filter".
+        koda-bin argument "--from-filter".
         """
         IrMailServer = self.env['ir.mail_server']
 
-        # Remove all mail server so we will use the odoo-bin arguments
+        # Remove all mail server so we will use the koda-bin arguments
         IrMailServer.search([]).unlink()
         self.assertFalse(IrMailServer.search([]))
 
@@ -405,11 +405,11 @@ class TestIrMailServer(TransactionCase, MockSmtplibCase):
             from_filter='icp.example.com',
         )
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     @patch.dict(config.options, {'from_filter': 'fake.com', 'smtp_server': 'cli_example.com'})
     def test_mail_server_config_cli(self):
         """ Test the mail server configuration when the "smtp_authentication" is
-        "cli". It should take the configuration from the odoo-bin argument. The
+        "cli". It should take the configuration from the koda-bin argument. The
         "from_filter" of the mail server should overwrite the one set in the CLI
         arguments.
         """
@@ -427,7 +427,7 @@ class TestIrMailServer(TransactionCase, MockSmtplibCase):
 
         for mail_from, (expected_smtp_from, expected_msg_from, expected_mail_server) in zip(
             [
-                # check that the CLI server take the configuration in the odoo-bin argument
+                # check that the CLI server take the configuration in the koda-bin argument
                 # except the from_filter which is taken on the mail server
                 'test@cli_example.com',
                 # other mail servers still work

@@ -10,7 +10,7 @@ from koda.addons.sale.tests.common import SaleCommon
 @tagged('post_install', '-at_install')
 class TestAccessRightsControllers(BaseUsersCommon, HttpCase, SaleCommon):
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.addons.base.models.ir_rule')
     def test_access_controller(self):
         private_so = self.sale_order
         portal_so = self.sale_order.copy()

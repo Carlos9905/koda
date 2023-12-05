@@ -50,7 +50,7 @@
         },
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-treehouse.odoo.com',
+    'live_test_url': 'https://theme-treehouse.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_treehouse/static/src/js/tour.js',

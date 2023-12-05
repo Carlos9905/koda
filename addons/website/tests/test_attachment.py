@@ -3,13 +3,13 @@
 
 from urllib.parse import urlparse
 
-import odoo.tests
+import koda.tests
 from koda.tests.common import HOST
 from koda.tools import config
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestWebsiteAttachment(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestWebsiteAttachment(koda.tests.HttpCase):
 
     def test_01_type_url_301_image(self):
         IMD = self.env['ir.model.data']

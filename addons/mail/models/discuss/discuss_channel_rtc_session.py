@@ -72,7 +72,7 @@ class MailRtcSession(models.Model):
     def _gc_inactive_sessions(self):
         """ Garbage collect sessions that aren't active anymore,
             this can happen when the server or the user's browser crash
-            or when the user's odoo session ends.
+            or when the user's koda session ends.
         """
         self.search(self._inactive_rtc_session_domain()).unlink()
 

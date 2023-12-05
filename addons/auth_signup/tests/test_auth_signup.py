@@ -3,7 +3,7 @@
 
 from unittest.mock import patch
 
-import odoo
+import koda
 from koda.tests import HttpCase
 from koda import http
 from koda.exceptions import AccessError
@@ -44,7 +44,7 @@ class TestAuthSignupFlow(HttpCase):
         }
 
         # Override unlink to not delete the email if the send works.
-        with patch.object(odoo.addons.mail.models.mail_mail.MailMail, 'unlink', lambda self: None):
+        with patch.object(koda.addons.mail.models.mail_mail.MailMail, 'unlink', lambda self: None):
             # Call the controller
             url_free_signup = self._get_free_signup_url()
             self.url_open(url_free_signup, data=payload)

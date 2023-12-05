@@ -129,7 +129,7 @@ class TestPaymentTransaction(PaymentCommon):
         source_tx = self._create_transaction(flow='direct', state='authorized')
         child_tx_1 = source_tx._create_child_transaction(100)
         with patch(
-            'odoo.addons.payment.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment.models.payment_transaction.PaymentTransaction'
             '._update_source_transaction_state'
         ) as patched:
             child_tx_1._set_done()
@@ -143,7 +143,7 @@ class TestPaymentTransaction(PaymentCommon):
         child_tx_1._set_done()
         child_tx_2 = source_tx._create_child_transaction(source_tx.amount-100)
         with patch(
-            'odoo.addons.payment.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment.models.payment_transaction.PaymentTransaction'
             '._update_source_transaction_state'
         ) as patched:
             child_tx_2._set_canceled()
@@ -177,7 +177,7 @@ class TestPaymentTransaction(PaymentCommon):
                 "'done'."
         )
 
-    @mute_logger('odoo.addons.payment.models.payment_transaction')
+    @mute_logger('koda.addons.payment.models.payment_transaction')
     def test_update_state_to_illegal_target_state(self):
         tx = self._create_transaction('redirect', state='done')
         tx._update_state(['draft', 'pending', 'authorized'], 'cancel', None)

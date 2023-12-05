@@ -26,7 +26,7 @@ class TestWebsiteSaleDeliveryController(PaymentCommon, SaleCommon):
             order.transaction_ids = self._create_transaction(flow='redirect', state='pending')
             with self.assertRaises(UserError):
                 with patch(
-                    'odoo.addons.website_sale.models.website.Website.sale_get_order',
+                    'koda.addons.website_sale.models.website.Website.sale_get_order',
                     return_value=order,
                 ):  # Patch to retrieve the order even if it is linked to a pending transaction.
                     self.Controller.update_eshop_carrier(carrier_id=1)

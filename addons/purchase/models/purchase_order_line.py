@@ -486,7 +486,7 @@ class PurchaseOrderLine(models.Model):
 
         Note: This method cannot be called with multiple records that have different products linked.
 
-        :raise odoo.exceptions.ValueError: ``len(self.product_id) != 1``
+        :raise koda.exceptions.ValueError: ``len(self.product_id) != 1``
         :rtype: dict
         :return: A dict with the following structure:
             {

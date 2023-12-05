@@ -6,7 +6,7 @@ import datetime
 import hmac
 import json
 import logging
-import odoo
+import koda
 import werkzeug
 
 from koda import _, http
@@ -72,7 +72,7 @@ class Authenticate(http.Controller):
         if not auth_message:
             return {"error": "Invalid code"}
         request.update_env(user=auth_message['uid'])
-        scope = 'odoo.plugin.' + auth_message.get('scope', '')
+        scope = 'koda.plugin.' + auth_message.get('scope', '')
         api_key = request.env['res.users.apikeys']._generate(scope, auth_message['name'])
         return {'access_token': api_key}
 
@@ -80,7 +80,7 @@ class Authenticate(http.Controller):
         data, auth_code_signature = auth_code.split('.')
         data = base64.b64decode(data)
         auth_code_signature = base64.b64decode(auth_code_signature)
-        signature = odoo.tools.misc.hmac(request.env(su=True), 'mail_plugin', data).encode()
+        signature = koda.tools.misc.hmac(request.env(su=True), 'mail_plugin', data).encode()
         if not hmac.compare_digest(auth_code_signature, signature):
             return None
 
@@ -105,7 +105,7 @@ class Authenticate(http.Controller):
             'uid': request.uid,
         }
         auth_message = json.dumps(auth_dict, sort_keys=True).encode()
-        signature = odoo.tools.misc.hmac(request.env(su=True), 'mail_plugin', auth_message).encode()
+        signature = koda.tools.misc.hmac(request.env(su=True), 'mail_plugin', auth_message).encode()
         auth_code = "%s.%s" % (base64.b64encode(auth_message).decode(), base64.b64encode(signature).decode())
         _logger.info('Auth code created - user %s, scope %s', request.env.user, scope)
         return auth_code

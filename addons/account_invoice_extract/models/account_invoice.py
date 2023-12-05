@@ -12,7 +12,7 @@ import json
 
 _logger = logging.getLogger(__name__)
 
-PARTNER_AUTOCOMPLETE_ENDPOINT = 'https://partner-autocomplete.odoo.com'
+PARTNER_AUTOCOMPLETE_ENDPOINT = 'https://partner-autocomplete.koda.com'
 OCR_VERSION = 122
 
 
@@ -78,7 +78,7 @@ class AccountMove(models.Model):
     def _contact_iap_extract(self, pathinfo, params):
         params['version'] = OCR_VERSION
         params['account_token'] = self._get_iap_account().account_token
-        endpoint = self.env['ir.config_parameter'].sudo().get_param('iap_extract_endpoint', 'https://extract.api.odoo.com')
+        endpoint = self.env['ir.config_parameter'].sudo().get_param('iap_extract_endpoint', 'https://extract.api.koda.com')
         return iap_tools.iap_jsonrpc(endpoint + '/api/extract/invoice/2/' + pathinfo, params=params)
 
     @api.model

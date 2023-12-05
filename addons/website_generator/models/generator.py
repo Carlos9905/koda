@@ -13,7 +13,7 @@ from koda.addons.iap.tools.iap_tools import iap_jsonrpc
 from koda.exceptions import AccessError
 from urllib.parse import urljoin, urlparse
 
-DEFAULT_WSS_ENDPOINT = 'https://iap-scraper.odoo.com/'
+DEFAULT_WSS_ENDPOINT = 'https://iap-scraper.koda.com/'
 GET_RESULT_TIMEOUT_SECONDS = 3600  # 1 hour
 STATUS_MESSAGES = {
     'success': _lt("Success"),
@@ -60,7 +60,7 @@ class WebsiteGeneratorRequest(models.Model):
         wg_requests = super().create(vals_list)
         for req in wg_requests:
             # If there is already a uuid, it means the request was already
-            # created via the odoo.com start trial.
+            # created via the koda.com start trial.
             if not req.uuid:
                 ws_endpoint = self.env['ir.config_parameter'].sudo().get_param('website_scraper_endpoint', DEFAULT_WSS_ENDPOINT)
                 url = urljoin(ws_endpoint, f'/website_scraper/{req.version}/scrape')

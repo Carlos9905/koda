@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import odoo.tests
+import koda.tests
 from koda.addons.base.tests.test_translate import SPECIAL_CHARACTERS
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestIndexedTranslation(odoo.tests.TransactionCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestIndexedTranslation(koda.tests.TransactionCase):
 
     @classmethod
     def setUpClass(cls):

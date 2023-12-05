@@ -44,7 +44,7 @@ class Db(Command):
         subs = parser.add_subparsers()
         load = subs.add_parser(
             "load", help="Load a dump file.",
-            description="Loads a dump file into odoo, dump file can be a URL. "
+            description="Loads a dump file into koda, dump file can be a URL. "
                  "If `database` is provided, uses that as the database name. "
                  "Otherwise uses the dump file name without extension.")
         load.set_defaults(func=self.load)

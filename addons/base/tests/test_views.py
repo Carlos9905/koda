@@ -43,7 +43,7 @@ class ViewCase(common.TransactionCase):
         })
 
     def assertInvalid(self, arch, expected_message=None, name='invalid view', inherit_id=False):
-        with mute_logger('odoo.addons.base.models.ir_ui_view'):
+        with mute_logger('koda.addons.base.models.ir_ui_view'):
             with self.assertRaises(ValidationError) as catcher:
                 with self.cr.savepoint():
                     self.View.create({
@@ -60,7 +60,7 @@ class ViewCase(common.TransactionCase):
             _logger.warning(message)
 
     def assertWarning(self, arch, expected_message=None, name='invalid view'):
-        with self.assertLogs('odoo.addons.base.models.ir_ui_view', level="WARNING") as log_catcher:
+        with self.assertLogs('koda.addons.base.models.ir_ui_view', level="WARNING") as log_catcher:
             self.View.create({
                 'name': name,
                 'model': 'ir.ui.view',
@@ -499,7 +499,7 @@ class TestApplyInheritanceSpecs(ViewCase):
                     name="target"),
                 string="Title"))
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_invalid_position(self):
         spec = E.field(
                 E.field(name="whoops"),
@@ -508,7 +508,7 @@ class TestApplyInheritanceSpecs(ViewCase):
         with self.assertRaises(ValueError):
             self.View.apply_inheritance_specs(self.base_arch, spec)
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_incorrect_version(self):
         # Version ignored on //field elements, so use something else
         arch = E.form(E.element(foo="42"))
@@ -519,7 +519,7 @@ class TestApplyInheritanceSpecs(ViewCase):
         with self.assertRaises(ValueError):
             self.View.apply_inheritance_specs(arch, spec)
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_target_not_found(self):
         spec = E.field(name="targut")
 
@@ -692,7 +692,7 @@ class TestApplyInheritanceMoveSpecs(ViewCase):
             )
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_incorrect_move_1(self):
         # cannot move an inexisting element
         spec = E.xpath(
@@ -702,7 +702,7 @@ class TestApplyInheritanceMoveSpecs(ViewCase):
         with self.assertRaises(ValueError):
             self.apply_spec(self.base_arch, spec)
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_incorrect_move_2(self):
         # move xpath cannot contain any children
         spec = E.xpath(
@@ -1813,7 +1813,7 @@ class TestViews(ViewCase):
                 string="Replacement title"
             ))
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_invalid_field(self):
         self.assertInvalid("""
                 <form string="View">
@@ -1827,7 +1827,7 @@ class TestViews(ViewCase):
                 </form>
             """, 'Field tag must have a "name" attribute defined')
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_invalid_subfield(self):
         arch = """
             <form string="View">
@@ -1845,7 +1845,7 @@ class TestViews(ViewCase):
             '''Field "not_a_field" does not exist in model "ir.ui.view"''',
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_context_in_view(self):
         arch = """
             <form string="View">
@@ -1859,7 +1859,7 @@ class TestViews(ViewCase):
             """Field 'model' used in context ({'stuff': model}) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_context_in_subview(self):
         arch = """
             <form string="View">
@@ -1882,7 +1882,7 @@ class TestViews(ViewCase):
             """Field 'model' used in context ({'stuff': model}) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_context_in_subview_with_parent(self):
         arch = """
             <form string="View">
@@ -1905,7 +1905,7 @@ class TestViews(ViewCase):
             """Field 'model' used in context ({'stuff': parent.model}) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_context_in_subsubview_with_parent(self):
         arch = """
             <form string="View">
@@ -1937,7 +1937,7 @@ class TestViews(ViewCase):
             """Field 'model' used in context ({'stuff': parent.parent.model}) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_id_case(self):
         # id is read by default and should be usable in domains
         self.assertValid("""
@@ -1946,7 +1946,7 @@ class TestViews(ViewCase):
             </form>
         """)
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_boolean_case(self):
         arch = """
             <form string="View">
@@ -1964,7 +1964,7 @@ class TestViews(ViewCase):
             """Field 'name' used in domain of <field name="inherit_id"> ([(1, '=', 0 if name else 1)]) must be present in view but is missing""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_in_view(self):
         arch = """
             <form string="View">
@@ -2003,7 +2003,7 @@ class TestViews(ViewCase):
             '''Unsearchable field 'xml_id' in path 'xml_id' in domain of <field name="inherit_id"> ([('xml_id', '=', 'test')])''',
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_field_no_comodel(self):
         self.assertInvalid("""
             <form string="View">
@@ -2011,7 +2011,7 @@ class TestViews(ViewCase):
             </form>
         """, "Domain on non-relational field \"name\" makes no sense (domain:[('test', '=', 'test')])")
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_in_subview(self):
         arch = """
             <form string="View">
@@ -2034,7 +2034,7 @@ class TestViews(ViewCase):
             """Field 'model' used in domain of <field name="inherit_id"> ([('model', '=', model)]) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_in_subview_with_parent(self):
         arch = """
             <form string="View">
@@ -2058,7 +2058,7 @@ class TestViews(ViewCase):
             """Field 'model' used in domain of <field name="inherit_id"> ([('model', '=', parent.model)]) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_on_field_in_view(self):
         field = self.env['ir.ui.view']._fields['inherit_id']
         self.patch(field, 'domain', "[('model', '=', model)]")
@@ -2075,7 +2075,7 @@ class TestViews(ViewCase):
             """Field 'model' used in domain of python field 'inherit_id' ([('model', '=', model)]) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_on_field_in_subview(self):
         field = self.env['ir.ui.view']._fields['inherit_id']
         self.patch(field, 'domain', "[('model', '=', model)]")
@@ -2101,7 +2101,7 @@ class TestViews(ViewCase):
             """Field 'model' used in domain of python field 'inherit_id' ([('model', '=', model)]) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_on_field_in_subview_with_parent(self):
         field = self.env['ir.ui.view']._fields['inherit_id']
         self.patch(field, 'domain', "[('model', '=', parent.model)]")
@@ -2127,7 +2127,7 @@ class TestViews(ViewCase):
             """Field 'model' used in domain of python field 'inherit_id' ([('model', '=', parent.model)]) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_on_field_in_noneditable_subview(self):
         field = self.env['ir.ui.view']._fields['inherit_id']
         self.patch(field, 'domain', "[('model', '=', model)]")
@@ -2149,7 +2149,7 @@ class TestViews(ViewCase):
             """Field 'model' used in domain of python field 'inherit_id' ([('model', '=', model)]) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_on_readonly_field_in_view(self):
         field = self.env['ir.ui.view']._fields['inherit_id']
         self.patch(field, 'domain', "[('model', '=', model)]")
@@ -2171,7 +2171,7 @@ class TestViews(ViewCase):
         """
         self.assertValid(arch)
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_on_readonly_field_in_subview(self):
         field = self.env['ir.ui.view']._fields['inherit_id']
         self.patch(field, 'domain', "[('model', '=', model)]")
@@ -2193,7 +2193,7 @@ class TestViews(ViewCase):
             """Field 'model' used in domain of python field 'inherit_id' ([('model', '=', model)]) must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_in_filter(self):
         arch = """
             <search string="Search">
@@ -2217,7 +2217,7 @@ class TestViews(ViewCase):
         )
         # todo add check for non searchable fields and group by
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_group_by_in_filter(self):
         arch = """
             <search string="Search">
@@ -2230,7 +2230,7 @@ class TestViews(ViewCase):
             """Unknown field "invalid_field" in "group_by" value in context="{'group_by':'invalid_field'}""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_domain_invalid_in_filter(self):
         # invalid domain: it should be a list of tuples
         self.assertInvalid(
@@ -2241,7 +2241,7 @@ class TestViews(ViewCase):
             '''Invalid domain of <filter name="draft">: "['name', '=', 'dummy']"''',
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_searchpanel(self):
         arch = """
             <search>
@@ -2785,7 +2785,7 @@ class TestViews(ViewCase):
             </form>
         """, valid=True)
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_empty_groups_attrib(self):
         """Ensure we allow empty groups attribute"""
         view = self.View.create({
@@ -2852,7 +2852,7 @@ class TestViews(ViewCase):
         self.assertInvalid('<form><button special="dummy"/></form>', "Invalid special 'dummy' in button")
         self.assertInvalid(arch % 'base.partner_root', "base.partner_root is of type res.partner, expected a subclass of ir.actions.actions")
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_tree(self):
         arch = """
             <tree>
@@ -2864,7 +2864,7 @@ class TestViews(ViewCase):
         self.assertValid(arch % '')
         self.assertInvalid(arch % '<group/>', "Tree child can only have one of field, button, control, groupby, widget, header tag (not group)")
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_tree_groupby(self):
         arch = """
             <tree>
@@ -2878,7 +2878,7 @@ class TestViews(ViewCase):
         self.assertInvalid(arch % ('type'), "Field 'type' found in 'groupby' node can only be of type many2one, found selection")
         self.assertInvalid(arch % ('dummy'), "Field 'dummy' found in 'groupby' node does not exist in model ir.ui.view")
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_tree_groupby_many2one(self):
         arch = """
             <tree>
@@ -2904,7 +2904,7 @@ class TestViews(ViewCase):
             '''Field "fake_field" does not exist in model "ir.model.data"''',
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_check_xml_on_reenable(self):
         view1 = self.View.create({
             'name': 'valid _check_xml',
@@ -3104,7 +3104,7 @@ class TestViews(ViewCase):
         )
 
         # modifying a view extension should validate the other views
-        with mute_logger('odoo.addons.base.models.ir_ui_view'):
+        with mute_logger('koda.addons.base.models.ir_ui_view'):
             with self.assertRaises(ValidationError):
                 with self.cr.savepoint():
                     view1.arch = """<form position="inside">
@@ -3146,7 +3146,7 @@ class TestViews(ViewCase):
             "The view test_views_test_view_ref should not be in the views of the many2many field groups_id"
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_forbidden_owl_directives_in_form(self):
         arch = "<form>%s</form>"
 
@@ -3166,7 +3166,7 @@ Forbidden owl directive used in arch (t-esc).""",
 Forbidden owl directive used in arch (t-on-click).""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_forbidden_owl_directives_in_kanban(self):
         arch = "<kanban><templates><t t-name='kanban-box'>%s</t></templates></kanban>"
 
@@ -3181,7 +3181,7 @@ Forbidden owl directive used in arch (t-on-click).""",
 Forbidden owl directive used in arch (t-on-click).""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_forbidden_data_tooltip_attributes_in_form(self):
         arch = "<form>%s</form>"
 
@@ -3201,7 +3201,7 @@ Forbidden attribute used in arch (data-tooltip)."""
 Forbidden attribute used in arch (data-tooltip-template)."""
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_forbidden_data_tooltip_attributes_in_kanban(self):
         arch = "<kanban><templates><t t-name='kanban-box'>%s</t></templates></kanban>"
 
@@ -3237,7 +3237,7 @@ Forbidden attribute used in arch (t-att-data-tooltip)."""
 Forbidden attribute used in arch (t-attf-data-tooltip-template)."""
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_forbidden_use_of___comp___in_kanban(self):
         arch = "<kanban><templates><t t-name='kanban-box'>%s</t></templates></kanban>"
         self.assertInvalid(
@@ -3426,7 +3426,7 @@ class ViewModeField(ViewCase):
         view2.write({'inherit_id': view.id})
         self.assertEqual(view2.mode, 'extension')
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     def testModeExplicit(self):
         view = self.View.create({
             'inherit_id': None,
@@ -3447,7 +3447,7 @@ class ViewModeField(ViewCase):
                 'arch': '<qweb/>'
             })
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     def testPurePrimaryToExtension(self):
         """
         A primary view with inherit_id=None can't be converted to extension
@@ -4009,7 +4009,7 @@ class CompRegexTest(common.TransactionCase):
 @common.tagged('at_install', 'modifiers')
 class ViewModifiers(ViewCase):
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_01_modifiers(self):
         def _test_modifiers(what, expected_vnames):
             if isinstance(what, dict):
@@ -4103,7 +4103,7 @@ class ViewModifiers(ViewCase):
         _test_modifiers({"invisible": str_true}, set())
         _test_modifiers({"invisible": False}, set())
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_03_modifier_attribute_is_boolean(self):
         arch = """
             <form string="View">
@@ -4151,7 +4151,7 @@ class ViewModifiers(ViewCase):
             result = safe_eval.safe_eval(result, {'context': context, 'type': type_value})
             self.assertEqual(bool(result), expected, f"With context: {context}")
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_10_raise_for_old_attributes(self):
         arch = """
             <form string="View">
@@ -4171,7 +4171,7 @@ class ViewModifiers(ViewCase):
         """
         self.assertInvalid(arch, """no longer used""")
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_11_attrs_field(self):
         arch = """
             <form string="View">
@@ -4186,7 +4186,7 @@ class ViewModifiers(ViewCase):
             """Field 'model' used in modifier 'readonly' (model == 'ir.ui.view') must be present in view but is missing""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_12_invalid_syntax(self):
         arch = """
             <form string="View">
@@ -4227,7 +4227,7 @@ class ViewModifiers(ViewCase):
             """must be present in view but is missing""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_13_attrs_states_invisible_to_modifier(self):
         view = self.View.create({
             'name': 'foo',
@@ -4257,7 +4257,7 @@ class ViewModifiers(ViewCase):
         invisible = tree.xpath('//field[@name="name"]')[0].get('invisible')
         self.assertEqual(invisible, "name != 'bidule' and category_id != uid and state not in ('draf', 'finished')")
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_14_attrs_subfield(self):
         arch = """
             <form string="View">
@@ -4281,7 +4281,7 @@ class ViewModifiers(ViewCase):
             """Field 'model' used in modifier 'readonly' (model == 'ir.ui.view') must be present in view but is missing.""",
         )
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_15_attrs_subfield_with_parent(self):
         arch = """
             <form string="View">
@@ -4338,7 +4338,7 @@ class ViewModifiers(ViewCase):
         self.assertTrue(tree.xpath('//div[@id="foo"]'))
         self.assertTrue(tree.xpath('//div[@id="bar"]'))
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_17_attrs_groups_validation(self):
         def validate(arch, valid=False, parent=False):
             parent = 'parent.' if parent else ''

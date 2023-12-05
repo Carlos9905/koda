@@ -55,12 +55,12 @@ class WebsiteSaleCartPayment(PaymentHttpCommon):
                         f"the linked order.",
                 )
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_transaction_route_rejects_unexpected_kwarg(self):
         url = self._build_url(f'/shop/payment/transaction/{self.order.id}')
         route_kwargs = {
             'access_token': self.order._portal_ensure_token(),
             'partner_id': self.partner.id,  # This should be rejected.
         }
-        with self.assertRaises(JsonRpcException, msg='odoo.exceptions.ValidationError'):
+        with self.assertRaises(JsonRpcException, msg='koda.exceptions.ValidationError'):
             self.make_jsonrpc_request(url, route_kwargs)

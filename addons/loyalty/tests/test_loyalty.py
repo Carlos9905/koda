@@ -24,7 +24,7 @@ class TestLoyalty(TransactionCase):
 
     def test_discount_product_unlink(self):
         # Test that we can not unlink dicount line product id
-        with mute_logger('odoo.sql_db'):
+        with mute_logger('koda.sql_db'):
             with self.assertRaises(IntegrityError):
                 with self.cr.savepoint():
                     self.program.reward_ids.discount_line_product_id.unlink()
@@ -73,7 +73,7 @@ class TestLoyalty(TransactionCase):
             sent_mails |= self
 
         partner = self.env['res.partner'].create({'name': 'Test Partner'})
-        with patch('odoo.addons.mail.models.mail_template.MailTemplate.send_mail', new=mock_send_mail):
+        with patch('koda.addons.mail.models.mail_template.MailTemplate.send_mail', new=mock_send_mail):
             # Send mail at creation
             coupon = self.env['loyalty.card'].create({
                 'program_id': self.program.id,

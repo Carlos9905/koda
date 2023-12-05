@@ -1051,7 +1051,7 @@ class TestCowViewSaving(TestViewSavingCommon):
         specific_view = self.base_view._get_specific_views() - self.base_view
 
         # generic view without website_id but with website for request
-        with patch('odoo.addons.website.models.ir_http.get_request_website', lambda: website):
+        with patch('koda.addons.website.models.ir_http.get_request_website', lambda: website):
             self.base_view.invalidate_recordset()
             self.assertIn('to_translate', self.base_view.with_context(lang='en_US', edit_translations=True).arch)
             self.assertIn('translated', self.base_view.with_context(lang='fr_BE', edit_translations=True).arch)
@@ -1511,7 +1511,7 @@ class TestThemeViews(common.TransactionCase):
         main_view.with_context(website_id=website_1.id).arch = '<body>specific</body>'
 
         # 2. Simulate a theme install with a child view of `main_view`
-        patcher = patch('odoo.modules.module._get_manifest_cached', return_value=copy.deepcopy(_DEFAULT_MANIFEST))
+        patcher = patch('koda.modules.module._get_manifest_cached', return_value=copy.deepcopy(_DEFAULT_MANIFEST))
         self.startPatcher(patcher)
         test_theme_module = self.env['ir.module.module'].create({'name': 'test_theme'})
         self.env['ir.model.data'].create({

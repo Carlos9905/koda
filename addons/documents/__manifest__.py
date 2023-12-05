@@ -13,7 +13,7 @@ App to upload and manage your documents.
     'sequence': 80,
     'version': '1.3',
     'application': True,
-    'website': 'https://www.odoo.com/app/documents',
+    'website': 'https://www.koda.com/app/documents',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'mail', 'portal', 'web_enterprise', 'attachment_indexation', 'digest'],

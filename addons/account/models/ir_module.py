@@ -33,7 +33,7 @@ class IrModule(models.Model):
             templates = {}
             if module.category_id == chart_category or module.name == 'account':
                 try:
-                    python_module = import_module(f"odoo.addons.{module.name}.models")
+                    python_module = import_module(f"koda.addons.{module.name}.models")
                 except ModuleNotFoundError:
                     templates = {}
                 else:

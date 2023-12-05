@@ -43,7 +43,7 @@ class BusPresence(models.Model):
         try:
             # Hide transaction serialization errors, which can be ignored, the presence update is not essential
             # The errors are supposed from presence.write(...) call only
-            with tools.mute_logger('odoo.sql_db'):
+            with tools.mute_logger('koda.sql_db'):
                 self._update_presence(inactivity_period=inactivity_period, identity_field=identity_field, identity_value=identity_value)
                 # commit on success
                 self.env.cr.commit()

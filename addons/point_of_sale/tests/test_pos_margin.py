@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import odoo
+import koda
 from koda.addons.point_of_sale.tests.common import TestPoSCommon
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestPosMargin(TestPoSCommon):
     """
     Test the margin computation on orders with basic configuration

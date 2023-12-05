@@ -12,7 +12,7 @@ from koda.exceptions import AccessError
 
 _logger = logging.getLogger(__name__)
 
-DEFAULT_ENDPOINT = 'https://iap.odoo.com'
+DEFAULT_ENDPOINT = 'https://iap.koda.com'
 
 
 class IapAccount(models.Model):
@@ -77,7 +77,7 @@ class IapAccount(models.Model):
         iap_edits = ['warn_me', 'warning_threshold', 'warning_email']
         if any(edited_attribute in values for edited_attribute in iap_edits):
             try:
-                route = '/iap/update-warning-odoo'
+                route = '/iap/update-warning-koda'
                 endpoint = iap_tools.iap_get_endpoint(self.env)
                 url = endpoint + route
                 data = {

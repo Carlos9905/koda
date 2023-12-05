@@ -17,7 +17,7 @@ from lxml import etree
 from lxml.etree import LxmlError
 from lxml.builder import E
 
-import odoo
+import koda
 from koda import api, fields, models, tools, _
 from koda.exceptions import ValidationError, AccessError, UserError
 from koda.http import request
@@ -68,7 +68,7 @@ def att_names(name):
 
 @lazy
 def keep_query():
-    mod = odoo.addons.base.models.ir_qweb
+    mod = koda.addons.base.models.ir_qweb
     warnings.warn(f"keep_query has been moved to {mod}", DeprecationWarning)
     return mod.keep_query
 

@@ -116,7 +116,7 @@ def _eval_xml(self, node, env):
             try:
                 return safe_eval(a_eval, idref2)
             except Exception:
-                logging.getLogger('odoo.tools.convert.init').error(
+                logging.getLogger('koda.tools.convert.init').error(
                     'Could not eval(%s) for %s in %s', a_eval, node.get('name'), env.context)
                 raise
         def _process(s):
@@ -706,7 +706,7 @@ form: module.record_id""" % (xml_id,)
                     err=err.args[0],
                 )
                 _logger.debug(msg, exc_info=True)
-                raise ParseError(msg) from None  # Restart with "--log-handler odoo.tools.convert:DEBUG" for complete traceback
+                raise ParseError(msg) from None  # Restart with "--log-handler koda.tools.convert:DEBUG" for complete traceback
             except Exception as e:
                 raise ParseError('while parsing %s:%s, somewhere inside\n%s' % (
                     rec.getroottree().docinfo.URL,
@@ -745,9 +745,9 @@ form: module.record_id""" % (xml_id,)
         }
 
     def parse(self, de):
-        assert de.tag in self.DATA_ROOTS, "Root xml tag must be <openerp>, <odoo> or <data>."
+        assert de.tag in self.DATA_ROOTS, "Root xml tag must be <openerp>, <koda> or <data>."
         self._tag_root(de)
-    DATA_ROOTS = ['odoo', 'data', 'openerp']
+    DATA_ROOTS = ['koda', 'data', 'openerp']
 
 def convert_file(cr, module, filename, idref, mode='update', noupdate=False, kind=None, pathname=None):
     if pathname is None:

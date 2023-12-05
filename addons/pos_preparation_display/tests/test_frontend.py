@@ -3,10 +3,10 @@
 
 from koda.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUi(TestPointOfSaleHttpCommon):
     @classmethod
     def setUpClass(cls, chart_template_ref=None):

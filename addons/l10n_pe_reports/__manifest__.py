@@ -13,7 +13,7 @@ P&L + balance Sheet
     "version": "1.0",
     "author": "Vauxoo, Odoo SA",
     "category": "Accounting/Localizations/Reporting",
-    "website": "https://www.odoo.com/app/accounting",
+    "website": "https://www.koda.com/app/accounting",
     "license": "OEEL-1",
     "depends": [
         "l10n_pe_edi",

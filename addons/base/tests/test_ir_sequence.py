@@ -6,7 +6,7 @@ from contextlib import contextmanager
 import psycopg2
 import psycopg2.errorcodes
 
-import odoo
+import koda
 from koda.tests import common
 from koda.tests.common import BaseCase
 from koda.tools.misc import mute_logger
@@ -18,9 +18,9 @@ def environment():
     """ Return an environment with a new cursor for the current database; the
         cursor is committed and closed after the context block.
     """
-    registry = odoo.registry(common.get_db_name())
+    registry = koda.registry(common.get_db_name())
     with registry.cursor() as cr:
-        yield odoo.api.Environment(cr, ADMIN_USER_ID, {})
+        yield koda.api.Environment(cr, ADMIN_USER_ID, {})
 
 
 def drop_sequence(code):
@@ -86,7 +86,7 @@ class TestIrSequenceNoGap(BaseCase):
             n = env['ir.sequence'].next_by_code('test_sequence_type_2')
             self.assertTrue(n)
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     def test_ir_sequence_draw_twice_no_gap(self):
         """ Try to draw a number from two transactions.
         This is expected to not work.

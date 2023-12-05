@@ -19,8 +19,8 @@ class TestAbstractBuilder(AccountConsolidationTestCase):
         self.builder = ComparisonBuilder(self.env, self.ap._format_value)
         self.report = self.env.ref('account_consolidation.consolidated_balance_report')
 
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._get_hierarchy')
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._get_plain')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._get_hierarchy')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._get_plain')
     def test_get_lines(self, patched_get_plain, patched_get_hierarchy):
         patched_get_plain.return_value = [{'id': 1}]
         patched_get_hierarchy.return_value = [{'id': 2}]
@@ -64,8 +64,8 @@ class TestAbstractBuilder(AccountConsolidationTestCase):
         patched_get_plain.reset_mock()
         patched_get_hierarchy.assert_not_called()
 
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._handle_accounts')
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._build_total_line')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._handle_accounts')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._build_total_line')
     def test__get_plain(self, patched_total, patched_handle):
         patched_total.return_value = {'name': 'bli'}
         patched_handle.return_value = ([42, 24], [{'name': 'bla'}, {'name': 'blu'}])
@@ -88,10 +88,10 @@ class TestAbstractBuilder(AccountConsolidationTestCase):
         patched_handle.assert_called_once_with(accounts, options, 3, **kwargs)
         patched_total.assert_called_once_with(patched_handle.return_value[0], options, **kwargs)
 
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._handle_orphan_accounts')
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._get_root_sections')
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._handle_sections')
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._build_total_line')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._handle_orphan_accounts')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._get_root_sections')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._handle_sections')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._build_total_line')
     def test__get_hierarchy(self, patched_total, patched_sections, patched_root, patched_orphan):
         patched_total.return_value = {
             'columns': [{'no_format': 4242}, {'no_format': 2424}]
@@ -121,9 +121,9 @@ class TestAbstractBuilder(AccountConsolidationTestCase):
         patched_total.assert_called_once_with([4242, 2424], {}, chart_ids=chart_ids, cols_amount=cols_amount,
                                               period_ids=period_ids, include_percentage=include_percentage)
 
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._build_section_line')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._build_section_line')
     @patch(
-        'odoo.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler.section_line_should_be_added',
+        'koda.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler.section_line_should_be_added',
         return_value=True)
     def test__handle_sections(self, patched_added, patched_build):
         section_totals = [4200.42, 28.0, -0.01]
@@ -147,8 +147,8 @@ class TestAbstractBuilder(AccountConsolidationTestCase):
         self.assertListEqual(totals, [amount_of_sections * x for x in section_totals])
         self.assertListEqual(lines, amount_of_sections * patched_build.return_value[1])
 
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._get_orphan_accounts')
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._handle_accounts')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._get_orphan_accounts')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._handle_accounts')
     def test__handle_orphan_accounts(self, patched_handle_accounts, patched_get_orphan):
         patched_get_orphan.return_value = ['blouh']
         patched_handle_accounts.return_value = ([], [])
@@ -168,9 +168,9 @@ class TestAbstractBuilder(AccountConsolidationTestCase):
         patched_get_orphan.assert_called_once_with(options, **kwargs)
         patched_handle_accounts.assert_called_once_with(patched_get_orphan.return_value, options, level, **kwargs)
 
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._compute_account_totals')
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._format_account_line')
-    @patch('odoo.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler.account_line_should_be_added',
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._compute_account_totals')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._format_account_line')
+    @patch('koda.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler.account_line_should_be_added',
            return_value=True)
     def test__handle_accounts(self, patched_account_added, patched_build_account, patched_compute):
         patched_build_account.return_value = [{}, {}]
@@ -274,11 +274,11 @@ class TestComparisonBuilder(AccountConsolidationTestCase):
         for res, expected in combinations:
             self.assertEqual(res, expected)
 
-    @patch('odoo.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler.section_line_should_be_added',
+    @patch('koda.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler.section_line_should_be_added',
            return_value=True)
-    @patch('odoo.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler.account_line_should_be_added',
+    @patch('koda.addons.account_consolidation.report.handler.show_zero.ShowZeroHandler.account_line_should_be_added',
            return_value=True)
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._compute_account_totals')
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._compute_account_totals')
     def test__build_section_line_and_format_account_line(self, patched_account_totals, patched_account_added,
                                                          patched_section_added):
         patched_account_totals.return_value = [1000.0, -2000.0]
@@ -445,7 +445,7 @@ class TestComparisonBuilder(AccountConsolidationTestCase):
             else:
                 self.assertNotIn('class', perc_column)
 
-    @patch('odoo.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._build_percentage_column',
+    @patch('koda.addons.account_consolidation.report.builder.comparison.ComparisonBuilder._build_percentage_column',
            return_value={'name': '0 %', 'no_format': 0})
     def test__build_total_line(self, patched_bpc):
         other_chart = self.env['consolidation.chart'].create({

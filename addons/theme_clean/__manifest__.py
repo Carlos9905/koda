@@ -45,7 +45,7 @@
         '_': ['s_comparisons'],
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-clean.odoo.com',
+    'live_test_url': 'https://theme-clean.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_clean/static/src/js/tour.js',

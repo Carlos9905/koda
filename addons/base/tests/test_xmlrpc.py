@@ -7,8 +7,8 @@ from xmlrpc.client import Binary
 from koda.exceptions import AccessDenied, AccessError
 from koda.http import _request_stack
 
-import odoo
-import odoo.tools
+import koda
+import koda.tools
 from koda.tests import common
 from koda.service import common as auth, model
 from koda.tools import DotDict
@@ -80,7 +80,7 @@ class TestXMLRPC(common.HttpCase):
         works properly over XMLRPC
         """
         self.patch(self.registry['res.users'], 'context_get',
-                   odoo.api.model(lambda *_: collections.defaultdict(int)))
+                   koda.api.model(lambda *_: collections.defaultdict(int)))
         self.assertEqual(self.xmlrpc('res.users', 'context_get'), {})
 
     def test_jsonrpc_read_group(self):
@@ -98,7 +98,7 @@ class TestXMLRPC(common.HttpCase):
         )
 
     def _json_call(self, *args):
-        self.opener.post("http://%s:%s/jsonrpc" % (common.HOST, odoo.tools.config['http_port']), json={
+        self.opener.post("http://%s:%s/jsonrpc" % (common.HOST, koda.tools.config['http_port']), json={
             'jsonrpc': '2.0',
             'id': None,
             'method': 'call',

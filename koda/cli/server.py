@@ -30,8 +30,8 @@ from . import Command
 __author__ = koda.release.author
 __version__ = koda.release.version
 
-# Also use the `odoo` logger for the main script.
-_logger = logging.getLogger('odoo')
+# Also use the `koda` logger for the main script.
+_logger = logging.getLogger('koda')
 
 def check_root_user():
     """Warn if the process's user is 'root' (on POSIX system)."""
@@ -174,7 +174,7 @@ def main(args):
     sys.exit(rc)
 
 class Server(Command):
-    """Start the odoo server (default command)"""
+    """Start the koda server (default command)"""
     def run(self, args):
         koda.tools.config.parser.prog = f'{Path(sys.argv[0]).name} {self.name}'
         main(args)

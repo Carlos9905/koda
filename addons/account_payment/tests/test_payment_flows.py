@@ -34,7 +34,7 @@ class TestFlows(AccountPaymentCommon, PaymentHttpCommon):
             'landing_route': tx_context['landing_route'],
             'access_token': tx_context['access_token'],
         }
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = self._get_processing_values(
                 tx_route=tx_context['transaction_route'], **tx_route_values
             )
@@ -75,7 +75,7 @@ class TestFlows(AccountPaymentCommon, PaymentHttpCommon):
 
         with patch.object(
             CustomerPortal, '_document_check_access', _document_check_access_mock
-        ), patch('odoo.addons.payment.utils.check_access_token') as check_payment_access_token_mock:
+        ), patch('koda.addons.payment.utils.check_access_token') as check_payment_access_token_mock:
             try:
                 payment_portal_controller._get_extra_payment_form_values(
                     invoice_id=self.invoice.id, access_token='whatever'
@@ -89,12 +89,12 @@ class TestFlows(AccountPaymentCommon, PaymentHttpCommon):
                     " check as a portal access token failed.",
             )
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_transaction_route_rejects_unexpected_kwarg(self):
         url = self._build_url(f'/invoice/transaction/{self.invoice.id}/')
         route_kwargs = {
             'access_token': self.invoice._portal_ensure_token(),
             'partner_id': self.partner.id,  # This should be rejected.
         }
-        with self.assertRaises(JsonRpcException, msg='odoo.exceptions.ValidationError'):
+        with self.assertRaises(JsonRpcException, msg='koda.exceptions.ValidationError'):
             self.make_jsonrpc_request(url, route_kwargs)

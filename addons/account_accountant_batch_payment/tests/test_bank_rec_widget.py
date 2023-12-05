@@ -206,7 +206,7 @@ class TestBankRecWidget(TestBankRecWidgetCommon):
         def _autorise_lock_date_changes(*args, **kwargs):
             pass
 
-        with patch('odoo.addons.account_lock.models.res_company.ResCompany._autorise_lock_date_changes', new=_autorise_lock_date_changes):
+        with patch('koda.addons.account_lock.models.res_company.ResCompany._autorise_lock_date_changes', new=_autorise_lock_date_changes):
             self.env.company.fiscalyear_lock_date = None
         rejection_wizard.rejected_payment_ids.line_ids.remove_move_reconcile()
         rejection_wizard.rejected_payment_ids.batch_payment_id = batch

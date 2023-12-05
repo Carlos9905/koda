@@ -24,7 +24,7 @@ class TestUi(HttpCaseWithUserDemo):
 @koda.tests.tagged('-at_install', 'post_install')
 class TestUiTranslation(koda.tests.HttpCase):
 
-    @mute_logger('odoo.sql_db', 'odoo.http')
+    @mute_logger('koda.sql_db', 'koda.http')
     def test_01_sql_constraints(self):
         # Raise an SQL constraint and test the message
         self.env['res.lang']._activate_lang('fr_FR')

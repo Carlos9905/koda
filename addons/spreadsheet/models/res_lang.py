@@ -21,12 +21,12 @@ class Lang(models.Model):
 
     @api.model
     def _get_user_spreadsheet_locale(self):
-        """Convert the odoo lang to a spreadsheet locale."""
+        """Convert the koda lang to a spreadsheet locale."""
         lang = self._lang_get(self.env.user.lang)
         return lang._odoo_lang_to_spreadsheet_locale()
 
     def _odoo_lang_to_spreadsheet_locale(self):
-        """Convert an odoo lang to a spreadsheet locale."""
+        """Convert an koda lang to a spreadsheet locale."""
         return {
             "name": self.name,
             "code": self.code,

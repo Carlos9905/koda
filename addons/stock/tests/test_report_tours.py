@@ -1,5 +1,5 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-import odoo
+import koda
 from koda.tests import Form, HttpCase, tagged
 
 

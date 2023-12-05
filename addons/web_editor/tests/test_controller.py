@@ -4,13 +4,13 @@
 import binascii
 import json
 
-import odoo.tests
+import koda.tests
 from koda.tests.common import HttpCase, new_test_user
 from koda.tools.json import scriptsafe as json_safe
 
 from koda.addons.http_routing.models.ir_http import slug
 
-@odoo.tests.tagged('-at_install', 'post_install')
+@koda.tests.tagged('-at_install', 'post_install')
 class TestController(HttpCase):
 
     @classmethod

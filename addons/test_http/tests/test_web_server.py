@@ -6,7 +6,7 @@ from . import test_static
 
 
 # Small configuration to run the tests against a web server.
-# WEB_SERVER_URL=http://localhost:80 odoo-bin -i test_http --test-tags webserver
+# WEB_SERVER_URL=http://localhost:80 koda-bin -i test_http --test-tags webserver
 WEB_SERVER_URL = getenv('WEB_SERVER_URL', 'http://localhost:80')
 
 

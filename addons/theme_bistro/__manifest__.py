@@ -44,7 +44,7 @@
         '_': ['s_banner'],
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-bistro.odoo.com',
+    'live_test_url': 'https://theme-bistro.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_bistro/static/src/js/tour.js',

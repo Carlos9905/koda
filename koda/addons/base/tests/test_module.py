@@ -15,7 +15,7 @@ from koda.tests.common import BaseCase
 class TestModuleManifest(BaseCase):
     @classmethod
     def setUpClass(cls):
-        cls._tmp_dir = tempfile.TemporaryDirectory(prefix='odoo-test-addons-')
+        cls._tmp_dir = tempfile.TemporaryDirectory(prefix='koda-test-addons-')
         cls.addClassCleanup(cls._tmp_dir.cleanup)
         cls.addons_path = cls._tmp_dir.name
 
@@ -23,14 +23,14 @@ class TestModuleManifest(BaseCase):
         cls.startClassPatcher(patcher)
 
     def setUp(self):
-        self.module_root = tempfile.mkdtemp(prefix='odoo-test-module-', dir=self.addons_path)
+        self.module_root = tempfile.mkdtemp(prefix='koda-test-module-', dir=self.addons_path)
         self.module_name = os.path.basename(self.module_root)
 
     def test_default_manifest(self):
         with open(opj(self.module_root, '__manifest__.py'), 'w') as file:
             file.write(str({'name': f'Temp {self.module_name}', 'license': 'MIT'}))
 
-        with self.assertNoLogs('odoo.modules.module', 'WARNING'):
+        with self.assertNoLogs('koda.modules.module', 'WARNING'):
             manifest = load_manifest(self.module_name)
 
         self.maxDiff = None
@@ -79,7 +79,7 @@ class TestModuleManifest(BaseCase):
         self.assertEqual(orig_auto_install, get_manifest(module_name)['auto_install'])
 
     def test_missing_manifest(self):
-        with self.assertLogs('odoo.modules.module', 'DEBUG') as capture:
+        with self.assertLogs('koda.modules.module', 'DEBUG') as capture:
             manifest = load_manifest(self.module_name)
         self.assertEqual(manifest, {})
         self.assertIn("no manifest file found", capture.output[0])
@@ -87,7 +87,7 @@ class TestModuleManifest(BaseCase):
     def test_missing_license(self):
         with open(opj(self.module_root, '__manifest__.py'), 'w') as file:
             file.write(str({'name': f'Temp {self.module_name}'}))
-        with self.assertLogs('odoo.modules.module', 'WARNING') as capture:
+        with self.assertLogs('koda.modules.module', 'WARNING') as capture:
             manifest = load_manifest(self.module_name)
         self.assertEqual(manifest['license'], 'LGPL-3')
         self.assertIn("Missing `license` key", capture.output[0])

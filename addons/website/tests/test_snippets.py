@@ -51,7 +51,7 @@ class TestSnippets(HttpCase):
         self.start_tour(self.env['website'].get_client_action_url('/'), 'snippet_social_media', login="admin")
         self.assertEqual(
             self.env['website'].browse(1).social_instagram,
-            'https://instagram.com/odoo.official/',
+            'https://instagram.com/koda.official/',
             'Social media should have been updated'
         )
 

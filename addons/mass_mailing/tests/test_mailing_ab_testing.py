@@ -32,7 +32,7 @@ class TestMailingABTesting(MassMailCommon):
         self.env.flush_all()
         self.env.invalidate_all()
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     @users('user_marketing')
     def test_mailing_ab_testing_auto_flow(self):
         with self.mock_mail_gateway():
@@ -61,7 +61,7 @@ class TestMailingABTesting(MassMailCommon):
         winner_mailing = self.ab_testing_campaign.mailing_mail_ids.filtered(lambda mailing: mailing.ab_testing_pc == 100)
         self.assertEqual(winner_mailing.subject, 'A/B Testing V1')
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     @users('user_marketing')
     def test_mailing_ab_testing_auto_flow_cron(self):
         self.ab_testing_mailing_1.write({
@@ -144,7 +144,7 @@ class TestMailingABTesting(MassMailCommon):
             self.ab_testing_mailing_1 + self.ab_testing_mailing_2
         )
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     @users('user_marketing')
     def test_mailing_ab_testing_manual_flow(self):
         self.ab_testing_mailing_1.write({
@@ -176,7 +176,7 @@ class TestMailingABTesting(MassMailCommon):
         winner_mailing = self.ab_testing_campaign.mailing_mail_ids.filtered(lambda mailing: mailing.ab_testing_pc == 100)
         self.assertEqual(winner_mailing.subject, 'A/B Testing V2')
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     @users('user_marketing')
     def test_mailing_ab_testing_minimum_participants(self):
         """ Test that it should send minimum one mail(if possible) when ab_testing_pc is too small compared to the amount of targeted records."""

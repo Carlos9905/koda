@@ -52,7 +52,7 @@
         '_': ['s_comparisons'],
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-anelusia.odoo.com',
+    'live_test_url': 'https://theme-anelusia.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_anelusia/static/src/js/tour.js',

@@ -45,7 +45,7 @@ class AccountJournal(models.Model):
                 currency_code, account_number, stmts_vals = self._parse_bank_statement_file(attachment)
                 # Check raw data
                 self._check_parsed_data(stmts_vals, account_number)
-                # Try to find the currency and journal in odoo
+                # Try to find the currency and journal in koda
                 journal = self._find_additional_data(currency_code, account_number)
                 # If no journal found, ask the user about creating one
                 if not journal.default_account_id:
@@ -118,7 +118,7 @@ class AccountJournal(models.Model):
                         - 'amount': float
                         - 'unique_import_id': string
                         -o 'account_number': string
-                            Will be used to find/create the res.partner.bank in odoo
+                            Will be used to find/create the res.partner.bank in koda
                         -o 'note': string
                         -o 'partner_name': string
                         -o 'ref': string

@@ -6,13 +6,13 @@ from pylint import checkers, interfaces
 
 class OdooBaseChecker(checkers.BaseChecker):
     __implements__ = interfaces.IAstroidChecker
-    name = 'odoo'
+    name = 'koda'
 
     msgs = {
         'E8502': (
             'Bad usage of _, _lt function.',
             'gettext-variable',
-            'See https://www.odoo.com/documentation/16.0/developer/misc/i18n/translations.html#variables'
+            'See https://www.koda.com/documentation/16.0/developer/misc/i18n/translations.html#variables'
         )
     }
 

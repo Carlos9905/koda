@@ -2,14 +2,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import uuid
 
-import odoo
+import koda
 from koda import fields, models, api
 from koda.addons.iap.tools import iap_tools
 
 import logging as logger
 _logger = logger.getLogger(__name__)
 
-DEFAULT_ENDPOINT = 'https://ocn.odoo.com'
+DEFAULT_ENDPOINT = 'https://ocn.koda.com'
 
 
 class ResConfigSettings(models.TransientModel):
@@ -38,7 +38,7 @@ class ResConfigSettings(models.TransientModel):
         if not project_id:
             params = {
                 'ocnuuid': self._get_ocn_uuid(),
-                'server_version': odoo.release.version,
+                'server_version': koda.release.version,
                 'db': self.env.cr.dbname,
                 'company_name': self.env.company.name,
                 'url': ir_params_sudo.get_param('web.base.url')

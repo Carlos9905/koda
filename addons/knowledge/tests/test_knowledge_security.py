@@ -30,7 +30,7 @@ class TestKnowledgeSecurity(KnowledgeArticlePermissionsCase):
             signature='--\nEmmanuel'
         )
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.addons.base.models.ir_rule')
     @users('user_public')
     def test_models_as_public(self):
         # ARTICLE
@@ -49,7 +49,7 @@ class TestKnowledgeSecurity(KnowledgeArticlePermissionsCase):
         with self.assertRaises(exceptions.AccessError, msg='ACLs: no cover access to public'):
             self.env['knowledge.cover'].search([])
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.addons.base.models.ir_rule')
     @users('portal_test')
     def test_models_as_portal(self):
         article_root = self.article_roots[0].with_env(self.env)
@@ -100,7 +100,7 @@ class TestKnowledgeSecurity(KnowledgeArticlePermissionsCase):
                                msg="ACLs: No cover access to portal"):
             self.env['knowledge.cover'].search([])
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     @users('user_erp_manager')
     def test_models_as_erp_manager(self):
         self.assertTrue(self.env.user.has_group('base.group_erp_manager'))
@@ -126,7 +126,7 @@ class TestKnowledgeSecurity(KnowledgeArticlePermissionsCase):
                 'name': 'Private for Employee',
             })
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     @users('admin')
     def test_models_as_system(self):
         self.assertTrue(self.env.user.has_group('base.group_system'))
@@ -202,7 +202,7 @@ class TestKnowledgeSecurity(KnowledgeArticlePermissionsCase):
         self.assertEqual(cover.attachment_url, '/')
         cover.unlink()
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.addons.base.models.ir_rule', 'odoo.models.unlink')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.addons.base.models.ir_rule', 'koda.models.unlink')
     @users('employee')
     def test_models_as_user(self):
         article_roots = self.article_roots.with_env(self.env)
@@ -266,7 +266,7 @@ class TestKnowledgeSecurity(KnowledgeArticlePermissionsCase):
         self.assertEqual(cover.attachment_url, '/')
         cover.unlink()
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.addons.base.models.ir_rule')
     @users('employee')
     def test_models_as_user_copy(self):
         article_hidden = self.article_read_contents[3].with_env(self.env)

@@ -18,6 +18,6 @@ Accounting reports for Turkey
     ],
     'installable': True,
     'auto_install': True,
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'license': 'OEEL-1',
 }

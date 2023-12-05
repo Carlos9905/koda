@@ -450,7 +450,7 @@ class AccountEdiCommon(models.AbstractModel):
 
     def _import_fill_invoice_line_values(self, tree, xpath_dict, invoice_line, qty_factor):
         """
-        Read the xml invoice, extract the invoice line values, compute the odoo values
+        Read the xml invoice, extract the invoice line values, compute the koda values
         to fill an invoice line form: quantity, price_unit, discount, product_uom_id.
 
         The way of computing invoice line is quite complicated:

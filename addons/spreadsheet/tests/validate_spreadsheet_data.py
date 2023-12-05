@@ -8,13 +8,13 @@ from koda.exceptions import ValidationError
 
 markdown_link_regex = r"^\[([^\[]+)\]\((.+)\)$"
 
-xml_id_url_prefix = "odoo://ir_menu_xml_id/"
+xml_id_url_prefix = "koda://ir_menu_xml_id/"
 
-odoo_view_link_prefix = "odoo://view/"
+odoo_view_link_prefix = "koda://view/"
 
 
 def odoo_charts(data):
-    """return all odoo chart definition in the spreadsheet"""
+    """return all koda chart definition in the spreadsheet"""
     figures = []
     for sheet in data["sheets"]:
         figures += [
@@ -28,7 +28,7 @@ def odoo_charts(data):
 def links_urls(data):
     """return all markdown links in cells"""
     urls = []
-    link_prefix = "odoo://view/"
+    link_prefix = "koda://view/"
     for sheet in data["sheets"]:
         for cell in sheet["cells"].values():
             content = cell.get("content", "")
@@ -40,7 +40,7 @@ def links_urls(data):
 
 def odoo_view_links(data):
     """return all view definitions embedded in link cells.
-    urls looks like odoo://view/{... view data...}
+    urls looks like koda://view/{... view data...}
     """
     return [
         json.loads(url[len(odoo_view_link_prefix):])

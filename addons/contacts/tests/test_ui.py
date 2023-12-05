@@ -3,11 +3,11 @@
 
 from ast import literal_eval
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestUi(odoo.tests.HttpCase):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestUi(koda.tests.HttpCase):
     def test_set_defaults(self):
         """Tests the "Set Defaults" feature of the debug menu on the res.partner form.
 

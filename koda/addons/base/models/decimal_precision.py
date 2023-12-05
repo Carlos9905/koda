@@ -67,7 +67,7 @@ class DecimalPrecision(models.Model):
             }
 
 # compatibility for decimal_precision.get_precision(): expose the module in addons namespace
-dp = sys.modules['odoo.addons.base.models.decimal_precision']
+dp = sys.modules['koda.addons.base.models.decimal_precision']
 koda.addons.decimal_precision = dp
-sys.modules['odoo.addons.decimal_precision'] = dp
+sys.modules['koda.addons.decimal_precision'] = dp
 sys.modules['openerp.addons.decimal_precision'] = dp

@@ -156,7 +156,7 @@ class WebsitePageGenerator(models.Model):
                 'copyright-custom': footer_color.get('footer-custom', "'NULL'"),
             })
 
-        # TODO: Try add this new color palette as an option to the odoo editor list of options.
+        # TODO: Try add this new color palette as an option to the koda editor list of options.
         self.env['web_editor.assets'].make_scss_customization(
             '/website/static/src/scss/options/colors/user_color_palette.scss',
             values,

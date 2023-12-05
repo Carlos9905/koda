@@ -1237,11 +1237,11 @@ class TestSyncGoogle2Odoo(TestSyncGoogle):
             'conferenceData': {
                 'entryPoints': [{
                     'entryPointType': 'video',
-                    'uri': 'https://meet.google.com/odoo-random-test',
-                    'label': 'meet.google.com/odoo-random-test'
+                    'uri': 'https://meet.google.com/koda-random-test',
+                    'label': 'meet.google.com/koda-random-test'
                 }, {
                     'entryPointType': 'more',
-                    'uri':'https://tel.meet/odoo-random-test?pin=42424242424242',
+                    'uri':'https://tel.meet/koda-random-test?pin=42424242424242',
                     'pin':'42424242424242'
                 }]
             }
@@ -1249,7 +1249,7 @@ class TestSyncGoogle2Odoo(TestSyncGoogle):
         self.env['calendar.event']._sync_google2odoo(GoogleEvent([values]))
         event = self.env['calendar.event'].search([('google_id', '=', values.get('id'))])
         self.assertTrue(event, "It should have created an event")
-        self.assertEqual(event.videocall_location, 'https://meet.google.com/odoo-random-test')
+        self.assertEqual(event.videocall_location, 'https://meet.google.com/koda-random-test')
         self.assertGoogleAPINotCalled()
 
     @patch_api
@@ -1413,7 +1413,7 @@ class TestSyncGoogle2Odoo(TestSyncGoogle):
 
     @patch_api
     def test_partner_order(self):
-        self.private_partner.email = "internal_user@odoo.com"
+        self.private_partner.email = "internal_user@koda.com"
         self.private_partner.type = "contact"
         user = self.env['res.users'].create({
             'name': 'Test user Calendar',
@@ -1424,7 +1424,7 @@ class TestSyncGoogle2Odoo(TestSyncGoogle):
         values = {
             'id': 'oj44nep1ldf8a3ll02uip0c9aa',
             'description': 'Small mini desc',
-            'organizer': {'email': 'internal_user@odoo.com'},
+            'organizer': {'email': 'internal_user@koda.com'},
             'summary': 'Pricing new update',
             'visibility': 'public',
             'attendees': [{

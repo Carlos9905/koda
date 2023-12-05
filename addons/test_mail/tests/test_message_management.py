@@ -29,7 +29,7 @@ class TestMailResend(MailCommon):
         cls.partners = cls.env['res.partner'].concat(cls.user1.partner_id, cls.user2.partner_id, cls.partner1, cls.partner2)
         cls.invalid_email_partners = cls.env['res.partner'].concat(cls.user1.partner_id, cls.partner1)
 
-    # @mute_logger('odoo.addons.mail.models.mail_mail')
+    # @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_resend_workflow(self):
         with self.assertSinglePostNotifications(
                 [{'partner': partner, 'type': 'email', 'status': 'exception'} for partner in self.partners],
@@ -81,7 +81,7 @@ class TestMailResend(MailCommon):
              'notif': [{'partner': partner, 'type': 'email', 'status': 'sent', 'check_send': partner == self.partner1} for partner in self.partners]}]
         )
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_remove_mail_become_canceled(self):
         # two failure sent on bus, one for each mail
         self._reset_bus()
@@ -105,7 +105,7 @@ class TestMailResend(MailCommon):
                         'status': (partner == self.user1.partner_id and 'exception') or (partner == self.partner1 and 'canceled') or 'sent'} for partner in self.partners]}]
         )
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_cancel_all(self):
         self._reset_bus()
         with self.mock_mail_gateway(), self.assertBus([(self.cr.dbname, 'res.partner', self.partner_admin.id)] * 2):

@@ -43,12 +43,12 @@ class TestPaymentTransaction(MercadoPagoCommon, PaymentHttpCommon):
             'payment_methods': {'installments': 1},
         })
 
-    @mute_logger('odoo.addons.payment.models.payment_transaction')
+    @mute_logger('koda.addons.payment.models.payment_transaction')
     def test_no_input_missing_from_redirect_form(self):
         """ Test that the `api_url` key is not omitted from the rendering values. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_mercado_pago.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment_mercado_pago.models.payment_transaction.PaymentTransaction'
             '._get_specific_rendering_values', return_value={'api_url': 'https://dummy.com'}
         ):
             processing_values = tx._get_processing_values()
@@ -62,7 +62,7 @@ class TestPaymentTransaction(MercadoPagoCommon, PaymentHttpCommon):
         successful payment. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_mercado_pago.models.payment_provider.PaymentProvider'
+            'koda.addons.payment_mercado_pago.models.payment_provider.PaymentProvider'
             '._mercado_pago_make_request', return_value=self.verification_data
         ):
             tx._process_notification_data(self.redirect_notification_data)

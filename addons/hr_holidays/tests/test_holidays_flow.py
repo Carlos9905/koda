@@ -15,7 +15,7 @@ from koda.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 class TestHolidaysFlow(TestHrHolidaysCommon):
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_00_leave_request_flow_unlimited(self):
         """ Testing leave request flow: unlimited type of leave request """
         Requests = self.env['hr.leave']
@@ -74,7 +74,7 @@ class TestHolidaysFlow(TestHrHolidaysCommon):
         hol12_manager_group.action_approve()
         self.assertEqual(hol1_user_group.state, 'validate', 'hr_holidays: validates leave request should be in validate state')
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_01_leave_request_flow_limited(self):
         """ Testing leave request flow: limited type of leave request """
         with freeze_time('2022-01-15'):
@@ -266,7 +266,7 @@ class TestHolidaysFlow(TestHrHolidaysCommon):
             'request_date_to': date.today() + relativedelta(day=10),
             'employee_id': self.ref('hr.employee_admin'),
         }
-        with mute_logger('odoo.sql_db'):
+        with mute_logger('koda.sql_db'):
             with self.assertRaises(IntegrityError):
                 with self.cr.savepoint():
                     self.env['hr.leave'].create(leave_vals)
@@ -280,7 +280,7 @@ class TestHolidaysFlow(TestHrHolidaysCommon):
         }
         leave = self.env['hr.leave'].create(leave_vals)
 
-        with mute_logger('odoo.sql_db'):
+        with mute_logger('koda.sql_db'):
             with self.assertRaises(IntegrityError):  # No ValidationError
                 with self.cr.savepoint():
                     leave.write({

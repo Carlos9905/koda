@@ -40,7 +40,7 @@ class IrConfigParameter(models.Model):
         ('key_uniq', 'unique (key)', 'Key must be unique.')
     ]
 
-    @mute_logger('odoo.addons.base.models.ir_config_parameter')
+    @mute_logger('koda.addons.base.models.ir_config_parameter')
     def init(self, force=False):
         """
         Initializes the parameters listed in _default_parameters.

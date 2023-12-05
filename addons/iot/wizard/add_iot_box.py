@@ -46,7 +46,7 @@ class AddIotBox(models.TransientModel):
             },
         }
         try:
-            req = requests.post('https://iot-proxy.odoo.com/odoo-enterprise/iot/connect-db', json=data, timeout=TIMEOUT)
+            req = requests.post('https://iot-proxy.koda.com/koda-enterprise/iot/connect-db', json=data, timeout=TIMEOUT)
         except requests.exceptions.ReadTimeout:
             raise UserError(_("We had troubles pairing your IoT Box. Please try again later."))
 

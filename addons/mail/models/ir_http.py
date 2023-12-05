@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import koda
 from koda import models
 from koda.http import request
 
@@ -16,7 +16,7 @@ class IrHttp(models.AbstractModel):
         guest = self.env['mail.guest']._get_guest_from_context()
         if not request.session.uid and guest:
             user_context = {'lang': guest.lang}
-            mods = odoo.conf.server_wide_modules or []
+            mods = koda.conf.server_wide_modules or []
             lang = user_context.get("lang")
             translation_hash = self.env['ir.http'].sudo().get_web_translations_hash(mods, lang)
             result['cache_hashes']['translations'] = translation_hash

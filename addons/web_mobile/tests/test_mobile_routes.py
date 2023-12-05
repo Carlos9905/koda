@@ -44,7 +44,7 @@ class MobileRoutesTest(HttpCase):
         self.assertGreater(len(result["server_version_info"]), 0)
         self.assertEqual(result["server_version_info"][-1], "e")
 
-    @mute_logger("odoo.http")
+    @mute_logger("koda.http")
     def test_database_list(self):
         """
         This request is used to retrieve the databases' list
@@ -65,7 +65,7 @@ class MobileRoutesTest(HttpCase):
             error = data["error"]
             self.assertEqual(error["code"], 200)
             self.assertEqual(error["message"], "Odoo Server Error")
-            self.assertEqual(error["data"]["name"], "odoo.exceptions.AccessDenied")
+            self.assertEqual(error["data"]["name"], "koda.exceptions.AccessDenied")
 
     def test_authenticate(self):
         """
@@ -89,7 +89,7 @@ class MobileRoutesTest(HttpCase):
         self.assertEqual(result["uid"], user["id"])
         self.assertEqual(result["name"], user["name"])
 
-    @mute_logger("odoo.http")
+    @mute_logger("koda.http")
     def test_authenticate_wrong_credentials(self):
         """
         This request is used to attempt to authenticate a user using the wrong credentials
@@ -107,9 +107,9 @@ class MobileRoutesTest(HttpCase):
         error = data["error"]
         self.assertEqual(error["code"], 200)
         self.assertEqual(error["message"], "Odoo Server Error")
-        self.assertEqual(error["data"]["name"], "odoo.exceptions.AccessDenied")
+        self.assertEqual(error["data"]["name"], "koda.exceptions.AccessDenied")
 
-    @mute_logger("odoo.http")
+    @mute_logger("koda.http")
     def test_authenticate_wrong_database(self):
         """
         This request is used to authenticate a user against a non existing database and
@@ -128,7 +128,7 @@ class MobileRoutesTest(HttpCase):
         error = data["error"]
         self.assertEqual(error["code"], 200)
         self.assertEqual(error["message"], "Odoo Server Error")
-        self.assertEqual(error["data"]["name"], "odoo.exceptions.AccessError")
+        self.assertEqual(error["data"]["name"], "koda.exceptions.AccessError")
 
     def test_avatar(self):
         """
@@ -197,9 +197,9 @@ class MobileRoutesMultidbTest(MobileRoutesTest):
             return
         dblist = (get_db_name(), 'another_database')
         assert len(dblist) >= 2, "There should be at least 2 databases"
-        with patch('odoo.http.db_list') as db_list, \
-             patch('odoo.http.db_filter') as db_filter, \
-             patch('odoo.http.Registry') as Registry:
+        with patch('koda.http.db_list') as db_list, \
+             patch('koda.http.db_filter') as db_filter, \
+             patch('koda.http.Registry') as Registry:
             db_list.return_value = dblist
             db_filter.side_effect = lambda dbs, host=None: [db for db in dbs if db in dblist]
             Registry.return_value = self.registry

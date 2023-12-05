@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import koda.tests
 
 from datetime import timedelta
 
@@ -10,7 +10,7 @@ from koda.addons.website_event_sale.tests.common import TestWebsiteEventSaleComm
 from koda.fields import Datetime
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
+@koda.tests.common.tagged('post_install', '-at_install')
 class TestUi(HttpCaseWithUserDemo, TestWebsiteEventSaleCommon):
 
     def setUp(self):

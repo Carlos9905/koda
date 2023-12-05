@@ -23,10 +23,10 @@ class TestHttpMisc(TestHttpBase):
         self.assertEqual(res.status_code, 404)
 
     def test_misc1_reverse_proxy(self):
-        # client <-> reverse-proxy <-> odoo
+        # client <-> reverse-proxy <-> koda
         client_ip = '127.0.0.16'
         reverseproxy_ip = gethostbyname(HOST)
-        host = 'mycompany.odoo.com'
+        host = 'mycompany.koda.com'
 
         headers = {
             'Host': '',
@@ -66,14 +66,14 @@ class TestHttpMisc(TestHttpBase):
 
         # Valid URLs
         self.assertEqual(root.get_static_file(f'/{uri}'), path, "Valid file")
-        self.assertEqual(root.get_static_file(f'odoo.com/{uri}', host='odoo.com'), path, "Valid file with valid host")
-        self.assertEqual(root.get_static_file(f'http://odoo.com/{uri}', host='odoo.com'), path, "Valid file with valid host")
+        self.assertEqual(root.get_static_file(f'koda.com/{uri}', host='koda.com'), path, "Valid file with valid host")
+        self.assertEqual(root.get_static_file(f'http://koda.com/{uri}', host='koda.com'), path, "Valid file with valid host")
 
         # Invalid URLs
         self.assertIsNone(root.get_static_file('/test_http/i-dont-exist'), "File doesn't exist")
         self.assertIsNone(root.get_static_file('/test_http/__manifest__.py'), "File is not static")
-        self.assertIsNone(root.get_static_file(f'odoo.com/{uri}'), "No host allowed")
-        self.assertIsNone(root.get_static_file(f'http://odoo.com/{uri}'), "No host allowed")
+        self.assertIsNone(root.get_static_file(f'koda.com/{uri}'), "No host allowed")
+        self.assertIsNone(root.get_static_file(f'http://koda.com/{uri}'), "No host allowed")
 
     def test_misc4_rpc_qweb(self):
         jack = new_test_user(self.env, 'jackoneill', context={'lang': 'en_US'})

@@ -23,7 +23,7 @@ from koda.tools.misc import get_lang
 from . import crm_stage
 
 _logger = logging.getLogger(__name__)
-_schema = logging.getLogger('odoo.schema')
+_schema = logging.getLogger('koda.schema')
 
 
 CRM_LEAD_FIELDS_TO_MERGE = [
@@ -84,7 +84,7 @@ PARTNER_ADDRESS_FIELDS_TO_SYNC = [
 
 # Those values have been determined based on benchmark to minimise
 # computation time, number of transaction and transaction time.
-PLS_COMPUTE_BATCH_STEP = 50000  # odoo.models.PREFETCH_MAX = 1000 but larger cluster can speed up global computation
+PLS_COMPUTE_BATCH_STEP = 50000  # koda.models.PREFETCH_MAX = 1000 but larger cluster can speed up global computation
 PLS_UPDATE_BATCH_STEP = 5000
 
 

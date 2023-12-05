@@ -214,7 +214,7 @@ class SpreadsheetMixin(models.AbstractModel):
         """
         self.ensure_one()
         try:
-            with mute_logger("odoo.sql_db"):
+            with mute_logger("koda.sql_db"):
                 self.env["spreadsheet.revision"].create(
                     {
                         "res_model": self._name,

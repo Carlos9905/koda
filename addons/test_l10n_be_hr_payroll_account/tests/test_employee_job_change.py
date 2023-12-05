@@ -5,11 +5,11 @@ import datetime
 from freezegun import freeze_time
 
 from koda import fields
-import odoo.tests
+import koda.tests
 from . import common
 
 
-@odoo.tests.tagged('-at_install', 'post_install', 'salary')
+@koda.tests.tagged('-at_install', 'post_install', 'salary')
 class TestEmployeeJobChange(common.TestPayrollAccountCommon):
     @classmethod
     def setUpClass(cls):

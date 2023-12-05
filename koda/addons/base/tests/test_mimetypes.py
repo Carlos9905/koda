@@ -58,7 +58,7 @@ class test_guess_mimetype(BaseCase):
 
     def test_default_mimetype_empty(self):
         mimetype = guess_mimetype(b'')
-        # odoo implementation returns application/octet-stream by default
+        # koda implementation returns application/octet-stream by default
         # if available, python-magic returns application/x-empty
         self.assertIn(mimetype, ('application/octet-stream', 'application/x-empty'))
 
@@ -99,7 +99,7 @@ class test_guess_mimetype(BaseCase):
 
         mimetype = guess_mimetype(NAMESPACED_SVG, default='test')
         self.assertTrue(mimetype.startswith('image/svg'))
-        # Tests that whitespace padded SVG are not detected as SVG in odoo implementation
+        # Tests that whitespace padded SVG are not detected as SVG in koda implementation
         if not magic:
             mimetype = guess_mimetype(b"   " + content, default='test')
             self.assertNotIn("svg", mimetype)

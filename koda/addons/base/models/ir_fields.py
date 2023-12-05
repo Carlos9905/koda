@@ -88,11 +88,11 @@ class IrFieldsConverter(models.AbstractModel):
     @api.model
     def for_model(self, model, fromtype=str):
         """ Returns a converter object for the model. A converter is a
-        callable taking a record-ish (a dictionary representing an odoo
+        callable taking a record-ish (a dictionary representing an koda
         record with values of typetag ``fromtype``) and returning a converted
-        records matching what :meth:`odoo.osv.orm.Model.write` expects.
+        records matching what :meth:`koda.osv.orm.Model.write` expects.
 
-        :param model: :class:`odoo.osv.orm.Model` for the conversion base
+        :param model: :class:`koda.osv.orm.Model` for the conversion base
         :param fromtype:
         :returns: a converter callable
         :rtype: (record: dict, logger: (field, error) -> None) -> dict
@@ -179,7 +179,7 @@ class IrFieldsConverter(models.AbstractModel):
 
         :param model:
         :param field: field object to generate a value for
-        :type field: :class:`odoo.fields.Field`
+        :type field: :class:`koda.fields.Field`
         :param fromtype: type to convert to something fitting for ``field``
         :type fromtype: type | str
         :return: a function (fromtype -> field.write_type), if a converter is found

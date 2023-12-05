@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from unittest.mock import Mock
 
-import odoo
+import koda
 from koda import SUPERUSER_ID, Command
 from koda.exceptions import AccessError
 from koda.tests import TransactionCase
@@ -173,8 +173,8 @@ class TestIRRuleFeedback(Feedback):
         }).with_user(cls.user)
 
     def debug_mode(self):
-        odoo.http._request_stack.push(Mock(db=self.env.cr.dbname, env=self.env, debug=True))
-        self.addCleanup(odoo.http._request_stack.pop)
+        koda.http._request_stack.push(Mock(db=self.env.cr.dbname, env=self.env, debug=True))
+        self.addCleanup(koda.http._request_stack.pop)
         self.env.flush_all()
         self.env.invalidate_all()
 
@@ -427,7 +427,7 @@ class TestFieldGroupFeedback(Feedback):
             'some_id': cls.record.id,
         }).with_user(cls.user)
 
-    @mute_logger('odoo.models')
+    @mute_logger('koda.models')
     def test_read(self):
         self.env.ref('base.group_no_one').write(
             {'users': [Command.link(self.user.id)]})
@@ -460,7 +460,7 @@ Fields:
 - forbidden3 (always forbidden)""" % self.user.id
         )
 
-    @mute_logger('odoo.models')
+    @mute_logger('koda.models')
     def test_write(self):
         self.env.ref('base.group_no_one').write(
             {'users': [Command.link(self.user.id)]})
@@ -481,7 +481,7 @@ Fields:
     % self.user.id
         )
 
-    @mute_logger('odoo.models')
+    @mute_logger('koda.models')
     def test_check_field_access_rights_domain(self):
         with self.assertRaises(AccessError):
             self.record.search([('forbidden3', '=like', 'blu%')])
@@ -495,7 +495,7 @@ Fields:
         with self.assertRaises(AccessError):
             self.inherits_record.search([('forbidden3', '=like', 'blu%')])
 
-    @mute_logger('odoo.models')
+    @mute_logger('koda.models')
     def test_check_field_access_rights_order(self):
         self.record.search([], order='val')
 
@@ -508,7 +508,7 @@ Fields:
         with self.assertRaises(AccessError):
             self.record.search([], order='val DESC,    forbidden3       DESC')
 
-    @mute_logger('odoo.models')
+    @mute_logger('koda.models')
     def test_check_field_access_rights_read_group(self):
         self.record._read_group([], ['val'], [])
 

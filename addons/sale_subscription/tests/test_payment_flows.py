@@ -34,7 +34,7 @@ class TestSubscriptionPaymentFlows(PaymentHttpCommon):
 
     def _my_sub_assign_token(self, **values):
         url = self._build_url(f"/my/subscriptions/assign_token/{self.order.id}")
-        with mute_logger('odoo.addons.base.models.ir_rule', 'odoo.http'):
+        with mute_logger('koda.addons.base.models.ir_rule', 'koda.http'):
             return self.make_jsonrpc_request(url, params=values)
 
     def test_assign_token_route_with_so_access(self):
@@ -128,14 +128,14 @@ class TestSubscriptionPaymentFlows(PaymentHttpCommon):
             "Previous forbidden operations shouldn't have modified the SO token"
         )
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_transaction_route_rejects_unexpected_kwarg(self):
         url = self._build_url(f'/my/subscriptions/{self.order.id}/transaction')
         route_kwargs = {
             'access_token': self.order._portal_ensure_token(),
             'partner_id': self.partner.id,  # This should be rejected.
         }
-        with mute_logger("odoo.http"), self.assertRaises(
-            JsonRpcException, msg='odoo.exceptions.ValidationError'
+        with mute_logger("koda.http"), self.assertRaises(
+            JsonRpcException, msg='koda.exceptions.ValidationError'
         ):
             self.make_jsonrpc_request(url, route_kwargs)

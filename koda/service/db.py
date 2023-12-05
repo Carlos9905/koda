@@ -52,7 +52,7 @@ def check_super(passwd):
         return True
     raise koda.exceptions.AccessDenied()
 
-# This should be moved to odoo.modules.db, along side initialize().
+# This should be moved to koda.modules.db, along side initialize().
 def _initialize_db(id, db_name, demo, lang, user_password, login='admin', country_code=None, phone=None):
     try:
         db = koda.sql_db.db_connect(db_name)
@@ -380,7 +380,7 @@ def exp_migrate_databases(databases):
 # No master password required
 #----------------------------------------------------------
 
-@koda.tools.mute_logger('odoo.sql_db')
+@koda.tools.mute_logger('koda.sql_db')
 def exp_db_exist(db_name):
     ## Not True: in fact, check if connection to database is possible. The database may exists
     try:

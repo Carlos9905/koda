@@ -3,11 +3,11 @@
 
 from datetime import datetime
 
-import odoo.tests
+import koda.tests
 from koda.tests.common import HttpCase
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestFrontDeskURL(HttpCase):
     # -------------------------------------------------------------------------
     # TESTS

@@ -3033,7 +3033,7 @@ class AccountMove(models.Model):
             if application == 'Discount':
                 return 100
             return original_precision_get(self, application)
-        with patch('odoo.addons.base.models.decimal_precision.DecimalPrecision.precision_get', new=precision_get):
+        with patch('koda.addons.base.models.decimal_precision.DecimalPrecision.precision_get', new=precision_get):
             yield
 
     def _get_edi_decoder(self, file_data, new=False):

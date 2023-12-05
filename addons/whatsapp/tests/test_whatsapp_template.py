@@ -41,7 +41,7 @@ class WhatsAppTemplate(WhatsAppCommon, MockIncomingWhatsApp):
         with self.assertRaises(exceptions.ValidationError):
             self._add_button_to_template(
                 template, button_type='url',
-                name="test url fail", website_url="odoo.com",
+                name="test url fail", website_url="koda.com",
             )
 
     @users('user_wa_admin')
@@ -251,7 +251,7 @@ class WhatsAppTemplateSync(WhatsAppCommon, MockIncomingWhatsApp):
 
     @users('user_wa_admin')
     def test_synchronize_without_existing_template_from_account(self):
-        """ Test template sync with whatsapp where there is no existing template for that account in odoo """
+        """ Test template sync with whatsapp where there is no existing template for that account in koda """
         with self.mockWhatsappGateway():
             self.whatsapp_account.button_sync_whatsapp_account_templates()
         templates = self.env['whatsapp.template'].search([('wa_account_id', '=', self.whatsapp_account.id)])
@@ -332,7 +332,7 @@ class WhatsAppTemplateSync(WhatsAppCommon, MockIncomingWhatsApp):
         )
 
     def test_synchronize_with_existing_template_from_account(self):
-        """ Test template sync with whatsapp where there is existing template for that account in odoo """
+        """ Test template sync with whatsapp where there is existing template for that account in koda """
         with self.mockWhatsappGateway():
             self.whatsapp_account.button_sync_whatsapp_account_templates()
         templates = self.env['whatsapp.template'].search([('wa_account_id', '=', self.whatsapp_account.id)])

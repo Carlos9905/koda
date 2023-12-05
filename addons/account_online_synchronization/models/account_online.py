@@ -6,8 +6,8 @@ import logging
 import re
 import uuid
 import urllib.parse
-import odoo
-import odoo.release
+import koda
+import koda.release
 from dateutil.relativedelta import relativedelta
 from markupsafe import Markup
 
@@ -20,7 +20,7 @@ from koda.tools.misc import format_amount, format_date, get_lang
 
 _logger = logging.getLogger(__name__)
 pattern = re.compile("^[a-z0-9-_]+$")
-runbot_pattern = re.compile(r"^https:\/\/[a-z0-9-_]+\.[a-z0-9-_]+\.odoo\.com$")
+runbot_pattern = re.compile(r"^https:\/\/[a-z0-9-_]+\.[a-z0-9-_]+\.koda\.com$")
 
 class OdooFinRedirectException(UserError):
     """ When we need to open the iframe in a given mode. """
@@ -47,8 +47,8 @@ class AccountOnlineAccount(models.Model):
     fetching_status = fields.Selection(
         selection=[
             ('waiting', 'Waiting'),  # When waiting for the provider to fetch the transactions
-            ('processing', 'Processing'),  # When currently importing in odoo
-            ('done', 'Done'),  # When every transaction have been imported in odoo
+            ('processing', 'Processing'),  # When currently importing in koda
+            ('done', 'Done'),  # When every transaction have been imported in koda
         ]
     )
 
@@ -467,7 +467,7 @@ class AccountOnlineLink(models.Model):
         data['utils'] = {
             'request_timeout': timeout,
             'lang': get_lang(self.env).code,
-            'server_version': odoo.release.serie,
+            'server_version': koda.release.serie,
             'db_uuid': self.env['ir.config_parameter'].sudo().get_param('database.uuid'),
             'cron': cron,
         }
@@ -552,7 +552,7 @@ class AccountOnlineLink(models.Model):
                 odoo_help_description = f'''ClientID: {self.client_id}\nInstitution: {self.name}\nError Reference: {error_reference}\nError Message: {message}\n'''
                 odoo_help_summary = f'Bank sync error ref: {error_reference} - Provider: {provider} - Client ID: {self.client_id}'
                 url_params = urllib.parse.urlencode({'stage': 'bank_sync', 'summary': odoo_help_summary, 'description': odoo_help_description[:1500]})
-                url = f'https://www.odoo.com/help?{url_params}'
+                url = f'https://www.koda.com/help?{url_params}'
             # if state is disconnected, and new state is error: ignore it
             if state == 'error' and self.state == 'disconnected':
                 state = 'disconnected'
@@ -960,7 +960,7 @@ class AccountOnlineLink(models.Model):
                     'lang': get_lang(self.env).code,
                     'countryCode': country.code,
                     'countryName': country.display_name,
-                    'serverVersion': odoo.release.serie,
+                    'serverVersion': koda.release.serie,
                 }
             },
         }

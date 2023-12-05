@@ -6,7 +6,7 @@ from koda.addons.iap.tools import iap_tools
 
 
 class SmsApi:
-    DEFAULT_ENDPOINT = 'https://sms.api.odoo.com'
+    DEFAULT_ENDPOINT = 'https://sms.api.koda.com'
 
     def __init__(self, env):
         self.env = env

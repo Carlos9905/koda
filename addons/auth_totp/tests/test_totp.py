@@ -87,7 +87,7 @@ class TestTOTP(HttpCase):
         self.start_tour('/web', 'totp_admin_disables', login='admin')
         self.start_tour('/', 'totp_login_disabled', login=None)
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_totp_authenticate(self):
         """
         Ensure we don't leak the session info from an half-logged-in

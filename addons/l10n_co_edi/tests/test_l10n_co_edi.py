@@ -25,7 +25,7 @@ class TestColombianInvoice(TestCoEdiCommon):
             # To stop a warning about "Tax Base Amount not computable
             # probably due to a change in an underlying tax " which seems
             # to be expected when generating refunds.
-            with mute_logger('odoo.addons.account.models.account_invoice'):
+            with mute_logger('koda.addons.account.models.account_invoice'):
                 credit_note = self.invoice._reverse_moves(default_values_list=[])
 
             self.l10n_co_assert_generated_file_equal(credit_note, self.expected_credit_note_xml)

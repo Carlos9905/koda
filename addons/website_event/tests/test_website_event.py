@@ -203,7 +203,7 @@ class TestWebsiteAccess(HttpCaseWithUserDemo, OnlineEventCase):
         self.assertTrue(published_events[0].name in resp.text, 'Event user must see the unpublished events.')
         self.assertTrue(unpublished_events[0].name in resp.text, 'Event user must see the published events.')
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_website_access_portal(self):
         """ Portal users access only published events """
         self.authenticate('user_portal', 'user_portal')
@@ -219,7 +219,7 @@ class TestWebsiteAccess(HttpCaseWithUserDemo, OnlineEventCase):
         self.assertTrue(published_events[0].name in resp.text, 'Portal must see the published events.')
         self.assertFalse(unpublished_events[0].name in resp.text, 'Portal should not see the unpublished events.')
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_website_access_public(self):
         """ Public users access only published events """
         published_events = self.events.filtered(lambda event: event.website_published)

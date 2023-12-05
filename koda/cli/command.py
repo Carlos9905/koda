@@ -56,7 +56,7 @@ def main():
         initialize_sys_path()
         for module in get_modules():
             if (Path(get_module_path(module)) / 'cli').is_dir():
-                __import__('odoo.addons.' + module)
+                __import__('koda.addons.' + module)
         logging.disable(logging.NOTSET)
         command = args[0]
         args = args[1:]

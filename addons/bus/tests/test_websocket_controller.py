@@ -45,7 +45,7 @@ class TestWebsocketController(HttpCaseWithUserDemo):
         self.authenticate('admin', 'admin')
         # rpc with outdated session should lead to error.
         headers = {'Cookie': f'session_id={session.sid};'}
-        with self.assertRaises(JsonRpcException, msg='odoo.http.SessionExpiredException'):
+        with self.assertRaises(JsonRpcException, msg='koda.http.SessionExpiredException'):
             self.make_jsonrpc_request('/websocket/peek_notifications', {
                 'channels': [],
                 'last': 0,
@@ -63,7 +63,7 @@ class TestWebsocketController(HttpCaseWithUserDemo):
         self.url_open('/web/session/logout')
         # rpc with outdated session should lead to error.
         headers = {'Cookie': f'session_id={session.sid};'}
-        with self.assertRaises(JsonRpcException, msg='odoo.http.SessionExpiredException'):
+        with self.assertRaises(JsonRpcException, msg='koda.http.SessionExpiredException'):
             self.make_jsonrpc_request('/websocket/peek_notifications', {
                 'channels': [],
                 'last': 0,

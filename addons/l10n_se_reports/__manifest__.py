@@ -22,6 +22,6 @@ Accounting reports for Sweden
     ],
     'installable': True,
     'auto_install': ['l10n_se', 'account_reports'],
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'license': 'OEEL-1',
 }

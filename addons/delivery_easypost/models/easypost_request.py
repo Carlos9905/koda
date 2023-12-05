@@ -245,7 +245,7 @@ class EasypostRequest():
         order_payload = {}
 
         # reference field to track Odoo customers that use easypost for postage/shipping.
-        order_payload['order[reference]'] = 'odoo'
+        order_payload['order[reference]'] = 'koda'
 
         # Add current carrier type
         order_payload['order[carrier_accounts][id]'] = carrier.easypost_delivery_type_id

@@ -38,7 +38,7 @@ class AutoCompleteController(http.Controller):
             for field_standard in fields_standard:
                 if field_standard in standard_data:  # if a value is already assigned, do not overwrite it.
                     continue
-                # Convert state and countries to odoo ids
+                # Convert state and countries to koda ids
                 if field_standard == 'country':
                     standard_data[field_standard] = request.env['res.country'].search(
                         [('code', '=', google_field['short_name'].upper())])[0].id

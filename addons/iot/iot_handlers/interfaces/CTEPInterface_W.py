@@ -8,12 +8,12 @@ import os
 from koda.addons.hw_drivers.interface import Interface
 from koda.addons.hw_drivers.tools.helpers import download_from_url, unzip_file
 
-libPath = Path('odoo/addons/hw_drivers/iot_handlers/lib')
+libPath = Path('koda/addons/hw_drivers/iot_handlers/lib')
 easyCTEPPath = libPath / 'ctep_w/libeasyctep.dll'
 zipPath = str(libPath / 'ctep_w.zip')
 
 if not easyCTEPPath.exists():
-    download_from_url('http://nightly.odoo.com/master/posbox/iotbox/worldline-ctepv23_02_w.zip', zipPath)
+    download_from_url('http://nightly.koda.com/master/posbox/iotbox/worldline-ctepv23_02_w.zip', zipPath)
     unzip_file(zipPath, str(libPath / 'ctep_w'))
 
 # Add Worldline dll path so that the linker can find the required dll files

@@ -9,7 +9,7 @@ from koda.tools import mute_logger
 
 class TestResPartnerIap(MailCommon):
 
-    @mute_logger("odoo.sql_db")
+    @mute_logger("koda.sql_db")
     def test_res_partner_iap_constraint(self):
         partner = self.partner_employee
 

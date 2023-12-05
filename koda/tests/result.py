@@ -19,7 +19,7 @@ STDOUT_LINE = '\nStdout:\n%s'
 STDERR_LINE = '\nStderr:\n%s'
 
 
-stats_logger = logging.getLogger('odoo.tests.stats')
+stats_logger = logging.getLogger('koda.tests.stats')
 
 
 class Stat(NamedTuple):
@@ -41,7 +41,7 @@ class Stat(NamedTuple):
 _logger = logging.getLogger(__name__)
 _TEST_ID = re.compile(r"""
 ^
-odoo\.addons\.
+koda\.addons\.
 (?P<module>[^.]+)
 \.tests\.
 (?P<class>.+)

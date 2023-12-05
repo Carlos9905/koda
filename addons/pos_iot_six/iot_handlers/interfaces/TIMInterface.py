@@ -15,15 +15,15 @@ from koda.tools.misc import file_path
 _logger = logging.getLogger(__name__)
 
 if system() == 'Windows':
-    LIB_PATH = Path('odoo/addons/hw_drivers/iot_handlers/lib')
+    LIB_PATH = Path('koda/addons/hw_drivers/iot_handlers/lib')
     LIB_EXTENSION = '_w.dll'
     IMPORT_LIBRARY = ctypes.WinDLL
-    DOWNLOAD_URL = 'https://nightly.odoo.com/master/posbox/iotbox/six-timapiv23_09_w.zip'
+    DOWNLOAD_URL = 'https://nightly.koda.com/master/posbox/iotbox/six-timapiv23_09_w.zip'
 else:
     LIB_PATH = file_path('hw_drivers/iot_handlers/lib')
     LIB_EXTENSION = '_l.so'
     IMPORT_LIBRARY = ctypes.CDLL
-    DOWNLOAD_URL = 'https://nightly.odoo.com/master/posbox/iotbox/six-timapiv23_09_l.zip'
+    DOWNLOAD_URL = 'https://nightly.koda.com/master/posbox/iotbox/six-timapiv23_09_l.zip'
 
 # Download and unzip timapi library, overwriting the existing one
 TIMAPI_ZIP_PATH = f'{LIB_PATH}/tim.zip'
@@ -81,7 +81,7 @@ class TIMInterface(Interface):
         if not self.manager:
             return {}
 
-        new_tid = helpers.read_file_first_line('odoo-six-payment-terminal.conf')
+        new_tid = helpers.read_file_first_line('koda-six-payment-terminal.conf')
         devices = {}
 
         # If the Six TID setup has changed, reset the settings

@@ -90,7 +90,7 @@ class TestWebsiteControllerPage(HttpCase):
     def test_access_rights_and_rules(self):
         self.authenticate(None, None)
         self.model_acl.active = False
-        with mute_logger("odoo.http"):
+        with mute_logger("koda.http"):
             response = self.url_open(f"/model/{self.listing_controller_page.name_slugified}")
         self.assertEqual(response.status_code, 403)
 

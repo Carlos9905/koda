@@ -10,7 +10,7 @@ from koda.tools import is_html_empty
 
 _logger = logging.getLogger(__name__)
 
-DEFAULT_ENDPOINT = 'https://iap-services.odoo.com'
+DEFAULT_ENDPOINT = 'https://iap-services.koda.com'
 
 MAX_LEAD = 200
 
@@ -285,7 +285,7 @@ class CRMLeadMiningRequest(models.Model):
                     subtype_xmlid='mail.mt_note',
                 )
 
-    # Methods responsible for format response data into valid odoo lead data
+    # Methods responsible for format response data into valid koda lead data
     @api.model
     def _lead_vals_from_response(self, data):
         self.ensure_one()

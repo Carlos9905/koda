@@ -18,7 +18,7 @@ class TestPhonenumbersPatch(BaseCase):
             self.skipTest('Cannot test without phonenumbers module installed.')
         # MONKEY PATCHING phonemetadata of Ivory Coast if phonenumbers is too old
         if parse_version('7.6.1') <= parse_version(phonenumbers.__version__) < parse_version('8.12.32'):
-            # check that _local_load_region is set to `odoo.addons.phone_validation.lib.phonenumbers_patch._local_load_region`
+            # check that _local_load_region is set to `koda.addons.phone_validation.lib.phonenumbers_patch._local_load_region`
             # check that you can load a new ivory coast phone number without error
             parsed_phonenumber_1 = phonenumbers.parse("20 25/35-51 ", region="CI", keep_raw_input=True)
             self.assertEqual(parsed_phonenumber_1.national_number, 20253551, "The national part of the phonenumber should be 22522586")

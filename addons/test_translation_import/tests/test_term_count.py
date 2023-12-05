@@ -105,7 +105,7 @@ class TestImport(common.TransactionCase):
             'data': po_file,
             'filename': 'tlh.po',
         })
-        with mute_logger('odoo.addons.base.models.res_lang'):
+        with mute_logger('koda.addons.base.models.res_lang'):
             import_tlh.import_lang()
 
         tlh_lang = self.env['res.lang']._lang_get('tlh')
@@ -132,7 +132,7 @@ class TestImport(common.TransactionCase):
             'data': po_file,
             'filename': 'tlh.po',
         })
-        with mute_logger('odoo.addons.base.models.res_lang'):
+        with mute_logger('koda.addons.base.models.res_lang'):
             import_tlh.import_lang()
 
         model = self.env['test.translation.import.model1']
@@ -175,7 +175,7 @@ class TestImport(common.TransactionCase):
             'data': po_file,
             'filename': 'dot.csv',
         })
-        with mute_logger('odoo.addons.base.models.res_lang'):
+        with mute_logger('koda.addons.base.models.res_lang'):
             import_tlh.import_lang()
 
         dot_lang = self.env['res.lang']._lang_get('dot')
@@ -338,7 +338,7 @@ class TestTranslationFlow(common.TransactionCase):
             'filename': export.name,
             'overwrite': False,
         })
-        with mute_logger('odoo.addons.base.models.res_lang'):
+        with mute_logger('koda.addons.base.models.res_lang'):
             import_fr.import_lang()
 
         self.assertEqual(
@@ -371,7 +371,7 @@ class TestTranslationFlow(common.TransactionCase):
             'filename': export.name,
             'overwrite': False,
         })
-        with mute_logger('odoo.addons.base.models.res_lang'):
+        with mute_logger('koda.addons.base.models.res_lang'):
             import_fr.with_context().import_lang()
 
     def test_export_static_templates(self):

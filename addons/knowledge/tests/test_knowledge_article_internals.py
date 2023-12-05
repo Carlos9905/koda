@@ -277,7 +277,7 @@ class TestKnowledgeCommonWDataInitialValue(KnowledgeCommonWData):
         self.assertEqual(self.workspace_children[0].sequence, 0)
         self.assertEqual(self.workspace_children[1].sequence, 1)
 
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     @users('employee')
     def test_initial_values_as_employee(self):
         """ Ensure all tests have the same basis (user specific computed as

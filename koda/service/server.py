@@ -125,7 +125,7 @@ class RequestHandler(werkzeug.serving.WSGIRequestHandler):
         # flag the current thread as handling a http request
         super(RequestHandler, self).setup()
         me = threading.current_thread()
-        me.name = 'odoo.service.http.request.%s' % (me.ident,)
+        me.name = 'koda.service.http.request.%s' % (me.ident,)
 
     def make_environ(self):
         environ = super().make_environ()
@@ -310,7 +310,7 @@ class FSWatcherInotify(FSWatcherBase):
 
     def start(self):
         self.started = True
-        self.thread = threading.Thread(target=self.run, name="odoo.service.autoreload.watcher")
+        self.thread = threading.Thread(target=self.run, name="koda.service.autoreload.watcher")
         self.thread.daemon = True
         self.thread.start()
 
@@ -495,7 +495,7 @@ class ThreadedServer(CommonServer):
         for i in range(koda.tools.config['max_cron_threads']):
             def target():
                 self.cron_thread(i)
-            t = threading.Thread(target=target, name="odoo.service.cron.cron%d" % i)
+            t = threading.Thread(target=target, name="koda.service.cron.cron%d" % i)
             t.daemon = True
             t.type = 'cron'
             t.start()
@@ -506,7 +506,7 @@ class ThreadedServer(CommonServer):
         self.httpd.serve_forever()
 
     def http_spawn(self):
-        t = threading.Thread(target=self.http_thread, name="odoo.service.httpd")
+        t = threading.Thread(target=self.http_thread, name="koda.service.httpd")
         t.daemon = True
         t.start()
 
@@ -1001,7 +1001,7 @@ class Worker(object):
         self.request_count = 0
 
     def setproctitle(self, title=""):
-        setproctitle('odoo: %s %s %s' % (self.__class__.__name__, self.pid, title))
+        setproctitle('koda: %s %s %s' % (self.__class__.__name__, self.pid, title))
 
     def close(self):
         os.close(self.watchdog_pipe[0])
@@ -1338,7 +1338,7 @@ def preload_registries(dbnames):
     return rc
 
 def start(preload=None, stop=False):
-    """ Start the odoo http server and cron processor.
+    """ Start the koda http server and cron processor.
     """
     global server
 

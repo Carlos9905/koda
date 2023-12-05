@@ -38,7 +38,7 @@ class TestRatingFlow(TestRatingCommon):
             self.assertEqual(len(record_rating.message_ids), 1)
 
     @users('employee')
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_rating_prepare(self):
         for record_rating, desc in ((self.record_rating, 'With rating mixin'),
                                     (self.record_rating_thread, 'Without rating mixin')):
@@ -58,7 +58,7 @@ class TestRatingFlow(TestRatingCommon):
                 self.assertFalse(rating.rating)
 
     @users('employee')
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_rating_rating_apply(self):
         for record_rating, expected_subtype, is_rating_mixin_test in (
             (self.record_rating_thread, self.env.ref('mail.mt_comment'), False),

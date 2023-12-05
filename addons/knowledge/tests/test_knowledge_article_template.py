@@ -20,7 +20,7 @@ class TestKnowledgeArticleTemplate(HttpCase):
         Category = cls.env["knowledge.article.template.category"]
         Stage = cls.env["knowledge.article.stage"]
 
-        with mute_logger("odoo.models.unlink"):
+        with mute_logger("koda.models.unlink"):
             Article.search([]).unlink()
             Category.search([]).unlink()
             Stage.search([]).unlink()

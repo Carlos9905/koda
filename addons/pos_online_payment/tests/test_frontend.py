@@ -12,10 +12,10 @@ from koda.addons.account.models.account_payment_method import AccountPaymentMeth
 from koda.osv.expression import AND
 from koda.addons.point_of_sale.tests.common import archive_products
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUi(AccountTestInvoicingCommon, OnlinePaymentCommon):
 
     @classmethod

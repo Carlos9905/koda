@@ -23,10 +23,10 @@ SANDBOX_API_URL = 'https://test-api.service.hmrc.gov.uk'
 PRODUCTION_API_URL = 'https://api.service.hmrc.gov.uk'
 if DEBUG:
     HMRC_CLIENT_ID = 'dTdANDSeX4fiw63DicmUaAVQDSMa'
-    PROXY_SERVER = 'https://l10n-uk-hmrc.test.odoo.com'
+    PROXY_SERVER = 'https://l10n-uk-hmrc.test.koda.com'
 else:
     HMRC_CLIENT_ID = 'GqJgi8Hal1hsEwbG6rY6i9Ag1qUa'
-    PROXY_SERVER = 'https://l10n-uk-hmrc.api.odoo.com'
+    PROXY_SERVER = 'https://l10n-uk-hmrc.api.koda.com'
 TIMEOUT = 10
 
 

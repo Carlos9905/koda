@@ -45,7 +45,7 @@ class CertificateStatus(Enum):
 
 class IoTRestart(Thread):
     """
-    Thread to restart odoo server in IoT Box when we must return a answer before
+    Thread to restart koda server in IoT Box when we must return a answer before
     """
     def __init__(self, delay):
         Thread.__init__(self)
@@ -142,7 +142,7 @@ def check_git_branch():
             )
 
             if response.status == 200:
-                git = ['git', '--work-tree=/home/pi/odoo/', '--git-dir=/home/pi/odoo/.git']
+                git = ['git', '--work-tree=/home/pi/koda/', '--git-dir=/home/pi/koda/.git']
 
                 db_branch = json.loads(response.data)['result']['server_serie'].replace('~', '-')
                 if not subprocess.check_output(git + ['ls-remote', 'origin', db_branch]):
@@ -152,11 +152,11 @@ def check_git_branch():
 
                 if db_branch != local_branch:
                     with writable():
-                        subprocess.check_call(["rm", "-rf", "/home/pi/odoo/addons/hw_drivers/iot_handlers/drivers/*"])
-                        subprocess.check_call(["rm", "-rf", "/home/pi/odoo/addons/hw_drivers/iot_handlers/interfaces/*"])
+                        subprocess.check_call(["rm", "-rf", "/home/pi/koda/addons/hw_drivers/iot_handlers/drivers/*"])
+                        subprocess.check_call(["rm", "-rf", "/home/pi/koda/addons/hw_drivers/iot_handlers/interfaces/*"])
                         subprocess.check_call(git + ['branch', '-m', db_branch])
                         subprocess.check_call(git + ['remote', 'set-branches', 'origin', db_branch])
-                        os.system('/home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/posbox_update.sh')
+                        os.system('/home/pi/koda/addons/point_of_sale/tools/posbox/configuration/posbox_update.sh')
 
         except Exception as e:
             _logger.error('Could not reach configured server')
@@ -166,7 +166,7 @@ def check_image():
     """
     Check if the current image of IoT Box is up to date
     """
-    url = 'https://nightly.odoo.com/master/iotbox/SHA1SUMS.txt'
+    url = 'https://nightly.koda.com/master/iotbox/SHA1SUMS.txt'
     urllib3.disable_warnings()
     http = urllib3.PoolManager(cert_reqs='CERT_NONE')
     response = http.request('GET', url)
@@ -189,10 +189,10 @@ def save_conf_server(url, token, db_uuid, enterprise_code):
     """
     Save config to connect IoT to the server
     """
-    write_file('odoo-remote-server.conf', url)
+    write_file('koda-remote-server.conf', url)
     write_file('token', token)
-    write_file('odoo-db-uuid.conf', db_uuid or '')
-    write_file('odoo-enterprise-code.conf', enterprise_code or '')
+    write_file('koda-db-uuid.conf', db_uuid or '')
+    write_file('koda-enterprise-code.conf', enterprise_code or '')
 
 def generate_password():
     """
@@ -266,14 +266,14 @@ def get_odoo_server_url():
         ap = subprocess.call(['systemctl', 'is-active', '--quiet', 'hostapd']) # if service is active return 0 else inactive
         if not ap:
             return False
-    return read_file_first_line('odoo-remote-server.conf')
+    return read_file_first_line('koda-remote-server.conf')
 
 def get_token():
     return read_file_first_line('token')
 
 def get_version():
     if platform.system() == 'Linux':
-        return read_file_first_line('/var/odoo/iotbox_version')
+        return read_file_first_line('/var/koda/iotbox_version')
     elif platform.system() == 'Windows':
         return 'W23_11'
 
@@ -291,12 +291,12 @@ def load_certificate():
     """
     Send a request to Odoo with customer db_uuid and enterprise_code to get a true certificate
     """
-    db_uuid = read_file_first_line('odoo-db-uuid.conf')
-    enterprise_code = read_file_first_line('odoo-enterprise-code.conf')
+    db_uuid = read_file_first_line('koda-db-uuid.conf')
+    enterprise_code = read_file_first_line('koda-enterprise-code.conf')
     if not (db_uuid and enterprise_code):
         return "ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL"
 
-    url = 'https://www.odoo.com/odoo-enterprise/iot/x509'
+    url = 'https://www.koda.com/koda-enterprise/iot/x509'
     data = {
         'params': {
             'db_uuid': db_uuid,
@@ -313,7 +313,7 @@ def load_certificate():
             headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         )
     except Exception as e:
-        _logger.exception("An error occurred while trying to reach odoo.com servers.")
+        _logger.exception("An error occurred while trying to reach koda.com servers.")
         return "ERR_IOT_HTTPS_LOAD_REQUEST_EXCEPTION\n\n%s" % e
 
     if response.status != 200:
@@ -323,7 +323,7 @@ def load_certificate():
     if not result:
         return "ERR_IOT_HTTPS_LOAD_REQUEST_NO_RESULT"
 
-    write_file('odoo-subject.conf', result['subject_cn'])
+    write_file('koda-subject.conf', result['subject_cn'])
     if platform.system() == 'Linux':
         with writable():
             Path('/etc/ssl/certs/nginx-cert.crt').write_text(result['x509_pem'])
@@ -353,7 +353,7 @@ def download_iot_handlers(auto=True):
             resp = pm.request('POST', server, fields={'mac': get_mac_address(), 'auto': auto}, timeout=8)
             if resp.data:
                 with writable():
-                    drivers_path = ['odoo', 'addons', 'hw_drivers', 'iot_handlers']
+                    drivers_path = ['koda', 'addons', 'hw_drivers', 'iot_handlers']
                     path = path_file(str(Path().joinpath(*drivers_path)))
                     zip_file = zipfile.ZipFile(io.BytesIO(resp.data))
                     zip_file.extractall(path)
@@ -362,13 +362,13 @@ def download_iot_handlers(auto=True):
             _logger.error('A error encountered : %s ' % e)
 
 def compute_iot_handlers_addon_name(handler_kind, handler_file_name):
-    return "odoo.addons.hw_drivers.iot_handlers.{handler_kind}.{handler_name}".\
+    return "koda.addons.hw_drivers.iot_handlers.{handler_kind}.{handler_name}".\
         format(handler_kind=handler_kind, handler_name=handler_file_name.removesuffix('.py'))
 
 def load_iot_handlers():
     """
-    This method loads local files: 'odoo/addons/hw_drivers/iot_handlers/drivers' and
-    'odoo/addons/hw_drivers/iot_handlers/interfaces'
+    This method loads local files: 'koda/addons/hw_drivers/iot_handlers/drivers' and
+    'koda/addons/hw_drivers/iot_handlers/interfaces'
     And execute these python drivers and interfaces
     """
     for directory in ['interfaces', 'drivers']:

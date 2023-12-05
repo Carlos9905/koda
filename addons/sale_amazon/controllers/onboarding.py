@@ -22,7 +22,7 @@ def compute_oauth_signature(account_id):
     """ Compute a signature for the OAuth flow.
 
     :param int account_id: The account being authorized, as an `amazon.account` id.
-    :param odoo.api.Environment env: The current environment.
+    :param koda.api.Environment env: The current environment.
     :return: The computed signature.
     :rtype: str
     """

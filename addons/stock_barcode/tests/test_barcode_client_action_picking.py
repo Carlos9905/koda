@@ -2,7 +2,7 @@
 
 from unittest.mock import patch
 
-import odoo
+import koda
 from koda.tests import Form, tagged
 from koda.addons.stock_barcode.tests.test_barcode_client_action import TestBarcodeClientAction
 
@@ -30,8 +30,8 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
         url = self._get_client_action_url(internal_picking.id)
 
         # Mock the calls to write and run the phantomjs script.
-        picking_write_orig = odoo.addons.stock.models.stock_picking.Picking.write
-        picking_button_validate_orig = odoo.addons.stock.models.stock_picking.Picking.button_validate
+        picking_write_orig = koda.addons.stock.models.stock_picking.Picking.write
+        picking_button_validate_orig = koda.addons.stock.models.stock_picking.Picking.button_validate
         product1 = self.product1
         stock_location = self.stock_location
         shelf1 = self.shelf1
@@ -67,8 +67,8 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
             self1.stop_count_write = True  # Stops to count write once validate is called.
             return picking_button_validate_orig(self)
 
-        with patch('odoo.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock),\
-             patch('odoo.addons.stock.models.stock_picking.Picking.button_validate', new=picking_button_validate_mock):
+        with patch('koda.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock),\
+             patch('koda.addons.stock.models.stock_picking.Picking.button_validate', new=picking_button_validate_mock):
                 self.start_tour(url, 'test_internal_picking_from_scratch', login='admin', timeout=180)
 
         self.assertEqual(self.call_count, 2)
@@ -142,7 +142,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
             'location_dest_id': self.stock_location.id,
             'picking_type_id': self.picking_type_internal.id,
         })
-        odoo.addons.stock.models.stock_picking.Picking.write
+        koda.addons.stock.models.stock_picking.Picking.write
         url = self._get_client_action_url(internal_picking.id)
 
         # prepare the picking
@@ -317,7 +317,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
             'location_dest_id': self.stock_location.id,
             'picking_type_id': self.picking_type_in.id,
         })
-        picking_write_orig = odoo.addons.stock.models.stock_picking.Picking.write
+        picking_write_orig = koda.addons.stock.models.stock_picking.Picking.write
         url = self._get_client_action_url(receipt_picking.id)
 
         move1 = self.env['stock.move'].create({
@@ -356,7 +356,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
                 assertEqual(vals['move_line_ids'][1][:2], [1, ml1.id])
             return picking_write_orig(self, vals)
 
-        with patch('odoo.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock):
+        with patch('koda.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock):
             self.start_tour(url, 'test_receipt_reserved_1', login='admin', timeout=180)
             self.assertEqual(self.call_count, 1)
             self.assertEqual(receipt_picking.move_line_ids[0].location_dest_id.id, shelf1.id)
@@ -522,7 +522,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
             'picking_type_id': self.picking_type_out.id,
             'note': "A Test Note",
         })
-        picking_write_orig = odoo.addons.stock.models.stock_picking.Picking.write
+        picking_write_orig = koda.addons.stock.models.stock_picking.Picking.write
         url = self._get_client_action_url(delivery_picking.id)
 
         self.env['stock.move'].create({
@@ -556,7 +556,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
         def picking_write_mock(self, vals):
             self1.call_count += 1
             return picking_write_orig(self, vals)
-        with patch('odoo.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock):
+        with patch('koda.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock):
             self.start_tour(url, 'test_delivery_reserved_1', login='admin', timeout=180)
             self.assertEqual(self.call_count, 1)
 
@@ -567,7 +567,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
             'location_dest_id': self.customer_location.id,
             'picking_type_id': self.picking_type_out.id,
         })
-        picking_write_orig = odoo.addons.stock.models.stock_picking.Picking.write
+        picking_write_orig = koda.addons.stock.models.stock_picking.Picking.write
         url = self._get_client_action_url(delivery_picking.id)
 
         partner_1 = self.env['res.partner'].create({'name': 'Parter1'})
@@ -606,7 +606,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
             self1.call_count += 1
             return picking_write_orig(self, vals)
 
-        with patch('odoo.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock):
+        with patch('koda.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock):
             self.start_tour(url, 'test_delivery_reserved_2', login='admin', timeout=180)
             self.assertEqual(self.call_count, 0)
 
@@ -617,7 +617,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
             'location_dest_id': self.customer_location.id,
             'picking_type_id': self.picking_type_out.id,
         })
-        picking_write_orig = odoo.addons.stock.models.stock_picking.Picking.write
+        picking_write_orig = koda.addons.stock.models.stock_picking.Picking.write
         url = self._get_client_action_url(delivery_picking.id)
 
         self.env['stock.move'].create({
@@ -641,7 +641,7 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
             self1.call_count += 1
             return picking_write_orig(self, vals)
 
-        with patch('odoo.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock):
+        with patch('koda.addons.stock.models.stock_picking.Picking.write', new=picking_write_mock):
             self.start_tour(url, 'test_delivery_reserved_3', login='admin', timeout=180)
             self.assertEqual(self.call_count, 0)
 

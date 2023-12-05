@@ -21,7 +21,7 @@ from weakref import WeakSet
 from werkzeug.local import LocalStack
 from werkzeug.exceptions import BadRequest, HTTPException, ServiceUnavailable
 
-import odoo
+import koda
 from koda import api
 from .models.bus import dispatch
 from koda.http import root, Request, Response, SessionExpiredException, get_default_session
@@ -42,7 +42,7 @@ def acquire_cursor(db):
     """ Try to acquire a cursor up to `MAX_TRY_ON_POOL_ERROR` """
     for tryno in range(1, MAX_TRY_ON_POOL_ERROR + 1):
         with suppress(PoolError):
-            return odoo.registry(db).cursor()
+            return koda.registry(db).cursor()
         time.sleep(random.uniform(DELAY_ON_POOL_ERROR, DELAY_ON_POOL_ERROR * tryno))
     raise PoolError('Failed to acquire cursor after %s retries' % MAX_TRY_ON_POOL_ERROR)
 
@@ -243,7 +243,7 @@ class Websocket:
         # Websocket start up
         self._selector = (
             selectors.PollSelector()
-            if odoo.evented and hasattr(selectors, 'PollSelector')
+            if koda.evented and hasattr(selectors, 'PollSelector')
             else selectors.DefaultSelector()
         )
         self._selector.register(self._socket, selectors.EVENT_READ)

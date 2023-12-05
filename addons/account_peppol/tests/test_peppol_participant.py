@@ -83,7 +83,7 @@ class TestPeppolParticipant(TransactionCase):
 
             return response
 
-        with patch('odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user.requests.post', side_effect=_mocked_post):
+        with patch('koda.addons.account_edi_proxy_client.models.account_edi_proxy_user.requests.post', side_effect=_mocked_post):
             yield
 
     def test_create_participant_missing_data(self):
@@ -126,7 +126,7 @@ class TestPeppolParticipant(TransactionCase):
             self.env['account_edi_proxy_client.user']._cron_peppol_get_participant_status()
             self.assertEqual(company.account_peppol_proxy_state, 'rejected')
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     def test_create_duplicate_participant(self):
         # should not be possible to create a duplicate participant
         settings = self.env['res.config.settings'].create(self._get_participant_vals())

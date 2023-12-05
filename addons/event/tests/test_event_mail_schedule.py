@@ -13,7 +13,7 @@ from koda.tools import formataddr, mute_logger
 
 class TestMailSchedule(EventCase, MockEmail):
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_event_mail_schedule(self):
         """ Test mail scheduling for events """
         event_cron_id = self.env.ref('event.event_mail_scheduler')
@@ -280,7 +280,7 @@ class TestMailSchedule(EventCase, MockEmail):
                            'email_from': self.user_eventmanager.company_id.email_formatted,
                           })
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_unique_event_mail_ids(self):
         # create event with default event_mail_ids lines
         test_event = self.env['event.event'].with_user(self.user_eventmanager).create({
@@ -335,7 +335,7 @@ class TestMailSchedule(EventCase, MockEmail):
         self.assertEqual(len(duplicate_mails), 0,
             "The duplicate configuration (first one from event_type.event_type_mail_ids which has same configuration as the sent one) should not have been added")
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_archived_event_mail_schedule(self):
         """ Test mail scheduling for archived events """
         event_cron_id = self.env.ref('event.event_mail_scheduler')

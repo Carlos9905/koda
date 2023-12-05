@@ -7,7 +7,7 @@
     'category': 'Human Resources/Employees',
     'sequence': 95,
     'summary': 'Centralize employee information',
-    'website': 'https://www.odoo.com/app/employees',
+    'website': 'https://www.koda.com/app/employees',
     'images': [
         'static/src/img/default_image.png',
     ],

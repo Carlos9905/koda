@@ -13,7 +13,7 @@ import koda.sql_db
 from collections import defaultdict
 from contextlib import closing
 
-_schema = logging.getLogger('odoo.schema')
+_schema = logging.getLogger('koda.schema')
 
 _CONFDELTYPES = {
     'RESTRICT': 'r',

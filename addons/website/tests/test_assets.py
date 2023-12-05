@@ -2,13 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import re
 
-import odoo.tests
+import koda.tests
 
 from koda.tools import config
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestWebsiteAssets(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestWebsiteAssets(koda.tests.HttpCase):
 
     def test_01_multi_domain_assets_generation(self):
         Website = self.env['website']
@@ -100,12 +100,12 @@ class TestWebsiteAssets(odoo.tests.HttpCase):
         new_public_assets_links = re.findall(r'(/web/assets/\d+/\w{7}/web.assets_frontend\..+)"/>', page)
         self.assertEqual(new_admin_assets_links, new_public_assets_links, "t-cache should have been invalidated for public user too")
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestWebAssets(odoo.tests.HttpCase):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestWebAssets(koda.tests.HttpCase):
     def test_assets_url_validation(self):
         website_id = self.env['website'].search([], limit=1, order='id desc').id
 
-        with odoo.tools.mute_logger('odoo.addons.web.controllers.binary'):
+        with koda.tools.mute_logger('koda.addons.web.controllers.binary'):
             self.assertEqual(
                 self.url_open(f'/web/assets/{website_id}/debug/hello/web.assets_frontend.css', allow_redirects=False).status_code,
                 404,

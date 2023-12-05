@@ -18,11 +18,11 @@ class TestIncomingTransactionResponse(BaseCase):
         "sys.modules", {
             # Mock out all of hw_drivers to avoid side-effects from starting services,
             # additional dependencies and modifying global imports
-            "odoo.addons.hw_drivers": MagicMock(),
+            "koda.addons.hw_drivers": MagicMock(),
             # Mock the modules IngenicoDriver imports so the imports don't fail
-            "odoo.addons.hw_drivers.driver": MagicMock(),
-            "odoo.addons.hw_drivers.event_manager": MagicMock(),
-            "odoo.addons.hw_drivers.iot_handlers.interfaces.SocketInterface": MagicMock(),
+            "koda.addons.hw_drivers.driver": MagicMock(),
+            "koda.addons.hw_drivers.event_manager": MagicMock(),
+            "koda.addons.hw_drivers.iot_handlers.interfaces.SocketInterface": MagicMock(),
         }
     )
     def setUp(self):
@@ -50,11 +50,11 @@ class TestOutgoingIngenicoMessage(BaseCase):
         "sys.modules", {
             # Mock out all of hw_drivers to avoid side-effects from starting services,
             # additional dependencies and modifying global imports
-            "odoo.addons.hw_drivers": MagicMock(),
+            "koda.addons.hw_drivers": MagicMock(),
             # Mock the modules IngenicoDriver imports so the imports don't fail
-            "odoo.addons.hw_drivers.driver": MagicMock(),
-            "odoo.addons.hw_drivers.event_manager": MagicMock(),
-            "odoo.addons.hw_drivers.iot_handlers.interfaces.SocketInterface": MagicMock(),
+            "koda.addons.hw_drivers.driver": MagicMock(),
+            "koda.addons.hw_drivers.event_manager": MagicMock(),
+            "koda.addons.hw_drivers.iot_handlers.interfaces.SocketInterface": MagicMock(),
         }
     )
     def setUp(self):

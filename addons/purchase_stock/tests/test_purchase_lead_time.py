@@ -273,7 +273,7 @@ class TestPurchaseLeadTime(PurchaseTestCommon):
             'name': 'Second Company',
         })
         company.write({'po_lead': 0.00})
-        self.patcher = patch('odoo.addons.stock.models.stock_orderpoint.fields.Date', wraps=fields.Date)
+        self.patcher = patch('koda.addons.stock.models.stock_orderpoint.fields.Date', wraps=fields.Date)
         self.mock_date = self.startPatcher(self.patcher)
 
         vendor = self.env['res.partner'].create({

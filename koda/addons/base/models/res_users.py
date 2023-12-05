@@ -865,8 +865,8 @@ class Users(models.Model):
         password is not used to authenticate requests.
 
         :return: True
-        :raise: odoo.exceptions.AccessDenied when old password is wrong
-        :raise: odoo.exceptions.UserError when new password is not set or empty
+        :raise: koda.exceptions.AccessDenied when old password is wrong
+        :raise: koda.exceptions.UserError when new password is not set or empty
         """
         if not old_passwd:
             raise AccessDenied()
@@ -1149,7 +1149,7 @@ class Users(models.Model):
                     "and *might* be a proxy. If your Odoo is behind a proxy, "
                     "it may be mis-configured. Check that you are running "
                     "Odoo in Proxy Mode and that the proxy is properly configured, see "
-                    "https://www.odoo.com/documentation/16.0/administration/install/deploy.html#https for details.",
+                    "https://www.koda.com/documentation/16.0/administration/install/deploy.html#https for details.",
                     source
                 )
             raise AccessDenied(_("Too many login failures, please wait a bit before trying again."))

@@ -12,7 +12,7 @@ DFTL_CURSOR_EXPR = [
 
 class OdooBaseChecker(checkers.BaseChecker):
     __implements__ = interfaces.IAstroidChecker
-    name = 'odoo'
+    name = 'koda'
 
     msgs = {
         'E8501': (
@@ -116,7 +116,7 @@ class OdooBaseChecker(checkers.BaseChecker):
         return node
 
     def _check_sql_injection_risky(self, node):
-        # Inspired from OCA/pylint-odoo project
+        # Inspired from OCA/pylint-koda project
         # Thanks @moylop260 (Moisés López) & @nilshamerlinck (Nils Hamerlinck)
         current_file_bname = os.path.basename(self.linter.current_file)
         if not (

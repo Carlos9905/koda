@@ -5,7 +5,7 @@
     'name': 'Test Sale Subscription',
     'version': '1.0',
     'depends': ['sale_subscription'],
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'category': 'Sales/Subscriptions',
     'demo': ['data/sale_subscription_demo.xml'],
     'installable': True,

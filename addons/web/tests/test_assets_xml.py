@@ -8,7 +8,7 @@ from datetime import datetime
 from lxml import etree
 import logging
 
-import odoo
+import koda
 from koda.tests.common import BaseCase, HttpCase, tagged
 from koda.tools import topological_sort
 from koda.addons.base.models.assetsbundle import AssetsBundle, WebAsset
@@ -16,7 +16,7 @@ from koda.addons.base.models.assetsbundle import AssetsBundle, WebAsset
 
 _logger = logging.getLogger(__name__)
 
-class TestStaticInheritanceCommon(odoo.tests.TransactionCase):
+class TestStaticInheritanceCommon(koda.tests.TransactionCase):
     def setUp(self):
         super().setUp()
 

@@ -26,7 +26,7 @@ class TestMailingStatistics(TestMassSMSCommon):
         )
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mass_mailing_sms.models.mailing_mailing', 'odoo.addons.mail.models.mail_mail', 'odoo.addons.mail.models.mail_thread')
+    @mute_logger('koda.addons.mass_mailing_sms.models.mailing_mailing', 'koda.addons.mail.models.mail_mail', 'koda.addons.mail.models.mail_thread')
     def test_mailing_statistics_sms(self):
         mailing = self.env['mailing.mailing'].browse(self.mailing_sms.ids)
         target_records = self.env['mail.test.sms'].browse(self.records.ids)

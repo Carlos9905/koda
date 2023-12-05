@@ -31,7 +31,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
         route_values['sale_order_id'] = self.sale_order.id
 
         with patch(
-            'odoo.addons.payment.controllers.portal.PaymentPortal'
+            'koda.addons.payment.controllers.portal.PaymentPortal'
             '._compute_show_tokenize_input_mapping'
         ) as patched:
             tx_context = self._get_portal_pay_context(**route_values)
@@ -52,7 +52,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
             'landing_route': tx_context['landing_route'],
             'access_token': tx_context['access_token'],
         }
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = self._get_processing_values(
                 tx_route=tx_context['transaction_route'], **tx_route_values
             )
@@ -108,7 +108,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
             'landing_route': tx_context['landing_route'],
             'access_token': tx_context['access_token'],
         }
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = self._get_processing_values(
                 tx_route=tx_context['transaction_route'], **tx_route_values
             )
@@ -122,7 +122,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
         self.assertEqual(tx_sudo.sale_order_ids.transaction_ids, tx_sudo)
 
         tx_sudo._set_done()
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx_sudo._finalize_post_processing()
         self.assertEqual(self.sale_order.state, 'draft') # Only a partial amount was paid
 
@@ -146,7 +146,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
             'landing_route': tx_context['landing_route'],
             'access_token': tx_context['access_token'],
         }
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = self._get_processing_values(
                 tx_route=tx_context['transaction_route'], **tx_route_values
             )
@@ -185,14 +185,14 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
             'landing_route': tx_context['landing_route'],
             'access_token': tx_context['access_token'],
         }
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = self._get_processing_values(
                 tx_route=tx_context['transaction_route'], **tx_route_values
             )
         tx_sudo = self._get_tx(processing_values['reference'])
 
         tx_sudo._set_done()
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx_sudo._finalize_post_processing()
 
         self.assertEqual(self.sale_order.state, 'draft', 'a partial transaction with automatic invoice and invoice_policy = delivery should not validate a quote')
@@ -226,7 +226,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
         # Create the payment
         self.amount = self.sale_order.amount_total
         tx = self._create_transaction(flow='redirect', sale_order_ids=[self.sale_order.id], state='done')
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx._reconcile_after_done()
 
         self.assertEqual(self.sale_order.state, 'sale')
@@ -242,7 +242,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
         # Create the payment
         self.amount = self.sale_order.amount_total
         tx = self._create_transaction(flow='redirect', sale_order_ids=[self.sale_order.id], state='done')
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx._reconcile_after_done()
 
         self.assertEqual(self.sale_order.state, 'sale')
@@ -258,7 +258,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
         # Create the payment
         self.amount = self.sale_order.amount_total / 10.
         tx = self._create_transaction(flow='redirect', sale_order_ids=[self.sale_order.id], state='done')
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx._reconcile_after_done()
 
         self.assertEqual(self.sale_order.state, 'draft')
@@ -292,8 +292,8 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
             sale_order_ids=[self.sale_order.id],
             state='done',
         )
-        with mute_logger('odoo.addons.sale.models.payment_transaction'), patch(
-            'odoo.addons.sale.models.sale_order.SaleOrder._create_invoices',
+        with mute_logger('koda.addons.sale.models.payment_transaction'), patch(
+            'koda.addons.sale.models.sale_order.SaleOrder._create_invoices',
             return_value=self.env['account.move']
         ) as _create_invoices_mock:
             tx._reconcile_after_done()
@@ -312,7 +312,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
             sale_order_ids=[self.sale_order.id],
             state='done',
         )
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx._reconcile_after_done()
 
         self.assertTrue(self.sale_order.state == 'sale')
@@ -330,7 +330,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
             sale_order_ids=[self.sale_order.id],
             state='done',
         )
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx._reconcile_after_done()
 
         self.assertTrue(self.sale_order.state == 'draft')
@@ -381,7 +381,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
             sale_order_ids=[self.sale_order.id],
             state='done')
 
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx._reconcile_after_done()
 
         invoice = self.sale_order.invoice_ids
@@ -418,7 +418,7 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
 
         with patch.object(
             CustomerPortal, '_document_check_access', _document_check_access_mock
-        ), patch('odoo.addons.payment.utils.check_access_token') as check_payment_access_token_mock:
+        ), patch('koda.addons.payment.utils.check_access_token') as check_payment_access_token_mock:
             try:
                 payment_portal_controller._get_extra_payment_form_values(
                     sale_order_id=self.sale_order.id, access_token='whatever'
@@ -432,12 +432,12 @@ class TestSalePayment(AccountPaymentCommon, SaleCommon, PaymentHttpCommon):
                     " check as a portal access token failed.",
             )
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_transaction_route_rejects_unexpected_kwarg(self):
         url = self._build_url(f'/my/orders/{self.sale_order.id}/transaction')
         route_kwargs = {
             'access_token': self.sale_order._portal_ensure_token(),
             'partner_id': self.partner.id,  # This should be rejected.
         }
-        with self.assertRaises(JsonRpcException, msg='odoo.exceptions.ValidationError'):
+        with self.assertRaises(JsonRpcException, msg='koda.exceptions.ValidationError'):
             self.make_jsonrpc_request(url, route_kwargs)

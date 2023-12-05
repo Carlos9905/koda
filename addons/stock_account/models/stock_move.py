@@ -574,7 +574,7 @@ class StockMove(models.Model):
                 am_vals.append(self.with_company(company_from)._prepare_account_move_vals(acc_valuation, acc_dest, journal_id, qty, description, svl_id, cost))
 
         if self.company_id.anglo_saxon_accounting:
-            # Creates an account entry from stock_input to stock_output on a dropship move. https://github.com/odoo/odoo/issues/12687
+            # Creates an account entry from stock_input to stock_output on a dropship move. https://github.com/koda/koda/issues/12687
             if self._is_dropshipped():
                 if cost > 0:
                     am_vals.append(self.with_company(self.company_id)._prepare_account_move_vals(acc_src, acc_valuation, journal_id, qty, description, svl_id, cost))

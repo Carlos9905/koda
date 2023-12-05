@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import odoo
+import koda
 from koda.tests import tagged
 from koda.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
 from koda.addons.l10n_mx_edi.tests.common import TestMxEdiCommon
@@ -75,7 +75,7 @@ class TestUi(TestPointOfSaleHttpCommon, TestMxEdiCommon):
             'phone': "123456789",
             'invoice_l10n_mx_edi_usage': 'D10',
             'partner_l10n_mx_edi_fiscal_regime': '624',
-            'csrf_token': odoo.http.Request.csrf_token(self)
+            'csrf_token': koda.http.Request.csrf_token(self)
         }
         self.url_open(f'/pos/ticket/validate?access_token={self.pos_order.access_token}', data=get_invoice_data)
         self.assertEqual(self.env['res.partner'].sudo().search_count([('name', '=', 'AAA Partner')]), 1)

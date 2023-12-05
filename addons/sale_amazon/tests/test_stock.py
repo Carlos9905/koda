@@ -61,7 +61,7 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
         """ Test that confirming a picking triggers a check on sales order lines completion. """
 
         with patch(
-            'odoo.addons.sale_amazon.models.stock_picking.StockPicking'
+            'koda.addons.sale_amazon.models.stock_picking.StockPicking'
             '._check_sales_order_line_completion', new=Mock()
         ) as mock:
             self.picking.date_done = fields.Datetime.now()  # Trigger the check for SOL completion
@@ -99,8 +99,8 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             # (some moves related to a given sales order line are confirmed, but not all)
             self.picking._check_sales_order_line_completion()
 
-    @mute_logger('odoo.addons.sale_amazon.models.stock_picking')
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.stock_picking')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_check_carrier_details_compliance_no_carrier(self):
         """ Test the validation of a picking when the delivery carrier is not set. """
         def find_matching_product_mock(
@@ -119,16 +119,16 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             return product_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request',
+            'koda.addons.sale_amazon.utils.make_sp_api_request',
             new=lambda _account, operation, **kwargs: common.OPERATIONS_RESPONSES_MAP[operation],
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
             new=lambda self_, subtotal_, *args_, **kwargs_: subtotal_,
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
             new=find_matching_product_mock,
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
@@ -141,8 +141,8 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             with self.assertRaises(UserError):
                 picking._check_carrier_details_compliance()
 
-    @mute_logger('odoo.addons.sale_amazon.models.stock_picking')
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.stock_picking')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_check_carrier_details_compliance_intermediate_delivery_step(self):
         """ Test the validation of a picking when the delivery is in an intermediate step."""
         def find_matching_product_mock(
@@ -161,16 +161,16 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             return product_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request',
+            'koda.addons.sale_amazon.utils.make_sp_api_request',
             new=lambda _account, operation, **kwargs: common.OPERATIONS_RESPONSES_MAP[operation],
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
             new=lambda self_, subtotal_, *args_, **kwargs_: subtotal_,
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
             new=find_matching_product_mock,
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
@@ -183,8 +183,8 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             picking.location_dest_id = intermediate_destination_id
             picking._check_carrier_details_compliance()  # Don't raise if intermediate delivery step
 
-    @mute_logger('odoo.addons.sale_amazon.models.stock_picking')
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.stock_picking')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_check_carrier_details_compliance_no_tracking_number(self):
         """ Test the validation of a picking when the tracking reference is not set. """
         def find_matching_product_mock(
@@ -203,16 +203,16 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             return product_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request',
+            'koda.addons.sale_amazon.utils.make_sp_api_request',
             new=lambda _account, operation, **kwargs: common.OPERATIONS_RESPONSES_MAP[operation],
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
             new=lambda self_, subtotal_, *args_, **kwargs_: subtotal_,
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
             new=find_matching_product_mock,
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
@@ -224,8 +224,8 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             with self.assertRaises(UserError):
                 picking._check_carrier_details_compliance()
 
-    @mute_logger('odoo.addons.sale_amazon.models.stock_picking')
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.stock_picking')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_check_carrier_details_compliance_requirements_met_in_last_step_delivery(self):
         """ Test the validation of a picking when the delivery carrier and tracking ref are set. """
         def find_matching_product_mock(
@@ -244,16 +244,16 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             return product_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request',
+            'koda.addons.sale_amazon.utils.make_sp_api_request',
             new=lambda _account, operation, **kwargs: common.OPERATIONS_RESPONSES_MAP[operation],
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
             new=lambda self_, subtotal_, *args_, **kwargs_: subtotal_,
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
             new=find_matching_product_mock,
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
@@ -277,7 +277,7 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
         self.assertEqual(carrier_name, 'DHL')
 
     def test_sync_orders_confirms_pickings_with_a_pending_status(self):
-        """ Test pickings with a status of pending in odoo are updated when receiving the
+        """ Test pickings with a status of pending in koda are updated when receiving the
         information that the order is delivered from Amazon. """
 
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
@@ -290,10 +290,10 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             return response_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+            'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
 
@@ -333,7 +333,7 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             )
 
     def test_sync_orders_confirms_pickings_with_an_errored_status(self):
-        """ Test pickings with a status of errored in odoo are updated when receiving the
+        """ Test pickings with a status of errored in koda are updated when receiving the
         information that the order is delivered from Amazon. """
 
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
@@ -346,10 +346,10 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             return response_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+            'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
 
@@ -364,13 +364,13 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
                     "is confirmed by Amazon and there is no pending picking."
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_action_retry_amazon_sync_dont_resync_when_picking_is_confirmed_from_amazon(self):
 
         self.picking.amazon_sync_status = 'error'
 
         with patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._sync_order_by_reference',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._sync_order_by_reference',
             new=lambda self_, *args_: self.picking.update({'amazon_sync_status': 'done'})
         ):
             self.picking.action_retry_amazon_sync()
@@ -380,9 +380,9 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
     def test_action_retry_amazon_sync_set_waiting_state_after_resync(self):
         self.picking.amazon_sync_status = 'error'
         with patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._sync_order_by_reference',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._sync_order_by_reference',
         ), patch(
-                'odoo.addons.sale_amazon.utils.submit_feed',
+                'koda.addons.sale_amazon.utils.submit_feed',
                 return_value='Mock feed ID',
         ):
             self.picking.action_retry_amazon_sync()

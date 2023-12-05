@@ -22,15 +22,15 @@ class MollieTest(MollieCommon, PaymentHttpCommon):
         self.assertEqual(payload['description'], tx.reference)
 
     @mute_logger(
-        'odoo.addons.payment_mollie.controllers.main',
-        'odoo.addons.payment_mollie.models.payment_transaction',
+        'koda.addons.payment_mollie.controllers.main',
+        'koda.addons.payment_mollie.models.payment_transaction',
     )
     def test_webhook_notification_confirms_transaction(self):
         """ Test the processing of a webhook notification. """
         tx = self._create_transaction('redirect')
         url = self._build_url(MollieController._webhook_url)
         with patch(
-            'odoo.addons.payment_mollie.models.payment_provider.PaymentProvider'
+            'koda.addons.payment_mollie.models.payment_provider.PaymentProvider'
             '._mollie_make_request',
             return_value={'status': 'paid'},
         ):

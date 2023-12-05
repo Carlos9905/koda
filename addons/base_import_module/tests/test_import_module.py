@@ -7,7 +7,7 @@ import os
 from io import BytesIO
 from zipfile import ZipFile
 
-import odoo.tests
+import koda.tests
 from koda.tests import new_test_user
 
 
@@ -17,8 +17,8 @@ from koda.addons import __path__ as __addons_path__
 from koda.tools import mute_logger
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestImportModule(odoo.tests.TransactionCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestImportModule(koda.tests.TransactionCase):
 
     def import_zipfile(self, files):
         archive = BytesIO()
@@ -76,7 +76,7 @@ class TestImportModule(odoo.tests.TransactionCase):
         files = [
             ('foo/__manifest__.py', b"foo")
         ]
-        with mute_logger("odoo.addons.base_import_module.models.ir_module"):
+        with mute_logger("koda.addons.base_import_module.models.ir_module"):
             result = self.import_zipfile(files)
         self.assertIn("Error while importing module 'foo'", result[0])
 
@@ -112,7 +112,7 @@ class TestImportModule(odoo.tests.TransactionCase):
                 b'foo,foo'
             ),
         ]
-        with self.assertLogs('odoo.addons.base_import_module.models.ir_module') as log_catcher:
+        with self.assertLogs('koda.addons.base_import_module.models.ir_module') as log_catcher:
             self.import_zipfile(files)
             self.assertEqual(len(log_catcher.output), 1)
             self.assertIn('module foo: skip unsupported file res.partner.xls', log_catcher.output[0])
@@ -282,7 +282,7 @@ class TestImportModule(odoo.tests.TransactionCase):
         self.assertEqual(asset_data.name, f'{bundle}_/{path}'.replace(".", "_"))
 
 
-class TestImportModuleHttp(TestImportModule, odoo.tests.HttpCase):
+class TestImportModuleHttp(TestImportModule, koda.tests.HttpCase):
     def test_import_module_icon(self):
         """Assert import a module with an icon result in the module displaying the icon in the apps menu,
         and with the base module icon if module without icon"""

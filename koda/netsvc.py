@@ -48,7 +48,7 @@ class PostgreSQLHandler(logging.Handler):
         dbname = tools.config['log_db'] if tools.config['log_db'] and tools.config['log_db'] != '%d' else ct_db
         if not dbname:
             return
-        with contextlib.suppress(Exception), tools.mute_logger('odoo.sql_db'), sql_db.db_connect(dbname, allow_uri=True).cursor() as cr:
+        with contextlib.suppress(Exception), tools.mute_logger('koda.sql_db'), sql_db.db_connect(dbname, allow_uri=True).cursor() as cr:
             # preclude risks of deadlocks
             cr.execute("SET LOCAL statement_timeout = 1000")
             msg = tools.ustr(record.msg)
@@ -145,7 +145,7 @@ def init_logger():
     if sys.version_info[:2] == (3, 9):
         # recordsets are both sequence and set so trigger warning despite no issue
         # Only applies to 3.9 as it was fixed in 3.10 see https://bugs.python.org/issue42470
-        warnings.filterwarnings('ignore', r'^Sampling from a set', category=DeprecationWarning, module='odoo')
+        warnings.filterwarnings('ignore', r'^Sampling from a set', category=DeprecationWarning, module='koda')
     # https://github.com/urllib3/urllib3/issues/2680
     warnings.filterwarnings('ignore', r'^\'urllib3.contrib.pyopenssl\' module is deprecated.+', category=DeprecationWarning)
     # ofxparse use an html parser to parse ofx xml files and triggers a warning since bs4 4.11.0
@@ -168,7 +168,7 @@ def init_logger():
         warnings.filterwarnings('ignore', category=DeprecationWarning, module=module)
 
     # the SVG guesser thing always compares str and bytes, ignore it
-    warnings.filterwarnings('ignore', category=BytesWarning, module='odoo.tools.image')
+    warnings.filterwarnings('ignore', category=BytesWarning, module='koda.tools.image')
     # reportlab does a bunch of bytes/str mixing in a hashmap
     warnings.filterwarnings('ignore', category=BytesWarning, module='reportlab.platypus.paraparser')
 
@@ -253,20 +253,20 @@ def init_logger():
 
 
 DEFAULT_LOG_CONFIGURATION = [
-    'odoo.http.rpc.request:INFO',
-    'odoo.http.rpc.response:INFO',
+    'koda.http.rpc.request:INFO',
+    'koda.http.rpc.response:INFO',
     ':INFO',
 ]
 PSEUDOCONFIG_MAPPER = {
-    'debug_rpc_answer': ['odoo:DEBUG', 'odoo.sql_db:INFO', 'odoo.http.rpc:DEBUG'],
-    'debug_rpc': ['odoo:DEBUG', 'odoo.sql_db:INFO', 'odoo.http.rpc.request:DEBUG'],
-    'debug': ['odoo:DEBUG', 'odoo.sql_db:INFO'],
-    'debug_sql': ['odoo.sql_db:DEBUG'],
+    'debug_rpc_answer': ['koda:DEBUG', 'koda.sql_db:INFO', 'koda.http.rpc:DEBUG'],
+    'debug_rpc': ['koda:DEBUG', 'koda.sql_db:INFO', 'koda.http.rpc.request:DEBUG'],
+    'debug': ['koda:DEBUG', 'koda.sql_db:INFO'],
+    'debug_sql': ['koda.sql_db:DEBUG'],
     'info': [],
-    'runbot': ['odoo:RUNBOT', 'werkzeug:WARNING'],
-    'warn': ['odoo:WARNING', 'werkzeug:WARNING'],
-    'error': ['odoo:ERROR', 'werkzeug:ERROR'],
-    'critical': ['odoo:CRITICAL', 'werkzeug:CRITICAL'],
+    'runbot': ['koda:RUNBOT', 'werkzeug:WARNING'],
+    'warn': ['koda:WARNING', 'werkzeug:WARNING'],
+    'error': ['koda:ERROR', 'werkzeug:ERROR'],
+    'critical': ['koda:CRITICAL', 'werkzeug:CRITICAL'],
 }
 
 logging.RUNBOT = 25

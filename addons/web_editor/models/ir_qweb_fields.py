@@ -23,7 +23,7 @@ from lxml import etree, html
 from PIL import Image as I
 from werkzeug import urls
 
-import odoo.modules
+import koda.modules
 
 from koda import _, api, models, fields
 from koda.exceptions import UserError, ValidationError

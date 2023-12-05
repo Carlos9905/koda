@@ -46,7 +46,7 @@ class TestSafeEval(BaseCase):
         with self.assertRaises(ValueError):
            ast.literal_eval('{"a": True.__class__}')
 
-    @mute_logger('odoo.tools.safe_eval')
+    @mute_logger('koda.tools.safe_eval')
     def test_05_safe_eval_forbiddon(self):
         """ Try forbidden expressions in safe_eval to verify they are not allowed"""
         # no forbidden builtin expression
@@ -55,7 +55,7 @@ class TestSafeEval(BaseCase):
 
         # no forbidden opcodes
         with self.assertRaises(ValueError):
-            safe_eval("import odoo", mode="exec")
+            safe_eval("import koda", mode="exec")
 
         # no dunder
         with self.assertRaises(NameError):
@@ -620,7 +620,7 @@ class TestBase(TransactionCase):
     def test_70_archive_internal_partners(self):
         test_partner = self.env['res.partner'].create({'name':'test partner'})
         test_user = self.env['res.users'].create({
-                                'login': 'test@odoo.com',
+                                'login': 'test@koda.com',
                                 'partner_id': test_partner.id,
                                 })
         # Cannot archive the partner

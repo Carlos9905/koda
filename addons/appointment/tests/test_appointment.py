@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta
 from freezegun import freeze_time
 from werkzeug.urls import url_encode, url_join
 
-import odoo
+import koda
 from koda.addons.appointment.tests.common import AppointmentCommon
 from koda.addons.mail.tests.common import mail_new_test_user
 from koda.exceptions import ValidationError
@@ -179,7 +179,7 @@ class AppointmentTest(AppointmentCommon, HttpCase):
                 'staff_user_ids': [(6, 0, self.staff_users.ids)]
             })
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('apt_manager')
     def test_appointment_slot_start_end_hour_auto_correction(self):
         """ Test the autocorrection of invalid intervals [start_hour, end_hour]. """
@@ -348,7 +348,7 @@ class AppointmentTest(AppointmentCommon, HttpCase):
         # add the timezone of the visitor on the session (same as appointment to simplify)
         session = self.authenticate(None, None)
         session['timezone'] = self.apt_type_bxls_2days.appointment_tz
-        odoo.http.root.session_store.save(session)
+        koda.http.root.session_store.save(session)
         appointment = self.apt_type_bxls_2days
         appointment_invite = self.env['appointment.invite'].create({'appointment_type_ids': appointment.ids})
         appointment_url = url_join(appointment.get_base_url(), '/appointment/%s' % appointment.id)
@@ -407,7 +407,7 @@ class AppointmentTest(AppointmentCommon, HttpCase):
         })
         session = self.authenticate(None, None)
         session['timezone'] = appointment.appointment_tz
-        odoo.http.root.session_store.save(session)
+        koda.http.root.session_store.save(session)
         appointment_invite = self.env['appointment.invite'].create({'appointment_type_ids': appointment.ids})
         appointment_url = url_join(appointment.get_base_url(), '/appointment/%s' % appointment.id)
         appointment_info_url = "%s/info?" % appointment_url
@@ -451,7 +451,7 @@ class AppointmentTest(AppointmentCommon, HttpCase):
             'duration': appointment_type.appointment_duration,
             'description': "<p>Test</p>",
             'location': appointment_type.location,
-            'partner_ids': [odoo.Command.link(partner.id) for partner in [attendee, host_partner]],
+            'partner_ids': [koda.Command.link(partner.id) for partner in [attendee, host_partner]],
             'appointment_type_id': appointment_type.id,
             'user_id': host_user.id,
         })
@@ -1025,7 +1025,7 @@ class AppointmentTest(AppointmentCommon, HttpCase):
 
     def test_check_appointment_timezone(self):
         session = self.authenticate(None, None)
-        odoo.http.root.session_store.save(session)
+        koda.http.root.session_store.save(session)
         appointment = self.apt_type_bxls_2days
         appointment_invite = self.env['appointment.invite'].create({'appointment_type_ids': appointment.ids})
         appointment_url = url_join(appointment.get_base_url(), '/appointment/%s' % appointment.id)

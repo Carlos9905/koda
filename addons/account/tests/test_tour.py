@@ -1,11 +1,11 @@
 # Koda
 
 from koda import Command
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('post_install_l10n', 'post_install', '-at_install')
-class TestUi(odoo.tests.HttpCase):
+@koda.tests.tagged('post_install_l10n', 'post_install', '-at_install')
+class TestUi(koda.tests.HttpCase):
 
     @classmethod
     def setUpClass(cls):

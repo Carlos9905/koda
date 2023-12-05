@@ -42,7 +42,7 @@ def _check_with_xsd(tree_or_str, stream, env=None, prefix=None):
     :param str | etree._Element tree_or_str: representation of the tree to be checked
     :param io.IOBase | str stream: the byte stream used to build the XSD schema.
         If env is given, it can also be the name of an attachment in the filestore
-    :param odoo.api.Environment env: If it is given, it enables resolving the
+    :param koda.api.Environment env: If it is given, it enables resolving the
         imports of the schema in the filestore with ir.attachments.
     :param str prefix: if given, provides a prefix to try when
         resolving the imports of the schema. e.g. prefix='l10n_cl_edi' will
@@ -167,7 +167,7 @@ def load_xsd_files_from_url(env, url, file_name=None, force_reload=False,
     Typically, this is used when XSD files depend on each other (with the schemaLocation attribute),
     but it can be used for any purpose.
 
-    :param odoo.api.Environment env: environment of calling module
+    :param koda.api.Environment env: environment of calling module
     :param str url: URL of XSD file/ZIP archive
     :param str file_name: used as attachment name if the URL leads to a single XSD, otherwise ignored
     :param bool force_reload: Deprecated.
@@ -175,7 +175,7 @@ def load_xsd_files_from_url(env, url, file_name=None, force_reload=False,
     :param str xsd_name_prefix: if provided, will be added as a prefix to every XSD file name
     :param list | str xsd_names_filter: if provided, will only save the XSD files with these names
     :param func modify_xsd_content: function that takes the xsd content as argument and returns a modified version of it
-    :rtype: odoo.api.ir.attachment | bool
+    :rtype: koda.api.ir.attachment | bool
     :return: every XSD attachment created/fetched or False if an error occurred (see warning logs)
     """
     try:
@@ -264,11 +264,11 @@ def validate_xml_from_attachment(env, xml_content, xsd_name, reload_files_functi
     If the XSD attachment cannot be found in database, skip validation without raising.
     If the skip_xsd context key is truthy, skip validation.
 
-    :param odoo.api.Environment env: environment of calling module
+    :param koda.api.Environment env: environment of calling module
     :param xml_content: the XML content to validate
     :param xsd_name: the XSD file name in database
     :param reload_files_function: Deprecated.
-    :return: the result of the function :func:`odoo.tools.xml_utils._check_with_xsd`
+    :return: the result of the function :func:`koda.tools.xml_utils._check_with_xsd`
     """
     if env.context.get('skip_xsd', False):
         return

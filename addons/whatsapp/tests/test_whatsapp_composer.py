@@ -128,7 +128,7 @@ Welcome to {{4}} office''',
 
     @users('employee')
     def test_composer_tpl_button_url(self):
-        self._add_button_to_template(self.template_basic, name="test url", website_url='https://www.odoo.com/', button_type='url')
+        self._add_button_to_template(self.template_basic, name="test url", website_url='https://www.koda.com/', button_type='url')
 
         template = self.template_basic.with_env(self.env)
         composer = self._instanciate_wa_composer_from_records(template, from_records=self.customers[0])

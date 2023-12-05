@@ -7,7 +7,7 @@
     'category': 'Services/Appointment',
     'sequence': 2160,
     'summary': 'Enrich lead created automatically through an appointment with gathered website visitor information',
-    'website': 'https://www.odoo.com/app/appointments',
+    'website': 'https://www.koda.com/app/appointments',
     'description': """
 Enrich lead created automatically through an appointment with gathered website visitor information such as language,
 country and detailed information like pages browsed by the lead (through a link to website visitor).

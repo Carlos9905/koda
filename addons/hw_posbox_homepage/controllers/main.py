@@ -32,7 +32,7 @@ if hasattr(sys, 'frozen'):
     path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'views'))
     loader = jinja2.FileSystemLoader(path)
 else:
-    loader = jinja2.PackageLoader('odoo.addons.hw_posbox_homepage', "views")
+    loader = jinja2.PackageLoader('koda.addons.hw_posbox_homepage', "views")
 
 jinja_env = jinja2.Environment(loader=loader, autoescape=True)
 jinja_env.filters["json"] = json.dumps
@@ -53,10 +53,10 @@ class IoTboxHomepage(Home):
         self.updating = threading.Lock()
 
     def clean_partition(self):
-        subprocess.check_call(['sudo', 'bash', '-c', '. /home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/upgrade.sh; cleanup'])
+        subprocess.check_call(['sudo', 'bash', '-c', '. /home/pi/koda/addons/point_of_sale/tools/posbox/configuration/upgrade.sh; cleanup'])
 
     def get_six_terminal(self):
-        terminal_id = helpers.read_file_first_line('odoo-six-payment-terminal.conf')
+        terminal_id = helpers.read_file_first_line('koda-six-payment-terminal.conf')
         return terminal_id or 'Not Configured'
 
     def get_homepage_data(self):
@@ -104,7 +104,7 @@ class IoTboxHomepage(Home):
     @http.route()
     def index(self):
         wifi = Path.home() / 'wifi_network.txt'
-        remote_server = Path.home() / 'odoo-remote-server.conf'
+        remote_server = Path.home() / 'koda-remote-server.conf'
         if (wifi.exists() == False or remote_server.exists() == False) and helpers.access_point():
             return "<meta http-equiv='refresh' content='0; url=http://" + helpers.get_ip() + ":8069/steps'>"
         else:
@@ -127,8 +127,8 @@ class IoTboxHomepage(Home):
 
                 if post_request_key == 'root':
                     need_config_save |= self._update_logger_level('', log_level_or_parent, AVAILABLE_LOG_LEVELS)
-                elif post_request_key == 'odoo':
-                    need_config_save |= self._update_logger_level('odoo', log_level_or_parent, AVAILABLE_LOG_LEVELS)
+                elif post_request_key == 'koda':
+                    need_config_save |= self._update_logger_level('koda', log_level_or_parent, AVAILABLE_LOG_LEVELS)
                     need_config_save |= self._update_logger_level('werkzeug', log_level_or_parent if log_level_or_parent != 'debug' else 'info', AVAILABLE_LOG_LEVELS)
                 elif post_request_key.startswith(INTERFACE_PREFIX):
                     logger_name = post_request_key[len(INTERFACE_PREFIX):]
@@ -152,7 +152,7 @@ class IoTboxHomepage(Home):
             'interfaces_list': interfaces_list,
             'server': helpers.get_odoo_server_url(),
             'root_logger_log_level': self._get_logger_effective_level_str(logging.getLogger()),
-            'odoo_current_log_level': self._get_logger_effective_level_str(logging.getLogger('odoo')),
+            'odoo_current_log_level': self._get_logger_effective_level_str(logging.getLogger('koda')),
             'recommended_log_level': 'warning',
             'available_log_levels': AVAILABLE_LOG_LEVELS,
             'drivers_logger_info': self._get_iot_handlers_logger(drivers_list, 'drivers'),
@@ -170,21 +170,21 @@ class IoTboxHomepage(Home):
         return list_credential_template.render({
             'title': "Odoo's IoT Box - List credential",
             'breadcrumb': 'List credential',
-            'db_uuid': helpers.read_file_first_line('odoo-db-uuid.conf'),
-            'enterprise_code': helpers.read_file_first_line('odoo-enterprise-code.conf'),
+            'db_uuid': helpers.read_file_first_line('koda-db-uuid.conf'),
+            'enterprise_code': helpers.read_file_first_line('koda-enterprise-code.conf'),
         })
 
     @http.route('/save_credential', type='http', auth='none', cors='*', csrf=False)
     def save_credential(self, db_uuid, enterprise_code):
-        helpers.write_file('odoo-db-uuid.conf', db_uuid)
-        helpers.write_file('odoo-enterprise-code.conf', enterprise_code)
+        helpers.write_file('koda-db-uuid.conf', db_uuid)
+        helpers.write_file('koda-enterprise-code.conf', enterprise_code)
         helpers.odoo_restart(0)
         return "<meta http-equiv='refresh' content='20; url=http://" + helpers.get_ip() + ":8069'>"
 
     @http.route('/clear_credential', type='http', auth='none', cors='*', csrf=False)
     def clear_credential(self):
-        helpers.unlink_file('odoo-db-uuid.conf')
-        helpers.unlink_file('odoo-enterprise-code.conf')
+        helpers.unlink_file('koda-db-uuid.conf')
+        helpers.unlink_file('koda-enterprise-code.conf')
         helpers.odoo_restart(0)
         return "<meta http-equiv='refresh' content='20; url=http://" + helpers.get_ip() + ":8069'>"
 
@@ -229,7 +229,7 @@ class IoTboxHomepage(Home):
 
     @http.route('/server_clear', type='http', auth='none', cors='*', csrf=False)
     def clear_server_configuration(self):
-        helpers.unlink_file('odoo-remote-server.conf')
+        helpers.unlink_file('koda-remote-server.conf')
         return "<meta http-equiv='refresh' content='0; url=http://" + helpers.get_ip() + ":8069'>"
 
     @http.route('/handlers_clear', type='http', auth='none', cors='*', csrf=False)
@@ -327,7 +327,7 @@ class IoTboxHomepage(Home):
     @http.route('/six_payment_terminal_add', type='http', auth='none', cors='*', csrf=False)
     def add_six_payment_terminal(self, terminal_id):
         if terminal_id.isdigit():
-            helpers.write_file('odoo-six-payment-terminal.conf', terminal_id)
+            helpers.write_file('koda-six-payment-terminal.conf', terminal_id)
             service.server.restart()
         else:
             _logger.warning('Ignoring invalid Six TID: "%s". Only digits are allowed', terminal_id)
@@ -336,13 +336,13 @@ class IoTboxHomepage(Home):
 
     @http.route('/six_payment_terminal_clear', type='http', auth='none', cors='*', csrf=False)
     def clear_six_payment_terminal(self):
-        helpers.unlink_file('odoo-six-payment-terminal.conf')
+        helpers.unlink_file('koda-six-payment-terminal.conf')
         service.server.restart()
         return "<meta http-equiv='refresh' content='0; url=http://" + helpers.get_ip() + ":8069'>"
 
     @http.route('/hw_proxy/upgrade', type='http', auth='none', )
     def upgrade(self):
-        commit = subprocess.check_output(["git", "--work-tree=/home/pi/odoo/", "--git-dir=/home/pi/odoo/.git", "log", "-1"]).decode('utf-8').replace("\n", "<br/>")
+        commit = subprocess.check_output(["git", "--work-tree=/home/pi/koda/", "--git-dir=/home/pi/koda/.git", "log", "-1"]).decode('utf-8').replace("\n", "<br/>")
         flashToVersion = helpers.check_image()
         actualVersion = helpers.get_version()
         if flashToVersion:
@@ -359,7 +359,7 @@ class IoTboxHomepage(Home):
     @http.route('/hw_proxy/perform_upgrade', type='http', auth='none')
     def perform_upgrade(self):
         self.updating.acquire()
-        os.system('/home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/posbox_update.sh')
+        os.system('/home/pi/koda/addons/point_of_sale/tools/posbox/configuration/posbox_update.sh')
         self.updating.release()
         return 'SUCCESS'
 
@@ -370,7 +370,7 @@ class IoTboxHomepage(Home):
     @http.route('/hw_proxy/perform_flashing_create_partition', type='http', auth='none')
     def perform_flashing_create_partition(self):
         try:
-            response = subprocess.check_output(['sudo', 'bash', '-c', '. /home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/upgrade.sh; create_partition']).decode().split('\n')[-2]
+            response = subprocess.check_output(['sudo', 'bash', '-c', '. /home/pi/koda/addons/point_of_sale/tools/posbox/configuration/upgrade.sh; create_partition']).decode().split('\n')[-2]
             if response in ['Error_Card_Size', 'Error_Upgrade_Already_Started']:
                 raise Exception(response)
             return Response('success', status=200)
@@ -383,7 +383,7 @@ class IoTboxHomepage(Home):
     @http.route('/hw_proxy/perform_flashing_download_raspios', type='http', auth='none')
     def perform_flashing_download_raspios(self):
         try:
-            response = subprocess.check_output(['sudo', 'bash', '-c', '. /home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/upgrade.sh; download_raspios']).decode().split('\n')[-2]
+            response = subprocess.check_output(['sudo', 'bash', '-c', '. /home/pi/koda/addons/point_of_sale/tools/posbox/configuration/upgrade.sh; download_raspios']).decode().split('\n')[-2]
             if response == 'Error_Raspios_Download':
                 raise Exception(response)
             return Response('success', status=200)
@@ -397,7 +397,7 @@ class IoTboxHomepage(Home):
     @http.route('/hw_proxy/perform_flashing_copy_raspios', type='http', auth='none')
     def perform_flashing_copy_raspios(self):
         try:
-            response = subprocess.check_output(['sudo', 'bash', '-c', '. /home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/upgrade.sh; copy_raspios']).decode().split('\n')[-2]
+            response = subprocess.check_output(['sudo', 'bash', '-c', '. /home/pi/koda/addons/point_of_sale/tools/posbox/configuration/upgrade.sh; copy_raspios']).decode().split('\n')[-2]
             if response == 'Error_Iotbox_Download':
                 raise Exception(response)
             return Response('success', status=200)
@@ -486,7 +486,7 @@ class IoTboxHomepage(Home):
         if not IS_NEW_LEVEL_PARENT:
             new_entry = [LOGGER_PREFIX + new_level_upper_case]
             tools.config[ODOO_TOOL_CONFIG_HANDLER_NAME] += new_entry
-            _logger.debug('Adding to odoo config log_handler: %s', new_entry)
+            _logger.debug('Adding to koda config log_handler: %s', new_entry)
 
         # Update the logger dynamically
         real_new_level = logging.NOTSET if IS_NEW_LEVEL_PARENT else new_level_upper_case

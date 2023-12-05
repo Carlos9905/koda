@@ -708,10 +708,10 @@ class L10nMxEdiDocument(models.Model):
     @api.model
     def _is_cfdi_negative_lines_allowed(self):
         """ Negative lines are not allowed by the Mexican government making some features unavailable like sale_coupon
-        or global discounts. This method allows odoo to distribute the negative discount lines to each others making
+        or global discounts. This method allows koda to distribute the negative discount lines to each others making
         such features available even for Mexican people.
 
-        :return: True if odoo needs to distribute the negative discount lines, False otherwise.
+        :return: True if koda needs to distribute the negative discount lines, False otherwise.
         """
         param_name = 'l10n_mx_edi.manage_invoice_negative_lines'
         return bool(self.env['ir.config_parameter'].sudo().get_param(param_name))

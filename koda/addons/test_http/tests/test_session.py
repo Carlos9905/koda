@@ -25,7 +25,7 @@ GEOIP_ODOO_FARM_2 = {
 
 class TestHttpSession(TestHttpBase):
 
-    @mute_logger('odoo.http')  # greeting_none called ignoring args {'debug'}
+    @mute_logger('koda.http')  # greeting_none called ignoring args {'debug'}
     def test_session0_debug_mode(self):
         session = self.authenticate(None, None)
         self.assertEqual(session.debug, '')
@@ -86,11 +86,11 @@ class TestHttpSession(TestHttpBase):
         session['geoip'] = {}  # Until saas-15.2 geoip was directly stored in the session
         koda.http.root.session_store.save(session)
 
-        with self.assertLogs('odoo.http', level='WARNING') as (_, warnings):
+        with self.assertLogs('koda.http', level='WARNING') as (_, warnings):
             res = self.multidb_url_open('/test_http/ensure_db', dblist=['db1', 'db2'])
 
         self.assertEqual(warnings, [
-            "WARNING:odoo.http:Logged into database 'idontexist', but dbfilter rejects it; logging session out.",
+            "WARNING:koda.http:Logged into database 'idontexist', but dbfilter rejects it; logging session out.",
         ])
         self.assertFalse(session['db'])
         self.assertEqual(res.status_code, 303)
@@ -196,7 +196,7 @@ class TestHttpSession(TestHttpBase):
             self.assertEqual(session.foo, value)
             session.pop('foo')
 
-        # Values forbidden by odoo, raising a warning
+        # Values forbidden by koda, raising a warning
         for value in [
             str,
             int,

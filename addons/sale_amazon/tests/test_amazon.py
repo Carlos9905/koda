@@ -12,12 +12,12 @@ from koda.addons.sale_amazon.tests import common
 
 class TestAmazon(common.TestAmazonCommon):
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_update_marketplaces_no_change(self):
         """ Test the available marketplaces synchronization with no change. """
         marketplaces = self.env['amazon.marketplace'].search([])
         with patch(
-                'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount'
+                'koda.addons.sale_amazon.models.amazon_account.AmazonAccount'
                 '._get_available_marketplaces', return_value=marketplaces
         ):
             self.account.write({
@@ -28,12 +28,12 @@ class TestAmazon(common.TestAmazonCommon):
             self.assertEqual(self.account.available_marketplace_ids.ids, marketplaces.ids)
             self.assertEqual(self.account.active_marketplace_ids.ids, marketplaces.ids)
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_update_marketplaces_remove(self):
         """ Test the available marketplaces synchronization with a marketplace removal. """
         marketplaces = self.env['amazon.marketplace'].search([], limit=2)
         with patch(
-                'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount'
+                'koda.addons.sale_amazon.models.amazon_account.AmazonAccount'
                 '._get_available_marketplaces', return_value=marketplaces[:1]
         ):
             self.account.write({
@@ -49,12 +49,12 @@ class TestAmazon(common.TestAmazonCommon):
                     "marketplaces.",
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_update_marketplaces_add(self):
         """ Test the available marketplaces synchronization with a new marketplace. """
         marketplaces = self.env['amazon.marketplace'].search([], limit=2)
         with patch(
-                'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount'
+                'koda.addons.sale_amazon.models.amazon_account.AmazonAccount'
                 '._get_available_marketplaces', return_value=marketplaces
         ):
             self.account.write({
@@ -69,7 +69,7 @@ class TestAmazon(common.TestAmazonCommon):
                 msg="New available marketplaces should be added to the list of active marketplaces"
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_sync_orders_full(self):
         """ Test the orders synchronization with on-the-fly creation of all required records. """
 
@@ -89,16 +89,16 @@ class TestAmazon(common.TestAmazonCommon):
             return product_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request',
+            'koda.addons.sale_amazon.utils.make_sp_api_request',
             new=lambda _account, operation, **kwargs: common.OPERATIONS_RESPONSES_MAP[operation],
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
             new=lambda self_, subtotal_, *args_, **kwargs_: subtotal_,
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
             new=find_matching_product_mock,
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
@@ -156,7 +156,7 @@ class TestAmazon(common.TestAmazonCommon):
             self.assertFalse(gift_wrapping_line.amazon_item_ref)
             self.assertFalse(gift_wrapping_line.amazon_offer_id)
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_sync_orders_partial(self):
         """ Test the orders synchronization interruption with API throttling. """
 
@@ -182,10 +182,10 @@ class TestAmazon(common.TestAmazonCommon):
             return response_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+            'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
             self.get_order_items_count = 0
@@ -197,7 +197,7 @@ class TestAmazon(common.TestAmazonCommon):
                     "synchronized order if no all orders could be synchronized.",
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_sync_orders_fail(self):
         """ Test the orders synchronization cancellation with API throttling. """
 
@@ -210,10 +210,10 @@ class TestAmazon(common.TestAmazonCommon):
                 raise amazon_utils.AmazonRateLimitError(operation_)
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+            'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
             last_order_sync_copy = self.account.last_orders_sync
@@ -225,11 +225,11 @@ class TestAmazon(common.TestAmazonCommon):
                     "one operation was reached when synchronizing an order.",
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_sync_orders_abort(self):
         """ Test the orders synchronization cancellation with no active marketplace. """
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
@@ -244,7 +244,7 @@ class TestAmazon(common.TestAmazonCommon):
                     "marketplace selected for the account.",
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_sync_orders_fba(self):
         """ Test the orders synchronization with Fulfillment By Amazon. """
 
@@ -277,12 +277,12 @@ class TestAmazon(common.TestAmazonCommon):
             return product_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+            'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
             new=find_matching_product_mock,
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
@@ -299,7 +299,7 @@ class TestAmazon(common.TestAmazonCommon):
                 msg="FBA orders should generate one stock move per product that is not a service.",
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_sync_orders_europe(self):
         """ Test the orders synchronization with an European marketplace. """
 
@@ -331,15 +331,15 @@ class TestAmazon(common.TestAmazonCommon):
             return product_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+            'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
             new=lambda self_, subtotal_, *args_, **kwargs_: subtotal_,
         ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
+            'koda.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
             new=find_matching_product_mock,
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
@@ -377,7 +377,7 @@ class TestAmazon(common.TestAmazonCommon):
                     "marketplaces.",
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
     def test_sync_orders_cancel(self):
         """ Test the orders synchronization with cancellation from Amazon. """
 
@@ -394,10 +394,10 @@ class TestAmazon(common.TestAmazonCommon):
                 return base_response_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+            'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
 
@@ -415,10 +415,10 @@ class TestAmazon(common.TestAmazonCommon):
                 msg="The cancellation of orders should be synchronized from Amazon.",
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
-    @mute_logger('odoo.addons.sale_amazon.models.stock_picking')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.stock_picking')
     def test_sync_orders_cancel_abort(self):
-        """ Test the pickings that were confirmed at odoo and then order is canceled at Amazon. """
+        """ Test the pickings that were confirmed at koda and then order is canceled at Amazon. """
 
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
             """ Return a mock response without making an actual call to the Selling Partner API. """
@@ -434,10 +434,10 @@ class TestAmazon(common.TestAmazonCommon):
             return response_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK,
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+            'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ):
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
 
@@ -462,7 +462,7 @@ class TestAmazon(common.TestAmazonCommon):
         """ Test that the inventory synchronization is skipped when the account has disabled it. """
         self.account.synchronize_inventory = False
         with patch(
-            'odoo.addons.sale_amazon.utils.make_proxy_request',
+            'koda.addons.sale_amazon.utils.make_proxy_request',
             return_value=common.AWS_RESPONSE_MOCK
         ) as mock:
             self.assertEqual(self.account.offer_ids, self.offer)
@@ -475,15 +475,15 @@ class TestAmazon(common.TestAmazonCommon):
             )
             self.assertEqual(self.offer.amazon_sync_status, False)
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_offer')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_offer')
     def test_sync_inventory(self):
         """ Test the inventory availability confirmation synchronization. """
         self.account.synchronize_inventory = True
         with patch(
-            'odoo.addons.sale_amazon.utils.make_proxy_request',
+            'koda.addons.sale_amazon.utils.make_proxy_request',
             return_value=common.AWS_RESPONSE_MOCK
-        ), patch('odoo.addons.sale_amazon.utils.submit_feed', return_value='An_amazing_id') as mock:
+        ), patch('koda.addons.sale_amazon.utils.submit_feed', return_value='An_amazing_id') as mock:
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
             self.assertEqual(self.account.offer_ids, self.offer)
             self.assertEqual(self.offer.amazon_sync_status, False)
@@ -495,18 +495,18 @@ class TestAmazon(common.TestAmazonCommon):
                 msg="An inventory availability feed should be sent to Amazon for all the offers.",
             )
 
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
-    @mute_logger('odoo.addons.sale_amazon.models.stock_picking')
+    @mute_logger('koda.addons.sale_amazon.models.amazon_account')
+    @mute_logger('koda.addons.sale_amazon.models.stock_picking')
     def test_sync_pickings(self):
         """ Test the pickings confirmation synchronization. """
         with patch(
-                'odoo.addons.sale_amazon.utils.make_proxy_request',
+                'koda.addons.sale_amazon.utils.make_proxy_request',
                 return_value=common.AWS_RESPONSE_MOCK
         ), patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request',
+            'koda.addons.sale_amazon.utils.make_sp_api_request',
             new=lambda account_, operation_, **_kwargs: common.OPERATIONS_RESPONSES_MAP[operation_],
         ), patch(
-            'odoo.addons.sale_amazon.utils.submit_feed', new=Mock(return_value='An_amazing_id'),
+            'koda.addons.sale_amazon.utils.submit_feed', new=Mock(return_value='An_amazing_id'),
         ) as mock:
             self.account.aws_credentials_expiry = '1970-01-01'  # The field is not stored.
             self.account._sync_orders(auto_commit=False)
@@ -613,7 +613,7 @@ class TestAmazon(common.TestAmazonCommon):
     def test_get_partners_no_creation_same_partners(self):
         """ Test the partners search with contact as delivery. """
         with patch(
-                'odoo.addons.sale_amazon.utils.make_sp_api_request',
+                'koda.addons.sale_amazon.utils.make_sp_api_request',
                 new=lambda account_, operation_, **kwargs: common.OPERATIONS_RESPONSES_MAP[
                     operation_],
         ):
@@ -699,7 +699,7 @@ class TestAmazon(common.TestAmazonCommon):
                 return base_response_
 
         with patch(
-                'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
+                'koda.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ):
             self.env['res.partner'].create({
                 'name': 'Gederic Frilson',
@@ -724,7 +724,7 @@ class TestAmazon(common.TestAmazonCommon):
     def test_get_partners_creation_contact(self):
         """ Test the partners search with creation of the contact. """
         with patch(
-                'odoo.addons.sale_amazon.utils.make_sp_api_request',
+                'koda.addons.sale_amazon.utils.make_sp_api_request',
                 new=lambda account_, operation_, **kwargs: common.OPERATIONS_RESPONSES_MAP[
                     operation_],
         ):

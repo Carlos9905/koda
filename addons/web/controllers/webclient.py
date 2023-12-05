@@ -10,8 +10,8 @@ import werkzeug.utils
 import werkzeug.wrappers
 import werkzeug.wsgi
 
-import odoo
-import odoo.modules.registry
+import koda
+import koda.modules.registry
 from koda import http
 from koda.modules import get_manifest
 from koda.http import request
@@ -25,7 +25,7 @@ _logger = logging.getLogger(__name__)
 
 @lazy
 def CONTENT_MAXAGE():
-    warnings.warn("CONTENT_MAXAGE is a deprecated alias to odoo.http.STATIC_CACHE_LONG", DeprecationWarning)
+    warnings.warn("CONTENT_MAXAGE is a deprecated alias to koda.http.STATIC_CACHE_LONG", DeprecationWarning)
     return http.STATIC_CACHE_LONG
 
 
@@ -72,7 +72,7 @@ class WebClient(http.Controller):
         lang = request.env.context['lang'].partition('_')[0]
 
         if mods is None:
-            mods = odoo.conf.server_wide_modules or []
+            mods = koda.conf.server_wide_modules or []
             if request.db:
                 mods = request.env.registry._init_modules.union(mods)
 
@@ -101,7 +101,7 @@ class WebClient(http.Controller):
         if mods:
             mods = mods.split(',')
         elif mods is None:
-            mods = list(request.env.registry._init_modules) + (odoo.conf.server_wide_modules or [])
+            mods = list(request.env.registry._init_modules) + (koda.conf.server_wide_modules or [])
 
         translations_per_module, lang_params = request.env["ir.http"].get_translations_for_webclient(mods, lang)
 
@@ -121,7 +121,7 @@ class WebClient(http.Controller):
 
     @http.route('/web/webclient/version_info', type='json', auth="none")
     def version_info(self):
-        return odoo.service.common.exp_version()
+        return koda.service.common.exp_version()
 
     @http.route('/web/tests', type='http', auth="user")
     def test_suite(self, mod=None, **kwargs):

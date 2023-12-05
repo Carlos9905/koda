@@ -98,7 +98,7 @@ class TestPartnerVCard(HttpCase):
             'password': 'testuser',
         })
         self.authenticate('testuser', 'testuser')
-        with mute_logger('odoo.http'):  # mute 403 warning
+        with mute_logger('koda.http'):  # mute 403 warning
             res = self.url_open('/web/partner/vcard?partner_ids=%s,%s' %
                             (self.partners[0].id, self.partners[1].id))
         self.assertEqual(res.status_code, 403)

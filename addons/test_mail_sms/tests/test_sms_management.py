@@ -127,7 +127,7 @@ class TestSMSActions(TestSMSActionsCommon):
 @tagged('sms_management')
 class TestSMSWizards(TestSMSActionsCommon):
 
-    @mute_logger('odoo.addons.sms.models.sms_sms')
+    @mute_logger('koda.addons.sms.models.sms_sms')
     def test_sms_resend(self):
         self._reset_bus()
 
@@ -143,7 +143,7 @@ class TestSMSWizards(TestSMSActionsCommon):
         ], 'TEST BODY', self.msg, check_sms=True)
         self.assertMessageBusNotifications(self.msg)
 
-    @mute_logger('odoo.addons.sms.models.sms_sms')
+    @mute_logger('koda.addons.sms.models.sms_sms')
     def test_sms_resend_update_number(self):
         self._reset_bus()
 
@@ -173,7 +173,7 @@ class TestSMSWizards(TestSMSActionsCommon):
         ], 'TEST BODY', self.msg, check_sms=False)
         self.assertMessageBusNotifications(self.msg)
 
-    @mute_logger('odoo.addons.sms.models.sms_sms')
+    @mute_logger('koda.addons.sms.models.sms_sms')
     def test_sms_resend_internals(self):
         self._reset_bus()
         self.assertSMSNotification([
@@ -189,7 +189,7 @@ class TestSMSWizards(TestSMSActionsCommon):
             with self.mockSMSGateway():
                 wizard.action_resend()
 
-    @mute_logger('odoo.addons.sms.models.sms_sms')
+    @mute_logger('koda.addons.sms.models.sms_sms')
     def test_sms_resend_w_cancel(self):
         self._reset_bus()
 

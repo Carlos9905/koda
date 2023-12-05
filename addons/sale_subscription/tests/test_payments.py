@@ -20,8 +20,8 @@ class TestSubscriptionPayments(PaymentCommon, TestSubscriptionCommon, MockEmail)
 
         self.original_prepare_invoice = self.subscription._prepare_invoice
 
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment),\
-            patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._send_success_mail',
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment),\
+            patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._send_success_mail',
                   wraps=self._mock_subscription_send_success_mail):
 
             self.subscription.write({
@@ -83,8 +83,8 @@ class TestSubscriptionPayments(PaymentCommon, TestSubscriptionCommon, MockEmail)
     def test_auto_payment_across_time(self):
         self.original_prepare_invoice = self.subscription._prepare_invoice
 
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment), \
-                patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._send_success_mail',
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment), \
+                patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._send_success_mail',
                       wraps=self._mock_subscription_send_success_mail):
 
             subscription_tmpl = self.env['sale.order.template'].create({
@@ -175,7 +175,7 @@ class TestSubscriptionPayments(PaymentCommon, TestSubscriptionCommon, MockEmail)
             self.subscription._prepare_invoice()
         )
         with patch(
-            'odoo.addons.payment.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment.models.payment_transaction.PaymentTransaction'
             '._send_payment_request'
         ) as patched:
             self.subscription._do_payment(self._create_token(), self.invoice)
@@ -219,26 +219,26 @@ class TestSubscriptionPayments(PaymentCommon, TestSubscriptionCommon, MockEmail)
         self.assertTrue(subscription.is_subscription)
         self.assertEqual(subscription.payment_token_id.id, test_payment_token.id)
 
-    @mute_logger('odoo.addons.sale_subscription.models.sale_order')
+    @mute_logger('koda.addons.sale_subscription.models.sale_order')
     def test_exception_mail(self):
         self.subscription.write({'payment_token_id': self.payment_method.id,
                                  'client_order_ref': 'Customer REF XXXXXXX'
         })
         self.subscription.action_confirm()
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', side_effect=Exception("Bad Token")), self.mock_mail_gateway():
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', side_effect=Exception("Bad Token")), self.mock_mail_gateway():
             self.subscription._create_recurring_invoice()
         found_mail = self._find_mail_mail_wemail('accountman@test.com', 'sent', author=self.env.user.partner_id)
         mail_body = "<p>Error during renewal of contract [%s] Customer REF XXXXXXX Payment not recorded</p><p>Bad Token</p>" % self.subscription.id
         self.assertEqual(found_mail.body_html, mail_body)
 
-    @mute_logger('odoo.addons.sale_subscription.models.sale_order')
+    @mute_logger('koda.addons.sale_subscription.models.sale_order')
     def test_bad_payment_exception(self):
         self.subscription.write({'payment_token_id': self.payment_method.id,
                                  'client_order_ref': 'Customer REF XXXXXXX'
         })
         self.subscription.action_confirm()
 
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', side_effect=Exception("Oops, network error")),\
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', side_effect=Exception("Oops, network error")),\
              self.mock_mail_gateway():
             self.subscription._create_recurring_invoice()
 
@@ -249,7 +249,7 @@ class TestSubscriptionPayments(PaymentCommon, TestSubscriptionCommon, MockEmail)
             "We should not have updated the next invoice date, as the invoice was unlinked",
         )
 
-    @mute_logger('odoo.addons.sale_subscription.models.sale_order')
+    @mute_logger('koda.addons.sale_subscription.models.sale_order')
     def test_bad_payment_exception_post_success(self):
         self.subscription.write({'payment_token_id': self.payment_method.id,
                                  'client_order_ref': 'Customer REF XXXXXXX'
@@ -262,8 +262,8 @@ class TestSubscriptionPayments(PaymentCommon, TestSubscriptionCommon, MockEmail)
             tx.env.cr.flush()  # simulate commit after sucessfull `_do_payment()`
             return tx
 
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=_mock_subscription_do_payment_and_commit),\
-             patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._subscription_post_success_payment', side_effect=Exception("Kaput")),\
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=_mock_subscription_do_payment_and_commit),\
+             patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._subscription_post_success_payment', side_effect=Exception("Kaput")),\
              self.mock_mail_gateway():
             invoice = self.subscription._create_recurring_invoice()
             with self.assertRaises(Exception):
@@ -281,14 +281,14 @@ class TestSubscriptionPayments(PaymentCommon, TestSubscriptionCommon, MockEmail)
             "The next invoice date should have been updated, as the invoice was kept after the payment succeeded",
         )
 
-    @mute_logger('odoo.addons.sale_subscription.models.sale_order')
+    @mute_logger('koda.addons.sale_subscription.models.sale_order')
     def test_bad_payment_rejected(self):
         self.subscription.write({'payment_token_id': self.payment_method.id,
                                  'client_order_ref': 'Customer REF XXXXXXX'
         })
         self.subscription.action_confirm()
 
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment_rejected),\
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment_rejected),\
              self.mock_mail_gateway():
             self.subscription._create_recurring_invoice()
 
@@ -538,7 +538,7 @@ class TestSubscriptionPayments(PaymentCommon, TestSubscriptionCommon, MockEmail)
     def test_subscription_invoice_after_payment(self):
         self.amount = self.subscription.amount_total
         tx = self._create_transaction(flow='redirect', sale_order_ids=[self.subscription.id], state='done')
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('koda.addons.sale.models.payment_transaction'):
             tx._reconcile_after_done()
         self.assertEqual(self.subscription.state, 'sale')
         self.assertEqual(len(self.subscription.invoice_ids), 1)

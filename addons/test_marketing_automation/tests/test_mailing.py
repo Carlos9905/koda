@@ -30,7 +30,7 @@ class TestMassMailing(CronMixinCase, TestMACommon):
         }])
 
     @users('user_marketing_automation')
-    @mute_logger('odoo.addons.mass_mailing.models.mailing')
+    @mute_logger('koda.addons.mass_mailing.models.mailing')
     def test_mailing_duplicate_is_test(self):
         """ Check that only non-tests records can be considered as duplicates"""
         test_records = self.test_records.with_env(self.env)

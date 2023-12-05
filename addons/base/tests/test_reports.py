@@ -4,8 +4,8 @@ import io
 import logging
 from base64 import b64decode
 
-import odoo
-import odoo.tests
+import koda
+import koda.tests
 
 try:
     from pdfminer.converter import PDFPageAggregator
@@ -21,8 +21,8 @@ except ImportError:
 _logger = logging.getLogger(__name__)
 
 
-@odoo.tests.tagged('post_install', '-at_install', 'post_install_l10n')
-class TestReports(odoo.tests.TransactionCase):
+@koda.tests.tagged('post_install', '-at_install', 'post_install_l10n')
+class TestReports(koda.tests.TransactionCase):
     def test_reports(self):
         invoice_domain = [('move_type', 'in', ('out_invoice', 'out_refund', 'out_receipt', 'in_invoice', 'in_refund', 'in_receipt'))]
         specific_model_domains = {
@@ -171,7 +171,7 @@ class Box:
         return (self.y1, self.x1, self.y2, self.x2) < (other.y1, other.x1, other.y2, other.x2)
 
 
-class TestReportsRenderingCommon(odoo.tests.HttpCase):
+class TestReportsRenderingCommon(koda.tests.HttpCase):
 
     def setUp(self):
         super().setUp()
@@ -264,7 +264,7 @@ class TestReportsRenderingCommon(odoo.tests.HttpCase):
 
     def save_pdf(self):
         assert self.last_pdf_content
-        odoo.tests.save_test_file(self._testMethodName, self.last_pdf_content, 'pdf_', 'pdf', document_type='Report PDF', logger=_logger)
+        koda.tests.save_test_file(self._testMethodName, self.last_pdf_content, 'pdf_', 'pdf', document_type='Report PDF', logger=_logger)
 
     def _get_pdf_pages(self, pdf_content):
         ioBytes = io.BytesIO(pdf_content)
@@ -323,7 +323,7 @@ class TestReportsRenderingCommon(odoo.tests.HttpCase):
             )
 
 
-@odoo.tests.tagged('post_install', '-at_install', 'pdf_rendering')
+@koda.tests.tagged('post_install', '-at_install', 'pdf_rendering')
 class TestReportsRendering(TestReportsRenderingCommon):
     """
         This test aims to test as much as possible the current pdf rendering,
@@ -524,7 +524,7 @@ class TestReportsRendering(TestReportsRenderingCommon):
         self.assertEqual(pages_contents, expected_pages_contents)
 
 
-@odoo.tests.tagged('post_install', '-at_install', '-standard', 'pdf_rendering')
+@koda.tests.tagged('post_install', '-at_install', '-standard', 'pdf_rendering')
 class TestReportsRenderingLimitations(TestReportsRenderingCommon):
     def test_no_clip(self):
         """

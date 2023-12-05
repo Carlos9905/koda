@@ -11,7 +11,7 @@ class TestEdiXmls(TestPeEdiCommon):
 
     def test_invoice_simple_case(self):
         with freeze_time(self.frozen_today), \
-             patch('odoo.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
+             patch('koda.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
                    new=mocked_l10n_pe_edi_post_invoice_web_service):
             move = self._create_invoice()
             move.action_post()
@@ -27,7 +27,7 @@ class TestEdiXmls(TestPeEdiCommon):
 
     def test_refund_simple_case(self):
         with freeze_time(self.frozen_today), \
-             patch('odoo.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
+             patch('koda.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
                    new=mocked_l10n_pe_edi_post_invoice_web_service):
             move = self._create_refund()
             (move.reversed_entry_id + move).action_post()
@@ -43,7 +43,7 @@ class TestEdiXmls(TestPeEdiCommon):
 
     def test_debit_note_simple_case(self):
         with freeze_time(self.frozen_today), \
-             patch('odoo.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
+             patch('koda.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
                    new=mocked_l10n_pe_edi_post_invoice_web_service):
             move = self._create_debit_note()
             (move.debit_origin_id + move).action_post()
@@ -62,7 +62,7 @@ class TestEdiXmls(TestPeEdiCommon):
         self.product.l10n_pe_withhold_percentage = 10
         self.product.l10n_pe_withhold_code = '001'
         with freeze_time(self.frozen_today), \
-                patch('odoo.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
+                patch('koda.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
                    new=mocked_l10n_pe_edi_post_invoice_web_service):
             update_vals_dict = {"l10n_pe_edi_operation_type": "1001",
                                 "invoice_payment_term_id": self.env.ref("account.account_payment_term_advance_60days").id}

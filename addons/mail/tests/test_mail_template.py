@@ -240,7 +240,7 @@ class TestMailTemplateReset(MailCommon):
                     'name':  {'mail.mail_template_test': {'fr_FR': "Mail: Test Mail Template FR"}},
                 }
 
-        with patch('odoo.tools.translate.TranslationImporter.load_file', fake_load_file):
+        with patch('koda.tools.translate.TranslationImporter.load_file', fake_load_file):
             mail_template_reset = self.env['mail.template.reset'].with_context(context).create({})
             reset_action = mail_template_reset.reset_template()
         self.assertTrue(reset_action)

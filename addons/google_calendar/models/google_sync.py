@@ -150,7 +150,7 @@ class GoogleSync(models.AbstractModel):
         existing ones.
 
         :param google_recurrences: Google recurrences to synchronize in Odoo
-        :return: synchronized odoo recurrences
+        :return: synchronized koda recurrences
         """
         existing = google_events.exists(self.env)
         new = google_events - existing - google_events.cancelled()
@@ -178,7 +178,7 @@ class GoogleSync(models.AbstractModel):
         synced_records = new_odoo + cancelled_odoo
         for gevent in existing - cancelled:
             # Last updated wins.
-            # This could be dangerous if google server time and odoo server time are different
+            # This could be dangerous if google server time and koda server time are different
             updated = parse(gevent.updated)
             odoo_record = self.browse(gevent.odoo_id(self.env))
             # Migration from 13.4 does not fill write_date. Therefore, we force the update from Google.

@@ -18,7 +18,7 @@ from . import ustr, config
 from .safe_eval import safe_eval
 
 _logger = logging.getLogger(__name__)
-_test_logger = logging.getLogger('odoo.tests')
+_test_logger = logging.getLogger('koda.tests')
 
 
 def try_report(cr, uid, rname, ids, data=None, context=None, our_module=None, report_type=None):

@@ -19,7 +19,7 @@ class SaleOrderCloseReason(models.Model):
     retention_button_text = fields.Char('Button Text', translate=True)
     retention_button_link = fields.Char('Button Link', translate=True)
     empty_retention_message = fields.Boolean(compute='_compute_empty_retention_message')
-    # protected reasons can't be deleted as they are used by odoo bot
+    # protected reasons can't be deleted as they are used by koda bot
     is_protected = fields.Boolean(default=False)
 
     @api.depends('retention_message')

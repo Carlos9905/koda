@@ -104,7 +104,7 @@ class TestProcRule(TransactionCase):
         # to the purchase demo data. As we update the stock module to run this test, the
         # method won't be an attribute of stock.procurement at this moment. For that reason
         # we mute the logger when running the scheduler.
-        with mute_logger('odoo.addons.stock.models.procurement'):
+        with mute_logger('koda.addons.stock.models.procurement'):
             self.env['procurement.group'].run_scheduler()
 
         # Check that a picking was created from stock to output.

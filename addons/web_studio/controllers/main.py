@@ -7,7 +7,7 @@ from ast import literal_eval
 from copy import deepcopy
 from lxml import etree
 
-import odoo
+import koda
 from koda import http, _
 from koda.http import content_disposition, request
 from koda.exceptions import UserError, AccessError, ValidationError

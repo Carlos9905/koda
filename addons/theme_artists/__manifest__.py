@@ -58,7 +58,7 @@
         '_': ['s_parallax', 's_numbers', 's_image_text', 's_product_catalog', 's_quotes_carousel'],
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-artists.odoo.com',
+    'live_test_url': 'https://theme-artists.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_artists/static/src/js/tour.js',

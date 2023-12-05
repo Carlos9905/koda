@@ -173,7 +173,7 @@ class TestSyncing(SyncingCase):
         self.assertEqual(campaign.last_sync_date, self.date_reference)
         self.assertFalse(campaign.require_sync)
 
-    @mute_logger('odoo.addons.mass_mailing.models.mailing', 'odoo.tests')
+    @mute_logger('koda.addons.mass_mailing.models.mailing', 'koda.tests')
     def test_activity_schedule_date(self):
         """ Test updating participants in a running campaign, check schedule
         date is set based on trigger type / parent. """

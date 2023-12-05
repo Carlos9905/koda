@@ -11,7 +11,7 @@ from .common import TestL10nClEdiCommon, _check_with_xsd_patch
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
-@patch('odoo.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
+@patch('koda.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
 class TestL10nClDte(TestL10nClEdiCommon):
     """
     Summary of the document types to test:

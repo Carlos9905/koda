@@ -8,8 +8,8 @@ import tempfile
 
 from lxml import html
 
-import odoo
-import odoo.modules.registry
+import koda
+import koda.modules.registry
 from koda import http
 from koda.http import content_disposition, dispatch_rpc, request, Response
 from koda.service import db
@@ -29,16 +29,16 @@ class Database(http.Controller):
 
     def _render_template(self, **d):
         d.setdefault('manage', True)
-        d['insecure'] = odoo.tools.config.verify_admin_password('admin')
-        d['list_db'] = odoo.tools.config['list_db']
-        d['langs'] = odoo.service.db.exp_list_lang()
-        d['countries'] = odoo.service.db.exp_list_countries()
+        d['insecure'] = koda.tools.config.verify_admin_password('admin')
+        d['list_db'] = koda.tools.config['list_db']
+        d['langs'] = koda.service.db.exp_list_lang()
+        d['countries'] = koda.service.db.exp_list_countries()
         d['pattern'] = DBNAME_PATTERN
         # databases list
         try:
             d['databases'] = http.db_list()
-            d['incompatible_databases'] = odoo.service.db.list_db_incompatible(d['databases'])
-        except odoo.exceptions.AccessDenied:
+            d['incompatible_databases'] = koda.service.db.list_db_incompatible(d['databases'])
+        except koda.exceptions.AccessDenied:
             d['databases'] = [request.db] if request.db else []
 
         templates = {}
@@ -70,7 +70,7 @@ class Database(http.Controller):
 
     @http.route('/web/database/create', type='http', auth="none", methods=['POST'], csrf=False)
     def create(self, master_pwd, name, lang, password, **post):
-        insecure = odoo.tools.config.verify_admin_password('admin')
+        insecure = koda.tools.config.verify_admin_password('admin')
         if insecure and master_pwd:
             dispatch_rpc('db', 'change_admin_password', ["admin", master_pwd])
         try:
@@ -89,7 +89,7 @@ class Database(http.Controller):
 
     @http.route('/web/database/duplicate', type='http', auth="none", methods=['POST'], csrf=False)
     def duplicate(self, master_pwd, name, new_name, neutralize_database=False):
-        insecure = odoo.tools.config.verify_admin_password('admin')
+        insecure = koda.tools.config.verify_admin_password('admin')
         if insecure and master_pwd:
             dispatch_rpc('db', 'change_admin_password', ["admin", master_pwd])
         try:
@@ -106,7 +106,7 @@ class Database(http.Controller):
 
     @http.route('/web/database/drop', type='http', auth="none", methods=['POST'], csrf=False)
     def drop(self, master_pwd, name):
-        insecure = odoo.tools.config.verify_admin_password('admin')
+        insecure = koda.tools.config.verify_admin_password('admin')
         if insecure and master_pwd:
             dispatch_rpc('db', 'change_admin_password', ["admin", master_pwd])
         try:
@@ -121,18 +121,18 @@ class Database(http.Controller):
 
     @http.route('/web/database/backup', type='http', auth="none", methods=['POST'], csrf=False)
     def backup(self, master_pwd, name, backup_format='zip'):
-        insecure = odoo.tools.config.verify_admin_password('admin')
+        insecure = koda.tools.config.verify_admin_password('admin')
         if insecure and master_pwd:
             dispatch_rpc('db', 'change_admin_password', ["admin", master_pwd])
         try:
-            odoo.service.db.check_super(master_pwd)
+            koda.service.db.check_super(master_pwd)
             ts = datetime.datetime.utcnow().strftime("%Y-%m-%d_%H-%M-%S")
             filename = "%s_%s.%s" % (name, ts, backup_format)
             headers = [
                 ('Content-Type', 'application/octet-stream; charset=binary'),
                 ('Content-Disposition', content_disposition(filename)),
             ]
-            dump_stream = odoo.service.db.dump_db(name, None, backup_format)
+            dump_stream = koda.service.db.dump_db(name, None, backup_format)
             response = Response(dump_stream, headers=headers, direct_passthrough=True)
             return response
         except Exception as e:
@@ -142,7 +142,7 @@ class Database(http.Controller):
 
     @http.route('/web/database/restore', type='http', auth="none", methods=['POST'], csrf=False)
     def restore(self, master_pwd, backup_file, name, copy=False, neutralize_database=False):
-        insecure = odoo.tools.config.verify_admin_password('admin')
+        insecure = koda.tools.config.verify_admin_password('admin')
         if insecure and master_pwd:
             dispatch_rpc('db', 'change_admin_password', ["admin", master_pwd])
         try:

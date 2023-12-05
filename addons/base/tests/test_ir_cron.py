@@ -10,7 +10,7 @@ from datetime import timedelta
 from unittest.mock import call, patch
 from freezegun import freeze_time
 
-import odoo
+import koda
 from koda import api, fields
 from koda.tests.common import BaseCase, TransactionCase, RecordCapturer, get_db_name, tagged
 from koda.tools import mute_logger
@@ -270,7 +270,7 @@ class TestIrCronConcurrent(BaseCase, CronMixinCase):
         super().setUpClass()
 
         # Keep a reference on the real cron methods, those without patch
-        cls.registry = odoo.registry(get_db_name())
+        cls.registry = koda.registry(get_db_name())
         cls.cron_process_job = cls.registry['ir.cron']._process_job
         cls.cron_process_jobs = cls.registry['ir.cron']._process_jobs
         cls.cron_get_all_ready_jobs = cls.registry['ir.cron']._get_all_ready_jobs
@@ -281,7 +281,7 @@ class TestIrCronConcurrent(BaseCase, CronMixinCase):
         super().setUp()
 
         with self.registry.cursor() as cr:
-            env = api.Environment(cr, odoo.SUPERUSER_ID, {})
+            env = api.Environment(cr, koda.SUPERUSER_ID, {})
             env['ir.cron'].search([]).unlink()
             env['ir.cron.trigger'].search([]).unlink()
 
@@ -339,7 +339,7 @@ class TestIrCronConcurrent(BaseCase, CronMixinCase):
         def acquire_one_job(*args, **kwargs):
             lock.acquire(timeout=1)
             try:
-                with mute_logger('odoo.sql_db'):
+                with mute_logger('koda.sql_db'):
                     job = self.cron_acquire_one_job(*args, **kwargs)
             except Exception:
                 lock.release()
@@ -360,7 +360,7 @@ class TestIrCronConcurrent(BaseCase, CronMixinCase):
 
         # Set 2 jobs ready, process them in 2 different threads.
         with self.registry.cursor() as cr:
-            env = api.Environment(cr, odoo.SUPERUSER_ID, {})
+            env = api.Environment(cr, koda.SUPERUSER_ID, {})
             env['ir.cron'].browse(self.cron_ids).write({
                 'nextcall': fields.Datetime.now() - timedelta(hours=1)
             })

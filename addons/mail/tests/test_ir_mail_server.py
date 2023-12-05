@@ -52,22 +52,22 @@ class TestIrMailServer(MailCommon):
                 )
                 self.assertEqual(message["From"], expected_from)
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     @patch.dict(config.options, {
         "from_filter": "dummy@example.com, test.mycompany.com, dummy2@example.com",
         "smtp_server": "example.com",
     })
     def test_mail_server_config_bin(self):
-        """ Test the configuration provided in the odoo-bin arguments. This config
+        """ Test the configuration provided in the koda-bin arguments. This config
         is used when no mail server exists. Test with and without giving a
         pre-configured SMTP session, should not impact results.
 
         Also check "mail.default.from_filter" parameter usage that should overwrite
-        odoo-bin argument "--from-filter".
+        koda-bin argument "--from-filter".
         """
         IrMailServer = self.env['ir.mail_server']
 
-        # Remove all mail server so we will use the odoo-bin arguments
+        # Remove all mail server so we will use the koda-bin arguments
         IrMailServer.search([]).unlink()
         self.assertFalse(IrMailServer.search([]))
 
@@ -144,7 +144,7 @@ class TestIrMailServer(MailCommon):
                 ('notifications', 'dummy.com, full_email@example_2.com, dummy2.com'),
                 ('notifications', self.mail_alias_domain.name),
                 ('notifications', f'{self.mail_alias_domain.name}, example_2.com'),
-                # default relies on "odoo"
+                # default relies on "koda"
                 (False, self.mail_alias_domain.name),
                 # fallback on user email if no from_filter
                 ('notifications', ' '),
@@ -155,7 +155,7 @@ class TestIrMailServer(MailCommon):
                 'full_email@example_2.com',
                 f'notifications@{self.mail_alias_domain.name}',
                 f'notifications@{self.mail_alias_domain.name}',
-                f'odoo@{self.mail_alias_domain.name}',
+                f'koda@{self.mail_alias_domain.name}',
                 self.env.user.email,
                 self.env.user.email,
                 self.env.user.email,
@@ -168,7 +168,7 @@ class TestIrMailServer(MailCommon):
                 email_from = test_server._get_test_email_from()
                 self.assertEqual(email_from, expected_test_email)
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_mail_server_priorities(self):
         """ Test if we choose the right mail server to send an email.
         Priorities are
@@ -225,7 +225,7 @@ class TestIrMailServer(MailCommon):
                 self.assertEqual(mail_server, expected_mail_server)
                 self.assertEqual(mail_from, expected_email_from)
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_mail_server_send_email(self):
         """ Test main 'send_email' usage: check mail_server choice based on from
         filters, encapsulation, spoofing. """

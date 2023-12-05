@@ -113,7 +113,7 @@ class TestTimesheetValidation(TestCommonTimesheet, MockEmail):
 
         # To allow testing
 
-        patchers = [patch('odoo.fields.Datetime.now', _now)]
+        patchers = [patch('koda.fields.Datetime.now', _now)]
 
         for patcher in patchers:
             self.startPatcher(patcher)

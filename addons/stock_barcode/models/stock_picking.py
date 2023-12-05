@@ -148,9 +148,9 @@ class StockPicking(models.Model):
         """ Create a new picking for the given picking type.
 
         :param picking_type:
-        :type picking_type: :class:`~odoo.addons.stock.models.stock_picking.PickingType`
+        :type picking_type: :class:`~koda.addons.stock.models.stock_picking.PickingType`
         :return: a new picking
-        :rtype: :class:`~odoo.addons.stock.models.stock_picking.Picking`
+        :rtype: :class:`~koda.addons.stock.models.stock_picking.Picking`
         """
         # Find source and destination Locations
         location_dest_id, location_id = picking_type.warehouse_id._get_partner_locations()

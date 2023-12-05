@@ -10,7 +10,7 @@ from koda.tools import mute_logger
 
 class WebsiteAppointmentSaleTest(AppointmentAccountPaymentCommon):
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('apt_manager')
     def test_booking_to_event_collisions_resources(self):
         """ Checks that a booking does not add a sale order line in cart if it would then
@@ -90,7 +90,7 @@ class WebsiteAppointmentSaleTest(AppointmentAccountPaymentCommon):
         self.assertEqual(resources_remaining_capacity['total_remaining_capacity'], 0)
 
     @freeze_time('2022-2-13 20:00:00')
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('apt_manager')
     def test_booking_to_event_collisions_users(self):
         """ Checks that a booking does not add a sale order line in cart when it already contains a
@@ -157,7 +157,7 @@ class WebsiteAppointmentSaleTest(AppointmentAccountPaymentCommon):
         slots_list = self._filter_appointment_slots(slots)
         self.assertEqual(len(slots_list), 0)
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('apt_manager')
     def test_booking_to_event_on_so_confirmation_resource(self):
         """ Replace booking with Event when SO is confirmed - resource appointment """
@@ -241,7 +241,7 @@ class WebsiteAppointmentSaleTest(AppointmentAccountPaymentCommon):
         self.assertEqual(booking_line.event_stop, calendar_booking.stop)
 
     @freeze_time('2022-2-13 20:00:00')
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('apt_manager')
     def test_booking_to_event_on_so_confirmation_users(self):
         """ Replace booking with Event when invoice is paid - staff user appointment """

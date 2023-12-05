@@ -17,8 +17,8 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-DEFAULT_IAP_ENDPOINT = "https://l10n-in-edi.api.odoo.com"
-DEFAULT_IAP_TEST_ENDPOINT = "https://l10n-in-edi-demo.api.odoo.com"
+DEFAULT_IAP_ENDPOINT = "https://l10n-in-edi.api.koda.com"
+DEFAULT_IAP_TEST_ENDPOINT = "https://l10n-in-edi-demo.api.koda.com"
 
 
 class AccountEdiFormat(models.Model):
@@ -126,7 +126,7 @@ class AccountEdiFormat(models.Model):
             error_codes = [e.get("code") for e in error]
             if "1005" in error_codes:
                 # Invalid token eror then create new token and send generate request again.
-                # This happen when authenticate called from another odoo instance with same credentials (like. Demo/Test)
+                # This happen when authenticate called from another koda instance with same credentials (like. Demo/Test)
                 authenticate_response = self._l10n_in_edi_authenticate(invoice.company_id)
                 if not authenticate_response.get("error"):
                     error = []
@@ -189,7 +189,7 @@ class AccountEdiFormat(models.Model):
             error_codes = [e.get("code") for e in error]
             if "1005" in error_codes:
                 # Invalid token eror then create new token and send generate request again.
-                # This happen when authenticate called from another odoo instance with same credentials (like. Demo/Test)
+                # This happen when authenticate called from another koda instance with same credentials (like. Demo/Test)
                 authenticate_response = self._l10n_in_edi_authenticate(invoice.company_id)
                 if not authenticate_response.get("error"):
                     error = []
@@ -667,7 +667,7 @@ class AccountEdiFormat(models.Model):
     def _l10n_in_edi_authenticate(self, company):
         params = {"password": company.sudo().l10n_in_edi_password}
         response = self._l10n_in_edi_connect_to_server(company, url_path="/iap/l10n_in_edi/1/authenticate", params=params)
-        # validity data-time in Indian standard time(UTC+05:30) so remove that gap and store in odoo
+        # validity data-time in Indian standard time(UTC+05:30) so remove that gap and store in koda
         if "data" in response:
             tz = pytz.timezone("Asia/Kolkata")
             local_time = tz.localize(fields.Datetime.to_datetime(response["data"]["TokenExpiry"]))

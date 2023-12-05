@@ -4,7 +4,7 @@ import json
 import socket
 from datetime import datetime
 
-import odoo
+import koda
 from koda.tools.misc import mute_logger
 from koda.addons.mail.models.partner_devices import InvalidVapidError
 from koda.addons.mail.tests.common import mail_new_test_user
@@ -59,7 +59,7 @@ class TestWebPushNotification(SMSCommon):
         cls.vapid_public_key = cls.env['mail.partner.device'].get_web_push_vapid_public_key()
 
         cls.env['mail.partner.device'].sudo().create([{
-            'endpoint': 'https://test.odoo.com/webpush/user1',
+            'endpoint': 'https://test.koda.com/webpush/user1',
             'expiration_time': None,
             'keys': json.dumps({
                 'p256dh': 'BGbhnoP_91U7oR59BaaSx0JnDv2oEooYnJRV2AbY5TBeKGCRCf0HcIJ9bOKchUCDH4cHYWo9SYDz3U-8vSxPL_A',
@@ -69,7 +69,7 @@ class TestWebPushNotification(SMSCommon):
         }])
 
         cls.env['mail.partner.device'].sudo().create([{
-            'endpoint': 'https://test.odoo.com/webpush/user2',
+            'endpoint': 'https://test.koda.com/webpush/user2',
             'expiration_time': None,
             'keys': json.dumps({
                 'p256dh': 'BGbhnoP_91U7oR59BaaSx0JnDv2oEooYnJRV2AbY5TBeKGCRCf0HcIJ9bOKchUCDH4cHYWo9SYDz3U-8vSxPL_A',
@@ -85,7 +85,7 @@ class TestWebPushNotification(SMSCommon):
         notification_count = self.env['mail.notification.web.push'].search_count([])
         self.assertEqual(notification_count, number_of_notification)
 
-    @patch.object(odoo.addons.mail.models.mail_thread, 'push_to_end_point')
+    @patch.object(koda.addons.mail.models.mail_thread, 'push_to_end_point')
     def test_push_notifications(self, push_to_end_point):
         # Test No Inbox Condition
         self.record_simple.with_user(self.user_inbox).message_notify(
@@ -115,7 +115,7 @@ class TestWebPushNotification(SMSCommon):
         self.assertEqual(payload_value['options']['data']['res_id'], self.record_simple.id)
         self.assertEqual(payload_value['options']['data']['model'], self.record_simple._name)
         self.assertIn('icon', payload_value['options'])
-        self.assertEqual(push_to_end_point.call_args.kwargs['device']['endpoint'], 'https://test.odoo.com/webpush/user2')
+        self.assertEqual(push_to_end_point.call_args.kwargs['device']['endpoint'], 'https://test.koda.com/webpush/user2')
         self.assertIn('vapid_private_key', push_to_end_point.call_args.kwargs)
         self.assertIn('vapid_public_key', push_to_end_point.call_args.kwargs)
 
@@ -160,7 +160,7 @@ class TestWebPushNotification(SMSCommon):
         # As the tracking values are converted to text. We check the '→' added by ocn_client.
         self.assertIn('→', payload_value['options']['body'], 'No Tracking Message found')
 
-    @patch.object(odoo.addons.mail.models.mail_thread, 'push_to_end_point')
+    @patch.object(koda.addons.mail.models.mail_thread, 'push_to_end_point')
     def test_push_notifications_all_type(self, push_to_end_point):
         # Test Direct Message
         self.direct_message_channel.with_user(self.user_email).message_post(
@@ -168,7 +168,7 @@ class TestWebPushNotification(SMSCommon):
 
         self._assert_notification_count_for_cron(0)
         push_to_end_point.assert_called_once()
-        self.assertEqual(push_to_end_point.call_args.kwargs['device']['endpoint'], 'https://test.odoo.com/webpush/user2')
+        self.assertEqual(push_to_end_point.call_args.kwargs['device']['endpoint'], 'https://test.koda.com/webpush/user2')
 
         # Reset the mock counter
         push_to_end_point.reset_mock()
@@ -218,7 +218,7 @@ class TestWebPushNotification(SMSCommon):
         self._assert_notification_count_for_cron(0)
         push_to_end_point.assert_called_once()
 
-    @patch.object(odoo.addons.mail.models.mail_thread, 'push_to_end_point')
+    @patch.object(koda.addons.mail.models.mail_thread, 'push_to_end_point')
     def test_push_notifications_mail_replay(self, push_to_end_point):
         test_record = self.env['mail.test.gateway'].with_context(self._test_context).create({
             'name': 'Test',
@@ -252,12 +252,12 @@ class TestWebPushNotification(SMSCommon):
             'The body must contain the text send by mail'
         )
 
-    @patch.object(odoo.addons.mail.models.web_push, 'push_to_end_point')
+    @patch.object(koda.addons.mail.models.web_push, 'push_to_end_point')
     def test_push_notifications_cron(self, push_to_end_point):
         # Add 4 more devices to force sending via cron queue
         for index in range(10, 14):
             self.env['mail.partner.device'].sudo().create([{
-                'endpoint': 'https://test.odoo.com/webpush/user%d' % index,
+                'endpoint': 'https://test.koda.com/webpush/user%d' % index,
                 'expiration_time': None,
                 'keys': json.dumps({
                     'p256dh': 'BGbhnoP_91U7oR59BaaSx0JnDv2oEooYnJRV2AbY5TBeKGCRCf0HcIJ9bOKchUCDH4cHYWo9SYDz3U-8vSxPL_A',
@@ -278,7 +278,7 @@ class TestWebPushNotification(SMSCommon):
         self._trigger_cron_job()
         self.assertEqual(push_to_end_point.call_count, 5)
 
-    @patch.object(odoo.addons.mail.models.mail_thread.Session, 'post',
+    @patch.object(koda.addons.mail.models.mail_thread.Session, 'post',
                   return_value=SimpleNamespace(**{'status_code': 201, 'text': 'Ok'}))
     def test_push_notifications_encryption_simple(self, post):
         """
@@ -294,7 +294,7 @@ class TestWebPushNotification(SMSCommon):
 
         self._assert_notification_count_for_cron(0)
         post.assert_called_once()
-        self.assertEqual(post.call_args.args[0], 'https://test.odoo.com/webpush/user2')
+        self.assertEqual(post.call_args.args[0], 'https://test.koda.com/webpush/user2')
         self.assertIn('headers', post.call_args.kwargs)
         self.assertIn('vapid', post.call_args.kwargs['headers']['Authorization'])
         self.assertIn('t=', post.call_args.kwargs['headers']['Authorization'])
@@ -304,10 +304,10 @@ class TestWebPushNotification(SMSCommon):
         self.assertIn('data', post.call_args.kwargs)
         self.assertIn('timeout', post.call_args.kwargs)
 
-    @patch.object(odoo.addons.mail.models.mail_thread.Session, 'post',
+    @patch.object(koda.addons.mail.models.mail_thread.Session, 'post',
                   return_value=SimpleNamespace(**{'status_code': 404, 'text': 'Device Unreachable'}))
     def test_push_notifications_device_unreachable(self, post):
-        with mute_logger('odoo.addons.mail.web_push'):
+        with mute_logger('koda.addons.mail.web_push'):
             self.record_simple.with_user(self.user_email).message_notify(
                 partner_ids=self.user_inbox.partner_id.ids,
                 body='Test message send via Web Push',
@@ -318,7 +318,7 @@ class TestWebPushNotification(SMSCommon):
         self._assert_notification_count_for_cron(0)
         post.assert_called_once()
         # Test that the unreachable device is deleted from the DB
-        notification_count = self.env['mail.partner.device'].search_count([('endpoint', '=', 'https://test.odoo.com/webpush/user2')])
+        notification_count = self.env['mail.partner.device'].search_count([('endpoint', '=', 'https://test.koda.com/webpush/user2')])
         self.assertEqual(notification_count, 0)
 
 
@@ -332,7 +332,7 @@ class TestWebPushNotification(SMSCommon):
         self.assertNotEqual(self.vapid_public_key, new_vapid_public_key)
         with self.assertRaises(InvalidVapidError):
             self.env['mail.partner.device'].register_devices(
-                endpoint='https://test.odoo.com/webpush/user1',
+                endpoint='https://test.koda.com/webpush/user1',
                 expiration_time=None,
                 keys=json.dumps({
                     'p256dh': 'BGbhnoP_91U7oR59BaaSx0JnDv2oEooYnJRV2AbY5TBeKGCRCf0HcIJ9bOKchUCDH4cHYWo9SYDz3U-8vSxPL_A',

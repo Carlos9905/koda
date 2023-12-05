@@ -29,7 +29,7 @@ class TestMailTrackingDurationMixin(MailTrackingDurationMixinCase):
 @tagged('mail_thread', 'mail_blacklist')
 class TestMailThread(MailCommon, TestRecipients):
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_blacklist_mixin_email_normalized(self):
         """ Test email_normalized and is_blacklisted fields behavior, notably
         when dealing with encapsulated email fields and multi-email input. """
@@ -83,7 +83,7 @@ class TestMailThread(MailCommon, TestRecipients):
 class TestMailThreadCC(MailCommon):
 
     @users("employee")
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_suggested_recipients_mail_cc(self):
         """ MailThreadCC mixin adds its own suggested recipients management
         coming from CC (carbon copy) management. """

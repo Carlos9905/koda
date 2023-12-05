@@ -13,8 +13,8 @@ try:
 except ImportError:
     from koda.tools._vendor.send_file import send_file
 
-import odoo
-import odoo.modules.registry
+import koda
+import koda.modules.registry
 from koda import SUPERUSER_ID, _, http
 from koda.addons.base.models.assetsbundle import ANY_UNIQUE
 from koda.exceptions import AccessError, UserError
@@ -51,10 +51,10 @@ class Binary(http.Controller):
 
     @http.route('/web/filestore/<path:_path>', type='http', auth='none')
     def content_filestore(self, _path):
-        if odoo.tools.config['x_sendfile']:
+        if koda.tools.config['x_sendfile']:
             # pylint: disable=logging-format-interpolation
             _logger.error(BAD_X_SENDFILE_ERROR.format(
-                data_dir=odoo.tools.config['data_dir']
+                data_dir=koda.tools.config['data_dir']
             ))
         raise http.request.not_found()
 
@@ -241,14 +241,14 @@ class Binary(http.Controller):
         imgname = 'logo'
         imgext = '.png'
         dbname = request.db
-        uid = (request.session.uid if dbname else None) or odoo.SUPERUSER_ID
+        uid = (request.session.uid if dbname else None) or koda.SUPERUSER_ID
 
         if not dbname:
             response = http.Stream.from_path(file_path('web/static/img/logo.png')).get_response()
         else:
             try:
                 # create an empty registry
-                registry = odoo.modules.registry.Registry(dbname)
+                registry = koda.modules.registry.Registry(dbname)
                 with registry.cursor() as cr:
                     company = int(kw['company']) if kw and kw.get('company') else False
                     if company:

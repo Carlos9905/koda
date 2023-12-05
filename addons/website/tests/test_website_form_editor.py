@@ -1,11 +1,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 # -*- coding: utf-8 -*-
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestWebsiteFormEditor(odoo.tests.HttpCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestWebsiteFormEditor(koda.tests.HttpCase):
     def test_tour(self):
         self.start_tour(self.env['website'].get_client_action_url('/'), 'website_form_editor_tour', login='admin', timeout=120)
         self.start_tour('/', 'website_form_editor_tour_submit')

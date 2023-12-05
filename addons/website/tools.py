@@ -8,7 +8,7 @@ from unittest.mock import Mock, MagicMock, patch
 from werkzeug.exceptions import NotFound
 from werkzeug.test import EnvironBuilder
 
-import odoo
+import koda
 from koda.tests.common import HttpCase, HOST
 from koda.tools.misc import hmac, DotDict, frozendict
 
@@ -29,7 +29,7 @@ def MockRequest(
         httprequest=Mock(
             host='localhost',
             path=path,
-            app=odoo.http.root,
+            app=koda.http.root,
             environ=dict(
                 EnvironBuilder(
                     path=path,
@@ -43,16 +43,16 @@ def MockRequest(
             remote_addr=remote_addr,
         ),
         type='http',
-        future_response=odoo.http.FutureResponse(),
+        future_response=koda.http.FutureResponse(),
         params={},
         redirect=env['ir.http']._redirect,
         session=DotDict(
-            odoo.http.get_default_session(),
+            koda.http.get_default_session(),
             geoip={'country_code': country_code},
             sale_order_id=sale_order_id,
             website_sale_current_pl=website_sale_current_pl,
         ),
-        geoip=odoo.http.GeoIP('127.0.0.1'),
+        geoip=koda.http.GeoIP('127.0.0.1'),
         db=env.registry.db_name,
         env=env,
         registry=env.registry,
@@ -70,7 +70,7 @@ def MockRequest(
     # 'routing' attribute (routing=True) or to raise a NotFound
     # exception (routing=False).
     #
-    #   router = odoo.http.root.get_db_router()
+    #   router = koda.http.root.get_db_router()
     #   rule, args = router.bind(...).match(path)
     #   # arg routing is True => rule.endpoint.routing == {...}
     #   # arg routing is False => NotFound exception
@@ -91,9 +91,9 @@ def MockRequest(
     request.update_context = update_context
 
     with contextlib.ExitStack() as s:
-        odoo.http._request_stack.push(request)
-        s.callback(odoo.http._request_stack.pop)
-        s.enter_context(patch('odoo.http.root.get_db_router', router))
+        koda.http._request_stack.push(request)
+        s.callback(koda.http._request_stack.pop)
+        s.enter_context(patch('koda.http.root.get_db_router', router))
 
         yield request
 

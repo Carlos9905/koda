@@ -121,7 +121,7 @@ class TestMailingControllers(TestMailingControllersCommon):
 
         self.assertFalse(self.env['mail.blacklist'].search([('email', '=', self.test_email_normalized)]))
 
-    @mute_logger('odoo.http', 'odoo.addons.website.models.ir_ui_view')
+    @mute_logger('koda.http', 'koda.addons.website.models.ir_ui_view')
     def test_mailing_report_unsubscribe(self):
         """ Test deactivation of mailing report sending. It requires usage of
         a hash token. """
@@ -566,7 +566,7 @@ class TestMailingControllers(TestMailingControllersCommon):
         self.assertTracking(msg_fb, [('opt_out_reason_id', 'many2one', False, opt_out_reasons[0])])
         self.assertEqual(msg_bl.body, Markup('<p>Blocklist request from portal</p>'))
 
-    @mute_logger('odoo.http', 'odoo.addons.website.models.ir_ui_view')
+    @mute_logger('koda.http', 'koda.addons.website.models.ir_ui_view')
     def test_mailing_view(self):
         """ Test preview of mailing. It requires either a token, either being
         mailing user. """
@@ -622,7 +622,7 @@ class TestMailingControllers(TestMailingControllersCommon):
 @tagged('link_tracker', 'mailing_portal')
 class TestMailingTracking(TestMailingControllersCommon):
 
-    @mute_logger('odoo.addons.mail.models.mail_mail', 'odoo.addons.mass_mailing.models.mailing')
+    @mute_logger('koda.addons.mail.models.mail_mail', 'koda.addons.mass_mailing.models.mailing')
     def test_tracking_short_code(self):
         """ Test opening short code linked to a mailing trace: should set the
         trace as opened and clicked, create a click record. """
@@ -655,7 +655,7 @@ class TestMailingTracking(TestMailingControllersCommon):
         self.assertEqual(mailing_trace.open_datetime, self._reference_now)
         self.assertEqual(mailing_trace.trace_status, 'open')
 
-    @mute_logger('odoo.addons.mail.models.mail_mail', 'odoo.addons.mass_mailing.models.mailing')
+    @mute_logger('koda.addons.mail.models.mail_mail', 'koda.addons.mass_mailing.models.mailing')
     def test_tracking_url_token(self):
         """ Test tracking of mails linked to a mailing trace: should set the
         trace as opened. """

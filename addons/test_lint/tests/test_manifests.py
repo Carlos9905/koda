@@ -21,7 +21,7 @@ MANIFEST_KEYS = {
 class ManifestLinter(BaseCase):
 
     def _load_manifest(self, module):
-        """Do not rely on odoo/modules/module -> load_manifest
+        """Do not rely on koda/modules/module -> load_manifest
         as we want to check manifests content, independently of the
         values from _DEFAULT_MANIFEST added automatically by load_manifest
         """

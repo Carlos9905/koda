@@ -17,7 +17,7 @@ class TestSaleMrpProcurement(TransactionCase):
         # In order to test the sale_mrp module in OpenERP, I start by creating a new product 'Slider Mobile'
         # I define product category Mobile Products Sellable.
 
-        with mute_logger('odoo.tests.common.onchange'):
+        with mute_logger('koda.tests.common.onchange'):
             # Suppress warning on "Changing your cost method" when creating a
             # product category
             pc = Form(self.env['product.category'])

@@ -7,7 +7,7 @@
     'version': '1.0',
     'category': 'Services/Appointment',
     'sequence': 215,
-    'website': 'https://www.odoo.com/app/appointments',
+    'website': 'https://www.koda.com/app/appointments',
     'description': """
 Allow clients to Schedule Appointments through your Website
 -------------------------------------------------------------

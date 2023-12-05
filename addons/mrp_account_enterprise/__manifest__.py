@@ -12,7 +12,7 @@ Analytic Accounting in MRP
 
 * Cost structure report
 """,
-    'website': 'https://www.odoo.com/app/manufacturing',
+    'website': 'https://www.koda.com/app/manufacturing',
     'depends': ['mrp_account'],
     'data': [
         'security/ir.model.access.csv',

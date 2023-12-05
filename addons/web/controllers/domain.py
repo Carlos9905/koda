@@ -27,7 +27,7 @@ class Domain(Controller):
             # verify it. EXPLAIN will make sure the query is never actually executed
             # An alternative to EXPLAIN would be a LIMIT 0 clause, but the semantics
             # of a falsy `limit` parameter when calling _search() do not permit it.
-            with mute_logger('odoo.sql_db'):
+            with mute_logger('koda.sql_db'):
                 request.env.cr.execute(f"EXPLAIN {sql}", params)
             return True
         except Exception:  # pylint: disable=broad-except

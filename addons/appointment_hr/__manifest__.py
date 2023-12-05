@@ -7,7 +7,7 @@
     'category': 'Services/Appointment',
     'sequence': 2140,
     'summary': "Manage Appointments with Employees",
-    'website': 'https://www.odoo.com/app/appointments',
+    'website': 'https://www.koda.com/app/appointments',
     'description': """
 Take into account the working schedule (sick leaves, part time, ...) of employees when scheduling appointments
 --------------------------------------------------------------------------------------------------------------

@@ -499,7 +499,7 @@ class TestPartner(MailCommon):
                 self.assertEqual(partner.email, expected_email)
 
     @users('admin')
-    @mute_logger('odoo.addons.base.partner.merge', 'odoo.tests')
+    @mute_logger('koda.addons.base.partner.merge', 'koda.tests')
     def test_partner_merge_wizards(self):
         Partner = self.env['res.partner']
 

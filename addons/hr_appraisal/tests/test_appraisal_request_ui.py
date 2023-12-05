@@ -17,7 +17,7 @@ class TestHrAppraisalRequestUi(HttpCase):
         cls.employee = cls.env['hr.employee'].create({
             'name': "Michael Hawkins",
             'parent_id': cls.manager.id,
-            'work_email': 'michael@odoo.com',
+            'work_email': 'michael@koda.com',
             'user_id': cls.employee_user.id,
         })
         cls.employee.work_email = 'chouxblanc@donc.com'

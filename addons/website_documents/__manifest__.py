@@ -7,7 +7,7 @@
     'category': 'Productivity/Documents',
     'sequence': 8010,
     'summary': 'Choose the website on which documents/folder are shared',
-    'website': 'https://www.odoo.com/app/documents',
+    'website': 'https://www.koda.com/app/documents',
     'description': """
 When sharing documents/folder, the domain of the shared URL can be chosen by selecting a target website.
 """,

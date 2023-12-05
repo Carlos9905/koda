@@ -7,7 +7,7 @@
     'description': """
 Accounting reports for US
     """,
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'depends': [
         'l10n_us', 'account_reports'
     ],

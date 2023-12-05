@@ -384,7 +384,7 @@ else:
             nonlocal send_mail_count
             send_mail_count += 1
 
-        patcher = patch('odoo.addons.mail.models.mail_template.MailTemplate.send_mail', _patched_send_mail)
+        patcher = patch('koda.addons.mail.models.mail_template.MailTemplate.send_mail', _patched_send_mail)
         self.startPatcher(patcher)
 
         lead = self.env['base.automation.lead.thread.test'].create({
@@ -470,7 +470,7 @@ if env.context.get('old_values', None):  # on write
         def _patch(*args, **kwargs):
             self.assertEqual(args[0], automations.pop(0))
 
-        patcher = patch('odoo.addons.base_automation.models.base_automation.BaseAutomation._process', _patch)
+        patcher = patch('koda.addons.base_automation.models.base_automation.BaseAutomation._process', _patch)
         self.startPatcher(patcher)
 
         lead = self.create_lead(state='draft')
@@ -847,7 +847,7 @@ if env.context.get('old_values', None):  # on write
             called_count += 1
             self.assertEqual(args[0], automation)
 
-        patcher = patch('odoo.addons.base_automation.models.base_automation.BaseAutomation._process', _patch)
+        patcher = patch('koda.addons.base_automation.models.base_automation.BaseAutomation._process', _patch)
         self.startPatcher(patcher)
 
         lead = self.create_lead()
@@ -1046,7 +1046,7 @@ class TestHttp(common.HttpCase):
         self.assertEqual(obj.another_field, "written")
 
         obj.another_field = False
-        with mute_logger("odoo.addons.base_automation.models.base_automation"):
+        with mute_logger("koda.addons.base_automation.models.base_automation"):
             response = self.url_open(automation.url, data={})
         self.assertEqual(response.json(), {"status": "error"})
         self.assertEqual(response.status_code, 500)

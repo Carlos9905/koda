@@ -10,7 +10,7 @@ from koda.tests import tagged
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class TestL10AccountMoveReversal(TestL10nClEdiCommon):
     @classmethod
-    @patch('odoo.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
+    @patch('koda.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
     def setUpClass(cls, chart_template_ref='cl'):
         super().setUpClass(chart_template_ref=chart_template_ref)
 

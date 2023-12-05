@@ -133,7 +133,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
                 'parent_id': article_childs[1].id
             })
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.addons.base.models.ir_rule')
     @users('employee')
     def test_article_create(self):
         """ Testing the helper to create articles with right values. """
@@ -221,7 +221,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
                                msg='Cannot move a private article as a shared root'):
             private_article.move_to(category='shared')
 
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     @users('employee')
     def test_article_parent_constraints_create(self):
         """ Checking various article constraints linked to parents """
@@ -253,7 +253,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
                 'parent_id': article_as2.id,
             })
 
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     @users('employee')
     def test_article_parent_constraints_write(self):
         """ Checking the article parent constraints. """
@@ -297,7 +297,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
         self.assertEqual(article_child2_as2.sequence, 1)
         self.assertEqual(article_child1.sequence, 2)
 
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     @users('employee')
     def test_article_private_management(self):
         """ Checking the article private management. """
@@ -338,7 +338,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
         self.assertFalse(article_private.internal_permission)
         self.assertEqual(article_private.inherited_permission, 'write')
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('employee')
     def test_article_root_internal_permission(self):
         """Check that the root article has internal permission set."""
@@ -426,7 +426,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
         self.assertEqual(article_workspace.category, 'private')
         self.assertTrue(article_workspace._has_write_member())
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('employee')
     def test_article_trashed_should_be_archived(self):
         """ Ensure that a trashed article is archived."""
@@ -457,7 +457,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
         self.assertTrue(article.active)
         self.assertFalse(article.to_delete)
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('employee')
     def test_favourite_uniqueness(self):
         """ Check there is at most one 'knowledge.article.favourite' entry per
@@ -474,7 +474,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
             article.write({'favorite_ids': [(0, 0, {'user_id': self.env.user.id})]})
         self.assertTrue(article.is_user_favorite)
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('employee')
     def test_member_uniqueness(self):
         """Check that there are no duplicated members in the member list. """
@@ -518,7 +518,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
             })
         self.assertEqual(len(self.env['knowledge.article.member'].sudo().search([('article_id', '=', article.id)])), 1)
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('employee')
     def test_article_item_create(self):
         with self.assertRaises(IntegrityError, msg='Cannot create an article item without parent'):
@@ -562,7 +562,7 @@ class TestKnowledgeArticleConstraints(KnowledgeCommon):
         self.assertEqual(len(self.item_child.child_ids), 1)
         self.assertTrue(self.item_child.has_item_children)
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('employee')
     def test_article_item_write(self):
         # Can move an article item under any parent

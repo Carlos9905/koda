@@ -330,7 +330,7 @@ class Meeting(models.Model):
             # See https://developers.google.com/calendar/concepts/sharing
             keep_keys = ['id', 'summary', 'attendees', 'start', 'end', 'reminders']
             values = {key: val for key, val in values.items() if key in keep_keys}
-            # values['extendedProperties']['private] should be used if the owner is not an odoo user
+            # values['extendedProperties']['private] should be used if the owner is not an koda user
             values['extendedProperties'] = {
                 'private': {
                     '%s_odoo_id' % self.env.cr.dbname: self.id,

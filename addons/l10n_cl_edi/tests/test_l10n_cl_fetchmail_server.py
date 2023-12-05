@@ -12,7 +12,7 @@ from .common import TestL10nClEdiCommon, _check_with_xsd_patch
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
-@patch('odoo.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
+@patch('koda.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
 class TestFetchmailServer(TestL10nClEdiCommon):
     @classmethod
     def setUpClass(cls, chart_template_ref='cl'):
@@ -73,7 +73,7 @@ class TestFetchmailServer(TestL10nClEdiCommon):
             self.company_data['company']
         )
 
-    @patch('odoo.fields.Date.context_today', return_value=fields.Date.from_string('2019-11-23'))
+    @patch('koda.fields.Date.context_today', return_value=fields.Date.from_string('2019-11-23'))
     def test_create_invoice_33_from_attachment(self, context_today):
         """DTE with unknown partner but known products"""
         att_name = 'incoming_invoice_33.xml'
@@ -102,7 +102,7 @@ class TestFetchmailServer(TestL10nClEdiCommon):
         self.assertEqual(move.amount_tax, 56104)
 
     # Patch out the VAT check since the VAT number from the sender is invalid
-    @patch('odoo.addons.base_vat.models.res_partner.ResPartner.check_vat', MagicMock())
+    @patch('koda.addons.base_vat.models.res_partner.ResPartner.check_vat', MagicMock())
     def test_create_invoice_33_from_attachment_with_sending_partner_defined_on_other_company(self):
         """DTE with unknown partner for the receiving company, but known partner for
         another company. Make sure we don't match with a partner the company associated
@@ -138,7 +138,7 @@ class TestFetchmailServer(TestL10nClEdiCommon):
         self.assertEqual(move.company_id, self.company_data['company'])
 
     # Patch out the VAT check since the VAT number from the sender is invalid
-    @patch('odoo.addons.base_vat.models.res_partner.ResPartner.check_vat', MagicMock())
+    @patch('koda.addons.base_vat.models.res_partner.ResPartner.check_vat', MagicMock())
     def test_create_invoice_33_from_attachment_with_sending_partner_defined_on_two_companies(self):
         """DTE with known partner for the receiving company and another company.
         Make sure the one from the receiving company gets picked, because otherwise
@@ -263,7 +263,7 @@ class TestFetchmailServer(TestL10nClEdiCommon):
         self.assertEqual(move.invoice_line_ids.name, 'Unknown Product')
         self.assertEqual(move.invoice_line_ids.price_unit, 32980.0)
 
-    @patch('odoo.addons.l10n_cl_edi.models.fetchmail_server.FetchmailServer._get_dte_lines')
+    @patch('koda.addons.l10n_cl_edi.models.fetchmail_server.FetchmailServer._get_dte_lines')
     def test_create_invoice_33_from_attachment_get_lines_exception(self, get_dte_lines):
         get_dte_lines.return_value = Exception
 
@@ -327,7 +327,7 @@ class TestFetchmailServer(TestL10nClEdiCommon):
 
         self.assertEqual(move.l10n_cl_dte_acceptation_status, 'received')
 
-    @patch('odoo.addons.l10n_cl_edi.models.l10n_cl_edi_util.L10nClEdiUtilMixin._get_cl_current_strftime')
+    @patch('koda.addons.l10n_cl_edi.models.l10n_cl_edi_util.L10nClEdiUtilMixin._get_cl_current_strftime')
     def test_process_incoming_customer_claim_accepted(self, get_cl_current_strftime):
         get_cl_current_strftime.return_value = '2019-10-24T20:00:00'
         l10n_latam_document_type = self.env['l10n_latam.document.type'].search([
@@ -358,7 +358,7 @@ class TestFetchmailServer(TestL10nClEdiCommon):
 
         self.assertEqual(move.l10n_cl_dte_acceptation_status, 'accepted')
 
-    @patch('odoo.addons.l10n_cl_edi.models.l10n_cl_edi_util.L10nClEdiUtilMixin._get_cl_current_strftime')
+    @patch('koda.addons.l10n_cl_edi.models.l10n_cl_edi_util.L10nClEdiUtilMixin._get_cl_current_strftime')
     def test_process_incoming_customer_claim_rejected(self, get_cl_current_strftime):
         get_cl_current_strftime.return_value = '2019-10-24T20:00:00'
         l10n_latam_document_type = self.env['l10n_latam.document.type'].search([

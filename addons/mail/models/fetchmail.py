@@ -63,7 +63,7 @@ class FetchmailServer(models.Model):
     priority = fields.Integer(string='Server Priority', readonly=False, help="Defines the order of processing, lower values mean higher priority", default=5)
     message_ids = fields.One2many('mail.mail', 'fetchmail_server_id', string='Messages', readonly=True)
     configuration = fields.Text('Configuration', readonly=True)
-    script = fields.Char(readonly=True, default='/mail/static/scripts/odoo-mailgate.py')
+    script = fields.Char(readonly=True, default='/mail/static/scripts/koda-mailgate.py')
 
     @api.depends('server_type')
     def _compute_server_type_info(self):
@@ -87,11 +87,11 @@ class FetchmailServer(models.Model):
             'model': self.object_id.model if self.object_id else 'MODELNAME'
         }
         self.configuration = """Use the below script with the following command line options with your Mail Transport Agent (MTA)
-odoo-mailgate.py --host=HOSTNAME --port=PORT -u %(uid)d -p PASSWORD -d %(dbname)s
+koda-mailgate.py --host=HOSTNAME --port=PORT -u %(uid)d -p PASSWORD -d %(dbname)s
 Example configuration for the postfix mta running locally:
 /etc/postfix/virtual_aliases: @youdomain odoo_mailgate@localhost
 /etc/aliases:
-odoo_mailgate: "|/path/to/odoo-mailgate.py --host=localhost -u %(uid)d -p PASSWORD -d %(dbname)s"
+odoo_mailgate: "|/path/to/koda-mailgate.py --host=localhost -u %(uid)d -p PASSWORD -d %(dbname)s"
         """ % conf
 
     @api.model_create_multi

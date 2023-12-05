@@ -8,7 +8,7 @@
     'sequence': 1030,
     'version': '1.1',
     'summary': 'Bridge module to configure a twitter wall on your event',
-    'website': 'https://www.odoo.com/app/events',
+    'website': 'https://www.koda.com/app/events',
     'depends': [
         'website_twitter_wall',
         'website_event',

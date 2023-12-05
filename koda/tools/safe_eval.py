@@ -403,10 +403,10 @@ def check_values(d):
 Prefer providing only the items necessary for your intended use.
 
 If a "module" is necessary for backwards compatibility, use
-`odoo.tools.safe_eval.wrap_module` to generate a wrapper recursively
+`koda.tools.safe_eval.wrap_module` to generate a wrapper recursively
 whitelisting allowed attributes.
 
-Pre-wrapped modules are provided as attributes of `odoo.tools.safe_eval`.
+Pre-wrapped modules are provided as attributes of `koda.tools.safe_eval`.
 """)
     return d
 

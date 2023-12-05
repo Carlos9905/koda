@@ -80,7 +80,7 @@ class ResConfigSettings(models.TransientModel):
                 # API sometimes returns non-descript "unhandled errors" as a string, they contain no further detail
                 # {'message': 'An unhandled error occurred. Trace ID: xxx', 'isError': True}
                 if 'unhandled error occurred' in result['message']:
-                    raise UserError(_('The Avatax platform failed to create your account. Please ensure the address on your company is correct. If it is please contact support at odoo.com/help.'))
+                    raise UserError(_('The Avatax platform failed to create your account. Please ensure the address on your company is correct. If it is please contact support at koda.com/help.'))
 
                 result = json.loads(result['message'])
 

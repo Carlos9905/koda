@@ -3,10 +3,10 @@
 from koda.tests import TransactionCase
 from koda import Command
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestAutomation(TransactionCase):
 
     def test_01_on_create_or_write(self):

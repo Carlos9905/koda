@@ -26,8 +26,8 @@ class WebManifestRoutesTest(HttpCase):
         self.assertEqual(data["theme_color"], "#714B67")
         self.assertEqual(data["prefer_related_applications"], False)
         self.assertCountEqual(data["icons"], [
-            {'src': '/web/static/img/odoo-icon-192x192.png', 'sizes': '192x192', 'type': 'image/png'},
-            {'src': '/web/static/img/odoo-icon-512x512.png', 'sizes': '512x512', 'type': 'image/png'}
+            {'src': '/web/static/img/koda-icon-192x192.png', 'sizes': '192x192', 'type': 'image/png'},
+            {'src': '/web/static/img/koda-icon-512x512.png', 'sizes': '512x512', 'type': 'image/png'}
         ])
         self.assertGreaterEqual(len(data["shortcuts"]), 0)
         for shortcut in data["shortcuts"]:
@@ -52,8 +52,8 @@ class WebManifestRoutesTest(HttpCase):
         self.assertEqual(data["theme_color"], "#714B67")
         self.assertEqual(data["prefer_related_applications"], False)
         self.assertCountEqual(data["icons"], [
-            {'src': '/web/static/img/odoo-icon-192x192.png', 'sizes': '192x192', 'type': 'image/png'},
-            {'src': '/web/static/img/odoo-icon-512x512.png', 'sizes': '512x512', 'type': 'image/png'}
+            {'src': '/web/static/img/koda-icon-192x192.png', 'sizes': '192x192', 'type': 'image/png'},
+            {'src': '/web/static/img/koda-icon-512x512.png', 'sizes': '512x512', 'type': 'image/png'}
         ])
         self.assertEqual(len(data["shortcuts"]), 0)
 
@@ -80,11 +80,11 @@ class WebManifestRoutesTest(HttpCase):
         its presence from the head of the document.
         """
         self.authenticate("demo", "demo")
-        response = self.url_open("/web/static/img/odoo-icon-ios.png")
+        response = self.url_open("/web/static/img/koda-icon-ios.png")
         self.assertEqual(response.status_code, 200)
 
         document = self.url_open("/web")
         self.assertIn(
-            '<link rel="apple-touch-icon" href="/web/static/img/odoo-icon-ios.png"/>', document.text,
+            '<link rel="apple-touch-icon" href="/web/static/img/koda-icon-ios.png"/>', document.text,
             "Icon for iOS is present in the head of the document.",
         )

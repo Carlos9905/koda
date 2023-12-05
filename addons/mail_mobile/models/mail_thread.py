@@ -10,7 +10,7 @@ from koda.addons.iap.tools import iap_tools
 
 _logger = logger.getLogger(__name__)
 
-MOBILE_APP_IDENTIFIER = 'com.odoo.mobile'
+MOBILE_APP_IDENTIFIER = 'com.koda.mobile'
 FIREBASE_DEFAULT_LINK = 'https://redirect-url.email/'
 BLACK_LIST_PARAM = {
     'access_token',

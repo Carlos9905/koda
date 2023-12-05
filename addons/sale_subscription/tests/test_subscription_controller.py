@@ -153,8 +153,8 @@ class TestSubscriptionController(PaymentHttpCommon, PaymentCommon, TestSubscript
 
         self.original_prepare_invoice = self.subscription._prepare_invoice
         self.mock_send_success_count = 0
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment),\
-            patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._send_success_mail', wraps=self._mock_subscription_send_success_mail):
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment', wraps=self._mock_subscription_do_payment),\
+            patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._send_success_mail', wraps=self._mock_subscription_send_success_mail):
             self.env['ir.config_parameter'].sudo().set_param('sale.automatic_invoice', 'False')
             subscription = self._portal_payment_controller_flow()
             subscription.transaction_ids.unlink()
@@ -296,9 +296,9 @@ class TestSubscriptionController(PaymentHttpCommon, PaymentCommon, TestSubscript
                          "The last transaction should be equal to the total")
 
     def test_portal_partial_payment(self):
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._do_payment',
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._do_payment',
                    wraps=self._mock_subscription_do_payment), \
-                patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._send_success_mail',
+                patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._send_success_mail',
                       wraps=self._mock_subscription_send_success_mail):
             self.env['ir.config_parameter'].sudo().set_param('sale.automatic_invoice', 'False')
             subscription = self.subscription.create({
@@ -331,7 +331,7 @@ class TestSubscriptionController(PaymentHttpCommon, PaymentCommon, TestSubscript
                 'landing_route': '/my/subscriptions',
                 'access_token': tx_context['access_token'],
             }
-            with mute_logger('odoo.addons.payment.models.payment_transaction'):
+            with mute_logger('koda.addons.payment.models.payment_transaction'):
                 processing_values = self._get_processing_values(
                     tx_route=tx_context['transaction_route'], **tx_route_values
                 )
@@ -343,7 +343,7 @@ class TestSubscriptionController(PaymentHttpCommon, PaymentCommon, TestSubscript
             self.assertEqual(tx_sudo.sale_order_ids.transaction_ids, tx_sudo)
 
             tx_sudo._set_done()
-            with mute_logger('odoo.addons.sale.models.payment_transaction'):
+            with mute_logger('koda.addons.sale.models.payment_transaction'):
                 tx_sudo._finalize_post_processing()
             self.assertEqual(subscription.state, 'sent')  # Only a partial amount was paid
             subscription.action_confirm()

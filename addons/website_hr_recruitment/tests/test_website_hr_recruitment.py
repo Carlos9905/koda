@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from koda.api import Environment
-import odoo.tests
+import koda.tests
 from koda.tools import html2plaintext
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestWebsiteHrRecruitmentForm(odoo.tests.HttpCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestWebsiteHrRecruitmentForm(koda.tests.HttpCase):
     def test_tour(self):
         job_guru = self.env['hr.job'].create({
             'name': 'Guru',
@@ -18,7 +18,7 @@ class TestWebsiteHrRecruitmentForm(odoo.tests.HttpCase):
         })
         self.start_tour(self.env['website'].get_client_action_url('/jobs'), 'website_hr_recruitment_tour_edit_form', login='admin')
 
-        with odoo.tests.RecordCapturer(self.env['hr.applicant'], []) as capt:
+        with koda.tests.RecordCapturer(self.env['hr.applicant'], []) as capt:
             self.start_tour("/", 'website_hr_recruitment_tour')
 
         # check result

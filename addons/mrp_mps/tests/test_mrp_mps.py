@@ -104,7 +104,7 @@ class TestMpsMps(common.TransactionCase):
         with Form(cls.bom_wardrobe) as bom:
             with bom.bom_line_ids.new() as line:
                 line.product_id = cls.drawer
-                # because pim-odoo said '3 drawers because 4 is too much'
+                # because pim-koda said '3 drawers because 4 is too much'
                 line.product_qty = 3
 
         cls.chair = cls.env['product.product'].create({

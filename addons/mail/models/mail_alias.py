@@ -37,7 +37,7 @@ class Alias(models.Model):
     # email definition
     alias_name = fields.Char(
         'Alias Name', copy=False,
-        help="The name of the email alias, e.g. 'jobs' if you want to catch emails for <jobs@example.odoo.com>")
+        help="The name of the email alias, e.g. 'jobs' if you want to catch emails for <jobs@example.koda.com>")
     alias_full_name = fields.Char('Alias Email', compute='_compute_alias_full_name', store=True)
     display_name = fields.Char(string='Display Name', compute='_compute_display_name')
     alias_domain_id = fields.Many2one(
@@ -228,7 +228,7 @@ class Alias(models.Model):
     @api.depends('alias_domain', 'alias_name')
     def _compute_display_name(self):
         """ Return the mail alias display alias_name, including the catchall
-        domain if found otherwise "Inactive Alias". e.g.`jobs@mail.odoo.com`
+        domain if found otherwise "Inactive Alias". e.g.`jobs@mail.koda.com`
         or `jobs` or 'Inactive Alias' """
         for record in self:
             if record.alias_name and record.alias_domain:

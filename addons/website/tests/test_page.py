@@ -261,7 +261,7 @@ class WithContext(HttpCase):
             [p['loc'] for p in pages],
         )
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_03_error_page_debug(self):
         with MockRequest(self.env, website=self.env['website'].browse(1)):
             self.base_view.arch = self.base_view.arch.replace('I am a generic page', '<t t-esc="15/0"/>')

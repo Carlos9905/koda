@@ -15,7 +15,7 @@ class PaymentMethod(models.Model):
     Note: Odoo have the model payment.method, but this model need fields that
     we not need in this feature as partner_id, acquirer, etc., and they are
     there with other purpose, then a new model is necessary in order to avoid
-    lose odoo's features"""
+    lose koda's features"""
 
     _name = 'l10n_mx_edi.payment.method'
     _description = "Payment Method for Mexico from SAT Data"

@@ -35,7 +35,7 @@ class TestToggleUpload(HttpCase):
         guest = self.env["mail.guest"].create({"name": "Guest"})
         channel.write({"channel_member_ids": [Command.create({"guest_id": guest.id})]})
         self.assertFalse(channel.allow_public_upload)
-        with mute_logger("odoo.http"), file_open("addons/web/__init__.py") as file:
+        with mute_logger("koda.http"), file_open("addons/web/__init__.py") as file:
             response = self.url_open(
                 "/mail/attachment/upload",
                 {

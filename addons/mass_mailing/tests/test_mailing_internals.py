@@ -51,9 +51,9 @@ class TestMassMailValues(MassMailCommon):
                 return urls
             else:
                 return []
-        with patch("odoo.addons.mass_mailing.models.mailing.MassMailing._get_image_by_url",
+        with patch("koda.addons.mass_mailing.models.mailing.MassMailing._get_image_by_url",
                    new=patched_get_image), \
-             patch("odoo.addons.mass_mailing.models.mailing.MassMailing._create_attachments_from_inline_images",
+             patch("koda.addons.mass_mailing.models.mailing.MassMailing._create_attachments_from_inline_images",
                    new=patched_images_to_urls):
             mailing = self.env['mailing.mailing'].create({
                 'name': 'Test',
@@ -94,7 +94,7 @@ class TestMassMailValues(MassMailCommon):
                     'token': attachment_token,
                 })
             return urls
-        with patch("odoo.addons.mass_mailing.models.mailing.MassMailing._create_attachments_from_inline_images",
+        with patch("koda.addons.mass_mailing.models.mailing.MassMailing._create_attachments_from_inline_images",
                    new=patched_images_to_urls):
             mailing = self.env['mailing.mailing'].create({
                     'name': 'Test',
@@ -266,7 +266,7 @@ class TestMassMailValues(MassMailCommon):
              'mailing_model_id': self.env['ir.model']._get('res.partner').id,
             },
             {'name': 'Email based',
-             'mailing_domain' : [('email', 'ilike', 'info@odoo.com')],
+             'mailing_domain' : [('email', 'ilike', 'info@koda.com')],
              'mailing_model_id': self.env['ir.model']._get('res.partner').id,
             }
         ])
@@ -288,7 +288,7 @@ class TestMassMailValues(MassMailCommon):
         self.assertEqual(literal_eval(mailing.mailing_domain), literal_eval(filter_1.mailing_domain))
 
         # changing the domain should not empty the mailing_filter_id
-        mailing.mailing_domain = "[('email', 'ilike', 'info_be@odoo.com')]"
+        mailing.mailing_domain = "[('email', 'ilike', 'info_be@koda.com')]"
         self.assertEqual(mailing.mailing_filter_id, filter_1, "Filter should not be unset even if domain is changed")
 
         # deleting the filter record should not delete the domain on mailing
@@ -325,7 +325,7 @@ class TestMassMailValues(MassMailCommon):
         )
         self.assertEqual(mailing_form.mailing_model_real, 'res.partner')
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     @users('user_marketing')
     def test_mailing_trace_values(self):
         recipient = self.partner_employee
@@ -413,7 +413,7 @@ class TestMassMailFeatures(MassMailCommon, CronMixinCase):
         cls._create_mailing_list()
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mailing_cron_trigger(self):
         """ Technical test to ensure the cron is triggered at the correct
         time """
@@ -448,7 +448,7 @@ class TestMassMailFeatures(MassMailCommon, CronMixinCase):
                     self.assertLessEqual(capt.records.call_at, truth)
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mailing_deletion(self):
         """ Test deletion in various use case, depending on reply-to """
         # 1- Keep archives and reply-to set to 'answer = new thread'
@@ -521,7 +521,7 @@ class TestMassMailFeatures(MassMailCommon, CronMixinCase):
         self.assertEqual(len(self.mailing_list_1.contact_ids.message_ids), 3)
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mailing_on_res_partner(self):
         """ Test mailing on res.partner model: ensure default recipients are
         correctly computed """
@@ -553,21 +553,21 @@ class TestMassMailFeatures(MassMailCommon, CronMixinCase):
         )
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mailing_shortener(self):
         mailing = self.env['mailing.mailing'].create({
             'name': 'TestSource',
             'subject': 'TestShortener',
             'body_html': """<div>
 Hi,
-<t t-set="url" t-value="'www.odoo.com'"/>
-<t t-set="httpurl" t-value="'https://www.odoo.eu'"/>
-Website0: <a id="url0" t-attf-href="https://www.odoo.tz/my/{{object.name}}">https://www.odoo.tz/my/<t t-esc="object.name"/></a>
-Website1: <a id="url1" href="https://www.odoo.be">https://www.odoo.be</a>
+<t t-set="url" t-value="'www.koda.com'"/>
+<t t-set="httpurl" t-value="'https://www.koda.eu'"/>
+Website0: <a id="url0" t-attf-href="https://www.koda.tz/my/{{object.name}}">https://www.koda.tz/my/<t t-esc="object.name"/></a>
+Website1: <a id="url1" href="https://www.koda.be">https://www.koda.be</a>
 Website2: <a id="url2" t-attf-href="https://{{url}}">https://<t t-esc="url"/></a>
 Website3: <a id="url3" t-att-href="httpurl"><t t-esc="httpurl"/></a>
 External1: <a id="url4" href="https://www.example.com/foo/bar?baz=qux">Youpie</a>
-Email: <a id="url5" href="mailto:test@odoo.com">test@odoo.com</a></div>""",
+Email: <a id="url5" href="mailto:test@koda.com">test@koda.com</a></div>""",
             'mailing_model_id': self.env['ir.model']._get('mailing.list').id,
             'reply_to_mode': 'new',
             'reply_to': self.email_reply_to,
@@ -589,12 +589,12 @@ Email: <a id="url5" href="mailto:test@odoo.com">test@odoo.com</a></div>""",
 
         for contact in self.mailing_list_1.contact_ids:
             new_mail = self._find_mail_mail_wrecord(contact)
-            for link_info in [('url0', 'https://www.odoo.tz/my/%s' % contact.name, True),
-                              ('url1', 'https://www.odoo.be', True),
-                              ('url2', 'https://www.odoo.com', True),
-                              ('url3', 'https://www.odoo.eu', True),
+            for link_info in [('url0', 'https://www.koda.tz/my/%s' % contact.name, True),
+                              ('url1', 'https://www.koda.be', True),
+                              ('url2', 'https://www.koda.com', True),
+                              ('url3', 'https://www.koda.eu', True),
                               ('url4', 'https://www.example.com/foo/bar?baz=qux', True),
-                              ('url5', 'mailto:test@odoo.com', False)]:
+                              ('url5', 'mailto:test@koda.com', False)]:
                 # TDE FIXME: why going to mail message id ? mail.body_html seems to fail, check
                 link_params = {'utm_medium': 'Email', 'utm_source': mailing.name}
                 if link_info[0] == 'url4':
@@ -607,7 +607,7 @@ Email: <a id="url5" href="mailto:test@odoo.com">test@odoo.com</a></div>""",
 
 class TestMailingScheduleDateWizard(MassMailCommon):
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     @users('user_marketing')
     def test_mailing_schedule_date(self):
         mailing = self.env['mailing.mailing'].create({

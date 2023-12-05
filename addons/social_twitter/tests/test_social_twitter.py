@@ -149,7 +149,7 @@ class SocialTwitterCase(SocialCase):
             'twitter_tweet_id': '4'
         })
 
-        with mute_logger('odoo.sql_db'):
+        with mute_logger('koda.sql_db'):
             with self.assertRaises(IntegrityError):
                 self.env['social.stream.post'].create({
                     'message': tweet.message,

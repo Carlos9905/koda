@@ -9,7 +9,7 @@ from koda import _, api, fields, models
 from koda.exceptions import UserError, ValidationError
 from koda.tools import float_repr, float_round
 
-import odoo.addons.account.tools.structured_reference as sr
+import koda.addons.account.tools.structured_reference as sr
 from koda.addons.account_batch_payment.models.sepa_mapping import _replace_characters_SEPA
 
 

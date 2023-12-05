@@ -53,8 +53,8 @@ class IrMailServer(models.Model):
             )
             if matching:
                 return matching.default_from_email
-            # fake default_from "odoo@domain"
-            return f"odoo@{from_filter_parts[0]}"
+            # fake default_from "koda@domain"
+            return f"koda@{from_filter_parts[0]}"
         # no from_filter or from_filter is configured for a domain different that
         # the default_from of company's alias_domain -> fallback
         return super()._get_test_email_from()

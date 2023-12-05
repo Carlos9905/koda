@@ -38,7 +38,7 @@ class TestPaymentTransaction(APSCommon):
         }
         self.assertDictEqual(tx._get_specific_rendering_values(None), expected_values)
 
-    @mute_logger('odoo.addons.payment.models.payment_transaction')
+    @mute_logger('koda.addons.payment.models.payment_transaction')
     def test_no_input_missing_from_redirect_form(self):
         """ Test that the no key is not omitted from the rendering values. """
         tx = self._create_transaction(flow='redirect')

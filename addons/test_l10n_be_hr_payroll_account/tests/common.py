@@ -3,12 +3,12 @@
 
 import time
 
-import odoo.tests
+import koda.tests
 from koda.addons.mail.tests.common import mail_new_test_user
 from koda.tools import file_open
 
 
-class TestPayrollAccountCommon(odoo.tests.HttpCase):
+class TestPayrollAccountCommon(koda.tests.HttpCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()

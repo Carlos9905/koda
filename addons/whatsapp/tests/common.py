@@ -381,7 +381,7 @@ class WhatsAppCommon(MailCommon, WhatsAppCase):
             'account_uid': 'abcdef123456',
             'app_secret': '1234567890abcdef',
             'app_uid': 'contact',
-            'name': 'odoo account',
+            'name': 'koda account',
             'notify_user_ids': cls.user_wa_admin.ids,
             'phone_uid': '1234567890',
             'token': 'team leader',

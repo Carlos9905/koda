@@ -132,10 +132,10 @@ for record in records:
         self.assertEqual(len(self.test_records.filtered(lambda r: r.name != 'Test_00')), 11)
         self.assertEqual(self.campaign.state, 'draft')
 
-    @mute_logger('odoo.addons.base.models.ir_model',
-                 'odoo.addons.mail.models.mail_mail',
-                 'odoo.addons.mass_mailing.models.mailing',
-                 'odoo.addons.mass_mailing_sms.models.mailing_mailing')
+    @mute_logger('koda.addons.base.models.ir_model',
+                 'koda.addons.mail.models.mail_mail',
+                 'koda.addons.mass_mailing.models.mailing',
+                 'koda.addons.mass_mailing_sms.models.mailing_mailing')
     @users('user_marketing_automation')
     def test_marketing_automation_flow(self):
         """ Test a marketing automation flow involving several steps. """
@@ -531,7 +531,7 @@ for record in records:
         date_reference_new = date_reference + relativedelta(days=1, hours=2)
         self._clear_outgoing_sms()
         with freeze_time(date_reference_new), \
-             mute_logger('odoo.addons.marketing_automation.models.marketing_activity'), \
+             mute_logger('koda.addons.marketing_automation.models.marketing_activity'), \
              self.capture_triggers('marketing_automation.ir_cron_campaign_execute_activities') as captured_triggers:
             campaign.execute_activities()
 

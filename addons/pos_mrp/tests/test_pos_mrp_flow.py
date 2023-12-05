@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import koda
 
 from koda.addons.point_of_sale.tests.common import TestPointOfSaleCommon
 from koda import fields
 from koda.tests.common import Form
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestPosMrp(TestPointOfSaleCommon):
     def test_bom_kit_order_total_cost(self):
         #create a product category that use fifo

@@ -4,14 +4,14 @@ from lxml import etree
 from lxml.builder import E
 import json
 
-import odoo.tests
+import koda.tests
 from koda import Command, api, http
 from koda.tools import mute_logger
 from koda.addons.web_studio.controllers.main import WebStudioController
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestUi(odoo.tests.HttpCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestUi(koda.tests.HttpCase):
 
     def test_new_app_and_report(self):
         self.start_tour("/web", 'web_studio_new_app_tour', login="admin")
@@ -112,8 +112,8 @@ def watch_edit_view(test, on_edit_view):
     test.addCleanup(clear_routing)
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestStudioUIUnit(odoo.tests.HttpCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestStudioUIUnit(koda.tests.HttpCase):
 
     @classmethod
     def setUpClass(cls):

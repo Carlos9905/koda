@@ -61,7 +61,7 @@ class AppointmentAccountPaymentFlowsTest(AppointmentAccountPaymentFlowsCommon):
             'token_id': False,
             'tokenization_requested': False,
         }
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = self._get_processing_values(tx_route=tx_url, **tx_route_kwargs)
 
         tx_sudo = self._get_tx(processing_values['reference'])

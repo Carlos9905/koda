@@ -17,8 +17,8 @@ from koda.addons.iap.tools.iap_tools import iap_jsonrpc
 from koda.exceptions import AccessError
 from koda.tools import float_round, html_escape
 
-DEFAULT_IAP_ENDPOINT = 'https://l10n-pe-edi.api.odoo.com'
-DEFAULT_IAP_TEST_ENDPOINT = 'https://l10n-pe-edi.test.odoo.com'
+DEFAULT_IAP_ENDPOINT = 'https://l10n-pe-edi.api.koda.com'
+DEFAULT_IAP_TEST_ENDPOINT = 'https://l10n-pe-edi.test.koda.com'
 
 
 class AccountEdiFormat(models.Model):
@@ -150,7 +150,7 @@ class AccountEdiFormat(models.Model):
                        "1. Linked Digiflow as OSE.\n"
                        "2. Authorize Digiflow as PSE.\n"
                        "Reference: \n"
-                       "https://www.odoo.com/documentation/17.0/applications/finance/accounting/fiscal_localizations/localizations/peru.html#what-do-you-need-to-do"),
+                       "https://www.koda.com/documentation/17.0/applications/finance/accounting/fiscal_localizations/localizations/peru.html#what-do-you-need-to-do"),
             '98': _lt("The cancellation request has not yet finished processing by SUNAT. Please retry in a few minutes.")
         }
 

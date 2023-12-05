@@ -108,7 +108,7 @@ class SpreadsheetDocuments(SpreadsheetTestCommon):
 
     def test_normal_doc_default_folder(self):
         """Default spreadsheet folder is not assigned to normal documents"""
-        with self.assertRaises(IntegrityError), mute_logger('odoo.sql_db'):
+        with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
             self.env["documents.document"].create({
                 "spreadsheet_data": r"{}",
                 "mimetype": "application/o-spreadsheet",

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-import odoo.tests
+import koda.tests
 
 SEARCH_PANEL_ERROR = {'error_msg': "Too many items to display.", }
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestSelectRange(odoo.tests.TransactionCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestSelectRange(koda.tests.TransactionCase):
 
     def setUp(self):
         super().setUp()

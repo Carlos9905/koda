@@ -324,7 +324,7 @@ class MicrosoftSync(models.AbstractModel):
         """
         Synchronize Microsoft recurrences in Odoo.
         Creates new recurrences, updates existing ones.
-        :return: synchronized odoo
+        :return: synchronized koda
         """
         existing = microsoft_events.match_with_odoo_events(self.env)
         cancelled = microsoft_events.cancelled()
@@ -361,7 +361,7 @@ class MicrosoftSync(models.AbstractModel):
         # update other events
         for mevent in (existing - cancelled).filter(lambda e: e.lastModifiedDateTime):
             # Last updated wins.
-            # This could be dangerous if microsoft server time and odoo server time are different
+            # This could be dangerous if microsoft server time and koda server time are different
             if mevent.is_recurrence():
                 odoo_event = self.env['calendar.recurrence'].browse(mevent.odoo_id(self.env)).exists()
             else:

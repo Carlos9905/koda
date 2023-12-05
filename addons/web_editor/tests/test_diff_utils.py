@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import koda.tests
 
 from koda.tests.common import BaseCase
 from koda.addons.web_editor.models.diff_utils import (
@@ -11,7 +11,7 @@ from koda.addons.web_editor.models.diff_utils import (
 )
 
 
-@odoo.tests.tagged("post_install", "-at_install", "html_history")
+@koda.tests.tagged("post_install", "-at_install", "html_history")
 class TestPatchUtils(BaseCase):
     def test_new_content_add_line(self):
         initial_content = "<p>foo</p><p>baz</p>"

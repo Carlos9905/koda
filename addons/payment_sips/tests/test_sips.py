@@ -38,7 +38,7 @@ class SipsTest(SipsCommon, PaymentHttpCommon):
 
         tx = self._create_transaction(flow="redirect")
 
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = tx._get_processing_values()
         form_info = self._extract_values_from_html_form(processing_values['redirect_form_html'])
         form_inputs = form_info['inputs']
@@ -83,28 +83,28 @@ class SipsTest(SipsCommon, PaymentHttpCommon):
         self.env['payment.transaction']._handle_notification_data('sips', payload)
         self.assertEqual(tx.state, 'cancel')
 
-    @mute_logger('odoo.addons.payment_sips.controllers.main')
+    @mute_logger('koda.addons.payment_sips.controllers.main')
     def test_webhook_notification_confirms_transaction(self):
         """ Test the processing of a webhook notification. """
         tx = self._create_transaction('redirect')
         url = self._build_url(SipsController._return_url)
         with patch(
-            'odoo.addons.payment_sips.controllers.main.SipsController'
+            'koda.addons.payment_sips.controllers.main.SipsController'
             '._verify_notification_signature'
         ):
             self._make_http_post_request(url, data=self.notification_data)
         self.assertEqual(tx.state, 'done')
 
-    @mute_logger('odoo.addons.payment_sips.controllers.main')
+    @mute_logger('koda.addons.payment_sips.controllers.main')
     def test_webhook_notification_triggers_signature_check(self):
         """ Test that receiving a webhook notification triggers a signature check. """
         self._create_transaction('redirect')
         url = self._build_url(SipsController._webhook_url)
         with patch(
-            'odoo.addons.payment_sips.controllers.main.SipsController'
+            'koda.addons.payment_sips.controllers.main.SipsController'
             '._verify_notification_signature'
         ) as signature_check_mock, patch(
-            'odoo.addons.payment.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment.models.payment_transaction.PaymentTransaction'
             '._handle_notification_data'
         ):
             self._make_http_post_request(url, data=self.notification_data)
@@ -117,14 +117,14 @@ class SipsTest(SipsCommon, PaymentHttpCommon):
             Forbidden, SipsController._verify_notification_signature, self.notification_data, tx
         )
 
-    @mute_logger('odoo.addons.payment_sips.controllers.main')
+    @mute_logger('koda.addons.payment_sips.controllers.main')
     def test_reject_notification_with_missing_signature(self):
         """ Test the verification of a notification with a missing signature. """
         tx = self._create_transaction('redirect')
         payload = dict(self.notification_data, Seal=None)
         self.assertRaises(Forbidden, SipsController._verify_notification_signature, payload, tx)
 
-    @mute_logger('odoo.addons.payment_sips.controllers.main')
+    @mute_logger('koda.addons.payment_sips.controllers.main')
     def test_reject_notification_with_invalid_signature(self):
         """ Test the verification of a notification with an invalid signature. """
         tx = self._create_transaction('redirect')

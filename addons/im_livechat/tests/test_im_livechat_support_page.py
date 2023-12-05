@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import koda
 from koda.tests import HttpCase
 
-@odoo.tests.tagged('-at_install', 'post_install')
+@koda.tests.tagged('-at_install', 'post_install')
 class TestImLivechatSupportPage(HttpCase):
     def test_load_modules(self):
         """Checks that all javascript modules load correctly on the livechat support page"""
@@ -13,7 +13,7 @@ class TestImLivechatSupportPage(HttpCase):
         # interrupt errors then ensures all the assets are loaded.
         check_js_modules = """
             setTimeout(() => {
-                const { missing, failed, unloaded } = odoo.loader.findErrors();
+                const { missing, failed, unloaded } = koda.loader.findErrors();
                 if ([missing, failed, unloaded].some(arr => arr.length)) {
                     console.error("Couldn't load all JS modules.", JSON.stringify({ missing, failed, unloaded }));
                 } else {

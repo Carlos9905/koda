@@ -88,7 +88,7 @@ class OgoneTest(OgoneCommon, PaymentHttpCommon):
 
         tx = self._create_transaction(flow='redirect')
         self.assertEqual(tx.tokenize, False)
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = tx._get_processing_values()
 
         form_info = self._extract_values_from_html_form(processing_values['redirect_form_html'])
@@ -104,28 +104,28 @@ class OgoneTest(OgoneCommon, PaymentHttpCommon):
                 f"received value {inputs[form_key]} for input {form_key} (expected {value})"
             )
 
-    @mute_logger('odoo.addons.payment_ogone.controllers.main')
+    @mute_logger('koda.addons.payment_ogone.controllers.main')
     def test_webhook_notification_confirms_transaction(self):
         """ Test the processing of a webhook notification. """
         tx = self._create_transaction('redirect')
         url = self._build_url(OgoneController._return_url)
         with patch(
-            'odoo.addons.payment_ogone.controllers.main.OgoneController'
+            'koda.addons.payment_ogone.controllers.main.OgoneController'
             '._verify_notification_signature'
         ):
             self._make_http_post_request(url, data=self.notification_data)
         self.assertEqual(tx.state, 'done')
 
-    @mute_logger('odoo.addons.payment_ogone.controllers.main')
+    @mute_logger('koda.addons.payment_ogone.controllers.main')
     def test_webhook_notification_triggers_signature_check(self):
         """ Test that receiving a webhook notification triggers a signature check. """
         self._create_transaction('redirect')
         url = self._build_url(OgoneController._return_url)
         with patch(
-            'odoo.addons.payment_ogone.controllers.main.OgoneController'
+            'koda.addons.payment_ogone.controllers.main.OgoneController'
             '._verify_notification_signature'
         ) as signature_check_mock, patch(
-            'odoo.addons.payment.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment.models.payment_transaction.PaymentTransaction'
             '._handle_notification_data'
         ):
             self._make_http_post_request(url, data=self.notification_data)
@@ -142,7 +142,7 @@ class OgoneTest(OgoneCommon, PaymentHttpCommon):
             tx,
         )
 
-    @mute_logger('odoo.addons.payment_ogone.controllers.main')
+    @mute_logger('koda.addons.payment_ogone.controllers.main')
     def test_reject_notification_with_missing_signature(self):
         """ Test the verification of a notification with a missing signature. """
         tx = self._create_transaction('redirect')
@@ -154,7 +154,7 @@ class OgoneTest(OgoneCommon, PaymentHttpCommon):
             tx,
         )
 
-    @mute_logger('odoo.addons.payment_ogone.controllers.main')
+    @mute_logger('koda.addons.payment_ogone.controllers.main')
     def test_reject_notification_with_invalid_signature(self):
         """ Test the verification of a notification with an invalid signature. """
         tx = self._create_transaction('redirect')

@@ -46,7 +46,7 @@ class TestActivity(SMSCommon, TestSMSRecipients):
         self.assertEqual(self.phonecall_activity.category, 'phonecall')
 
     @users('employee')
-    @mute_logger('odoo.addons.voip.models.voip_queue_mixin')
+    @mute_logger('koda.addons.voip.models.voip_queue_mixin')
     def test_create_call_activity(self):
         record = self.test_record_voip.with_env(self.env)
 

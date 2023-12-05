@@ -14,7 +14,7 @@ from koda.tools import mute_logger
 class TestResources(common.SlidesCase, HttpCase):
 
     @users('user_officer')
-    @mute_logger('odoo')
+    @mute_logger('koda')
     def test_constraints(self):
         link = self.env["slide.slide.resource"].create({
             'name': 'Test Link',

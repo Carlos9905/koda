@@ -46,7 +46,7 @@ class ir_cron(models.Model):
     # TODO: perhaps in the future we could consider a flag on ir.cron jobs
     # that would cause database wake-up even if the database has not been
     # loaded yet or was already unloaded (e.g. 'force_db_wakeup' or something)
-    # See also odoo.cron
+    # See also koda.cron
 
     _name = "ir.cron"
     _order = 'cron_name'

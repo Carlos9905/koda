@@ -6,7 +6,7 @@ from koda.tools import mute_logger
 
 
 class AppointmentOnboardingTest(AppointmentCommon):
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def test_no_error_if_steps_are_deleted(self):
         """Simulate the case where
             1. Someone opens the onboarding step from the onboarding panel
@@ -65,7 +65,7 @@ class AppointmentOnboardingTest(AppointmentCommon):
             'WAS_DONE',
         )
 
-        with mute_logger('odoo.models.unlink'):
+        with mute_logger('koda.models.unlink'):
             self.env.ref('appointment.appointment_onboarding_create_appointment_type_step').unlink()
 
         self.assertEqual(

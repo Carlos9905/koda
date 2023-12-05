@@ -7,7 +7,7 @@
     'category': 'Sales/Point of Sale',
     'sequence': 6,
     'summary': 'This module lets you manage online reservations for restaurant tables',
-    'website': 'https://www.odoo.com/app/appointments',
+    'website': 'https://www.koda.com/app/appointments',
     'depends': ['appointment', 'pos_restaurant'],
     'data': [
         'views/pos_restaurant_views.xml',

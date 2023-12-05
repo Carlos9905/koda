@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0326
-import odoo.tests
+import koda.tests
 
 from koda.tests import tagged
 from koda import Command, fields
@@ -14,7 +14,7 @@ from freezegun import freeze_time
 
 
 @tagged('post_install', '-at_install')
-class TestAccountReportsFilters(TestAccountReportsCommon, odoo.tests.HttpCase):
+class TestAccountReportsFilters(TestAccountReportsCommon, koda.tests.HttpCase):
 
     def _assert_filter_date(self, report, previous_options, expected_date_values):
         """ Initializes and checks the 'date' option computed for the provided report and previous_options

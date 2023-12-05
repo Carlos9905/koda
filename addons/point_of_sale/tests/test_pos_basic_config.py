@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import koda
 
 from koda import fields
 from koda.addons.point_of_sale.tests.common import TestPoSCommon
@@ -9,7 +9,7 @@ from freezegun import freeze_time
 from dateutil.relativedelta import relativedelta
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestPoSBasicConfig(TestPoSCommon):
     """ Test PoS with basic configuration
 

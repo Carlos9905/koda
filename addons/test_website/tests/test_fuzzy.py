@@ -6,12 +6,12 @@ import psycopg2
 
 from koda.addons.website.controllers.main import Website
 from koda.addons.website.tools import MockRequest
-import odoo.tests
+import koda.tests
 from koda.tests.common import TransactionCase
 
 _logger = logging.getLogger(__name__)
 
-@odoo.tests.tagged('-at_install', 'post_install')
+@koda.tests.tagged('-at_install', 'post_install')
 class TestAutoComplete(TransactionCase):
     @classmethod
     def setUpClass(cls):

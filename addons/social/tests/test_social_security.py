@@ -44,7 +44,7 @@ class TestAccess(common.SocialCase):
                 'image_url': 'dummy.png'
             })
 
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     @users('user_emp')
     @mock_void_external_calls()
     def test_access_social_employee(self):
@@ -120,7 +120,7 @@ class TestAccess(common.SocialCase):
         with self.assertRaises(AccessError):
             self.social_stream_post_image.with_user(self.env.user).unlink()
 
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     @users('social_user')
     @mock_void_external_calls()
     def test_access_social_social_user(self):
@@ -214,7 +214,7 @@ class TestAccess(common.SocialCase):
         with self.assertRaises(AccessError):
             self.social_stream_post_image.with_user(self.env.user).unlink()
 
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     @users('social_manager')
     @mock_void_external_calls()
     def test_access_social_social_manager(self):

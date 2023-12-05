@@ -120,7 +120,7 @@ class AccountMove(models.Model):
         """ Serialise the data of each line on the invoice
 
         This function transforms the lines in order to handle the differences
-        between the KRA expected data and the lines in odoo.
+        between the KRA expected data and the lines in koda.
 
         If a discount line (as a negative line) has been added to the invoice
         lines, find a suitable line/lines to distribute the discount accross

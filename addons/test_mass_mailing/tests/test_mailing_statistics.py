@@ -27,7 +27,7 @@ class TestMailingStatistics(TestMassMailCommon):
         )
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mass_mailing.models.mailing', 'odoo.addons.mail.models.mail_mail', 'odoo.addons.mail.models.mail_thread')
+    @mute_logger('koda.addons.mass_mailing.models.mailing', 'koda.addons.mail.models.mail_mail', 'koda.addons.mail.models.mail_thread')
     def test_mailing_statistics(self):
         target_records = self._create_mailing_test_records(model='mailing.test.blacklist', count=10)
         mailing = self.env['mailing.mailing'].browse(self.mailing_bl.ids)
@@ -40,9 +40,9 @@ class TestMailingStatistics(TestMassMailCommon):
         self.gateway_mail_reply_wrecord(MAIL_TEMPLATE, target_records[0], use_in_reply_to=True)
         self.gateway_mail_reply_wrecord(MAIL_TEMPLATE, target_records[1], use_in_reply_to=True)
         self.gateway_mail_reply_wrecord(MAIL_TEMPLATE, target_records[2], use_in_reply_to=True)
-        self.gateway_mail_click(mailing, target_records[0], 'https://www.odoo.be')
-        self.gateway_mail_click(mailing, target_records[2], 'https://www.odoo.be')
-        self.gateway_mail_click(mailing, target_records[3], 'https://www.odoo.be')
+        self.gateway_mail_click(mailing, target_records[0], 'https://www.koda.be')
+        self.gateway_mail_click(mailing, target_records[2], 'https://www.koda.be')
+        self.gateway_mail_click(mailing, target_records[3], 'https://www.koda.be')
 
         # check mailing statistics
         self.assertEqual(mailing.clicked, 3)
@@ -77,7 +77,7 @@ class TestMailingStatistics(TestMassMailCommon):
         self.assertEqual(first_link_value, mailing.clicked)
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mass_mailing.models.mailing', 'odoo.addons.mail.models.mail_mail', 'odoo.addons.mail.models.mail_thread')
+    @mute_logger('koda.addons.mass_mailing.models.mailing', 'koda.addons.mail.models.mail_mail', 'koda.addons.mail.models.mail_thread')
     def test_mailing_statistics_wo_user(self):
         target_records = self._create_mailing_test_records(model='mailing.test.blacklist', count=10)
         mailing = self.env['mailing.mailing'].browse(self.mailing_bl.ids)

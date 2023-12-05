@@ -49,7 +49,7 @@ class TestAutoBlacklist(common.TestMassMailCommon):
         })
         self._test_mailing_bounce_w_auto_bl({'bounced_partner': bounced_partners})
 
-    @mute_logger('odoo.addons.mail.models.mail_thread')
+    @mute_logger('koda.addons.mail.models.mail_thread')
     def _test_mailing_bounce_w_auto_bl(self, bounce_base_values):
         mailing = self.mailing_bl.with_env(self.env)
         target = self.target_rec.with_env(self.env)

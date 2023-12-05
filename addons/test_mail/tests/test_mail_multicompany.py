@@ -68,7 +68,7 @@ class TestMailMCCommon(MailCommon, TestRecipients):
 class TestMultiCompanySetup(TestMailMCCommon):
 
     @users('employee_c2')
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     def test_post_with_read_access(self):
         """ Check that with readonly access, a message with attachment can be
         posted on a model with the attribute _mail_post_access = 'read'. """
@@ -126,7 +126,7 @@ class TestMultiCompanySetup(TestMailMCCommon):
         self.assertEqual(test_record_c1.message_main_attachment_id, first_attachment)
 
     @users('employee_c2')
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     def test_post_wo_access(self):
         test_records_mc_c1, test_records_mc_c2 = self.test_records_mc.with_env(self.env)
         attachments_data = [

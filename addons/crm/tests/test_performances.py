@@ -21,7 +21,7 @@ class TestLeadAssignPerf(TestLeadAssignCommon):
     of random in tests.
     """
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.crm.models.crm_team', 'odoo.addons.crm.models.crm_team_member')
+    @mute_logger('koda.models.unlink', 'koda.addons.crm.models.crm_team', 'koda.addons.crm.models.crm_team_member')
     def test_assign_perf_duplicates(self):
         """ Test assign process with duplicates on partner. Allow to ensure notably
         that de duplication is effectively performed. """
@@ -69,7 +69,7 @@ class TestLeadAssignPerf(TestLeadAssignCommon):
         self.assertMemberAssign(self.sales_team_convert_m1, 8)  # 30 max on 15 (2) + compensation (5.6)
         self.assertMemberAssign(self.sales_team_convert_m2, 15)  # 60 max on 15 (4) + compsantion (11.2)
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.crm.models.crm_team', 'odoo.addons.crm.models.crm_team_member')
+    @mute_logger('koda.models.unlink', 'koda.addons.crm.models.crm_team', 'koda.addons.crm.models.crm_team_member')
     def test_assign_perf_no_duplicates(self):
         # fix the seed and avoid randomness
         random.seed(1945)
@@ -112,7 +112,7 @@ class TestLeadAssignPerf(TestLeadAssignCommon):
         self.assertMemberAssign(self.sales_team_convert_m1, 8)  # 30 max on 15 (2) + compensation (5.6)
         self.assertMemberAssign(self.sales_team_convert_m2, 15)  # 60 max on 15 (4) + compensation (11.2)
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.crm.models.crm_team', 'odoo.addons.crm.models.crm_team_member')
+    @mute_logger('koda.models.unlink', 'koda.addons.crm.models.crm_team', 'koda.addons.crm.models.crm_team_member')
     def test_assign_perf_populated(self):
         """ Test assignment on a more high volume oriented test set in order to
         have more insights on query counts. """

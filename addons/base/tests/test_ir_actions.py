@@ -7,7 +7,7 @@ from psycopg2 import IntegrityError, ProgrammingError
 import requests
 from unittest.mock import patch
 
-import odoo
+import koda
 from koda.exceptions import UserError, ValidationError, AccessError
 from koda.tools import mute_logger
 from koda.tests import common, tagged
@@ -85,15 +85,15 @@ except:
 
 class TestServerActions(TestServerActionsBase):
     def test_00_server_action(self):
-        with self.assertLogs('odoo.addons.base.models.ir_actions.server_action_safe_eval',
+        with self.assertLogs('koda.addons.base.models.ir_actions.server_action_safe_eval',
                              level='DEBUG') as log_catcher:
             self.test_server_action.run()
             self.assertEqual(log_catcher.output, [
-                'DEBUG:odoo.addons.base.models.ir_actions.server_action_safe_eval:This is a test debug log',
-                'INFO:odoo.addons.base.models.ir_actions.server_action_safe_eval:This is a test info log',
-                'WARNING:odoo.addons.base.models.ir_actions.server_action_safe_eval:This is a test warning log',
-                'ERROR:odoo.addons.base.models.ir_actions.server_action_safe_eval:This is a test error log',
-"""ERROR:odoo.addons.base.models.ir_actions.server_action_safe_eval:This is a test exception log
+                'DEBUG:koda.addons.base.models.ir_actions.server_action_safe_eval:This is a test debug log',
+                'INFO:koda.addons.base.models.ir_actions.server_action_safe_eval:This is a test info log',
+                'WARNING:koda.addons.base.models.ir_actions.server_action_safe_eval:This is a test warning log',
+                'ERROR:koda.addons.base.models.ir_actions.server_action_safe_eval:This is a test error log',
+"""ERROR:koda.addons.base.models.ir_actions.server_action_safe_eval:This is a test exception log
 Traceback (most recent call last):
   File "ir.actions.server(%d,)", line 6, in <module>
 ZeroDivisionError: division by zero""" % self.test_server_action.id
@@ -331,7 +331,7 @@ ZeroDivisionError: division by zero""" % self.test_server_action.id
         # Test: partner updated
         self.assertTrue(self.test_partner.active, 'ir_actions_server: partner should have been reactivated')
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('koda.addons.base.models.ir_model', 'koda.models')
     def test_40_multi(self):
         # Data: 2 server actions that will be nested
         action1 = self.action.create({
@@ -501,7 +501,7 @@ ZeroDivisionError: division by zero""" % self.test_server_action.id
             num_requests += 1
             return response
 
-        with patch.object(requests, 'post', _patched_post), mute_logger('odoo.addons.base.models.ir_actions'):
+        with patch.object(requests, 'post', _patched_post), mute_logger('koda.addons.base.models.ir_actions'):
             # first run: 200
             self.action.with_context(self.context).run()
             # second run: 400, should *not* raise but
@@ -550,13 +550,13 @@ class TestCommonCustomFields(common.TransactionCase):
 class TestCustomFields(TestCommonCustomFields):
     def test_create_custom(self):
         """ custom field names must be start with 'x_' """
-        with self.assertRaises(IntegrityError), mute_logger('odoo.sql_db'):
+        with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
             self.create_field('xyz')
 
     def test_rename_custom(self):
         """ custom field names must be start with 'x_' """
         field = self.create_field('x_xyz')
-        with self.assertRaises(IntegrityError), mute_logger('odoo.sql_db'):
+        with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
             field.name = 'xyz'
 
     def test_create_valid(self):
@@ -573,14 +573,14 @@ class TestCustomFields(TestCommonCustomFields):
     def test_create_unique(self):
         """ one cannot create two fields with the same name on a given model """
         self.create_field('x_foo')
-        with self.assertRaises(IntegrityError), mute_logger('odoo.sql_db'):
+        with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
             self.create_field('x_foo')
 
     def test_rename_unique(self):
         """ one cannot create two fields with the same name on a given model """
         field1 = self.create_field('x_foo')
         field2 = self.create_field('x_bar')
-        with self.assertRaises(IntegrityError), mute_logger('odoo.sql_db'):
+        with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
             field2.name = field1.name
 
     def test_remove_without_view(self):
@@ -593,7 +593,7 @@ class TestCustomFields(TestCommonCustomFields):
         field = self.create_field('x_foo')
         field.name = 'x_bar'
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_remove_with_view(self):
         """ try removing a custom field that occurs in a view """
         field = self.create_field('x_foo')
@@ -604,7 +604,7 @@ class TestCustomFields(TestCommonCustomFields):
             field.unlink()
         self.assertIn('x_foo', self.env[self.MODEL]._fields)
 
-    @mute_logger('odoo.addons.base.models.ir_ui_view')
+    @mute_logger('koda.addons.base.models.ir_ui_view')
     def test_rename_with_view(self):
         """ try renaming a custom field that occurs in a view """
         field = self.create_field('x_foo')
@@ -848,7 +848,7 @@ class TestCustomFieldsPostInstall(TestCommonCustomFields):
         # as a user could do through a SQL shell or a `cr.execute` in a server action
         self.env.cr.execute("ALTER TABLE ir_model_fields DROP CONSTRAINT ir_model_fields_name_manual_field")
         self.env.cr.execute("UPDATE ir_model_fields SET name = 'foo' WHERE id = %s", [field.id])
-        with self.assertLogs('odoo.addons.base.models.ir_model') as log_catcher:
+        with self.assertLogs('koda.addons.base.models.ir_model') as log_catcher:
             # Trick to reload the registry. The above rename done through SQL didn't reload the registry. This will.
             self.env.registry.setup_models(self.cr)
             self.assertIn(

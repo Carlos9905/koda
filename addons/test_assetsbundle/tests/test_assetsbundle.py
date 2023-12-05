@@ -12,7 +12,7 @@ import pathlib
 import lxml
 import base64
 
-import odoo
+import koda
 from koda import api, http
 from koda.addons import __path__ as ADDONS_PATH
 from koda.addons.base.models.assetsbundle import AssetsBundle
@@ -35,67 +35,67 @@ class TestAddonPaths(TransactionCase):
         self.assertFalse(asset_paths.list)
 
         asset_paths.append([
-            ('/home/user/odoo/addons/web/a', '/web/a', 1),
-            ('/home/user/odoo/addons/web/c', '/web/c', 1),
-            ('/home/user/odoo/addons/web/d', '/web/d', 1),
+            ('/home/user/koda/addons/web/a', '/web/a', 1),
+            ('/home/user/koda/addons/web/c', '/web/c', 1),
+            ('/home/user/koda/addons/web/d', '/web/d', 1),
         ], 'bundle1')
         self.assertEqual(asset_paths.list, [
-            ('/home/user/odoo/addons/web/a', '/web/a', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/c', '/web/c', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/d', '/web/d', 'bundle1', 1),
+            ('/home/user/koda/addons/web/a', '/web/a', 'bundle1', 1),
+            ('/home/user/koda/addons/web/c', '/web/c', 'bundle1', 1),
+            ('/home/user/koda/addons/web/d', '/web/d', 'bundle1', 1),
         ])
 
         # append with a duplicate of 'c'
         asset_paths.append([
-            ('/home/user/odoo/addons/web/c', '/web/c', 1),
-            ('/home/user/odoo/addons/web/f', '/web/f', 1),
+            ('/home/user/koda/addons/web/c', '/web/c', 1),
+            ('/home/user/koda/addons/web/f', '/web/f', 1),
         ], 'bundle2')
         self.assertEqual(asset_paths.list, [
-            ('/home/user/odoo/addons/web/a', '/web/a', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/c', '/web/c', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/d', '/web/d', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/f', '/web/f', 'bundle2', 1),
+            ('/home/user/koda/addons/web/a', '/web/a', 'bundle1', 1),
+            ('/home/user/koda/addons/web/c', '/web/c', 'bundle1', 1),
+            ('/home/user/koda/addons/web/d', '/web/d', 'bundle1', 1),
+            ('/home/user/koda/addons/web/f', '/web/f', 'bundle2', 1),
         ])
 
         # insert with a duplicate of 'c' after 'c'
         asset_paths.insert([
-            ('/home/user/odoo/addons/web/c', '/web/c', 1),
-            ('/home/user/odoo/addons/web/e', '/web/e', 1),
+            ('/home/user/koda/addons/web/c', '/web/c', 1),
+            ('/home/user/koda/addons/web/e', '/web/e', 1),
         ], 'bundle3', 3)
         self.assertEqual(asset_paths.list, [
-            ('/home/user/odoo/addons/web/a', '/web/a', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/c', '/web/c', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/d', '/web/d', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/e', '/web/e', 'bundle3', 1),
-            ('/home/user/odoo/addons/web/f', '/web/f', 'bundle2', 1),
+            ('/home/user/koda/addons/web/a', '/web/a', 'bundle1', 1),
+            ('/home/user/koda/addons/web/c', '/web/c', 'bundle1', 1),
+            ('/home/user/koda/addons/web/d', '/web/d', 'bundle1', 1),
+            ('/home/user/koda/addons/web/e', '/web/e', 'bundle3', 1),
+            ('/home/user/koda/addons/web/f', '/web/f', 'bundle2', 1),
         ])
 
         # insert with a duplicate of 'd' before 'd'
         asset_paths.insert([
-            ('/home/user/odoo/addons/web/b', '/web/b', 1),
-            ('/home/user/odoo/addons/web/d', '/web/d', 1),
+            ('/home/user/koda/addons/web/b', '/web/b', 1),
+            ('/home/user/koda/addons/web/d', '/web/d', 1),
         ], 'bundle4', 1)
         self.assertEqual(asset_paths.list, [
 
-            ('/home/user/odoo/addons/web/a', '/web/a', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/b', '/web/b', 'bundle4', 1),
-            ('/home/user/odoo/addons/web/c', '/web/c', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/d', '/web/d', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/e', '/web/e', 'bundle3', 1),
-            ('/home/user/odoo/addons/web/f', '/web/f', 'bundle2', 1),
+            ('/home/user/koda/addons/web/a', '/web/a', 'bundle1', 1),
+            ('/home/user/koda/addons/web/b', '/web/b', 'bundle4', 1),
+            ('/home/user/koda/addons/web/c', '/web/c', 'bundle1', 1),
+            ('/home/user/koda/addons/web/d', '/web/d', 'bundle1', 1),
+            ('/home/user/koda/addons/web/e', '/web/e', 'bundle3', 1),
+            ('/home/user/koda/addons/web/f', '/web/f', 'bundle2', 1),
         ])
 
         # remove
         asset_paths.remove([
-            ('/home/user/odoo/addons/web/c', '/web/c', 1),
-            ('/home/user/odoo/addons/web/d', '/web/d', 1),
-            ('/home/user/odoo/addons/web/g', '/web/g', 1),
+            ('/home/user/koda/addons/web/c', '/web/c', 1),
+            ('/home/user/koda/addons/web/d', '/web/d', 1),
+            ('/home/user/koda/addons/web/g', '/web/g', 1),
         ], 'bundle5')
         self.assertEqual(asset_paths.list, [
-            ('/home/user/odoo/addons/web/a', '/web/a', 'bundle1', 1),
-            ('/home/user/odoo/addons/web/b', '/web/b', 'bundle4', 1),
-            ('/home/user/odoo/addons/web/e', '/web/e', 'bundle3', 1),
-            ('/home/user/odoo/addons/web/f', '/web/f', 'bundle2', 1),
+            ('/home/user/koda/addons/web/a', '/web/a', 'bundle1', 1),
+            ('/home/user/koda/addons/web/b', '/web/b', 'bundle4', 1),
+            ('/home/user/koda/addons/web/e', '/web/e', 'bundle3', 1),
+            ('/home/user/koda/addons/web/f', '/web/f', 'bundle2', 1),
         ])
 
 
@@ -111,7 +111,7 @@ class AddonManifestPatched(TransactionCase):
         }
 
         self.patch(self.env.registry, '_init_modules', self.installed_modules)
-        self.patch(odoo.modules.module, 'get_manifest', Mock(side_effect=lambda module: self.manifests.get(module, {})))
+        self.patch(koda.modules.module, 'get_manifest', Mock(side_effect=lambda module: self.manifests.get(module, {})))
 
 
 class FileTouchable(AddonManifestPatched):
@@ -1695,7 +1695,7 @@ class TestAssetsManifest(AddonManifestPatched):
             '''
         )
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_31(self):
         path_to_dummy = '../../tests/dummy.js'
         me = pathlib.Path(__file__).parent.absolute()
@@ -1711,7 +1711,7 @@ class TestAssetsManifest(AddonManifestPatched):
         attach = bundle.js()
         self.assertIn(b"Could not get content for /test_assetsbundle/../../tests/dummy.js", attach.exists().raw)
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_32_a_relative_path_in_addon(self):
         path_to_dummy = '../../tests/dummy.xml'
         me = pathlib.Path(__file__).parent.absolute()
@@ -1729,7 +1729,7 @@ class TestAssetsManifest(AddonManifestPatched):
         # TODO, validate this behaviour
         # the idea is that if the second element is False (not None) it will be added to the assetbundle, but considered in any case as an attachment url)
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_32_b_relative_path_outsied_addon(self):
         path_to_dummy = '../../tests/dummy.xml'
         me = pathlib.Path(__file__).parent.absolute()
@@ -1770,7 +1770,7 @@ class TestAssetsManifest(AddonManifestPatched):
         attach = self.env['ir.attachment'].search([('name', 'ilike', 'test_assetsbundle.irassetsec')], order='create_date DESC', limit=1)
         self.assertFalse(attach.exists())
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_34(self):
         self.env['ir.asset'].create({
             'name': '1',
@@ -1781,7 +1781,7 @@ class TestAssetsManifest(AddonManifestPatched):
         links = bundle.get_links()
         self.assertFalse(links)
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_35(self):
         self.env['ir.asset'].create({
             'name': '1',
@@ -1988,7 +1988,7 @@ class TestErrorManagement(HttpCase):
             'path': 'test_assetsbundle/static/src/css/test_error.scss',
         })
 
-        with mute_logger('odoo.addons.base.models.assetsbundle'):
+        with mute_logger('koda.addons.base.models.assetsbundle'):
             self.start_tour('/web', 'css_error_tour', login='admin')
 
     def test_assets_bundle_css_error_frontend(self):
@@ -1998,5 +1998,5 @@ class TestErrorManagement(HttpCase):
             'bundle': 'web.assets_frontend',
             'path': 'test_assetsbundle/static/src/css/test_error.scss',
         })
-        with mute_logger('odoo.addons.base.models.assetsbundle'):
+        with mute_logger('koda.addons.base.models.assetsbundle'):
             self.start_tour('/', 'css_error_tour_frontend', login='admin')

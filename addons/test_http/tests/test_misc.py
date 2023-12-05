@@ -6,7 +6,7 @@ from socket import gethostbyname
 from unittest.mock import patch
 from urllib.parse import urlparse
 
-import odoo
+import koda
 from koda.http import root, content_disposition
 from koda.tests import tagged
 from koda.tests.common import HOST, new_test_user, get_db_name, BaseCase
@@ -24,10 +24,10 @@ class TestHttpMisc(TestHttpBase):
         self.assertEqual(res.status_code, 404)
 
     def test_misc1_reverse_proxy(self):
-        # client <-> reverse-proxy <-> odoo
+        # client <-> reverse-proxy <-> koda
         client_ip = '127.0.0.16'
         reverseproxy_ip = gethostbyname(HOST)
-        host = 'mycompany.odoo.com'
+        host = 'mycompany.koda.com'
 
         headers = {
             'Host': '',
@@ -52,8 +52,8 @@ class TestHttpMisc(TestHttpBase):
 
     def test_misc2_local_redirect(self):
         def local_redirect(path):
-            fake_req = odoo.tools.misc.DotDict(db=False)
-            return odoo.http.Request.redirect(fake_req, path, local=True).headers['Location']
+            fake_req = koda.tools.misc.DotDict(db=False)
+            return koda.http.Request.redirect(fake_req, path, local=True).headers['Location']
         self.assertEqual(local_redirect('https://www.example.com/hello?a=b'), '/hello?a=b')
         self.assertEqual(local_redirect('/hello?a=b'), '/hello?a=b')
         self.assertEqual(local_redirect('hello?a=b'), '/hello?a=b')
@@ -67,14 +67,14 @@ class TestHttpMisc(TestHttpBase):
 
         # Valid URLs
         self.assertEqual(root.get_static_file(f'/{uri}'), path, "Valid file")
-        self.assertEqual(root.get_static_file(f'odoo.com/{uri}', host='odoo.com'), path, "Valid file with valid host")
-        self.assertEqual(root.get_static_file(f'http://odoo.com/{uri}', host='odoo.com'), path, "Valid file with valid host")
+        self.assertEqual(root.get_static_file(f'koda.com/{uri}', host='koda.com'), path, "Valid file with valid host")
+        self.assertEqual(root.get_static_file(f'http://koda.com/{uri}', host='koda.com'), path, "Valid file with valid host")
 
         # Invalid URLs
         self.assertIsNone(root.get_static_file('/test_http/i-dont-exist'), "File doesn't exist")
         self.assertIsNone(root.get_static_file('/test_http/__manifest__.py'), "File is not static")
-        self.assertIsNone(root.get_static_file(f'odoo.com/{uri}'), "No host allowed")
-        self.assertIsNone(root.get_static_file(f'http://odoo.com/{uri}'), "No host allowed")
+        self.assertIsNone(root.get_static_file(f'koda.com/{uri}'), "No host allowed")
+        self.assertIsNone(root.get_static_file(f'http://koda.com/{uri}'), "No host allowed")
 
     def test_misc4_rpc_qweb(self):
         jack = new_test_user(self.env, 'jackoneill', context={'lang': 'en_US'})
@@ -112,10 +112,10 @@ class TestHttpMisc(TestHttpBase):
         headers = {
             'Host': '',
             'X-Forwarded-For': TEST_IP,
-            'X-Forwarded-Host': 'odoo.com',
+            'X-Forwarded-Host': 'koda.com',
             'X-Forwarded-Proto': 'https'
         }
-        with patch.dict('odoo.tools.config.options', {'proxy_mode': True}):
+        with patch.dict('koda.tools.config.options', {'proxy_mode': True}):
             res = self.nodb_url_open('/test_http/geoip', headers=headers)
             res.raise_for_status()
             self.assertEqual(res.json(), {
@@ -198,7 +198,7 @@ class TestHttpEnsureDb(TestHttpBase):
         res.raise_for_status()
         self.assertEqual(res.status_code, 302)
         self.assertEqual(urlparse(res.headers.get('Location', '')).path, '/test_http/ensure_db')
-        self.assertEqual(odoo.http.root.session_store.get(res.cookies['session_id']).db, 'db0')
+        self.assertEqual(koda.http.root.session_store.get(res.cookies['session_id']).db, 'db0')
 
         # follow the redirection
         res = self.multidb_url_open('/test_http/ensure_db')
@@ -209,7 +209,7 @@ class TestHttpEnsureDb(TestHttpBase):
     def test_ensure_db2_use_session_db(self):
         session = self.authenticate(None, None)
         session.db = 'db0'
-        odoo.http.root.session_store.save(session)
+        koda.http.root.session_store.save(session)
 
         res = self.multidb_url_open('/test_http/ensure_db')
         res.raise_for_status()
@@ -219,14 +219,14 @@ class TestHttpEnsureDb(TestHttpBase):
     def test_ensure_db3_change_db(self):
         session = self.authenticate(None, None)
         session.db = 'db0'
-        odoo.http.root.session_store.save(session)
+        koda.http.root.session_store.save(session)
 
         res = self.multidb_url_open('/test_http/ensure_db?db=db1')
         res.raise_for_status()
         self.assertEqual(res.status_code, 302)
         self.assertEqual(urlparse(res.headers.get('Location', '')).path, '/test_http/ensure_db')
 
-        new_session = odoo.http.root.session_store.get(res.cookies['session_id'])
+        new_session = koda.http.root.session_store.get(res.cookies['session_id'])
         self.assertNotEqual(session.sid, new_session.sid)
         self.assertEqual(new_session.db, 'db1')
         self.assertEqual(new_session.uid, None)

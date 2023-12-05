@@ -67,7 +67,7 @@ class IrBinary(models.AbstractModel):
         :param record: the record where to load the data from.
         :param str field_name: the binary field where to load the data
             from.
-        :rtype: odoo.http.Stream
+        :rtype: koda.http.Stream
         """
         if record._name == 'ir.attachment' and field_name in ('raw', 'datas', 'db_datas'):
             return Stream.from_attachment(record)
@@ -94,7 +94,7 @@ class IrBinary(models.AbstractModel):
         mimetype=None, default_mimetype='application/octet-stream',
     ):
         """
-        Create a :class:odoo.http.Stream: from a record's binary field.
+        Create a :class:koda.http.Stream: from a record's binary field.
 
         :param record: the record where to load the data from.
         :param str field_name: the binary field where to load the data
@@ -111,7 +111,7 @@ class IrBinary(models.AbstractModel):
         :param str default_mimetype: the mimetype to use when the
             mimetype couldn't be determined. By default it is
             ``application/octet-stream``.
-        :rtype: odoo.http.Stream
+        :rtype: koda.http.Stream
         """
         with replace_exceptions(ValueError, by=UserError(f'Expected singleton: {record}')):
             record.ensure_one()
@@ -159,19 +159,19 @@ class IrBinary(models.AbstractModel):
         width=0, height=0, crop=False, quality=0,
     ):
         """
-        Create a :class:odoo.http.Stream: from a record's binary field,
+        Create a :class:koda.http.Stream: from a record's binary field,
         equivalent of :meth:`~get_stream_from` but for images.
 
         In case the record does not exist or is not accessible, the
         alternative ``placeholder`` path is used instead. If not set,
         a path is determined via
-        :meth:`~odoo.models.BaseModel._get_placeholder_filename` which
+        :meth:`~koda.models.BaseModel._get_placeholder_filename` which
         ultimately fallbacks on ``web/static/img/placeholder.png``.
 
         In case the arguments ``width``, ``height``, ``crop`` or
         ``quality`` are given, the image will be post-processed and the
         ETags (the unique cache http header) will be updated
-        accordingly. See also :func:`odoo.tools.image.image_process`.
+        accordingly. See also :func:`koda.tools.image.image_process`.
 
         :param record: the record where to load the data from.
         :param str field_name: the binary field where to load the data

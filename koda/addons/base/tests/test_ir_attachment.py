@@ -124,7 +124,7 @@ class TestIrAttachment(TransactionCase):
         Attachment = self.env['ir.attachment']
         img_bin = io.BytesIO()
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        with Image.open(os.path.join(dir_path, 'odoo.jpg'), 'r') as logo:
+        with Image.open(os.path.join(dir_path, 'koda.jpg'), 'r') as logo:
             img = Image.new('RGB', (4000, 2000), '#4169E1')
             img.paste(logo)
             img.save(img_bin, 'JPEG')

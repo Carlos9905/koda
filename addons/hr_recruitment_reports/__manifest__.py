@@ -8,7 +8,7 @@
     'description': """
 Add a dynamic report about recruitment.
     """,
-    'website': 'https://www.odoo.com/app/recruitment',
+    'website': 'https://www.koda.com/app/recruitment',
     'depends': ['hr_recruitment'],
     'data': [
         'security/ir.model.access.csv',

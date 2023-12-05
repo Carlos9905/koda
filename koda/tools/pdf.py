@@ -383,7 +383,7 @@ class OdooPdfFileWriter(PdfFileWriter):
         outlines = self._root_object['/Outlines'].getObject()
         outlines[NameObject('/Count')] = NumberObject(1)
 
-        # Set odoo as producer
+        # Set koda as producer
         self.addMetadata({
             '/Creator': "Odoo",
             '/Producer': "Odoo",

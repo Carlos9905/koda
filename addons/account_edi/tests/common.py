@@ -61,7 +61,7 @@ class AccountEdiTestCommon(AccountTestInvoicingCommon):
 
     @contextmanager
     def with_custom_method(self, method_name, method_content):
-        path = f'odoo.addons.account_edi.models.account_edi_format.AccountEdiFormat.{method_name}'
+        path = f'koda.addons.account_edi.models.account_edi_format.AccountEdiFormat.{method_name}'
         with patch(path, new=method_content, create=not hasattr(self.env['account.edi.format'], method_name)):
             yield
 
@@ -73,11 +73,11 @@ class AccountEdiTestCommon(AccountTestInvoicingCommon):
                  ):
 
         try:
-            with patch('odoo.addons.account_edi.models.account_edi_format.AccountEdiFormat._needs_web_services',
+            with patch('koda.addons.account_edi.models.account_edi_format.AccountEdiFormat._needs_web_services',
                        new=_needs_web_services_method), \
-                 patch('odoo.addons.account_edi.models.account_edi_format.AccountEdiFormat._check_move_configuration',
+                 patch('koda.addons.account_edi.models.account_edi_format.AccountEdiFormat._check_move_configuration',
                        new=_check_move_configuration_method), \
-                 patch('odoo.addons.account_edi.models.account_edi_format.AccountEdiFormat._get_move_applicability',
+                 patch('koda.addons.account_edi.models.account_edi_format.AccountEdiFormat._get_move_applicability',
                        new=_get_move_applicability_method):
 
                 yield

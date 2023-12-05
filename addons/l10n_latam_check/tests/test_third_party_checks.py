@@ -151,7 +151,7 @@ class TestThirdChecks(L10nLatamCheckTest):
             self.env['account.payment'].create(vals).action_post()
 
         operations = self.env['account.payment'].search([('l10n_latam_check_id', '=', check.id), ('state', '=', 'posted')], order="date desc, id desc")
-        # we have 5 operations because for each transfers a second payment/operation is created automatically by odoo
+        # we have 5 operations because for each transfers a second payment/operation is created automatically by koda
         self.assertEqual(len(operations), 5, 'There should be 5 operations on the check')
         self.assertEqual(operations[0], customer_return, 'Last operation should be customer return')
         self.assertEqual(operations[2], bank_rejection, 'Previous operation should be bank rejection')

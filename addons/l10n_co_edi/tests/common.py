@@ -30,11 +30,11 @@ class TestCoEdiCommon(AccountEdiTestCommon):
 
         try:
             with freeze_time(self.frozen_today), \
-                 patch('odoo.addons.l10n_co_edi.models.carvajal_request.CarvajalRequest.upload',
+                 patch('koda.addons.l10n_co_edi.models.carvajal_request.CarvajalRequest.upload',
                        new=Mock(return_value=return_value_upload)), \
-                 patch('odoo.addons.l10n_co_edi.models.carvajal_request.CarvajalRequest.check_status',
+                 patch('koda.addons.l10n_co_edi.models.carvajal_request.CarvajalRequest.check_status',
                        new=Mock(return_value=return_value_check)), \
-                 patch('odoo.addons.l10n_co_edi.models.carvajal_request.CarvajalRequest.client',
+                 patch('koda.addons.l10n_co_edi.models.carvajal_request.CarvajalRequest.client',
                        new=Mock(return_value=None)):
                 yield
         finally:

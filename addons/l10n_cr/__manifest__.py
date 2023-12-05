@@ -3,9 +3,9 @@
     'name': 'Costa Rica - Accounting',
     'icon': '/account/static/description/l10n.png',
     'countries': ['cr'],
-    'url': 'https://github.com/CLEARCORP/odoo-costa-rica',
+    'url': 'https://github.com/CLEARCORP/koda-costa-rica',
     'author': 'ClearCorp S.A.',
-    'website': 'https://www.odoo.com/documentation/17.0/applications/finance/fiscal_localizations.html',
+    'website': 'https://www.koda.com/documentation/17.0/applications/finance/fiscal_localizations.html',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Chart of accounts for Costa Rica.

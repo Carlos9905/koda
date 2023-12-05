@@ -13,7 +13,7 @@ from koda.tools import mute_logger
 @tagged('post_install', '-at_install')
 class TestEventData(TestEventBoothCommon):
 
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     @users('user_eventmanager')
     def test_event_configuration_booths_from_type(self):
         """ Test data computation (related to booths) of event coming from its event.type template. """

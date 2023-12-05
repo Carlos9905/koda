@@ -14,7 +14,7 @@ class AccountJournal(models.Model):
 
     invoice_reference_model = fields.Selection(selection_add=[
         ('ch', 'Switzerland')
-    ], ondelete={'ch': lambda recs: recs.write({'invoice_reference_model': 'odoo'})})
+    ], ondelete={'ch': lambda recs: recs.write({'invoice_reference_model': 'koda'})})
 
     def _process_reference_for_sale_order(self, order_reference):
         '''

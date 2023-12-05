@@ -83,7 +83,7 @@ class TestMailPerformance(FullBaseMailPerformance):
                          self.user_emp_email.partner_id + self.user_admin.partner_id + self.customers + self.user_portal.partner_id)
         self.assertEqual(len(record_ticket.message_ids), 1)
 
-    @mute_logger('odoo.tests', 'odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('koda.tests', 'koda.addons.mail.models.mail_mail', 'koda.models.unlink')
     @users('employee')
     @warmup
     def test_message_post_w_followers(self):
@@ -156,7 +156,7 @@ class TestPortalFormatPerformance(FullBaseMailPerformance):
                 'email_from': record.customer_id.email_formatted,
                 'link_preview_ids': [
                     (0, 0, {
-                        'source_url': 'https://www.odoo.com',
+                        'source_url': 'https://www.koda.com',
                     }), (0, 0, {
                         'source_url': 'https://www.example.com',
                     }),
@@ -182,7 +182,7 @@ class TestPortalFormatPerformance(FullBaseMailPerformance):
                 ],
                 'reaction_ids': [
                     (0, 0, {
-                        'content': 'https://www.odoo.com',
+                        'content': 'https://www.koda.com',
                         'partner_id': cls.customers[(msg_idx * 2) + 1].id
                     }), (0, 0, {
                         'content': 'https://www.example.com',
@@ -233,7 +233,7 @@ class TestPortalFormatPerformance(FullBaseMailPerformance):
         self.assertEqual(len(self.messages_all), 5 * 2)
         self.assertEqual(len(self.ratings_all), len(self.messages_all) * 2)
 
-    @mute_logger('odoo.tests', 'odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('koda.tests', 'koda.addons.mail.models.mail_mail', 'koda.models.unlink')
     @users('employee')
     @warmup
     def test_portal_message_format_norating(self):
@@ -284,7 +284,7 @@ class TestPortalFormatPerformance(FullBaseMailPerformance):
             self.assertNotIn('rating_stats', format_res)
             self.assertNotIn('rating_value', format_res)
 
-    @mute_logger('odoo.tests', 'odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('koda.tests', 'koda.addons.mail.models.mail_mail', 'koda.models.unlink')
     @users('employee')
     @warmup
     def test_portal_message_format_rating(self):
@@ -306,7 +306,7 @@ class TestPortalFormatPerformance(FullBaseMailPerformance):
             )
             self.assertEqual(format_res['rating_value'], 4)
 
-    @mute_logger('odoo.tests', 'odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('koda.tests', 'koda.addons.mail.models.mail_mail', 'koda.models.unlink')
     @users('employee')
     @warmup
     def test_portal_message_format_monorecord(self):

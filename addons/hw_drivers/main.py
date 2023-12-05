@@ -32,7 +32,7 @@ class Manager(Thread):
         """
         server = helpers.get_odoo_server_url()
         if server:
-            subject = helpers.read_file_first_line('odoo-subject.conf')
+            subject = helpers.read_file_first_line('koda-subject.conf')
             if subject:
                 domain = helpers.get_ip().replace('.', '-') + subject.strip('*')
             else:
@@ -77,7 +77,7 @@ class Manager(Thread):
 
     def run(self):
         """
-        Thread that will load interfaces and drivers and contact the odoo server with the updates
+        Thread that will load interfaces and drivers and contact the koda server with the updates
         """
 
         helpers.start_nginx_server()

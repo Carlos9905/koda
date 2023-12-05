@@ -8,7 +8,7 @@
     "version": "0.1",
     "author": "Odoo",
     "category": "Accounting/Localizations/Reporting",
-    "website": "http://www.odoo.com/",
+    "website": "http://www.koda.com/",
     "license": "OEEL-1",
     "depends": [
         "l10n_mx_reports",

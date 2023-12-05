@@ -727,7 +727,7 @@ class SignRequest(models.Model):
 
         # the notif layout wrapping expects a mail.message record, but we don't want
         # to actually create the record
-        # See @tde-banana-odoo for details
+        # See @tde-banana-koda for details
         msg = sign_request.env['mail.message'].sudo().new(dict(body=body, **message_values))
         body_html = self.env['ir.qweb']._render(email_layout_xmlid, dict(message=msg, **notif_values), minimal_qcontext=True)
         body_html = sign_request.env['mail.render.mixin']._replace_local_links(body_html)

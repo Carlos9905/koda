@@ -7,7 +7,7 @@ from koda.tools import mute_logger
 
 
 class TestPortalProject(TestProjectPortalCommon):
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     def test_portal_project_access_rights(self):
         pigs = self.project_pigs
         pigs.write({'privacy_visibility': 'portal'})

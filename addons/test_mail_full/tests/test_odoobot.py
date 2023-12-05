@@ -25,17 +25,17 @@ class TestOdoobot(MailCommon, TestRecipients):
             'partner_ids': [],
             'subtype_xmlid': 'mail.mt_comment'
         }
-        cls.odoobot_ping_body = '<a href="http://odoo.com/web#model=res.partner&amp;id=%s" class="o_mail_redirect" data-oe-id="%s" data-oe-model="res.partner" target="_blank">@OdooBot</a>' % (cls.odoobot.id, cls.odoobot.id)
+        cls.odoobot_ping_body = '<a href="http://koda.com/web#model=res.partner&amp;id=%s" class="o_mail_redirect" data-oe-id="%s" data-oe-model="res.partner" target="_blank">@OdooBot</a>' % (cls.odoobot.id, cls.odoobot.id)
         cls.test_record_employe = cls.test_record.with_user(cls.user_employee)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_fetch_listener(self):
         channel = self.user_employee.with_user(self.user_employee)._init_odoobot()
         odoobot = self.env.ref("base.partner_root")
         odoobot_in_fetch_listeners = self.env['discuss.channel.member'].search([('channel_id', '=', channel.id), ('partner_id', '=', odoobot.id)])
         self.assertEqual(len(odoobot_in_fetch_listeners), 1, 'odoobot should appear only once in channel_fetch_listeners')
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_odoobot_ping(self):
         kwargs = self.message_post_default_kwargs.copy()
         kwargs.update({'body': self.odoobot_ping_body, 'partner_ids': [self.odoobot.id, self.user_admin.partner_id.id]})
@@ -52,7 +52,7 @@ class TestOdoobot(MailCommon, TestRecipients):
         self.assertIn(self.user_employee.partner_id, follower)
         self.assertIn(self.user_admin.partner_id, follower)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_onboarding_flow(self):
         kwargs = self.message_post_default_kwargs.copy()
         channel = self.user_employee.with_user(self.user_employee)._init_odoobot()
@@ -110,7 +110,7 @@ class TestOdoobot(MailCommon, TestRecipients):
             answer=("If you need help",)
         )
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_odoobot_no_default_answer(self):
         kwargs = self.message_post_default_kwargs.copy()
         kwargs.update({'body': "I'm not talking to @odoobot right now", 'partner_ids': []})

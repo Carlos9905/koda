@@ -7,9 +7,9 @@ from koda.addons.l10n_cl_edi.tests.common import TestL10nClEdiCommon, _check_wit
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
-@patch('odoo.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
+@patch('koda.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
 class TestL10nClDTE(TestL10nClEdiCommon):
-    @patch('odoo.addons.l10n_cl_edi.models.l10n_cl_edi_util.L10nClEdiUtilMixin._get_cl_current_strftime')
+    @patch('koda.addons.l10n_cl_edi.models.l10n_cl_edi_util.L10nClEdiUtilMixin._get_cl_current_strftime')
     def test_l10n_cl_dte_39(self, get_cl_current_strftime):
         get_cl_current_strftime.return_value = '2019-10-24T20:00:00'
 

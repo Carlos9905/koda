@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import time
-import odoo.tests
+import koda.tests
 
 from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta
@@ -11,7 +11,7 @@ from koda import fields, Command
 from koda.addons.hr_payroll.tests.common import TestPayslipContractBase
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestHrPayrollAccountCommon(TestPayslipContractBase):
 
     @classmethod
@@ -143,7 +143,7 @@ class TestHrPayrollAccountCommon(TestPayslipContractBase):
         })
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestHrPayrollAccount(TestHrPayrollAccountCommon):
 
     def test_00_hr_payslip_run(self):

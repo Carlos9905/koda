@@ -12,7 +12,7 @@ class OnlineSynchronizationPortal(CustomerPortal):
     @http.route(['/renew_consent/<int:journal_id>'], type='http', auth="public", website=True, sitemap=False)
     def portal_online_sync_renew_consent(self, journal_id, access_token=None, **kw):
         # Display a page to the user allowing to renew the consent for his bank sync.
-        # Requires the same rights as the button in odoo.
+        # Requires the same rights as the button in koda.
         try:
             journal_sudo = self._document_check_access('account.journal', journal_id, access_token)
         except (AccessError, MissingError):

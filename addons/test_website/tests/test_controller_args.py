@@ -1,13 +1,13 @@
 # Koda
-import odoo.tests
+import koda.tests
 from koda.tools import mute_logger
 from unittest.mock import patch
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestWebsiteControllerArgs(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestWebsiteControllerArgs(koda.tests.HttpCase):
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_crawl_args(self):
         req = self.url_open('/ignore_args/converter/valueA/?b=valueB&c=valueC')
         self.assertEqual(req.status_code, 200)
@@ -39,8 +39,8 @@ class TestWebsiteControllerArgs(odoo.tests.HttpCase):
                              "Model converter record does not exist, return a 404.")
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestWebsiteControllers(odoo.tests.TransactionCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestWebsiteControllers(koda.tests.TransactionCase):
 
     def test_01_sitemap(self):
         website = self.env['website'].browse(1)

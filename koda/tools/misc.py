@@ -194,7 +194,7 @@ def file_open(name, mode="r", filter_ext=None, env=None):
 
         >>> file_open('hr/static/description/icon.png')
         >>> file_open('hr/static/description/icon.png', filter_ext=('.png', '.jpg'))
-        >>> with file_open('/opt/odoo/addons/hr/static/description/icon.png', 'rb') as f:
+        >>> with file_open('/opt/koda/addons/hr/static/description/icon.png', 'rb') as f:
         ...     contents = f.read()
 
     :param name: absolute or relative path to a file located inside an addon
@@ -231,10 +231,10 @@ def file_open_temporary_directory(env):
 
     Examples::
 
-        >>> with odoo.tools.file_open_temporary_directory(self.env) as module_dir:
+        >>> with koda.tools.file_open_temporary_directory(self.env) as module_dir:
         ...    with zipfile.ZipFile('foo.zip', 'r') as z:
         ...        z.extract('foo/__manifest__.py', module_dir)
-        ...    with odoo.tools.file_open('foo/__manifest__.py', env=self.env) as f:
+        ...    with koda.tools.file_open('foo/__manifest__.py', env=self.env) as f:
         ...        manifest = f.read()
 
     :param env: environment for which the temporary directory is created.
@@ -787,11 +787,11 @@ class mute_logger(logging.Handler):
 
     Can be used as context manager or decorator::
 
-        @mute_logger('odoo.plic.ploc')
+        @mute_logger('koda.plic.ploc')
         def do_stuff():
             blahblah()
 
-        with mute_logger('odoo.foo.bar'):
+        with mute_logger('koda.foo.bar'):
             do_suff()
     """
     def __init__(self, *loggers):
@@ -1285,7 +1285,7 @@ class Reverse(object):
     def __lt__(self, other): return self.val > other.val
 
 def ignore(*exc):
-    warnings.warn("Since 16.0 `odoo.tools.ignore` is replaced by `contextlib.suppress`.", DeprecationWarning, stacklevel=2)
+    warnings.warn("Since 16.0 `koda.tools.ignore` is replaced by `contextlib.suppress`.", DeprecationWarning, stacklevel=2)
     return contextlib.suppress(*exc)
 
 class replace_exceptions(ContextDecorator):

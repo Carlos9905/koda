@@ -46,7 +46,7 @@ def push_call(node: astroid.Call):
         yield
 
 def parse_version(s):
-    # can't use odoo.tools.parse_version because pythonpath is screwed from
+    # can't use koda.tools.parse_version because pythonpath is screwed from
     # inside pylint on runbot
     return [s.rjust(3, '0') for s in s.split('.')]
 
@@ -55,7 +55,7 @@ class OdooBaseChecker(BaseChecker):
     # in 2.14, so make conditional
     if parse_version(pylint.__version__) < parse_version('2.14.0'):
         __implements__ = pylint.interfaces.IAstroidChecker
-    name = 'odoo'
+    name = 'koda'
 
     msgs = {
         'E8501': (
@@ -324,7 +324,7 @@ class OdooBaseChecker(BaseChecker):
         return node
 
     def _check_sql_injection_risky(self, node):
-        # Inspired from OCA/pylint-odoo project
+        # Inspired from OCA/pylint-koda project
         # Thanks @moylop260 (Moisés López) & @nilshamerlinck (Nils Hamerlinck)
         current_file_bname = os.path.basename(self.linter.current_file)
         if not (

@@ -18,7 +18,7 @@ try:
 except ImportError:
     slugify_lib = None
 
-import odoo
+import koda
 from koda import api, models, exceptions, tools, http
 from koda.addons.base.models import ir_http
 from koda.addons.base.models.ir_http import RequestUID
@@ -564,7 +564,7 @@ class IrHttp(models.AbstractModel):
             if request.httprequest.method in ('GET', 'HEAD'):
                 try:
                     _, path = rule.build(args)
-                except odoo.exceptions.MissingError:
+                except koda.exceptions.MissingError:
                     raise werkzeug.exceptions.NotFound()
                 assert path is not None
                 generated_path = werkzeug.urls.url_unquote_plus(path)

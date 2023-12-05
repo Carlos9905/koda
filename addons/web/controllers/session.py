@@ -6,8 +6,8 @@ import operator
 
 from werkzeug.urls import url_encode
 
-import odoo
-import odoo.modules.registry
+import koda
+import koda.modules.registry
 from koda import http
 from koda.modules import module
 from koda.exceptions import AccessError, UserError, AccessDenied
@@ -37,9 +37,9 @@ class Session(http.Controller):
             return {'uid': None}
 
         request.session.db = db
-        registry = odoo.modules.registry.Registry(db)
+        registry = koda.modules.registry.Registry(db)
         with registry.cursor() as cr:
-            env = odoo.api.Environment(cr, request.session.uid, request.session.context)
+            env = koda.api.Environment(cr, request.session.uid, request.session.context)
             if not request.db and not request.session.is_explicit:
                 # request._save_session would not update the session_token
                 # as it lacks an environment, rotating the session myself
@@ -75,7 +75,7 @@ class Session(http.Controller):
             'state': json.dumps({'d': request.db, 'u': ICP.get_param('web.base.url')}),
             'scope': 'userinfo',
         }
-        return 'https://accounts.odoo.com/oauth2/auth?' + url_encode(params)
+        return 'https://accounts.koda.com/oauth2/auth?' + url_encode(params)
 
     @http.route('/web/session/destroy', type='json', auth="user")
     def destroy(self):

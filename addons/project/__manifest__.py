@@ -4,7 +4,7 @@
 {
     'name': 'Project',
     'version': '1.3',
-    'website': 'https://www.odoo.com/app/project',
+    'website': 'https://www.koda.com/app/project',
     'category': 'Services/Project',
     'sequence': 45,
     'summary': 'Organize and plan your projects',
@@ -175,10 +175,10 @@
             # Form style should be computed before
             'web/static/src/views/form/button_box/*.scss',
 
-            'web_editor/static/src/js/editor/odoo-editor/src/base_style.scss',
+            'web_editor/static/src/js/editor/koda-editor/src/base_style.scss',
             'web_editor/static/lib/vkbeautify/**/*',
             'web_editor/static/src/js/common/**/*',
-            'web_editor/static/src/js/editor/odoo-editor/src/utils/utils.js',
+            'web_editor/static/src/js/editor/koda-editor/src/utils/utils.js',
             'web_editor/static/src/js/wysiwyg/fonts.js',
 
             'web_editor/static/src/components/**/*',

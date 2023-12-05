@@ -5,11 +5,11 @@ from collections import OrderedDict
 from lxml import etree
 from koda import tools
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestWebsiteSaleComparison(odoo.tests.TransactionCase):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestWebsiteSaleComparison(koda.tests.TransactionCase):
     def test_01_website_sale_comparison_remove(self):
         """ This tour makes sure the product page still works after the module
         `website_sale_comparison` has been removed.
@@ -60,8 +60,8 @@ class TestWebsiteSaleComparison(odoo.tests.TransactionCase):
         self.assertFalse(Website1.viewref(test_view_key, raise_if_not_found=False))
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestUi(odoo.tests.HttpCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestUi(koda.tests.HttpCase):
 
     def setUp(self):
         super(TestUi, self).setUp()

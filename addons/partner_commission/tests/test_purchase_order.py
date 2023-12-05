@@ -41,8 +41,8 @@ class TestPurchaseOrder(TestCommissionsSetup):
             send_mail_count += 1
 
         # Case: OK.
-        with patch('odoo.fields.Date.today', today):
-            with patch('odoo.addons.mail.models.mail_template.MailTemplate.send_mail', _patched_send_mail):
+        with patch('koda.fields.Date.today', today):
+            with patch('koda.addons.mail.models.mail_template.MailTemplate.send_mail', _patched_send_mail):
                 # We test the non recurring flow: recurring_invoice is False on the product
                 self.crm.recurring_invoice = False
                 po = make_po(days_offset=-1)
@@ -52,7 +52,7 @@ class TestPurchaseOrder(TestCommissionsSetup):
 
         # Case: NOK: standard purchase order.
         # Should not be confirmed because it's not a commission purchase: commission_po_line_id is not set on the account.move.
-        with patch('odoo.fields.Date.today', today):
+        with patch('koda.fields.Date.today', today):
             po = self.env['purchase.order'].create({
                 'partner_id': self.customer.id,
                 'company_id': self.company.id,
@@ -65,13 +65,13 @@ class TestPurchaseOrder(TestCommissionsSetup):
         # Set a minimum amount_total to auto confirm the PO
         self.company.commission_po_minimum = 50
         # Case: OK. amount_total = 80 > 50
-        with patch('odoo.fields.Date.today', today):
+        with patch('koda.fields.Date.today', today):
             po = make_po(days_offset=-1, qty=20)
             self.env['purchase.order']._cron_confirm_purchase_orders()
             self.assertEqual(po.state, 'purchase')
 
         # Case: NOK: amount_total = 8 < 50
-        with patch('odoo.fields.Date.today', today):
+        with patch('koda.fields.Date.today', today):
             po = make_po(days_offset=-1, qty=2)
             self.env['purchase.order']._cron_confirm_purchase_orders()
             self.assertEqual(po.state, 'draft')
@@ -176,7 +176,7 @@ class TestPurchaseOrder(TestCommissionsSetup):
             sales_rep = self.env['res.users'].create({
                 'name': '...',
                 'login': 'sales_rep_1',
-                'email': 'sales_rep_1@odoo.com',
+                'email': 'sales_rep_1@koda.com',
                 'company_id': self.company.id,
                 'groups_id': [(6, 0, [self.ref('sales_team.group_sale_salesman')])],
             })

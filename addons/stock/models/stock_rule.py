@@ -357,7 +357,7 @@ class StockRule(models.Model):
         procurement going through the rules in `self`.
 
         :param product: the product of the procurement
-        :type product: :class:`~odoo.addons.product.models.product.ProductProduct`
+        :type product: :class:`~koda.addons.product.models.product.ProductProduct`
         :return: the cumulative delay and cumulative delay's description
         :rtype: tuple[defaultdict(float), list[str, str]]
         """
@@ -436,7 +436,7 @@ class ProcurementGroup(models.Model):
         type of documents).
 
         :param procurements: the description of the procurement
-        :type list: list of `~odoo.addons.stock.models.stock_rule.ProcurementGroup.Procurement`
+        :type list: list of `~koda.addons.stock.models.stock_rule.ProcurementGroup.Procurement`
         :param raise_user_error: will raise either an UserError or a ProcurementException
         :type raise_user_error: boolan, optional
         :raises UserError: if `raise_user_error` is True and a procurement isn't fulfillable

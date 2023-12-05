@@ -400,7 +400,7 @@ class TestCaseSecurity(TransactionCase):
         folder.user_specific = False
         self.assertFalse(folder.user_specific_write)
 
-        with mute_logger('odoo.sql_db'):
+        with mute_logger('koda.sql_db'):
             with self.assertRaises(IntegrityError):
                 with self.cr.savepoint():
                     folder.write({'user_specific_write': True})

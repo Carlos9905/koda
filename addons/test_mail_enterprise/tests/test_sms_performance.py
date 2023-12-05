@@ -31,7 +31,7 @@ class TestSMSPerformance(BaseMailPerformance, sms_common.SMSCase):
                 'country_id': self.env.ref('base.be').id,
             })
 
-    @mute_logger('odoo.addons.sms.models.sms_sms')
+    @mute_logger('koda.addons.sms.models.sms_sms')
     @users('employee')
     @warmup
     def test_message_sms_record_1_partner(self):

@@ -6,7 +6,7 @@ from datetime import datetime
 from freezegun import freeze_time
 from unittest.mock import patch
 
-import odoo
+import koda
 from koda import fields
 from koda.tests import Form
 from koda.tests.common import TransactionCase, tagged
@@ -362,8 +362,8 @@ class TestStockValuationWithCOA(AccountTestInvoicingCommon):
             'property_valuation': 'real_time',
         })
 
-        old_action_post = odoo.addons.account.models.account_move.AccountMove.action_post
-        old_create = odoo.models.BaseModel.create
+        old_action_post = koda.addons.account.models.account_move.AccountMove.action_post
+        old_create = koda.models.BaseModel.create
 
         def new_action_post(self):
             """ Force the creation of tracking values. """
@@ -377,8 +377,8 @@ class TestStockValuationWithCOA(AccountTestInvoicingCommon):
             cls.cr._now = datetime.now()
             return old_create(self, vals_list)
 
-        post_patch = patch('odoo.addons.account.models.account_move.AccountMove.action_post', new_action_post)
-        create_patch = patch('odoo.models.BaseModel.create', new_create)
+        post_patch = patch('koda.addons.account.models.account_move.AccountMove.action_post', new_action_post)
+        create_patch = patch('koda.models.BaseModel.create', new_create)
         cls.startClassPatcher(post_patch)
         cls.startClassPatcher(create_patch)
 
@@ -1131,7 +1131,7 @@ class TestStockValuationWithCOA(AccountTestInvoicingCommon):
         def _today(*args, **kwargs):
             return date_po
         patchers = [
-            patch('odoo.fields.Date.context_today', _today),
+            patch('koda.fields.Date.context_today', _today),
         ]
 
         for patcher in patchers:
@@ -1302,8 +1302,8 @@ class TestStockValuationWithCOA(AccountTestInvoicingCommon):
             return datetime.strptime(today + ' 01:00:00', "%Y-%m-%d %H:%M:%S")
 
         patchers = [
-            patch('odoo.fields.Date.context_today', _today),
-            patch('odoo.fields.Datetime.now', _now),
+            patch('koda.fields.Date.context_today', _today),
+            patch('koda.fields.Datetime.now', _now),
         ]
 
         for patcher in patchers:

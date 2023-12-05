@@ -20,11 +20,11 @@ maintenance of customizations.
 
 It has two modes of operation, either by providing a path:
 
-    odoo-bin cloc -p module_path
+    koda-bin cloc -p module_path
 
 Or by providing the name of a database:
 
-    odoo-bin cloc --addons-path=dirs -d database
+    koda-bin cloc --addons-path=dirs -d database
 
 In the latter mode, only the custom code is accounted for.
 """,

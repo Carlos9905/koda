@@ -1014,7 +1014,7 @@ class TestSaleMrpFlow(ValuationReconciliationTestCommon):
         for move in backorder_4.move_ids:
             self.assertEqual(move.product_qty, 1)
 
-    @mute_logger('odoo.tests.common.onchange')
+    @mute_logger('koda.tests.common.onchange')
     def test_05_mrp_sale_kit_availability(self):
         """
         Check that the 'Not enough inventory' warning message shows correct
@@ -1218,7 +1218,7 @@ class TestSaleMrpFlow(ValuationReconciliationTestCommon):
         # All kits should be delivered
         self.assertEqual(order_line.qty_delivered, 10)
 
-    @mute_logger('odoo.tests.common.onchange')
+    @mute_logger('koda.tests.common.onchange')
     def test_07_kit_availability_mixed_uom(self):
         """
         Check that the 'Not enough inventory' warning message displays correct

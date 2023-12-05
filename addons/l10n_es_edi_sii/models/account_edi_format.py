@@ -32,7 +32,7 @@ class PatchedHTTPAdapter(requests.adapters.HTTPAdapter):
     def cert_verify(self, conn, url, verify, cert):
         # OVERRIDE
         # The last parameter is only used by the super method to check if the file exists.
-        # In our case, cert is an odoo record 'l10n_es_edi.certificate' so not a path to a file.
+        # In our case, cert is an koda record 'l10n_es_edi.certificate' so not a path to a file.
         # By putting 'None' as last parameter, we ensure the check about TLS configuration is
         # still made without checking temporary files exist.
         super().cert_verify(conn, url, verify, None)

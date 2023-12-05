@@ -2,14 +2,14 @@
 
 import json
 
-import odoo
+import koda
 from koda.tools import mute_logger, date_utils
 from koda.addons.base.tests.common import HttpCaseWithUserDemo
 from koda.http import STATIC_CACHE_LONG
 from koda import Command
 
 
-@odoo.tests.tagged("-at_install", "post_install")
+@koda.tests.tagged("-at_install", "post_install")
 class TestMessageController(HttpCaseWithUserDemo):
     @classmethod
     def setUpClass(cls):
@@ -45,7 +45,7 @@ class TestMessageController(HttpCaseWithUserDemo):
         cls.guest = cls.env["mail.guest"].create({"name": "Guest"})
         cls.channel.add_members(guest_ids=cls.guest.ids)
 
-    @mute_logger("odoo.addons.http_routing.models.ir_http", "odoo.http")
+    @mute_logger("koda.addons.http_routing.models.ir_http", "koda.http")
     def test_channel_message_attachments(self):
         self.authenticate(None, None)
         self.opener.cookies[
@@ -166,7 +166,7 @@ class TestMessageController(HttpCaseWithUserDemo):
             "guest should be allowed to add own attachment without token when updating message",
         )
 
-    @mute_logger("odoo.addons.http_routing.models.ir_http", "odoo.http")
+    @mute_logger("koda.addons.http_routing.models.ir_http", "koda.http")
     def test_attachment_hijack(self):
         att = self.env["ir.attachment"].create(
             [
@@ -209,7 +209,7 @@ class TestMessageController(HttpCaseWithUserDemo):
             "arguments_for_firing_marc_demo", response.text
         )  # demo should not be able to see the name of the document
 
-    @mute_logger("odoo.addons.http_routing.models.ir_http", "odoo.http")
+    @mute_logger("koda.addons.http_routing.models.ir_http", "koda.http")
     def test_mail_partner_from_email_authenticated(self):
         self.authenticate(None, None)
         self.opener.cookies[

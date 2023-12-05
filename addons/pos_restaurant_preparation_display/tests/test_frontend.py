@@ -3,10 +3,10 @@
 
 from koda.addons.pos_restaurant.tests.test_frontend import TestFrontend
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUi(TestFrontend):
     def test_01_preparation_display_resto(self):
         self.env['pos_preparation_display.display'].create({

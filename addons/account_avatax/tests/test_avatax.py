@@ -61,7 +61,7 @@ class TestAccountAvalaraInternal(TestAccountAvalaraInternalCommon):
             self.assertInvoice(invoice, test_exact_response=response)
 
         # verify transactions are uncommitted
-        with patch('odoo.addons.account_avatax.models.account_external_tax_mixin.AccountExternalTaxMixin._uncommit_external_taxes') as mocked_uncommit:
+        with patch('koda.addons.account_avatax.models.account_external_tax_mixin.AccountExternalTaxMixin._uncommit_external_taxes') as mocked_uncommit:
             invoice.button_draft()
             mocked_uncommit.assert_called()
 
@@ -71,7 +71,7 @@ class TestAccountAvalaraInternal(TestAccountAvalaraInternalCommon):
             self.assertInvoice(invoice, test_exact_response=response)
 
         # verify transactions are uncommitted
-        with patch('odoo.addons.account_avatax.models.account_external_tax_mixin.AccountExternalTaxMixin._uncommit_external_taxes') as mocked_uncommit:
+        with patch('koda.addons.account_avatax.models.account_external_tax_mixin.AccountExternalTaxMixin._uncommit_external_taxes') as mocked_uncommit:
             invoice.button_draft()
             mocked_uncommit.assert_called()
 
@@ -131,7 +131,7 @@ class TestAccountAvalaraInternal(TestAccountAvalaraInternalCommon):
         self.env.user.company_id = company_2
         with self._capture_request(return_value=response):
             # ensure this doesn't raise:
-            # odoo.exceptions.ValidationError
+            # koda.exceptions.ValidationError
             # This entry contains some tax from an unallowed country. Please check its fiscal position and your tax configuration.
             invoice.button_external_tax_calculation()
 
@@ -284,14 +284,14 @@ class TestAccountAvalaraSalesTaxAdministration(TestAccountAvataxCommon):
         independent of any other Avalara product or service.
         """
         self.fp_avatax.is_avatax = False
-        with patch('odoo.addons.account_avatax.lib.avatax_client.AvataxClient.request') as mocked_request:
+        with patch('koda.addons.account_avatax.lib.avatax_client.AvataxClient.request') as mocked_request:
             self._create_invoice()
             mocked_request.assert_not_called()
 
     def test_disable_avatax_neutralize(self):
         """ORM's neutralization feature works."""
         self.cr.execute(next(get_neutralization_queries(['account_avatax'])))
-        with patch('odoo.addons.account_avatax.lib.avatax_client.AvataxClient.request') as mocked_request:
+        with patch('koda.addons.account_avatax.lib.avatax_client.AvataxClient.request') as mocked_request:
             self._create_invoice()
             mocked_request.assert_not_called()
 

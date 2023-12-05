@@ -53,13 +53,13 @@ class TestPaymentTransaction(PaymentDemoCommon, PaymentHttpCommon):
         include token data. """
         tx = self._create_transaction('direct', tokenize=True)
         with patch(
-            'odoo.addons.payment_demo.models.payment_transaction.PaymentTransaction'
+            'koda.addons.payment_demo.models.payment_transaction.PaymentTransaction'
             '._demo_tokenize_from_notification_data'
         ) as tokenize_mock:
             tx._process_notification_data(self.notification_data)
         self.assertEqual(tokenize_mock.call_count, 1)
 
-    @mute_logger('odoo.addons.payment_demo.models.payment_transaction')
+    @mute_logger('koda.addons.payment_demo.models.payment_transaction')
     def test_processing_notification_data_propagates_simulated_state_to_token(self):
         """ Test that the simulated state of the notification data is set on the token when
         processing notification data. """

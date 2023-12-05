@@ -272,7 +272,7 @@ class TestMembership(TestSalesCommon):
         self.assertFalse(admin_archived.active)
 
         # change team of membership should raise unicity constraint
-        with self.assertRaises(exceptions.UserError), mute_logger('odoo.sql_db'):
+        with self.assertRaises(exceptions.UserError), mute_logger('koda.sql_db'):
             added.write({'crm_team_id': sales_team_1.id})
 
     def test_sales_team_member_search(self):

@@ -62,7 +62,7 @@ class TestSaleExternalTaxesSalePortal(HttpCase):
         # must be sent to the user, so he can see it
         order.action_quotation_sent()
 
-        mixin_path = 'odoo.addons.account_external_tax.models.account_external_tax_mixin.AccountExternalTaxMixin'
+        mixin_path = 'koda.addons.account_external_tax.models.account_external_tax_mixin.AccountExternalTaxMixin'
         with patch(f'{mixin_path}._get_and_set_external_taxes_on_eligible_records') as mocked_get_and_set, \
              patch(f'{mixin_path}._compute_is_tax_computed_externally', lambda self: self.write({'is_tax_computed_externally': True})):
             self.start_tour('/', 'sale_external_optional_products', login='portal')

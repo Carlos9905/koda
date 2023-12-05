@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.http as http
+import koda.http as http
 
 from koda.http import request
 from koda.tools.misc import get_lang

@@ -9,13 +9,13 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from psycopg2 import sql
 
-import odoo
+import koda
 from koda import api, fields, models, _
 from koda.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 
-BASE_VERSION = odoo.modules.get_manifest('base')['version']
+BASE_VERSION = koda.modules.get_manifest('base')['version']
 MAX_FAIL_TIME = timedelta(hours=5)  # chosen with a fair roll of the dice
 
 # custom function to call instead of default PostgreSQL's `pg_notify`
@@ -45,7 +45,7 @@ class ir_cron(models.Model):
     # TODO: perhaps in the future we could consider a flag on ir.cron jobs
     # that would cause database wake-up even if the database has not been
     # loaded yet or was already unloaded (e.g. 'force_db_wakeup' or something)
-    # See also odoo.cron
+    # See also koda.cron
 
     _name = "ir.cron"
     _order = 'cron_name'
@@ -100,7 +100,7 @@ class ir_cron(models.Model):
     def _process_jobs(cls, db_name):
         """ Execute every job ready to be run on this database. """
         try:
-            db = odoo.sql_db.db_connect(db_name)
+            db = koda.sql_db.db_connect(db_name)
             threading.current_thread().dbname = db_name
             with db.cursor() as cron_cr:
                 cls._check_version(cron_cr)
@@ -121,7 +121,7 @@ class ir_cron(models.Model):
                         continue
                     _logger.debug("job %s acquired", job_id)
                     # take into account overridings of _process_job() on that database
-                    registry = odoo.registry(db_name)
+                    registry = koda.registry(db_name)
                     registry[cls._name]._process_job(db, cron_cr, job)
                     _logger.debug("job %s updated and released", job_id)
 
@@ -182,7 +182,7 @@ class ir_cron(models.Model):
         # per minute for 5h) in which case we assume that the crons are stuck
         # because the db has zombie states and we force a call to
         # reset_module_states.
-        odoo.modules.reset_modules_state(cr.dbname)
+        koda.modules.reset_modules_state(cr.dbname)
 
     @classmethod
     def _get_all_ready_jobs(cls, cr):
@@ -369,7 +369,7 @@ class ir_cron(models.Model):
                 self = self.env()[self._name]
 
             log_depth = (None if _logger.isEnabledFor(logging.DEBUG) else 1)
-            odoo.netsvc.log(_logger, logging.DEBUG, 'cron.object.execute', (self._cr.dbname, self._uid, '*', cron_name, server_action_id), depth=log_depth)
+            koda.netsvc.log(_logger, logging.DEBUG, 'cron.object.execute', (self._cr.dbname, self._uid, '*', cron_name, server_action_id), depth=log_depth)
             start_time = False
             _logger.info('Starting job `%s`.', cron_name)
             if _logger.isEnabledFor(logging.DEBUG):
@@ -518,7 +518,7 @@ class ir_cron(models.Model):
         The ODOO_NOTIFY_CRON_CHANGES environment variable allows to force the notifydb on both
         ir_cron modification and on trigger creation (regardless of call_at)
         """
-        with odoo.sql_db.db_connect('postgres').cursor() as cr:
+        with koda.sql_db.db_connect('postgres').cursor() as cr:
             query = sql.SQL("SELECT {}('cron_trigger', %s)").format(sql.Identifier(ODOO_NOTIFY_FUNCTION))
             cr.execute(query, [self.env.cr.dbname])
         _logger.debug("cron workers notified")

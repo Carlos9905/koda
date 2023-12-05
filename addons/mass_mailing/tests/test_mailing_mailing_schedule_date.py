@@ -12,11 +12,11 @@ from koda.tools import mute_logger
 
 class TestMailingScheduleDateWizard(MassMailCommon, CronMixinCase):
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     @users('user_marketing')
     def test_mailing_next_departure(self):
         # test if mailing.mailing.next_departure is correctly set taking into account
-        # presence of implicitly created cron triggers (since odoo v15). These should
+        # presence of implicitly created cron triggers (since koda v15). These should
         # launch cron job before its schedule nextcall datetime (if scheduled_date < nextcall)
 
         cron_job = self.env.ref('mass_mailing.ir_cron_mass_mailing_queue').sudo()

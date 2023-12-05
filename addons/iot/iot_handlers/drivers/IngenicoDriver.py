@@ -14,10 +14,10 @@ from koda.addons.hw_drivers.iot_handlers.interfaces.SocketInterface import socke
 _logger = logging.getLogger(__name__)
 
 # Because drivers don't get loaded as normal Python modules but directly in
-# load_iot_handlers called by Manager.run, the log levels that get applied to the odoo
+# load_iot_handlers called by Manager.run, the log levels that get applied to the koda
 # import hierarchy won't apply here. This means DEBUG level messages will not display
 # even if specified and INFO messages will show even if the log level is configured to
-# be ERROR at the odoo-bin level. In order to work around this, it's possible to
+# be ERROR at the koda-bin level. In order to work around this, it's possible to
 # uncomment this line and set the desired level directly for this module.
 # _logger.setLevel(logging.DEBUG)
 
@@ -701,7 +701,7 @@ class IncomingIngenicoMessage(IngenicoMessage):
 
 class IngenicoDriver(Driver):
     connection_type = 'socket'
-    _ecrId = 'odoo'
+    _ecrId = 'koda'
 
     def __init__(self, identifier, device):
         super(IngenicoDriver, self).__init__(identifier, device)

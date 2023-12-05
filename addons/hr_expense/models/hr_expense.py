@@ -228,7 +228,7 @@ class HrExpense(models.Model):
     @api.depends('currency_id', 'total_amount_currency', 'date')
     def _compute_currency_rate(self):
         """
-            We want the default odoo rate when the following change:
+            We want the default koda rate when the following change:
             - the currency of the expense
             - the total amount in foreign currency
             - the date of the expense

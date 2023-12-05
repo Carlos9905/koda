@@ -83,7 +83,7 @@ class TestCommissionsSetup(TransactionCase):
             'plan_id': self.plan_year.id
         })
 
-        # odoo sh
+        # koda sh
         self.odoo_sh = self.env['product.category'].create({
             'name': 'Odoo.SH',
         })
@@ -247,7 +247,7 @@ class TestCommissionsSetup(TransactionCase):
         self.salesman = self.env['res.users'].create({
             'name': '...',
             'login': 'sales',
-            'email': 'sales@odoo.com',
+            'email': 'sales@koda.com',
             'company_id': self.company.id,
             'groups_id': [(6, 0, groups)],
         })

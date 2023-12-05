@@ -50,7 +50,7 @@ class Console(code.InteractiveConsole):
 
 
 class Shell(Command):
-    """Start odoo in an interactive shell"""
+    """Start koda in an interactive shell"""
     supported_shells = ['ipython', 'ptpython', 'bpython', 'python']
 
     def init(self, args):
@@ -103,7 +103,7 @@ class Shell(Command):
     def shell(self, dbname):
         local_vars = {
             'openerp': koda,
-            'odoo': koda,
+            'koda': koda,
         }
         if dbname:
             registry = koda.registry(dbname)

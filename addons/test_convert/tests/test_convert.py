@@ -7,7 +7,7 @@ import unittest
 from lxml import etree as ET
 from lxml.builder import E
 
-import odoo
+import koda
 from koda.tests import common
 from koda.tools.convert import convert_file, xml_import, _eval_xml
 from koda.tools.misc import file_path

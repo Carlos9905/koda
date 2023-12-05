@@ -137,7 +137,7 @@ class TestCRMLead(TestCrmCommon):
             'street': 'My street',
             'street2': 'My street',
             'city': 'My city',
-            'zip': 'test@odoo.com',
+            'zip': 'test@koda.com',
             'state_id': self.env['res.country.state'].create({
                 'name': 'My state',
                 'country_id': self.country_ref.id,
@@ -654,7 +654,7 @@ class TestCRMLead(TestCrmCommon):
         # self.assertFalse(new_team.alias_id.alias_name)
         # self.assertFalse(new_team.alias_name)
 
-    @mute_logger('odoo.addons.mail.models.mail_thread')
+    @mute_logger('koda.addons.mail.models.mail_thread')
     def test_mailgateway(self):
         new_lead = self.format_and_process(
             INCOMING_EMAIL,

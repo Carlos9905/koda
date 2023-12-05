@@ -20,7 +20,7 @@ Features:
 - Invoice delivered recurring product at the end of invoicing period
 - Report planned delivery for active subscriptions
 """,
-    'website': 'https://www.odoo.com/app/subscriptions',
+    'website': 'https://www.koda.com/app/subscriptions',
     'data': [
         'views/product_template_views.xml',
     ],

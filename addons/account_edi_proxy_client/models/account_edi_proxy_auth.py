@@ -41,8 +41,8 @@ class OdooEdiProxyAuth(requests.auth.AuthBase):
         h = hmac.new(base64.b64decode(self.refresh_token), message.encode(), digestmod=hashlib.sha256)
 
         request.headers.update({
-            'odoo-edi-client-id': self.id_client,
-            'odoo-edi-signature': h.hexdigest(),
-            'odoo-edi-timestamp': msg_timestamp,
+            'koda-edi-client-id': self.id_client,
+            'koda-edi-signature': h.hexdigest(),
+            'koda-edi-timestamp': msg_timestamp,
         })
         return request

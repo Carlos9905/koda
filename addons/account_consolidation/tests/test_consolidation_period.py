@@ -103,10 +103,10 @@ class TestConsolidationPeriod(AccountConsolidationTestCase):
 
     # TEST _get_company_periods_default_values
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod._get_previous_similiar_period',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod._get_previous_similiar_period',
         return_value=False)
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod._get_company_periods_default_values_from_chart',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod._get_company_periods_default_values_from_chart',
         return_value=[])
     def test__get_company_periods_default_values_to_chart(self, patched_get_company_values, patched_get_similar):
         ap = self._create_analysis_period()
@@ -115,9 +115,9 @@ class TestConsolidationPeriod(AccountConsolidationTestCase):
         self.assertTrue(patched_get_company_values.called)
 
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod._get_previous_similiar_period')
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod._get_previous_similiar_period')
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod._get_company_periods_default_values_from_period',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod._get_company_periods_default_values_from_period',
         return_value=[])
     def test__get_company_periods_default_values_to_period(self, patched_get_company_values, patched_get_similar):
         ap = self._create_analysis_period()
@@ -369,7 +369,7 @@ class TestConsolidationPeriodComposition(AccountConsolidationTestCase):
         self.usd_compo = Compo.browse(usd_compo.id)
 
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod.action_generate_journals',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationPeriod.action_generate_journals',
         return_value=False)
     def test_generate_journal(self, patched_ap_action_generate_journals):
         AccountJournal = self.env['consolidation.journal']
@@ -403,7 +403,7 @@ class TestConsolidationPeriodComposition(AccountConsolidationTestCase):
         self.assertAlmostEqual(self.usd_compo._get_total_amount(self.super_account), 1000.0)
 
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationPeriodComposition._get_default_currency_rate',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationPeriodComposition._get_default_currency_rate',
         return_value=2.0)
     def test__onchange_composed_chart_currency_id(self, mocked_method):
         self.compo._onchange_composed_chart_currency_id()
@@ -413,7 +413,7 @@ class TestConsolidationPeriodComposition(AccountConsolidationTestCase):
         self.assertAlmostEqual(self.compo.currency_rate, 1.0)
         self.assertAlmostEqual(self.usd_compo.currency_rate, mocked_method.return_value)
 
-    @patch('odoo.addons.base.models.res_currency.Currency._get_conversion_rate', return_value=150.0)
+    @patch('koda.addons.base.models.res_currency.Currency._get_conversion_rate', return_value=150.0)
     def test__get_default_currency_rate(self, mocked_method):
         rate = self.usd_compo._get_default_currency_rate()
         self.assertEqual(rate, mocked_method.return_value)
@@ -465,10 +465,10 @@ class TestConsolidationCompanyPeriod(AccountConsolidationTestCase):
         self.assertEqual(expected_str, cp.display_name)
 
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._get_total_balance_and_audit_lines',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._get_total_balance_and_audit_lines',
         return_value=(42.0, []))
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._apply_rates',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._apply_rates',
         return_value=191289.0)
     def test_generate_journal(self, patch_apply_rates, patched_get_total_balance):
         Journal = self.env['consolidation.journal']
@@ -495,10 +495,10 @@ class TestConsolidationCompanyPeriod(AccountConsolidationTestCase):
                                    msg='Generated journals should have the right amount')
 
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._get_total_balance_and_audit_lines',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._get_total_balance_and_audit_lines',
         return_value=(420.0, []))
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._apply_rates',
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._apply_rates',
         return_value=191289.0)
     def test_get_journal_lines_values(self, patch_apply_rates, patch_get_total_balance):
         accounts = (
@@ -605,9 +605,9 @@ class TestConsolidationCompanyPeriod(AccountConsolidationTestCase):
         self.assertAlmostEqual(cp._apply_historical_rates(move_line), expected_amount)
 
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._convert')
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._convert')
     @patch(
-        'odoo.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._apply_consolidation_rate')
+        'koda.addons.account_consolidation.models.consolidation_period.ConsolidationCompanyPeriod._apply_consolidation_rate')
     def test__apply_rates(self, patched_apply_consolidation_rate, patched_convert):
         cp = self._create_company_period(start_date='2019-01-01', end_date='2019-01-31', company=self.us_company)
         ca = self._create_consolidation_account()

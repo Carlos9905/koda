@@ -41,7 +41,7 @@ class TestCrossdock(common.TransactionCase):
         so_form.partner_id = self.env['res.partner'].create({'name': 'My Test Partner'})
         so_form.warehouse_id = wh_pps
 
-        with mute_logger('odoo.tests.common.onchange'):
+        with mute_logger('koda.tests.common.onchange'):
             # otherwise complains that there's not enough inventory and
             # apparently that's normal according to @jco and @sle
             with so_form.order_line.new() as line:

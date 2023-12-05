@@ -2,14 +2,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from .sign_request_common import SignRequestCommon
-import odoo.tests
+import koda.tests
 
 from koda.tools.misc import mute_logger
 from koda.tools.translate import WEB_TRANSLATION_COMMENT
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestUi(odoo.tests.HttpCase, SignRequestCommon):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestUi(koda.tests.HttpCase, SignRequestCommon):
     def test_ui(self):
         self.start_tour("/web", 'sign_widgets_tour', login='admin')
 

@@ -59,7 +59,7 @@ class TestLinkExpirationDate(HttpCase):
             self.env,
             name='Nandor Relentless',
             login='Al Qolnidar',
-            email='Nandor@odoo.com',
+            email='Nandor@koda.com',
             groups='base.group_user',
         )
         employee = self.env['hr.employee'].create({'name': "Nandor", 'user_id': simple_user.id})

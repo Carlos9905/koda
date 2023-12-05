@@ -282,9 +282,9 @@ class StudioApprovalRule(models.Model):
         :param bool approved: whether the rule is approved or rejected
         :return: True if the rule was approved, False if it was rejected
         :rtype: boolean
-        :raise: odoo.exceptions.AccessError when the user does not have write
+        :raise: koda.exceptions.AccessError when the user does not have write
                 access to the underlying record
-        :raise: odoo.exceptions.UserError when any of the other checks failed
+        :raise: koda.exceptions.UserError when any of the other checks failed
         """
         self.ensure_one()
         entry = self._set_approval(res_id, approved)
@@ -298,9 +298,9 @@ class StudioApprovalRule(models.Model):
                            (the model comes from the rule itself)
         :return: True
         :rtype: boolean
-        :raise: odoo.exceptions.AccessError when the user does not have write
+        :raise: koda.exceptions.AccessError when the user does not have write
                 access to the underlying record
-        :raise: odoo.exceptions.UserError when any there is no existing entry
+        :raise: koda.exceptions.UserError when any there is no existing entry
                 to cancel or when the user is trying to cancel an entry that
                 they didn't create themselves
         """
@@ -342,10 +342,10 @@ class StudioApprovalRule(models.Model):
                            (the model comes from the rule itself)
         :param bool approved: whether the rule is approved or rejected
         :return: a new approval entry
-        :rtype: :class:`~odoo.addons.web_studio.models.StudioApprovalEntry`
-        :raise: odoo.exceptions.AccessError when the user does not have write
+        :rtype: :class:`~koda.addons.web_studio.models.StudioApprovalEntry`
+        :raise: koda.exceptions.AccessError when the user does not have write
                 access to the underlying record
-        :raise: odoo.exceptions.UserError when any of the other checks failed
+        :raise: koda.exceptions.UserError when any of the other checks failed
         """
         self.ensure_one()
         self = self._clean_context()

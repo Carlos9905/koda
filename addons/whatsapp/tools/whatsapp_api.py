@@ -59,7 +59,7 @@ class WhatsAppApi:
         if response.get('error'):
             error = response['error']
             desc = error.get('message')
-            code = error.get('code', 'odoo')
+            code = error.get('code', 'koda')
             return (desc if desc else _("{error_code} - Non-descript Error", code), code)
         return (_("Something went wrong when contacting WhatsApp, please try again later. If this happens frequently, contact support."), -1)
 

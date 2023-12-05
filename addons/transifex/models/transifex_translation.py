@@ -6,7 +6,7 @@ from configparser import ConfigParser
 from os import pardir
 from os.path import isfile, join as opj
 
-import odoo
+import koda
 from koda import models, tools
 
 
@@ -19,14 +19,14 @@ class TransifexTranslation(models.AbstractModel):
         """ get the transifex project name for each module
 
         .tx/config files contains the project reference
-        first section is [main], after '[odoo-16.sale]'
+        first section is [main], after '[koda-16.sale]'
 
         :rtype: dict
         :return: {module_name: tx_project_name}
         """
         tx_config_file = ConfigParser()
         projects = {}
-        for addon_path in odoo.addons.__path__:
+        for addon_path in koda.addons.__path__:
             for tx_path in (
                     opj(addon_path, '.tx', 'config'),
                     opj(addon_path, pardir, '.tx', 'config'),
@@ -35,10 +35,10 @@ class TransifexTranslation(models.AbstractModel):
                     tx_config_file.read(tx_path)
                     for sec in tx_config_file.sections()[1:]:
                         if len(sec.split(":")) != 6:
-                            # old format ['main', 'odoo-16.base', ...]
+                            # old format ['main', 'koda-16.base', ...]
                             tx_project, tx_mod = sec.split(".")
                         else:
-                            # tx_config_file.sections(): ['main', 'o:odoo:p:odoo-16:r:base', ...]
+                            # tx_config_file.sections(): ['main', 'o:koda:p:koda-16:r:base', ...]
                             _, _, _, tx_project, _, tx_mod = sec.split(':')
                         projects[tx_mod] = tx_project
         return projects
@@ -51,7 +51,7 @@ class TransifexTranslation(models.AbstractModel):
             and the field/key 'transifex_url' is updated on them.
         """
 
-        # e.g. 'https://www.transifex.com/odoo/'
+        # e.g. 'https://www.transifex.com/koda/'
         base_url = self.env['ir.config_parameter'].sudo().get_param('transifex.project_url')
         if not base_url:
             return
@@ -78,7 +78,7 @@ class TransifexTranslation(models.AbstractModel):
             if not project:
                 continue
 
-            # e.g. https://www.transifex.com/odoo/odoo-16/translate/#fr_FR/sale/42?q=text:'Sale+Order'
+            # e.g. https://www.transifex.com/koda/koda-16/translate/#fr_FR/sale/42?q=text:'Sale+Order'
             # 42 is an arbitrary number to satisfy the transifex URL format
             source = werkzeug.urls.url_quote_plus(translation['source'][:50].replace("\n", "").replace("'", "\\'"))
             source = f"'{source}'" if "+" in source else source

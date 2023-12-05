@@ -14,7 +14,7 @@ _logger = logging.getLogger(__name__)
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
-@patch('odoo.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
+@patch('koda.tools.xml_utils._check_with_xsd', _check_with_xsd_patch)
 class TestL10nClEdiStock(TestL10nClEdiStockCommon):
 
     @freeze_time('2019-10-24T20:00:00', tz_offset=3)

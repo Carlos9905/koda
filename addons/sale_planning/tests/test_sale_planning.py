@@ -47,7 +47,7 @@ class TestSalePlanning(TestCommonSalePlanning):
         self.assertFalse(not slot.end_datetime, 'Salable slot created from gantt have default date')
 
     def test_planning_slot_not_salable(self):
-        with self.assertRaises(IntegrityError), mute_logger('odoo.sql_db'):
+        with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
             self.env['planning.slot'].create({
                 'start_datetime': False,
                 'end_datetime': False,

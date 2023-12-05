@@ -6,7 +6,7 @@ from functools import partial
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_REPEATABLE_READ
 
-import odoo
+import koda
 from koda.sql_db import db_connect, TestCursor
 from koda.tests import common
 from koda.tests.common import BaseCase
@@ -15,7 +15,7 @@ from koda.tools.misc import config
 ADMIN_USER_ID = common.ADMIN_USER_ID
 
 def registry():
-    return odoo.registry(common.get_db_name())
+    return koda.registry(common.get_db_name())
 
 
 class TestRealCursor(BaseCase):
@@ -56,7 +56,7 @@ class TestTestCursor(common.TransactionCase):
         # now we make a test cursor for self.cr
         self.cr = self.registry.cursor()
         self.addCleanup(self.cr.close)
-        self.env = odoo.api.Environment(self.cr, odoo.SUPERUSER_ID, {})
+        self.env = koda.api.Environment(self.cr, koda.SUPERUSER_ID, {})
         self.record = self.env['res.partner'].create({'name': 'Foo'})
 
     def write(self, record, value):
@@ -144,10 +144,10 @@ class TestTestCursor(common.TransactionCase):
         a = self.registry.cursor()
         _b = self.registry.cursor()
         # `a` should warn that it found un-closed cursor `b` when trying to close itself
-        with self.assertLogs('odoo.sql_db', level=logging.WARNING) as cm:
+        with self.assertLogs('koda.sql_db', level=logging.WARNING) as cm:
             a.close()
         [msg] = cm.output
-        self.assertIn('WARNING:odoo.sql_db:Found different un-closed cursor', msg)
+        self.assertIn('WARNING:koda.sql_db:Found different un-closed cursor', msg)
         # avoid a warning on teardown (when self.cr finds a still on the stack)
         # as well as ensure the stack matches our expectations
         self.assertEqual(a._cursors_stack.pop(), a)

@@ -3,7 +3,7 @@
 
 from koda import fields, models, _
 from koda.exceptions import UserError
-import odoo.release
+import koda.release
 from koda.tools.float_utils import float_split_str
 
 from datetime import datetime
@@ -383,7 +383,7 @@ class SpanishTaxReportCustomHandler(models.AbstractModel):
         rslt += self._l10n_es_boe_format_string(f"<T{modelo_number}0{year}{period}0000>")
         rslt += self._l10n_es_boe_format_string('<AUX>')
         rslt += self._l10n_es_boe_format_string(' ' * 70) # Reserved for AEAT
-        odoo_version = odoo.release.version.split('.')
+        odoo_version = koda.release.version.split('.')
         rslt += self._l10n_es_boe_format_string(str(odoo_version[0]) + str(odoo_version[1]), length=4)
         rslt += self._l10n_es_boe_format_string(' ' * 4) # Reserved for AEAT
         rslt += self._l10n_es_boe_format_string(self._extract_spanish_tin(current_company.partner_id), length=9)
@@ -540,7 +540,7 @@ class SpanishMod303TaxReportCustomHandler(models.AbstractModel):
         rslt = self._l10n_es_boe_format_string('<T3030' + year + period + '0000>')
         rslt += self._l10n_es_boe_format_string('<AUX>')
         rslt += self._l10n_es_boe_format_string(' ' * 70)
-        odoo_version = odoo.release.version.split('.')
+        odoo_version = koda.release.version.split('.')
         rslt += self._l10n_es_boe_format_string(str(odoo_version[0]) + str(odoo_version[1]), length=4)
         rslt += self._l10n_es_boe_format_string(' ' * 4)
         rslt += self._l10n_es_boe_format_string(self._extract_spanish_tin(current_company.partner_id), length=9)
@@ -1314,7 +1314,7 @@ class SpanishMod390TaxReportCustomHandler(models.AbstractModel):
         rslt = self._l10n_es_boe_format_string('<T3900' + year + '0A0000>')
         rslt += self._l10n_es_boe_format_string('<AUX>')
         rslt += self._l10n_es_boe_format_string(' ' * 70)
-        odoo_version = odoo.release.version.split('.')
+        odoo_version = koda.release.version.split('.')
         rslt += self._l10n_es_boe_format_string(str(odoo_version[0]) + str(odoo_version[1]), length=4)
         rslt += self._l10n_es_boe_format_string(' ' * 4)
         rslt += self._l10n_es_boe_format_string(self._extract_spanish_tin(current_company.partner_id), length=9)

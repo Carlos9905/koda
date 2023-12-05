@@ -63,7 +63,7 @@ class TestPaymentTransaction(RazorpayCommon):
         successful payment. """
         tx = self._create_transaction('redirect')
         with patch(
-            'odoo.addons.payment_razorpay.models.payment_provider.PaymentProvider'
+            'koda.addons.payment_razorpay.models.payment_provider.PaymentProvider'
             '._razorpay_make_request', return_value=self.payment_data
         ):
             tx._process_notification_data(self.payment_data)

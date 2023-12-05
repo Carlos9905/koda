@@ -171,7 +171,7 @@ class TestBankRecWidget(TestBankRecWidgetCommon):
     def test_validation_new_aml_same_foreign_currency(self):
         income_exchange_account = self.env.company.income_currency_exchange_account_id
 
-        # 6000.0 curr2 == 1200.0 comp_curr (bank rate 5:1 instead of the odoo rate 4:1)
+        # 6000.0 curr2 == 1200.0 comp_curr (bank rate 5:1 instead of the koda rate 4:1)
         st_line = self._create_st_line(
             1200.0,
             date='2017-01-01',
@@ -396,7 +396,7 @@ class TestBankRecWidget(TestBankRecWidgetCommon):
             'currency_subunit_label': 'Carbon',
         }, rate2016=6.0, rate2017=5.0)['currency']
 
-        # 6000.0 curr2 == 1200.0 comp_curr (bank rate 5:1 instead of the odoo rate 6:1)
+        # 6000.0 curr2 == 1200.0 comp_curr (bank rate 5:1 instead of the koda rate 6:1)
         st_line = self._create_st_line(
             1200.0,
             date='2016-01-01',
@@ -732,7 +732,7 @@ class TestBankRecWidget(TestBankRecWidgetCommon):
         ])
 
     def test_validation_new_aml_multi_currencies(self):
-        # 6300.0 curr2 == 1800.0 comp_curr (bank rate 3.5:1 instead of the odoo rate 4:1)
+        # 6300.0 curr2 == 1800.0 comp_curr (bank rate 3.5:1 instead of the koda rate 4:1)
         st_line = self._create_st_line(
             1800.0,
             date='2017-01-01',
@@ -1488,7 +1488,7 @@ class TestBankRecWidget(TestBankRecWidgetCommon):
         ])
 
     def test_creating_manual_line_multi_currencies(self):
-        # 6300.0 curr2 == 1800.0 comp_curr (bank rate 3.5:1 instead of the odoo rate 4:1)
+        # 6300.0 curr2 == 1800.0 comp_curr (bank rate 3.5:1 instead of the koda rate 4:1)
         st_line = self._create_st_line(
             1800.0,
             date='2017-01-01',
@@ -2281,7 +2281,7 @@ class TestBankRecWidget(TestBankRecWidgetCommon):
             def datetime_now_override():
                 frozen_time.tick()
                 return frozen_time()
-            with patch('odoo.fields.Datetime.now', side_effect=datetime_now_override):
+            with patch('koda.fields.Datetime.now', side_effect=datetime_now_override):
                 # we simulate that the time limit is reached after first loop
                 self.env['account.bank.statement.line']._cron_try_auto_reconcile_statement_lines(limit_time=1)
         # after first loop, only one statement should be reconciled

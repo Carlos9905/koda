@@ -7,7 +7,7 @@
     'category': 'Manufacturing/Quality',
     'sequence': 120,
     'summary': 'Control the quality of your products',
-    'website': 'https://www.odoo.com/app/quality',
+    'website': 'https://www.koda.com/app/quality',
     'depends': ['quality'],
     'description': """
 Quality Control

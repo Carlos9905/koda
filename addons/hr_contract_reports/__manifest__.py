@@ -8,7 +8,7 @@
     'description': """
 Add a dynamic report about contracts and employees.
     """,
-    'website': 'https://www.odoo.com/app/employees',
+    'website': 'https://www.koda.com/app/employees',
     'depends': ['hr_contract'],
     'data': [
         'security/ir.model.access.csv',

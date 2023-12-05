@@ -17,5 +17,5 @@ class TestSpreadsheetShareTour(SpreadsheetTestCommon, HttpCase):
         self.browser_js(
             "/document/share/%s/%s" % (share.id, share.access_token),
             "console.log('test successful');",
-            ready="odoo.isReady",
+            ready="koda.isReady",
         )

@@ -18,7 +18,7 @@ More info:
 
 Legal
 -----
-**The use of pos_blackbox_be sources is only certified on odoo.com SaaS platform
+**The use of pos_blackbox_be sources is only certified on koda.com SaaS platform
 for version 17.0** Contact Odoo SA before installing pos_blackbox_be module.
 
 An obfuscated and certified version of the pos_blackbox_be may be provided on

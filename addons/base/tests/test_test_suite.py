@@ -101,7 +101,7 @@ class TestRunnerLoggingCommon(TransactionCase):
         """ Check that what was logged is what was expected. """
         for log_record in log_records:
             self._assert_log_equal(log_record, 'logger', _logger)
-            self._assert_log_equal(log_record, 'name', 'odoo.addons.base.tests.test_test_suite')
+            self._assert_log_equal(log_record, 'name', 'koda.addons.base.tests.test_test_suite')
             self._assert_log_equal(log_record, 'fn', __file__)
             self._assert_log_equal(log_record, 'func', self._testMethodName)
 
@@ -129,12 +129,12 @@ class TestRunnerLoggingCommon(TransactionCase):
         self.test_result.addError(self, (AssertionError, AssertionError(message), None))
 
     def _clean_message(self, message):
-        root_path = PurePath(__file__).parents[4]  # removes /odoo/addons/base/tests/test_test_suite.py
+        root_path = PurePath(__file__).parents[4]  # removes /koda/addons/base/tests/test_test_suite.py
         python_path = PurePath(contextlib.__file__).parent  # /usr/lib/pythonx.x, C:\\python\\Lib, ...
         message = re.sub(r'line \d+', 'line $line', message)
         message = re.sub(r'py:\d+', 'py:$line', message)
         message = re.sub(r'decorator-gen-\d+', 'decorator-gen-xxx', message)
-        message = message.replace(f'"{root_path}', '"/root_path/odoo')
+        message = message.replace(f'"{root_path}', '"/root_path/koda')
         message = message.replace(f'"{python_path}', '"/usr/lib/python')
         message = message.replace('\\', '/')
         return message
@@ -156,7 +156,7 @@ class TestRunnerLogging(TestRunnerLoggingCommon):
             return (
 f'''ERROR: Subtest TestRunnerLogging.test_raise_subtest (<subtest>)
 Traceback (most recent call last):
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in test_raise_subtest
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in test_raise_subtest
     raise Exception('{message}')
 Exception: {message}
 ''')
@@ -188,12 +188,12 @@ Exception: {message}
 '''ERROR: Subtest TestRunnerLogging.test_with_decorators (login='__system__')
 Traceback (most recent call last):
   File "<decorator-gen-xxx>", line $line, in test_with_decorators
-  File "/root_path/odoo/odoo/tests/common.py", line $line, in _users
+  File "/root_path/koda/koda/tests/common.py", line $line, in _users
     func(*args, **kwargs)
   File "<decorator-gen-xxx>", line $line, in test_with_decorators
-  File "/root_path/odoo/odoo/tests/common.py", line $line, in warmup
+  File "/root_path/koda/koda/tests/common.py", line $line, in warmup
     func(*args, **kwargs)
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in test_with_decorators
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in test_with_decorators
     raise Exception('This is an error')
 Exception: This is an error
 ''')
@@ -223,13 +223,13 @@ Exception: This is an error
         message = (
 '''ERROR: TestRunnerLogging.test_call_stack
 Traceback (most recent call last):
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in test_call_stack
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in test_call_stack
     alpha()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in alpha
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in alpha
     beta()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in beta
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in beta
     gamma()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in gamma
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in gamma
     raise Exception('This is an error')
 Exception: This is an error
 ''')
@@ -253,13 +253,13 @@ Exception: This is an error
         message = (
 '''ERROR: TestRunnerLogging.test_call_stack_context_manager
 Traceback (most recent call last):
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in test_call_stack_context_manager
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in test_call_stack_context_manager
     alpha()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in alpha
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in alpha
     beta()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in beta
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in beta
     gamma()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in gamma
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in gamma
     raise Exception('This is an error')
 Exception: This is an error
 ''')
@@ -285,13 +285,13 @@ Exception: This is an error
         message = (
 '''ERROR: Subtest TestRunnerLogging.test_call_stack_subtest (<subtest>)
 Traceback (most recent call last):
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in test_call_stack_subtest
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in test_call_stack_subtest
     alpha()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in alpha
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in alpha
     beta()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in beta
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in beta
     gamma()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in gamma
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in gamma
     raise Exception('This is an error')
 Exception: This is an error
 ''')
@@ -316,11 +316,11 @@ Exception: This is an error
         message = (
 '''FAIL: Subtest TestRunnerLogging.test_assertQueryCount (<subtest>)
 Traceback (most recent call last):
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in test_assertQueryCount
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in test_assertQueryCount
     with self.assertQueryCount(system=0):
   File "/usr/lib/python/contextlib.py", line $line, in __exit__
     next(self.gen)
-  File "/root_path/odoo/odoo/tests/common.py", line $line, in assertQueryCount
+  File "/root_path/koda/koda/tests/common.py", line $line, in assertQueryCount
     self.fail(msg % (login, count, expected, funcname, filename, linenum))
 AssertionError: Query count more than expected for user __system__: 1 > 0 in test_assertQueryCount at base/tests/test_test_suite.py:$line
 ''')
@@ -344,11 +344,11 @@ AssertionError: Query count more than expected for user __system__: 1 > 0 in tes
         message = (
 '''ERROR: TestRunnerLogging.test_reraise
 Traceback (most recent call last):
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in test_reraise
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in test_reraise
     alpha()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in alpha
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in alpha
     beta()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in beta
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in beta
     raise Exception('This is an error')
 Exception: This is an error
 ''')
@@ -373,18 +373,18 @@ Exception: This is an error
         message = (
 '''ERROR: TestRunnerLogging.test_handle_error
 Traceback (most recent call last):
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in alpha
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in alpha
     beta()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in beta
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in beta
     raise Exception('This is an error')
 Exception: This is an error
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in test_handle_error
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in test_handle_error
     alpha()
-  File "/root_path/odoo/odoo/addons/base/tests/test_test_suite.py", line $line, in alpha
+  File "/root_path/koda/koda/addons/base/tests/test_test_suite.py", line $line, in alpha
     raise Exception('This is an error2')
 Exception: This is an error2
 ''')

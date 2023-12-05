@@ -30,7 +30,7 @@
         '_': ['s_company_team'],
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-bewise.odoo.com',
+    'live_test_url': 'https://theme-bewise.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_bewise/static/src/js/tour.js',

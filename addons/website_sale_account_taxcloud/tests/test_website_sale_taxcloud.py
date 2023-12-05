@@ -65,8 +65,8 @@ class TestWebsiteSaleTaxCloud(HttpCase):
         sale_order.access_token = "token"
 
         with \
-                patch('odoo.addons.account_taxcloud.models.taxcloud_request.TaxCloudRequest.verify_address', self._verify_address),\
-                patch('odoo.addons.account_taxcloud.models.taxcloud_request.TaxCloudRequest.get_all_taxes_values', self._get_all_taxes_values),\
+                patch('koda.addons.account_taxcloud.models.taxcloud_request.TaxCloudRequest.verify_address', self._verify_address),\
+                patch('koda.addons.account_taxcloud.models.taxcloud_request.TaxCloudRequest.get_all_taxes_values', self._get_all_taxes_values),\
                 patch.object(type(sale_order), '_get_TaxCloudRequest', return_value=sale_order._get_TaxCloudRequest("id", "api_key")):
 
             self.assertFalse(sale_order.order_line[0].tax_id)

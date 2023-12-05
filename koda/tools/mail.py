@@ -413,7 +413,7 @@ def html2plaintext(html, body_id=None, encoding='utf-8'):
 
 def plaintext2html(text, container_tag=None):
     r"""Convert plaintext into html. Content of the text is escaped to manage
-    html entities, using :func:`~odoo.tools.misc.html_escape`.
+    html entities, using :func:`~koda.tools.misc.html_escape`.
 
     - all ``\n``, ``\r`` are replaced by ``<br/>``
     - enclose content into ``<p>``
@@ -591,7 +591,7 @@ def email_normalize(text, strict=True):
     """ Sanitize and standardize email address entries. As of rfc5322 section
     3.4.1 local-part is case-sensitive. However most main providers do consider
     the local-part as case insensitive. With the introduction of smtp-utf8
-    within odoo, this assumption is certain to fall short for international
+    within koda, this assumption is certain to fall short for international
     emails. We now consider that
 
       * if local part is ascii: normalize still 'lower' ;
@@ -733,8 +733,8 @@ def encapsulate_email(old_email, new_email):
 
     e.g.
     * Old From: "Admin" <admin@gmail.com>
-    * New From: notifications@odoo.com
-    * Output: "Admin" <notifications@odoo.com>
+    * New From: notifications@koda.com
+    * Output: "Admin" <notifications@koda.com>
     """
     old_email_split = getaddresses([old_email])
     if not old_email_split or not old_email_split[0]:

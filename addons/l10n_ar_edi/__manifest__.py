@@ -25,7 +25,7 @@ we recieve and a HINT about what the problem could be.
 For auditing and troubleshooting purposes we also add a menu "Consulit Invoice in AFIP" that let us to consult invoices previously
 sent to AFIP and last number used as support for any possible issues on the sequences synchronization between Odoo and AFIP.
 
-    NOTE: From the Journal's form view we are able to force a sync between the odoo sequences to each of the document types in
+    NOTE: From the Journal's form view we are able to force a sync between the koda sequences to each of the document types in
     with the last numbers registered in AFIP.
 
 From vendor bills, we have added a functionality that can be configured in the accounting settings to be able to verify

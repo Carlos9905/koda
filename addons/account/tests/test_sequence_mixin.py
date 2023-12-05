@@ -234,9 +234,9 @@ class TestSequenceMixin(TestSequenceMixinCommon):
         self.assertEqual(copy2.name, 'MISC2/2016/01/0001')
 
         with Form(copy2) as move_form:  # It is editable in the form
-            with self.assertLogs('odoo.tests.form') as cm:
+            with self.assertLogs('koda.tests.form') as cm:
                 move_form.name = 'MyMISC/2016/0001'
-            self.assertTrue(cm.output[0].startswith('WARNING:odoo.tests.form.onchange:'))
+            self.assertTrue(cm.output[0].startswith('WARNING:koda.tests.form.onchange:'))
             self.assertIn('The sequence will restart at 1 at the start of every year', cm.output[0])
 
             move_form.journal_id = self.test_move.journal_id
@@ -245,9 +245,9 @@ class TestSequenceMixin(TestSequenceMixinCommon):
             move_form.journal_id = new_journal
             self.assertEqual(move_form.name, 'MISC2/2016/01/0001')
 
-            with self.assertLogs('odoo.tests.form') as cm:
+            with self.assertLogs('koda.tests.form') as cm:
                 move_form.name = 'MyMISC/2016/0001'
-            self.assertTrue(cm.output[0].startswith('WARNING:odoo.tests.form.onchange:'))
+            self.assertTrue(cm.output[0].startswith('WARNING:koda.tests.form.onchange:'))
             self.assertIn('The sequence will restart at 1 at the start of every year', cm.output[0])
 
         copy2.action_post()
@@ -433,7 +433,7 @@ class TestSequenceMixin(TestSequenceMixinCommon):
         self.assertEqual(copies[5].name, 'XMISC/2019/00004')
 
         # Can't have twice the same name
-        with self.assertRaises(psycopg2.DatabaseError), mute_logger('odoo.sql_db'), self.env.cr.savepoint():
+        with self.assertRaises(psycopg2.DatabaseError), mute_logger('koda.sql_db'), self.env.cr.savepoint():
             copies[0].name = 'XMISC/2019/00001'
 
         # Lets remove the order by date

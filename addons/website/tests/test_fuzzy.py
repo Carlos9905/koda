@@ -8,13 +8,13 @@ from markupsafe import Markup
 
 from koda.addons.website.controllers.main import Website
 from koda.addons.website.tools import distance, MockRequest
-import odoo.tests
+import koda.tests
 from koda.tests.common import TransactionCase
 
 _logger = logging.getLogger(__name__)
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
+@koda.tests.tagged('-at_install', 'post_install')
 class TestFuzzy(TransactionCase):
     def test_01_fuzzy_names(self):
         # Models from other modules commented out on commit: they make the test much longer
@@ -103,7 +103,7 @@ class TestFuzzy(TransactionCase):
         self.assertEqual(distance("", "", 10), 0)
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
+@koda.tests.tagged('-at_install', 'post_install')
 class TestAutoComplete(TransactionCase):
     @classmethod
     def setUpClass(cls):

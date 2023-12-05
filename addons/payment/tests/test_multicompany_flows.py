@@ -77,7 +77,7 @@ class TestMultiCompanyFlows(PaymentHttpCommon):
             'flow': 'direct',
             'tokenization_requested': False,
         })
-        with mute_logger('odoo.addons.payment.models.payment_transaction'):
+        with mute_logger('koda.addons.payment.models.payment_transaction'):
             processing_values = self._get_processing_values(**validation_values)
         tx_sudo = self._get_tx(processing_values['reference'])
 

@@ -105,7 +105,7 @@ class DeliverCarrier(models.Model):
     def action_get_channels(self):
         """
         Fetch the dictionary of channel(s) configured by the customer on its
-        shiprocket account and create shiprocket channel record(s) in odoo.
+        shiprocket account and create shiprocket channel record(s) in koda.
         """
         for carrier in self:
             if carrier.delivery_type != 'shiprocket':
@@ -135,7 +135,7 @@ class DeliverCarrier(models.Model):
     def action_get_couriers(self):
         """
         Fetch shiprocket carriers from shiprocket account.
-        create record(s) of shiprocket courier(s) in odoo.
+        create record(s) of shiprocket courier(s) in koda.
         """
         for carrier in self:
             if carrier.delivery_type != 'shiprocket':

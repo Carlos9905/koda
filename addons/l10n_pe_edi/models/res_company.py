@@ -25,7 +25,7 @@ class ResCompany(models.Model):
         help="Selector for the service we are going to use to report the invoices:"
              "DIGIFLOW: With the certified that digiflow provide you, user and password you will report the invoices to them."
              "SUNAT: You will report the invoices directly to them using your own certified, user and password."
-             "IAP: This is an odoo service that will send the unsigned documents to a PSE and process their response.")
+             "IAP: This is an koda service that will send the unsigned documents to a PSE and process their response.")
     l10n_pe_edi_address_type_code = fields.Char(
         string="Address Type Code",
         default="0000",

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.exceptions
+import koda.exceptions
 from koda import models, api
 from koda.tools.safe_eval import safe_eval
 
@@ -15,13 +15,13 @@ class m(models.Model):
 
     def generate_redirect_warning(self):
         action = self.env.ref('test_exceptions.action_test_exceptions')
-        raise odoo.exceptions.RedirectWarning('description', action.id, 'Go to the redirection')
+        raise koda.exceptions.RedirectWarning('description', action.id, 'Go to the redirection')
 
     def generate_access_denied(self):
-        raise odoo.exceptions.AccessDenied()
+        raise koda.exceptions.AccessDenied()
 
     def generate_access_error(self):
-        raise odoo.exceptions.AccessError('description')
+        raise koda.exceptions.AccessError('description')
 
     def generate_exc_access_denied(self):
         raise Exception('AccessDenied')
@@ -30,13 +30,13 @@ class m(models.Model):
         self.surely_undefined_symbol
 
     def generate_user_error(self):
-        raise odoo.exceptions.UserError('description')
+        raise koda.exceptions.UserError('description')
 
     def generate_missing_error(self):
-        raise odoo.exceptions.MissingError('description')
+        raise koda.exceptions.MissingError('description')
 
     def generate_validation_error(self):
-        raise odoo.exceptions.ValidationError('description')
+        raise koda.exceptions.ValidationError('description')
 
     def generate_redirect_warning_safe_eval(self):
         self.generate_safe_eval(self.generate_redirect_warning)

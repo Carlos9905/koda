@@ -24,7 +24,7 @@ class SocialLinkedinCase(SocialCase):
     def test_post_failure(self):
         self._test_post(False)
 
-    @mute_logger("odoo.addons.social.models.social_account")
+    @mute_logger("koda.addons.social.models.social_account")
     def _test_post(self, success=True):
         self.assertEqual(self.social_post.state, 'draft')
 
@@ -61,7 +61,7 @@ class SocialLinkedinCase(SocialCase):
         Check the priority of the ``post type``
         The first priority is image
         """
-        self.social_post.message = 'A message https://odoo.com'
+        self.social_post.message = 'A message https://koda.com'
         self.assertTrue(self.social_post.image_ids)
         self._test_post_type('multiImage')
 
@@ -70,7 +70,7 @@ class SocialLinkedinCase(SocialCase):
         Check the priority of the ``post type``
         The second priority is urls
         """
-        self.social_post.message = 'A message https://odoo.com'
+        self.social_post.message = 'A message https://koda.com'
         self.social_post.image_ids = False
         self._test_post_type('article')
 

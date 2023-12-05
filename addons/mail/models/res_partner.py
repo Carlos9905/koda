@@ -3,7 +3,7 @@
 
 import re
 
-import odoo
+import koda
 from koda import _, api, fields, models, tools
 from koda.osv import expression
 
@@ -230,7 +230,7 @@ class Partner(models.Model):
             if 'is_company' in fields:
                 data['is_company'] = partner.is_company
             if "write_date" in fields:
-                data["write_date"] = odoo.fields.Datetime.to_string(partner.write_date)
+                data["write_date"] = koda.fields.Datetime.to_string(partner.write_date)
             if 'user' in fields:
                 internal_users = partner.user_ids - partner.user_ids.filtered('share')
                 main_user = internal_users[0] if len(internal_users) > 0 else partner.user_ids[0] if len(partner.user_ids) > 0 else self.env['res.users']

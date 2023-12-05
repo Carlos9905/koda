@@ -13,7 +13,7 @@ class TestKnowledgeArticleSequence(KnowledgeCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        with mute_logger('odoo.models.unlink'):
+        with mute_logger('koda.models.unlink'):
             cls.env['knowledge.article'].search([]).unlink()
 
         # HIERARCHY

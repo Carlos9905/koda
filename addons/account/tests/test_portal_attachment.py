@@ -28,7 +28,7 @@ class TestPortalAttachment(AccountTestInvoicingHttpCommon):
 
         cls.invoice_base_url = cls.out_invoice.get_base_url()
 
-    @mute_logger('odoo.addons.http_routing.models.ir_http', 'odoo.http')
+    @mute_logger('koda.addons.http_routing.models.ir_http', 'koda.http')
     def test_01_portal_attachment(self):
         """Test the portal chatter attachment route."""
         self.partner_a.write({  # ensure an email for message_post

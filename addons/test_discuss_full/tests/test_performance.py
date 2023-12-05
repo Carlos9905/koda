@@ -100,7 +100,7 @@ class TestDiscussFullPerformance(HttpCase):
         })['id'])
         self.channel_livechat_1.with_user(self.users[1]).message_post(body="test")
         self.authenticate(None, None)
-        with patch("odoo.http.GeoIP.country_code", new_callable=PropertyMock(return_value=self.env.ref('base.be').code)):
+        with patch("koda.http.GeoIP.country_code", new_callable=PropertyMock(return_value=self.env.ref('base.be').code)):
             self.channel_livechat_2 = self.env['discuss.channel'].browse(self.make_jsonrpc_request("/im_livechat/get_session", {
                 'anonymous_name': 'anon 2',
                 'channel_id': im_livechat_channel.id,

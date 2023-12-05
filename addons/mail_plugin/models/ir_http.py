@@ -18,7 +18,7 @@ class IrHttp(models.AbstractModel):
         if access_token.startswith('Bearer '):
             access_token = access_token[7:]
 
-        user_id = request.env["res.users.apikeys"]._check_credentials(scope='odoo.plugin.outlook', key=access_token)
+        user_id = request.env["res.users.apikeys"]._check_credentials(scope='koda.plugin.outlook', key=access_token)
         if not user_id:
             raise BadRequest('Access token invalid')
 

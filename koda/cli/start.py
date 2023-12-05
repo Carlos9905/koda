@@ -14,7 +14,7 @@ from koda.service.db import _create_empty_database, DatabaseExists
 
 
 class Start(Command):
-    """ Quickly start the odoo server with default options """
+    """ Quickly start the koda server with default options """
 
     def get_module_list(self, path):
         mods = itertools.chain.from_iterable(

@@ -41,11 +41,11 @@ class SaleOrder(models.Model):
         def _do_nothing(self, auto_commit=False):
             pass
 
-        with patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._process_invoices_to_send',
+        with patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._process_invoices_to_send',
                   wraps=_mock_process_invoices_to_send),\
-             patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._subscription_commit_cursor',
+             patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._subscription_commit_cursor',
                   wraps=_do_nothing),\
-             patch('odoo.addons.sale_subscription.models.sale_order.SaleOrder._subscription_rollback_cursor',
+             patch('koda.addons.sale_subscription.models.sale_order.SaleOrder._subscription_rollback_cursor',
                   wraps=_do_nothing):
             self._test_demo_generate_subscriptions_unpatched()
 

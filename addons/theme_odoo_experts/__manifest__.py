@@ -50,7 +50,7 @@
         },
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-odoo-experts.odoo.com',
+    'live_test_url': 'https://theme-koda-experts.koda.com',
     'assets': {
         'website.assets_editor': [
             'theme_odoo_experts/static/src/js/tour.js',

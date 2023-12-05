@@ -26,6 +26,6 @@ Accounting Reports for Estonia
         'l10n_ee',
         'account_reports',
     ],
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'license': 'OEEL-1',
 }

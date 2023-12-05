@@ -3,7 +3,7 @@
 
 from unittest.mock import patch
 
-import odoo
+import koda
 from koda.tests import tagged
 from koda.tests.common import HttpCase
 
@@ -16,11 +16,11 @@ class TestWebsiteResetPassword(HttpCase):
 
         # We override unlink because we don't want the email to be auto deleted
         # if the send works.
-        MailMail = odoo.addons.mail.models.mail_mail.MailMail
+        MailMail = koda.addons.mail.models.mail_mail.MailMail
 
         # We override send_mail because in HttpCase on runbot we don't have an
         # SMTP server, so if force_send is set, the test is going to fail.
-        MailTemplate = odoo.addons.mail.models.mail_template.MailTemplate
+        MailTemplate = koda.addons.mail.models.mail_template.MailTemplate
         original_send_mail = MailTemplate.send_mail
 
         def my_send_mail(*args, **kwargs):

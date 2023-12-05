@@ -33,6 +33,6 @@ Accounting reports for Poland
     ],
     'auto_install': True,
     'installable': True,
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'license': 'OEEL-1',
 }

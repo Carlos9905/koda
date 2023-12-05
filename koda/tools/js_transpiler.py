@@ -1,9 +1,9 @@
 """
-This code is what let us use ES6-style modules in odoo.
-Classic Odoo modules are composed of a top-level :samp:`odoo.define({name},{body_function})` call.
-This processor will take files starting with an `@odoo-module` annotation (in a comment) and convert them to classic modules.
-If any file has the ``/** odoo-module */`` on top of it, it will get processed by this class.
-It performs several operations to get from ES6 syntax to the usual odoo one with minimal changes.
+This code is what let us use ES6-style modules in koda.
+Classic Odoo modules are composed of a top-level :samp:`koda.define({name},{body_function})` call.
+This processor will take files starting with an `@koda-module` annotation (in a comment) and convert them to classic modules.
+If any file has the ``/** koda-module */`` on top of it, it will get processed by this class.
+It performs several operations to get from ES6 syntax to the usual koda one with minimal changes.
 This is done on the fly, this not a pre-processing tool.
 
 Caveat: This is done without a full parser, only using regex. One can only expect to cover as much edge cases
@@ -19,7 +19,7 @@ _logger = logging.getLogger(__name__)
 
 def transpile_javascript(url, content):
     """
-    Transpile the code from native JS modules to custom odoo modules.
+    Transpile the code from native JS modules to custom koda modules.
 
     :param content: The original source code
     :param url: The url of the file in the project
@@ -65,7 +65,7 @@ URL_RE = re.compile(r"""
 
 def url_to_module_path(url):
     """
-    Odoo modules each have a name. (odoo.define("<the name>", async function (require) {...});
+    Odoo modules each have a name. (koda.define("<the name>", async function (require) {...});
     It is used in to be required later. (const { something } = require("<the name>").
     The transpiler transforms the url of the file in the project to this name.
     It takes the module name and add a @ on the start of it, and map it to be the source of the static/src (or
@@ -97,10 +97,10 @@ def url_to_module_path(url):
 
 def wrap_with_odoo_define(module_path, content):
     """
-    Wraps the current content (source code) with the odoo.define call.
+    Wraps the current content (source code) with the koda.define call.
     Should logically be called once all other operations have been performed.
     """
-    return f"""odoo.define({module_path!r}, async function (require) {{
+    return f"""koda.define({module_path!r}, async function (require) {{
 'use strict';
 let __exports = {{}};
 {content}
@@ -647,7 +647,7 @@ def relative_path_to_module_path(url, path_rel):
 ODOO_MODULE_RE = re.compile(r"""
     \s*                                       # some starting space
     \/(\*|\/).*\s*                            # // or /*
-    @odoo-module                              # @odoo-module
+    @koda-module                              # @koda-module
     (\s+alias=(?P<alias>[\w.]+))?             # alias=web.AbstractAction (optional)
     (\s+default=(?P<default>False|false|0))?  # default=False or false or 0 (optional)
 """, re.VERBOSE)
@@ -655,11 +655,11 @@ ODOO_MODULE_RE = re.compile(r"""
 
 def is_odoo_module(content):
     """
-    Detect if the file is a native odoo module.
-    We look for a comment containing @odoo-module.
+    Detect if the file is a native koda module.
+    We look for a comment containing @koda-module.
 
     :param content: source code
-    :return: is this a odoo module that need transpilation ?
+    :return: is this a koda module that need transpilation ?
     """
     result = ODOO_MODULE_RE.match(content)
     return bool(result)
@@ -672,12 +672,12 @@ def get_aliased_odoo_define_content(module_path, content):
     new modules.
 
     Example:
-    If we have a require call somewhere in the odoo source base being:
+    If we have a require call somewhere in the koda source base being:
     > vat AbstractAction require("web.AbstractAction")
     we have a problem when we will have converted to module to ES6: its new name will be more like
     "web/chrome/abstract_action". So the require would fail !
     So we add a second small modules, an alias, as such:
-    > odoo.define("web/chrome/abstract_action", async function(require) {
+    > koda.define("web/chrome/abstract_action", async function(require) {
     >  return require('web.AbstractAction')[Symbol.for("default")];
     > });
 
@@ -686,9 +686,9 @@ def get_aliased_odoo_define_content(module_path, content):
     .. code-block:: javascript
 
         // before
-        /** @odoo-module */
+        /** @koda-module */
         // after
-        /** @odoo-module alias=web.AbstractAction */
+        /** @koda-module alias=web.AbstractAction */
 
     Notice that often, the legacy system acted like they it did defaukt imports. That's why we have the
     "[Symbol.for("default")];" bit. If your use case does not need this default import, just do:
@@ -696,9 +696,9 @@ def get_aliased_odoo_define_content(module_path, content):
     .. code-block:: javascript
 
         // before
-        /** @odoo-module */
+        /** @koda-module */
         // after
-        /** @odoo-module alias=web.AbstractAction default=false */
+        /** @koda-module alias=web.AbstractAction default=false */
 
     :return: the alias content to append to the source code.
     """

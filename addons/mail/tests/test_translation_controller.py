@@ -122,9 +122,9 @@ class TestTranslationController(HttpCase):
         self.assertHTMLEqual(translation.body, "<p>Bij slecht weer, goed gezicht.</p>")
 
     def test_access_right(self):
-        with self.assertRaises(JsonRpcException, msg="odoo.http.SessionExpiredException"):
+        with self.assertRaises(JsonRpcException, msg="koda.http.SessionExpiredException"):
             self._mock_translation_request({"message_id": self.message.id})
         new_test_user(self.env, "user_test_portal", groups="base.group_portal", lang="fr_FR")
         self.authenticate("user_test_portal", "user_test_portal")
-        with self.assertRaises(JsonRpcException, msg="odoo.exceptions.AccessError"), mute_logger("odoo.http"):
+        with self.assertRaises(JsonRpcException, msg="koda.exceptions.AccessError"), mute_logger("koda.http"):
             self._mock_translation_request({"message_id": self.message.id})

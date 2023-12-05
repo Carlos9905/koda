@@ -45,7 +45,7 @@ class TestNotifySecurityUpdate(MailCommon):
 
 class TestUser(MailCommon):
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     def test_notification_type_constraint(self):
         with self.assertRaises(IntegrityError, msg='Portal user can not receive notification in Odoo'):
             mail_new_test_user(

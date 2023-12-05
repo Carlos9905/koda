@@ -75,7 +75,7 @@ class HrContract(models.Model):
         domain = super()._get_sub_leave_domain()
         return OR([
             domain,
-            [('holiday_id.employee_id', 'in', self.employee_id.ids)] # see https://github.com/odoo/enterprise/pull/15091
+            [('holiday_id.employee_id', 'in', self.employee_id.ids)] # see https://github.com/koda/enterprise/pull/15091
         ])
 
     def write(self, vals):

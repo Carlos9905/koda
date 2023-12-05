@@ -32,7 +32,7 @@ class PublisherWarrantyContract(AbstractModel):
     @api.model
     def _get_verbose_maintenance(self):
         """ can be called by a SA to debug cloc issue
-            Without runing odoo-bin cloc which is not always possible
+            Without runing koda-bin cloc which is not always possible
         """
         c = cloc.Cloc()
         c.count_env(self.env)

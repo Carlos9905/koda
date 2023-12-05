@@ -396,7 +396,7 @@ class RecurrenceRule(models.Model):
             data['month_by'] = 'date'
             data['rrule_type'] = 'monthly'
 
-        # Repeat yearly but for odoo it's monthly, take same information as monthly but interval is 12 times
+        # Repeat yearly but for koda it's monthly, take same information as monthly but interval is 12 times
         if rule._bymonth:
             data['interval'] *= 12
 

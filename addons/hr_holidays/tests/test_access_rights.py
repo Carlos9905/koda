@@ -383,7 +383,7 @@ class TestAcessRightsStates(TestHrHolidaysAccessRightsCommon):
 
 @tests.tagged('access_rights', 'access_rights_create')
 class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_base_user_create_self(self):
         """ A simple user can create a leave for himself """
         values = {
@@ -393,7 +393,7 @@ class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
         }
         self.request_leave(self.user_employee_id, date.today() + relativedelta(days=5), 1, values)
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_base_user_create_other(self):
         """ A simple user cannot create a leave for someone else """
         values = {
@@ -405,7 +405,7 @@ class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
             self.request_leave(self.user_employee_id, date.today() + relativedelta(days=5), 1, values)
 
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_base_user_create_batch(self):
         """ A simple user cannot create a leave in bacth mode (by company, by department, by tag)"""
         values = {
@@ -419,7 +419,7 @@ class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
 
     # hr_holidays.group_hr_holidays_user
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_holidays_user_create_self(self):
         """ A holidays user can create a leave for himself """
         values = {
@@ -429,7 +429,7 @@ class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
         }
         self.request_leave(self.user_hruser_id, date.today() + relativedelta(days=5), 1, values)
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_holidays_user_create_other(self):
         """ A holidays user can create a leave for someone else """
         values = {
@@ -441,7 +441,7 @@ class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
 
     # hr_holidays.group_hr_holidays_manager
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_holidays_manager_create_self(self):
         """ A holidays manager can create a leave for himself """
         values = {
@@ -451,7 +451,7 @@ class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
         }
         self.request_leave(self.user_hrmanager_id, date.today() + relativedelta(days=5), 1, values)
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_holidays_manager_create_other(self):
         """ A holidays manager can create a leave for someone else """
         values = {
@@ -461,7 +461,7 @@ class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
         }
         self.request_leave(self.user_hrmanager_id, date.today() + relativedelta(days=5), 1, values)
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_holidays_manager_create_batch(self):
         """ A holidays manager can create a leave in bacth mode (by company, by department, by tag)"""
         values = {
@@ -477,7 +477,7 @@ class TestAccessRightsCreate(TestHrHolidaysAccessRightsCommon):
 class TestAccessRightsRead(TestHrHolidaysAccessRightsCommon):
     # base.group_user
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_read_by_user_other(self):
         """ Users should not be able to read other people requests """
         other_leave = self.env['hr.leave'].with_user(self.user_hruser).create({
@@ -491,7 +491,7 @@ class TestAccessRightsRead(TestHrHolidaysAccessRightsCommon):
         with self.assertRaises(AccessError), self.cr.savepoint():
             res = other_leave.with_user(self.user_employee_id).read(['number_of_days', 'state', 'name'])
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_read_by_user_other_browse(self):
         """ Users should not be able to browse other people requests """
         other_leave = self.env['hr.leave'].with_user(self.user_hruser).create({
@@ -506,7 +506,7 @@ class TestAccessRightsRead(TestHrHolidaysAccessRightsCommon):
             other_leave.invalidate_model(['name'])
             name = other_leave.with_user(self.user_employee_id).name
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_read_by_user_own(self):
         """ Users should be able to read name field of own requests """
         res = self.employee_leave.read(['name', 'number_of_days', 'state'])
@@ -517,12 +517,12 @@ class TestAccessRightsRead(TestHrHolidaysAccessRightsCommon):
 class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
     # base.group_user
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_update_by_user(self):
         """ User may update its leave """
         self.employee_leave.with_user(self.user_employee_id).write({'name': 'Crocodile Dundee is my man'})
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_update_by_user_other(self):
         """ User cannot update other people leaves """
         other_leave = self.env['hr.leave'].with_user(self.user_hruser).create({
@@ -536,7 +536,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
         with self.assertRaises(AccessError):
             other_leave.with_user(self.user_employee_id).write({'name': 'Crocodile Dundee is my man'})
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_creation_for_other_user(self):
         """ Employee cannot creates a leave request for another employee """
         HolidaysEmployeeGroup = self.env['hr.leave'].with_user(self.user_employee_id)
@@ -549,7 +549,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
                 'request_date_to': date.today(),
             })
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_messaging_by_user(self):
         """ User may communicate on its own leaves, even if validated """
         self.employee_leave.with_user(self.user_employee_id).message_post(
@@ -572,7 +572,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
 
     # base.group_user
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_hr_to_validate_by_user(self):
         """ User may not validate any leaves in HR mode """
         with self.assertRaises(UserError):
@@ -583,7 +583,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
 
     # hr_holidays.group_hr_holidays_user
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_hr_to_validate_by_holiday_user(self):
         """ Manager can validate leaves in HR mode """
         self.assertEqual(self.employee_leave.state, 'confirm')
@@ -592,7 +592,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
 
     # hr_holidays.group_hr_holidays_manager
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_hr_to_validate_by_manager(self):
         """ Manager validate its own leaves """
         leave_start = date_utils.start_of(date.today() + relativedelta(days=15), 'week')
@@ -613,7 +613,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
 
     # base.group_user
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_manager_to_validate_by_user(self):
         """ A simple user can validate in manager mode if he is leave_manager_id """
         self.leave_type.write({'leave_validation_type': 'manager'})
@@ -631,7 +631,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
 
     # hr_holidays.group_hr_holidays_user
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_manager_to_validate_by_holiday_user(self):
         """ A holiday user can validate in manager mode """
         self.leave_type.write({'leave_validation_type': 'manager'})
@@ -648,7 +648,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
     # Validation: double
     # ----------------------------------------
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_double_validate(self):
         self.leave_type.write({'leave_validation_type': 'both'})
         values = {
@@ -673,7 +673,7 @@ class TestAccessRightsWrite(TestHrHolidaysAccessRightsCommon):
 
     # hr_holidays.group_hr_holidays_manager
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_double_validate_holiday_manager(self):
         self.leave_type.write({'leave_validation_type': 'both'})
         values = {
@@ -721,7 +721,7 @@ class TestAccessRightsUnlink(TestHrHolidaysAccessRightsCommon):
 
     # base.group_user
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_unlink_draft_by_user(self):
         """ A simple user may delete its leave in draft state in the future"""
         values = {
@@ -795,7 +795,7 @@ class TestMultiCompany(TestHrHolidaysCommon):
             'request_date_to': date.today() + relativedelta(days=1),
         })
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_access_other_company_user(self):
         employee_leave = self.employee_leave.with_user(self.user_employee)
         employee_leave.invalidate_model(['name'])
@@ -805,7 +805,7 @@ class TestMultiCompany(TestHrHolidaysCommon):
         with self.assertRaises(AccessError):
             employee_leave.action_approve()
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_access_other_company_officer(self):
         employee_leave_hruser = self.employee_leave.with_user(self.user_hruser)
         employee_leave_hruser.invalidate_model(['name'])
@@ -815,7 +815,7 @@ class TestMultiCompany(TestHrHolidaysCommon):
         with self.assertRaises(AccessError):
             employee_leave_hruser.action_approve()
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_access_other_company_manager(self):
         employee_leave_hrmanager = self.employee_leave.with_user(self.user_hrmanager)
         employee_leave_hrmanager.invalidate_model(['name'])
@@ -825,7 +825,7 @@ class TestMultiCompany(TestHrHolidaysCommon):
         with self.assertRaises(AccessError):
             employee_leave_hrmanager.action_approve()
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_access_no_company_user(self):
         self.employee_emp.company_id = self.user_employee.company_id
         self.leave_type.write({'company_id': False})
@@ -837,7 +837,7 @@ class TestMultiCompany(TestHrHolidaysCommon):
         self.assertEqual(employee_leave.state, 'confirm')
 
     @unittest.skip
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_access_no_company_officer(self):
         self.employee_emp.company_id = self.user_employee.company_id
         self.leave_type.write({'company_id': False})
@@ -848,7 +848,7 @@ class TestMultiCompany(TestHrHolidaysCommon):
         self.assertEqual(employee_leave_hruser.state, 'validate')
 
     @unittest.skip
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.models.unlink', 'koda.addons.mail.models.mail_mail')
     def test_leave_access_no_company_manager(self):
         self.employee_emp.company_id = self.user_employee.company_id
         self.leave_type.write({'company_id': False})

@@ -6,7 +6,7 @@ from .test_common import TestHttpBase
 
 
 class TestHttpErrorHttp(TestHttpBase):
-    @mute_logger('odoo.http')  # UserError("Walter is AFK")
+    @mute_logger('koda.http')  # UserError("Walter is AFK")
     def test_httperror0_exceptions_as_404(self):
         with self.subTest('Decorator/AccessError'):
             res = self.nodb_url_open('/test_http/hide_errors/decorator?error=AccessError')
@@ -62,7 +62,7 @@ class TestHttpJsonError(TestHttpBase):
         )
 
 
-    @mute_logger('odoo.http')
+    @mute_logger('koda.http')
     def test_errorjson0_value_error(self):
         res = self.db_url_open('/test_http/json_value_error',
             data=json.dumps({'jsonrpc': '2.0', 'id': 1234, 'params': {}}),

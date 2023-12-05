@@ -9,7 +9,7 @@ from koda.addons.point_of_sale.tests.common_setup_methods import setup_pos_combo
 from datetime import date, timedelta
 from koda.addons.point_of_sale.tests.common import archive_products
 
-import odoo.tests
+import koda.tests
 
 
 class TestPointOfSaleHttpCommon(AccountTestInvoicingHttpCommon):
@@ -515,7 +515,7 @@ class TestPointOfSaleHttpCommon(AccountTestInvoicingHttpCommon):
         env['ir.property']._set_default("property_product_pricelist", "res.partner", public_pricelist, main_company)
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@koda.tests.tagged('post_install', '-at_install')
 class TestUi(TestPointOfSaleHttpCommon):
     def test_01_pos_basic_order(self):
 

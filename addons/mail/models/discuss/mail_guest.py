@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from functools import wraps
 from inspect import Parameter, signature
 
-import odoo
+import koda
 from koda.tools import consteq, get_lang
 from koda import _, api, fields, models
 from koda.http import request
@@ -175,7 +175,7 @@ class MailGuest(models.Model):
             if 'im_status' in fields:
                 data['im_status'] = guest.im_status
             if "write_date" in fields:
-                data["write_date"] = odoo.fields.Datetime.to_string(guest.write_date)
+                data["write_date"] = koda.fields.Datetime.to_string(guest.write_date)
             data['type'] = "guest"
             guests_formatted_data[guest] = data
         return guests_formatted_data

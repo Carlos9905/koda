@@ -23,6 +23,6 @@ Accounting reports for Greece
     'post_init_hook': '_l10n_gr_reports_post_init',
     'installable': True,
     'auto_install': ['l10n_gr', 'account_reports'],
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'license': 'OEEL-1',
 }

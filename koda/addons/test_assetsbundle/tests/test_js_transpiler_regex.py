@@ -10,20 +10,20 @@ class TestJsTranspiler(TransactionCase):
 
     def test_correct_ODOO_MODULE_RE(self):
         cases = [
-            '// @odoo-module',
-            '//@odoo-module',
-            '/* @odoo-module',
-            '/** @odoo-module',
-            '/*@odoo-module',
-            '/**@odoo-module',
-            '// @odoo-module alias=web.test',
-            '/* @odoo-module  alias=web.test',
-            '/** @odoo-module  alias=web.test',
-            '/** @odoo-module  alias=web.test**/',
-            '/* @odoo-module  alias=web.test ',
-            '/* @odoo-module alias=web.test default=false',
-            '/* @odoo-module alias=web.test default=false ',
-            '/* @odoo-module alias=web.test default=false**/',
+            '// @koda-module',
+            '//@koda-module',
+            '/* @koda-module',
+            '/** @koda-module',
+            '/*@koda-module',
+            '/**@koda-module',
+            '// @koda-module alias=web.test',
+            '/* @koda-module  alias=web.test',
+            '/** @koda-module  alias=web.test',
+            '/** @koda-module  alias=web.test**/',
+            '/* @koda-module  alias=web.test ',
+            '/* @koda-module alias=web.test default=false',
+            '/* @koda-module alias=web.test default=false ',
+            '/* @koda-module alias=web.test default=false**/',
         ]
 
         for case in cases:
@@ -37,17 +37,17 @@ class TestJsTranspiler(TransactionCase):
 
     def test_incorrect_ODOO_MODULE_RE(self):
         cases = [
-            '/* @odoo-module alias = web.test ',
-            '/* @odoo-module alias= web.test',
-            '/* @odoo-module alias = web.test default=false'
+            '/* @koda-module alias = web.test ',
+            '/* @koda-module alias= web.test',
+            '/* @koda-module alias = web.test default=false'
         ]
 
         for case in cases:
             assert not ODOO_MODULE_RE.match(case).groupdict().get('alias'), "URL_RE should fail because of too much spaces but didn't... >%s<" % case
 
         cases = [
-            '// @odoo-modulealias=web.test',
-            '/* @odoo-module alias=web.testdefault=false',
+            '// @koda-modulealias=web.test',
+            '/* @koda-module alias=web.testdefault=false',
         ]
 
         for case in cases:

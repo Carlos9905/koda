@@ -11,7 +11,7 @@ from koda.tools import mute_logger
 class TestAccessRights(TransactionCase):
 
     @classmethod
-    @mute_logger('odoo.tests', 'odoo.addons.auth_signup.models.res_users')
+    @mute_logger('koda.tests', 'koda.addons.auth_signup.models.res_users')
     def setUpClass(cls):
         super().setUpClass()
         cls.john = new_test_user(cls.env, login='john', groups='base.group_user')
@@ -36,7 +36,7 @@ class TestAccessRights(TransactionCase):
         return [r[field] for r in data]
 
     # don't spam logs with ACL failures from portal
-    @mute_logger('odoo.addons.base.models.ir_rule')
+    @mute_logger('koda.addons.base.models.ir_rule')
     def test_privacy(self):
         event = self.create_event(
             self.john,

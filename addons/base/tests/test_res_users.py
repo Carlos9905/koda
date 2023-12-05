@@ -122,7 +122,7 @@ class TestUsers(TransactionCase):
             "the company_id of the partner_id shall be updated"
         )
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('koda.sql_db')
     def test_deactivate_portal_users_access(self):
         """Test that only a portal users can deactivate his account."""
         user_internal = self.env['res.users'].create({
@@ -135,7 +135,7 @@ class TestUsers(TransactionCase):
         with self.assertRaises(UserError, msg='Internal users should not be able to deactivate their account'):
             user_internal._deactivate_portal_user()
 
-    @mute_logger('odoo.sql_db', 'odoo.addons.base.models.res_users_deletion')
+    @mute_logger('koda.sql_db', 'koda.addons.base.models.res_users_deletion')
     def test_deactivate_portal_users_archive_and_remove(self):
         """Test that if the account can not be removed, it's archived instead
         and sensitive information are removed.
@@ -206,7 +206,7 @@ class TestUsers(TransactionCase):
 
         request = SimpleNamespace()
         request.best_lang = 'es_ES'
-        request_patch = patch('odoo.addons.base.models.res_users.request', request)
+        request_patch = patch('koda.addons.base.models.res_users.request', request)
         self.addCleanup(request_patch.stop)
         request_patch.start()
 

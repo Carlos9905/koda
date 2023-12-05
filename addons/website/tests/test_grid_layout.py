@@ -3,12 +3,12 @@
 
 import base64
 
-import odoo.tests
+import koda.tests
 from koda.tests.common import HOST
 from koda.tools import config
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestWebsiteGridLayout(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestWebsiteGridLayout(koda.tests.HttpCase):
 
     def test_01_replace_grid_image(self):
         IrAttachment = self.env['ir.attachment']

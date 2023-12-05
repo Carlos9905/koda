@@ -8,7 +8,7 @@
     'category': 'Services/Appointment',
     'sequence': 2150,
     'summary': 'Generate leads when prospects schedule appointments',
-    'website': 'https://www.odoo.com/app/appointments',
+    'website': 'https://www.koda.com/app/appointments',
     'description': """
 Allow to generate lead from Scheduled Appointments through your Website
 -----------------------------------------------------------------------

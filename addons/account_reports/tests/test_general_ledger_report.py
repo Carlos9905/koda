@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0326
 from .common import TestAccountReportsCommon
-import odoo.tests
+import koda.tests
 
 from koda import fields, Command
 from koda.tests import tagged
@@ -10,7 +10,7 @@ from freezegun import freeze_time
 import json
 
 @tagged('post_install', '-at_install')
-class TestGeneralLedgerReport(TestAccountReportsCommon, odoo.tests.HttpCase):
+class TestGeneralLedgerReport(TestAccountReportsCommon, koda.tests.HttpCase):
     @classmethod
     def setUpClass(cls, chart_template_ref=None):
         super().setUpClass(chart_template_ref=chart_template_ref)

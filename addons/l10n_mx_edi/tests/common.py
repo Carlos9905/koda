@@ -87,8 +87,8 @@ class TestMxEdiCommon(AccountTestInvoicingCommon):
         ]
 
         # TODO: Temporary fix awaiting:
-        # - https://github.com/odoo/odoo/pull/142972
-        # - https://github.com/odoo/enterprise/pull/51286
+        # - https://github.com/koda/koda/pull/142972
+        # - https://github.com/koda/enterprise/pull/51286
         (cls.tax_8_ieps + cls.tax_53_ieps).l10n_mx_tax_type = 'ieps'
         cls.tax_10_ret_isr.l10n_mx_tax_type = 'isr'
 

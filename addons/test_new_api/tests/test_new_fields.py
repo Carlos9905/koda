@@ -234,7 +234,7 @@ class TestFields(TransactionCaseWithUserDemo):
             sum(invalid_transitive_depends in get_trigger_tree([field]).root for field in fields.values()), 1
         )
 
-    @mute_logger('odoo.fields')
+    @mute_logger('koda.fields')
     def test_10_computed_stored_x_name(self):
         # create a custom model with two fields
         self.env["ir.model"].create({
@@ -2195,7 +2195,7 @@ class TestFields(TransactionCaseWithUserDemo):
         self.assertEqual(new_move.line_ids._origin, line)
         self.assertEqual(new_move.line_ids.move_id, new_move)
 
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     def test_41_new_related(self):
         """ test the behavior of related fields starting on new records. """
         # make discussions unreadable for demo user
@@ -2220,7 +2220,7 @@ class TestFields(TransactionCaseWithUserDemo):
         # with self.assertRaises(AccessError):
         #     message.discussion.name
 
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     def test_42_new_related(self):
         """ test the behavior of related fields traversing new records. """
         # make discussions unreadable for demo user
@@ -2918,7 +2918,7 @@ class TestX2many(common.TransactionCase):
             'a_restricted_b_ids': [Command.set(record_b.ids)],
         })
         with self.assertRaises(psycopg2.IntegrityError):
-            with mute_logger('odoo.sql_db'), self.cr.savepoint():
+            with mute_logger('koda.sql_db'), self.cr.savepoint():
                 record_a.unlink()
         # Test B is still cascade.
         record_b.unlink()
@@ -2932,7 +2932,7 @@ class TestX2many(common.TransactionCase):
             'b_restricted_b_ids': [Command.set(record_b.ids)],
         })
         with self.assertRaises(psycopg2.IntegrityError):
-            with mute_logger('odoo.sql_db'), self.cr.savepoint():
+            with mute_logger('koda.sql_db'), self.cr.savepoint():
                 record_b.unlink()
         # Test A is still cascade.
         record_a.unlink()
@@ -3314,7 +3314,7 @@ class TestHtmlField(common.TransactionCase):
         new_record.invalidate_recordset()
         new_record.with_user(internal_user).comment5
 
-    @patch('odoo.fields.html_sanitize', return_value='<p>comment</p>')
+    @patch('koda.fields.html_sanitize', return_value='<p>comment</p>')
     def test_onchange_sanitize(self, patch):
         self.assertTrue(self.registry['test_new_api.mixed'].comment2.sanitize)
 
@@ -3845,7 +3845,7 @@ class TestSelectionOndelete(common.TransactionCase):
         self._unlink_option(self.MODEL_REQUIRED, 'foo')
         self.assertEqual(rec.my_selection, 'foo')
 
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('koda.addons.base.models.ir_model')
     def test_write_override_selection(self):
         # test that on override to write that raises an error does not prevent the ondelete
         # policy from executing and cleaning up what needs to be cleaned up
@@ -3952,11 +3952,11 @@ class TestFieldParametersValidation(common.TransactionCase):
         Foo._build_model(self.registry, self.env.cr)
         self.addCleanup(self.registry.__delitem__, Foo._name)
 
-        with self.assertLogs('odoo.fields', level='WARNING') as cm:
+        with self.assertLogs('koda.fields', level='WARNING') as cm:
             self.registry.setup_models(self.env.cr)
 
         self.assertTrue(cm.output[0].startswith(
-            "WARNING:odoo.fields:Field test_new_api.field_parameter_validation.name: "
+            "WARNING:koda.fields:Field test_new_api.field_parameter_validation.name: "
             "unknown parameter 'invalid_parameter'"
         ))
 

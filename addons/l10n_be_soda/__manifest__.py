@@ -17,7 +17,7 @@ Module to import SODA files.
         'wizard/soda_import_wizard.xml',
     ],
     'auto_install': True,
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'installable': True,
     'license': 'OEEL-1',
 }

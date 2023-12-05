@@ -148,7 +148,7 @@ class TestPeppolMessage(TestAccountMoveSendCommon):
 
             return response
 
-        with patch('odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user.requests.post', side_effect=_mocked_post):
+        with patch('koda.addons.account_edi_proxy_client.models.account_edi_proxy_user.requests.post', side_effect=_mocked_post):
             yield
 
     def test_attachment_placeholders(self):

@@ -5,7 +5,7 @@ import importlib.util
 import io
 import zipfile
 
-import odoo.http as http
+import koda.http as http
 
 from koda.exceptions import UserError
 from koda.http import request, content_disposition

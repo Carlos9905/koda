@@ -11,7 +11,7 @@ try:
 except ImportError:
     websocket = None
 
-import odoo.tools
+import koda.tools
 from koda.tests import HOST, HttpCase
 from ..websocket import CloseCode, Websocket, WebsocketConnectionHandler
 from ..models.bus import dispatch, hashable, channel_with_db
@@ -24,7 +24,7 @@ class WebsocketCase(HttpCase):
         if websocket is None:
             cls._logger.warning("websocket-client module is not installed")
             raise unittest.SkipTest("websocket-client module is not installed")
-        cls._WEBSOCKET_URL = f"ws://{HOST}:{odoo.tools.config['http_port']}/websocket"
+        cls._WEBSOCKET_URL = f"ws://{HOST}:{koda.tools.config['http_port']}/websocket"
         websocket_allowed_patch = patch.object(WebsocketConnectionHandler, "websocket_allowed", return_value=True)
         cls.startClassPatcher(websocket_allowed_patch)
 

@@ -11,7 +11,7 @@ The test files are separated by sources, they were taken from:
 
 * the factur-x doc (form the FNFE)
 * the peppol-bis-invoice-3 doc (the github repository: https://github.com/OpenPEPPOL/peppol-bis-invoice-3/tree/master/rules/examples contains examples)
-* odoo, these files pass all validation tests (using ecosio or the FNFE validator)
+* koda, these files pass all validation tests (using ecosio or the FNFE validator)
 
 We test that the external examples are correctly imported (currency, total amount and total tax match).
 We also test that generating xml from koda with given parameters gives exactly the same xml as the expected,

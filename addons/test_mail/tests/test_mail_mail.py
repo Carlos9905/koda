@@ -120,7 +120,7 @@ class TestMailMail(MailCommon):
             self.assertEqual(mail.sudo().restricted_attachment_count, 2)
             self.assertEqual(len(mail.sudo().unrestricted_attachment_ids), 0)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_headers(self):
         """ Test headers management when set on outgoing mail. """
         # mail without thread-enabled record
@@ -149,7 +149,7 @@ class TestMailMail(MailCommon):
                     self.assertIn(key, self._mails[0]['headers'])
                     self.assertEqual(self._mails[0]['headers'][key], value)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_recipients(self):
         """ Partner_ids is a field used from mail_message, but not from mail_mail. """
         mail = self.env['mail.mail'].sudo().create({
@@ -173,7 +173,7 @@ class TestMailMail(MailCommon):
         self.assertSentEmail(mail.env.user.partner_id, [self.user_employee.email_formatted])
         self.assertEqual(len(self._mails), 2)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_recipients_cc(self):
         """ Partner_ids is a field used from mail_message, but not from mail_mail. """
         mail = self.env['mail.mail'].sudo().create({
@@ -195,7 +195,7 @@ class TestMailMail(MailCommon):
                              email_cc=[])
         self.assertEqual(len(self._mails), 2)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_recipients_formatting(self):
         """ Check support of email / formatted email """
         mail = self.env['mail.mail'].sudo().create({
@@ -214,7 +214,7 @@ class TestMailMail(MailCommon):
                              email_cc=['test.cc.1@example.com', 'test.cc.2@example.com'])
         self.assertEqual(len(self._mails), 1)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_return_path(self):
         # mail without thread-enabled record
         base_values = {
@@ -236,7 +236,7 @@ class TestMailMail(MailCommon):
             mail.send()
         self.assertEqual(self._mails[0]['headers']['Return-Path'], '%s@%s' % (self.alias_bounce, self.alias_domain))
 
-    @mute_logger('odoo.addons.mail.models.mail_mail', 'odoo.tests')
+    @mute_logger('koda.addons.mail.models.mail_mail', 'koda.tests')
     def test_mail_mail_schedule(self):
         """Test that a mail scheduled in the past/future are sent or not"""
         now = datetime(2022, 6, 28, 14, 0, 0)
@@ -286,7 +286,7 @@ class TestMailMail(MailCommon):
             for mail, expected_state in zip(mails, expected_states):
                 self.assertEqual(mail.state, expected_state)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_send_exceptions_origin(self):
         """ Test various use case with exceptions and errors and see how they are
         managed and stored at mail and notification level. """
@@ -296,7 +296,7 @@ class TestMailMail(MailCommon):
         for default_from in [False, '']:
             self.mail_alias_domain.default_from = default_from
             self._reset_data()
-            with self.mock_mail_gateway(), mute_logger('odoo.addons.mail.models.mail_mail'):
+            with self.mock_mail_gateway(), mute_logger('koda.addons.mail.models.mail_mail'):
                 mail.send(raise_exception=False)
             self.assertFalse(self._mails[0]['email_from'])
             self.assertEqual(
@@ -327,7 +327,7 @@ class TestMailMail(MailCommon):
             self.assertEqual(notification.failure_type, 'mail_from_invalid')
             self.assertEqual(notification.notification_status, 'exception')
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_send_exceptions_recipients_emails(self):
         """ Test various use case with exceptions and errors and see how they are
         managed and stored at mail and notification level. """
@@ -392,7 +392,7 @@ class TestMailMail(MailCommon):
             self.assertFalse(notification.failure_type)
             self.assertEqual(notification.notification_status, 'sent')
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_send_exceptions_recipients_partners(self):
         """ Test various use case with exceptions and errors and see how they are
         managed and stored at mail and notification level. """
@@ -471,7 +471,7 @@ class TestMailMail(MailCommon):
             self.assertFalse(notification.failure_type)
             self.assertEqual(notification.notification_status, 'sent')
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_send_exceptions_recipients_partners_mixed(self):
         """ Test various use case with exceptions and errors and see how they are
         managed and stored at mail and notification level. """
@@ -548,7 +548,7 @@ class TestMailMail(MailCommon):
             self.assertEqual(notification2.failure_type, 'mail_email_invalid')
             self.assertEqual(notification2.notification_status, 'exception')
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_send_exceptions_raise_management(self):
         """ Test various use case with exceptions and errors and see how they are
         managed and stored at mail and notification level. """
@@ -645,7 +645,7 @@ class TestMailMailServer(MailCommon):
             'smtp_host': 'test_2.com',
         })
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_send_server(self):
         """Test that the mails are send in batch.
 
@@ -715,7 +715,7 @@ class TestMailMailServer(MailCommon):
         self.assertSMTPEmailsSent(message_from='user_2@test_2.com', emails_count=5, mail_server=self.mail_server_domain_2)
         self.assertSMTPEmailsSent(message_from='user_1@test_2.com', emails_count=5, mail_server=self.mail_server_domain)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_values_email_formatted(self):
         """ Test outgoing email values, with formatting """
         customer = self.env['res.partner'].create({
@@ -746,7 +746,7 @@ class TestMailMailServer(MailCommon):
             'Mail: currently always removing formatting in email_cc'
         )
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_values_email_multi(self):
         """ Test outgoing email values, with email field holding multi emails """
         # Multi
@@ -809,7 +809,7 @@ class TestMailMailServer(MailCommon):
             [['test.cc.1@test.example.com', 'test.cc.2@test.example.com'], [], []],
         )
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_mail_values_unicode(self):
         """ Unicode should be fine. """
         mail = self.env['mail.mail'].create({
@@ -827,7 +827,7 @@ class TestMailMailServer(MailCommon):
 @tagged('mail_mail')
 class TestMailMailRace(common.TransactionCase):
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('koda.addons.mail.models.mail_mail')
     def test_mail_bounce_during_send(self):
         self.partner = self.env['res.partner'].create({
             'name': 'Ernest Partner',
@@ -862,7 +862,7 @@ class TestMailMailRace(common.TransactionCase):
         bounce_deferred = []
         @api.model
         def send_email(self, message, *args, **kwargs):
-            with this.registry.cursor() as cr, mute_logger('odoo.sql_db'):
+            with this.registry.cursor() as cr, mute_logger('koda.sql_db'):
                 try:
                     # try ro aquire lock (no wait) on notification (should fail)
                     cr.execute("SELECT notification_status FROM mail_notification WHERE id = %s FOR UPDATE NOWAIT", [notif.id])

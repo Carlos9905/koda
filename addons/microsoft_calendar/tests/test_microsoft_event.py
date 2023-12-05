@@ -319,7 +319,7 @@ class TestMicrosoftEvent(TestCommon):
     def test_performance_check(self):
         # Test what happens when microsoft returns a lot of data
         # This test does not aim to check what we do with the data but it ensure that we are able to process it.
-        # Other tests take care of how we update odoo records with the api result.
+        # Other tests take care of how we update koda records with the api result.
 
         start_date = datetime(2023, 9, 25, 17, 25)
         record_count = 10000
@@ -344,7 +344,7 @@ class TestMicrosoftEvent(TestCommon):
 
         events = MicrosoftEvent(single_event_data)
         mapped = events._load_odoo_ids_from_db(self.env)
-        self.assertFalse(mapped, "No odoo record should correspond to the microsoft values")
+        self.assertFalse(mapped, "No koda record should correspond to the microsoft values")
 
         recurring_event_data = [{
             '@odata.type': '#microsoft.graph.event',
@@ -405,4 +405,4 @@ class TestMicrosoftEvent(TestCommon):
 
         recurrences = MicrosoftEvent(recurring_event_data)
         mapped = recurrences._load_odoo_ids_from_db(self.env)
-        self.assertFalse(mapped, "No odoo record should correspond to the microsoft values")
+        self.assertFalse(mapped, "No koda record should correspond to the microsoft values")

@@ -46,7 +46,7 @@ class TestPaymentTransaction(AsiaPayCommon, PaymentHttpCommon):
         """ Test that the rendered values are conform to the transaction fields. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_asiapay.models.payment_provider.PaymentProvider'
+            'koda.addons.payment_asiapay.models.payment_provider.PaymentProvider'
             '._asiapay_calculate_signature', return_value='dummy_signature'
         ):
             rendering_values = tx._get_specific_rendering_values(None)
@@ -67,7 +67,7 @@ class TestPaymentTransaction(AsiaPayCommon, PaymentHttpCommon):
                 }
             )
 
-    @mute_logger('odoo.addons.payment.models.payment_transaction')
+    @mute_logger('koda.addons.payment.models.payment_transaction')
     def test_no_input_missing_from_redirect_form(self):
         """ Test that no key is omitted from the rendering values. """
         tx = self._create_transaction(flow='redirect')

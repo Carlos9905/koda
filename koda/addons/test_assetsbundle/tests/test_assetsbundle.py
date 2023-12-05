@@ -1743,7 +1743,7 @@ class TestAssetsManifest(AddonManifestPatched):
             '''
         )
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_31(self):
         path_to_dummy = '../../tests/dummy.js'
         me = pathlib.Path(__file__).parent.absolute()
@@ -1760,7 +1760,7 @@ class TestAssetsManifest(AddonManifestPatched):
         attach = self.env['ir.attachment'].search([('name', 'ilike', 'test_assetsbundle.irassetsec')], order='create_date DESC', limit=1)
         self.assertFalse(attach.exists())
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_32(self):
         path_to_dummy = '../../tests/dummy.xml'
         me = pathlib.Path(__file__).parent.absolute()
@@ -1803,7 +1803,7 @@ class TestAssetsManifest(AddonManifestPatched):
         attach = self.env['ir.attachment'].search([('name', 'ilike', 'test_assetsbundle.irassetsec')], order='create_date DESC', limit=1)
         self.assertFalse(attach.exists())
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_34(self):
         self.env['ir.asset'].create({
             'name': '1',
@@ -1815,7 +1815,7 @@ class TestAssetsManifest(AddonManifestPatched):
         attach = self.env['ir.attachment'].search([('name', 'ilike', 'test_assetsbundle.irassetsec')], order='create_date DESC', limit=1)
         self.assertFalse(attach.exists())
 
-    @mute_logger('odoo.addons.base.models.ir_asset')
+    @mute_logger('koda.addons.base.models.ir_asset')
     def test_35(self):
         self.env['ir.asset'].create({
             'name': '1',

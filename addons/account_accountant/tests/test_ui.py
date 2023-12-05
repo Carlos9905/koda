@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from koda import Command
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestUi(odoo.tests.HttpCase):
+@koda.tests.tagged('-at_install', 'post_install')
+class TestUi(koda.tests.HttpCase):
     def test_accountant_tour(self):
         # Reset country and fiscal country, so that fields added by localizations are
         # hidden and non-required, and don't make the tour crash.

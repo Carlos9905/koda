@@ -89,7 +89,7 @@ class L10nClEdiUtilMixin(models.AbstractModel):
         (content, content_type) = urllib3.filepost.encode_multipart_formdata(data)
         # The User-Agent parameter is mandatory. The service is very picky with it so it set as the
         # same User-Agent used in the documentation, using other User-Agent like 'python-requests/2.21.0' or
-        # 'Odoo (http://www.odoo.com/contactus)' or 'Mozilla/4.0 ( compatible; Odoo %s )' % release.series
+        # 'Odoo (http://www.koda.com/contactus)' or 'Mozilla/4.0 ( compatible; Odoo %s )' % release.series
         # causes a "Token not valid" response
         # ref: https://www4c.sii.cl/bolcoreinternetui/api/
         headers = {

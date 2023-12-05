@@ -103,7 +103,7 @@ class TestOrmcache(TransactionCase):
         self.registry.cache_invalidated.clear()
         registry = self.registry
         old_sequences = dict(registry.cache_sequences)
-        with self.assertLogs('odoo.modules.registry') as logs:
+        with self.assertLogs('koda.modules.registry') as logs:
             registry.cache_invalidated.add('assets')
             self.assertEqual(registry.cache_invalidated, {'assets'})
             registry.signal_changes()
@@ -111,7 +111,7 @@ class TestOrmcache(TransactionCase):
 
         self.assertEqual(
             logs.output,
-            ["INFO:odoo.modules.registry:Caches invalidated, signaling through the database: ['assets']"],
+            ["INFO:koda.modules.registry:Caches invalidated, signaling through the database: ['assets']"],
         )
 
         for key, value in old_sequences.items():
@@ -131,7 +131,7 @@ class TestOrmcache(TransactionCase):
             registry.check_signaling()
         self.assertEqual(
             logs.output,
-            ["INFO:odoo.modules.registry:Invalidating caches after database signaling: ['assets', 'templates.cached_values']"],
+            ["INFO:koda.modules.registry:Invalidating caches after database signaling: ['assets', 'templates.cached_values']"],
         )
 
     def test_signaling_01_multiple(self):
@@ -139,7 +139,7 @@ class TestOrmcache(TransactionCase):
         self.registry.cache_invalidated.clear()
         registry = self.registry
         old_sequences = dict(registry.cache_sequences)
-        with self.assertLogs('odoo.modules.registry') as logs:
+        with self.assertLogs('koda.modules.registry') as logs:
             registry.cache_invalidated.add('assets')
             registry.cache_invalidated.add('default')
             self.assertEqual(registry.cache_invalidated, {'assets', 'default'})
@@ -149,7 +149,7 @@ class TestOrmcache(TransactionCase):
         self.assertEqual(
             logs.output,
             [
-                "INFO:odoo.modules.registry:Caches invalidated, signaling through the database: ['assets', 'default']",
+                "INFO:koda.modules.registry:Caches invalidated, signaling through the database: ['assets', 'default']",
             ],
         )
 
@@ -170,5 +170,5 @@ class TestOrmcache(TransactionCase):
             registry.check_signaling()
         self.assertEqual(
             logs.output,
-            ["INFO:odoo.modules.registry:Invalidating caches after database signaling: ['assets', 'default', 'templates.cached_values']"],
+            ["INFO:koda.modules.registry:Invalidating caches after database signaling: ['assets', 'default', 'templates.cached_values']"],
         )

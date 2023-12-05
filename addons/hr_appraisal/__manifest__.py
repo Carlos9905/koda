@@ -7,7 +7,7 @@
     'category': 'Human Resources/Appraisals',
     'sequence': 180,
     'summary': 'Assess your employees',
-    'website': 'https://www.odoo.com/app/appraisals',
+    'website': 'https://www.koda.com/app/appraisals',
     'depends': ['hr', 'calendar', 'web_gantt'],
     'description': """
 Periodical Employees appraisal

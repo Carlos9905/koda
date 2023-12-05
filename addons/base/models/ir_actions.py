@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import koda
 from koda import api, fields, models, tools, _, Command
 from koda.exceptions import MissingError, ValidationError, AccessError, UserError
 from koda.tools import frozendict
@@ -866,7 +866,7 @@ class IrActionsServer(models.Model):
             'env': self.env,
             'model': model,
             # Exceptions
-            'UserError': odoo.exceptions.UserError,
+            'UserError': koda.exceptions.UserError,
             # record
             'record': record,
             'records': records,

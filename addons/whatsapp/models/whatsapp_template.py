@@ -451,7 +451,7 @@ class WhatsAppTemplate(models.Model):
         template_vals = self._get_template_vals_from_response(remote_template_vals, self.wa_account_id)
         update_vals = {field: template_vals[field] for field in update_fields}
 
-        # variables should be preserved instead of overwritten to keep odoo-specific data like fields
+        # variables should be preserved instead of overwritten to keep koda-specific data like fields
         variable_ids = []
         existing_template_variables = {(variable_id.name, variable_id.line_type): variable_id.id for variable_id in self.variable_ids}
         for variable_vals in template_vals['variable_ids']:

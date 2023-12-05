@@ -471,8 +471,8 @@ class TestOnlineEventPerformance(EventPerformanceCase, UtilPerf):
     #         with self.assertQueryCount(default=99999):  # tef only: 1110
     #             self.browser_js(
     #                 '/event/%i/register' % self.test_event.id,
-    #                 'odoo.__DEBUG__.services["web_tour.tour"].run("wevent_performance_register")',
-    #                 'odoo.__DEBUG__.services["web_tour.tour"].tours.wevent_performance_register.ready',
+    #                 'koda.__DEBUG__.services["web_tour.tour"].run("wevent_performance_register")',
+    #                 'koda.__DEBUG__.services["web_tour.tour"].tours.wevent_performance_register.ready',
     #                 login=None,
     #                 timeout=200,
     #             )

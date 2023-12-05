@@ -59,7 +59,7 @@ class TestLangUrl(HttpCase):
         self.assertEqual(r.status_code, 200)
 
         for line in r.text.splitlines():
-            _, match, session_info_str = line.partition('odoo.__session_info__ = ')
+            _, match, session_info_str = line.partition('koda.__session_info__ = ')
             if match:
                 session_info = json.loads(session_info_str[:-1])
                 self.assertEqual(session_info['user_context']['lang'], 'en_US', "ensure english was loaded")

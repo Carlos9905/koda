@@ -103,7 +103,7 @@ class TestLeadConvert(crm_common.TestCrmCommon):
                           'Feedback should be included directly within tracking message')
 
     @users('user_sales_salesman')
-    @mute_logger('odoo.addons.base.models')
+    @mute_logger('koda.addons.base.models')
     def test_lead_lost_crm_rights(self):
         """ Test ACLs of lost reasons management and usage """
         lead = self.lead_1.with_user(self.env.user)

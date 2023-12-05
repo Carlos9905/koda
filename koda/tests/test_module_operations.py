@@ -13,7 +13,7 @@ from koda.netsvc import init_logger
 from koda.tests import standalone_tests
 import koda.tests.loader
 
-_logger = logging.getLogger('odoo.tests.test_module_operations')
+_logger = logging.getLogger('koda.tests.test_module_operations')
 
 BLACKLIST = {
     'auth_ldap', 'document_ftp', 'website_instantclick', 'pad',
@@ -218,10 +218,10 @@ if __name__ == '__main__':
         'incremental': True,
         'disable_existing_loggers': False,
         'loggers': {
-            'odoo.modules.loading': {'level': 'CRITICAL'},
-            'odoo.sql_db': {'level': 'CRITICAL'},
-            'odoo.models.unlink': {'level': 'WARNING'},
-            'odoo.addons.base.models.ir_model': {'level': "WARNING"},
+            'koda.modules.loading': {'level': 'CRITICAL'},
+            'koda.sql_db': {'level': 'CRITICAL'},
+            'koda.models.unlink': {'level': 'WARNING'},
+            'koda.addons.base.models.ir_model': {'level': "WARNING"},
         }
     })
 

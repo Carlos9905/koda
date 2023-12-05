@@ -14,7 +14,7 @@ from koda import SUPERUSER_ID, _
 from koda.exceptions import ValidationError, UserError
 from koda.tools import mute_logger
 
-_logger = logging.getLogger('odoo.addons.base.partner.merge')
+_logger = logging.getLogger('koda.addons.base.partner.merge')
 
 class MergePartnerLine(models.TransientModel):
 
@@ -151,7 +151,7 @@ class MergePartnerAutomatic(models.TransientModel):
                     self._cr.execute(query, (dst_partner.id, partner.id, dst_partner.id))
             else:
                 try:
-                    with mute_logger('odoo.sql_db'), self._cr.savepoint():
+                    with mute_logger('koda.sql_db'), self._cr.savepoint():
                         query = 'UPDATE "%(table)s" SET "%(column)s" = %%s WHERE "%(column)s" IN %%s' % query_dic
                         self._cr.execute(query, (dst_partner.id, tuple(src_partners.ids),))
                 except psycopg2.Error:
@@ -174,7 +174,7 @@ class MergePartnerAutomatic(models.TransientModel):
                 return
             records = Model.sudo().search([(field_model, '=', 'res.partner'), (field_id, '=', src.id)])
             try:
-                with mute_logger('odoo.sql_db'), self._cr.savepoint():
+                with mute_logger('koda.sql_db'), self._cr.savepoint():
                     records.sudo().write({field_id: dst_partner.id})
                     records.env.flush_all()
             except psycopg2.Error:

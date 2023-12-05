@@ -67,7 +67,7 @@ class Populate(Command):
                 if commit:
                     commit_context = nullcontext()
                 else:
-                    commit_context = patch('odoo.sql_db.Cursor.commit')
+                    commit_context = patch('koda.sql_db.Cursor.commit')
 
                 _logger.info('Populating database for model %s', model._name)
                 t0 = time.time()

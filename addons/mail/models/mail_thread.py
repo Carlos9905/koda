@@ -4434,7 +4434,7 @@ class MailThread(models.AbstractModel):
             res_id = message.res_id
             body = message.body
 
-        icon = '/web/static/img/odoo-icon-192x192.png'
+        icon = '/web/static/img/koda-icon-192x192.png'
 
         if author_name:
             title = "%s: %s" % (author_name, title)

@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 from lxml import etree
 
-import odoo.tests
+import koda.tests
 from koda import Command
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestUi(odoo.tests.HttpCase):
+@koda.tests.tagged('post_install', '-at_install')
+class TestUi(koda.tests.HttpCase):
 
     def create_empty_app(self):
 

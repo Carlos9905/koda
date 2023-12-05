@@ -10,7 +10,7 @@ Manage status of products, rentals, delays
 Manage user and manager notifications
     """,
 
-    'website': "https://www.odoo.com/app/rental",
+    'website': "https://www.koda.com/app/rental",
 
     'category': 'Sales/Sales',
     'sequence': 160,

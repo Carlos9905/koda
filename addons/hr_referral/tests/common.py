@@ -65,5 +65,5 @@ class TestHrReferralBase(TransactionCase):
         def _get_title_from_url(u):
             return "Hello"
 
-        patcher = patch('odoo.addons.link_tracker.models.link_tracker.LinkTracker._get_title_from_url', wraps=_get_title_from_url)
+        patcher = patch('koda.addons.link_tracker.models.link_tracker.LinkTracker._get_title_from_url', wraps=_get_title_from_url)
         self.startPatcher(patcher)

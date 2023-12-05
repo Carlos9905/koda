@@ -29,8 +29,8 @@ class TestSaleCouponTaxCloudFlow(common.TestSaleCouponTaxCloudCommon):
 
         patchers = [
             patch.object(type(order), '_get_TaxCloudRequest', _get_TaxCloudRequest),
-            patch('odoo.addons.account_taxcloud.models.taxcloud_request.TaxCloudRequest.verify_address', self._verify_address),
-            patch('odoo.addons.account_taxcloud.models.taxcloud_request.TaxCloudRequest.get_all_taxes_values', self._get_all_taxes_values),
+            patch('koda.addons.account_taxcloud.models.taxcloud_request.TaxCloudRequest.verify_address', self._verify_address),
+            patch('koda.addons.account_taxcloud.models.taxcloud_request.TaxCloudRequest.get_all_taxes_values', self._get_all_taxes_values),
         ]
         for patcher in patchers:
             self.startPatcher(patcher)

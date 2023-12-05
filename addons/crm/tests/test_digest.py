@@ -9,7 +9,7 @@ from koda.tools import mute_logger
 
 class TestCrmDigest(TestDigestCommon):
     @classmethod
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('koda.models.unlink')
     def setUpClass(cls):
         super().setUpClass()
 

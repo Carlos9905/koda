@@ -15,7 +15,7 @@ Allows to send the tax report via the
 MTD-VAT API to HMRC.
     """,
     'author': 'SmartMode LTD',
-    'website': 'https://www.odoo.com/app/accounting',
+    'website': 'https://www.koda.com/app/accounting',
     'depends': [
         'l10n_uk', 'account_reports'
     ],

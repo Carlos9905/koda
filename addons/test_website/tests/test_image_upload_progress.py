@@ -4,13 +4,13 @@
 from koda.addons.web_editor.controllers.main import Web_Editor
 from koda.addons.web_unsplash.controllers.main import Web_Unsplash
 
-import odoo.tests
+import koda.tests
 
 from koda import http
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestImageUploadProgress(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestImageUploadProgress(koda.tests.HttpCase):
 
     def test_01_image_upload_progress(self):
         self.start_tour(self.env['website'].get_client_action_url('/test_image_progress'), 'test_image_upload_progress', login="admin")

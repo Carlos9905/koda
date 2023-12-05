@@ -1,6 +1,6 @@
 import json
 
-import odoo
+import koda
 from koda import api
 from koda.tools import DotDict
 from koda.http import _request_stack
@@ -13,7 +13,7 @@ class TestStudioController(TransactionCase):
 
     def setUp(self):
         super().setUp()
-        self.env = api.Environment(self.cr, odoo.SUPERUSER_ID, {'load_all_views': True})
+        self.env = api.Environment(self.cr, koda.SUPERUSER_ID, {'load_all_views': True})
         _request_stack.push(self)
         self.session = DotDict({'debug': ''})
         self.studio_controller = WebStudioController()

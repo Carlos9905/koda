@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-import odoo.addons.auth_totp.controllers.home
+import koda.addons.auth_totp.controllers.home
 
 from koda import http
 from koda.exceptions import AccessDenied, UserError
 from koda.http import request
 
 
-class Home(odoo.addons.auth_totp.controllers.home.Home):
+class Home(koda.addons.auth_totp.controllers.home.Home):
     @http.route()
     def web_totp(self, redirect=None, **kwargs):
         response = super().web_totp(redirect=redirect, **kwargs)

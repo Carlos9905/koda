@@ -3,10 +3,10 @@
 from koda.tests import TransactionCase
 from koda.exceptions import UserError
 
-import odoo.tests
+import koda.tests
 
 
-@odoo.tests.tagged('external', '-standard')
+@koda.tests.tagged('external', '-standard')
 class TestGeoLocalize(TransactionCase):
 
     def test_default_openstreetmap(self):

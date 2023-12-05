@@ -1,11 +1,11 @@
 # Koda
 from urllib.parse import urlparse
-import odoo.tests
+import koda.tests
 import lxml
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestIsMultiLang(odoo.tests.HttpCase):
+@koda.tests.common.tagged('post_install', '-at_install')
+class TestIsMultiLang(koda.tests.HttpCase):
 
     def test_01_is_multilang_url(self):
         website = self.env['website'].search([], limit=1)
