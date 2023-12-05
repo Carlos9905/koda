@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { usePopover } from "@web/core/popover/popover_hook";
 import { onEmployeeSubRedirect } from './hooks';
-import { Component, onWillStart, onWillRender, useState } from "@odoo/owl";
+import { Component, onWillStart, onWillRender, useState } from "@koda/owl";
 
 class HrOrgChartPopover extends Component {
     async setup() {

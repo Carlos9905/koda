@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { TaskGanttController } from '@project_enterprise/task_gantt_controller';
 import { patch } from "@web/core/utils/patch";

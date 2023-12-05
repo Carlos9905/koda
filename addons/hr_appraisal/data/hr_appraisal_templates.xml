@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="hr_appraisal_employee_feedback">
         <h2>
             <span style="font-weight: bolder;">
@@ -247,4 +247,4 @@
             <br/>
         </p>
     </template>
-</odoo>
+</koda>

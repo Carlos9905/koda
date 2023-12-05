@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { TimeOffToDeferWarning, useTimeOffToDefer } from "@hr_payroll_holidays/views/hooks";

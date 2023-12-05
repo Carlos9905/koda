@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { partnerCompareRegistry } from "@mail/core/common/partner_compare";
 

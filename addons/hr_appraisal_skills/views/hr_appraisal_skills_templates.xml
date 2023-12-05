@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="appraisal_skills_update_template">
         <ul>
             <t t-foreach="updated_skills" t-as="skill">
@@ -26,4 +26,4 @@
             </t>
         </ul>
     </template>
-</odoo>
+</koda>

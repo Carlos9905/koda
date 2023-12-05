@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { browser } from "@web/core/browser/browser"
@@ -24,7 +24,7 @@ async function iotReportActionHandler(action, options, env) {
         action.data["device_ids"] = action.device_ids;
         const args = [action.id, action.context.active_ids, action.data, uuid()];
         const report_id = action.id;
-        const local_lists = JSON.parse(browser.localStorage.getItem("odoo-iot-linked_reports"));
+        const local_lists = JSON.parse(browser.localStorage.getItem("koda-iot-linked_reports"));
         const list = local_lists ? local_lists[report_id] : undefined;
         if (!list) {
             const action_wizard = await orm.call("ir.actions.report", "get_action_wizard", args);

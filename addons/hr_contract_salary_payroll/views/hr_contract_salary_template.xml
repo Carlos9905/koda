@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="salary_package_sidebar_payroll" inherit_id="hr_contract_salary.salary_package_sidebar">
         <div name="salary_package_resume" position="before">
             <label t-if="part_time" class="col-form-label" for="simulation_working_schedule">Working Schedule</label>
@@ -18,4 +18,4 @@
             </select>
         </div>
     </template>
-</odoo>
+</koda>

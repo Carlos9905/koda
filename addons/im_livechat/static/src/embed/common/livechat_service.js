@@ -1,7 +1,7 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Record } from "@mail/core/common/record";
-import { reactive } from "@odoo/owl";
+import { reactive } from "@koda/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { cookie } from "@web/core/browser/cookie";

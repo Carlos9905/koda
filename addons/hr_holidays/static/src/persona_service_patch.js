@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { personaService, PersonaService } from "@mail/core/common/persona_service";
 import { deserializeDateTime } from "@web/core/l10n/dates";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { browser } from "@web/core/browser/browser"
@@ -36,11 +36,11 @@ export class IotWebsocket {
     }
         
         setJobInLocalStorage(value, args) {
-            let links = JSON.parse(browser.localStorage.getItem("odoo-iot-linked_reports"))
+            let links = JSON.parse(browser.localStorage.getItem("koda-iot-linked_reports"))
             if (links === null || typeof links !== 'object')
                 links = {}
             links[args[0]] = value
-            browser.localStorage.setItem("odoo-iot-linked_reports", JSON.stringify(links))
+            browser.localStorage.setItem("koda-iot-linked_reports", JSON.stringify(links))
             this.addJob(value, args);
         }
     }

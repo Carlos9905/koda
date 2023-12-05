@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo><data>
+<koda><data>
 
     <record id="mail_template_send_offer" model="mail.template">
         <field name="name">Employee: Contract And Salary Package</field>
@@ -45,4 +45,4 @@
         <field name="lang">{{ object.applicant_id.partner_id.lang }}</field>
         <field name="auto_delete" eval="True"/>
     </record>
-</data></odoo>
+</data></koda>

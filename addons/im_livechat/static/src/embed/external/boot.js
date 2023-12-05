@@ -1,10 +1,10 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { LivechatButton } from "@im_livechat/embed/common/livechat_button";
 import { makeShadow, makeRoot } from "@im_livechat/embed/common/boot_helpers";
 import { serverUrl } from "@im_livechat/embed/common/livechat_data";
 
-import { mount, whenReady } from "@odoo/owl";
+import { mount, whenReady } from "@koda/owl";
 
 import { templates } from "@web/core/assets";
 import { MainComponentsContainer } from "@web/core/main_components_container";
@@ -19,7 +19,7 @@ import { session } from "@web/session";
     mainComponentsRegistry.add("LivechatRoot", { Component: LivechatButton });
     const env = makeEnv();
     await startServices(env);
-    odoo.isReady = true;
+    koda.isReady = true;
     const target = await makeShadow(makeRoot(document.body));
     await mount(MainComponentsContainer, target, {
         env,

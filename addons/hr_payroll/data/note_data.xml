@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="hr_payroll_note_demo_content">
         <p>Board meeting summary:</p>
         <p>We have to improve our Payroll flow with the new Odoo process</p>
@@ -14,9 +14,9 @@
         </ul>
         <p>Links:</p>
         <p>
-            Payroll tips &amp; tricks:  <a href="https://www.odoo.com/fr_FR/slides/slide/manage-payroll-1002" target="_blank">
-                https://www.odoo.com/fr_FR/slides/slide/manage-payroll-1002
+            Payroll tips &amp; tricks:  <a href="https://www.koda.com/fr_FR/slides/slide/manage-payroll-1002" target="_blank">
+                https://www.koda.com/fr_FR/slides/slide/manage-payroll-1002
             </a>
         </p>
     </template>
-</odoo>
+</koda>

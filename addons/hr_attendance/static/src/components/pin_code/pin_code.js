@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, onWillStart, useState, onWillDestroy } from "@odoo/owl";
+import { Component, onWillStart, useState, onWillDestroy } from "@koda/owl";
 import { browser } from "@web/core/browser/browser";
 
 export class KioskPinCode extends Component {

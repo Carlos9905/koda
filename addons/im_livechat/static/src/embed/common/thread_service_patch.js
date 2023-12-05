@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { ThreadService, threadService } from "@mail/core/common/thread_service";
 

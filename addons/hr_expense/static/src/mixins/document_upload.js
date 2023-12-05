@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useBus, useService } from '@web/core/utils/hooks';
-import { useRef, useEffect, useState } from "@odoo/owl";
+import { useRef, useEffect, useState } from "@koda/owl";
 
 export const ExpenseDocumentDropZone = (T) => class ExpenseDocumentDropZone extends T {
     setup() {
@@ -75,7 +75,7 @@ export const ExpenseDocumentUpload = (T) => class ExpenseDocumentUpload extends 
 
     async onChangeFileInput() {
         const params = {
-            csrf_token: odoo.csrf_token,
+            csrf_token: koda.csrf_token,
             ufile: [...this.fileInput.el.files],
             model: 'hr.expense',
             id: 0,

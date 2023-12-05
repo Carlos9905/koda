@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { ganttView } from "@web_gantt/gantt_view";
 import { registry } from "@web/core/registry";

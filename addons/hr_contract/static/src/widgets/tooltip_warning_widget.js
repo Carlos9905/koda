@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { _t } from "@web/core/l10n/translation";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class ContractWarningTooltip extends Component {
     get tooltipInfo() {

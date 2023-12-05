@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { loader } from "@web/core/emoji_picker/emoji_picker";
 

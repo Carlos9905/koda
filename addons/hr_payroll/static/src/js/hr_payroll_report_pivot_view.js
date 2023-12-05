@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { HrPayrollReportPivotModel } from "./hr_payroll_report_pivot_model";
 import { pivotView } from "@web/views/pivot/pivot_view";

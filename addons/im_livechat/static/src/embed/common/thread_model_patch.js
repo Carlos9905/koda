@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { SESSION_STATE } from "@im_livechat/embed/common/livechat_service";
 

@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { AttachmentList } from "@mail/core/common/attachment_list";
 import { patch } from "@web/core/utils/patch";

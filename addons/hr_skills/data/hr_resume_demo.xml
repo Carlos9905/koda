@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data noupdate="1">
 
     <!--Skill Types-->
@@ -595,4 +595,4 @@
         <field name="study_field">Civil Engineering: Applied Mathematics</field>
         <field name="study_school">Université Catholique de Louvain (UCL)</field>
     </record>
-</odoo>
+</koda>

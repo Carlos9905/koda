@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_appraisal_skill_report_view_tree" model="ir.ui.view">
         <field name="model">hr.appraisal.skill.report</field>
         <field name="arch" type="xml">
@@ -56,4 +56,4 @@
         action="hr_appraisal_skill_report_action"
         parent="hr_appraisal.menu_hr_appraisal_report"
         sequence="3"/>
-</odoo>
+</koda>

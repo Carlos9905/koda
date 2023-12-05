@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="0">
 
         <record id="resource.resource_calendar_std" model="resource.calendar">
@@ -292,4 +292,4 @@ env['hr.contract'].write({
             </field>
         </record>
     </data>
-</odoo>
+</koda>

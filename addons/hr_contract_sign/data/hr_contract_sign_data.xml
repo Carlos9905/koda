@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record model="sign.item.role" id="sign_item_role_job_responsible">
             <field name="name">HR Responsible</field>
@@ -7,4 +7,4 @@
             <field name="color" eval="11"/>
         </record>
     </data>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="hr_work_entry_action_view_gantt" model="ir.actions.act_window.view">
         <field name="sequence" eval="2"/>
@@ -44,4 +44,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

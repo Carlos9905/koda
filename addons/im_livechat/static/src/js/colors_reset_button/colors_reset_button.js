@@ -1,8 +1,8 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { registry } from "@web/core/registry";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class ColorsResetButton extends Component {
     onColorsResetButtonClick() {

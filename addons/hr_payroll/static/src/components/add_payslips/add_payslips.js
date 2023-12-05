@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 
-import { Component, } from "@odoo/owl";
+import { Component, } from "@koda/owl";
 
 import { useAddPayslips } from '../../views/add_payslips_hook';
 

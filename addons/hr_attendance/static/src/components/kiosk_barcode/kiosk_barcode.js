@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { BarcodeScanner } from "@barcodes/components/barcode_scanner";
 

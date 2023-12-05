@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { options } from "@im_livechat/embed/common/livechat_data";
 

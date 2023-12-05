@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { ProductCatalogSaleOrderLine } from "@sale_stock/product_catalog/sale_order_line/sale_order_line";
 import { patch } from "@web/core/utils/patch";
 

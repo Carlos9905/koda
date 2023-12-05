@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Project gantt view -->
     <record id="project_task_view_gantt_fsm_worksheet" model="ir.ui.view">
         <field name="name">project.task.view.gantt.fsm.worksheet</field>
@@ -462,4 +462,4 @@
         parent="industry_fsm.fsm_menu_settings"
         groups="industry_fsm.group_fsm_manager"/>
 
-</odoo>
+</koda>

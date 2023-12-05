@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <template id="worksheet_custom_page" inherit_id="industry_fsm_report.worksheet_custom_page">
         <div name="worksheet_task_timesheet" position="before">
             <span><t t-if="doc.name"><h2><strong>Field Service Report: <t t-out="doc.name"/></strong></h2></t></span>
@@ -8,4 +8,4 @@
             <br/>
         </div>
     </template>
-</odoo>
+</koda>

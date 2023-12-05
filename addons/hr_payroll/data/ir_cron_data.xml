@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="ir_cron_update_payroll_data" model="ir.cron">
             <field name="name">Payroll: Update data</field>
@@ -25,4 +25,4 @@
             <field name="nextcall" eval="(DateTime.now() + timedelta(hours=1))"/>
         </record>
     </data>
-</odoo>
+</koda>

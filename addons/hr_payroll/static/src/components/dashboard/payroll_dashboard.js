@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { useService } from "@web/core/utils/hooks";
@@ -7,7 +7,7 @@ import { PayrollDashboardActionBox } from '@hr_payroll/components/dashboard/acti
 import { PayrollDashboardPayslipBatch } from '@hr_payroll/components/dashboard/payslip_batch/payslip_batch';
 import { PayrollDashboardTodo } from '@hr_payroll/components/dashboard/todo_list/todo_list';
 import { PayrollDashboardStats } from '@hr_payroll/components/dashboard/payroll_stats/payroll_stats';
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, onWillStart } from "@koda/owl";
 
 class PayrollDashboardComponent extends Component {
     setup() {

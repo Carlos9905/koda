@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="frontend_layout_salary" name="Frontend Layout" inherit_id="web.frontend_layout" primary="True">
     </template>
 
@@ -61,7 +61,7 @@
                     <div t-att-class="'py-4 mb-0 border-top' if benefit.show_name else ''">
                         <div class="row">
                             <label class="col-md-3 pt-0 ps-4 col-form-label" t-att-for="benefit.field">
-                                <i t-att-class="(benefit.icon or '') + ' fa-1x fa-fw bg-odoo'"/> <t t-if="benefit.show_name"><t t-esc="benefit.name"/></t>
+                                <i t-att-class="(benefit.icon or '') + ' fa-1x fa-fw bg-koda'"/> <t t-if="benefit.show_name"><t t-esc="benefit.name"/></t>
                             </label>
                             <div class="col-md-6">
                                 <t t-if="benefit.folded">
@@ -217,7 +217,7 @@
     <template id="salary_package_sidebar">
         <div id="hr_cs_sidebar" class="col-lg-3 offset-xl-1">
             <t t-if="redirect_to_job">
-                <a t-att-href="'https://www.odoo.com/jobs/' + redirect_to_job" target="_new">
+                <a t-att-href="'https://www.koda.com/jobs/' + redirect_to_job" target="_new">
                     <button type="button" id="apply_now" class="hr_cs_btn_submit btn btn-primary">Apply Now</button>
                 </a>
             </t>
@@ -418,7 +418,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 mb8">
-                        <a t-att-href="'https://www.odoo.com/jobs/' + redirect_to_job" target="_new"><button type="button" id="apply_now" class="hr_cs_btn_submit btn btn-primary">Apply Now</button></a>
+                        <a t-att-href="'https://www.koda.com/jobs/' + redirect_to_job" target="_new"><button type="button" id="apply_now" class="hr_cs_btn_submit btn btn-primary">Apply Now</button></a>
                     </div>
                 </div>
             </div>
@@ -458,4 +458,4 @@
         </t>
     </template>
 
-</odoo>
+</koda>

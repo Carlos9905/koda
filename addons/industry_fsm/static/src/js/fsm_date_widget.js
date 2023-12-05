@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { DateTimeField, dateTimeField } from '@web/views/fields/datetime/datetime_field';
 import { formatDateTime } from '@web/core/l10n/dates';

@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { ChannelMemberService } from "@mail/core/common/channel_member_service";
 import { patch } from "@web/core/utils/patch";

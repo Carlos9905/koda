@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Page 2 -->
     <record model="survey.question" id="appraisal_2">
         <field name="title">Work Plan</field>
@@ -263,4 +263,4 @@
         <field name="users_can_go_back" eval="True"/>
         <field name="description" type="html"><p> </p></field>
     </record>
-</odoo>
+</koda>

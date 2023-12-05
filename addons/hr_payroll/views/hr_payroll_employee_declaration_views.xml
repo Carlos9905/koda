@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_payroll_employee_declaration_view_tree" model="ir.ui.view">
         <field name="name">hr.payroll.employee.declaration.view.tree</field>
         <field name="model">hr.payroll.employee.declaration</field>
@@ -31,4 +31,4 @@
             </search>
         </field>
     </record>
-</odoo>
+</koda>

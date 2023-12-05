@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 registry.category("web_tour.tours").add('hr_recruitment_tour',{
     url: "/web",

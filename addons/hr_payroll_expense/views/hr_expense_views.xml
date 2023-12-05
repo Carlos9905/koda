@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_expense_sheet_view_form_inherit_payroll" model="ir.ui.view">
         <field name="name">hr.expense.sheet.view.form.payroll</field>
         <field name="model">hr.expense.sheet</field>
@@ -17,4 +17,4 @@
             </button>
         </field>
     </record>
-</odoo>
+</koda>

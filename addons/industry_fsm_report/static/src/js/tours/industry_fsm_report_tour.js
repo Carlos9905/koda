@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /**
  * Adapt the step that is specific to the work details when the `worksheet` module is not installed.
  */
 
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 import { registry } from "@web/core/registry";
 import { _t } from "@web/core/l10n/translation";
@@ -28,7 +28,7 @@ patch(registry.category("web_tour.tours").get("industry_fsm_tour"), {
             run: function (actions) {
                 //Manage the text on both htmlElement and others fields as this step is dependent on
                 // the worksheet template that is set.
-                const htmlFieldSelector = '.note-editable.odoo-editor-editable p';
+                const htmlFieldSelector = '.note-editable.koda-editor-editable p';
                 const inputFieldSelector = 'input';
                 const textTriggerElement = this.$anchor.find(htmlFieldSelector).get(0)
                                             || this.$anchor.find(inputFieldSelector).get(0)

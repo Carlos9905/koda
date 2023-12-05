@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="benefit_extra_time_off" model="hr.contract.salary.benefit">
         <field name="name">Extra Time Off</field>
         <field name="res_field_id" model="ir.model.fields" eval="obj().search([('model', '=', 'hr.contract'), ('name', '=', 'holidays')])"/>
@@ -163,4 +163,4 @@
     <record id="hr.job_developer" model="hr.job">
         <field name="default_contract_id" ref="hr_contract_cdi_experienced_developer"/>
     </record>
-</odoo>
+</koda>

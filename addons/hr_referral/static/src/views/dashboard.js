@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from '@web/core/registry';
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart, useEffect, useState, useRef } from "@odoo/owl";
+import { Component, onWillStart, useEffect, useState, useRef } from "@koda/owl";
 
 export class HrReferralWelcome extends Component {
     setup() {
@@ -15,7 +15,7 @@ export class HrReferralWelcome extends Component {
 
         this.dashboardData = useState({});
 
-        this.isDebug = odoo.debug;
+        this.isDebug = koda.debug;
 
         this.state = useState({ reachedEnd: false });
         this.carouselRef = useRef("carousel");

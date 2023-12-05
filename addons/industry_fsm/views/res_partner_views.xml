@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="view_partner_address_form_industry_fsm" model="ir.ui.view">
         <field name="name">res.partner.form.address.fsm</field>
@@ -25,4 +25,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

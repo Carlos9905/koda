@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Chatter } from "@mail/core/web/chatter";
 import { patch } from "@web/core/utils/patch";

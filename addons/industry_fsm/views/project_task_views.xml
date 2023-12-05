@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <!--
     	Task Views in Project and FSM app
@@ -180,4 +180,4 @@
     <record id="project.project_task_kanban_action_view" model="ir.actions.act_window.view">
         <field name="view_id" ref="industry_fsm.project_task_in_project_view_kanban"/>
     </record>
-</odoo>
+</koda>

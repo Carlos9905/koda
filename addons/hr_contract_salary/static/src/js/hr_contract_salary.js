@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { KeepLast } from "@web/core/utils/concurrency";
 import publicWidget from "@web/legacy/js/public/public_widget";
@@ -285,7 +285,7 @@ publicWidget.registry.SalaryPackageWidget = publicWidget.Widget.extend({
     },
 
     async onchangeBenefit(event) {
-        // Check that https://github.com/odoo/enterprise/commit/e4fdb4df1d0d6aa5e8880ce1b4cc289a075479fd#diff-aa5bcb2caed35c99a7bd3e018a104342 is still valid
+        // Check that https://github.com/koda/enterprise/commit/e4fdb4df1d0d6aa5e8880ce1b4cc289a075479fd#diff-aa5bcb2caed35c99a7bd3e018a104342 is still valid
         // Will check when the user has entered a floating value in the integer field
         if (this._isInvalidInput()) {
             return false;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
 
         <record id="industry_fsm.planning_project_stage_1" model="project.task.type">
@@ -21,4 +21,4 @@
         </function>
 
     </data>
-</odoo>
+</koda>

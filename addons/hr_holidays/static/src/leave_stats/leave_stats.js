@@ -1,11 +1,11 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { useRecordObserver } from "@web/model/relational_model/utils";
 
 import { formatDate } from "@web/core/l10n/dates";
-import { Component, useState, onWillStart } from "@odoo/owl";
+import { Component, useState, onWillStart } from "@koda/owl";
 
 const { DateTime } = luxon;
 

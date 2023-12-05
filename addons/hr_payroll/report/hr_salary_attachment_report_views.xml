@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_salary_attachment_report_action" model="ir.actions.act_window">
         <field name="name">Salary Attachment Report</field>
         <field name="res_model">hr.salary.attachment.report</field>
@@ -34,4 +34,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

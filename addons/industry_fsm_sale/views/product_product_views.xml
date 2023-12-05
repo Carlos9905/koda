@@ -1,4 +1,4 @@
-<odoo>
+<koda>
 
     <record id="industry_fsm_sale_product_catalog_kanban_view" model="ir.ui.view">
         <field name="name">industry_fsm.product.catalog.kanban.view.inherit</field>
@@ -38,4 +38,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

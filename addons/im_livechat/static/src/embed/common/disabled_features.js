@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { messageActionsRegistry } from "@mail/core/common/message_actions";
 import { threadActionsRegistry } from "@mail/core/common/thread_actions";

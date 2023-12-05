@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 /**
  * Add custom steps to take products and sales order into account
  */
@@ -7,7 +7,7 @@ import '@industry_fsm/js/tours/industry_fsm_tour';
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 patch(registry.category("web_tour.tours").get("industry_fsm_tour"), {
     steps() {

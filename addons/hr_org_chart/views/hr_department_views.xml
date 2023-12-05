@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="hr_department_hierarchy_view" model="ir.ui.view">
         <field name="name">hr.departmnent.view.hierarchy</field>
@@ -36,4 +36,4 @@
         <field name="view_mode">tree,kanban,hierarchy,form</field>
     </record>
 
-</odoo>
+</koda>

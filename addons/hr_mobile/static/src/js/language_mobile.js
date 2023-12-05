@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
 import { updateAccountOnMobileDevice } from "@web_mobile/js/core/mixins";

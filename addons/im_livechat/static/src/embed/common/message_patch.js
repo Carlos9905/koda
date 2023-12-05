@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Message } from "@mail/core/common/message";
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="view_add_iot_box" model="ir.ui.view">
         <field name="name">Add IoT box</field>
         <field name="model">add.iot.box</field>
@@ -43,4 +43,4 @@
         <field name="view_id" ref="view_add_iot_box"/>
         <field name="target">new</field>
     </record>
-</odoo>
+</koda>

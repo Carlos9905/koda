@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { CalendarYearRenderer } from "@web/views/calendar/calendar_year/calendar_year_renderer";
@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { useMandatoryDays } from "../../hooks";
 import { useCalendarPopover } from "@web/views/calendar/hooks";
 import { TimeOffCalendarYearPopover } from "./calendar_year_popover";
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 export class TimeOffCalendarYearRenderer extends CalendarYearRenderer {
     setup() {

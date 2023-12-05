@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from '@web/core/registry';
 import { useService } from "@web/core/utils/hooks";
 
 import { kanbanView } from '@web/views/kanban/kanban_view';
 import { KanbanRenderer } from '@web/views/kanban/kanban_renderer';
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 export class ReferralKanbanRenderer extends KanbanRenderer {
     setup() {

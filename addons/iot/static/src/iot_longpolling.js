@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { IoTConnectionErrorDialog } from './iot_connection_error_dialog';

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="attachment_sign_termination" model="ir.attachment">
         <field name="name">Employee Termination.pdf</field>
         <field name="datas" type="base64" file="hr_contract_sign/static/demo/employee_termination.pdf"/>
@@ -98,4 +98,4 @@
         <field name="responsible_type">other</field>
         <field name="responsible_id" ref="base.user_demo"/>
     </record>
-</odoo>
+</koda>

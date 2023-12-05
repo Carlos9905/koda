@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import {Component, useState} from "@odoo/owl";
+import {Component, useState} from "@koda/owl";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 

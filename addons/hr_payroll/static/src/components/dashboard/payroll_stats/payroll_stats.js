@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { loadJS } from "@web/core/assets";
 import { useService } from "@web/core/utils/hooks";
 import { getColor } from "@web/core/colors/colors";
 import { cookie } from "@web/core/browser/cookie";
-import { Component, onWillUnmount, useEffect, useRef, useState, onWillStart } from "@odoo/owl";
+import { Component, onWillUnmount, useEffect, useRef, useState, onWillStart } from "@koda/owl";
 
 export class PayrollDashboardStats extends Component {
     setup() {

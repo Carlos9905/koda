@@ -11,7 +11,7 @@
                             t-att-class="((isActiveNote) ? '' : ' border-bottom ')"
                             t-on-click="() => this.onClickNoteTab(rec)"
                             t-on-dblclick="() => this.startNameEdition(rec)">
-                            <a t-attf-class="mb-0 nav-link text-dark {{ (isActiveNote) ? 'd-flex align-items-center justify-content-between gap-2 active border-0 border-odoo border-top ' : '' }}">
+                            <a t-attf-class="mb-0 nav-link text-dark {{ (isActiveNote) ? 'd-flex align-items-center justify-content-between gap-2 active border-0 border-koda border-top ' : '' }}">
                                 <t t-if="state.isEditingNoteName &amp;&amp; isActiveNote">
                                     <input type="text" t-ref="autofocus" t-att-value="this.bufferedText" t-on-input="onInputNoteNameInput" t-on-keydown="onKeyDownNoteNameInput" t-on-blur="handleBlur" class="o_input"/>
                                 </t>

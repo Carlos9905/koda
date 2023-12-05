@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <record id="hr_appraisal_skill_rule_hr_user" model="ir.rule">
         <field name="name">Employee skill: HR appraisal user: read all</field>
         <field name="model_id" ref="model_hr_appraisal_skill"/>
@@ -14,4 +14,4 @@
         <field name="perm_read" eval="False"/>
         <field name="groups" eval="[(4,ref('base.group_user'))]"/>
     </record>
-</odoo>
+</koda>

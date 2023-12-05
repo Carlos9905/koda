@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { Component, useRef, useState } from "@odoo/owl";
+import { Component, useRef, useState } from "@koda/owl";
 import { makeDraggableHook } from "@web/core/utils/draggable_hook_builder_owl";
 
 import { useService } from "@web/core/utils/hooks";

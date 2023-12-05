@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { getPyEnv } from "@bus/../tests/helpers/mock_python_environment";
 
@@ -7,7 +7,7 @@ import { LivechatButton } from "@im_livechat/embed/common/livechat_button";
 import { ChatWindowContainer } from "@mail/core/common/chat_window_container";
 import { setupManager } from "@mail/../tests/helpers/webclient_setup";
 
-import { App, onMounted } from "@odoo/owl";
+import { App, onMounted } from "@koda/owl";
 
 import { registry } from "@web/core/registry";
 import { patch } from "@web/core/utils/patch";

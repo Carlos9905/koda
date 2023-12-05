@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Store } from "@mail/core/common/store_service";
 

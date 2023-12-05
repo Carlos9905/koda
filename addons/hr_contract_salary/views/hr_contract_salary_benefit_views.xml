@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_contract_benefit_action" model="ir.actions.act_window">
         <field name="name">Benefits</field>
         <field name="res_model">hr.contract.salary.benefit</field>
@@ -153,4 +153,4 @@
         parent="hr_contract_salary.salary_package_menu"
         sequence="1"/>
 
-</odoo>
+</koda>

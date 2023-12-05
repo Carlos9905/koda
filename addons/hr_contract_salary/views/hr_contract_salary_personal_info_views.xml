@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_contract_salary_personal_info_action" model="ir.actions.act_window">
         <field name="name">Personal Info</field>
         <field name="res_model">hr.contract.salary.personal.info</field>
@@ -67,4 +67,4 @@
         parent="hr_contract_salary.salary_package_menu"
         sequence="2"/>
 
-</odoo>
+</koda>

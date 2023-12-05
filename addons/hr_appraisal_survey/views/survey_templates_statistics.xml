@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <template id="hr_appraisal_survey_button_form_view" inherit_id="survey.survey_button_form_view">
         <xpath expr="//div[1]" position="replace">
@@ -46,4 +46,4 @@
         </xpath>
     </template>
 </data>
-</odoo>
+</koda>

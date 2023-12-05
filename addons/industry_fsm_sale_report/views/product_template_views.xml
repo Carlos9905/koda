@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="view_product_timesheet_form_inherit" model="ir.ui.view">
         <field name="name">product.template.timesheet.form</field>
         <field name="model">product.template</field>
@@ -15,4 +15,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

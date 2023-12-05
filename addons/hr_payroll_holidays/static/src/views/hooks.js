@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart, xml } from "@odoo/owl";
+import { Component, onWillStart, xml } from "@koda/owl";
 
 export class TimeOffToDeferWarning extends Component {
     setup() {

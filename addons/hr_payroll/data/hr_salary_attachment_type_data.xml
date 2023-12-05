@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_salary_attachment_type_attachment" model="hr.salary.attachment.type">
         <field name="name">Attachment of Salary</field>
         <field name="code">ATTACH_SALARY</field>
@@ -15,4 +15,4 @@
         <field name="code">CHILD_SUPPORT</field>
         <field name="no_end_date" eval="True"/>
     </record>
-</odoo>
+</koda>

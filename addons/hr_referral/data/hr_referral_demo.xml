@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="shop_mug" model="hr.referral.reward">
             <field name="name">Mug</field>
@@ -100,4 +100,4 @@
             <field name="points">20</field>
         </record>
     </data>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
- /** @odoo-module **/
+ /** @koda-module **/
 
 import { serializeDateTime } from "@web/core/l10n/dates";
 import { GanttModel, parseServerValues } from "@web_gantt/gantt_model";

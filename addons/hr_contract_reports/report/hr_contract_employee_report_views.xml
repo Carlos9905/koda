@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
 
         <record id="contract_employee_report_view_pivot" model="ir.ui.view">
@@ -86,4 +86,4 @@
             sequence="1"/>
 
     </data>
-</odoo>
+</koda>

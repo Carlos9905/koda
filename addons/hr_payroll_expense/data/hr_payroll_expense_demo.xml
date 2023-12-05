@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="hr_salary_rule_expense_refund" model="hr.salary.rule">
         <field name="condition_select">python</field>
@@ -17,4 +17,4 @@ result = inputs['EXPENSES'].amount if 'EXPENSES' in inputs else 0
         <field name="struct_id" ref="hr_payroll.structure_002"/>
     </record>
 
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
         <record id="view_hr_payslip_by_employees" model="ir.ui.view">
             <field name="name">hr_payroll_payslip_employees</field>
@@ -50,4 +50,4 @@
                 action = env['hr.payslip.employees'].create({}).compute_sheet()
             </field>
         </record>
-</odoo>
+</koda>

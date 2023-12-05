@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_contract_salary_resume_view_search" model="ir.ui.view">
         <field name="name">hr.contract.salary.resume.view.search</field>
         <field name="model">hr.contract.salary.resume</field>
@@ -69,4 +69,4 @@
         parent="hr_contract_salary.salary_package_menu"
         sequence="3"/>
 
-</odoo>
+</koda>

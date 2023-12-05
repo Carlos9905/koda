@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { formView } from "@web/views/form/form_view";
 import { registry } from "@web/core/registry";
 import { FormController } from "@web/views/form/form_controller";
-import { useSubEnv } from "@odoo/owl"
+import { useSubEnv } from "@koda/owl"
 
 export class selectPrinterFormController extends FormController {
     setup () {

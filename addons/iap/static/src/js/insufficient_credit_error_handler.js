@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 import { Dialog } from "@web/core/dialog/dialog";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, onWillStart } from "@koda/owl";
 
 class InsufficientCreditDialog extends Component {
     setup() {
@@ -20,7 +20,7 @@ class InsufficientCreditDialog extends Component {
             trial: errorData.trial,
         });
         this.style = errorData.body ? "padding:0;" : "";
-        const { isEnterprise } = odoo.info;
+        const { isEnterprise } = koda.info;
         if (errorData.trial && isEnterprise) {
             this.buttonMessage = _t("Start a Trial at Odoo");
         } else {
@@ -41,7 +41,7 @@ function insufficientCreditHandler(env, error, originalError) {
         return false;
     }
     const { data } = originalError;
-    if (data && data.name === "odoo.addons.iap.tools.iap_tools.InsufficientCreditError") {
+    if (data && data.name === "koda.addons.iap.tools.iap_tools.InsufficientCreditError") {
         env.services.dialog.add(InsufficientCreditDialog, {
             errorData: JSON.parse(data.message),
         });

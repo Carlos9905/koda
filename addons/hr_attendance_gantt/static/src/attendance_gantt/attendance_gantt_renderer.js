@@ -1,4 +1,4 @@
- /** @odoo-module **/
+ /** @koda-module **/
 
 import { HrGanttRenderer } from "@hr_gantt/hr_gantt_renderer";
  import {AttendanceGanttRowProgressBar} from "./attendance_row_progress_bar";

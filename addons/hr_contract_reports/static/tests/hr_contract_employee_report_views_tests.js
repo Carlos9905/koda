@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { click, getFixture, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { clickOnDataset } from "@web/../tests/views/graph_view_tests";

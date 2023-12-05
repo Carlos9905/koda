@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { hierarchyView } from "@web_hierarchy/hierarchy_view";

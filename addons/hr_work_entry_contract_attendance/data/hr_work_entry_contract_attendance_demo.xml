@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_contract_hne" model="hr.contract">
         <field name="name">Abigail Peterson Contract</field>
         <field name="date_start" eval="(DateTime.today() + relativedelta(months=-1, day=1))"/>
@@ -14,4 +14,4 @@
         <field name="work_entry_source">attendance</field>
         <field name="structure_type_id" ref="hr_contract.structure_type_worker"/>
     </record>
-</odoo>
+</koda>

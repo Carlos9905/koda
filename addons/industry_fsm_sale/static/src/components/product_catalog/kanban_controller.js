@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ProductCatalogKanbanController } from "@product/product_catalog/kanban_controller";
 

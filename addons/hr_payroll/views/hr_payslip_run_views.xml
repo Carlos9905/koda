@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="hr_payslip_run_filter" model="ir.ui.view">
         <field name="name">hr.payslip.run.search</field>
@@ -127,4 +127,4 @@
 action = records._generate_payslips()
         </field>
     </record>
-</odoo>
+</koda>

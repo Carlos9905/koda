@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { companyService } from "@web/webclient/company_service";
 import {

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { PivotModel } from "@web/views/pivot/pivot_model";
 

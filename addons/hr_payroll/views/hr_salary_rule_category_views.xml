@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Salary Category-->
     <record id="hr_salary_rule_category_form" model="ir.ui.view">
         <field name="name">hr.salary.rule.category.form</field>
@@ -48,4 +48,4 @@
         <field name="view_id" ref="hr_salary_rule_category_tree"/>
        <field name="search_view_id" ref="view_hr_salary_rule_category_filter"/>
     </record>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="mail_activity_data_hr_leave_to_defer" model="mail.activity.type">
             <field name="name">Leave to Defer</field>
@@ -8,4 +8,4 @@
             <field name="res_model">hr.leave</field>
         </record>
     </data>
-</odoo>
+</koda>

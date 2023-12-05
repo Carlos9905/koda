@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="hr_contract_salary_email_template">
         <div>
             <t t-foreach="mapped_data" t-as="section">
@@ -33,4 +33,4 @@
             </t>
         </div>
     </template>
-</odoo>
+</koda>

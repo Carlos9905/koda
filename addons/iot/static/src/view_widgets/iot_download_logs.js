@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { useService } from '@web/core/utils/hooks';
 import { IoTConnectionErrorDialog } from '../iot_connection_error_dialog';
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class IoTBoxDownloadLogs extends Component {
     setup() {

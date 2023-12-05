@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_contract_view_form" model="ir.ui.view">
         <field name="name">hr.contract.form</field>
         <field name="model">hr.contract</field>
@@ -36,4 +36,4 @@
             'search_default_groupby_structure_type_id': True,
         }</field>
     </record>
-</odoo>
+</koda>

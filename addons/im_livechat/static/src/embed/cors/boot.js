@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { livechatRoutingMap } from "@im_livechat/embed/cors/livechat_routing_map";
 

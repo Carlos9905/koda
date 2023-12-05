@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="sms_template_data_fsm_intervention" model="sms.template">
         <field name="name">Field Service: Intervention Planned</field>
@@ -14,4 +14,4 @@
         <field name="body">{{ object.company_id.name }}: We are on our way to your intervention.</field>
         <field name="lang">{{ object.partner_id.lang }}</field>
     </record>
-</odoo>
+</koda>

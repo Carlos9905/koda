@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { registry } from "@web/core/registry";
 import { useX2ManyCrud, useOpenX2ManyRecord } from "@web/views/fields/relational_utils";

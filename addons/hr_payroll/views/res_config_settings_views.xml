@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
         <record id="open_payroll_modules" model="ir.actions.act_window">
             <field name="name">Payroll</field>
             <field name="res_model">ir.module.module</field>
@@ -64,4 +64,4 @@
             <field name="context">{'module' : 'hr_payroll', 'bin_size': False}</field>
         </record>
 
-</odoo>
+</koda>

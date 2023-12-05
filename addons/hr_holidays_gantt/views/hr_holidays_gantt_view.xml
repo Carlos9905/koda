@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
 
         <!-- Gantt view -->
@@ -81,4 +81,4 @@
             <field name="view_mode">tree,kanban,gantt,form,calendar,activity</field>
         </record>
     </data>
-</odoo>
+</koda>

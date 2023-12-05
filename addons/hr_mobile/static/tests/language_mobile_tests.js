@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { session } from "@web/session";
 import { accountMethodsForMobile } from "@web_mobile/js/core/mixins";

@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { Field } from "@web/views/fields/field";
 import { X2ManyField, x2ManyField } from "@web/views/fields/x2many/x2many_field";
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { useEnv } from "@odoo/owl";
+import { useEnv } from "@koda/owl";
 
 export class WorkedDaysField extends Field {
     setup() {

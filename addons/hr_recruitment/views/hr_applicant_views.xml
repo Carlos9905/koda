@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <data>
     <record model="ir.ui.view" id="crm_case_tree_view_job">
         <field name="name">Applicants</field>
@@ -786,4 +786,4 @@ if records:
         sequence="15"/>
 
     </data>
-</odoo>
+</koda>
