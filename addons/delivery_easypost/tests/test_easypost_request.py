@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from koda.addons.delivery_easypost.models.easypost_request import EasypostRequest
 from koda.addons.delivery_easypost.tests.common import EasypostTestCommon
 from koda.tests import tagged

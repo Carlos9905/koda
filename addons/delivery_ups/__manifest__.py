@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': "UPS Shipping (Legacy)",
     'description': "This is the legacy integration with UPS that is no longer supported. \

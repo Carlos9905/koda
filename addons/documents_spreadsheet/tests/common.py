@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.tests.common import new_test_user
 from koda.addons.spreadsheet_edition.tests.spreadsheet_test_case import SpreadsheetTestCase

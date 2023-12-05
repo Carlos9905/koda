@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 from .common import SpreadsheetTestCommon, TEST_CONTENT
 from koda.exceptions import AccessError
 from koda.tests.common import new_test_user

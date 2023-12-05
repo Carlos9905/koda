@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.helpdesk.tests import common as helpdesk_common
 from koda.addons.mail.tests.common import mail_new_test_user

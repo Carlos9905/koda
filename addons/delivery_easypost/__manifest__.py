@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': "Easypost Shipping",
     'description': "Send your parcels through Easypost and track them online",
