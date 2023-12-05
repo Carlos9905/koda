@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_salary_rule_category_comp_part" model="hr.salary.rule.category">
         <field name="name">Company Part</field>
         <field name="code">COMPPART</field>
@@ -45,4 +45,4 @@
         <field name="name">IJM Salary</field>
         <field name="code">IJMSALARY</field>
     </record>
-</odoo>
+</koda>

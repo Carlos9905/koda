@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
+<koda>
     <template id="l10n_mx_edi_cartaporte_report_delivery_comex" inherit_id="l10n_mx_edi_stock.l10n_mx_edi_cartaporte_report_delivery_document">
         <xpath expr="//div[@id='mx_edi_row_2']" position="inside">
             <t t-if="o.l10n_mx_edi_cfdi_state == 'sent' and o.l10n_mx_edi_customs_no">
@@ -59,4 +59,4 @@
             </t>
         </xpath>
     </template>
-</odoo>
+</koda>

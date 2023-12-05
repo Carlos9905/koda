@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<odoo>
+<koda>
     <data>
 
         <record id="ir_cron_update_pac_status_invoice" model="ir.cron">
@@ -17,4 +17,4 @@
             <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 22:00:00')"/>
         </record>
      </data>
-</odoo>
+</koda>

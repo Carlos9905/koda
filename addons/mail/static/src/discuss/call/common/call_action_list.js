@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 import { isMobileOS } from "@web/core/browser/feature_detection";
 import { Dropdown } from "@web/core/dropdown/dropdown";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo><data noupdate="0">
+<koda><data noupdate="0">
 
     <record id="ir_actions_server_knowledge_home_page" model="ir.actions.server">
         <field name="name">Articles</field>
@@ -8,4 +8,4 @@
         <field name="code">action = model.action_home_page()</field>
     </record>
 
-</data></odoo>
+</data></koda>

@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 
 import { Domain } from '@web/core/domain';
 import { SearchModel } from '@web/search/search_model';
-import { useState, onWillStart } from "@odoo/owl";
+import { useState, onWillStart } from "@koda/owl";
 
 export class LunchSearchModel extends SearchModel {
     setup() {

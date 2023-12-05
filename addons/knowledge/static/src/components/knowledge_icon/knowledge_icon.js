@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { archParseBoolean } from "@web/views/utils";
 import { registry } from "@web/core/registry";
@@ -7,7 +7,7 @@ import { useEmojiPicker } from "@web/core/emoji_picker/emoji_picker";
 
 import { getRandomIcon } from "@knowledge/js/knowledge_utils";
 
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 export default class KnowledgeIcon extends Component {
     static template = "knowledge.KnowledgeIcon";

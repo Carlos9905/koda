@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractBehavior } from "@knowledge/components/behaviors/abstract_behavior/abstract_behavior";
 import { HEADINGS, fetchValidHeadings } from "@knowledge/js/tools/knowledge_tools";
 import {
     onWillStart,
     useEffect,
-    useState } from "@odoo/owl";
+    useState } from "@koda/owl";
 
 export class TableOfContentBehavior extends AbstractBehavior {
     static template = "knowledge.TableOfContentBehavior";

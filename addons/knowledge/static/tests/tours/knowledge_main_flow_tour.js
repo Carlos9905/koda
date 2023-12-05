@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /**
  * Global Knowledge flow tour.
@@ -29,10 +29,10 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour', {
     run: () => {},
 }, {
     // check the autofocus
-    trigger: '.note-editable.odoo-editor-editable:focus',
+    trigger: '.note-editable.koda-editor-editable:focus',
     run: () => {},
 }, {
-    trigger: '.note-editable.odoo-editor-editable h1',
+    trigger: '.note-editable.koda-editor-editable h1',
     run: 'text My Private Article',  // modify the article content
 }, {
     trigger: 'section[data-section="workspace"]',
@@ -51,13 +51,13 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour', {
     run: () => {},
 }, {
     // check the autofocus
-    trigger: '.note-editable.odoo-editor-editable:focus',
+    trigger: '.note-editable.koda-editor-editable:focus',
     run: () => {},
 }, {
     trigger: '.o_breadcrumb_article_name > input',
     run: 'text My Workspace Article',  // modify the article name
 }, {
-    trigger: '.note-editable.odoo-editor-editable',
+    trigger: '.note-editable.koda-editor-editable',
     run: 'text Content of My Workspace Article',  // modify the article content
 }, {
     trigger: '.o_article:contains("My Workspace Article")',
@@ -74,7 +74,7 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour', {
     run: () => {},
 }, {
     // check the autofocus
-    trigger: '.note-editable.odoo-editor-editable:focus',
+    trigger: '.note-editable.koda-editor-editable:focus',
     run: () => {},
 }, {
     trigger: '.o_breadcrumb_article_name > input',
@@ -89,7 +89,7 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour', {
     run: () => {},
 }, {
     // check the autofocus
-    trigger: '.note-editable.odoo-editor-editable:focus',
+    trigger: '.note-editable.koda-editor-editable:focus',
     run: () => {},
 }, {
     trigger: '.o_breadcrumb_article_name > input',
@@ -115,7 +115,7 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour', {
     run: () => {},  // wait for article to be correctly loaded
 }, {
     // check the autofocus
-    trigger: '.note-editable.odoo-editor-editable:focus',
+    trigger: '.note-editable.koda-editor-editable:focus',
     run: () => {},
 }, {
     // open the share dropdown
@@ -158,7 +158,7 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour', {
     run: () => {},  // wait for article to be correctly loaded
 }, {
     // check the autofocus
-    trigger: '.note-editable.odoo-editor-editable:focus',
+    trigger: '.note-editable.koda-editor-editable:focus',
     run: () => {},
 }, {
     // add to favorite
@@ -188,7 +188,7 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour', {
     run() {},
 }, {
     // check the autofocus
-    trigger: '.note-editable.odoo-editor-editable:focus',
+    trigger: '.note-editable.koda-editor-editable:focus',
     run: () => {},
 }, {
     // click on the main "New" action
@@ -198,7 +198,7 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour', {
     run: () => {}, // check that the article is correctly created (private section)
 }, {
     // check the autofocus
-    trigger: '.note-editable.odoo-editor-editable:focus',
+    trigger: '.note-editable.koda-editor-editable:focus',
     run: () => {},
 }, {
     trigger: '.o_breadcrumb_article_name > input',

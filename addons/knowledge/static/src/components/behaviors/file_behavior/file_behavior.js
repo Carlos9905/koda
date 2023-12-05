@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { downloadFile } from "@web/core/network/download";
@@ -14,9 +14,9 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 
-import { setSelection, rightPos } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
+import { setSelection, rightPos } from "@web_editor/js/editor/koda-editor/src/utils/utils";
 
 import { AttachToMessageMacro, UseAsAttachmentMacro } from "@knowledge/macros/file_macros";
 import { AbstractBehavior } from "@knowledge/components/behaviors/abstract_behavior/abstract_behavior";

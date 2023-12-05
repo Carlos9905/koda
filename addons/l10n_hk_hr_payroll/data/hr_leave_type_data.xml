@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="holiday_type_hk_annual_leave" model="hr.leave.type">
         <field name="name" eval="'HK Annual Leaves ' + time.strftime('%Y')" />
         <field name="requires_allocation">yes</field>
@@ -87,4 +87,4 @@
         <field name="work_entry_type_id" ref="work_entry_type_examination_leave"></field>
         <field name="company_id" eval="False" />
     </record>
-</odoo>
+</koda>

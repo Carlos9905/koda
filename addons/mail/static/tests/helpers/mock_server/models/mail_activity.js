@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Domain } from "@web/core/domain";
 import { groupBy, sortBy, unique } from "@web/core/utils/arrays";

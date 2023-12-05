@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="l10n_ch_contract_type_indefiniteSalaryMth" model="hr.contract.type">
             <field name="name">Permanent contract with monthly salary</field>
@@ -31,4 +31,4 @@
             <field name="code">internshipContract</field>
         </record>
     </data>
-</odoo>
+</koda>

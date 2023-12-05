@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <function model="hr.salary.rule" name="unlink">
         <value model="hr.salary.rule" search="[('struct_id', '=', ref('l10n_in_hr_payroll.hr_payroll_structure_in_stipend')),
@@ -18,4 +18,4 @@
         <value eval="{ 'name': 'Net', 'amount_python_compute':&quot;result=(categories['GROSS'] + categories['ALW'] + categories['DED'])\nresult_name = _('NET')&quot;}"/>
     </function>
 
-</odoo>
+</koda>

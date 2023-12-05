@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mod_347_statistics_real_estates_count" model="account.report.line">
         <field name="name">Número total de inmuebles</field>
         <field name="code">aeat_mod_347_statistics_real_estates_count</field>
@@ -93,4 +93,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

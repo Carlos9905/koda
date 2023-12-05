@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="view_account_payment_register_form" model="ir.ui.view">
         <field name="name">account.payment.register.form</field>
         <field name="model">account.payment.register</field>
@@ -35,4 +35,4 @@
             </group>
         </field>
     </record>
-</odoo>
+</koda>

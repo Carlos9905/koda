@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <data>
 
         <record id="view_account_tax_inh_l10n_mx" model="ir.ui.view">
@@ -16,4 +16,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

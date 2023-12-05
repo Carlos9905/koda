@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="account_sg_iras_action_view" model="ir.ui.view">
         <field name="name">l10n.sg.reports.iaf.wizard.form</field>
@@ -34,4 +34,4 @@
     <menuitem id="account_sg_iras" parent="l10n_sg.account_reports_sg_statements_menu"
             action="account_sg_iras_action" sequence="100" />
 
-</odoo>
+</koda>

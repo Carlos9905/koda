@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 import { makeFakePresenceService } from "@bus/../tests/helpers/mock_services";
@@ -137,9 +137,9 @@ QUnit.test("Posting message should transform links.", async () => {
     });
     const { openDiscuss } = await start();
     openDiscuss(channelId);
-    await insertText(".o-mail-Composer-input", "test https://www.odoo.com/");
+    await insertText(".o-mail-Composer-input", "test https://www.koda.com/");
     await click(".o-mail-Composer-send:enabled");
-    await contains("a[href='https://www.odoo.com/']");
+    await contains("a[href='https://www.koda.com/']");
 });
 
 QUnit.test("Posting message should transform relevant data to emoji.", async () => {
@@ -917,7 +917,7 @@ QUnit.test("auto-focus composer on opening thread [REQUIRE FOCUS]", async () => 
 });
 
 QUnit.test(
-    "receive new chat message: out of odoo focus (notification, channel)",
+    "receive new chat message: out of koda focus (notification, channel)",
     async (assert) => {
         const pyEnv = await startServer();
         const channelId = pyEnv["discuss.channel"].create({ channel_type: "chat" });
@@ -933,7 +933,7 @@ QUnit.test(
             assert.strictEqual(payload.title, "1 Message");
         });
         const channel = pyEnv["discuss.channel"].searchRead([["id", "=", channelId]])[0];
-        // simulate receiving a new message with odoo out-of-focused
+        // simulate receiving a new message with koda out-of-focused
         pyEnv["bus.bus"]._sendone(channel, "discuss.channel/new_message", {
             id: channelId,
             message: {
@@ -947,7 +947,7 @@ QUnit.test(
     }
 );
 
-QUnit.test("receive new chat message: out of odoo focus (notification, chat)", async (assert) => {
+QUnit.test("receive new chat message: out of koda focus (notification, chat)", async (assert) => {
     const pyEnv = await startServer();
     const channelId = pyEnv["discuss.channel"].create({ channel_type: "chat" });
     const { env, openDiscuss } = await start({
@@ -962,7 +962,7 @@ QUnit.test("receive new chat message: out of odoo focus (notification, chat)", a
         assert.strictEqual(payload.title, "1 Message");
     });
     const channel = pyEnv["discuss.channel"].searchRead([["id", "=", channelId]])[0];
-    // simulate receiving a new message with odoo out-of-focused
+    // simulate receiving a new message with koda out-of-focused
     pyEnv["bus.bus"]._sendone(channel, "discuss.channel/new_message", {
         id: channelId,
         message: {
@@ -988,7 +988,7 @@ QUnit.test("no out-of-focus notification on receiving self messages in chat", as
         assert.step("set_title_part");
     });
     const channel = pyEnv["discuss.channel"].searchRead([["id", "=", channelId]])[0];
-    // simulate receiving a new message of self with odoo out-of-focused
+    // simulate receiving a new message of self with koda out-of-focused
     pyEnv["bus.bus"]._sendone(channel, "discuss.channel/new_message", {
         id: channelId,
         message: {
@@ -1002,7 +1002,7 @@ QUnit.test("no out-of-focus notification on receiving self messages in chat", as
     assert.verifySteps([]);
 });
 
-QUnit.test("receive new chat messages: out of odoo focus (tab title)", async (assert) => {
+QUnit.test("receive new chat messages: out of koda focus (tab title)", async (assert) => {
     let step = 0;
     const pyEnv = await startServer();
     const [channelId_1, channelId_2] = pyEnv["discuss.channel"].create([
@@ -1030,7 +1030,7 @@ QUnit.test("receive new chat messages: out of odoo focus (tab title)", async (as
         }
     });
     const channel_1 = pyEnv["discuss.channel"].searchRead([["id", "=", channelId_1]])[0];
-    // simulate receiving a new message in chat 1 with odoo out-of-focused
+    // simulate receiving a new message in chat 1 with koda out-of-focused
     pyEnv["bus.bus"]._sendone(channel_1, "discuss.channel/new_message", {
         id: channelId_1,
         message: {
@@ -1043,7 +1043,7 @@ QUnit.test("receive new chat messages: out of odoo focus (tab title)", async (as
     assert.verifySteps(["set_title_part"]);
 
     const channel_2 = pyEnv["discuss.channel"].searchRead([["id", "=", channelId_2]])[0];
-    // simulate receiving a new message in chat 2 with odoo out-of-focused
+    // simulate receiving a new message in chat 2 with koda out-of-focused
     pyEnv["bus.bus"]._sendone(channel_2, "discuss.channel/new_message", {
         id: channelId_2,
         message: {
@@ -1055,7 +1055,7 @@ QUnit.test("receive new chat messages: out of odoo focus (tab title)", async (as
     await nextTick();
     assert.verifySteps(["set_title_part"]);
 
-    // simulate receiving another new message in chat 2 with odoo focused
+    // simulate receiving another new message in chat 2 with koda focused
     pyEnv["bus.bus"]._sendone(channel_2, "discuss.channel/new_message", {
         id: channelId_2,
         message: {

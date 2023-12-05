@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="account_report_cashflow" model="account.report">
         <field name="name">Statement of cash flows</field>
         <field name="root_report_id" ref="account_reports.cash_flow_report"/>
@@ -13,4 +13,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

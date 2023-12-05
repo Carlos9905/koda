@@ -1,10 +1,10 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { BlurManager } from "@mail/discuss/call/common/blur_manager";
 import { monitorAudio } from "@mail/discuss/call/common/media_monitoring";
 import { closeStream, onChange } from "@mail/utils/common/misc";
 
-import { reactive } from "@odoo/owl";
+import { reactive } from "@koda/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { _t } from "@web/core/l10n/translation";

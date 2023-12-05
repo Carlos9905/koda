@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<odoo>
+<koda>
     <data>
         <record id="form_325_view_tree" model="ir.ui.view">
             <field name="name">l10n_be.form.325.view.tree</field>
@@ -151,4 +151,4 @@
             groups="account.group_account_user"
             parent="l10n_be.account_reports_be_statements_menu"/>
     </data>
-</odoo>
+</koda>

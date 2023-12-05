@@ -1,10 +1,10 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Record } from "@mail/core/common/record";
 import { htmlToTextContentInline } from "@mail/utils/common/format";
 import { assignDefined, assignIn } from "@mail/utils/common/misc";
 
-import { toRaw } from "@odoo/owl";
+import { toRaw } from "@koda/owl";
 
 import { deserializeDateTime } from "@web/core/l10n/dates";
 import { _t } from "@web/core/l10n/translation";

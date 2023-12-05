@@ -1,8 +1,8 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Discuss } from "@mail/core/common/discuss";
 import { Call } from "@mail/discuss/call/common/call";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 
 import { patch } from "@web/core/utils/patch";

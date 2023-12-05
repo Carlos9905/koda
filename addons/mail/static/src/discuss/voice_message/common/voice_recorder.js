@@ -1,5 +1,5 @@
-/* @odoo-module */
-import { Component, useState, onWillUnmount } from "@odoo/owl";
+/* @koda-module */
+import { Component, useState, onWillUnmount } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 import { browser } from "@web/core/browser/browser";

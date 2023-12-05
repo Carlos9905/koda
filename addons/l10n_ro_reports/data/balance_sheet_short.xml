@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="account_financial_report_ro_bs_smle" model="account.report">
         <field name="name">Code 10 - Balance Sheet</field>
         <field name="root_report_id" ref="account_reports.balance_sheet"/>
@@ -466,4 +466,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

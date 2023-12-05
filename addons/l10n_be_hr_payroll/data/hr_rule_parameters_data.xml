@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <!-- REVENU ANNUEL NET IMPOSABLE -->
         <record id="rule_parameter_prp_yearly_gross_revenue_bound_expense" model="hr.rule.parameter">
@@ -1450,4 +1450,4 @@ covered for the company (teleworking costs, mobile phone, internet, etc., namely
             <field name="date_from" eval="datetime(2022, 12, 1).date()"/>
         </record>
     </data>
-</odoo>
+</koda>

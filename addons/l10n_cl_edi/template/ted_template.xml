@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<odoo>
+<koda>
     <data>
         <template id="ted_template">
             <TED version="1.0">
@@ -8,6 +8,6 @@
             </TED><TmstFirma t-out="stamp"/>
         </template>
     </data>
-</odoo>
+</koda>
 
 

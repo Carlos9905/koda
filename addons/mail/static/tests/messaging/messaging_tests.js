@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 
@@ -75,7 +75,7 @@ QUnit.test(
         });
         const { openDiscuss, openFormView } = await start();
         await openDiscuss(channelId);
-        await insertText(".o-mail-Composer-input", "test https://www.odoo.com/");
+        await insertText(".o-mail-Composer-input", "test https://www.koda.com/");
         await click(".o-mail-Composer-send:enabled");
         // leaving discuss.
         await openFormView("res.partner", partnerId);

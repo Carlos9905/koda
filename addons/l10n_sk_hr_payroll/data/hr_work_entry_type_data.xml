@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="work_entry_type_sick_25" model="hr.work.entry.type">
         <field name="name">Sick Time Off Day 1-3 (Paid at 25%)</field>
         <field name="code">SICK25</field>
@@ -34,4 +34,4 @@
         <field name="is_leave">True</field>
         <field name="color">8</field>
     </record>
-</odoo>
+</koda>

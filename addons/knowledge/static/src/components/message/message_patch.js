@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Message } from "@mail/core/common/message";
 import "@mail/core/web/message_patch"; // dependency ordering

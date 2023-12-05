@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { Component, onWillUpdateProps, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, onWillUpdateProps, useEffect, useRef, useState } from "@koda/owl";
 
 import { useService } from "@web/core/utils/hooks";
 import { hidePDFJSButtons } from "@web/libs/pdfjs";

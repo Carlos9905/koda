@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { pyEnvTarget } from "@bus/../tests/helpers/mock_python_environment";
 

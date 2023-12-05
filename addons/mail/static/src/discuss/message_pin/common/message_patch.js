@@ -1,7 +1,7 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Message } from "@mail/core/common/message";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="ec_edi_signature">
             <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" t-att-Id="signature_id">
@@ -67,4 +67,4 @@
             </ds:Signature>
         </template>
     </data>
-</odoo>
+</koda>

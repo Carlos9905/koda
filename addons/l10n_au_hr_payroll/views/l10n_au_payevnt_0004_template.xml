@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <template id="payevent_0004_xml_report">
             <Attachment>
@@ -191,4 +191,4 @@
             </Attachment>
         </template>
     </data>
-</odoo>
+</koda>

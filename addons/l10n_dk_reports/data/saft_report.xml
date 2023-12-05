@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!--  add address number to addresses  -->
     <template id="address" inherit_id="account_saft.address" primary="True">
         <xpath expr="//StreetName" position="after">
@@ -46,4 +46,4 @@
             <attribute name="t-call">l10n_dk_reports.addresses_contacts</attribute>
         </xpath>
     </template>
-</odoo>
+</koda>

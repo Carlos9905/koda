@@ -1,10 +1,10 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { BaseStore, Record, makeStore, modelRegistry } from "@mail/core/common/record";
 
 import { registry } from "@web/core/registry";
 import { clearRegistryWithCleanup, makeTestEnv } from "@web/../tests/helpers/mock_env";
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 const serviceRegistry = registry.category("services");
 

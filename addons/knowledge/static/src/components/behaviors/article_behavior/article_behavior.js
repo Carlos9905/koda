@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { AbstractBehavior } from "@knowledge/components/behaviors/abstract_behavior/abstract_behavior";
 import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { useService } from "@web/core/utils/hooks";
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 
 export class ArticleBehavior extends AbstractBehavior {

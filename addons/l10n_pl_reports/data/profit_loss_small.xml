@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_pl_small_pl" model="account.report">
         <field name="name">Profit and loss - Small</field>
         <field name="root_report_id" ref="account_reports.profit_and_loss"/>
@@ -383,4 +383,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

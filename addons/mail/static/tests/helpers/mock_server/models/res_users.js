@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { today, serializeDate } from "@web/core/l10n/dates";

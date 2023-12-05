@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractBehavior } from "@knowledge/components/behaviors/abstract_behavior/abstract_behavior";
 import { makeContext } from "@web/core/context";
 import { useService } from "@web/core/utils/hooks";
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 
 /**

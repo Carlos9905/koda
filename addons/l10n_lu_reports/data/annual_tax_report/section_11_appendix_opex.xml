@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo auto_sequence="1">
+<koda auto_sequence="1">
     <record id="l10n_lu_annual_tax_report_section_appendix_opex" model="account.report">
         <field name="name">Appendix to Operational Expenditures</field>
         <field name="sequence">9</field>
@@ -17,4 +17,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Composer } from "@mail/core/common/composer";
 import { KnowledgeCommentCreatorComposer } from '../composer/composer';
@@ -12,7 +12,7 @@ import {
     useExternalListener,
     useRef,
     useState
-} from '@odoo/owl';
+} from '@koda/owl';
 
 /**
  * This Popover is used in the case of the editable zone being too small to display the full comment

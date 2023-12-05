@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="cfdi_cartaporte">
         <cfdi:Comprobante
             t-att-Fecha="cfdi_date"
@@ -137,4 +137,4 @@
             </cfdi:Complemento>
         </cfdi:Comprobante>
     </template>
-</odoo>
+</koda>

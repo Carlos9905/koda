@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="l10n_lu_electronic_report_template_1_1">
         <eCDFDeclarations xmlns="http://www.ctie.etat.lu/2011/ecdf">
             <FileReference><t t-out="filename"/></FileReference>
@@ -92,4 +92,4 @@
                             </FormData>
                         </Declaration>
     </template>
-</odoo>
+</koda>

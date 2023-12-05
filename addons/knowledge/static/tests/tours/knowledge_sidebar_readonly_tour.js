@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { dragAndDropArticle } from '@knowledge/../tests/tours/knowledge_tour_utils';
 import { registry } from "@web/core/registry";

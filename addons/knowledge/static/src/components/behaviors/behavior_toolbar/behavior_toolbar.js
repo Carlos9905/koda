@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import {
     Component,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { useForwardRefToParent } from "@web/core/utils/hooks";
 
 export class BehaviorToolbar extends Component {

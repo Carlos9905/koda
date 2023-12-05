@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="product_product_IVAP_1" model="product.product">
         <field name="name">Arroz descascarillado (arroz cargo o arroz pardo)</field>
         <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('description', '=', 'IVAP'), ('l10n_pe_edi_tax_code', '=', '1016')]"/>
@@ -40,4 +40,4 @@
         <field name="unspsc_code_id" search="[('code', '=', '10151701')]"/>
         <field name="weight">660.0</field>
     </record>
-</odoo>
+</koda>

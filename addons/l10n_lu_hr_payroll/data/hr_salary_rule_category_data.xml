@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_salary_rule_category_bik_transport" model="hr.salary.rule.category">
         <field name="name">Benefit in Kind (Transportation)</field>
         <field name="code">BIK_TRANSPORT</field>
@@ -24,4 +24,4 @@
         <field name="name">Taxable Amount</field>
         <field name="code">TAXABLE</field>
     </record>
-</odoo>
+</koda>

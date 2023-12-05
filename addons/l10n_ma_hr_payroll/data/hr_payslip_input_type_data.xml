@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <data>
         <record id="AVS" model="hr.payslip.input.type">
             <field name="code">AVS</field>
@@ -39,4 +39,4 @@
             <field name="struct_ids" eval="[(4, ref('l10n_ma_hr_payroll.hr_payroll_salary_ma_structure_base'))]"/>
         </record>
     </data>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="l10n_be.tax_report_vat" model="account.report">
             <field name="custom_handler_model_id" ref="model_l10n_be_tax_report_handler"/>
@@ -30,4 +30,4 @@
             </xpath>
         </template>
     </data>
-</odoo>
+</koda>

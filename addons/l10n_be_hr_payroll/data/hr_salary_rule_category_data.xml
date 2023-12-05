@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_payroll_head_salary" model="hr.salary.rule.category">
         <field name="name">Gross</field>
         <field name="code">BRUT</field>
@@ -182,4 +182,4 @@
         <field name="name">Group Insurance (Employer)</field>
         <field name="code">GROUPINSURANCE</field>
     </record>
-</odoo>
+</koda>

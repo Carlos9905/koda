@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<odoo>
+<koda>
     <data>
         <record id="face_certificate_demo" model="l10n_es_edi_facturae.certificate">
             <field name="password">test</field>
@@ -7,4 +7,4 @@
             <field name="company_id" eval="ref('l10n_es.demo_company_es')"/>
         </record>
     </data>
-</odoo>
+</koda>

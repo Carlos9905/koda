@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Dialog } from "@web/core/dialog/dialog";
@@ -8,7 +8,7 @@ import { SelectMenu } from "@web/core/select_menu/select_menu";
 import { useAutofocus, useService } from "@web/core/utils/hooks";
 import { uuid } from "@web/views/utils";
 
-import { Component, onWillStart, useExternalListener, useState } from "@odoo/owl";
+import { Component, onWillStart, useExternalListener, useState } from "@koda/owl";
 
 /**
  * Dialog allowing to dynamically edit the item calendar view configuration

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { ArticleSelectionBehaviorDialog } from '@knowledge/components/behaviors/article_behavior_dialog/article_behavior_dialog';
@@ -15,7 +15,7 @@ import { useNestedSortable } from "@web/core/utils/nested_sortable";
 import { useService } from "@web/core/utils/hooks";
 import { useRecordObserver } from "@web/model/relational_model/utils";
 
-import { Component, onWillStart, reactive, useRef, useState, useChildSubEnv } from "@odoo/owl";
+import { Component, onWillStart, reactive, useRef, useState, useChildSubEnv } from "@koda/owl";
 
 export const SORTABLE_TOLERANCE = 10;
 

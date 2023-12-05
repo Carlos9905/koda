@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- https://finances.belgium.be/fr/E-services/FinProf/description -->
-<odoo>
+<koda>
     <data>
         <template id="finprof_xml_report">
             <Declaration274 t-att-CreationDate="creation_date">
@@ -55,4 +55,4 @@
         </template>
 
     </data>
-</odoo>
+</koda>

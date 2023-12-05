@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_au_super_fund_view_form" model="ir.ui.view">
         <field name="name">l10n_au.super.fund.view.form</field>
         <field name="model">l10n_au.super.fund</field>
@@ -50,4 +50,4 @@
         <field name="res_model">l10n_au.super.fund</field>
         <field name="view_mode">tree,form</field>
     </record>
-</odoo>
+</koda>

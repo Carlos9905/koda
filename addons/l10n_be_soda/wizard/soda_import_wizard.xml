@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="soda_import_wizard_view_form" model="ir.ui.view">
         <field name="name">soda.import.wizard.view.form</field>
         <field name="model">soda.import.wizard</field>
@@ -28,4 +28,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

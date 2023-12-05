@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 
@@ -310,7 +310,7 @@ QUnit.test(
     async () => {
         const pyEnv = await startServer();
         const partnerId = pyEnv["res.partner"].create({
-            email: "testpartner@odoo.com",
+            email: "testpartner@koda.com",
             name: "TestPartner",
         });
         pyEnv["res.users"].create({ partner_id: partnerId });

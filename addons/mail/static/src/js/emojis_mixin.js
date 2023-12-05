@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { escape } from "@web/core/utils/strings";
 

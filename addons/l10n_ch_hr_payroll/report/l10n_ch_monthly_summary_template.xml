@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<odoo>
+<koda>
     <data>
         <template id="report_monthly_summary">
             <t t-call="web.html_container">
@@ -72,4 +72,4 @@
             </t>
         </template>
     </data>
-</odoo>
+</koda>

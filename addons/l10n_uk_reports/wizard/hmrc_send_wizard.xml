@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <data>
         <record id="hmrc_send_wizard_form" model="ir.ui.view">
             <field name="name">l10n_uk.hmrc.send.wizard.form</field>
@@ -33,4 +33,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="res_company_ma" model="res.company">
         <field name="name">My Mar Company</field>
         <field name="currency_id" ref="base.MAD"/>
@@ -172,4 +172,4 @@
             ref('hr_payslip_camelia_foster'),
             ]"/>
     </function>
-</odoo>
+</koda>

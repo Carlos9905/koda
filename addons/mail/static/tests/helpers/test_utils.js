@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { getPyEnv } from "@bus/../tests/helpers/mock_python_environment";
 import { timings } from "@bus/misc";
@@ -9,7 +9,7 @@ import { patchBrowserNotification } from "@mail/../tests/helpers/patch_notificat
 import { getAdvanceTime } from "@mail/../tests/helpers/time_control";
 import { getWebClientReady } from "@mail/../tests/helpers/webclient_setup";
 
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { registry } from "@web/core/registry";

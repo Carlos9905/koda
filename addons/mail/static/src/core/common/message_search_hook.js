@@ -1,7 +1,7 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { useSequential } from "@mail/utils/common/hooks";
-import { useState, onWillUnmount, markup } from "@odoo/owl";
+import { useState, onWillUnmount, markup } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export const HIGHLIGHT_CLASS = "o-mail-Message-searchHighlight";

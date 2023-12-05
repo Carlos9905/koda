@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="rule_parameter_comp_ac_threshold" model="hr.rule.parameter">
         <field name="name">CH Comp AC: Threshold</field>
         <field name="code">l10n_ch_comp_ac_threshold</field>
@@ -32,4 +32,4 @@
         <field name="rule_parameter_id" ref="rule_parameter_avs_retired_exoneration"/>
         <field name="date_from" eval="datetime(2020, 1, 1).date()"/>
     </record>
-</odoo>
+</koda>

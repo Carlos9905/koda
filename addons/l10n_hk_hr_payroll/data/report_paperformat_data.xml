@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="paperformat_no_margin" model="report.paperformat">
         <field name="name">A4 without borders</field>
         <field name="default" eval="False" />
@@ -12,4 +12,4 @@
         <field name="header_line" eval="False" />
         <field name="header_spacing">0</field>
     </record>
-</odoo>
+</koda>

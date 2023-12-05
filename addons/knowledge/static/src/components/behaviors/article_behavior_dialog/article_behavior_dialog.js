@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from '@web/core/utils/hooks';
 import { Dialog } from '@web/core/dialog/dialog';
 import { SelectMenu } from '@web/core/select_menu/select_menu';
 import { DropdownItem } from '@web/core/dropdown/dropdown_item';
-import { Component, useEffect, onWillStart, useRef, useState } from '@odoo/owl';
+import { Component, useEffect, onWillStart, useRef, useState } from '@koda/owl';
 
 export class ArticleSelectionBehaviorDialog extends Component {
 

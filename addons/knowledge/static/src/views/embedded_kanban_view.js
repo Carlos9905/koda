@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { EmbeddedControllersPatch } from "@knowledge/views/embedded_controllers_patch";
 import { KanbanController } from "@web/views/kanban/kanban_controller";

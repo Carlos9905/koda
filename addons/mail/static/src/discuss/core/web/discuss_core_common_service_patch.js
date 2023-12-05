@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { DiscussCoreCommon, discussCoreCommon } from "../common/discuss_core_common_service";

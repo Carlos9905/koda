@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="tim_section">
             <TIM t-if="tax_details_group" t-foreach="tax_details_group.values()" t-as="group_detail">
@@ -428,4 +428,4 @@
             </FACTURA>
         </template>
     </data>
-</odoo>
+</koda>

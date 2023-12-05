@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { FormController } from '@web/views/form/form_controller';
@@ -6,7 +6,7 @@ import { KnowledgeSidebar } from '@knowledge/components/sidebar/sidebar';
 import { useService } from "@web/core/utils/hooks";
 import { Deferred } from "@web/core/utils/concurrency";
 
-import { onMounted, onWillStart, useChildSubEnv, useExternalListener, useRef } from "@odoo/owl";
+import { onMounted, onWillStart, useChildSubEnv, useExternalListener, useRef } from "@koda/owl";
 
 export class KnowledgeArticleFormController extends FormController {
     setup() {

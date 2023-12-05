@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <!-- override of the template to align the address to the right -->
         <template id="contact_right" inherit_id="base.contact">
@@ -108,4 +108,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

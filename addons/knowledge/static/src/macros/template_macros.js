@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractMacro } from "@knowledge/macros/abstract_macro";
 import { pasteElements } from "@knowledge/macros/utils";
@@ -48,7 +48,7 @@ export class SendAsMessageMacro extends AbstractMacro {
                 this.validatePage();
                 const dialog = this.getFirstVisibleElement('.o_dialog .o_mail_composer_form');
                 if (dialog) {
-                    return this.getFirstVisibleElement(dialog.querySelector('.o_field_html[name="body"] .odoo-editor-editable'));
+                    return this.getFirstVisibleElement(dialog.querySelector('.o_field_html[name="body"] .koda-editor-editable'));
                 }
                 return null;
             }.bind(this),
@@ -82,7 +82,7 @@ export class UseAsDescriptionMacro extends AbstractMacro {
                 this.validatePage();
                 const el = this.getFirstVisibleElement(
                     `.o_field_html[name="${this.data.fieldName}"]`,
-                    (element) => element.querySelector('.odoo-editor-editable'),
+                    (element) => element.querySelector('.koda-editor-editable'),
                 );
                 if (el) {
                     return el;
@@ -98,7 +98,7 @@ export class UseAsDescriptionMacro extends AbstractMacro {
             // field.
             trigger: function () {
                 this.validatePage();
-                return this.getFirstVisibleElement(`.o_field_html[name="${this.data.fieldName}"] .odoo-editor-editable`);
+                return this.getFirstVisibleElement(`.o_field_html[name="${this.data.fieldName}"] .koda-editor-editable`);
             }.bind(this),
             action: function (el) {
                 const wysiwyg = $(el).data('wysiwyg');

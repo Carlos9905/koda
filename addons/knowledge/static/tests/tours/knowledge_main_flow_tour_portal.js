@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /**
  * Global Knowledge flow tour - Adapter for portal user
@@ -27,7 +27,7 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour_portal', {
     trigger: '.o_breadcrumb_article_name > input',
     run: 'text My Private Article',  // modify the article name
 }, {
-    trigger: '.note-editable.odoo-editor-editable',
+    trigger: '.note-editable.koda-editor-editable',
     run: 'text Content of My Private Article',  // modify the article content
 }, {
     trigger: 'body',
@@ -50,7 +50,7 @@ registry.category("web_tour.tours").add('knowledge_main_flow_tour_portal', {
     trigger: '.o_knowledge_editor:contains("Content of Workspace Article")',
     run: () => {},  // wait for article to be correctly loaded
 }, {
-    trigger: '.note-editable.odoo-editor-editable',
+    trigger: '.note-editable.koda-editor-editable',
     run: 'text Edited Content of Workspace Article',  // modify the article content
 }, {
     trigger: '.o_article:contains("Workspace Article")',

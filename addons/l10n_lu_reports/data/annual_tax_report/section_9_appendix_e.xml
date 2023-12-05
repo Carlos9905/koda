@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo auto_sequence="1">
+<koda auto_sequence="1">
     <record id="l10n_lu_annual_tax_report_section_appendix_e" model="account.report">
         <field name="name">Appendix E</field>
         <field name="sequence">7</field>
@@ -371,4 +371,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

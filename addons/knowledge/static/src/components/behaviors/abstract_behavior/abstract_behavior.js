@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 import {
     Component,
     onMounted,
-} from "@odoo/owl";
+} from "@koda/owl";
 import {
     copyOids,
     getPropNameNode,

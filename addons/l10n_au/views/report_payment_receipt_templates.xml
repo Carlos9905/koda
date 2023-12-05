@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <template id="report_payment_receipt_document" inherit_id="account.report_payment_receipt_document">
         <xpath expr="//strong[@id='payment_title']" position="replace">
             <!-- Customary in Australia to use the term "Remittance Advice" for payments to suppliers -->
@@ -11,4 +11,4 @@
             </t>
         </xpath>
     </template>
-</odoo>
+</koda>

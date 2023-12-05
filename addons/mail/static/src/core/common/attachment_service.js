@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { assignDefined } from "@mail/utils/common/misc";
 

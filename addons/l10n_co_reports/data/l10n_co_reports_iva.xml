@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_co_reports_iva" model="account.report">
         <field name="name">Retención en IVA</field>
         <field name="filter_unfold_all" eval="True"/>
@@ -46,4 +46,4 @@
     </record>
 
     <menuitem id="menu_action_account_report_iva" name="Certificado de Retención en IVA" action="action_account_report_iva" parent="account_reports_co_statements_menu"/>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="balance_sheet_l10n_tw" model="account.report">
         <field name="name">Balance Sheet</field>
@@ -238,4 +238,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

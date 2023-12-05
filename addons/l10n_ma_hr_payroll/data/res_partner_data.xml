@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <data>
         <record id="hr_CNSS_register" model="res.partner">
             <field name="name">National Social Security Fund</field><!-- Caisse Nationale de Sécurité Sociale -->
@@ -28,4 +28,4 @@
             <field name="country_id" ref="base.ma"/>
         </record>
     </data>
-</odoo>
+</koda>

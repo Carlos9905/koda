@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { convertBrToLineBreak, prettifyMessageContent } from "@mail/utils/common/format";
 

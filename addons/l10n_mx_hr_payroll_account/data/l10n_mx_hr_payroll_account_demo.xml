@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="res_company_mx_certificate" model="l10n_mx_edi.certificate">
         <field name="content" type="base64" file="l10n_mx_edi/demo/pac_credentials/certificate.cer"/>
@@ -36,4 +36,4 @@
             <value name="company" model="res.company" eval="ref('l10n_mx_hr_payroll.res_company_mx')"/>
         </function>
     </data>
-</odoo>
+</koda>

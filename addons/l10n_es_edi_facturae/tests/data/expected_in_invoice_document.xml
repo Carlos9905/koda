@@ -313,7 +313,7 @@ aWAYAMCL4KhvISclysD+5juDLpGCLHPtKxBXTQ==</ds:Modulus>
                                     <ds:DigestValue>FHf2lN+5FALNa7JXV2+pByL92/dr8LeCVhpItYic5oA=</ds:DigestValue>
                                 </xades:CertDigest>
                                 <xades:IssuerSerial>
-                                    <ds:X509IssuerName>C=BE, CN=runbot.odoo.com, L=Ramillies, O=Odoo, OU=R&amp;D, ST=Wallonnia</ds:X509IssuerName>
+                                    <ds:X509IssuerName>C=BE, CN=runbot.koda.com, L=Ramillies, O=Odoo, OU=R&amp;D, ST=Wallonnia</ds:X509IssuerName>
                                     <ds:X509SerialNumber>548631688851000697209704649636588277530075594025</ds:X509SerialNumber>
                                 </xades:IssuerSerial>
                             </xades:Cert>

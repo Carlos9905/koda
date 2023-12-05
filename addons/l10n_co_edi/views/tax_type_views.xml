@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
         <record id="tax_type_view_tree" model="ir.ui.view">
             <field name="name">account.type.tree</field>
@@ -39,4 +39,4 @@
             id="tax_type_menu"
             parent="account.account_account_menu"/>
     </data>
-</odoo>
+</koda>

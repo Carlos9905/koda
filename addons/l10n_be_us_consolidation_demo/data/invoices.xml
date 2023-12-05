@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <!-- INVOICE 1 -->
         <record id="demo_invoice_1" model="account.move">
@@ -100,4 +100,4 @@
             <value eval="[ref('demo_invoice_1'), ref('demo_invoice_2'), ref('demo_invoice_3'), ref('vendor_bill_1')]"/>
         </function>
     </data>
-</odoo>
+</koda>

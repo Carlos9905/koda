@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="l10n_co_reports_fuente" model="account.report">
         <field name="name">Retención por Terceros</field>
@@ -37,4 +37,4 @@
     </record>
 
     <menuitem id="menu_action_account_report_fuente" name="Certificado de Retención en Fuente" action="action_account_report_fuente" parent="account_reports_co_statements_menu"/>
-</odoo>
+</koda>

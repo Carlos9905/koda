@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="iras_audit_file_company_infos">
             <CompanyInfo>
@@ -109,5 +109,5 @@
             </Company>
         </template>
     </data>
-</odoo>
+</koda>
 

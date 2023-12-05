@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="knowledge_article_action_trashed" model="ir.actions.act_window">
         <field name="name">Trash</field>
         <field name="res_model">knowledge.article</field>
@@ -608,4 +608,4 @@
         <field name="view_id" ref="knowledge_article_template_view_form"/>
         <field name="act_window_id" ref="knowledge_article_template_action"/>
     </record>
-</odoo>
+</koda>

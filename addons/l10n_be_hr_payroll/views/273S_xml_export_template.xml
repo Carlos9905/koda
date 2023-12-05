@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="273S_xml_report">
             <ns0:withholdingTaxFile xmlns:ns0="http://withholding.minfin.fgov.be/">
@@ -52,4 +52,4 @@
             </ns0:withholdingTaxFile>
         </template>
     </data>
-</odoo>
+</koda>

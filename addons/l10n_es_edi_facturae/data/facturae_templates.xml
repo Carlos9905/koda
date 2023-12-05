@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <!-- Sub-template used for every instance of AddressType -->
         <template id="address_type">
@@ -292,4 +292,4 @@
             </fac:Facturae>
         </template>
     </data>
-</odoo>
+</koda>

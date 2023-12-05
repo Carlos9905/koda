@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="form_view_account_debit_note_inherit" model="ir.ui.view">
             <field name="name">form.view.account.debit.note.inherit</field>
@@ -14,4 +14,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

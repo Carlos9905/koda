@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="rule_parameter_income_tax_rates_resident" model="hr.rule.parameter">
         <field name="name">Netherlands: Residents Income Tax Rates</field>
         <field name="code">l10n_nl_income_tax_rates_resident</field>
@@ -64,4 +64,4 @@
         <field name="date_from" eval="datetime(2017, 1, 1).date()"/>
     </record>
 
-</odoo>
+</koda>

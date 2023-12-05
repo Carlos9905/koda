@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="281_10_xml_report">
             <!-- Source:
@@ -1107,4 +1107,4 @@
             </Verzendingen>
         </template>
     </data>
-</odoo>
+</koda>

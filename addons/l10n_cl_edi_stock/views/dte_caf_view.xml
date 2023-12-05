@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
         <record model="ir.actions.act_window" id="action_stock_l10n_cl_dte_caf">
             <field name="name">CAFs</field>
@@ -8,4 +8,4 @@
             <field name="context">{"search_default_active":1}</field>
         </record>
     </data>
-</odoo>
+</koda>

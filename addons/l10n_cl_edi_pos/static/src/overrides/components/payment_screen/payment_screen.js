@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { PaymentScreen } from "@point_of_sale/app/screens/payment_screen/payment_screen";
 import { TextAreaPopup } from "@point_of_sale/app/utils/input_popups/textarea_popup";

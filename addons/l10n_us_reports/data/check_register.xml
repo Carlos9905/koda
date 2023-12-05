@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data auto_sequence="1">
         <record id="check_register_report" model="account.report">
             <field name="name">Check Register</field>
@@ -57,4 +57,4 @@
                   sequence="100"
                   groups="account.group_account_readonly"
                   action="l10n_us_reports.check_register_action"/>
-</odoo>
+</koda>

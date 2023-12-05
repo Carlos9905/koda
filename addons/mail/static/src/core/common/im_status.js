@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { Typing } from "@mail/discuss/typing/common/typing";
 import { useService } from "@web/core/utils/hooks";
 

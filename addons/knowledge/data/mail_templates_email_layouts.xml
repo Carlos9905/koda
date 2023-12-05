@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <!-- This mail template is only sent to users that are mentioned in the composer of the comments
         because it is configured in 'note' mode. This means that each comment added on a thread is a note logged
@@ -24,4 +24,4 @@
         </xpath>
     </template>
 </data>
-</odoo>
+</koda>

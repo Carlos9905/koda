@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { formatText } from "@mail/js/emojis_mixin";
 

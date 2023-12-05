@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
 
         <template id="cfdiv40_extended" inherit_id="l10n_mx_edi.cfdiv40">
@@ -94,4 +94,4 @@
         </template>
 
     </data>
-</odoo>
+</koda>

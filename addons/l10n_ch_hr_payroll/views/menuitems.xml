@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <menuitem
         id="menu_reporting_l10n_ch"
         name="Switzerland"
@@ -101,5 +101,5 @@
         />
 
 
-</odoo>
+</koda>
 

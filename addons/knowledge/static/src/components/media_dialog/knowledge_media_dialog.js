@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { renderToElement } from "@web/core/utils/render";
 import { TABS, MediaDialog } from '@web_editor/components/media_dialog/media_dialog';

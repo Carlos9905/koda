@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="ksa_employee_payroll_structure_type" model="hr.payroll.structure.type">
             <field name="name">KSA Employee</field>
@@ -8,4 +8,4 @@
             <field name="default_resource_calendar_id" ref="resource.resource_calendar_std"/>
         </record>
     </data>
-</odoo>
+</koda>

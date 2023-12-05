@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@koda/owl";
 import { endKnowledgeTour, openCommandBar } from "../knowledge_tour_utils.js";
 import { patch } from "@web/core/utils/patch";
 import { registry } from "@web/core/registry";
@@ -37,7 +37,7 @@ registry.category("web_tour.tours").add("knowledge_video_command_tour", {
                 });
             },
         }, { // open the command bar
-            trigger: ".odoo-editor-editable > p",
+            trigger: ".koda-editor-editable > p",
             run: function () {
                 openCommandBar(this.$anchor[0]);
             },

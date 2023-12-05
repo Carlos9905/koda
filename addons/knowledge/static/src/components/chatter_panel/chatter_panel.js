@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { standardWidgetProps } from '@web/views/widgets/standard_widget_props';
@@ -8,7 +8,7 @@ import { Chatter } from '@mail/core/web/chatter';
 import { SIZES } from "@web/core/ui/ui_service";
 
 
-import { Component, useRef, useState } from '@odoo/owl';
+import { Component, useRef, useState } from '@koda/owl';
 
 export class KnowledgeArticleChatter extends Component {
     static template = 'knowledge.KnowledgeArticleChatter';

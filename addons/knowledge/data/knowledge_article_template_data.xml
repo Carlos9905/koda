@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <!-- Templates -->
     <record id="knowledge_article_template_shared_todos" model="knowledge.article">
         <field name="icon">✅</field>
@@ -670,7 +670,7 @@
             <ul>
                 <li>
                     <font class="text-400">
-                        <a href="https://www.odoo.com/blog/odoo-news-5/odoo-the-new-openerp-156"
+                        <a href="https://www.koda.com/blog/koda-news-5/koda-the-new-openerp-156"
                             target="_blank" data-bs-original-title="" title="">
                             OpenERP becomes Odoo
                         </a>
@@ -678,7 +678,7 @@
                 </li>
                 <li>
                     <font class="text-400">
-                        <a href="https://www.odoo.com/page/brand-assets" target="_blank"
+                        <a href="https://www.koda.com/page/brand-assets" target="_blank"
                             data-bs-original-title="" title="">
                             Odoo Brand Assets
                         </a>
@@ -2143,7 +2143,7 @@
                             <br/>
                             Subscribe here to make sure you will not miss an episode!
                         </p>
-                        <p><a href="https://www.odoo.fm/2108856/12216790-owl-the-fastest-javascript-framework-in-the-world"
+                        <p><a href="https://www.koda.fm/2108856/12216790-owl-the-fastest-javascript-framework-in-the-world"
                             target="_blank" class="btn btn-primary">PLANET ODOO</a>
                             <br/>
                         </p>
@@ -2186,7 +2186,7 @@
                             <a href="https://emojipedia.org/bird/" target="_blank">🐦</a></p>
                         <p>The tickets to participate to Odoo Experience 23 are now available and they are cheaper if you book them now!</p>
                         <p>Don't forget to spread the word, we're <em>so</em> looking forward to unveiling this new Odoo version! 🥳</p>
-                        <p><a href="https://www.odoo.com/event/odoo-experience-2023-3735/register" class="btn btn-primary">BOOK NOW</a><br/></p>
+                        <p><a href="https://www.koda.com/event/koda-experience-2023-3735/register" class="btn btn-primary">BOOK NOW</a><br/></p>
                         <p><br/></p>
                     </div>
                 </div>
@@ -2220,4 +2220,4 @@
             </p>
         </field>
     </record>
-</odoo>
+</koda>

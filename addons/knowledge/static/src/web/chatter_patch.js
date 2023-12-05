@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 import { Deferred, KeepLast } from "@web/core/utils/concurrency";
@@ -8,7 +8,7 @@ import { useCallbackRecorder } from "@web/webclient/actions/action_hook";
 import {
     onWillUnmount,
     useEffect,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 /**
  * Knowledge articles can interact with some records with the help of the

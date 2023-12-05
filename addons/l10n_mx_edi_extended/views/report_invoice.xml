@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="report_invoice_document" inherit_id="l10n_mx_edi.report_invoice_document">
         <!-- Add new column on invoice lines: Customs Numbers -->
         <xpath expr="//table[@name='invoice_line_table']/tbody//tr[1]//td[1]" position="inside">
@@ -114,4 +114,4 @@
             </div>
         </xpath>
     </template>
-</odoo>
+</koda>

@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 import { useBus, useService } from '@web/core/utils/hooks';
 import { usePopover } from '@web/core/popover/popover_hook';
 import { Composer } from '@mail/core/common/composer';
 import { Thread } from '@mail/core/common/thread';
 import { KnowledgeCommentsPopover } from '../comments_popover/comments_popover';
 import { KnowledgeCommentCreatorComposer } from '../composer/composer';
-import { closestBlock } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
+import { closestBlock } from '@web_editor/js/editor/koda-editor/src/utils/utils';
 import { _t } from '@web/core/l10n/translation';
 
 import {
@@ -19,7 +19,7 @@ import {
     useRef,
     useEffect,
     useState
-} from '@odoo/owl';
+} from '@koda/owl';
 
 export class KnowledgeCommentsThread extends Component {
 

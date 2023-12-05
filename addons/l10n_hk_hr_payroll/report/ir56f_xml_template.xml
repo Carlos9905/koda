@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="ir56f_xml_report">
         <IR56F xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ir56f.xsd">
             <Section><t t-esc="data['Section']" /></Section>
@@ -99,4 +99,4 @@
             </t>
         </IR56F>
     </template>
-</odoo>
+</koda>

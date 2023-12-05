@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_ch_hr_employee_children_view_tree" model="ir.ui.view">
         <field name="name">l10n.ch.hr.employee.children.view.tree</field>
         <field name="model">l10n.ch.hr.employee.children</field>
@@ -28,4 +28,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

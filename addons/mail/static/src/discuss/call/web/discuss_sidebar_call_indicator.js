@@ -1,9 +1,9 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Thread } from "@mail/core/common/thread_model";
 import { discussSidebarChannelIndicatorsRegistry } from "@mail/discuss/core/web/discuss_sidebar_categories";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 
 /**

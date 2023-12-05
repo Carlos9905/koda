@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <!-- Main template for withhold reports -->
         <template id="report_withhold_document">
@@ -149,7 +149,7 @@
             </xpath>
         </template>
 
-        <!-- Workaround for Studio reports, see odoo/odoo#60660 -->
+        <!-- Workaround for Studio reports, see koda/koda#60660 -->
         <template id="report_withhold">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
@@ -173,4 +173,4 @@
             <field name="binding_type">report</field>
         </record>
     </data>
-</odoo>
+</koda>

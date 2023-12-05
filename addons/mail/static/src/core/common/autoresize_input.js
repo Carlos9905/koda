@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { Component, useRef, useState, onWillUpdateProps, onMounted } from "@odoo/owl";
+import { Component, useRef, useState, onWillUpdateProps, onMounted } from "@koda/owl";
 
 import { useAutoresize } from "@web/core/utils/autoresize";
 

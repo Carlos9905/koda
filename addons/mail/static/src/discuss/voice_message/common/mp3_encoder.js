@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 const MAX_SAMPLES = 1152;
 

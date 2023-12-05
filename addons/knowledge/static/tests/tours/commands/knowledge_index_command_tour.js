@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { endKnowledgeTour, openCommandBar } from '../knowledge_tour_utils.js';
@@ -12,7 +12,7 @@ registry.category("web_tour.tours").add('knowledge_index_command_tour', {
     // open the Knowledge App
     trigger: '.o_app[data-menu-xmlid="knowledge.knowledge_menu_root"]',
 }, { // open the command bar
-    trigger: '.odoo-editor-editable > p',
+    trigger: '.koda-editor-editable > p',
     run: function () {
         openCommandBar(this.$anchor[0]);
     },

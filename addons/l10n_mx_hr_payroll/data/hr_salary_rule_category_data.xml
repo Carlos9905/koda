@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_payroll_integrated_daily_wage" model="hr.salary.rule.category">
         <field name="name">Integrated Daily Wage</field>
         <field name="code">INTDAYWAGE</field>
@@ -25,4 +25,4 @@
         <field name="name">IMSS Total (Employer)</field>
         <field name="code">IMSSEMPLOYERTOTAL</field>
     </record>
-</odoo>
+</koda>

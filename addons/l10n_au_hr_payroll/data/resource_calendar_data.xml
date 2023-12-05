@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="resource_calendar_au_38" model="resource.calendar">
         <field name="name">AU Standard 38 hours/week</field>
         <field name="tz">Australia/Sydney</field>
@@ -25,4 +25,4 @@
             ]"
             />
     </record>
-</odoo>
+</koda>

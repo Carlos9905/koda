@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="action_kp_payroll_fetch_payrun" model="ir.actions.server">
         <field name="name">Fetch Payruns</field>
         <field name="model_id" ref="base_setup.model_res_config_settings"/>
@@ -53,4 +53,4 @@ action = records.action_kp_payroll_fetch_payrun()
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

@@ -1,8 +1,8 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 /**
  * @typedef {Object} Props

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="tax_export_xml">
             <eSKDUpload Version="6.0">
@@ -40,4 +40,4 @@
             </eSKDUpload>
         </template>
     </data>
-</odoo>
+</koda>

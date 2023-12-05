@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Sources
         https://www.ato.gov.au/
         https://oac.chris21.com/OAC_ichrisp/Help/ichrisUG/646250.htm
@@ -227,4 +227,4 @@ result = categories['GROSS'] * rate/100 + contract.l10n_au_salary_sacrifice_supe
             'amount_python_compute': &quot;result = categories['BASIC'] + categories['ALW'] + categories['DED'] + result_rules['GROSS.COMMISSION']['total']&quot;
         }"/>
     </function>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <menuitem
         id="knowledge_menu_root"
         name="Knowledge"
@@ -79,4 +79,4 @@
         parent="knowledge_menu_technical"
         groups="base.group_system"
         sequence="6"/>
-</odoo>
+</koda>

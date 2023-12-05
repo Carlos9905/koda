@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Order } from "@point_of_sale/app/store/models";
 import { uuidv4 } from "@point_of_sale/utils";

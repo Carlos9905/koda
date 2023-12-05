@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- 
         Sources:
         https://www.lano.io/global-payroll-guide/slovakia
@@ -349,6 +349,6 @@ result = -categories['INCOMETAX']
         <field name="appears_on_payslip" eval="False"/>
         <field name="struct_id" ref="l10n_sk_hr_payroll.hr_payroll_structure_sk_employee_salary"/>
     </record>
-</odoo>
+</koda>
 
 

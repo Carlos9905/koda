@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="0">
         <record id="hr_contract_view_form" model="ir.ui.view">
             <field name="name">View Contract Form</field>
@@ -32,4 +32,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

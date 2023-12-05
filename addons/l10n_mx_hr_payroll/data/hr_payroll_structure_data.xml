@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_payroll_structure_mx_employee_salary" model="hr.payroll.structure">
         <field name="name">Mexico: Regular Pay</field>
         <field name="code">MXMONTHLY</field>
@@ -19,4 +19,4 @@
         <field name="type_id" ref="l10n_mx_hr_payroll.structure_type_employee_mx"/>
         <field name="report_id" ref="l10n_mx_hr_payroll.action_report_payslip_mx"/>
     </record>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { DateSection } from "@mail/core/common/date_section";
 import { Message } from "@mail/core/common/message";
@@ -14,7 +14,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 import { Transition } from "@web/core/transition";
 import { useBus, useService } from "@web/core/utils/hooks";

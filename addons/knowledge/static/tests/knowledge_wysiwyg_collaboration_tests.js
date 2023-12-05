@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
 import { Wysiwyg } from '@web_editor/js/wysiwyg/wysiwyg';

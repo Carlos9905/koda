@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
@@ -7,7 +7,7 @@ import { pick } from "@web/core/utils/objects";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 
-import { Component, onMounted } from "@odoo/owl";
+import { Component, onMounted } from "@koda/owl";
 
 
 class L10nBeCodaboxSettingsButtons extends Component {

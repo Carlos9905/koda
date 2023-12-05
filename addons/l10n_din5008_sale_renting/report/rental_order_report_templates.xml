@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
 
         <template id="report_rental_order" inherit_id="sale_renting.report_rental_order">
@@ -9,4 +9,4 @@
         </template>
 
     </data>
-</odoo>
+</koda>

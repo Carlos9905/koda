@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="demo_disallowed_expenses_category_1201" model="account.disallowed.expenses.category">
             <field name="name">Non-deductible taxes</field>
@@ -130,4 +130,4 @@
             <field name="code">1239</field>
         </record>
     </data>
-</odoo>
+</koda>

@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, onWillStart, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, onWillStart, useEffect, useRef, useState } from "@koda/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { groupBy } from "@web/core/utils/arrays";
 import { HtmlField } from "@web_editor/js/backend/html_field";

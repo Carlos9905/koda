@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { RelationalModel } from "@web/model/relational_model/relational_model";
 

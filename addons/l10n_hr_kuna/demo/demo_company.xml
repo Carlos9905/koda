@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="partner_demo_company_hr" model="res.partner">
         <field name="name">HR Company</field>
         <field name="vat">HR18724543544</field>
@@ -32,4 +32,4 @@
         <value>hr_kuna</value>
         <value model="res.company" eval="obj().env.ref('l10n_hr_kuna.demo_company_hr')"/>
     </function>
-</odoo>
+</koda>

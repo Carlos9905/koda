@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="input_advance" model="hr.payslip.input.type">
         <field name="name">Advance</field>
         <field name="code">ADVANCE</field>
@@ -300,4 +300,4 @@
         <field name="country_id" ref="base.ch"/>
         <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll.hr_payroll_structure_ch_employee_salary'))]"/>
     </record>
-</odoo>
+</koda>

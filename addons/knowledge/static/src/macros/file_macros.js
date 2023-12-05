@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractMacro } from "@knowledge/macros/abstract_macro";
 import { dragAndDrop } from "@knowledge/macros/utils";

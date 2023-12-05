@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
 
     <record id="l10n_in_rule_parameter_basic" model="hr.rule.parameter">
         <field name="name">India: Basic Salary Value</field>
@@ -209,4 +209,4 @@
         <field name="date_from" eval="datetime(2000, 1, 1).date()"/>
     </record>
 
-</odoo>
+</koda>

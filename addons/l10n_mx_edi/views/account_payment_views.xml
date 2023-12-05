@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <record model="ir.ui.view" id="account_payment_form_inherit_l10n_mx_edi">
         <field name="name">account.payment.form.inherit.l10n_mx_edi</field>
         <field name="model">account.payment</field>
@@ -91,4 +91,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

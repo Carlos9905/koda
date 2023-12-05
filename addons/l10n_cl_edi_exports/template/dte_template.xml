@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
         <template id="dte_subtemplate" inherit_id="l10n_cl_edi.dte_subtemplate">
             <xpath expr="//IndServicio" position="after">
@@ -33,4 +33,4 @@
             <!--End of Aduana-->
         </template>
     </data>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <!-- Stages -->
     <record id="knowledge_article_template_stage_new" model="knowledge.article.stage">
         <field name="name">New</field>
@@ -39,4 +39,4 @@
     <record id="knowledge_article_template_shared_todos_contact_our_lawyer" model="knowledge.article">
         <field name="stage_id" ref="knowledge_article_template_stage_done"/>
     </record>
-</odoo>
+</koda>

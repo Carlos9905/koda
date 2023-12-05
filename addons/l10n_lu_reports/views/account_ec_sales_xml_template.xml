@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Main template -->
     <template id="EcSalesLuXMLReport">
         <eCDFDeclarations xmlns="http://www.ctie.etat.lu/2011/ecdf">
@@ -79,4 +79,4 @@
         </Declaration>
     </template>
 
-</odoo>
+</koda>

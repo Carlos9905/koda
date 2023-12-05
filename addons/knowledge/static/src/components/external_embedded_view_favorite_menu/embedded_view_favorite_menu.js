@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { registry } from "@web/core/registry";
 import { supportedEmbeddedViews } from "@knowledge/components/external_embedded_view_insertion/views_renderers_patches";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 const cogMenuRegistry = registry.category("cogMenu");
 

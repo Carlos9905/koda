@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<odoo>
+<koda>
     <data>
         <template id="dte_subtemplate" inherit_id="l10n_cl_edi.dte_subtemplate" >
             <xpath expr="//TasaIVA" position="replace">
@@ -10,4 +10,4 @@
             </xpath>
         </template>
     </data>
-</odoo>
+</koda>

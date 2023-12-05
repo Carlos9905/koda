@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
    <data>
       <template id="eu_oss_generic_export_xml_be">
          <t t-set="id_number" t-value="IOSSNumber or VoesNumber or VATNumber"/>
@@ -91,4 +91,4 @@
       </template>
 
    </data>
-</odoo>
+</koda>

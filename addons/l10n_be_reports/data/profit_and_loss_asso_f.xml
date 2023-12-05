@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data auto_sequence="1">
         <record id="account_financial_report_pl_asso_f" model="account.report">
             <field name="name">Profit and Loss (Full Assoc)</field>
@@ -548,4 +548,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

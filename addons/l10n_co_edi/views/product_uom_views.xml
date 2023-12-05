@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="product_uom_only_form_view_inherit_l10n_co_edi" model="ir.ui.view">
             <field name="name">uom.uom.form.l10n_co_edi</field>
@@ -22,4 +22,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

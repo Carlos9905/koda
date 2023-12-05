@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mx_edi_trailer" model="l10n_mx_edi.trailer">
         <field name="name">T12314</field>
         <field name="sub_type">CTR002</field>
@@ -21,4 +21,4 @@
         <field name="figure_ids" eval="[(6,0,[ref('mx_edi_figure_1')])]"/>
         <field name="trailer_ids" eval="[(6,0,[ref('mx_edi_trailer')])]"/>
     </record>
-</odoo>
+</koda>

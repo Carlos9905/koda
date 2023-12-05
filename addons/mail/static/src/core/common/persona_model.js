@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { AND, Record } from "@mail/core/common/record";
 

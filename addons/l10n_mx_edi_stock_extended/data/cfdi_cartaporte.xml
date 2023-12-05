@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="cfdi_cartaporte_comex" inherit_id="l10n_mx_edi_stock.cfdi_cartaporte">
 
         <xpath expr="//*[local-name()='Ubicacion' and @TipoUbicacion='Destino']/*[local-name()='Domicilio']" position="attributes">
@@ -33,4 +33,4 @@
         </xpath>
 
     </template>
-</odoo>
+</koda>

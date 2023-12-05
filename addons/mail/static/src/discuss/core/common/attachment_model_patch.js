@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Attachment } from "@mail/core/common/attachment_model";
 

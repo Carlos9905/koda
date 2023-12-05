@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="res_company_pl" model="res.company">
         <field name="name">My Polish Company</field>
         <field name="currency_id" ref="base.EUR"/>
@@ -144,4 +144,4 @@
     <record id="hr_employee_antonina" model="hr.employee">
         <field name="contract_id" ref="l10n_pl_hr_payroll.hr_contract_cdi_antonina"/>
     </record>
-</odoo>
+</koda>

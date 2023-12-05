@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="ir_rule_l10n_be_dmfa_multi_company" model="ir.rule">
         <field name="name">HR Payroll BE DMFA: Multi Company</field>
@@ -37,4 +37,4 @@
         <field name="domain_force">[('sheet_id.company_id', 'in', company_ids)]</field>
     </record>
 
-</odoo>
+</koda>

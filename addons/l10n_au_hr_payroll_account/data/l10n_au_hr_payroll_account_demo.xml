@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_au_hr_payroll.res_company_au" model="res.company">
         <field name="currency_id" ref="base.AUD"/>
         <field name="street">Darling Street</field>
@@ -191,4 +191,4 @@
             <value model="res.company" eval="obj().env.ref('l10n_au_hr_payroll.res_company_au')"/>
         </function>
     </data>
-</odoo>
+</koda>

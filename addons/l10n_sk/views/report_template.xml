@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="l10n_sk_external_layout_standard" inherit_id="web.external_layout_standard">
         <xpath expr="//ul[@name='company_address_list']" position="inside">
             <li t-if="company.vat and company.account_fiscal_country_id.code == 'SK'">
@@ -59,4 +59,4 @@
             </li>
         </xpath>
     </template>
-</odoo>
+</koda>

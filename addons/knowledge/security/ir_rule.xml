@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <!-- ARTICLE -->
     <record id="rule_knowledge_article_system" model="ir.rule">
         <field name="name">Articles: System = CRUD on all articles</field>
@@ -118,4 +118,4 @@
         <field name="groups" eval="[(4, ref('base.group_user')), (4, ref('base.group_portal'))]"/>
         <field name="perm_read" eval="False"/>
     </record>
-</odoo>
+</koda>

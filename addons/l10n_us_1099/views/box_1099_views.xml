@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="box_1099_view_tree" model="ir.ui.view">
             <field name="name">1099 Box</field>
@@ -18,4 +18,4 @@
 
         <menuitem id="box_1099_menu" parent="account.account_account_menu" action="box_1099_action"/>
     </data>
-</odoo>
+</koda>

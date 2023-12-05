@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="res_partner_2" model="res.partner">
         <field name="name">General public customer</field>
         <field name="country_id" ref="base.pe"/>
@@ -23,4 +23,4 @@
         <field name="l10n_pe_edi_provider_password">MODDATOS</field>
         <field name="l10n_pe_edi_test_env">True</field>
     </record>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { DocumentSelector } from '@web_editor/components/media_dialog/document_selector';
 import { TABS } from '@web_editor/components/media_dialog/media_dialog';

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="input_leave_loading_lump" model="hr.payslip.input.type">
         <field name="name">Leave loading lump sum</field>
         <field name="code">LEAVE.LOAD</field>
@@ -270,4 +270,4 @@
         <field name="code">EXTRA</field>
         <field name="country_id" ref="base.au"/>
     </record>
-</odoo>
+</koda>

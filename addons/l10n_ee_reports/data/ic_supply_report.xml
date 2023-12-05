@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <!-- Display EC Sales List Report Menu Item -->
         <record model="ir.ui.menu" id="account_reports.menu_action_account_report_sales">
@@ -45,4 +45,4 @@
             </record>
         </field>
     </record>
-</odoo>
+</koda>

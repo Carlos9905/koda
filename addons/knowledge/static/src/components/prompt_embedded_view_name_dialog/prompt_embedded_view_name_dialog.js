@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { Dialog } from "@web/core/dialog/dialog";
 import {
     Component,
     onMounted,
-    useRef } from "@odoo/owl";
+    useRef } from "@koda/owl";
 
 export class PromptEmbeddedViewNameDialog extends Component {
     /**

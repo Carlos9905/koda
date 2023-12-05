@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from '@odoo/owl';
+import { Component } from '@koda/owl';
 import { renderToElement } from "@web/core/utils/render";
 import { Wysiwyg } from '@web_editor/js/wysiwyg/wysiwyg';
 import { PromptEmbeddedViewNameDialog } from '@knowledge/components/prompt_embedded_view_name_dialog/prompt_embedded_view_name_dialog';
@@ -8,7 +8,7 @@ import {
     isSelectionInSelectors,
     preserveCursor,
     setCursorEnd,
-} from "@web_editor/js/editor/odoo-editor/src/utils/utils";
+} from "@web_editor/js/editor/koda-editor/src/utils/utils";
 import { VideoSelectorDialog } from '@knowledge/components/video_selector_dialog/video_selector_dialog';
 import { ArticleSelectionBehaviorDialog } from '@knowledge/components/behaviors/article_behavior_dialog/article_behavior_dialog';
 import {
@@ -403,7 +403,7 @@ patch(Wysiwyg.prototype, {
      * Inserts an item calendar view
      */
     _insertItemCalendar: function () {
-        const { ItemCalendarPropsDialog } = odoo.loader.modules.get("@knowledge/components/item_calendar_props_dialog/item_calendar_props_dialog");
+        const { ItemCalendarPropsDialog } = koda.loader.modules.get("@knowledge/components/item_calendar_props_dialog/item_calendar_props_dialog");
         const restoreSelection = preserveCursor(this.odooEditor.document);
         // Shows a dialog allowing the user to set the itemCalendarProps
         // (properties used by the itemCalendar view)

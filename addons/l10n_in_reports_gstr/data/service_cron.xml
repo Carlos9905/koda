@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="ir_cron_auto_refresh_gst_token" model="ir.cron">
         <field name="name">Indian Accounting: Refresh GST Token</field>
         <field name="model_id" ref="model_l10n_in_gst_return_period"/>
@@ -59,4 +59,4 @@ env.ref("l10n_in_reports_gstr.ir_cron_auto_match_gstr2b_data")._trigger()
         <field name="doall" eval="False"/>
     </record>
 
-</odoo>
+</koda>

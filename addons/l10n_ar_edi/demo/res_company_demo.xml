@@ -1,4 +1,4 @@
-<odoo>
+<koda>
 
     <record id="l10n_ar.company_ri" model="res.company">
         <field name='l10n_ar_afip_ws_environment'>testing</field>
@@ -74,4 +74,4 @@
         
     </data>
 
-</odoo>
+</koda>

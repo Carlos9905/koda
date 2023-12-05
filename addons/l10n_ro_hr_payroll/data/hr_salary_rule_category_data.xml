@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_ro_cas_category" model="hr.salary.rule.category">
         <field name="name">Security Contribution (CAS)</field>
         <field name="code">CAS</field>
@@ -32,4 +32,4 @@
         <field name="name">Pension Contribution</field>
         <field name="code">PENSION</field>
     </record>
-</odoo>
+</koda>

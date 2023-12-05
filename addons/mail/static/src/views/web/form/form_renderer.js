@@ -1,9 +1,9 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { AttachmentView } from "@mail/core/common/attachment_view";
 import { Chatter } from "@mail/core/web/chatter";
 
-import { onMounted, onWillUnmount, useState } from "@odoo/owl";
+import { onMounted, onWillUnmount, useState } from "@koda/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { SIZES } from "@web/core/ui/ui_service";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_be_work_entry_daily_benefit_report_search" model="ir.ui.view">
         <field name="name">l10n_be.work.entry.daily.benefit.report.search</field>
         <field name="model">l10n_be.work.entry.daily.benefit.report</field>
@@ -38,4 +38,4 @@
         parent="l10n_be_hr_payroll.menu_reporting_l10n_be"
         sequence="21"
     />
-</odoo>
+</koda>

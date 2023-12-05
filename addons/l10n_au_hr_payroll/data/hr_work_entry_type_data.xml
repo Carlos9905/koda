@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Time Off Entries -->
     <record id="l10n_au_work_entry_type_other" model="hr.work.entry.type">
         <field name="name">Other Paid Leave</field>
@@ -73,4 +73,4 @@
         <field name="color">4</field>
         <field name="code">l10n_au_overtime_sunday_pto</field>
     </record>
-</odoo>
+</koda>

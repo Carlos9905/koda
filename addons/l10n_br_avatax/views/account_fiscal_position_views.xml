@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="account_fiscal_position_form_inherit" model="ir.ui.view">
         <field name="name">account.fiscal.position.form.inherit</field>
         <field name="model">account.fiscal.position</field>
@@ -10,4 +10,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

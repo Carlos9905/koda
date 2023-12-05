@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { endKnowledgeTour, openCommandBar } from '../knowledge_tour_utils.js';
@@ -12,7 +12,7 @@ registry.category("web_tour.tours").add('knowledge_table_of_content_command_tour
     // open the Knowledge App
     trigger: '.o_app[data-menu-xmlid="knowledge.knowledge_menu_root"]',
 }, { // open the command bar
-    trigger: '.odoo-editor-editable > p',
+    trigger: '.koda-editor-editable > p',
     run: function () {
         openCommandBar(this.$anchor[0]);
     },
@@ -22,7 +22,7 @@ registry.category("web_tour.tours").add('knowledge_table_of_content_command_tour
 }, { // wait for the block to appear in the editor
     trigger: '.o_knowledge_behavior_type_toc',
 }, { // insert a few titles in the editor
-    trigger: '.odoo-editor-editable > p',
+    trigger: '.koda-editor-editable > p',
     run: function () {
         const $anchor = $(this.$anchor[0]);
         $anchor.append([
@@ -61,7 +61,7 @@ registry.category("web_tour.tours").add('knowledge_table_of_content_command_tour
     trigger: '.o_knowledge_more_options_panel.show .btn-lock',
     run: 'click',
 }, { // check that we are in edit mode
-    trigger: '.o_field_html .odoo-editor-editable',
+    trigger: '.o_field_html .koda-editor-editable',
     run: () => {},
 }, ...endKnowledgeTour()
 ]});

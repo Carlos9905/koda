@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="KE_UT_ALW" model="hr.salary.rule.category">
         <field name="name">Untaxed Allowance</field>
@@ -54,4 +54,4 @@
         <field name="name">Hidden Content for Calculation Purpose</field>
         <field name="code">HIDDEN</field>
     </record>
-</odoo>
+</koda>

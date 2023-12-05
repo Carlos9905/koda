@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_department_rdbe" model="hr.department">
         <field name="name">RD BE</field>
         <field name="company_id" ref="l10n_be_hr_payroll.res_company_be"/>
@@ -253,4 +253,4 @@
         <field name="phone">+0032 81 00 10</field>
     </record>
 
-</odoo>
+</koda>

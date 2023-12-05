@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <record id="view_l10n_us_1099_wizard" model="ir.ui.view">
         <field name="name">Update the current value of the Goal</field>
         <field name="model">l10n_us_1099.wizard</field>
@@ -39,4 +39,4 @@
     </record>
 
     <menuitem action="view_l10n_us_1099_wizard_act_window" id="menu_action_view_l10n_us_1099_wizard" name="1099 Report" sequence="20" parent="account.account_reports_management_menu"/>
-</odoo>
+</koda>

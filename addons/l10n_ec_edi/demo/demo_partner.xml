@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="demo_partner_l10n_ec_edi" model="res.partner">
         <field name="name">Amigo Andrés</field>
         <field name="street">42 Avenida Machala</field>
@@ -20,4 +20,4 @@
         <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc"/>
         <field name="l10n_ec_taxpayer_type_id" ref="l10n_ec_taxpayer_type_01"/>
     </record>
-</odoo>
+</koda>

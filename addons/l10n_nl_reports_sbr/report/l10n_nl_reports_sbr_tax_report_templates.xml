@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
         <template id="tax_report_sbr">
             <!-- XBRL instance based on taxonomy report namespace http://www.nltaxonomie.nl/nt16/bd/20211208/entrypoints/bd-rpt-ob-aangifte-2022.xsd -->
@@ -57,4 +57,4 @@
             </xbrli:xbrl>
         </template>
     </data>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { OR, Record } from "@mail/core/common/record";
 

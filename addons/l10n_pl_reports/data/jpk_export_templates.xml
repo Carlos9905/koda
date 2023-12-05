@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <template id="jpk_export_monthly_template">
         <JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2021/06/08/eD/DefinicjeTypy/" t-attf-xmlns="#{xmlns}">
             <Naglowek>
@@ -244,4 +244,4 @@
                 </Naglowek>
                 </xpath>
     </template>
-</odoo>
+</koda>

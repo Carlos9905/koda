@@ -1,9 +1,9 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Composer } from "@mail/core/common/composer";
 import { markEventHandled } from "@web/core/utils/misc";
 
-import { useRef, useState } from "@odoo/owl";
+import { useRef, useState } from "@koda/owl";
 
 import { useService } from "@web/core/utils/hooks";
 import { patch } from "@web/core/utils/patch";

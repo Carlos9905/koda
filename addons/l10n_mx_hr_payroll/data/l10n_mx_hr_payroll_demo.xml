@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="res_company_mx" model="res.company">
         <field name="name">My Mexican Company</field>
         <field name="currency_id" ref="base.MXN"/>
@@ -152,4 +152,4 @@
     <record id="hr_employee_elvera" model="hr.employee">
         <field name="contract_id" ref="l10n_mx_hr_payroll.hr_contract_cdi_elvera"/>
     </record>
-</odoo>
+</koda>

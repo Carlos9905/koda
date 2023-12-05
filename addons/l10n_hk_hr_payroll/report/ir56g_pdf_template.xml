@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="report_ir56g">
         <t t-call="web.basic_layout" t-if="report_data">
             <t t-foreach="docs" t-as="employee">
@@ -560,4 +560,4 @@
         </t>
     </template>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { evaluateExpr } from "@web/core/py_js/py";
 import { registry } from "@web/core/registry";

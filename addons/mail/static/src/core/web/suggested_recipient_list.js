@@ -1,8 +1,8 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { SuggestedRecipient } from "@mail/core/web/suggested_recipient";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 /**
  * @typedef {Object} Props

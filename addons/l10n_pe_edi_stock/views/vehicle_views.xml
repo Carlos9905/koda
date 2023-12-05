@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="vehicle_list_action" model="ir.actions.act_window">
         <field name="name">vehicles</field>
         <field name="res_model">l10n_pe_edi.vehicle</field>
@@ -75,4 +75,4 @@
         sequence="100" groups="stock.group_stock_manager"/>
     <menuitem action="l10n_pe_edi_vehicle_actions" id="menu_stock_pe_vehicles" name="Vehicles" parent="menu_stock_config_settings_pe"
         groups="stock.group_stock_manager"/>
-</odoo>
+</koda>

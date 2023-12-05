@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_salary_rule_student_regular_pay_solidarity_cotisation" model="hr.salary.rule">
         <field name="category_id" ref="l10n_be_hr_payroll.hr_payroll_head_onss"/>
         <field name="name">Solidarity Cotisation - Student Job</field>
@@ -62,4 +62,4 @@ else:
         <field name="appears_on_payslip" eval="False"/>
         <field name="appears_on_employee_cost_dashboard" eval="True"/>
     </record>
-</odoo>
+</koda>

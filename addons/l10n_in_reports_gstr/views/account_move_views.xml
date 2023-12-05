@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <record id="view_account_move_form_inherit_account" model="ir.ui.view">
         <field name="name">account.move.form.inherit.account</field>
         <field name="model">account.move</field>
@@ -27,4 +27,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

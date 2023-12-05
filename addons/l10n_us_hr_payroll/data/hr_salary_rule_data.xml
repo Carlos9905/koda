@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_us_employee_salary_commission" model="hr.salary.rule">
         <field name="category_id" ref="hr_payroll.ALW"/>
         <field name="name">Commission</field>
@@ -897,4 +897,4 @@ result_name = inputs['ALLOCATEDTIPS'].name
         <field name="struct_id" ref="l10n_us_hr_payroll.hr_payroll_structure_us_employee_salary"/>
     </record>
 
-</odoo>
+</koda>

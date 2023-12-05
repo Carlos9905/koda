@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { KnowledgeSearchModel } from "@knowledge/search_model/search_model";
 import { View } from "@web/views/view";

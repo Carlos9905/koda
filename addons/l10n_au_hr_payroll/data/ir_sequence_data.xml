@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="l10n_au_payevent_transaction_sequence" model="ir.sequence">
             <field name="name">PayEvent.0004 Transaction Sequence</field>
@@ -11,4 +11,4 @@
             <field name="number_next_actual">1</field>
         </record>
     </data>
-</odoo>
+</koda>

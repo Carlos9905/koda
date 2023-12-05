@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="sri_key_type_tree_view" model="ir.ui.view">
         <field name="name">l10n.ec.certificate.tree</field>
         <field name="model">l10n_ec_edi.certificate</field>
@@ -79,4 +79,4 @@
         action="sri_key_type_action"
         groups="base.group_system"
     />
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_be_double_pay_recovery_line_view_tree" model="ir.ui.view">
         <field name="name">l10n.be.double.pay.recovery.line.view.tree</field>
         <field name="model">l10n.be.double.pay.recovery.line</field>
@@ -33,4 +33,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

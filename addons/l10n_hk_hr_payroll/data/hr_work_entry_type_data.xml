@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="work_entry_type_sick_leave_80" model="hr.work.entry.type">
         <field name="name">Sick Leave 80%</field>
         <field name="code">HKLEAVE111</field>
@@ -80,4 +80,4 @@
         <field name="is_leave" eval="True" />
         <field name="color">10</field>
     </record>
-</odoo>
+</koda>

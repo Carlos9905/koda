@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { AND, Record } from "@mail/core/common/record";
 import { ScrollPosition } from "@mail/core/common/scroll_position";

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<odoo>
+<koda>
     <data>
         <record id="l10n_cl_edi_email_template_picking" model="mail.template">
             <field name="name">DTE - Send by Email</field>
@@ -28,4 +28,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

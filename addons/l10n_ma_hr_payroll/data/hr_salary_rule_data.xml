@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <data>
         <!-- BASIC -->
         <function model="hr.salary.rule" name="write">
@@ -361,4 +361,4 @@ if virtual_net > min:
             <value eval="{'amount_python_compute': &quot;result = result_rules['GROSS']['total'] - categories['DED'] - result_rules['NET_INCOME_TAX']['total']&quot;}"/>
         </function>
     </data>
-</odoo>
+</koda>

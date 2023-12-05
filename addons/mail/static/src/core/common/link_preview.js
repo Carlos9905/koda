@@ -1,8 +1,8 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { LinkPreviewConfirmDelete } from "@mail/core/common/link_preview_confirm_delete";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

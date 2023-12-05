@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Chrome } from "@point_of_sale/app/pos_app";
 import { patch } from "@web/core/utils/patch";
 import { ClosePosPopup } from "@point_of_sale/app/navbar/closing_popup/closing_popup";
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@koda/owl";
 
 patch(Chrome.prototype, {
     setup() {

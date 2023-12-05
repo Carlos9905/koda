@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_mx.product_uom_service_unit" model="uom.uom">
         <field name="unspsc_code_id" ref="product_unspsc.unspsc_code_E48"/>
     </record>
@@ -9,4 +9,4 @@
     <record id="l10n_mx.product_uom_job" model="uom.uom">
         <field name="unspsc_code_id" ref="product_unspsc.unspsc_code_E51"/>
     </record>
-</odoo>
+</koda>

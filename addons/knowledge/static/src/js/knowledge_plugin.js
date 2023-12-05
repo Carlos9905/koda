@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from '@web/core/l10n/translation';
 import { decodeDataBehaviorProps, getVideoUrl } from '@knowledge/js/knowledge_utils';
@@ -28,7 +28,7 @@ export class KnowledgePlugin {
      *     they serve no real purpose other than highlight the text or decorate it temporarily.
      * (2) When saving the document, the sanitizer discards the video iframe
      *     from the document. As a result, people reading the article outside
-     *     of the odoo backend will not be able to see and access the video.
+     *     of the koda backend will not be able to see and access the video.
      *     To solve that issue, we will replace the iframe with a link before
      *     saving.
      * @param {Element} editable

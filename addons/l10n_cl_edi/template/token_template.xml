@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<odoo>
+<koda>
     <data>
         <template id="token_template">
             <getToken>
@@ -9,4 +9,4 @@
             </getToken>
         </template>
     </data>
-</odoo>
+</koda>

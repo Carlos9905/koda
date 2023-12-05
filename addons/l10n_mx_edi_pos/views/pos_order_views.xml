@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="pos_order_form_inherit_l10n_mx_edi" model="ir.ui.view">
         <field name="name">pos.order.form</field>
         <field name="model">pos.order</field>
@@ -88,4 +88,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

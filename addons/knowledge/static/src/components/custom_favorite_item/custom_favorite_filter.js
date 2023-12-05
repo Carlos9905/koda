@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { CustomFavoriteItem } from "@web/search/custom_favorite_item/custom_favorite_item";
 import { patch } from "@web/core/utils/patch";

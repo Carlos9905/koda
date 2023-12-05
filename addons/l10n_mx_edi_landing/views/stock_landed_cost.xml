@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record model="ir.ui.view" id="view_stock_landed_cost_form_l10n_mx_stock">
         <field name="name">view.stock.landed.cost.form.l10n_mx_stock</field>
         <field name="model">stock.landed.cost</field>
@@ -20,4 +20,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

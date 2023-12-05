@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { standardWidgetProps } from '@web/views/widgets/standard_widget_props';
 
 import { PropertiesField } from '@web/views/fields/properties/properties_field';
 
-import { Component, useRef, useState } from '@odoo/owl';
+import { Component, useRef, useState } from '@koda/owl';
 
 export class KnowledgeArticleProperties extends Component {
     static template = 'knowledge.KnowledgeArticleProperties';

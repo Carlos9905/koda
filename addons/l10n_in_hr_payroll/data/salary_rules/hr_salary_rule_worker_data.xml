@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_salary_worker_trans_allownce" model="hr.salary.rule">
         <field name="code">TCA</field>
         <field name="name">Transport/Conveyance Allownace</field>
@@ -47,4 +47,4 @@ else:
         <field name="note">Workers living in states that impose the professional tax must submit a payment each half-year for the right to practice a profession or trade. It applies equally to employees who work for the national or state government, and those employed by private corporations. The professional tax uses a six-month accounting system, which divides the year into two periods, beginning on April 1 and October 1.</field>
         <field name="struct_id" ref="structure_worker_0001"/>
     </record>
-</odoo>
+</koda>

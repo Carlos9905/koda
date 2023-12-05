@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="demo_agent_lu" model="res.partner">
         <field name="name">Fiduciary LU</field>
         <field name="company_type">company</field>
@@ -19,4 +19,4 @@
         <field name="ecdf_prefix">ABCD12</field>
         <field name="account_representative_id" ref="l10n_lu_reports.demo_agent_lu"/>
     </record>
-</odoo>
+</koda>

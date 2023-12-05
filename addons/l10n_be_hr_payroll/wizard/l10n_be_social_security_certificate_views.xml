@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_be_social_security_certificate_view_form" model="ir.ui.view">
         <field name="name">l10n.be.social.security.certificate.view.form</field>
         <field name="model">l10n.be.social.security.certificate</field>
@@ -47,4 +47,4 @@
         sequence="501"
     />
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { endKnowledgeTour, makeVisible } from './knowledge_tour_utils.js';
 import { registry } from "@web/core/registry";

@@ -1,9 +1,9 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Message } from "@mail/core/common/message";
 import { useVisible } from "@mail/utils/common/hooks";
 
-import { Component, useState, useSubEnv } from "@odoo/owl";
+import { Component, useState, useSubEnv } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 

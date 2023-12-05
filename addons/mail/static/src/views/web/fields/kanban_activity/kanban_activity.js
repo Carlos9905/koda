@@ -1,8 +1,8 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { ActivityButton } from "@mail/core/web/activity_button";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 import { registry } from "@web/core/registry";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";

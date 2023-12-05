@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_ch_social_insurance_view_tree" model="ir.ui.view">
         <field name="name">l10n.ch.social.insurance.view.tree</field>
         <field name="model">l10n.ch.social.insurance</field>
@@ -63,4 +63,4 @@
         <field name="res_model">l10n.ch.social.insurance</field>
         <field name="view_mode">tree,form</field>
     </record>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="product_product_quote_despacho" model="product.product">
         <field name="name">Import Clearance</field>
@@ -110,4 +110,4 @@
         <field name="standard_price">4500.0</field>
     </record>
 
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="cfdicoa">
             <catalogocuentas:Catalogo
@@ -21,4 +21,4 @@
             </catalogocuentas:Catalogo>
        </template>
     </data>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/**@odoo-module */
+/**@koda-module */
 /*
  *  Convert a timestamp measured in seconds since the Unix epoch. String format returned YYYY-MM-DDThh:mm:ss
  */

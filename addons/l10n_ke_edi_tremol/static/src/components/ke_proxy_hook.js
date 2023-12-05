@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 
@@ -25,7 +25,7 @@ export function useKEProxy({onAllSent}) {
      */
     async function postInvoices(invoices) {
 
-        // Ping the server to prevent posting to the device when there is no connection to the odoo server
+        // Ping the server to prevent posting to the device when there is no connection to the koda server
         try {
             await rpc("/web/webclient/version_info", {});
         } catch (e) {

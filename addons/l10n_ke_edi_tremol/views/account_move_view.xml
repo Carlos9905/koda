@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <record id="l10n_ke_inherit_account_move_form" model="ir.ui.view">
             <field name="name">l10n.ke.inherit.account.move.form</field>
@@ -68,4 +68,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="cp200_pfi_atn_internet" model="hr.salary.rule">
         <field name="category_id" ref="hr_payroll_head_div_impos"/>
         <field name="name">Benefit in Kind (Internet)</field>
@@ -167,4 +167,4 @@ result = -result_rules['ATN.LAP']['amount']
         <field name="partner_id" ref="res_partner_meal_vouchers"/>
         <field name="struct_id" ref="hr_payroll_structure_cp200_pfi"/>
     </record>
-</odoo>
+</koda>

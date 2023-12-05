@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <data>
 
         <record model="ir.ui.view" id="view_prod_form_inh_l10n_mx">
@@ -16,4 +16,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { registry } from "@web/core/registry";
 import { TaxTotalsComponent } from "@account/components/tax_totals/tax_totals";
 

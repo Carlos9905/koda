@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { loadEmoji } from "@web/core/emoji_picker/emoji_picker";
 import {
     useComponent,
     useEffect,
     useRef,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 
 // List of icons that should be avoided when adding a random icon
@@ -64,7 +64,7 @@ export function copyOids(source, destination) {
     }
     const overrideOids = function (original, copy) {
         if (!copy || !original) {
-            if (odoo.debug) {
+            if (koda.debug) {
                 console.warn(`Oids synchronization failed, mismatch between source and destination nodes. Some elements may not be shared properly in collaboration.`);
             }
             return;

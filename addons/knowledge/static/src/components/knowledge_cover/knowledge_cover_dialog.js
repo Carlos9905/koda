@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { AutoResizeImage, ImageSelector } from '@web_editor/components/media_dialog/image_selector';
@@ -6,7 +6,7 @@ import { ConfirmationDialog } from '@web/core/confirmation_dialog/confirmation_d
 import { Dialog } from '@web/core/dialog/dialog';
 import { UnsplashError } from '@web_unsplash/components/media_dialog/image_selector';
 import { useService, useChildRef } from "@web/core/utils/hooks";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class AutoResizeCover extends AutoResizeImage {
     setup() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="oss_sales_report" model="account.report">
         <field name="name">OSS Sales</field>
@@ -35,4 +35,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

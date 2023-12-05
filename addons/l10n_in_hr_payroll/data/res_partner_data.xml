@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_houserent_allowance_register" model="res.partner">
         <field name="name">Register for House Rent Allowance</field>
     </record>
@@ -51,4 +51,4 @@
     <record id="hr_other_deduction_register" model="res.partner">
         <field name="name">Register for Other Deduction from Employer</field>
     </record>
-</odoo>
+</koda>

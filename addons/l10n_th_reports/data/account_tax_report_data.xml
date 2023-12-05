@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_th.tax_report_pnd53" model="account.report">
         <field name="custom_handler_model_id" ref="model_l10n_th_pnd53_report_handler"/>
     </record>
@@ -9,4 +9,4 @@
     <record id="l10n_th.tax_report_pnd3" model="account.report">
         <field name="custom_handler_model_id" ref="model_l10n_th_pnd3_report_handler"/>
     </record>
-</odoo>
+</koda>

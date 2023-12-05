@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 import { patch } from "@web/core/utils/patch";
 import { useService } from "@web/core/utils/hooks";
 import { GifPicker } from "@mail/discuss/gif_picker/common/gif_picker";

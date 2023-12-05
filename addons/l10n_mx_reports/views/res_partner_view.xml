@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
 
         <record  model="ir.ui.view" id="res_partner_account_diot_form_oml">
@@ -18,4 +18,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

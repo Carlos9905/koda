@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractBehavior } from "@knowledge/components/behaviors/abstract_behavior/abstract_behavior";
 import { EmbeddedViewManager } from "@knowledge/components/behaviors/embedded_view_behavior/embedded_view_manager";
@@ -16,7 +16,7 @@ import {
     onWillDestroy,    
     useExternalListener,
     useState,
-    useSubEnv } from "@odoo/owl";
+    useSubEnv } from "@koda/owl";
 
 /**
  * This component will have the responsibility to load the embedded view lazily

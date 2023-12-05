@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Avatar } from "@mail/views/web/fields/avatar/avatar";
 import { start } from "@mail/../tests/helpers/test_utils";

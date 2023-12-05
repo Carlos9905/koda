@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
         <!--   Saudi Employee Rules     -->
         <record id="ksa_saudi_housing_allowance_salary_rule" model="hr.salary.rule">
@@ -207,4 +207,4 @@ result = (contract.l10n_sa_number_of_days / 12) * ((contract.wage + contract.l10
             <field name="struct_id" ref="l10n_sa_hr_payroll.ksa_expat_employee_payroll_structure"/>
         </record>
     </data>
-</odoo>
+</koda>

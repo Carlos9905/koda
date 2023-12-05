@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_be_274_XX_view_form" model="ir.ui.view">
         <field name="name">l10n_be.274_xx.view.form</field>
         <field name="model">l10n_be.274_xx</field>
@@ -111,4 +111,4 @@
         parent="l10n_be_hr_payroll.menu_reporting_l10n_be"
         sequence="91"
     />
-</odoo>
+</koda>

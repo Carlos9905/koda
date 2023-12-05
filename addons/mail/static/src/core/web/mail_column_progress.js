@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ColumnProgress } from "@web/views/view_components/column_progress";
 

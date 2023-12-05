@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="consumidor_final_customer" model="res.partner">
             <field name="name">Consumidor Final</field>
@@ -10,4 +10,4 @@
             <field name="l10n_co_edi_obligation_type_ids" eval="[(4, ref('obligation_type_5'))]"/>
         </record>
     </data>
-</odoo>
+</koda>

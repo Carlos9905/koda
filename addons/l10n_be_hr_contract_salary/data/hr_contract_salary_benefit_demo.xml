@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Non Financial Benefits -->
     <record id="l10n_be_free_lunch" model="hr.contract.salary.benefit">
         <field name="name">Free Lunch</field>
@@ -50,4 +50,4 @@
         <field name="icon">fa fa-clock-o</field>
         <field name="description">2 days / week home working and flexible hours at the office.</field>
     </record>
-</odoo>
+</koda>

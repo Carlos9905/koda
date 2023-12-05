@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { HIGHLIGHT_CLASS, searchHighlight } from "@mail/core/common/message_search_hook";
 import { triggerHotkey } from "@web/../tests/helpers/utils";
@@ -12,55 +12,55 @@ QUnit.module("Search highlight test", {});
 QUnit.test("Search highlight", async (assert) => {
     const testCases = [
         {
-            input: "test odoo",
-            output: `test <span class="${HIGHLIGHT_CLASS}">odoo</span>`,
-            searchTerm: "odoo",
+            input: "test koda",
+            output: `test <span class="${HIGHLIGHT_CLASS}">koda</span>`,
+            searchTerm: "koda",
         },
         {
-            input: '<a href="https://www.odoo.com">https://www.odoo.com</a>',
-            output: `<a href="https://www.odoo.com">https://www.<span class="${HIGHLIGHT_CLASS}">odoo</span>.com</a>`,
-            searchTerm: "odoo",
+            input: '<a href="https://www.koda.com">https://www.koda.com</a>',
+            output: `<a href="https://www.koda.com">https://www.<span class="${HIGHLIGHT_CLASS}">koda</span>.com</a>`,
+            searchTerm: "koda",
         },
         {
-            input: '<a href="https://www.odoo.com">Odoo</a>',
-            output: `<a href="https://www.odoo.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span></a>`,
-            searchTerm: "odoo",
+            input: '<a href="https://www.koda.com">Odoo</a>',
+            output: `<a href="https://www.koda.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span></a>`,
+            searchTerm: "koda",
         },
         {
-            input: '<a href="https://www.odoo.com">Odoo</a> Odoo is a free software',
-            output: `<a href="https://www.odoo.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span></a> <span class="${HIGHLIGHT_CLASS}">Odoo</span> is a free software`,
-            searchTerm: "odoo",
+            input: '<a href="https://www.koda.com">Odoo</a> Odoo is a free software',
+            output: `<a href="https://www.koda.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span></a> <span class="${HIGHLIGHT_CLASS}">Odoo</span> is a free software`,
+            searchTerm: "koda",
         },
         {
-            input: "odoo is a free software",
-            output: `<span class="${HIGHLIGHT_CLASS}">odoo</span> is a free software`,
-            searchTerm: "odoo",
+            input: "koda is a free software",
+            output: `<span class="${HIGHLIGHT_CLASS}">koda</span> is a free software`,
+            searchTerm: "koda",
         },
         {
             input: "software ODOO is a free",
             output: `software <span class="${HIGHLIGHT_CLASS}">ODOO</span> is a free`,
-            searchTerm: "odoo",
+            searchTerm: "koda",
         },
         {
             input: `<ul>
                 <li>Odoo</li>
-                <li><a href="https://odoo.com">Odoo ERP</a> Best ERP</li>
+                <li><a href="https://koda.com">Odoo ERP</a> Best ERP</li>
             </ul>`,
             output: `<ul>
                 <li><span class="${HIGHLIGHT_CLASS}">Odoo</span></li>
-                <li><a href="https://odoo.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span> ERP</a> Best ERP</li>
+                <li><a href="https://koda.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span> ERP</a> Best ERP</li>
             </ul>`,
-            searchTerm: "odoo",
+            searchTerm: "koda",
         },
         {
             input: "test <strong>Odoo</strong> test",
             output: `<span class="${HIGHLIGHT_CLASS}">test</span> <strong><span class="${HIGHLIGHT_CLASS}">Odoo</span></strong> <span class="${HIGHLIGHT_CLASS}">test</span>`,
-            searchTerm: "odoo test",
+            searchTerm: "koda test",
         },
         {
             input: "test <br> test",
             output: `<span class="${HIGHLIGHT_CLASS}">test</span> <br> <span class="${HIGHLIGHT_CLASS}">test</span>`,
-            searchTerm: "odoo test",
+            searchTerm: "koda test",
         },
         {
             input: "<strong>test</strong> test",

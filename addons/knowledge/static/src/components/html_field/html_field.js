@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { HtmlField, htmlField } from "@web_editor/js/backend/html_field";
 import { patch } from "@web/core/utils/patch";
@@ -19,7 +19,7 @@ import {
     onWillUpdateProps,
     useEffect,
     useRef,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 // Behaviors:
 
@@ -723,7 +723,7 @@ const HtmlFieldPatch = {
     },
     async _lazyloadWysiwyg() {
         await super._lazyloadWysiwyg(...arguments);
-        let wysiwygModule = await odoo.loader.modules.get('@knowledge/js/wysiwyg');
+        let wysiwygModule = await koda.loader.modules.get('@knowledge/js/wysiwyg');
         if (!wysiwygModule) {
             await loadBundle('knowledge.assets_wysiwyg');
         }

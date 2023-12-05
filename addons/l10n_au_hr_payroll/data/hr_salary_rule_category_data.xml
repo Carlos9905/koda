@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="rule_category_conditions_qualifications_duties" model="hr.salary.rule.category">
         <field name="name">Working conditions, qualifications or special duties</field>
         <field name="code">ALW.CQD</field>
@@ -97,4 +97,4 @@
         <field name="code">SALARY.SACRIFICE</field>
         <field name="parent_id" ref="hr_payroll.DED"/>
     </record>
-</odoo>
+</koda>

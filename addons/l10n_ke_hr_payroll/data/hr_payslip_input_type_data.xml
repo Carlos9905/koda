@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="input_fixed_bonus" model="hr.payslip.input.type">
         <field name="name">Fixed Bonus</field>
         <field name="code">BONUS</field>
@@ -34,4 +34,4 @@
         <field name="country_id" ref="base.ke"/>
         <field name="struct_ids" eval="[(4, ref('l10n_ke_hr_payroll.hr_payroll_structure_ken_employee_salary'))]"/>
     </record>
-</odoo>
+</koda>

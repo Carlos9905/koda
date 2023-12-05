@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_in_gst_return_period_tree_view" model="ir.ui.view">
         <field name="name">l10n_in.gst.return.period.tree</field>
         <field name="model">l10n_in.gst.return.period</field>
@@ -160,7 +160,7 @@
                     </div>
 
                     <p class="text-end">
-                        Need help? <a href="https://www.odoo.com/documentation/17.0/applications/finance/accounting/fiscal_localizations/localizations/india.html" target="_blank">Checkout our tutorial</a>
+                        Need help? <a href="https://www.koda.com/documentation/17.0/applications/finance/accounting/fiscal_localizations/localizations/india.html" target="_blank">Checkout our tutorial</a>
                     </p>
                 </sheet>
                 <div class="oe_chatter">
@@ -367,4 +367,4 @@
     </record>
 
     <menuitem id="gst_return_period_menu" name="GST Return Periods" action="l10n_in_gst_return_period_action" parent="l10n_in.account_reports_in_statements_menu" sequence="1"/>
-</odoo>
+</koda>

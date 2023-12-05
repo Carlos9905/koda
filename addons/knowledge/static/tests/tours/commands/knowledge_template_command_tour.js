@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { endKnowledgeTour, openCommandBar } from '../knowledge_tour_utils.js';
@@ -17,7 +17,7 @@ registry.category("web_tour.tours").add('knowledge_template_command_tour', {
     trigger: '.o_breadcrumb_article_name_container:contains("EditorCommandsArticle")',
     run: () => {},
 }, { // open the command bar
-    trigger: '.odoo-editor-editable > p',
+    trigger: '.koda-editor-editable > p',
     run: function () {
         openCommandBar(this.$anchor[0]);
     },
@@ -33,7 +33,7 @@ registry.category("web_tour.tours").add('knowledge_template_command_tour', {
     trigger: '.o_knowledge_behavior_type_embedded_view .o_last_breadcrumb_item:contains(Article Items)',
     run: () => {},
 }, { // open the command bar
-    trigger: '.odoo-editor-editable > p',
+    trigger: '.koda-editor-editable > p',
     run: function () {
         openCommandBar(this.$anchor[0]);
     },
@@ -98,7 +98,7 @@ registry.category("web_tour.tours").add('knowledge_template_command_tour', {
     trigger: '.o_knowledge_behavior_type_template button:contains(Use as)',
     run: 'click',
 }, { // check that the content of the template was inserted as description
-    trigger: '.o_form_sheet .o_field_html .odoo-editor-editable p:first-child:contains("Hello world")',
+    trigger: '.o_form_sheet .o_field_html .koda-editor-editable p:first-child:contains("Hello world")',
     run: () => {},
 }, ...endKnowledgeTour()
 ]});

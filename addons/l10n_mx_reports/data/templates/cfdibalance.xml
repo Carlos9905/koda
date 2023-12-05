@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="cfdibalance">
             <BCE:Balanza
@@ -22,4 +22,4 @@
             </BCE:Balanza>
        </template>
     </data>
-</odoo>
+</koda>

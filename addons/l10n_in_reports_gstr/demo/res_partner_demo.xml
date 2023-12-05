@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <!-- Registered Customer -->
     <record id="res_partner_registered_customer" model="res.partner">
         <field name="name">Registered Customer</field>
@@ -54,4 +54,4 @@
         <field name='vat'>24AACCT6304M1ZB</field>
     </record>
 
-</odoo>
+</koda>

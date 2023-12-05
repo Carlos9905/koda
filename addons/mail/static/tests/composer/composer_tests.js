@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 
@@ -319,7 +319,7 @@ QUnit.test(
 QUnit.test("add an emoji after a partner mention", async () => {
     const pyEnv = await startServer();
     const partnerId = pyEnv["res.partner"].create({
-        email: "testpartner@odoo.com",
+        email: "testpartner@koda.com",
         name: "TestPartner",
     });
     const channelId = pyEnv["discuss.channel"].create({
@@ -391,7 +391,7 @@ QUnit.test("pending mentions are kept when toggling composer", async () => {
 QUnit.test("composer suggestion should match with input selection", async () => {
     const pyEnv = await startServer();
     const partnerId = pyEnv["res.partner"].create({
-        email: "testpartner@odoo.com",
+        email: "testpartner@koda.com",
         name: "Luigi",
     });
     const channelId = pyEnv["discuss.channel"].create({
@@ -569,7 +569,7 @@ QUnit.test("quick edit last self-message from UP arrow", async () => {
 QUnit.test("Select composer suggestion via Enter does not send the message", async () => {
     const pyEnv = await startServer();
     const partnerId = pyEnv["res.partner"].create({
-        email: "shrek@odoo.com",
+        email: "shrek@koda.com",
         name: "Shrek",
     });
     pyEnv["res.users"].create({ partner_id: partnerId });
@@ -785,12 +785,12 @@ QUnit.test("remove an uploading attachment", async () => {
 QUnit.test("Show recipient list when there is more than 5 followers.", async () => {
     const pyEnv = await startServer();
     const partnerIds = pyEnv["res.partner"].create([
-        { name: "test name 1", email: "test1@odoo.com" },
-        { name: "test name 2", email: "test2@odoo.com" },
-        { name: "test name 3", email: "test3@odoo.com" },
-        { name: "test name 4", email: "test4@odoo.com" },
-        { name: "test name 5", email: "test5@odoo.com" },
-        { name: "test name 6", email: "test6@odoo.com" },
+        { name: "test name 1", email: "test1@koda.com" },
+        { name: "test name 2", email: "test2@koda.com" },
+        { name: "test name 3", email: "test3@koda.com" },
+        { name: "test name 4", email: "test4@koda.com" },
+        { name: "test name 5", email: "test5@koda.com" },
+        { name: "test name 6", email: "test6@koda.com" },
     ]);
     for (const partner of partnerIds) {
         pyEnv["mail.followers"].create({
@@ -804,12 +804,12 @@ QUnit.test("Show recipient list when there is more than 5 followers.", async () 
     openFormView("res.partner", partnerIds[0]);
     await click("button", { text: "Send message" });
     await click("button[title='Show all recipients']");
-    await contains("li", { text: "test1@odoo.com" });
-    await contains("li", { text: "test2@odoo.com" });
-    await contains("li", { text: "test3@odoo.com" });
-    await contains("li", { text: "test4@odoo.com" });
-    await contains("li", { text: "test5@odoo.com" });
-    await contains("li", { text: "test6@odoo.com" });
+    await contains("li", { text: "test1@koda.com" });
+    await contains("li", { text: "test2@koda.com" });
+    await contains("li", { text: "test3@koda.com" });
+    await contains("li", { text: "test4@koda.com" });
+    await contains("li", { text: "test5@koda.com" });
+    await contains("li", { text: "test6@koda.com" });
     await contains(".o-mail-Chatter", { text: "To: test1, test2, test3, test4, test5, …" });
 });
 

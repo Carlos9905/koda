@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractBehavior } from "@knowledge/components/behaviors/abstract_behavior/abstract_behavior";
 import { useService } from "@web/core/utils/hooks";
@@ -8,7 +8,7 @@ import {
     useState,
     onMounted,
     onWillStart,
-} from "@odoo/owl";
+} from "@koda/owl";
 import {
     BehaviorToolbar,
     BehaviorToolbarButton,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <data>
         <record id="SALC" model="hr.salary.rule.category">
             <field name="name">Salary Costs</field>
@@ -28,4 +28,4 @@
             <field name="code">O_TOTALS</field>
         </record>
     </data>
-</odoo>
+</koda>

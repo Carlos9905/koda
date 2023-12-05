@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_lu_employees_atn_transport" model="hr.salary.rule">
         <field name="category_id" ref="l10n_lu_hr_payroll.hr_salary_rule_category_bik_transport"/>
         <field name="name">Benefit in Kind (Transportation)</field>
@@ -190,5 +190,5 @@ result = - (contract.wage - (min_social_pay / 4.0)) * 1.4 / 100.0
             'amount_python_compute': &quot;result = categories['TAXABLE'] + result_rules['TAXES']['total'] + result_rules['DEP_INS']['total'] + result_rules['TAX_CREDIT']['total']&quot;, 'appears_on_employee_cost_dashboard': True}"/>
     </function>
 
-</odoo>
+</koda>
 

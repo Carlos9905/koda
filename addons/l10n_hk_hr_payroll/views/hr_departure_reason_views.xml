@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="hr_departure_reason_view_list" model="ir.ui.view">
             <field name="name">hr.departure.reason.view.list.inherit.l10n.hk.hr.payroll</field>
@@ -12,4 +12,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

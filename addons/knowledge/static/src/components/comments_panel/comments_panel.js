@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { standardWidgetProps } from '@web/views/widgets/standard_widget_props';
@@ -6,7 +6,7 @@ import { useBus, useService } from '@web/core/utils/hooks';
 
 import { KnowledgeCommentsThread } from '../comment/comment';
 
-import { Component, onWillStart, useRef, useState } from '@odoo/owl';
+import { Component, onWillStart, useRef, useState } from '@koda/owl';
 
 
 export class KnowledgeArticleCommentsPanel extends Component {

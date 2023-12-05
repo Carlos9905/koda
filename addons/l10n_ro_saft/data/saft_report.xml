@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- The spec from ANAF differs somewhat from the official SAF-T specification. 
          See https://static.anaf.ro/static/10/Anaf/Informatii_R/RO_SAFT_SchemaDefCod_20230526.xlsx for the full spec. -->
 
@@ -336,4 +336,4 @@
             </InvoiceLine>
         </Invoice>
     </template>
-</odoo>
+</koda>

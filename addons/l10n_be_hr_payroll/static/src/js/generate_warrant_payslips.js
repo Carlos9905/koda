@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { download } from "@web/core/network/download";
 import { formView } from "@web/views/form/form_view";

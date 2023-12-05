@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 import {
     Component,
     useState,
@@ -7,7 +7,7 @@ import {
     useEffect,
     useRef,
     status,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { browser } from "@web/core/browser/browser";
 import { useService } from "@web/core/utils/hooks";
 import { url } from "@web/core/utils/urls";

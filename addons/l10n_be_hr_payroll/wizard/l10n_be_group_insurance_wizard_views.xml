@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_be_group_insurance_wizard_view_form" model="ir.ui.view">
         <field name="name">l10n.be.group.insurance.wizard.view.form</field>
         <field name="model">l10n.be.group.insurance.wizard</field>
@@ -51,4 +51,4 @@
         parent="l10n_be_hr_payroll.menu_reporting_l10n_be"
         sequence="22"
     />
-</odoo>
+</koda>

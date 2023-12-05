@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { useAssignUserCommand } from "@mail/views/web/fields/assign_user_command_hook";
 

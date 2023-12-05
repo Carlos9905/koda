@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="sale_order_portal_content_brazil" inherit_id="sale.sale_order_portal_content" primary="True">
         <!-- hide the taxes th -->
         <th id="taxes_header" position="replace"/>
@@ -18,4 +18,4 @@
         <!-- hide subsection subtotals, because they don't include tax -->
         <xpath expr="//span[@t-out='current_subtotal']/.." position="replace"/>
     </template>
-</odoo>
+</koda>

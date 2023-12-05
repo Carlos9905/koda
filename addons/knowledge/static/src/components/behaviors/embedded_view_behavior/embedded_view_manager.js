@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { CallbackRecorder } from "@web/webclient/actions/action_hook";
@@ -13,7 +13,7 @@ import {
     onWillStart,
     useState,
     useSubEnv
-} from "@odoo/owl";
+} from "@koda/owl";
 import { decodeDataBehaviorProps, encodeDataBehaviorProps } from "@knowledge/js/knowledge_utils";
 import {
     BehaviorToolbar,

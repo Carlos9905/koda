@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { closeStream } from "@mail/utils/common/misc";
 

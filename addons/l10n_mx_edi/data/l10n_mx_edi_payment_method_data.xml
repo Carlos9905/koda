@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<odoo>
+<koda>
     <data noupdate="0">
         <record id="payment_method_efectivo" model="l10n_mx_edi.payment.method">
             <field name="code">01</field>
@@ -90,4 +90,4 @@
             <field name="name">Por definir</field>
         </record>
      </data>
-</odoo>
+</koda>

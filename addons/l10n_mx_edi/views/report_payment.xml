@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="report_payment_document" inherit_id="account.report_payment_receipt_document">
         <xpath expr="//div[@name='date']" position="after">
             <t t-set="cfdi" t-value="values.get('cfdi')"/>
@@ -161,4 +161,4 @@
             </t>
         </xpath>
     </template>
-</odoo>
+</koda>

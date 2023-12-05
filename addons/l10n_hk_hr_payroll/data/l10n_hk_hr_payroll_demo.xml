@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <!-- COMPANY -->
     <record id="partner_demo_company_hk" model="res.partner">
@@ -299,4 +299,4 @@
         <field name="date_to" eval="time.strftime('%Y-02-28')" />
         <field name="name" eval="'Salary Slip - Employee HK - ' + time.strftime('February %Y')" />
     </record>
-</odoo>
+</koda>

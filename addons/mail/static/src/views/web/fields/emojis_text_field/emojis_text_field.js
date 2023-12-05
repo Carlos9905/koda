@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { EmojisFieldCommon } from "@mail/views/web/fields/emojis_field_common/emojis_field_common";
 

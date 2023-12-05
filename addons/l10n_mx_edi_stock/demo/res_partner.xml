@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="partner_mx_transporte_operador" model="res.partner">
         <field name="name">Amigo Pedro</field>
         <field name="vat">VAAM130719H60</field>
@@ -17,4 +17,4 @@
     <record id="l10n_mx.partner_demo_company_mx" model="res.partner">
         <field name="vat">EKU9003173C9</field>
     </record>
-</odoo>
+</koda>

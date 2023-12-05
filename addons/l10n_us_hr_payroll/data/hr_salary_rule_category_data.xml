@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="hr_payroll_pre_tax_benefits" model="hr.salary.rule.category">
         <field name="name">Pre-Tax Benefits</field>
         <field name="code">PRETAX</field>
@@ -32,4 +32,4 @@
         <field name="name">Employer Deductions</field>
         <field name="code">COMPANYDED</field>
     </record>
-</odoo>
+</koda>

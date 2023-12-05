@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <menuitem
         id="menu_reporting_l10n_hk"
         name="Hong Kong"
@@ -40,4 +40,4 @@
         action="l10n_hk_ir56g_action"
         parent="l10n_hk_hr_payroll.menu_reporting_l10n_hk"
         sequence="93"/>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <!-- Cron to synchronize Codabox Coda transactions -->
         <record id="codabox_sync_coda_cron" model="ir.cron">
@@ -15,4 +15,4 @@
             <field name="doall" eval="False"/>
         </record>
     </data>
-</odoo>
+</koda>

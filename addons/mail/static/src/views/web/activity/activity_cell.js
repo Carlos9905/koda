@@ -1,9 +1,9 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { ActivityListPopover } from "@mail/core/web/activity_list_popover";
 import { Avatar } from "@mail/views/web/fields/avatar/avatar";
 
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 import { usePopover } from "@web/core/popover/popover_hook";
 

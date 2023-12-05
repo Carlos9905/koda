@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { renderToString } from "@web/core/utils/render";
 import { ArticleTemplatePickerDialog } from "@knowledge/components/article_template_picker_dialog/article_template_picker_dialog";
@@ -8,7 +8,7 @@ import { ItemCalendarPropsDialog } from "@knowledge/components/item_calendar_pro
 import {
     onWillUnmount,
     onWillUpdateProps,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { KnowledgePlugin } from "@knowledge/js/knowledge_plugin";
 import { PromptEmbeddedViewNameDialog } from "@knowledge/components/prompt_embedded_view_name_dialog/prompt_embedded_view_name_dialog";
 import { registry } from "@web/core/registry";
@@ -197,7 +197,7 @@ export class KnowledgeArticleHtmlField extends HtmlField {
 
     async _lazyloadWysiwyg() {
         await super._lazyloadWysiwyg(...arguments);
-        this.Wysiwyg = (await odoo.loader.modules.get('@knowledge/js/knowledge_wysiwyg')).KnowledgeWysiwyg;
+        this.Wysiwyg = (await koda.loader.modules.get('@knowledge/js/knowledge_wysiwyg')).KnowledgeWysiwyg;
     }
 }
 

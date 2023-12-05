@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="l10n_cl_demo_certificate" model="l10n_cl.certificate">
         <field name="signature_filename">Demo</field>
@@ -28,4 +28,4 @@
 
     </data>
 
-</odoo>
+</koda>

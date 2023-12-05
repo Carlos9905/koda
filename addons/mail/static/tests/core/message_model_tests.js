@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { start } from "@mail/../tests/helpers/test_utils";
 import { serializeDateTime, deserializeDateTime } from "@web/core/l10n/dates";

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { endKnowledgeTour, openCommandBar } from "../knowledge_tour_utils.js";
@@ -114,7 +114,7 @@ registry.category("web_tour.tours").add("knowledge_items_search_favorites_tour",
         },
         // Create the first Kanban
         {
-            trigger: ".odoo-editor-editable > h1",
+            trigger: ".koda-editor-editable > h1",
             run: function () {
                 openCommandBar(this.$anchor[0]);
             },
@@ -136,7 +136,7 @@ registry.category("web_tour.tours").add("knowledge_items_search_favorites_tour",
         },
         // Create the second Kanban
         {
-            trigger: ".odoo-editor-editable > h1",
+            trigger: ".koda-editor-editable > h1",
             run: function () {
                 openCommandBar(this.$anchor[0]);
             },

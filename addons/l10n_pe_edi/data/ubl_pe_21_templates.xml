@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="ubl_pe_21_signature_template">
         <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
             <ds:SignedInfo>
@@ -87,4 +87,4 @@
             </sac:VoidedDocumentsLine>
         </VoidedDocuments>
     </template>
-</odoo>
+</koda>

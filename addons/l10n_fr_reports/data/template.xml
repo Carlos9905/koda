@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="aspone_xml_edi">
         <XmlEdi t-att-Test="is_test">
             <GroupeFonctionnel t-att-Type="type">
@@ -139,4 +139,4 @@
             <TitulaireDesignation t-out="vals.get('holder_name')"/>
         </Zone>
     </template>
-</odoo>
+</koda>

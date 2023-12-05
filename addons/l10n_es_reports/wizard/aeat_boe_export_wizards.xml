@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<odoo>
+<koda>
     <data>
 
         <record id="mod111_boe_wizard" model="ir.ui.view">
@@ -212,4 +212,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

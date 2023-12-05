@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { standardWidgetProps } from '@web/views/widgets/standard_widget_props';
 import { useBus, useService } from '@web/core/utils/hooks';
 import { useRecordObserver } from '@web/model/relational_model/utils';
-import { isZWS } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
+import { isZWS } from '@web_editor/js/editor/koda-editor/src/utils/utils';
 import { KnowledgeCommentsThread } from '../comment/comment';
 
 import {
@@ -16,7 +16,7 @@ import {
     status,
     useEffect,
     useRef
-} from '@odoo/owl';
+} from '@koda/owl';
 
 
 export class KnowledgeCommentsHandler extends Component {

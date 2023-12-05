@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="vat3_template">
         <!-- We assume this is an original VAT3 return (not supplementary or amended, precision_digits=0), hence type 0.
              Amounts must be reported in whole Euro.
@@ -24,4 +24,4 @@
             unusualExpenditure="N"
         />
     </template>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="tax_export_xml">
             <Anmeldungssteuern art="UStVA" version="2023">
@@ -31,4 +31,4 @@
             </Anmeldungssteuern>
         </template>
     </data>
-</odoo>
+</koda>

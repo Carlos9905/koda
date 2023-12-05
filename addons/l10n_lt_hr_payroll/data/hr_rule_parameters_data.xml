@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="rule_parameter_tax_exempt_low" model="hr.rule.parameter">
         <field name="name">Lithuania: Tax Exempt Low</field>
         <field name="code">l10n_lt_tax_exempt_low</field>
@@ -170,4 +170,4 @@
         <field name="date_from" eval="datetime(2017, 1, 1).date()"/>
     </record>
 
-</odoo>
+</koda>

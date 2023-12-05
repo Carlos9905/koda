@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <template id="xaf_audit_file">
         <auditfile xmlns="http://www.auditfiles.nl/XAF/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <header>
@@ -134,4 +134,4 @@
             </company>
         </auditfile>
     </template>
-</odoo>
+</koda>

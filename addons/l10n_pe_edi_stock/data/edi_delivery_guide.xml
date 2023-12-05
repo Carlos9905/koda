@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="sunat_guiaremision">
             <DespatchAdvice xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
@@ -212,4 +212,4 @@
             </DespatchAdvice>
         </template>
     </data>
-</odoo>
+</koda>

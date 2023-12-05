@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { endKnowledgeTour } from './knowledge_tour_utils.js';
 import { registry } from "@web/core/registry";
@@ -99,11 +99,11 @@ registry.category("web_tour.tours").add('knowledge_cover_selector_tour', {
     // Change the name of the article
     trigger: '.o_breadcrumb_article_name > input',
     extra_trigger: '.o_article_active:contains("Untitled")',
-    run: 'text odoo',
+    run: 'text koda',
 }, {
     // Go back to previous article
     trigger: '.o_knowledge_sidebar .o_article_name:contains("Birds")',
-    extra_trigger: '.o_article_active:contains("odoo")',
+    extra_trigger: '.o_article_active:contains("koda")',
 }, {
     // Check that the cover is still positioned at the top and make the replace
     // cover visible
@@ -130,19 +130,19 @@ registry.category("web_tour.tours").add('knowledge_cover_selector_tour', {
     allowInvisible: true,
 }, {
     // Check cover has been removed from the article and open other article
-    trigger: '.o_knowledge_sidebar .o_article_name:contains("odoo")',
+    trigger: '.o_knowledge_sidebar .o_article_name:contains("koda")',
     extra_trigger: '.o_knowledge_body:not(:has(.o_widget_knowledge_cover))',
 }, {
     // Make the add cover button visible
-    trigger: '.o_article_active:contains("odoo")',
+    trigger: '.o_article_active:contains("koda")',
     run() {},
 }, {
     // Click on add cover button
     trigger: '.o_knowledge_add_cover',
     allowInvisible: true,
 }, {
-    // Check that odoo logo previously uploaded is shown in the selector as the
-    // search query, which is the article name, is "odoo" which is also in the
+    // Check that koda logo previously uploaded is shown in the selector as the
+    // search query, which is the article name, is "koda" which is also in the
     // cover attachment's name, and that clicking on it sets it as cover of the
     // current article
     trigger: '.modal-body .o_existing_attachment_cell img[title="odoo_logo.png"]',
@@ -159,13 +159,13 @@ registry.category("web_tour.tours").add('knowledge_cover_selector_tour', {
     trigger: '.o_knowledge_add_cover',
     allowInvisible: true,
 }, {
-    // Check odoo logo is not shown as the search query does not match its name
+    // Check koda logo is not shown as the search query does not match its name
     // and remove search query
     trigger: '.modal-body input.o_we_search',
     extra_trigger: '.modal-body .o_nocontent_help',
     run: 'remove_text',
 }, {
-    // Check that odoo logo is now shown in the cover selector, and make the trash
+    // Check that koda logo is now shown in the cover selector, and make the trash
     // button visible
     trigger: '.modal-body .o_existing_attachment_cell img[title="odoo_logo.png"]',
     run() {},
@@ -184,10 +184,10 @@ registry.category("web_tour.tours").add('knowledge_cover_selector_tour', {
 }, {
     // Open other article to check that its cover has been removed since it has
     // been deleted
-    trigger: '.o_knowledge_sidebar .o_article_name:contains("odoo")',
+    trigger: '.o_knowledge_sidebar .o_article_name:contains("koda")',
 }, {
     trigger: '.o_knowledge_body:not(:has(.o_widget_knowledge_cover))',
-    extra_trigger: '.o_article_active:contains("odoo")',
+    extra_trigger: '.o_article_active:contains("koda")',
     allowInvisible: true,
 }, ...endKnowledgeTour()
 ]});

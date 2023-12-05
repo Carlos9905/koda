@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_ke_hr_payroll_nssf_report_wizard_view_form" model="ir.ui.view">
         <field name="name">l10n.ke.hr.payroll.nssf.report.wizard.view.form</field>
         <field name="model">l10n.ke.hr.payroll.nssf.report.wizard</field>
@@ -41,4 +41,4 @@
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
-</odoo>
+</koda>

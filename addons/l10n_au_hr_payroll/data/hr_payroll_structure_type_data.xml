@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="structure_type_schedule_1" model="hr.payroll.structure.type">
         <field name="name">Australia: Regular (schedule 1)</field>
         <field name="default_resource_calendar_id" ref="l10n_au_hr_payroll.resource_calendar_au_38"/>
@@ -74,4 +74,4 @@
         <field name="l10n_au_income_stream_type">SAW</field>
         <field name="sequence">6</field>
     </record>
-</odoo>
+</koda>

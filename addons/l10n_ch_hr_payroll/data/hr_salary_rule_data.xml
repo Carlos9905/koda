@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <function model="hr.salary.rule" name="write">
         <value model="hr.salary.rule" search="[
             ('struct_id', '=', ref('l10n_ch_hr_payroll.hr_payroll_structure_ch_employee_salary')),
@@ -1924,5 +1924,5 @@ result = inputs['INDMAT'].amount
             ('code', '=', 'NET')]"/>
         <value eval="{'l10n_ch_code': '6500'}"/>
     </function>
-</odoo>
+</koda>
 

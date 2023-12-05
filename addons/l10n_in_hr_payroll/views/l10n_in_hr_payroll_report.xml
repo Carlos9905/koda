@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="payslip_details_report" model="ir.actions.report">
         <field name="name">PaySlip Details</field>
         <field name="model">hr.payslip</field>
@@ -40,4 +40,4 @@
         <field name="binding_model_id" ref="model_yearly_salary_detail"/>
         <field name="binding_type">report</field>
     </record>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="rule_parameter_social_security_cap" model="hr.rule.parameter">
         <field name="name">Poland: Social Security Cap</field>
         <field name="code">l10n_pl_social_security_cap</field>
@@ -164,6 +164,6 @@
         <field name="rule_parameter_id" ref="rule_parameter_childcare_relief"/>
         <field name="date_from" eval="datetime(2017, 1, 1).date()"/>
     </record>
-</odoo>
+</koda>
 
 

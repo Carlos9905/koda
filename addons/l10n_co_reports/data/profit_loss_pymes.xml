@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="l10n_co_pl_account_report_pymes" model="account.report">
         <field name="name">Profit and Loss</field>
         <field name="root_report_id" ref="account_reports.profit_and_loss"/>
@@ -291,4 +291,4 @@
         <field name="tag">account_report</field>
         <field name="context" eval="{'model': 'account.report', 'report_id': ref('l10n_co_pl_account_report_pymes')}"/>
     </record>
-</odoo>
+</koda>

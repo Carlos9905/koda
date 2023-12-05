@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="cp200_employees_termination_fees_basic_12_92" model="hr.salary.rule">
         <field name="name">Gross Yearly Salary</field>
         <field name="sequence" eval="1"/>
@@ -671,4 +671,4 @@ result = result_rules['GROSS']['total'] - result_rules['PPTOTAL']['total'] + ass
         <field name="appears_on_employee_cost_dashboard" eval="True"/>
     </record>
 
-</odoo>
+</koda>

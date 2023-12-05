@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- https://www.socialsecurity.be/portail/glossaires/dmfa.nsf/ConsultFrImprPDF/149524602BB4229CC125835B00491C32/$FILE/VersComplDMFA191_F.pdf -->
-<odoo>
+<koda>
 <data>
     <template id="dmfa_xml_report">
         <DmfAOriginal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DmfAOriginal_20211.xsd">
@@ -1897,4 +1897,4 @@
         </t>
     </template>
 </data>
-</odoo>
+</koda>

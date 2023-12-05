@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="action_report_payslip_nl" model="ir.actions.report">
         <field name="name">NL: Payslip</field>
         <field name="model">hr.payslip</field>
@@ -13,4 +13,4 @@
         <field name="attachment"></field>
         <field name="attachment_use" eval="False"/>
     </record>
-</odoo>
+</koda>

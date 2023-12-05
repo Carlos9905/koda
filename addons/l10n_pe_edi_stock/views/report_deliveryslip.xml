@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
+<koda>
     <template id="l10n_pe_edi_guiaremision_report_delivery_document" inherit_id="stock.report_delivery_document">
         <xpath expr="//div[@name='signature']" position="after">
             <t t-if="o.l10n_pe_edi_status == 'sent'">
@@ -99,4 +99,4 @@
             </t>
         </xpath>
     </template>
-</odoo>
+</koda>

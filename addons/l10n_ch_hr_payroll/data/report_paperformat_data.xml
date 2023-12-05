@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="report_paperformat_individual_account" model="report.paperformat">
         <field name="name">Individual Account</field>
         <field name="default" eval="True"/>
@@ -15,4 +15,4 @@
         <field name="header_spacing">20</field>
         <field name="dpi">90</field>
     </record>
-</odoo>
+</koda>

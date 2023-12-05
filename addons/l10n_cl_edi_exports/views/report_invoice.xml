@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
         <template id="informations" inherit_id="l10n_cl_edi.informations">
             <xpath expr="//div[@id='informations']" position="after">
@@ -69,4 +69,4 @@
             </xpath>
         </template>
     </data>
-</odoo>
+</koda>

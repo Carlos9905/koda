@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <menuitem
         name="Australia"
         id="l10n_au_hr_payroll"
@@ -19,4 +19,4 @@
         parent="l10n_au_hr_payroll"
         sequence="20"
         action="l10n_au_super_account_action"/>
-</odoo>
+</koda>

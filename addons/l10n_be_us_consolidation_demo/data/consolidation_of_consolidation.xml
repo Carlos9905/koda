@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <!--CONSOLIDATION CHART-->
         <record id="top_consolidation" model="consolidation.chart">
@@ -96,4 +96,4 @@
             <value eval="[ref('top_first_period')]"/>
         </function>
     </data>
-</odoo>
+</koda>

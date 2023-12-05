@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="cp200_employees_thirteen_month_gross_salary" model="hr.salary.rule">
         <field name="category_id" ref="hr_payroll_head_salary"/>
         <field name="name">Gross Salary</field>
@@ -168,4 +168,4 @@ result = result_rules['ONSSEMPLOYERBASIC']['total'] + result_rules['ONSSEMPLOYER
         <field name="appears_on_payslip" eval="False"/>
     </record>
 
-</odoo>
+</koda>

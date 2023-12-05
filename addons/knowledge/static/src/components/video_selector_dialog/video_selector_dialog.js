@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { VideoSelector } from "@web_editor/components/media_dialog/video_selector";
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<odoo>
+<koda>
     <!-- Sources : https://bpion.com/doing-business-in-romania-payroll-and-hr/ -->
     <record id="l10n_ro_employee_salary_cas" model="hr.salary.rule">
         <field name="category_id" ref="l10n_ro_hr_payroll.l10n_ro_cas_category"/>
@@ -103,4 +103,4 @@ result = categories['GROSS']
         <field name="struct_id" ref="l10n_ro_hr_payroll.hr_payroll_structure_ro_employee_salary"/>
     </record>
 
-</odoo>
+</koda>

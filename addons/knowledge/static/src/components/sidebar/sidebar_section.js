@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { KnowledgeSidebarRow } from "./sidebar_row";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, onWillStart, useChildSubEnv } from "@odoo/owl";
+import { Component, onWillStart, useChildSubEnv } from "@koda/owl";
 
 /**
  * This file defines the different sections used in the sidebar.

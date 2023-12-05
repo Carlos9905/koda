@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="credit_note_template">
             <notaCredito version="1.1.0" id="comprobante">
@@ -273,4 +273,4 @@
         </template>
 
     </data>
-</odoo>
+</koda>

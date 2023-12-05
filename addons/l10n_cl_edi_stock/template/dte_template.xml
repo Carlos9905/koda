@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<odoo>
+<koda>
     <data>
         <template id="dte_subtemplate">
             <Encabezado>
@@ -114,4 +114,4 @@
             </DTE>
         </template>
     </data>
-</odoo>
+</koda>

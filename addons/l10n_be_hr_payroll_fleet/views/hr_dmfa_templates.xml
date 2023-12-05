@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <template id="dmfa_xml_report" inherit_id="l10n_be_hr_payroll.dmfa_xml_report">
         <xpath expr="//ContributionUnrelatedToNP" position="before">
@@ -75,4 +75,4 @@
         </CompanyVehicle>
     </template>
 </data>
-</odoo>
+</koda>

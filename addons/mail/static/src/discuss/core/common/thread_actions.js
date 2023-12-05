@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { threadActionsRegistry } from "@mail/core/common/thread_actions";
 import { AttachmentPanel } from "@mail/discuss/core/common/attachment_panel";
@@ -6,7 +6,7 @@ import { ChannelInvitation } from "@mail/discuss/core/common/channel_invitation"
 import { ChannelMemberList } from "@mail/discuss/core/common/channel_member_list";
 import { NotificationSettings } from "@mail/discuss/core/common/notification_settings";
 
-import { useComponent } from "@odoo/owl";
+import { useComponent } from "@koda/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { usePopover } from "@web/core/popover/popover_hook";

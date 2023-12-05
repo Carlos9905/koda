@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="view_account_report_async_export_tree" model="ir.ui.view">
         <field name="name">account.report.async.export.view.tree</field>
         <field name="model">account.report.async.export</field>
@@ -77,4 +77,4 @@
               parent="account.account_reports_legal_statements_menu"
               action="l10n_fr_reports.action_account_report_async_export"
               sequence="60"/>
-</odoo>
+</koda>

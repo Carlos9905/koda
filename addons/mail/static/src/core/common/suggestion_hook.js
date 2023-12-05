@@ -1,7 +1,7 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { useSequential } from "@mail/utils/common/hooks";
-import { status, useComponent, useEffect, useState } from "@odoo/owl";
+import { status, useComponent, useEffect, useState } from "@koda/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

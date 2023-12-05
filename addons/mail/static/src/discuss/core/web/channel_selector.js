@@ -1,9 +1,9 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { NavigableList } from "@mail/core/common/navigable_list";
 import { cleanTerm } from "@mail/utils/common/format";
 
-import { Component, onMounted, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, onMounted, useEffect, useRef, useState } from "@koda/owl";
 
 import { getActiveHotkey } from "@web/core/hotkeys/hotkey_service";
 import { _t } from "@web/core/l10n/translation";

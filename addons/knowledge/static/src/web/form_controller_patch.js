@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { FormController } from "@web/views/form/form_controller";
 import { patch } from "@web/core/utils/patch";
@@ -8,7 +8,7 @@ import { CallbackRecorder } from "@web/webclient/actions/action_hook";
 import {
     useEffect,
     useSubEnv
-} from "@odoo/owl";
+} from "@koda/owl";
 
 
 /**

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- salary category -->
     <record id="SPA" model="hr.salary.rule.category">
         <field name="name">Special Allowance</field>
@@ -16,4 +16,4 @@
         <field name="code">PBS</field>
     </record>
 
-</odoo>
+</koda>

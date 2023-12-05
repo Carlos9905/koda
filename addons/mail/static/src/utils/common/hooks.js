@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import {
     onMounted,
@@ -9,7 +9,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

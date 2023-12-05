@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record model="ir.rule" id="hmrc_vat_obligation_rule">
         <field name="name">l10n_uk.vat.obligation multi-company</field>
@@ -7,4 +7,4 @@
         <field name="domain_force">[('company_id', 'in', company_ids)]</field>
     </record>
 
-</odoo>
+</koda>
