@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="helpdesk_sla_view_form_inherit_sale_timesheet" model="ir.ui.view">
         <field name='name'>helpdesk.sla.form.inherit.sale.timesheet</field>
@@ -36,4 +36,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

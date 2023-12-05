@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="frontdesk_group_user" model="res.groups">
         <field name="name">User</field>
         <field name="category_id" ref="base.module_category_human_resources_frontdesk"/>
@@ -54,4 +54,4 @@
         <field name="groups" eval="[(4, ref('frontdesk.frontdesk_group_administrator'))]"/>
         <field name="domain_force">[(1, '=', 1)]</field>
     </record>
-</odoo>
+</koda>

@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 import { Many2One } from "./many2one/many2one";
 
 export class HostPage extends Component {

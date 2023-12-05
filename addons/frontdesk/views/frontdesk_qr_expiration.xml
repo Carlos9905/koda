@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="frontdesk_qr_expired">
             <t t-call="web.layout">
@@ -13,4 +13,4 @@
             </t>
         </template>
     </data>
-</odoo>
+</koda>

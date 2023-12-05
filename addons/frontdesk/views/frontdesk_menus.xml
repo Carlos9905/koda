@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <menuitem
         id="frontdesk_menu_root"
         name="Frontdesk"
@@ -61,4 +61,4 @@
         parent="frontdesk_menu_config"
         action="action_frontdesk_drink"
         sequence="2"/>
-</odoo>
+</koda>

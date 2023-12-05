@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="loyalty_card_view_form_helpdesk_sale_loyalty" model="ir.ui.view">
         <field name="name">loyalty.card.view.form.helpdesk.sale.loyalty</field>
         <field name="model">loyalty.card</field>
@@ -16,4 +16,4 @@
             </form>
         </field>
     </record>    
-</odoo>
+</koda>

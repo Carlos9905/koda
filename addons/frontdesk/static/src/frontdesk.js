@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { VisitorForm } from "@frontdesk/visitor_form/visitor_form";
@@ -11,7 +11,7 @@ import { EndPage } from "@frontdesk/end_page/end_page";
 import { QuickCheckIn } from "@frontdesk/quick_check_in/quick_check_in";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, useState, onWillStart, markup } from "@odoo/owl";
+import { Component, useState, onWillStart, markup } from "@koda/owl";
 
 export class Frontdesk extends Component {
     setup() {

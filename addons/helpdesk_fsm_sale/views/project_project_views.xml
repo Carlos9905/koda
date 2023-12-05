@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <!-- TODO: Remove me in master -->
     <record id="project_view_form_inherit" model="ir.ui.view">
@@ -13,4 +13,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

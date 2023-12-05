@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <!-- Extended views -->
     <record id="timesheet_view_grid_by_my_timesheet" model="ir.ui.view">
@@ -238,4 +238,4 @@
     </record>
 
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { RadioField, preloadRadio, radioField } from "@web/views/fields/radio/radio_field";

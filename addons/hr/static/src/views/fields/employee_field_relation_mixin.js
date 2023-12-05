@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 
 /**

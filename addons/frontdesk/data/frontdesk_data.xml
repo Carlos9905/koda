@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <!-- Drinks -->
         <record model="frontdesk.drink" id="frontdesk.frontdesk_drink_1">
@@ -14,4 +14,4 @@
             <field name="drink_image" type="base64" file="frontdesk/static/img/cola.jpg"/>
         </record>
     </data>
-</odoo>
+</koda>

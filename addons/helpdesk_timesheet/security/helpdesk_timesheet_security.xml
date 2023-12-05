@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
         <record id="timesheet_line_rule_helpdesk_user" model="ir.rule">
             <field name="name">account.analytic.line.helpdesk.user</field>
@@ -36,4 +36,4 @@
             <field name="implied_ids" eval="[(4, ref('helpdesk_timesheet.group_use_helpdesk_timesheet'))]"/>
         </record>
 
-</odoo>
+</koda>

@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
-import { useComponent } from "@odoo/owl";
+import { useComponent } from "@koda/owl";
 
 export function useArchiveEmployee() {
     const component = useComponent();

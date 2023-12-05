@@ -1,11 +1,11 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { start } from "@mail/../tests/helpers/test_utils";
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 import { click, patchWithCleanup, getFixture, getNodesTextContent } from "@web/../tests/helpers/utils";
 import { registry } from "@web/core/registry";
 import { browser } from "@web/core/browser/browser";
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 import { AvatarCardPopover } from "@mail/discuss/web/avatar_card/avatar_card_popover";
 import { patchAvatarCardPopover } from "@hr/components/avatar_card/avatar_card_popover_patch";
 
@@ -55,8 +55,8 @@ QUnit.module("M2XAvatarUser", ({ beforeEach }) => {
         });
         const userId = pyEnv["res.users"].create({
             name: "Mario",
-            email: "Mario@odoo.test",
-            work_email: "Mario@odoo.pro",
+            email: "Mario@koda.test",
+            work_email: "Mario@koda.pro",
             im_status: "online",
             phone: "+78786987",
             work_phone: "+585555555",
@@ -110,7 +110,7 @@ QUnit.module("M2XAvatarUser", ({ beforeEach }) => {
         await click(document, ".o_m2o_avatar > img");
         assert.verifySteps(["setTimeout of 250ms", "user read"]);
         assert.containsOnce(target, ".o_avatar_card");
-        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_card_user_infos > *")), ['Mario', 'sub manager', 'Managemment', 'Mario@odoo.pro', '+585555555']);
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_card_user_infos > *")), ['Mario', 'sub manager', 'Managemment', 'Mario@koda.pro', '+585555555']);
         // Close card
         await click(document, ".o_action_manager");
         assert.containsNone(target, ".o_avatar_card");

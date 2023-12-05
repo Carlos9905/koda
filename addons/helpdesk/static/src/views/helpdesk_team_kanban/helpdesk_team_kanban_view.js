@@ -1,4 +1,4 @@
-/** @odoo-module  **/
+/** @koda-module  **/
 
 import { _t } from "@web/core/l10n/translation";
 import { kanbanView } from '@web/views/kanban/kanban_view';

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="frontdesk" name="Frontdesk">
         <t t-call="web.frontend_layout">
             <t t-set="head">
                 <t t-call-assets="frontdesk.assets_frontdesk" lazy_load="True"/>
                 <script type="text/javascript">
-                    odoo.__session_info__ = <t t-out="json.dumps({
+                    koda.__session_info__ = <t t-out="json.dumps({
                         'user_context': {'lang': current_lang},
                     })"/>;
                 </script>
@@ -22,4 +22,4 @@
             })"/>
         </t>
     </template>
-</odoo>
+</koda>

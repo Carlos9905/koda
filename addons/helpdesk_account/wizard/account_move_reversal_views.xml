@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="view_account_move_reversal_inherit_helpdesk_account" model="ir.ui.view">
             <field name="name">account.move.reversal.inherit.helpdesk.account</field>
@@ -35,4 +35,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

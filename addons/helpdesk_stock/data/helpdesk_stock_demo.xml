@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="helpdesk.helpdesk_team3" model="helpdesk.team">
         <field name="use_product_returns" eval="True"/>
@@ -106,4 +106,4 @@
         <field name="picking_ids" eval="[(6, 0, [ref('helpdesk_stock_return_order_2')])]"/>
     </record>
 
-</odoo>
+</koda>

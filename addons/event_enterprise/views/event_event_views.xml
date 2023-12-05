@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="event_view_gantt" model="ir.ui.view">
         <field name="name">event.event.gantt</field>
@@ -39,4 +39,4 @@
         <field name="view_mode">kanban,calendar,tree,gantt,form,pivot,graph,map,activity</field>
     </record>
 
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 
     <record id="helpdesk_sla_view_tree" model="ir.ui.view">
         <field name="name">helpdesk.sla.tree</field>
@@ -122,4 +122,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

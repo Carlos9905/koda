@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { AutoComplete } from "@web/core/autocomplete/autocomplete";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class Many2One extends Component {
     setup() {

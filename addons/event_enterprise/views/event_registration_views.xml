@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="event.action_registration" model="ir.actions.act_window">
         <field name="view_mode">graph,pivot,kanban,tree,form,cohort</field>
@@ -17,4 +17,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

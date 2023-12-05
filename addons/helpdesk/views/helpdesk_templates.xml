@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="ticket_creation">
         <p>
             This <t t-out="self.env['ir.model']._get(self._name).name.lower()"/> has been created from ticket:
@@ -15,4 +15,4 @@
             <t t-out="message"/>
         </p>
     </template>
-</odoo>
+</koda>

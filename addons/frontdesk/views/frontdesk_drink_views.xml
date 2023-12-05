@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="frontdesk_drink_view_tree" model="ir.ui.view">
         <field name="name">frontdesk.drink.view.tree</field>
         <field name="model">frontdesk.drink</field>
@@ -61,4 +61,4 @@
         <field name="res_model">frontdesk.drink</field>
         <field name="view_mode">kanban,form,tree</field>
     </record>
-</odoo>
+</koda>

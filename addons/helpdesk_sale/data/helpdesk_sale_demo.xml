@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="sale_order_helpdesk_1" model="sale.order">
         <field name="partner_id" ref="base.res_partner_2"/>
@@ -50,4 +50,4 @@
         <field name="sale_order_id" ref="sale_order_helpdesk_3"/>
     </record>
 
-</odoo>
+</koda>

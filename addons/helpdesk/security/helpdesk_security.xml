@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="group_helpdesk_user" model="res.groups">
         <field name="name">User</field>
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
@@ -151,4 +151,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

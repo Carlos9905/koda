@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 
     <record id="helpdesk_tag_view_tree" model="ir.ui.view">
         <field name="name">helpdesk.tags.tree</field>
@@ -42,4 +42,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

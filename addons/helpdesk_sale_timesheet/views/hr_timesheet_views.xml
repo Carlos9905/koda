@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="timesheet_view_form_inherit_helpdesk_sale_timesheet" model="ir.ui.view">
         <field name="name">account.analytic.line.form.timesheet</field>
@@ -16,4 +16,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>
