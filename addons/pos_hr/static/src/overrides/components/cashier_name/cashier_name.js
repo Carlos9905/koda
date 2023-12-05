@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { CashierName } from "@point_of_sale/app/navbar/cashier_name/cashier_name";
 import { patch } from "@web/core/utils/patch";

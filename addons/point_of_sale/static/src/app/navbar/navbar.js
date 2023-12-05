@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { useService } from "@web/core/utils/hooks";
@@ -11,7 +11,7 @@ import { SyncNotification } from "@point_of_sale/app/navbar/sync_notification/sy
 import { CashMovePopup } from "@point_of_sale/app/navbar/cash_move_popup/cash_move_popup";
 import { TicketScreen } from "@point_of_sale/app/screens/ticket_screen/ticket_screen";
 import { BackButton } from "@point_of_sale/app/navbar/back_button/back_button";
-import { Component, useState, useExternalListener } from "@odoo/owl";
+import { Component, useState, useExternalListener } from "@koda/owl";
 import { ClosePosPopup } from "@point_of_sale/app/navbar/closing_popup/closing_popup";
 import { _t } from "@web/core/l10n/translation";
 import { ProductScreen } from "@point_of_sale/app/screens/product_screen/product_screen";

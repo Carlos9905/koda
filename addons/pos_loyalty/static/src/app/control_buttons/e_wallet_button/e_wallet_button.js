@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { ProductScreen } from "@point_of_sale/app/screens/product_screen/product_screen";
@@ -6,7 +6,7 @@ import { SelectionPopup } from "@point_of_sale/app/utils/input_popups/selection_
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { useService } from "@web/core/utils/hooks";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class eWalletButton extends Component {
     static template = "point_of_sale.eWalletButton";

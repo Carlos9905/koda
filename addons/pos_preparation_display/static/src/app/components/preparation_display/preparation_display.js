@@ -1,16 +1,16 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { Category } from "@pos_preparation_display/app/components/category/category";
 import { Stages } from "@pos_preparation_display/app/components/stages/stages";
 import { Order } from "@pos_preparation_display/app/components/order/order";
 import { usePreparationDisplay } from "@pos_preparation_display/app/preparation_display_service";
-import { Component, onPatched, useState } from "@odoo/owl";
+import { Component, onPatched, useState } from "@koda/owl";
 
 export class PreparationDisplay extends Component {
     static props = {};
 
     setup() {
         this.preparationDisplay = usePreparationDisplay();
-        this.displayName = odoo.preparation_display.name;
+        this.displayName = koda.preparation_display.name;
         this.showSidebar = true;
         this.onNextPatch = new Set();
         this.state = useState({

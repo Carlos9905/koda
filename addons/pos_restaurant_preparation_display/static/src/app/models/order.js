@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { patch } from "@web/core/utils/patch";
 import { Order } from "@pos_preparation_display/app/models/order";
 

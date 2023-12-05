@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="drinks" model="pos.category">
             <field name="name">Drinks</field>
@@ -927,4 +927,4 @@
         <function model="pos.session" name="_set_last_order_preparation_change"
             eval="[[ref('pos_open_order_2'), ref('pos_open_order_3'), ref('pos_open_order_4')]]"/>
     </data>
-</odoo>
+</koda>

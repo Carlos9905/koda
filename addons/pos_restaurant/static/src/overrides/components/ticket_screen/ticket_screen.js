@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { TicketScreen } from "@point_of_sale/app/screens/ticket_screen/ticket_screen";
@@ -6,7 +6,7 @@ import { useAutofocus } from "@web/core/utils/hooks";
 import { patch } from "@web/core/utils/patch";
 import { parseFloat } from "@web/views/fields/parsers";
 import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_popup";
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 patch(TicketScreen.prototype, {
     _getScreenToStatusMap() {

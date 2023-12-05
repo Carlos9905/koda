@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import { useState } from "@odoo/owl";
+/** @koda-module **/
+import { useState } from "@koda/owl";
 import { registry } from "@web/core/registry";
 import { PreparationDisplay } from "@pos_preparation_display/app/models/preparation_display";
 import { useService } from "@web/core/utils/hooks";
@@ -10,23 +10,23 @@ const preparationDisplayService = {
         const datas = await orm.call(
             "pos_preparation_display.display",
             "get_preparation_display_data",
-            [[odoo.preparation_display.id]],
+            [[koda.preparation_display.id]],
             {}
         );
 
         const preparationDisplayService = await new PreparationDisplay(
             datas,
             env,
-            odoo.preparation_display.id
+            koda.preparation_display.id
         ).ready;
 
-        bus_service.addChannel(`preparation_display-${odoo.preparation_display.access_token}`);
+        bus_service.addChannel(`preparation_display-${koda.preparation_display.access_token}`);
         bus_service.addEventListener("notification", async (message) => {
             const proms = message.detail.map((detail) => {
                 const datas = detail.payload;
                 // We need to check if the notification is about this preparation display.
                 // Currently, the webservice does not allow to filter the notifications.
-                if (datas.preparation_display_id !== odoo.preparation_display.id) {
+                if (datas.preparation_display_id !== koda.preparation_display.id) {
                     return false;
                 }
 

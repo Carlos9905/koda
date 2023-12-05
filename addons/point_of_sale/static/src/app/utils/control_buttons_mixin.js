@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-/** @typedef {import("@odoo/owl").Component} Component */
+/** @typedef {import("@koda/owl").Component} Component */
 
 /**
  * Component that has this mixin allows the use of `addControlButton`.

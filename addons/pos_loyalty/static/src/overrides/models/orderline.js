@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { Orderline } from "@point_of_sale/app/store/models";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { PartnerLine } from "@point_of_sale/app/screens/partner_list/partner_line/partner_line";

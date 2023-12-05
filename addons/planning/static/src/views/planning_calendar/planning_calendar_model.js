@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { CalendarModel } from "@web/views/calendar/calendar_model";
 import { usePlanningModelActions } from "../planning_hooks";

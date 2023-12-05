@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useEffect, useRef } from "@odoo/owl";
+import { Component, useEffect, useRef } from "@koda/owl";
 import { CenteredIcon } from "@point_of_sale/app/generic_components/centered_icon/centered_icon";
 
 export class OrderWidget extends Component {

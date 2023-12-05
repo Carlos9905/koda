@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@koda/owl";
 
 export class CenteredIcon extends Component {
     static props = {

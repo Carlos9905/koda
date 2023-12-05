@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { OrderReceipt } from "@point_of_sale/app/screens/receipt_screen/receipt/order_receipt";
 import { useAsyncLockedMethod } from "@point_of_sale/app/utils/hooks";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="planning_view_search_inherit_planning_hr_skills" model="ir.ui.view">
         <field name="name">planning.view.search.inherit.planning.hr.skills</field>
         <field name="model">planning.slot</field>
@@ -10,4 +10,4 @@
             </field>
         </field>
     </record>
-</odoo>
+</koda>

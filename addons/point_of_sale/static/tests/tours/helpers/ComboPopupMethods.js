@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 const popup = ".popup.combo-configurator-popup";
 const productTrigger = (productName) =>

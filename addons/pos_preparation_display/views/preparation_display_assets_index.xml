@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="pos_preparation_display.index" name="Preparation Display Index">
         &lt;!DOCTYPE html&gt;
         <html>
@@ -26,7 +26,7 @@
                 <link rel="icon" href="/point_of_sale/static/src/img/favicon.ico" type="image/x-icon" />
 
                 <script type="text/javascript">
-                    var odoo =
+                    var koda =
                     <t t-out="json.dumps({
                         'csrf_token': request.csrf_token(None),
                         'preparation_display': session_info['preparation_display'],
@@ -34,7 +34,7 @@
                         'debug': debug,
                     })" />;
 
-                    document.title = odoo.preparation_display.name;
+                    document.title = koda.preparation_display.name;
                 </script>
 
                 <t t-call-assets="pos_preparation_display.assets" />
@@ -42,4 +42,4 @@
             <body></body>
         </html>
     </template>
-</odoo>
+</koda>

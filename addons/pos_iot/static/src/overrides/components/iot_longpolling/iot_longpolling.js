@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 /* global posmodel */
 
 import { _t } from "@web/core/l10n/translation";

@@ -1,4 +1,4 @@
-<odoo>
+<koda>
      <!-- Pos Config -->
     <record model="pos.config" id="pos_config_main_restaurant">
         <field name="name">Restaurant</field>
@@ -483,4 +483,4 @@
         <field name="position_h">560</field>
         <field name="position_v">315</field>
     </record>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { PaymentStripe } from "@pos_stripe/app/payment_stripe";
 import { patch } from "@web/core/utils/patch";

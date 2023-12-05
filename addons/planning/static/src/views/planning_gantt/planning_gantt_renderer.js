@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { formatFloatTime } from "@web/views/fields/formatters";
 import { formatFloat } from "@web/core/utils/numbers";
@@ -7,7 +7,7 @@ import { getUnionOfIntersections } from "@web_gantt/gantt_helpers";
 import { PlanningEmployeeAvatar } from "./planning_employee_avatar";
 import { PlanningGanttRowProgressBar } from "./planning_gantt_row_progress_bar";
 import { useService } from "@web/core/utils/hooks"
-import { useEffect, onWillStart } from "@odoo/owl";
+import { useEffect, onWillStart } from "@koda/owl";
 import { serializeDateTime } from "@web/core/l10n/dates";
 
 const { Duration, DateTime } = luxon;

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { _t } from "@web/core/l10n/translation";

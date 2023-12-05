@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { _t } from "@web/core/l10n/translation";
-import { onMounted, useRef, useState } from "@odoo/owl";
+import { onMounted, useRef, useState } from "@koda/owl";
 
 // IMPROVEMENT: This code is very similar to TextInputPopup.
 //      Combining them would reduce the code.

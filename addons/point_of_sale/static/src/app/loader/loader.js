@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useEffect } from "@odoo/owl";
+import { Component, useEffect } from "@koda/owl";
 
 export class Loader extends Component {
     static template = "point_of_sale.Loader";

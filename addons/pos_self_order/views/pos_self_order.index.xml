@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="pos_self_order.index" name="POS Self Order">&lt;!DOCTYPE html&gt;
         <html>
             <head>
@@ -10,7 +10,7 @@
                 <meta name="apple-mobile-web-app-capable" content="yes"/>
                 <meta name="mobile-web-app-capable" content="yes"/>
                 <script type="text/javascript">
-                    var odoo = {
+                    var koda = {
                         csrf_token: "<t t-nocache="The csrf token must always be up to date." t-esc="request.csrf_token(None)"/>",
                         debug: "<t t-esc="debug"/>",
                         __session_info__: <t t-esc="json.dumps(session_info)"/>,
@@ -23,4 +23,4 @@
             </body>
         </html>
     </template>
-</odoo>
+</koda>

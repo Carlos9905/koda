@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
 <template id="report_saledetails">
     <t t-set="company" t-value="env.company"/>
@@ -464,4 +464,4 @@
     </t>
 </template>
 </data>
-</odoo>
+</koda>

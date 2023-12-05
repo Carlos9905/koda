@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { TModelInput } from "@point_of_sale/app/generic_components/inputs/t_model_input";
 

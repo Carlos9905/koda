@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 /* global html2canvas */
 
 import { registry } from "@web/core/registry";
-import { Component, onRendered, reactive, useRef, xml } from "@odoo/owl";
+import { Component, onRendered, reactive, useRef, xml } from "@koda/owl";
 
 export class RenderContainer extends Component {
     static props = ["comp", "onRendered"];

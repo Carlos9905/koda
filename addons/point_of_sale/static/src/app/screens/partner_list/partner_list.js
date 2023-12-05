@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
@@ -10,7 +10,7 @@ import { session } from "@web/session";
 import { PartnerLine } from "@point_of_sale/app/screens/partner_list/partner_line/partner_line";
 import { PartnerDetailsEdit } from "@point_of_sale/app/screens/partner_list/partner_editor/partner_editor";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component, onWillUnmount, useRef, useState } from "@odoo/owl";
+import { Component, onWillUnmount, useRef, useState } from "@koda/owl";
 
 /**
  * Render this screen using `showTempScreen` to select partner.
@@ -199,7 +199,7 @@ export class PartnerListScreen extends Component {
         const result = await this.orm.silent.call(
             "pos.session",
             "get_pos_ui_res_partner_by_params",
-            [[odoo.pos_session_id], { domain, limit: limit, offset: this.state.currentOffset }]
+            [[koda.pos_session_id], { domain, limit: limit, offset: this.state.currentOffset }]
         );
         return result;
     }

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { HeaderLockButton } from "@pos_hr/app/header_lock_button/header_lock_button";
 import { patch } from "@web/core/utils/patch";

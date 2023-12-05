@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ControlButtonsMixin } from "@point_of_sale/app/utils/control_buttons_mixin";
 import { registry } from "@web/core/registry";
@@ -13,7 +13,7 @@ import { ControlButtonPopup } from "@point_of_sale/app/screens/product_screen/co
 import { ConnectionLostError } from "@web/core/network/rpc_service";
 
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component, onMounted, useExternalListener, useState } from "@odoo/owl";
+import { Component, onMounted, useExternalListener, useState } from "@koda/owl";
 import { ErrorBarcodePopup } from "@point_of_sale/app/barcode/error_popup/barcode_error_popup";
 
 import { Numpad } from "@point_of_sale/app/generic_components/numpad/numpad";
@@ -241,7 +241,7 @@ export class ProductScreen extends ControlButtonsMixin(Component) {
             const { product_id = [], packaging = [] } = await this.orm.silent.call(
                 "pos.session",
                 "find_product_by_barcode",
-                [odoo.pos_session_id, code.base_code]
+                [koda.pos_session_id, code.base_code]
             );
             if (product_id.length) {
                 await this.pos._addProducts(product_id, false);

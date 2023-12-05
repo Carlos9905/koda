@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { ProductScreen } from "@point_of_sale/app/screens/product_screen/product_screen";
 import { useService } from "@web/core/utils/hooks";
 import { NumberPopup } from "@point_of_sale/app/utils/input_popups/number_popup";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 
 export class TableGuestsButton extends Component {

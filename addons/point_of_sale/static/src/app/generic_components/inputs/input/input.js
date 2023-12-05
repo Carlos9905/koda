@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { useRef, useState } from "@odoo/owl";
+import { useRef, useState } from "@koda/owl";
 import { useAutofocus } from "@web/core/utils/hooks";
 import { debounce } from "@web/core/utils/timing";
 import { TModelInput } from "@point_of_sale/app/generic_components/inputs/t_model_input";

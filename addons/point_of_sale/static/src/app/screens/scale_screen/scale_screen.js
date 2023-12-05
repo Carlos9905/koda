@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { roundPrecision as round_pr } from "@web/core/utils/numbers";
 import { registry } from "@web/core/registry";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component, onMounted, onWillUnmount, useExternalListener, useState } from "@odoo/owl";
+import { Component, onMounted, onWillUnmount, useExternalListener, useState } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class ScaleScreen extends Component {

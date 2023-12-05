@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 
 class SaleOrderFetcher extends EventBus {
     static serviceDependencies = ["orm", "pos"];

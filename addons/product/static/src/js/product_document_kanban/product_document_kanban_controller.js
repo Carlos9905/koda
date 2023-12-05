@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { KanbanController } from "@web/views/kanban/kanban_controller";
 import { useBus, useService } from "@web/core/utils/hooks";
-import { useRef } from "@odoo/owl";
+import { useRef } from "@koda/owl";
 
 export class ProductDocumentKanbanController extends KanbanController {
     setup() {

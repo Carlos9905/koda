@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
 
         <record id="email_template_slot_single" model="mail.template">
@@ -155,4 +155,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

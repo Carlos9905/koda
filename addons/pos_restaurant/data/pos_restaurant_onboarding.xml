@@ -1,4 +1,4 @@
-<odoo>
+<koda>
 
     <record id="drinks" model="pos.category">
         <field name="name">Drinks</field>
@@ -232,4 +232,4 @@
     </record>
 
     <function model="pos.config" name="add_cash_payment_method" />
-</odoo>
+</koda>

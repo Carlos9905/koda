@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
-import { Component, onMounted, useRef, useState, useSubEnv } from "@odoo/owl";
+import { Component, onMounted, useRef, useState, useSubEnv } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class BaseProductAttribute extends Component {

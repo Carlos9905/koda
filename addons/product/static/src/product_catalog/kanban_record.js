@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { useSubEnv } from "@odoo/owl";
+/** @koda-module */
+import { useSubEnv } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { useDebounced } from "@web/core/utils/timing";
 import { KanbanRecord } from "@web/views/kanban/kanban_record";

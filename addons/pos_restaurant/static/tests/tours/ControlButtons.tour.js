@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import * as TextAreaPopup from "@point_of_sale/../tests/tours/helpers/TextAreaPopupTourMethods";
 import * as NumberPopup from "@point_of_sale/../tests/tours/helpers/NumberPopupTourMethods";

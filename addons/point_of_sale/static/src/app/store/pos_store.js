@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 /* global waitForWebfonts */
 
 import { PosCollection, Order, Product } from "@point_of_sale/app/store/models";
 import { Mutex } from "@web/core/utils/concurrency";
 import { PosDB } from "@point_of_sale/app/store/db";
-import { markRaw, reactive } from "@odoo/owl";
+import { markRaw, reactive } from "@koda/owl";
 import { roundPrecision as round_pr, floatIsZero } from "@web/core/utils/numbers";
 import { registry } from "@web/core/registry";
 import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_popup";
@@ -237,7 +237,7 @@ export class PosStore extends Reactive {
 
     async load_server_data() {
         const loadedData = await this.orm.silent.call("pos.session", "load_pos_data", [
-            [odoo.pos_session_id],
+            [koda.pos_session_id],
         ]);
         await this._processData(loadedData);
         return this.after_load_server_data();
@@ -288,7 +288,7 @@ export class PosStore extends Reactive {
         const orders = this.db.get_orders();
         const sequences = orders.map((order) => order.data.sequence_number + 1);
         this.pos_session.sequence_number = Math.max(this.pos_session.sequence_number, ...sequences);
-        this.pos_session.login_number = odoo.login_number;
+        this.pos_session.login_number = koda.login_number;
     }
     _loadPosPrinters(printers) {
         this.unwatched.printers = [];
@@ -425,7 +425,7 @@ export class PosStore extends Reactive {
         const partners = await this.orm.silent.call(
             "pos.session",
             "get_pos_ui_res_partner_by_params",
-            [[odoo.pos_session_id], search_params]
+            [[koda.pos_session_id], search_params]
         );
         return this.addPartners(partners);
     }
@@ -669,7 +669,7 @@ export class PosStore extends Reactive {
         const products = await this.orm.call(
             "pos.session",
             "get_pos_ui_product_product_by_params",
-            [odoo.pos_session_id, { domain: [["id", "in", [...missingProductIds]]] }]
+            [koda.pos_session_id, { domain: [["id", "in", [...missingProductIds]]] }]
         );
         await this._loadMissingPricelistItems(products);
         this._loadProductProduct(products);
@@ -682,7 +682,7 @@ export class PosStore extends Reactive {
         const pricelistItems = await this.orm.call(
             'pos.session',
             'get_pos_ui_product_pricelist_item_by_product',
-            [odoo.pos_session_id, product_tmpl_ids, product_ids]
+            [koda.pos_session_id, product_tmpl_ids, product_ids]
         );
 
         // Merge the loaded pricelist items with the existing pricelists
@@ -706,7 +706,7 @@ export class PosStore extends Reactive {
             const fetchedPartners = await this.orm.silent.call(
                 "pos.session",
                 "get_pos_ui_res_partner_by_params",
-                [[odoo.pos_session_id], { domain: [["id", "in", partnerIds]] }]
+                [[koda.pos_session_id], { domain: [["id", "in", partnerIds]] }]
             );
             this.addPartners(fetchedPartners);
         }
@@ -859,7 +859,7 @@ export class PosStore extends Reactive {
         return await this.env.services.orm.call(
             "pos.session",
             "get_pos_ui_product_pricelists_by_ids",
-            [[odoo.pos_session_id], pricelistsToGet]
+            [[koda.pos_session_id], pricelistsToGet]
         );
     }
     async _getMissingProducts(ordersJson) {
@@ -913,7 +913,7 @@ export class PosStore extends Reactive {
         return await this.env.services.orm.call(
             "pos.session",
             "get_pos_ui_account_fiscal_positions_by_ids",
-            [[odoo.pos_session_id], fiscalPositionToGet]
+            [[koda.pos_session_id], fiscalPositionToGet]
         );
     }
     _addPosFiscalPosition(fiscalPositionJson) {
@@ -1654,7 +1654,7 @@ export class PosStore extends Reactive {
             await this.orm.write("product.product", ids, { available_in_pos: true });
         }
         const product = await this.orm.call("pos.session", "get_pos_ui_product_product_by_params", [
-            odoo.pos_session_id,
+            koda.pos_session_id,
             { domain: [["id", "in", ids]] },
         ]);
         await this._loadMissingPricelistItems(product);

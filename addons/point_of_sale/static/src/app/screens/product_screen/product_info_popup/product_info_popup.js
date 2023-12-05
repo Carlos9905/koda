@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { usePos } from "@point_of_sale/app/store/pos_hook";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
         <record model="ir.actions.act_window" id="action_log_book_form">
             <field name="name">Log book</field>
@@ -113,4 +113,4 @@ FICHIER JOURNAL POUR CAISSE <t t-esc="pos_id" />:
         </template>
 
     </data>
-</odoo>
+</koda>

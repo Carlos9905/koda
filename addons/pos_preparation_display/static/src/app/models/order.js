@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { Reactive } from "@web/core/utils/reactive";
 import { deserializeDateTime } from "@web/core/l10n/dates";
 

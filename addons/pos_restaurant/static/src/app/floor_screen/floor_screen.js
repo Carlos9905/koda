@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { sprintf } from "@web/core/utils/strings";
@@ -24,7 +24,7 @@ import {
     useRef,
     useState,
     onWillStart,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 export class FloorScreen extends Component {
     static components = { EditableTable, EditBar, Table };

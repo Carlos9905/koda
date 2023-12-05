@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { Reactive, effect } from "@web/core/utils/reactive";
 import { ConnectionLostError, RPCError } from "@web/core/network/rpc_service";
 import { _t } from "@web/core/l10n/translation";
@@ -10,7 +10,7 @@ import { getColor } from "@web/core/colors/colors";
 import { categorySorter, attributeFormatter } from "@pos_self_order/app/utils";
 import { Order } from "@pos_self_order/app/models/order";
 import { batched } from "@web/core/utils/timing";
-import { useState, markup } from "@odoo/owl";
+import { useState, markup } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { registry } from "@web/core/registry";
 import { cookie } from "@web/core/browser/cookie";

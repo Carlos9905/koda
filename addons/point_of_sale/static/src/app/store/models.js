@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { random5Chars, uuidv4, qrCodeSrc, constructFullProductName } from "@point_of_sale/utils";
 // FIXME POSREF - unify use of native parseFloat and web's parseFloat. We probably don't need the native version.

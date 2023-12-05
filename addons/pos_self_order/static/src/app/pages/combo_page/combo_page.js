@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, onWillUnmount, useState, useSubEnv } from "@odoo/owl";
+import { Component, onWillUnmount, useState, useSubEnv } from "@koda/owl";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { ComboSelection } from "@pos_self_order/app/components/combo_selection/combo_selection";
 import { useService } from "@web/core/utils/hooks";

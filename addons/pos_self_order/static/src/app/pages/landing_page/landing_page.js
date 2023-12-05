@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 /* global Carousel */
 
-import { Component, onMounted, onWillStart, onWillUnmount, useRef } from "@odoo/owl";
+import { Component, onMounted, onWillStart, onWillUnmount, useRef } from "@koda/owl";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { useService } from "@web/core/utils/hooks";
 import { LanguagePopup } from "@pos_self_order/app/components/language_popup/language_popup";

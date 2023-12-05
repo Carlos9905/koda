@@ -127,17 +127,17 @@ PIP_TO_INSTALL="
 pip3 install ${PIP_TO_INSTALL} --break-system-package
 
 # Dowload MPD server and library for Six terminals
-wget 'https://nightly.odoo.com/master/iotbox/eftdvs' -P /usr/local/bin/
+wget 'https://nightly.koda.com/master/iotbox/eftdvs' -P /usr/local/bin/
 chmod +x /usr/local/bin/eftdvs
-wget 'https://nightly.odoo.com/master/iotbox/eftapi.so' -P /usr/lib/
+wget 'https://nightly.koda.com/master/iotbox/eftapi.so' -P /usr/lib/
 
 groupadd usbusers
 usermod -a -G usbusers pi
 usermod -a -G lp pi
 usermod -a -G input lightdm
-mkdir -v /var/log/odoo
-chown pi:pi /var/log/odoo
-chown pi:pi -R /home/pi/odoo/
+mkdir -v /var/log/koda
+chown pi:pi /var/log/koda
+chown pi:pi -R /home/pi/koda/
 
 # logrotate is very picky when it comes to file permissions
 chown -R root:root /etc/logrotate.d/
@@ -145,7 +145,7 @@ chmod -R 644 /etc/logrotate.d/
 chown root:root /etc/logrotate.conf
 chmod 644 /etc/logrotate.conf
 
-echo "* * * * * rm /var/run/odoo/sessions/*" | crontab -
+echo "* * * * * rm /var/run/koda/sessions/*" | crontab -
 
 update-rc.d -f hostapd remove
 update-rc.d -f nginx remove
@@ -173,7 +173,7 @@ echo "disable_overscan=1" >> /boot/config.txt
 sed -i '/dtoverlay/d' /boot/config.txt
 
 # exclude /drivers folder from git info to be able to load specific drivers
-echo "addons/hw_drivers/iot_devices/" > /home/pi/odoo/.git/info/exclude
+echo "addons/hw_drivers/iot_devices/" > /home/pi/koda/.git/info/exclude
 
 # create dirs for ramdisks
 create_ramdisk_dir () {

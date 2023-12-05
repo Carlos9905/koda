@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 const buttonTriger = (buttonValue) => `div.numpad.row button.col:contains("${buttonValue}")`;
 export const click = (buttonValue, options = {}) => ({

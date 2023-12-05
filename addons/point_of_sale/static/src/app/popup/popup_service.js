@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, reactive } from "@odoo/owl";
+import { Component, reactive } from "@koda/owl";
 import { registry } from "@web/core/registry";
 
 export class PopupContainer extends Component {

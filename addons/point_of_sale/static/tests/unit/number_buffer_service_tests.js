@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import testUtils from "@web/../tests/legacy/helpers/test_utils";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { numberBufferService } from "@point_of_sale/app/utils/number_buffer_service";
 import { registry } from "@web/core/registry";
 
-import { Component, useState, xml } from "@odoo/owl";
+import { Component, useState, xml } from "@koda/owl";
 
 QUnit.module("unit tests for NumberBuffer", {
     async beforeEach() {

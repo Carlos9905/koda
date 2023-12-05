@@ -31,7 +31,7 @@ if [ -z "${WIRED_IP}" ] ; then
 
 	if [ -f "${WIFI_NETWORK_FILE}" ] && [ -z "${FORCE_HOST_AP}" ] ; then
 		logger -t posbox_wireless_ap "Loading persistently saved setting"
-		/home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/connect_to_wifi.sh &
+		/home/pi/koda/addons/point_of_sale/tools/posbox/configuration/connect_to_wifi.sh &
 	else
 		logger -t posbox_wireless_ap "Starting AP"
 
@@ -51,12 +51,12 @@ if [ -z "${WIRED_IP}" ] ; then
 
 		service dnsmasq restart
 
-		service odoo restart
+		service koda restart
 	fi
 # wired
 else
 	killall nginx
 	service nginx restart
 	service dnsmasq stop
-	service odoo restart
+	service koda restart
 fi

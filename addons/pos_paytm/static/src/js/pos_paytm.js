@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Payment } from "@point_of_sale/app/store/models";
 import { patch } from "@web/core/utils/patch";

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { PartnerDetailsEdit } from "@point_of_sale/app/screens/partner_list/partner_editor/partner_editor";

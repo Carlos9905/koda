@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Resource: pos.category -->
     <record id="pos_category_miscellaneous" model="pos.category">
         <field name="name">Misc</field>
@@ -891,4 +891,4 @@
       <field name="taxes_id" eval="[(5,)]"/>  <!-- no taxes -->
       <field name="pos_categ_ids" eval="[(6, 0, [ref('pos_category_miscellaneous')])]"/>
     </record>
-</odoo>
+</koda>

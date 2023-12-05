@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 /* global StripeTerminal */
 
 export class StripeError extends Error {}

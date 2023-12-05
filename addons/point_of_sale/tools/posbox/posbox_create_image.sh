@@ -30,7 +30,7 @@ OVERWRITE_FILES_BEFORE_INIT_DIR="${__dir}/overwrite_before_init"
 OVERWRITE_FILES_AFTER_INIT_DIR="${__dir}/overwrite_after_init"
 VERSION=17.0
 VERSION_IOTBOX=23.11
-REPO=https://github.com/odoo/odoo.git
+REPO=https://github.com/koda/koda.git
 
 if ! file_exists *raspios*.img ; then
     wget 'https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2023-10-10/2023-10-10-raspios-bookworm-armhf-lite.img.xz' -O raspios.img.xz
@@ -40,7 +40,7 @@ fi
 RASPIOS=$(echo *raspios*.img)
 rsync -avh --progress "${RASPIOS}" iotbox.img
 
-CLONE_DIR="${OVERWRITE_FILES_BEFORE_INIT_DIR}/home/pi/odoo"
+CLONE_DIR="${OVERWRITE_FILES_BEFORE_INIT_DIR}/home/pi/koda"
 
 rm -rfv "${CLONE_DIR}"
 
@@ -53,8 +53,8 @@ if [ ! -d $CLONE_DIR ]; then
     echo "addons/web
 addons/hw_*
 addons/point_of_sale/tools/posbox/configuration
-odoo/
-odoo-bin" | tee --append .git/info/sparse-checkout > /dev/null
+koda/
+koda-bin" | tee --append .git/info/sparse-checkout > /dev/null
     git read-tree -mu HEAD
 fi
 
@@ -132,8 +132,8 @@ cp -av "${OVERWRITE_FILES_BEFORE_INIT_DIR}"/* "${MOUNT_POINT}"
 chroot "${MOUNT_POINT}" /bin/bash -c "/etc/init_posbox_image.sh"
 
 # copy iotbox version
-mkdir -pv "${MOUNT_POINT}"/var/odoo
-echo "${VERSION_IOTBOX}" | tee "${MOUNT_POINT}"/var/odoo/iotbox_version "${MOUNT_POINT}"/home/pi/iotbox_version
+mkdir -pv "${MOUNT_POINT}"/var/koda
+echo "${VERSION_IOTBOX}" | tee "${MOUNT_POINT}"/var/koda/iotbox_version "${MOUNT_POINT}"/home/pi/iotbox_version
 
 # get rid of the git clone
 rm -rf "${CLONE_DIR}"

@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import { Component, useState, onWillUnmount, useRef } from "@odoo/owl";
+/** @koda-module **/
+import { Component, useState, onWillUnmount, useRef } from "@koda/owl";
 import { usePreparationDisplay } from "@pos_preparation_display/app/preparation_display_service";
 import { Orderline } from "@pos_preparation_display/app/components/orderline/orderline";
 import { computeFontColor } from "@pos_preparation_display/app/utils";

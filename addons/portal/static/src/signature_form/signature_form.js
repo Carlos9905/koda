@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, onMounted, useRef, useState } from "@odoo/owl";
+import { Component, onMounted, useRef, useState } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { redirect } from "@web/core/utils/urls";
@@ -20,7 +20,7 @@ class SignatureForm extends Component {
         this.rootRef = useRef("root");
         this.rpc = useService("rpc");
 
-        this.csrfToken = odoo.csrf_token;
+        this.csrfToken = koda.csrf_token;
         this.state = useState({
             error: false,
             success: false,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="mail_template_sepa_notify_debit" model="mail.template">
             <field name="name">SEPA Direct Debit: Charge Notification</field>
@@ -88,7 +88,7 @@
 <tr><td align="center" style="min-width: 590px;">
     <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
       <tr><td style="text-align: center; font-size: 13px;">
-        Powered by <a target="_blank" href="https://www.odoo.com?utm_source=db&amp;utm_medium=mail" style="color: #875A7B;">Odoo</a>
+        Powered by <a target="_blank" href="https://www.koda.com?utm_source=db&amp;utm_medium=mail" style="color: #875A7B;">Odoo</a>
       </td></tr>
     </table>
 </td></tr>
@@ -175,7 +175,7 @@
 <tr><td align="center" style="min-width: 590px;">
     <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
       <tr><td style="text-align: center; font-size: 13px;">
-        Powered by <a target="_blank" href="https://www.odoo.com?utm_source=db&amp;utm_medium=mail" style="color: #875A7B;">Odoo</a>
+        Powered by <a target="_blank" href="https://www.koda.com?utm_source=db&amp;utm_medium=mail" style="color: #875A7B;">Odoo</a>
       </td></tr>
     </table>
 </td></tr>
@@ -185,4 +185,4 @@
             <field name="auto_delete" eval="True"/>
         </record>
     </data>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component, whenReady, App } from "@odoo/owl";
+/** @koda-module */
+import { Component, whenReady, App } from "@koda/owl";
 import { makeEnv, startServices } from "@web/env";
 import { templates } from "@web/core/assets";
 import { _t } from "@web/core/l10n/translation";

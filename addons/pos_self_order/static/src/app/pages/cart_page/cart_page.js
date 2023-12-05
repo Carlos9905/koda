@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { PopupTable } from "@pos_self_order/app/components/popup_table/popup_table";

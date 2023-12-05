@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { parseFloat as oParseFloat } from "@web/views/fields/parsers";
 import { barcodeService } from "@barcodes/barcode_service";
 import { registry } from "@web/core/registry";
-import { EventBus, onWillDestroy, useComponent } from "@odoo/owl";
+import { EventBus, onWillDestroy, useComponent } from "@koda/owl";
 
 const INPUT_KEYS = new Set(
     ["Delete", "Backspace", "+1", "+2", "+5", "+10", "+20", "+50"].concat(

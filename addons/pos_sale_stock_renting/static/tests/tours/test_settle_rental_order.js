@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import * as ProductScreenPos from "@point_of_sale/../tests/tours/helpers/ProductScreenTourMethods";
 import * as ProductScreenSale from "@pos_sale/../tests/helpers/ProductScreenTourMethods";

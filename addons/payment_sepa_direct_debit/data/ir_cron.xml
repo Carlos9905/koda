@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="cron_auto_confirm_paid_sepa_txs" model="ir.cron">
         <field name="name">SEPA Direct Debit: Confirm paid transactions</field>
@@ -12,4 +12,4 @@
         <field name="numbercall">-1</field>
     </record>
 
-</odoo>
+</koda>

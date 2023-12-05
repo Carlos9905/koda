@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="payment.payment_provider_sepa_direct_debit" model="payment.provider">
         <field name="code">custom</field>
@@ -30,4 +30,4 @@
         <field name="payment_type">inbound</field>
     </record>
 
-</odoo>
+</koda>

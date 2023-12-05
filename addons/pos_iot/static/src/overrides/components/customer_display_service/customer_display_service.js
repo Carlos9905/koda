@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { RemoteDisplay } from "@point_of_sale/app/customer_display/customer_display_service";
 import { patch } from "@web/core/utils/patch";

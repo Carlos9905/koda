@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <template id="daily_report" inherit_id="point_of_sale.report_saledetails" name="Daily Report">
         <xpath expr="//div[hasclass('page')]" position="inside">
             <br/>
@@ -20,4 +20,4 @@
             </div>
         </xpath>
     </template>
-</odoo>
+</koda>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="payment_provider_form" model="ir.ui.view">
         <field name="name">PayPal Provider Form</field>
@@ -12,7 +12,7 @@
                            required="code == 'paypal' and state != 'disabled'"/>
                     <field name="paypal_pdt_token"  password="True"
                            required="code == 'paypal' and state != 'disabled'"/>
-                    <a href="https://www.odoo.com/documentation/17.0/applications/finance/payment_providers/paypal.html"
+                    <a href="https://www.koda.com/documentation/17.0/applications/finance/payment_providers/paypal.html"
                        target="_blank"
                        colspan="2">
                         How to configure your paypal account?
@@ -22,4 +22,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

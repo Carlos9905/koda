@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { ProductScreen } from "@point_of_sale/app/screens/product_screen/product_screen";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class CustomerButton extends Component {
     static template = "point_of_sale.CustomerButton";

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 import { usePos } from "../pos_hook";
 import { ProductCard } from "@point_of_sale/app/generic_components/product_card/product_card";
 import { floatIsZero } from "@web/core/utils/numbers";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="preparation_display_reset_wizard" model="ir.ui.view">
         <field name="name">pos.preparation.display.reset.form</field>
         <field name="model">pos_preparation_display.reset.wizard</field>
@@ -15,4 +15,4 @@
         </form>
         </field>
     </record>
-</odoo>
+</koda>

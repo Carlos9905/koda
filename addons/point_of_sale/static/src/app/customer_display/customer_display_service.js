@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { batched } from "@web/core/utils/timing";
 import { registry } from "@web/core/registry";

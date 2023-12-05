@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="point_of_sale.qunit_suite">
     <t t-call="web.layout">
@@ -8,7 +8,7 @@
         <t t-set="head">
             <!-- we need session_info in order to properly instantiate PosStore-->
             <script type="text/javascript">
-                var odoo = <t t-out="json.dumps({
+                var koda = <t t-out="json.dumps({
                     'csrf_token': request.csrf_token(None),
                     '__session_info__': session_info,
                     'debug': debug,
@@ -24,4 +24,4 @@
     </t>
 </template>
 
-</odoo>
+</koda>

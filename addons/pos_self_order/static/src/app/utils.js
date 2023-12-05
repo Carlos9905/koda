@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 export const categorySorter = (a, b, start_categ_id) => {
     if (a.id === start_categ_id && b.id !== start_categ_id) {

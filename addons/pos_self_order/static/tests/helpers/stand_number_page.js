@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 export function selectStandNumber(tableStand) {
     return [

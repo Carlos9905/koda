@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { Reactive } from "@web/core/utils/reactive";
 import { Order } from "@pos_preparation_display/app/models/order";
 import { Orderline } from "@pos_preparation_display/app/models/orderline";

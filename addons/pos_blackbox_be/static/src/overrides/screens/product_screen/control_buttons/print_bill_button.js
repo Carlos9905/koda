@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { PrintBillButton } from "@pos_restaurant/app/control_buttons/print_bill_button/print_bill_button";
 import { patch } from "@web/core/utils/patch";
 

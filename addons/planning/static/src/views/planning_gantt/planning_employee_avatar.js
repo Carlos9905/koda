@@ -1,7 +1,7 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Avatar } from "@mail/views/web/fields/avatar/avatar";
-import { useEffect, useRef } from "@odoo/owl";
+import { useEffect, useRef } from "@koda/owl";
 
 export class PlanningEmployeeAvatar extends Avatar {
     setup() {

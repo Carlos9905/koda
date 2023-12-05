@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { CalendarCommonPopover } from "@web/views/calendar/calendar_common/calendar_common_popover";
 import { formatFloatTime } from "@web/views/fields/formatters";

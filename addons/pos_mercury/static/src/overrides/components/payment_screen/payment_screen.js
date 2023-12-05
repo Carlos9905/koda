@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
@@ -101,7 +101,7 @@ patch(PaymentScreen.prototype, {
                 credit: this.credit_code_action,
             });
         }
-        // How long we wait for the odoo server to deliver the response of
+        // How long we wait for the koda server to deliver the response of
         // a Vantiv transaction
         this.server_timeout_in_ms = 95000;
 

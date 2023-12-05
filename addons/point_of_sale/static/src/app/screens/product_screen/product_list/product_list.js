@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
@@ -6,7 +6,7 @@ import { useService } from "@web/core/utils/hooks";
 import { ConnectionLostError, ConnectionAbortedError } from "@web/core/network/rpc_service";
 
 import { ProductCard } from "@point_of_sale/app/generic_components/product_card/product_card";
-import { Component, useState, useEffect, useRef } from "@odoo/owl";
+import { Component, useState, useEffect, useRef } from "@koda/owl";
 import { OfflineErrorPopup } from "@point_of_sale/app/errors/popups/offline_error_popup";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { ProductInfoPopup } from "@point_of_sale/app/screens/product_screen/product_info_popup/product_info_popup";

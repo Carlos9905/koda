@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { unaccent } from "@web/core/utils/strings";
 

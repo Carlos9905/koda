@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { SaleOrderRow } from "@pos_sale/app/order_management_screen/sale_order_row/sale_order_row";
 import { useService } from "@web/core/utils/hooks";
 

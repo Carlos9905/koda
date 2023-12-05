@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { BasePrinter } from "@point_of_sale/app/printer/base_printer";
 

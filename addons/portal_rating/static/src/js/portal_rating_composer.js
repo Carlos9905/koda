@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { session } from "@web/session";
@@ -33,7 +33,7 @@ const RatingPopupComposer = publicWidget.Widget.extend({
             'res_id': false,
             'pid': 0,
             'display_rating': true,
-            'csrf_token': odoo.csrf_token,
+            'csrf_token': koda.csrf_token,
             'user_id': session.user_id,
         }, options, {});
 

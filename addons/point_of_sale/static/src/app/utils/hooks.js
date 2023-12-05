@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { OfflineErrorPopup } from "@point_of_sale/app/errors/popups/offline_error_popup";
 import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_popup";
 import { ErrorTracebackPopup } from "@point_of_sale/app/errors/popups/error_traceback_popup";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
-import { useEnv, onMounted, onPatched, useComponent, useRef } from "@odoo/owl";
+import { useEnv, onMounted, onPatched, useComponent, useRef } from "@koda/owl";
 
 /**
  * Introduce error handlers in the component.

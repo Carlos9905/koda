@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import * as ProductScreen from "@point_of_sale/../tests/tours/helpers/ProductScreenTourMethods";
 import * as Numpad from "@point_of_sale/../tests/tours/helpers/NumpadTourMethods";

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { _t } from "@web/core/l10n/translation";
 import { RPCError } from "@web/core/network/rpc_service";
 import { PaymentInterface } from "@point_of_sale/app/payment/payment_interface";

@@ -1,6 +1,6 @@
 #calendar_employee {
     .fc-widget-header {
-        @include o-bg-color($o-brand-odoo, $important: false);
+        @include o-bg-color($o-brand-koda, $important: false);
         .fc-list-heading-main, .fc-list-heading-alt {
             color: white;
         }

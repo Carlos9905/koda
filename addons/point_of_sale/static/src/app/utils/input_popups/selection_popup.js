@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { _t } from "@web/core/l10n/translation";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 export class SelectionPopup extends AbstractAwaitablePopup {
     static template = "point_of_sale.SelectionPopup";

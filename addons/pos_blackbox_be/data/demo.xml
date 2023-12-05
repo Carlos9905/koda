@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<odoo>
+<koda>
     <record id="food1" model="product.template">
       <field name="name">Food 1</field>
       <field name="available_in_pos">True</field>
@@ -56,4 +56,4 @@
       <!--  Image by Joumana Medlej, cedarseed.com -->
       <field name="image_1920" type="base64" file="pos_blackbox_be/static/img/creme-brulee.png"/>
     </record>
-</odoo>
+</koda>

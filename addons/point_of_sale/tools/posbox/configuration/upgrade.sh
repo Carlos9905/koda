@@ -120,8 +120,8 @@ copy_raspios () {
     find /home/pi -maxdepth 1 -type f ! -name ".*" -exec cp {} raspios/home/pi/config/ \;
 
     # download latest IoT Box image and check integrity
-    wget -c 'https://nightly.odoo.com/master/iotbox/iotbox-latest.zip' -O raspios/iotbox-latest.zip
-    wget -c 'https://nightly.odoo.com/master/iotbox/SHA1SUMS.txt' -O raspios/SHA1SUMS.txt
+    wget -c 'https://nightly.koda.com/master/iotbox/iotbox-latest.zip' -O raspios/iotbox-latest.zip
+    wget -c 'https://nightly.koda.com/master/iotbox/SHA1SUMS.txt' -O raspios/SHA1SUMS.txt
     cd raspios/
     CHECK=$(sha1sum -c --ignore-missing SHA1SUMS.txt)
     cd ..
@@ -190,12 +190,12 @@ copy_iot () {
     sed -i 's| init=/usr/lib/raspi-config/init_resize.sh||' /boot/cmdline.txt
 
     # Modify startup
-    mkdir -v odoo
-    mount -v "${PART_IOTBOX_ROOT}" odoo
-    cp -v /home/pi/upgrade.sh odoo/home/pi/
-    NBR_LIGNE=$(sed -n -e '$=' odoo/etc/rc.local)
-    sed -ie "${NBR_LIGNE}"'i\. /home/pi/upgrade.sh; clean_local' odoo/etc/rc.local
-    find /home/pi/config -maxdepth 1 -type f ! -name ".*" -exec cp {} odoo/home/pi/ \;
+    mkdir -v koda
+    mount -v "${PART_IOTBOX_ROOT}" koda
+    cp -v /home/pi/upgrade.sh koda/home/pi/
+    NBR_LIGNE=$(sed -n -e '$=' koda/etc/rc.local)
+    sed -ie "${NBR_LIGNE}"'i\. /home/pi/upgrade.sh; clean_local' koda/etc/rc.local
+    find /home/pi/config -maxdepth 1 -type f ! -name ".*" -exec cp {} koda/home/pi/ \;
 
     reboot
 }

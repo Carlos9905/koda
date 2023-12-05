@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <record id="booking_table_address" model="res.partner">
         <field name="name">Bar</field>
         <field name="street">Rue des Bourlottes 9</field>
@@ -278,4 +278,4 @@
         <field name="pos_table_ids" eval="[(4, ref('pos_restaurant.table_32'))]"/>
     </record>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { Reactive } from "@web/core/utils/reactive";
 import { uuidv4 } from "@point_of_sale/utils";
 import { ProductCustomAttribute } from "@point_of_sale/app/store/models/product_custom_attribute";

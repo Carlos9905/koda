@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { PosBus } from "@point_of_sale/app/bus/pos_bus_service";
@@ -39,7 +39,7 @@ patch(PosBus.prototype, {
 
         if (missingTable) {
             const result = await this.orm.call("pos.session", "get_pos_ui_restaurant_floor", [
-                [odoo.pos_session_id],
+                [koda.pos_session_id],
             ]);
 
             if (this.pos.config.module_pos_restaurant) {

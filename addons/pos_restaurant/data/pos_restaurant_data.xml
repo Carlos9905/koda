@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="pos_config_main_restaurant" model="pos.config">
             <field name="name">Restaurant</field>
@@ -16,4 +16,4 @@
             <value eval="[ref('pos_config_main_restaurant')]"/>
         </function>
     </data>
-</odoo>
+</koda>

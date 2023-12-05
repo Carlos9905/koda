@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import "@pos_restaurant/overrides/models/pos_store";

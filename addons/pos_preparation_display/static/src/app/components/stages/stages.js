@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import { Component } from "@odoo/owl";
+/** @koda-module **/
+import { Component } from "@koda/owl";
 import { usePreparationDisplay } from "@pos_preparation_display/app/preparation_display_service";
 import { computeFontColor } from "@pos_preparation_display/app/utils";
 

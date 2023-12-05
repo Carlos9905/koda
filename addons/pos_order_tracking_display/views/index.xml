@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="pos_order_tracking_display.index" name="POS Order Status Display">
         &lt;!DOCTYPE html&gt;
         <html>
@@ -13,7 +13,7 @@
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="mobile-web-app-capable" content="yes" />
                 <script type="text/javascript">
-                    var odoo =
+                    var koda =
                     <t t-out="json.dumps({
                         'csrf_token': request.csrf_token(None),
                         '__session_info__': session_info,
@@ -25,4 +25,4 @@
             <body></body>
         </html>
     </template>
-</odoo>
+</koda>

@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 import { renderToElement } from "@web/core/utils/render";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 
 export class SaleDetailsButton extends Component {

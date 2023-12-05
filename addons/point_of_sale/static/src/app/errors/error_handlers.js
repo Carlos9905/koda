@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { odooExceptionTitleMap } from "@web/core/errors/error_dialogs";

@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@koda/owl";
 
 export class ErrorPopup extends AbstractAwaitablePopup {
     static template = "point_of_sale.ErrorPopup";

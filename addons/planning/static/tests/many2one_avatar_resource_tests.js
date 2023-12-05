@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { getFixture } from "@web/../tests/helpers/utils";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { selectionField, SelectionField } from "@web/views/fields/selection/selection_field";
@@ -14,7 +14,7 @@ export class UpgradeSelectionField extends SelectionField {
     setup() {
         super.setup();
         this.dialogService = useService("dialog");
-        this.isEnterprise = odoo.info && odoo.info.isEnterprise;
+        this.isEnterprise = koda.info && koda.info.isEnterprise;
     }
 
     async onChange(newValue) {

@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 import { serializeDateTime } from "@web/core/l10n/dates";
 import { useService } from "@web/core/utils/hooks";
 import { CalendarController } from "@web/views/calendar/calendar_controller";

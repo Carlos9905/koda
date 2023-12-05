@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 /* global Sha1 */
 import { PosStore } from "@point_of_sale/app/store/pos_store";
 import {

@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useCashierSelector } from "@pos_hr/app/select_cashier_mixin";
 import { registry } from "@web/core/registry";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class LoginScreen extends Component {
     static template = "pos_hr.LoginScreen";

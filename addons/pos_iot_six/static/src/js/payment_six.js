@@ -1,4 +1,4 @@
-odoo.define('pos_iot_six.payment', function (require) {
+koda.define('pos_iot_six.payment', function (require) {
 "use strict";
 
 var { PaymentWorldline } = require('@pos_iot/js/payment');

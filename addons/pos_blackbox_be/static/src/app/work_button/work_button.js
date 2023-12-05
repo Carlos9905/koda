@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { ProductScreen } from "@point_of_sale/app/screens/product_screen/product_screen";
-import { Component,  useState, onWillStart } from "@odoo/owl";
+import { Component,  useState, onWillStart } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";

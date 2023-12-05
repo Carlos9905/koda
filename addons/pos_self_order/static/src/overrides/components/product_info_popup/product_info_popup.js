@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ProductInfoPopup } from "@point_of_sale/app/screens/product_screen/product_info_popup/product_info_popup";
 import { useService } from "@web/core/utils/hooks";

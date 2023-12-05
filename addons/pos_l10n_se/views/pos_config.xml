@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <record id="pos_config_view_form_inherit_blackbox_sweden" model="ir.ui.view">
         <field name="name">pos.config.form.inherit.blackbox.sweden</field>
         <field name="model">pos.config</field>
@@ -13,4 +13,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

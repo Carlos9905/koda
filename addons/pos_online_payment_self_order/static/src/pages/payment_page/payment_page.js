@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { patch } from "@web/core/utils/patch";
 import { PaymentPage } from "@pos_self_order/app/pages/payment_page/payment_page";
 import { _t } from "@web/core/l10n/translation";

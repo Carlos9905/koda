@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getLimits, useMovable, constrain } from "@point_of_sale/app/utils/movable_hook";
-import { onWillUnmount, useEffect, useRef, Component } from "@odoo/owl";
+import { onWillUnmount, useEffect, useRef, Component } from "@koda/owl";
 import { Table } from "@pos_restaurant/app/floor_screen/table";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 

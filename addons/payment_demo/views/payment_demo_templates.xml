@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <template id="payment_demo.token_form" inherit_id="payment.token_form">
         <xpath expr="//p[@name='o_payment_secured_by_desktop']" position="attributes">
@@ -235,4 +235,4 @@
         </div>
     </template>
 
-</odoo>
+</koda>

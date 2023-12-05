@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export const printerService = {
     dependencies: ["renderer"],

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Order, Orderline } from "@point_of_sale/app/store/models";
 import { Mutex } from "@web/core/utils/concurrency";

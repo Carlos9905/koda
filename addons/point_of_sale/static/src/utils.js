@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /*
  * comes from o_spreadsheet.js

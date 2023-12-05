@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Company-restricted Records -->
     <record model="ir.rule" id="record_restricted_company_rule">
         <field name="name">Restricted Record: multi-company</field>
@@ -9,4 +9,4 @@
             [('company_id', 'in', company_ids)]
         </field>
     </record>
-</odoo>
+</koda>

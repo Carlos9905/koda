@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { SelfOrderBus } from "@pos_self_order/app/self_order_bus_service";

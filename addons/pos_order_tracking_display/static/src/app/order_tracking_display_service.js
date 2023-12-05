@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import { reactive, useState } from "@odoo/owl";
+/** @koda-module **/
+import { reactive, useState } from "@koda/owl";
 import { registry } from "@web/core/registry";
 import { session } from "@web/session";
 import { useService } from "@web/core/utils/hooks";

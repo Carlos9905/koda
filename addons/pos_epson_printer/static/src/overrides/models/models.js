@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { PosStore } from "@point_of_sale/app/store/pos_store";
 import { EpsonPrinter } from "@pos_epson_printer/app/epson_printer";

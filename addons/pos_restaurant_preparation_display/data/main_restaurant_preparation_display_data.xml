@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="preparation_display_main_restaurant_to_prepare_stage"
             model="pos_preparation_display.stage">
@@ -31,4 +31,4 @@
             ref('preparation_display_main_restaurant_completed_stage')])]" />
         </record>
     </data>
-</odoo>
+</koda>

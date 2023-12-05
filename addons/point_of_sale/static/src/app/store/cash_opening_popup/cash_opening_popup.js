@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { useService } from "@web/core/utils/hooks";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { MoneyDetailsPopup } from "@point_of_sale/app/utils/money_details_popup/money_details_popup";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 import { Input } from "@point_of_sale/app/generic_components/inputs/input/input";
 import { parseFloat } from "@web/views/fields/parsers";

@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class Numpad extends Component {
     static template = "point_of_sale.Numpad";

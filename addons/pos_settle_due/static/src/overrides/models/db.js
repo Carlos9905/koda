@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { PosDB } from "@point_of_sale/app/store/db";
 import { patch } from "@web/core/utils/patch";

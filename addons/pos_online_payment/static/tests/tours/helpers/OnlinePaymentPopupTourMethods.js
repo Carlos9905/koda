@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 export function clickCancel() {
     return [
@@ -14,7 +14,7 @@ export function fakeOnlinePaymentPaidData() {
             content: "fake online payment paid data",
             trigger: ".online-payment-popup",
             run: () => {
-                const currentOrder = odoo.__WOWL_DEBUG__.root.env.services.pos.get_order();
+                const currentOrder = koda.__WOWL_DEBUG__.root.env.services.pos.get_order();
 
                 const fakePaidOrder = currentOrder.export_as_JSON();
                 fakePaidOrder.id = currentOrder.server_id;
@@ -80,11 +80,11 @@ export function waitForOnlinePayment(checksAmount = 10, delayBetweenChecks = 300
             run: () => {
                 let checkIndex = 0;
                 const checkFunc = async () => {
-                    const currentOrder = odoo.__WOWL_DEBUG__.root.env.services.pos.get_order();
+                    const currentOrder = koda.__WOWL_DEBUG__.root.env.services.pos.get_order();
                     let opData;
                     if (currentOrder) {
                         opData = await currentOrder.update_online_payments_data_with_server(
-                            odoo.__WOWL_DEBUG__.root.env.services.orm,
+                            koda.__WOWL_DEBUG__.root.env.services.orm,
                             false
                         );
                     }

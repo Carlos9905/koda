@@ -1,4 +1,4 @@
-odoo.define('pos_iot_six.models', function (require) {
+koda.define('pos_iot_six.models', function (require) {
 
 var models = require('@point_of_sale/js/models');
 var { PaymentSix } = require('pos_iot_six.payment');

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { SIZES, utils } from "@web/core/ui/ui_service";
 import { patch } from "@web/core/utils/patch";

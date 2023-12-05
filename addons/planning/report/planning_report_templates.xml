@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="resource_planning">
         <t t-set="show_percentage" t-value="any(s.resource_type == 'user' and s.allocated_percentage and s.allocated_percentage != 100 for s in slots)" />
         <t t-set="show_role" t-value="any(s.role_id for s in slots)" />
@@ -58,4 +58,4 @@
             </t>
         </t>
     </template>
-</odoo>
+</koda>
