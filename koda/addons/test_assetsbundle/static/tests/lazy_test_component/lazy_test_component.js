@@ -1,8 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
-
-const { Component } = owl;
+import { Component } from "@koda/owl";
 
 export class LazyTestComponent extends Component {
     setup() {

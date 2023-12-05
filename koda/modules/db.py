@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from psycopg2.extras import Json
 import logging
@@ -25,8 +25,9 @@ def initialize(cr):
     and ir_model_data entries.
 
     """
-    f = koda.modules.get_module_resource('base', 'data', 'base_data.sql')
-    if not f:
+    try:
+        f = koda.tools.misc.file_path('base/data/base_data.sql')
+    except FileNotFoundError:
         m = "File not found: 'base.sql' (provided by module 'base')."
         _logger.critical(m)
         raise IOError(m)
@@ -173,7 +174,7 @@ def has_trigram(cr):
     """ Test if the database has the a word_similarity function.
 
     The word_similarity is supposed to be provided by the PostgreSQL built-in
-    pg_trgm module but any similar function will be picked by Odoo.
+    pg_trgm module but any similar function will be picked by koda.
 
     """
     cr.execute("SELECT proname FROM pg_proc WHERE proname='word_similarity'")

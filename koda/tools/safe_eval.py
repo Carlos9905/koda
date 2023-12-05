@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 """
 safe_eval module - methods intended to provide more restricted alternatives to
@@ -127,6 +127,9 @@ _SAFE_OPCODES = _EXPR_OPCODES.union(to_opcodes([
     # replacement of POP_JUMP_IF_TRUE and POP_JUMP_IF_FALSE
     'POP_JUMP_FORWARD_IF_FALSE', 'POP_JUMP_FORWARD_IF_TRUE',
     'POP_JUMP_BACKWARD_IF_FALSE', 'POP_JUMP_BACKWARD_IF_TRUE',
+    # special case of the previous for IS NONE / IS NOT NONE
+    'POP_JUMP_FORWARD_IF_NONE', 'POP_JUMP_BACKWARD_IF_NONE',
+    'POP_JUMP_FORWARD_IF_NOT_NONE', 'POP_JUMP_BACKWARD_IF_NOT_NONE',
     #replacement of JUMP_ABSOLUTE
     'JUMP_BACKWARD',
     #replacement of JUMP_IF_NOT_EXC_MATCH

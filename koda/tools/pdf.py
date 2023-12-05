@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 import io
 import re
 
@@ -12,6 +12,7 @@ from reportlab.lib import colors
 from reportlab.lib.units import cm
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
+from koda.tools.parse_version import parse_version
 
 try:
     # class were renamed in PyPDF2 > 2.0
@@ -29,6 +30,7 @@ try:
 
     PyPDF2.PdfFileReader = PdfFileReader
     from PyPDF2 import PdfFileWriter, PdfFileReader
+    PdfFileReader.getFields = PdfFileReader.get_fields
     PdfFileWriter._addObject = PdfFileWriter._add_object
 except ImportError:
     from PyPDF2 import PdfFileWriter, PdfFileReader
@@ -36,6 +38,7 @@ except ImportError:
 from PyPDF2.generic import DictionaryObject, NameObject, ArrayObject, DecodedStreamObject, NumberObject, createStringObject, ByteStringObject
 
 try:
+    import fontTools
     from fontTools.ttLib import TTFont
 except ImportError:
     TTFont = None
@@ -66,8 +69,8 @@ class BrandedFileWriter(PdfFileWriter):
     def __init__(self):
         super().__init__()
         self.addMetadata({
-            '/Creator': "Odoo",
-            '/Producer': "Odoo",
+            '/Creator': "koda",
+            '/Producer': "koda",
         })
 
 
@@ -85,10 +88,39 @@ def merge_pdf(pdf_data):
         reader = PdfFileReader(io.BytesIO(document), strict=False)
         for page in range(0, reader.getNumPages()):
             writer.addPage(reader.getPage(page))
+
     with io.BytesIO() as _buffer:
         writer.write(_buffer)
         return _buffer.getvalue()
 
+def fill_form_fields_pdf(document, form_fields=None):
+    ''' Fill in the form fields of a PDF
+    :param datastring document: a PDF datastring
+    :param dict form_fields: a dictionary of form fields to update in the PDF
+    :return: a filled PDF datastring
+    '''
+    form_fields = form_fields or {}
+    writer = PdfFileWriter()
+    reader = PdfFileReader(io.BytesIO(document), strict=False)
+    has_fields = form_fields and bool(reader.getFields())
+    if not has_fields:
+        return document
+
+    for page in range(0, reader.getNumPages()):
+        page = reader.getPage(page)
+        writer.addPage(page)
+        try:
+            writer.update_page_form_field_values(page, form_fields)
+        except AttributeError:  # This method was renamed in PyPDF2 2.0
+            # This is a known bug on previous version of PyPDF2, fixed in 2.11
+            if not page.get('/Annots'):
+                _logger.info("No fields to update in this page")
+            else:
+                writer.updatePageFormFieldValues(page, form_fields)
+
+    with io.BytesIO() as _buffer:
+        writer.write(_buffer)
+        return _buffer.getvalue()
 
 def rotate_pdf(pdf):
     ''' Rotate clockwise PDF (90°) into a new PDF.
@@ -120,11 +152,11 @@ def to_pdf_stream(attachment) -> io.BytesIO:
 
 
 def add_banner(pdf_stream, text=None, logo=False, thickness=2 * cm):
-    """ Add a banner on a PDF in the upper right corner, with Odoo's logo (optionally).
+    """ Add a banner on a PDF in the upper right corner, with koda's logo (optionally).
 
     :param pdf_stream (BytesIO):    The PDF stream where the banner will be applied.
     :param text (str):              The text to be displayed.
-    :param logo (bool):             Whether to display Odoo's logo in the banner.
+    :param logo (bool):             Whether to display koda's logo in the banner.
     :param thickness (float):       The thickness of the banner in pixels.
     :return (BytesIO):              The modified PDF stream.
     """
@@ -132,8 +164,8 @@ def add_banner(pdf_stream, text=None, logo=False, thickness=2 * cm):
     old_pdf = PdfFileReader(pdf_stream, strict=False, overwriteWarnings=False)
     packet = io.BytesIO()
     can = canvas.Canvas(packet)
-    odoo_logo = Image.open(file_open('base/static/img/main_partner-image.png', mode='rb'))
-    odoo_color = colors.Color(113 / 255, 75 / 255, 103 / 255, 0.8)
+    koda_logo = Image.open(file_open('base/static/img/main_partner-image.png', mode='rb'))
+    koda_color = colors.Color(113 / 255, 75 / 255, 103 / 255, 0.8)
 
     for p in range(old_pdf.getNumPages()):
         page = old_pdf.getPage(p)
@@ -149,7 +181,7 @@ def add_banner(pdf_stream, text=None, logo=False, thickness=2 * cm):
         path.lineTo(-width, -2 * thickness)
         path.lineTo(width, -2 * thickness)
         path.lineTo(width, -thickness)
-        can.setFillColor(odoo_color)
+        can.setFillColor(koda_color)
         can.drawPath(path, fill=1, stroke=False)
 
         # Insert text (and logo) inside the banner
@@ -157,7 +189,7 @@ def add_banner(pdf_stream, text=None, logo=False, thickness=2 * cm):
         can.setFillColor(colors.white)
         can.drawRightString(0.75 * thickness, -1.45 * thickness, text)
         logo and can.drawImage(
-            ImageReader(odoo_logo), 0.25 * thickness, -2.05 * thickness, 40, 40, mask='auto', preserveAspectRatio=True)
+            ImageReader(koda_logo), 0.25 * thickness, -2.05 * thickness, 40, 40, mask='auto', preserveAspectRatio=True)
 
         can.showPage()
 
@@ -188,7 +220,7 @@ old_init = PdfFileReader.__init__
 PdfFileReader.__init__ = lambda self, stream, strict=True, warndest=None, overwriteWarnings=True: \
     old_init(self, stream=stream, strict=strict, warndest=None, overwriteWarnings=False)
 
-class OdooPdfFileReader(PdfFileReader):
+class kodaPdfFileReader(PdfFileReader):
     # OVERRIDE of PdfFileReader to add the management of multiple embedded files.
 
     ''' Returns the files inside the PDF.
@@ -212,7 +244,7 @@ class OdooPdfFileReader(PdfFileReader):
             return []
 
 
-class OdooPdfFileWriter(PdfFileWriter):
+class kodaPdfFileWriter(PdfFileWriter):
 
     def __init__(self, *args, **kwargs):
         """
@@ -277,8 +309,8 @@ class OdooPdfFileWriter(PdfFileWriter):
                 NameObject("/AF"): attachment_array
             })
 
-    def embed_odoo_attachment(self, attachment, subtype=None):
-        assert attachment, "embed_odoo_attachment cannot be called without attachment."
+    def embed_koda_attachment(self, attachment, subtype=None):
+        assert attachment, "embed_koda_attachment cannot be called without attachment."
         self.addAttachment(attachment.name, attachment.raw, subtype=subtype or attachment.mimetype)
 
     def cloneReaderDocumentRoot(self, reader):
@@ -369,7 +401,10 @@ class OdooPdfFileWriter(PdfFileWriter):
                 stream = io.BytesIO(decompress(font_file._data))
                 ttfont = TTFont(stream)
                 font_upm = ttfont['head'].unitsPerEm
-                glyphs = ttfont.getGlyphSet()._hmtx.metrics
+                if parse_version(fontTools.__version__) < parse_version('4.37.2'):
+                    glyphs = ttfont.getGlyphSet()._hmtx.metrics
+                else:
+                    glyphs = ttfont.getGlyphSet().hMetrics
                 glyph_widths = []
                 for key, values in glyphs.items():
                     if key[:5] == 'glyph':
@@ -385,8 +420,8 @@ class OdooPdfFileWriter(PdfFileWriter):
 
         # Set koda as producer
         self.addMetadata({
-            '/Creator': "Odoo",
-            '/Producer': "Odoo",
+            '/Creator': "koda",
+            '/Producer': "koda",
         })
         self.is_pdfa = True
 

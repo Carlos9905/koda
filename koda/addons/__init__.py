@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 """ Addons module.
 
-This module serves to contain all Odoo addons, across all configured addons
+This module serves to contain all koda addons, across all configured addons
 paths. For the code to manage those addons, see koda.modules.
 
 Addons are made available under `koda.addons` after

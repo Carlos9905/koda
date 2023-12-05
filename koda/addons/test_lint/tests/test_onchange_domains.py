@@ -3,7 +3,7 @@ import itertools
 import os
 
 from . import lint_case
-
+from koda.tools.misc import file_open
 
 class OnchangeChecker(lint_case.NodeVisitor):
     def matches_onchange(self, node):
@@ -32,12 +32,12 @@ class TestOnchangeDomains(lint_case.LintCase):
     """
     def test_forbid_domains_in_onchanges(self):
         """ Dynamic domains (returning a domain from an onchange) are deprecated
-        and should not be used in "standard" Odoo anymore
+        and should not be used in "standard" koda anymore
         """
         checker = OnchangeChecker()
         rs = []
         for path in self.iter_module_files('*.py'):
-            with open(path, 'rb') as f:
+            with file_open(path, 'rb') as f:
                 t = ast.parse(f.read(), path)
             rs.extend(zip(itertools.repeat(os.path.relpath(path)), checker.visit(t)))
 

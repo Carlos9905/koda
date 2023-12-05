@@ -9,8 +9,8 @@ from pathlib import Path
 
 from .. import tools
 from .tag_selector import TagsSelector
-from .suite import OdooSuite
-from .result import OdooTestResult
+from .suite import kodaSuite
+from .result import kodaTestResult
 
 
 def get_test_modules(module):
@@ -73,7 +73,7 @@ def make_suite(module_names, position='at_install'):
         for t in unwrap_suite(unittest.TestLoader().loadTestsFromModule(m))
         if position_tag.check(t) and config_tags.check(t)
     )
-    return OdooSuite(sorted(tests, key=lambda t: t.test_sequence))
+    return kodaSuite(sorted(tests, key=lambda t: t.test_sequence))
 
 
 def run_suite(suite, module_name=None):
@@ -82,7 +82,7 @@ def run_suite(suite, module_name=None):
     module.current_test = module_name
     threading.current_thread().testing = True
 
-    results = OdooTestResult()
+    results = kodaTestResult()
     suite(results)
 
     threading.current_thread().testing = False

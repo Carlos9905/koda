@@ -2,10 +2,11 @@
 import os.path
 
 from koda.tests.common import BaseCase
+from koda.tools.misc import file_open
 from koda.tools.mimetypes import guess_mimetype
 
 def contents(extension):
-    with open(os.path.join(
+    with file_open(os.path.join(
         os.path.dirname(__file__),
         'testfiles',
         'case.{}'.format(extension)

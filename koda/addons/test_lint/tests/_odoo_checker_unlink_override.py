@@ -1,9 +1,15 @@
 import astroid
-from pylint import checkers, interfaces
+import pylint.interfaces
+from pylint import checkers
 
+def parse_version(s):
+    # can't use koda.tools.parse_version because pythonpath is screwed from
+    # inside pylint on runbot
+    return [s.rjust(3, '0') for s in s.split('.')]
 
-class OdooBaseChecker(checkers.BaseChecker):
-    __implements__ = interfaces.IAstroidChecker
+class kodaBaseChecker(checkers.BaseChecker):
+    if parse_version(pylint.__version__) < parse_version('2.14.0'):
+        __implements__ = pylint.interfaces.IAstroidChecker
     name = 'koda'
 
     msgs = {
@@ -33,4 +39,4 @@ class OdooBaseChecker(checkers.BaseChecker):
             parent = parent.parent
 
 def register(linter):
-    linter.register_checker(OdooBaseChecker(linter))
+    linter.register_checker(kodaBaseChecker(linter))

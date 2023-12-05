@@ -1,4 +1,4 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import os.path
 import tempfile
@@ -7,7 +7,6 @@ from unittest.mock import patch
 
 import koda.addons
 from koda.modules.module import load_manifest
-from koda.modules.module import get_manifest
 from koda.release import major_version
 from koda.tests.common import BaseCase
 
@@ -38,16 +37,18 @@ class TestModuleManifest(BaseCase):
             'addons_path': self.addons_path,
             'application': False,
             'assets': {},
-            'author': 'Odoo S.A.',
+            'author': 'koda S.A.',
             'auto_install': False,
             'bootstrap': False,
             'category': 'Uncategorized',
+            'configurator_snippets': {},
+            'countries': [],
             'data': [],
             'demo': [],
             'demo_xml': [],
             'depends': [],
             'description': '',
-            'external_dependencies': [],
+            'external_dependencies': {},
             'icon': '/base/static/description/icon.png',
             'init_xml': [],
             'installable': True,
@@ -56,11 +57,11 @@ class TestModuleManifest(BaseCase):
             'license': 'MIT',
             'live_test_url': '',
             'name': f'Temp {self.module_name}',
+            'new_page_templates': {},
             'post_init_hook': '',
             'post_load': None,
             'pre_init_hook': '',
             'sequence': 100,
-            'snippet_lists': {},
             'summary': '',
             'test': [],
             'update_xml': [],
@@ -69,14 +70,6 @@ class TestModuleManifest(BaseCase):
             'web': False,
             'website': '',
         })
-
-    def test_change_manifest(self):
-        module_name = 'base'
-        new_manifest = get_manifest(module_name)
-        orig_auto_install = new_manifest['auto_install']
-        new_manifest['auto_install'] = not orig_auto_install
-        self.assertNotEqual(new_manifest, get_manifest(module_name))
-        self.assertEqual(orig_auto_install, get_manifest(module_name)['auto_install'])
 
     def test_missing_manifest(self):
         with self.assertLogs('koda.modules.module', 'DEBUG') as capture:

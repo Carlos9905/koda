@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import contextlib
 import difflib
@@ -13,7 +13,7 @@ from unittest.mock import patch
 
 from koda.tests.case import TestCase
 from koda.tests.common import BaseCase, TransactionCase, users, warmup
-from koda.tests.result import OdooTestResult
+from koda.tests.result import kodaTestResult
 
 _logger = logging.getLogger(__name__)
 
@@ -27,7 +27,7 @@ if sys.version_info >= (3, 8):
     class TestTestSuite(TestCase, metaclass=MetaCase):
 
         def test_test_suite(self):
-            """ Check that OdooSuite handles unittest.TestCase correctly. """
+            """ Check that kodaSuite handles unittest.TestCase correctly. """
 
 
 class TestRunnerLoggingCommon(TransactionCase):
@@ -74,7 +74,7 @@ class TestRunnerLoggingCommon(TransactionCase):
                 # disable error logging
                 return
 
-            fake_result = OdooTestResult()
+            fake_result = kodaTestResult()
             with patch('logging.Logger.makeRecord', makeRecord), patch('logging.Logger.handle', handle):
                 super()._addError(fake_result, test, exc_info)
 

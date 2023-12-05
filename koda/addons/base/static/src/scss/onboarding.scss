@@ -58,7 +58,7 @@ $o-onboarding-step-width: map-get($container-max-widths, 'lg') / 4 !default;
         .o_onboarding_progress {
             height: $o-onboarding-progress-size;
             width: calc(100% - #{$o-onboarding-dot-size});
-            background: var(--o-onboarding-todo-color, #{$o-brand-odoo});
+            background: var(--o-onboarding-todo-color, #{$o-brand-koda});
             transform:
                 translateX(-100%)
                 translateY($o-onboarding-dot-size * .5 - $o-onboarding-progress-size * .5);
@@ -68,7 +68,7 @@ $o-onboarding-step-width: map-get($container-max-widths, 'lg') / 4 !default;
             width: $o-onboarding-dot-size;
             height: $o-onboarding-dot-size;
             padding-top: .5em;
-            background-color: var(--o-onboarding-todo-color, $o-brand-odoo);
+            background-color: var(--o-onboarding-todo-color, $o-brand-koda);
             color: transparent;
             transition: all $o-onboarding-base-time ease;
             transform: scale3d(.5, .5, .5);

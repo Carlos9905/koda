@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import logging
 import re
 import subprocess
 from unittest import skipIf
 from koda import tools
-from koda.modules.module import get_resource_path
 from koda.tests import tagged
+from koda.tools.misc import file_path
 
 from . import lint_case
 
@@ -32,7 +32,7 @@ class TestESLint(lint_case.LintCase):
             if not re.match('.*/libs?/.*', p)  # don't check libraries
             if not re.match('.*/o_spreadsheet/o_spreadsheet.js', p) # don't check generated code
         ]
-        eslintrc_path = get_resource_path('test_lint', 'tests', 'eslintrc')
+        eslintrc_path = file_path('test_lint/tests/eslintrc')
 
         _logger.info('Testing %s js files', len(files_to_check))
         # https://eslint.org/docs/user-guide/command-line-interface

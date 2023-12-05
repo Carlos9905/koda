@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 #
 # test cases for new-style fields
@@ -9,7 +9,6 @@ from collections import OrderedDict
 from datetime import date, datetime, time
 import io
 from PIL import Image
-from unittest.mock import patch
 import psycopg2
 
 from koda import models, fields, Command
@@ -26,7 +25,7 @@ class TestFields(TransactionCaseWithUserDemo):
     def setUp(self):
         # for tests methods that create custom models/fields
         self.addCleanup(self.registry.reset_changes)
-        self.addCleanup(self.registry.clear_caches)
+        self.addCleanup(self.registry.clear_all_caches)
         super(TestFields, self).setUp()
         self.env.ref('test_new_api.discussion_0').write({'participants': [Command.link(self.user_demo.id)]})
         # YTI FIX ME: The cache shouldn't be inconsistent (rco is gonna fix it)
@@ -98,7 +97,7 @@ class TestFields(TransactionCaseWithUserDemo):
             cat.read_group([], fields=['zzz:sum'], groupby=['parent'])
         with self.assertRaisesRegex(ValueError, 'Invalid field'):
             cat.read_group([], fields=['color'], groupby=['zzz'])
-        with self.assertRaisesRegex(ValueError, 'Invalid field'):
+        with self.assertRaisesRegex(ValueError, 'is not a valid aggregate'):
             cat.read_group([], fields=['color'], groupby=['parent'], orderby='zzz')
         # exception: accept '__count' as field to aggregate
         cat.read_group([], fields=['__count'], groupby=['parent'])
@@ -505,42 +504,6 @@ class TestFields(TransactionCaseWithUserDemo):
         baz = foo.create({'name': 'baz', 'parent_id': bar.id})
         self.assertEqual(foo.display_name, 'foo(bar(baz()))')
 
-    def test_12_recursive_unlink(self):
-        order = self.env['test_new_api.recursive.order'].create({'value': 42})
-        line = self.env['test_new_api.recursive.line'].create({'order_id': order.id})
-        task = self.env['test_new_api.recursive.task'].create({'value': 42})
-        self.assertEqual(task.line_id, line)
-        self.assertEqual(line.task_ids, task)
-        self.assertTrue(line.task_number)
-
-        # Before deleting order, the following are marked to recompute:
-        #  - task.line_id (recursive, depends on task.line_id.order_id.value)
-        #  - line.task_number (implicitely depends on line.task_ids.line_id)
-        #
-        # If task.line_id is ever recomputed in order to mark line.task_number,
-        # its recomputed value will be lost in the cache invalidation, and
-        # there will be nothing left to write in the database afterwards!  This
-        # makes the call to unlink() crash in that case.
-        #
-        order.unlink()
-
-    def test_12_recursive_context_dependent(self):
-        a = self.env['test_new_api.recursive'].create({'name': 'A'})
-        b = self.env['test_new_api.recursive'].create({'name': 'B', 'parent': a.id})
-        c = self.env['test_new_api.recursive'].create({'name': 'C', 'parent': b.id})
-        d = self.env['test_new_api.recursive'].create({'name': 'D', 'parent': c.id})
-        self.assertEqual(a.context_dependent_name, 'A')
-        self.assertEqual(b.context_dependent_name, 'A / B')
-        self.assertEqual(c.context_dependent_name, 'A / B / C')
-        self.assertEqual(d.context_dependent_name, 'A / B / C / D')
-
-        # now let's swith to another context to update the dependency
-        a.with_context(bozo=42).name = 'A1'
-        self.assertEqual(a.context_dependent_name, 'A1')
-        self.assertEqual(b.context_dependent_name, 'A1 / B')
-        self.assertEqual(c.context_dependent_name, 'A1 / B / C')
-        self.assertEqual(d.context_dependent_name, 'A1 / B / C / D')
-
     def test_12_cascade(self):
         """ test computed field depending on computed field """
         message = self.env.ref('test_new_api.message_0_0')
@@ -730,8 +693,9 @@ class TestFields(TransactionCaseWithUserDemo):
 
     def test_13_inverse_with_unlink(self):
         """ test x2many delete command combined with an inverse field """
-        country1 = self.env['res.country'].create({'name': 'test country'})
-        country2 = self.env['res.country'].create({'name': 'other country'})
+
+        country1 = self.env['res.country'].create({'name': 'test country', 'code': 'ZV'})
+        country2 = self.env['res.country'].create({'name': 'other country', 'code': 'ZX'})
         company = self.env['res.company'].create({
             'name': 'test company',
             'child_ids': [
@@ -1698,7 +1662,88 @@ class TestFields(TransactionCaseWithUserDemo):
             '!=': (tag1.id, tag2.id, False),
             'in': ([tag1.id, tag2.id], [tag2.id, False], [False], []),
             'not in': ([tag1.id, tag2.id], [tag2.id, False], [False], []),
+            'any': ([('name', '=', tag1.name)], [('name', '=', False)], []),
+            'not any': ([('name', '=', tag1.name)], [('name', '=', False)], []),
         })
+
+    def test_29_company_dependent_html(self):
+        company0 = self.env.ref('base.main_company')
+        company1 = self.env['res.company'].create({'name': 'A'})
+        company2 = self.env['res.company'].create({'name': 'B'})
+
+        user0 = self.env['res.users'].create({
+            'name': 'Foo', 'login': 'foo', 'company_id': company0.id,
+            'company_ids': [Command.set([company0.id, company1.id, company2.id])]})
+        user1 = self.env['res.users'].create({
+            'name': 'Bar', 'login': 'bar', 'company_id': company1.id,
+            'company_ids': [Command.set([company0.id, company1.id, company2.id])]})
+        user2 = self.env['res.users'].create({
+            'name': 'Baz', 'login': 'baz', 'company_id': company2.id,
+            'company_ids': [Command.set([company0.id, company1.id, company2.id])]})
+
+        some_ugly_html_0 = """<p>Oops this should maybe be sanitized
+% if object.some_field and not object.oriented:
+<table>
+    % if object.other_field:
+    <tr style="margin: 0px; border: 10px solid black;">
+        ${object.mako_thing}
+        <td>
+    </tr>
+    <tr class="custom_class">
+        This is some html.
+    </tr>
+    % endif
+    <tr>
+%if object.dummy_field:
+        <p>user0</p>
+%endif"""
+
+        some_ugly_html_1 = """<p>Oops this should maybe be sanitized
+% if object.some_field and not object.oriented:
+<table>
+    % if object.other_field:
+    <tr style="margin: 0px; border: 10px solid black;">
+        ${object.mako_thing}
+        <td>
+    </tr>
+    <tr class="custom_class">
+        This is some html.
+    </tr>
+    % endif
+    <tr>
+%if object.dummy_field:
+        <p>user1</p>
+%endif"""
+
+        record = self.env['test_new_api.company'].create({
+            'html1': some_ugly_html_0,
+            'html2': some_ugly_html_0,
+        })
+
+        self.assertEqual(record.with_user(user0).html1, some_ugly_html_0, 'Error in HTML field: content was sanitized but field has sanitize=False')
+        self.assertEqual(record.with_user(user1).html1, False)
+        self.assertEqual(record.with_user(user2).html1, False)
+
+        # sanitize should have closed tags left open in the original html for user0
+        self.assertIn('</table>', record.with_user(user0).html2, 'Error in HTML field: content does not seem to have been sanitized despise sanitize=True')
+        self.assertIn('</td>', record.with_user(user0).html2, 'Error in HTML field: content does not seem to have been sanitized despise sanitize=True')
+        self.assertNotIn('<tr class="', record.with_user(user0).html2, 'Class attr should have been stripped')
+        self.assertNotIn('<tr style="', record.with_user(user0).html2, 'Style attr should have been stripped')
+
+        record.with_user(user1).write({
+            'html1': some_ugly_html_1,
+            'html2': some_ugly_html_1,
+        })
+
+        self.assertEqual(record.with_user(user0).html1, some_ugly_html_0, 'Error in HTML field: content was sanitized but field has sanitize=False')
+        self.assertEqual(record.with_user(user1).html1, some_ugly_html_1, 'Error in HTML field: content was sanitized but field has sanitize=False')
+        self.assertEqual(record.with_user(user2).html1, False)
+
+        # sanitize should have closed tags left open in the original html for user1
+        self.assertIn('</table>', record.with_user(user1).html2, 'Error in HTML field: content does not seem to have been sanitized despise sanitize=True')
+        self.assertIn('</td>', record.with_user(user1).html2, 'Error in HTML field: content does not seem to have been sanitized despise sanitize=True')
+        self.assertNotIn('<tr class="', record.with_user(user1).html2, 'Class attr should have been stripped')
+        self.assertNotIn('<tr style="', record.with_user(user1).html2, 'Style attr should have been stripped')
 
     def test_30_read(self):
         """ test computed fields as returned by read(). """
@@ -1786,7 +1831,6 @@ class TestFields(TransactionCaseWithUserDemo):
         """ test field access on new records vs real records. """
         Model = self.env['test_new_api.category']
         real_record = Model.create({'name': 'Foo'})
-        self.env.invalidate_all()
         new_origin = Model.new({'name': 'Bar'}, origin=real_record)
         new_record = Model.new({'name': 'Baz'})
 
@@ -2183,16 +2227,6 @@ class TestFields(TransactionCaseWithUserDemo):
         messages = self.env['test_new_api.message'].search(
             [('author_partner.name', '=', 'Marc Demo')])
         self.assertEqual(messages, self.env.ref('test_new_api.message_0_1'))
-
-    def test_51_search_many2one_ordered(self):
-        """ test search on many2one ordered by id """
-        with self.assertQueries(['''
-            SELECT "test_new_api_message".id FROM "test_new_api_message"
-            WHERE ("test_new_api_message"."active" = %s)
-            ORDER BY  "test_new_api_message"."discussion"
-        ''']):
-            self.env['test_new_api.message'].search([], order='discussion')
-
 
     def test_60_one2many_domain(self):
         """ test the cache consistency of a one2many field with a domain """
@@ -2688,16 +2722,21 @@ class TestFields(TransactionCaseWithUserDemo):
 
         # only one query as admin: reading pivot table
         with self.assertQueryCount(1):
+            # trick: if value is in cache, read() does not make any query
+            record.invalidate_recordset(['tags'])
             record.read(['tags'])
 
         user = self.env['res.users'].create({'name': "user", 'login': "user"})
         record_user = record.with_user(user)
 
         # prep the following query count by caching access check related data
+        record_user.invalidate_recordset(['tags'])
         record_user.read(['tags'])
 
         # only one query as user: reading pivot table
         with self.assertQueryCount(1):
+            # trick: if value is in cache, read() does not make any query
+            record_user.invalidate_recordset(['tags'])
             record_user.read(['tags'])
 
         # create a passing ir.rule
@@ -2707,11 +2746,14 @@ class TestFields(TransactionCaseWithUserDemo):
         })
 
         # prep the following query count by caching access check related data
+        record_user.invalidate_recordset(['tags'])
         record_user.read(['tags'])
 
         # still only 1 query: reading pivot table
         # access rules are checked in python in this case
         with self.assertQueryCount(1):
+            # trick: if value is in cache, read() does not make any query
+            record_user.invalidate_recordset(['tags'])
             record_user.read(['tags'])
 
         # create a blocking ir.rule
@@ -2762,28 +2804,27 @@ class TestFields(TransactionCaseWithUserDemo):
         self.env.invalidate_all()
 
         with self.assertQueries(["""
-            SELECT
-                "test_new_api_prefetch"."id" AS "id",
-                "test_new_api_prefetch"."name"->>'en_US' AS "name",
-                "test_new_api_prefetch"."description"->>'en_US' AS "description",
-                "test_new_api_prefetch"."html_description"->>'en_US' AS "html_description",
-                "test_new_api_prefetch"."create_uid" AS "create_uid",
-                "test_new_api_prefetch"."create_date" AS "create_date",
-                "test_new_api_prefetch"."write_uid" AS "write_uid",
-                "test_new_api_prefetch"."write_date" AS "write_date"
+            SELECT "test_new_api_prefetch"."id",
+                   "test_new_api_prefetch"."name"->>%s,
+                   "test_new_api_prefetch"."description"->>%s,
+                   "test_new_api_prefetch"."html_description"->>%s,
+                   "test_new_api_prefetch"."create_uid",
+                   "test_new_api_prefetch"."create_date",
+                   "test_new_api_prefetch"."write_uid",
+                   "test_new_api_prefetch"."write_date"
             FROM "test_new_api_prefetch"
-            WHERE "test_new_api_prefetch".id IN %s
+            WHERE ("test_new_api_prefetch"."id" IN %s)
         """]):
             records.mapped('name')  # fetch all fields with prefetch=True
 
         with self.assertQueries(["""
             SELECT
-                "test_new_api_prefetch"."id" AS "id",
-                "test_new_api_prefetch"."harry" AS "harry",
-                "test_new_api_prefetch"."hermione" AS "hermione",
-                "test_new_api_prefetch"."ron" AS "ron"
+                "test_new_api_prefetch"."id",
+                "test_new_api_prefetch"."harry",
+                "test_new_api_prefetch"."hermione",
+                "test_new_api_prefetch"."ron"
             FROM "test_new_api_prefetch"
-            WHERE "test_new_api_prefetch".id IN %s
+            WHERE ("test_new_api_prefetch"."id" IN %s)
         """]):
             records.mapped('harry')  # fetch all fields with prefetch='Harry Potter'
             records.mapped('hermione')  # fetched already
@@ -2791,11 +2832,11 @@ class TestFields(TransactionCaseWithUserDemo):
 
         with self.assertQueries(["""
             SELECT
-                "test_new_api_prefetch"."id" AS "id",
-                "test_new_api_prefetch"."hansel" AS "hansel",
-                "test_new_api_prefetch"."gretel" AS "gretel"
+                "test_new_api_prefetch"."id",
+                "test_new_api_prefetch"."hansel",
+                "test_new_api_prefetch"."gretel"
             FROM "test_new_api_prefetch"
-            WHERE "test_new_api_prefetch".id IN %s
+            WHERE ("test_new_api_prefetch"."id" IN %s)
         """]):
             records.mapped('hansel')  # fetch all fields with prefetch='Hansel and Gretel'
             records.mapped('gretel')  # fetched already
@@ -3218,51 +3259,13 @@ class TestHtmlField(common.TransactionCase):
         self.assertEqual(record.comment5, '',
                          "should be sanitized (not in groups)")
 
-    @patch('koda.fields.html_sanitize', return_value='<p>comment</p>')
-    def test_onchange_sanitize(self, patch):
-        self.assertTrue(self.registry['test_new_api.mixed'].comment2.sanitize)
-
-        record = self.env['test_new_api.mixed'].create({
-            'comment2': '<p>comment</p>',
-        })
-
-        # in a perfect world this should be 1, but at the moment the value is
-        # sanitized more than once during creation of the record
-        self.assertEqual(patch.call_count, 2)
-
-        # new value needs to be validated, so it is sanitized once more
-        record.comment2 = '<p>comment</p>'
-        self.assertEqual(patch.call_count, 3)
-
-        # the value is already sanitized for flushing
-        record.flush_recordset()
-        self.assertEqual(patch.call_count, 3)
-
-        # value coming from db does not need to be sanitized
-        record.invalidate_recordset()
-        record.comment2
-        self.assertEqual(patch.call_count, 3)
-
-        # value coming from db during an onchange does not need to be sanitized
+        # extra test with new record having 'record' as origin
         new_record = record.new(origin=record)
-        new_record.comment2
-        self.assertEqual(patch.call_count, 3)
+        new_record.with_user(bypass_user).comment5
 
-    def test_read_sanitize_overridable(self):
-        self.assertTrue(self.registry['test_new_api.mixed'].comment5.sanitize_overridable)
-
-        internal_user = self.env['res.users'].create({
-            'name': 'test internal user',
-            'login': 'test_sanitize',
-            'groups_id': [(6, 0, [self.ref('base.group_user')])],
-        })
-        record = self.env['test_new_api.mixed'].with_user(internal_user).create({
-            'comment5': '<p>comment</p>',
-        })
-        self.assertEqual(record.comment5, '<p>comment</p>')
-        new_record = record.new(origin=record)
-        # this field access was causing an infinite loop in HTML sanitization
-        self.assertEqual(new_record.comment5, '<p>comment</p>')
+        # this was causing an infinite recursion (see explanation in fields.py)
+        new_record.invalidate_recordset()
+        new_record.with_user(internal_user).comment5
 
 
 class TestMagicFields(common.TransactionCase):
@@ -3602,7 +3605,7 @@ class TestSelectionUpdates(common.TransactionCase):
             self.env[self.MODEL_BASE].create({})
         with self.assertQueryCount(1):
             record = self.env[self.MODEL_BASE].create({'my_selection': 'foo'})
-        with self.assertQueryCount(3):  # SELECT, SELECT (related field), UPDATE
+        with self.assertQueryCount(1):
             record.my_selection = 'bar'
 
     def test_selection_related_readonly(self):
@@ -3616,7 +3619,7 @@ class TestSelectionUpdates(common.TransactionCase):
         related_record = self.env[self.MODEL_BASE].create({'my_selection': 'foo'})
         with self.assertQueryCount(2):  # defaults (related field), INSERT
             record = self.env[self.MODEL_RELATED_UPDATE].create({'selection_id': related_record.id})
-        with self.assertQueryCount(3):
+        with self.assertQueryCount(2):
             record.related_selection = 'bar'
 
 
@@ -3885,10 +3888,10 @@ def select(model, *fnames):
     """ Return the expected query string to SELECT the given columns. """
     table = model._table
     terms = ", ".join(
-        f'"{table}"."{fname}" AS "{fname}"'
+        f'"{table}"."{fname}"'
         for fname in ['id'] + list(fnames)
     )
-    return f'SELECT {terms} FROM "{table}" WHERE "{table}".id IN %s'
+    return f'SELECT {terms} FROM "{table}" WHERE ("{table}"."id" IN %s)'
 
 
 def insert(model, *fnames, rowcount=1):
@@ -3906,6 +3909,354 @@ def update(model, *fnames):
         model._table,
         ", ".join('"{}" = %s'.format(column) for column in columns),
     )
+
+
+class TestSubqueries(common.TransactionCase):
+    """ Test the subqueries made by search() with relational fields. """
+    maxDiff = None
+
+    def test_and_many2one_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE ("test_new_api_multi"."partner" IN (
+                SELECT "res_partner"."id"
+                FROM "res_partner"
+                WHERE (("res_partner"."name"::text LIKE %s)
+                   AND ("res_partner"."phone"::text LIKE %s)
+                )
+            ))
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                ('partner.name', 'like', 'jack'),
+                ('partner.phone', 'like', '01234'),
+            ])
+
+    def test_or_many2one_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE ("test_new_api_multi"."partner" IN (
+                SELECT "res_partner"."id"
+                FROM "res_partner"
+                WHERE (("res_partner"."name"::text LIKE %s)
+                    OR ("res_partner"."phone"::text LIKE %s)
+                )
+            ))
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                '|',
+                    ('partner.name', 'like', 'jack'),
+                    ('partner.phone', 'like', '01234'),
+            ])
+
+    def test_not_and_many2one_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE (("test_new_api_multi"."partner" NOT IN (
+                SELECT "res_partner"."id"
+                FROM "res_partner"
+                WHERE (("res_partner"."name"::text LIKE %s)
+                    AND ("res_partner"."phone"::text LIKE %s)
+                )
+            )) OR "test_new_api_multi"."partner" IS NULL)
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                '!', '&',
+                    ('partner.name', 'like', 'jack'),
+                    ('partner.phone', 'like', '01234'),
+            ])
+
+    def test_not_or_many2one_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE (("test_new_api_multi"."partner" NOT IN (
+                SELECT "res_partner"."id"
+                FROM "res_partner"
+                WHERE (("res_partner"."name"::text LIKE %s)
+                    OR ("res_partner"."phone"::text LIKE %s)
+                )
+            )) OR "test_new_api_multi"."partner" IS NULL)
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                '!', '|',
+                    ('partner.name', 'like', 'jack'),
+                    ('partner.phone', 'like', '01234'),
+            ])
+
+    def test_or_autojoined_many2one_with_subfield(self):
+        self.patch(self.env['test_new_api.multi']._fields['partner'], 'auto_join', True)
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            LEFT JOIN "res_partner" AS "test_new_api_multi__partner"
+                ON ("test_new_api_multi"."partner" = "test_new_api_multi__partner"."id")
+            WHERE (
+                ("test_new_api_multi__partner"."name"::text LIKE %s)
+                OR ("test_new_api_multi__partner"."phone"::text LIKE %s)
+            )
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                '|',
+                    ('partner.name', 'like', 'jack'),
+                    ('partner.phone', 'like', '01234'),
+            ])
+
+    def test_not_or_autojoined_many2one_with_subfield(self):
+        self.patch(self.env['test_new_api.multi']._fields['partner'], 'auto_join', True)
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            LEFT JOIN "res_partner" AS "test_new_api_multi__partner"
+                ON ("test_new_api_multi"."partner" = "test_new_api_multi__partner"."id")
+            WHERE (
+                "test_new_api_multi__partner"."id" IS NULL OR (
+                    NOT ((
+                        ("test_new_api_multi__partner"."name"::text LIKE %s)
+                        OR ("test_new_api_multi__partner"."phone"::text LIKE %s)
+                    ))
+                )
+            )
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                '!', '|',
+                    ('partner.name', 'like', 'jack'),
+                    ('partner.phone', 'like', '01234'),
+            ])
+
+    def test_mixed_and_or_many2one_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE ("test_new_api_multi"."partner" IN (
+                SELECT "res_partner"."id"
+                FROM "res_partner"
+                WHERE (
+                    ("res_partner"."email"::text LIKE %s)
+                    AND (("res_partner"."name"::text LIKE %s)
+                      OR ("res_partner"."phone"::text LIKE %s)
+                    )
+                )
+            ))
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                ('partner.email', 'like', '@sgc.us'),
+                '|',
+                    ('partner.name', 'like', 'jack'),
+                    ('partner.phone', 'like', '01234'),
+            ])
+
+    def test_mixed_and_or_not_many2one_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE (
+                (
+                    (
+                        ({many2one} IN (
+                            {subselect} WHERE ("res_partner"."function"::text LIKE %s)
+                        )) OR (({many2one} NOT IN (
+                            {subselect} WHERE (
+                                ("res_partner"."phone"::text LIKE %s)
+                                AND ("res_partner"."mobile"::text LIKE %s)
+                            )))
+                            OR "test_new_api_multi"."partner" IS NULL
+                        )
+                    ) AND ({many2one} IN (
+                        {subselect} WHERE (
+                            ("res_partner"."name"::text LIKE %s)
+                            OR ("res_partner"."email"::text LIKE %s)
+                        )
+                    ))
+                ) AND (({many2one} NOT IN (
+                    {subselect} WHERE ("res_partner"."website"::text LIKE %s)
+                    ))
+                    OR "test_new_api_multi"."partner" IS NULL
+                )
+            )
+            ORDER BY "test_new_api_multi"."id"
+        """.format(
+            many2one='"test_new_api_multi"."partner"',
+            subselect='SELECT "res_partner"."id" FROM "res_partner"',
+        )]):
+            # (function or not (phone and mobile)) and not website and (name or email)
+            self.env['test_new_api.multi'].search([
+                '&', '&',
+                    '|',
+                        ('partner.function', 'like', 'Colonel'),
+                        '!', '&',
+                            ('partner.phone', 'like', '+01'),
+                            ('partner.mobile', 'like', '+01'),
+                    '!', ('partner.website', 'like', 'sgc.us'),
+                    '|',
+                        ('partner.name', 'like', 'jack'),
+                        ('partner.email', 'like', '@sgc.us'),
+            ])
+
+    def test_and_one2many_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE (("test_new_api_multi"."id" IN (
+                SELECT "test_new_api_multi_line"."multi"
+                FROM "test_new_api_multi_line"
+                WHERE ("test_new_api_multi_line"."name"::text LIKE %s)
+                      AND "test_new_api_multi_line"."multi" IS NOT NULL
+            )) AND ("test_new_api_multi"."id" IN (
+                SELECT "test_new_api_multi_line"."multi"
+                FROM "test_new_api_multi_line"
+                WHERE ("test_new_api_multi_line"."name"::text LIKE %s)
+                      AND "test_new_api_multi_line"."multi" IS NOT NULL
+            )))
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                ('lines.name', 'like', 'x'),
+                ('lines.name', 'like', 'y'),
+            ])
+
+    def test_or_one2many_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE ("test_new_api_multi"."id" IN (
+                SELECT "test_new_api_multi_line"."multi"
+                FROM "test_new_api_multi_line"
+                WHERE (("test_new_api_multi_line"."name"::text LIKE %s)
+                    OR ("test_new_api_multi_line"."name"::text LIKE %s)
+                ) AND "test_new_api_multi_line"."multi" IS NOT NULL
+            ))
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                '|',
+                    ('lines.name', 'like', 'x'),
+                    ('lines.name', 'like', 'y'),
+            ])
+
+    def test_mixed_and_or_one2many_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE (("test_new_api_multi"."id" IN (
+                SELECT "test_new_api_multi_line"."multi"
+                FROM "test_new_api_multi_line"
+                WHERE ("test_new_api_multi_line"."name"::text LIKE %s)
+                   AND "test_new_api_multi_line"."multi" IS NOT NULL)
+            ) AND ("test_new_api_multi"."id" IN (
+                SELECT "test_new_api_multi_line"."multi"
+                FROM "test_new_api_multi_line"
+                WHERE (("test_new_api_multi_line"."name"::text LIKE %s)
+                    OR ("test_new_api_multi_line"."name"::text LIKE %s)
+                ) AND "test_new_api_multi_line"."multi" IS NOT NULL
+            )))
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                ('lines.name', 'like', 'x'),
+                '|',
+                    ('lines.name', 'like', 'y'),
+                    ('lines.name', 'like', 'z'),
+            ])
+
+    def test_and_many2many_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE (EXISTS (
+                SELECT 1
+                FROM "test_new_api_multi_test_new_api_multi_tag_rel" AS "test_new_api_multi__tags"
+                WHERE "test_new_api_multi__tags"."test_new_api_multi_id" = "test_new_api_multi"."id"
+                AND "test_new_api_multi__tags"."test_new_api_multi_tag_id" IN (
+                    SELECT "test_new_api_multi_tag"."id"
+                    FROM "test_new_api_multi_tag"
+                    WHERE ("test_new_api_multi_tag"."name"::text LIKE %s)
+                )
+            ) AND EXISTS (
+                SELECT 1
+                FROM "test_new_api_multi_test_new_api_multi_tag_rel" AS "test_new_api_multi__tags"
+                WHERE "test_new_api_multi__tags"."test_new_api_multi_id" = "test_new_api_multi"."id"
+                AND "test_new_api_multi__tags"."test_new_api_multi_tag_id" IN (
+                    SELECT "test_new_api_multi_tag"."id"
+                    FROM "test_new_api_multi_tag"
+                    WHERE ("test_new_api_multi_tag"."name"::text LIKE %s)
+                )
+            ))
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                ('tags.name', 'like', 'x'),
+                ('tags.name', 'like', 'y'),
+            ])
+
+    def test_or_many2many_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE EXISTS (
+                SELECT 1
+                FROM "test_new_api_multi_test_new_api_multi_tag_rel" AS "test_new_api_multi__tags"
+                WHERE "test_new_api_multi__tags"."test_new_api_multi_id" = "test_new_api_multi"."id"
+                AND "test_new_api_multi__tags"."test_new_api_multi_tag_id" IN (
+                    SELECT "test_new_api_multi_tag"."id"
+                    FROM "test_new_api_multi_tag"
+                    WHERE (("test_new_api_multi_tag"."name"::text LIKE %s)
+                        OR ("test_new_api_multi_tag"."name"::text LIKE %s)
+                    )
+                )
+            )
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                '|',
+                    ('tags.name', 'like', 'x'),
+                    ('tags.name', 'like', 'y'),
+            ])
+
+    def test_mixed_and_or_many2many_with_subfield(self):
+        with self.assertQueries(["""
+            SELECT "test_new_api_multi"."id"
+            FROM "test_new_api_multi"
+            WHERE (
+                EXISTS (
+                    SELECT 1
+                    FROM "test_new_api_multi_test_new_api_multi_tag_rel" AS "test_new_api_multi__tags"
+                    WHERE "test_new_api_multi__tags"."test_new_api_multi_id" = "test_new_api_multi"."id"
+                    AND "test_new_api_multi__tags"."test_new_api_multi_tag_id" IN (
+                        SELECT "test_new_api_multi_tag"."id"
+                        FROM "test_new_api_multi_tag"
+                        WHERE ("test_new_api_multi_tag"."name"::text LIKE %s)
+                    )
+                ) AND EXISTS (
+                    SELECT 1
+                    FROM "test_new_api_multi_test_new_api_multi_tag_rel" AS "test_new_api_multi__tags"
+                    WHERE "test_new_api_multi__tags"."test_new_api_multi_id" = "test_new_api_multi"."id"
+                    AND "test_new_api_multi__tags"."test_new_api_multi_tag_id" IN (
+                        SELECT "test_new_api_multi_tag"."id"
+                        FROM "test_new_api_multi_tag"
+                        WHERE (("test_new_api_multi_tag"."name"::text LIKE %s)
+                            OR ("test_new_api_multi_tag"."name"::text LIKE %s)
+                        )
+                    )
+                )
+            )
+            ORDER BY "test_new_api_multi"."id"
+        """]):
+            self.env['test_new_api.multi'].search([
+                ('tags.name', 'like', 'x'),
+                '|',
+                    ('tags.name', 'like', 'y'),
+                    ('tags.name', 'like', 'z'),
+            ])
 
 
 class TestComputeQueries(common.TransactionCase):
@@ -4008,24 +4359,6 @@ class TestComputeQueries(common.TransactionCase):
         self.assertEqual(records.mapped('name'), ['Foo1', 'Foo2', 'Foo3', False])
         self.assertEqual(records.mapped('value1'), [10, 0, 0, 0])
         self.assertEqual(records.mapped('value2'), [0, 12, 0, 0])
-
-    def test_partial_compute_batching(self):
-        """ Create several 'new' records and check that the partial compute
-        method is called only once.
-        """
-        order = self.env['test_new_api.order'].new({
-            'line_ids': [Command.create({'reward': False})] * 100,
-        })
-
-        OrderLine = self.env.registry['test_new_api.order.line']
-        with patch.object(
-            OrderLine,
-            '_compute_has_been_rewarded',
-            side_effect=OrderLine._compute_has_been_rewarded,
-            autospec=True,
-        ) as patch_compute:
-            order.line_ids.mapped('has_been_rewarded')
-            self.assertEqual(patch_compute.call_count, 1)
 
 
 class test_shared_cache(TransactionCaseWithUserDemo):
@@ -4135,7 +4468,7 @@ class TestPrecomputeModel(common.TransactionCase):
         # see what happens if not both are precompute
         self.addCleanup(self.registry.reset_changes)
         self.patch(Model.upper, 'precompute', False)
-        with self.assertLogs('koda.modules.registry', level='WARNING'):
+        with self.assertWarns(UserWarning):
             self.registry.setup_models(self.cr)
             self.registry.field_computed
 
@@ -4271,7 +4604,7 @@ class TestPrecompute(common.TransactionCase):
           but with a states attributes changing the readonly of the field according to the state of the record,
           can be altered by the user.
         The `bar` field is store=True, precompute=True, readonly=True
-        The `baz` field is store=True, precompute=True, readonly=True, states={'draft': [('readonly', False)]}
+        The `baz` field is store=True, precompute=True, readonly=False,
         """
         model = self.env['test_new_api.precompute.readonly']
 
@@ -4287,7 +4620,7 @@ class TestPrecompute(common.TransactionCase):
         self.assertEqual(record.baz, 'COMPUTED')
 
         # no value for bar, value for baz
-        # baz is readonly=True but states={'draft': [('readonly', False)]}
+        # baz is readonly=False
         # the value for baz must be taken into account
         record = model.create({'foo': 'foo', 'baz': 'baz'})
         self.assertEqual(record.bar, 'COMPUTED')
@@ -4425,14 +4758,20 @@ class TestModifiedPerformance(common.TransactionCase):
 
         self.modified_line_a_child.price
         with self.assertQueries(["""
-        SELECT "test_new_api_modified_line"."id" AS "id", "test_new_api_modified_line"."modified_id" AS "modified_id",
-               "test_new_api_modified_line"."quantity" AS "quantity", "test_new_api_modified_line"."price" AS "price",
-               "test_new_api_modified_line"."parent_id" AS "parent_id", "test_new_api_modified_line"."create_uid" AS "create_uid",
-               "test_new_api_modified_line"."create_date" AS "create_date", "test_new_api_modified_line"."write_uid" AS "write_uid",
-               "test_new_api_modified_line"."write_date" AS "write_date"
-         FROM "test_new_api_modified_line"
-        WHERE "test_new_api_modified_line".id IN %s
-        """] * 2, flush=False):
+            SELECT "test_new_api_modified_line"."id",
+                   "test_new_api_modified_line"."modified_id",
+                   "test_new_api_modified_line"."quantity",
+                   "test_new_api_modified_line"."parent_id",
+                   "test_new_api_modified_line"."create_uid",
+                   "test_new_api_modified_line"."create_date"
+            FROM "test_new_api_modified_line"
+            WHERE ("test_new_api_modified_line"."id" IN %s)
+        """, """
+            SELECT "test_new_api_modified_line"."id",
+                   "test_new_api_modified_line"."parent_id"
+            FROM "test_new_api_modified_line"
+            WHERE ("test_new_api_modified_line"."id" IN %s)
+        """], flush=False):
             # Two requests:
             # - one for fetch modified_line_a_child_child data (invalidate just before)
             # - one because modified_line_a_child.parent_id (invalidate just before because we invalidate inverse in `_invalidate_cache`,

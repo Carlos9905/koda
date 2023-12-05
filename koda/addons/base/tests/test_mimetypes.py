@@ -25,6 +25,11 @@ SVG = b"""PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjwhRE9DVFlQRS
 NAMESPACED_SVG = b"""<svg:svg xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <svg:rect x="10" y="10" width="80" height="80" fill="green" />
 </svg:svg>"""
+
+# single pixel webp image
+WEBP = b"""UklGRjoAAABXRUJQVlA4IC4AAAAwAQCdASoBAAEAAUAmJaAAA3AA/u/uY//8s//2W/7LeM///5Bj
+/dl/pJxGAAAA"""
+
 # minimal zip file with an empty `t.txt` file
 ZIP = b"""UEsDBBQACAAIAGFva1AAAAAAAAAAAAAAAAAFACAAdC50eHRVVA0AB5bgaF6W4GheluBoXnV4CwABBOgDAAAE6AMAAA
 MAUEsHCAAAAAACAAAAAAAAAFBLAQIUAxQACAAIAGFva1AAAAAAAgAAAAAAAAAFACAAAAAAAAAAAACkgQAAAAB0LnR4dFVUDQAHlu
@@ -34,12 +39,12 @@ XML = b"""<?xml version='1.0' encoding='utf-8'?>
 <Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
   <CstmrCdtTrfInitn>
     <GrpHdr>
-      <MsgId>123456Odoo S.A.893873733</MsgId>
+      <MsgId>123456koda S.A.893873733</MsgId>
       <CreDtTm>2018-11-21T09:47:32</CreDtTm>
       <NbOfTxs>0</NbOfTxs>
       <CtrlSum>0.0</CtrlSum>
       <InitgPty>
-        <Nm>Odoo S.A.</Nm>
+        <Nm>koda S.A.</Nm>
         <Id>
           <OrgId>
             <Othr>
@@ -104,6 +109,11 @@ class test_guess_mimetype(BaseCase):
             mimetype = guess_mimetype(b"   " + content, default='test')
             self.assertNotIn("svg", mimetype)
 
+
+    def test_mimetype_webp(self):
+        content = base64.b64decode(WEBP)
+        mimetype = guess_mimetype(content, default='test')
+        self.assertEqual(mimetype, 'image/webp')
 
     def test_mimetype_zip(self):
         content = base64.b64decode(ZIP)

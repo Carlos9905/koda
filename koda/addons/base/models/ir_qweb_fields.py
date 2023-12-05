@@ -28,6 +28,14 @@ def nl2br(string):
     """
     return pycompat.to_text(string).replace('\n', Markup('<br>\n'))
 
+
+def nl2br_enclose(string, enclosure_tag='div'):
+    """ Like nl2br, but returns enclosed Markup allowing to better manipulate
+    trusted and untrusted content. New lines added by use are trusted, other
+    content is escaped. """
+    converted = nl2br(escape(string))
+    return Markup(f'<{enclosure_tag}>{converted}</{enclosure_tag}>')
+
 #--------------------------------------------------------------------
 # QWeb Fields converters
 #--------------------------------------------------------------------
@@ -445,7 +453,7 @@ class MonetaryConverter(models.AbstractModel):
         # lang.format will not set one by default. currency.round will not
         # provide one either. So we need to generate a precision value
         # (integer > 0) from the currency's rounding (a float generally < 1.0).
-        fmt = "%.{0}f".format(display_currency.decimal_places)
+        fmt = "%.{0}f".format(options.get('decimal_places', display_currency.decimal_places))
 
         if options.get('from_currency'):
             date = options.get('date') or fields.Date.today()
@@ -711,7 +719,7 @@ class BarcodeConverter(models.AbstractModel):
             if k.startswith('img_') and k[4:] in safe_attrs:
                 img_element.set(k[4:], v)
         if not img_element.get('alt'):
-            img_element.set('alt', _('Barcode %s') % value)
+            img_element.set('alt', _('Barcode %s', value))
         img_element.set('src', 'data:image/png;base64,%s' % base64.b64encode(barcode).decode())
         return Markup(html.tostring(img_element, encoding='unicode'))
 
@@ -750,6 +758,12 @@ class Contact(models.AbstractModel):
     @api.model
     def value_to_html(self, value, options):
         if not value:
+            if options.get('null_text'):
+                val = {
+                    'options': options,
+                }
+                template_options = options.get('template_options', {})
+                return self.env['ir.qweb']._render('base.no_contact', val, **template_options)
             return ''
 
         opf = options.get('fields') or ["name", "address", "phone", "mobile", "email"]
@@ -763,16 +777,15 @@ class Contact(models.AbstractModel):
             opsep = Markup('<br/>')
 
         value = value.sudo().with_context(show_address=True)
-        name_get = value.name_get()[0][1]
         # Avoid having something like:
-        # name_get = 'Foo\n  \n' -> This is a res.partner with a name and no address
+        # display_name = 'Foo\n  \n' -> This is a res.partner with a name and no address
         # That would return markup('<br/>') as address. But there is no address set.
-        if any(elem.strip() for elem in name_get.split("\n")[1:]):
-            address = opsep.join(name_get.split("\n")[1:]).strip()
+        if any(elem.strip() for elem in value.display_name.split("\n")[1:]):
+            address = opsep.join(value.display_name.split("\n")[1:]).strip()
         else:
             address = ''
         val = {
-            'name': name_get.split("\n")[0],
+            'name': value.display_name.split("\n")[0],
             'address': address,
             'phone': value.phone,
             'mobile': value.mobile,

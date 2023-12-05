@@ -69,7 +69,7 @@ def xmlrpc_handle_exception_string(e):
     return xmlrpc.client.dumps(fault, allow_none=None, encoding=None)
 
 
-class OdooMarshaller(xmlrpc.client.Marshaller):
+class kodaMarshaller(xmlrpc.client.Marshaller):
     dispatch = dict(xmlrpc.client.Marshaller.dispatch)
 
     def dump_frozen_dict(self, value, write):
@@ -115,7 +115,7 @@ class OdooMarshaller(xmlrpc.client.Marshaller):
 
 
 # monkey-patch xmlrpc.client's marshaller
-xmlrpc.client.Marshaller = OdooMarshaller
+xmlrpc.client.Marshaller = kodaMarshaller
 
 # ==========================================================
 # RPC Controller

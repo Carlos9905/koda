@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <data>
 
         <record model="ir.ui.view" id="view_decimal_precision_form">
@@ -9,7 +9,7 @@
                 <form string="Decimal Precision">
                     <sheet>
                         <group col="4">
-                            <field name="name" attrs="{'readonly': [('id', '!=', False)]}"/>
+                            <field name="name" readonly="id"/>
                             <field name="digits"/>
                         </group>
                     </sheet>
@@ -36,4 +36,4 @@
             action="action_decimal_precision_form"/>
 
     </data>
-</odoo>
+</koda>

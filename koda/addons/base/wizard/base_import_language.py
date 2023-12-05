@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import base64
 import logging
@@ -44,8 +44,8 @@ class BaseLanguageImport(models.TransientModel):
                     _logger.warning('Could not import the file due to a format mismatch or it being malformed.')
                     raise UserError(
                         _('File %r not imported due to format mismatch or a malformed file.'
-                          ' (Valid formats are .csv, .po, .pot)\n\nTechnical Details:\n%s') % \
-                        (base_lang_import.filename, tools.ustr(e))
+                          ' (Valid formats are .csv, .po)\n\nTechnical Details:\n%s',
+                          base_lang_import.filename, tools.ustr(e))
                     )
             translation_importer.save(overwrite=overwrite)
         return True

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 
 """
@@ -106,7 +106,7 @@ def find_pg_tool(name):
 def exec_pg_environ():
     """
     Force the database PostgreSQL environment variables to the database
-    configuration of Odoo.
+    configuration of koda.
 
     Note: On systems where pg_restore/pg_dump require an explicit password
     (i.e.  on Windows where TCP sockets are used), it is necessary to pass the
@@ -130,10 +130,11 @@ def exec_pg_command(name, *args):
     warnings.warn("Since 16.0, use `subprocess` directly.", DeprecationWarning, stacklevel=2)
     prog = find_pg_tool(name)
     env = exec_pg_environ()
-    args2 = (prog,) + args
-    rc = subprocess.call(args2, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-    if rc:
-        raise Exception('Postgres subprocess %s error %s' % (args2, rc))
+    with open(os.devnull) as dn:
+        args2 = (prog,) + args
+        rc = subprocess.call(args2, env=env, stdout=dn, stderr=subprocess.STDOUT)
+        if rc:
+            raise Exception('Postgres subprocess %s error %s' % (args2, rc))
 
 def exec_pg_command_pipe(name, *args):
     warnings.warn("Since 16.0, use `subprocess` directly.", DeprecationWarning, stacklevel=2)
@@ -427,10 +428,9 @@ def scan_languages():
     :returns: a list of (lang_code, lang_name) pairs
     :rtype: [(str, unicode)]
     """
-    csvpath = koda.modules.module.get_resource_path('base', 'data', 'res.lang.csv')
     try:
         # read (code, name) from languages in base/data/res.lang.csv
-        with open(csvpath, 'rb') as csvfile:
+        with file_open('base/data/res.lang.csv', 'rb') as csvfile:
             reader = pycompat.csv_reader(csvfile, delimiter=',', quotechar='"')
             fields = next(reader)
             code_index = fields.index("code")
@@ -440,7 +440,7 @@ def scan_languages():
                 for row in reader
             ]
     except Exception:
-        _logger.error("Could not read %s", csvpath)
+        _logger.error("Could not read res.lang.csv")
         result = []
 
     return sorted(result or [('en_US', u'English')], key=itemgetter(1))
@@ -957,16 +957,29 @@ def dumpstacks(sig=None, frame=None, thread_idents=None):
     threads_info = {th.ident: {'repr': repr(th),
                                'uid': getattr(th, 'uid', 'n/a'),
                                'dbname': getattr(th, 'dbname', 'n/a'),
-                               'url': getattr(th, 'url', 'n/a')}
+                               'url': getattr(th, 'url', 'n/a'),
+                               'query_count': getattr(th, 'query_count', 'n/a'),
+                               'query_time': getattr(th, 'query_time', None),
+                               'perf_t0': getattr(th, 'perf_t0', None)}
                     for th in threading.enumerate()}
     for threadId, stack in sys._current_frames().items():
         if not thread_idents or threadId in thread_idents:
             thread_info = threads_info.get(threadId, {})
-            code.append("\n# Thread: %s (db:%s) (uid:%s) (url:%s)" %
+            query_time = thread_info.get('query_time')
+            perf_t0 = thread_info.get('perf_t0')
+            remaining_time = None
+            if query_time and perf_t0:
+                remaining_time = '%.3f' % (time.time() - perf_t0 - query_time)
+                query_time = '%.3f' % query_time
+            # qc:query_count qt:query_time pt:python_time (aka remaining time)
+            code.append("\n# Thread: %s (db:%s) (uid:%s) (url:%s) (qc:%s qt:%s pt:%s)" %
                         (thread_info.get('repr', threadId),
                          thread_info.get('dbname', 'n/a'),
                          thread_info.get('uid', 'n/a'),
-                         thread_info.get('url', 'n/a')))
+                         thread_info.get('url', 'n/a'),
+                         thread_info.get('query_count', 'n/a'),
+                         query_time or 'n/a',
+                         remaining_time or 'n/a'))
             for line in extract_stack(stack):
                 code.append(line)
 
@@ -1799,3 +1812,39 @@ def has_list_types(values, types):
         isinstance(values, (list, tuple)) and len(values) == len(types)
         and all(isinstance(item, type_) for item, type_ in zip(values, types))
     )
+
+def get_flag(country_code: str) -> str:
+    """Get the emoji representing the flag linked to the country code.
+
+    This emoji is composed of the two regional indicator emoji of the country code.
+    """
+    return "".join(chr(int(f"1f1{ord(c)+165:02x}", base=16)) for c in country_code)
+
+
+def format_frame(frame):
+    code = frame.f_code
+    return f'{code.co_name} {code.co_filename}:{frame.f_lineno}'
+
+
+def named_to_positional_printf(string: str, args: Mapping) -> tuple[str, tuple]:
+    """ Convert a named printf-style format string with its arguments to an
+    equivalent positional format string with its arguments. This implementation
+    does not support escaped ``%`` characters (``"%%"``).
+    """
+    if '%%' in string:
+        raise ValueError(f"Unsupported escaped '%' in format string {string!r}")
+    args = _PrintfArgs(args)
+    return string % args, tuple(args.values)
+
+
+class _PrintfArgs:
+    """ Helper object to turn a named printf-style format string into a positional one. """
+    __slots__ = ('mapping', 'values')
+
+    def __init__(self, mapping):
+        self.mapping = mapping
+        self.values = []
+
+    def __getitem__(self, key):
+        self.values.append(self.mapping[key])
+        return "%s"

@@ -154,10 +154,10 @@ class ThreadedWSGIServerReloadable(LoggingBaseWSGIServerMixIn, werkzeug.serving.
     socket open when a reload happens.
     """
     def __init__(self, host, port, app):
-        # The ODOO_MAX_HTTP_THREADS environment variable allows to limit the amount of concurrent
+        # The koda_MAX_HTTP_THREADS environment variable allows to limit the amount of concurrent
         # socket connections accepted by a threaded server, implicitly limiting the amount of
         # concurrent threads running for http requests handling.
-        self.max_http_threads = os.environ.get("ODOO_MAX_HTTP_THREADS")
+        self.max_http_threads = os.environ.get("koda_MAX_HTTP_THREADS")
         if self.max_http_threads:
             try:
                 self.max_http_threads = int(self.max_http_threads)
@@ -207,7 +207,7 @@ class ThreadedWSGIServerReloadable(LoggingBaseWSGIServerMixIn, werkzeug.serving.
     # TODO: Remove this method as soon as either of the revision
     # - python/cpython@8b1f52b5a93403acd7d112cd1c1bc716b31a418a for Python 3.6,
     # - python/cpython@908082451382b8b3ba09ebba638db660edbf5d8e for Python 3.7,
-    # is included in all Python 3 releases installed on all operating systems supported by Odoo.
+    # is included in all Python 3 releases installed on all operating systems supported by koda.
     # These revisions are included in Python from releases 3.6.8 and Python 3.7.2 respectively.
     def _handle_request_noblock(self):
         """
@@ -921,7 +921,10 @@ class PreforkServer(CommonServer):
         if config['http_enable']:
             # listen to socket
             _logger.info('HTTP service (werkzeug) running on %s:%s', self.interface, self.port)
-            self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            family = socket.AF_INET
+            if ':' in self.interface:
+                family = socket.AF_INET6
+            self.socket = socket.socket(family, socket.SOCK_STREAM)
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             self.socket.setblocking(0)
             self.socket.bind((self.interface, self.port))
@@ -1119,12 +1122,12 @@ class WorkerHTTP(Worker):
     def __init__(self, multi):
         super(WorkerHTTP, self).__init__(multi)
 
-        # The ODOO_HTTP_SOCKET_TIMEOUT environment variable allows to control socket timeout for
+        # The koda_HTTP_SOCKET_TIMEOUT environment variable allows to control socket timeout for
         # extreme latency situations. It's generally better to use a good buffering reverse proxy
         # to quickly free workers rather than increasing this timeout to accommodate high network
         # latencies & b/w saturation. This timeout is also essential to protect against accidental
         # DoS due to idle HTTP connections.
-        sock_timeout = os.environ.get("ODOO_HTTP_SOCKET_TIMEOUT")
+        sock_timeout = os.environ.get("koda_HTTP_SOCKET_TIMEOUT")
         self.sock_timeout = float(sock_timeout) if sock_timeout else 2
 
     def process_request(self, client, addr):
@@ -1269,7 +1272,7 @@ def _reexec(updated_modules=None):
 
 def load_test_file_py(registry, test_file):
     # pylint: disable=import-outside-toplevel
-    from koda.tests.suite import OdooSuite
+    from koda.tests.suite import kodaSuite
     threading.current_thread().testing = True
     try:
         test_path, _ = os.path.splitext(os.path.abspath(test_file))
@@ -1279,7 +1282,7 @@ def load_test_file_py(registry, test_file):
                 if test_path == config._normalize(mod_path):
                     tests = loader.unwrap_suite(
                         unittest.TestLoader().loadTestsFromModule(mod_mod))
-                    suite = OdooSuite(tests)
+                    suite = kodaSuite(tests)
                     _logger.log(logging.INFO, 'running tests %s.', mod_mod.__name__)
                     suite(registry._assertion_report)
                     if not registry._assertion_report.wasSuccessful():
@@ -1363,7 +1366,7 @@ def start(preload=None, stop=False):
             # would be using malloc() concurrently [2].
             # Due to the python's GIL, this optimization have no effect on multithreaded python programs.
             # Unfortunately, a downside of creating one arena per cpu core is the increase of virtual memory
-            # which Odoo is based upon in order to limit the memory usage for threaded workers.
+            # which koda is based upon in order to limit the memory usage for threaded workers.
             # On 32bit systems the default size of an arena is 512K while on 64bit systems it's 64M [3],
             # hence a threaded worker will quickly reach it's default memory soft limit upon concurrent requests.
             # We therefore set the maximum arenas allowed to 2 unless the MALLOC_ARENA_MAX env variable is set.

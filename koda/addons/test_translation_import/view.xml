@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data noupdate="1">
 
         <record id="action_test_translation_import_model1" model="ir.actions.act_window">
             <field name="name">Test translation import model1</field>
-            <field name="type">ir.actions.act_window</field>
             <field name="res_model">test.translation.import.model1</field>
             <field name="view_mode">tree,form</field>
             <field name="target">current</field>
@@ -17,4 +16,4 @@
             action="action_test_translation_import_model1"
             parent="menu_test_translation_import"/>
     </data>
-</odoo>
+</koda>

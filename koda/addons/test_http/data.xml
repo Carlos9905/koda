@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="gizeh_png" model="ir.attachment">
             <field name="name">gizeh.png</field>
@@ -25,10 +25,12 @@
 
         <record id="milky_way" model="test_http.galaxy">
             <field name="name">Milky Way</field>
+            <field name="picture" type="base64" file="test_http/static/src/img/milky_way.jpg"/>
         </record>
 
         <record id="pegasus" model="test_http.galaxy">
             <field name="name">Pegasus</field>
+            <field name="picture" type="base64" file="test_http/static/src/img/pegasus.jpg"/>
         </record>
 
         <record id="earth" model="test_http.stargate">
@@ -64,4 +66,4 @@
             <field name="galaxy_id" ref="test_http.pegasus"/>
         </record>
     </data>
-</odoo>
+</koda>

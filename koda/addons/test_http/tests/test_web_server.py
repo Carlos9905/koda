@@ -1,8 +1,8 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from os import getenv
 from koda.tests import tagged
-from . import test_static
+from .test_static import TestHttpStatic, TestHttpStaticCache
 
 
 # Small configuration to run the tests against a web server.
@@ -11,7 +11,7 @@ WEB_SERVER_URL = getenv('WEB_SERVER_URL', 'http://localhost:80')
 
 
 @tagged('webserver', '-standard', '-at_install')
-class TestHttpStaticWebServer(test_static.TestHttpStatic, test_static.TestHttpStaticCache):
+class TestHttpStaticWebServer(TestHttpStatic, TestHttpStaticCache):
     @classmethod
     def base_url(cls):
         return WEB_SERVER_URL

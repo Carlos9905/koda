@@ -1,4 +1,4 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 from koda.tools import cloc
 from koda.tests import TransactionCase, tagged
 

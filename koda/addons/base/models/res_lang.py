@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import ast
 import json
@@ -60,9 +60,9 @@ class Lang(models.Model):
     flag_image_url = fields.Char(compute=_compute_field_flag_image_url)
 
     _sql_constraints = [
-        ('name_uniq', 'unique(name)', 'The name of the language must be unique !'),
-        ('code_uniq', 'unique(code)', 'The code of the language must be unique !'),
-        ('url_code_uniq', 'unique(url_code)', 'The URL code of the language must be unique !'),
+        ('name_uniq', 'unique(name)', 'The name of the language must be unique!'),
+        ('code_uniq', 'unique(code)', 'The code of the language must be unique!'),
+        ('url_code_uniq', 'unique(url_code)', 'The URL code of the language must be unique!'),
     ]
 
     @api.constrains('active')
@@ -115,12 +115,6 @@ class Lang(models.Model):
         # check that there is at least one active language
         if not self.search_count([]):
             _logger.error("No language is active.")
-
-    # TODO remove me after v14
-    def load_lang(self, lang, lang_name=None):
-        _logger.warning("Call to deprecated method load_lang, use _create_lang or _activate_lang instead")
-        language = self._activate_lang(lang) or self._create_lang(lang, lang_name)
-        return language.id
 
     def _activate_lang(self, code):
         """ Activate languages
@@ -205,7 +199,7 @@ class Lang(models.Model):
         lang_code = (tools.config.get('load_language') or 'en_US').split(',')[0]
         lang = self._activate_lang(lang_code) or self._create_lang(lang_code)
         IrDefault = self.env['ir.default']
-        default_value = IrDefault.get('res.partner', 'lang')
+        default_value = IrDefault._get('res.partner', 'lang')
         if default_value is None:
             IrDefault.set('res.partner', 'lang', lang_code)
             # set language of main company, created directly by db bootstrap SQL
@@ -287,7 +281,7 @@ class Lang(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        self.clear_caches()
+        self.env.registry.clear_cache()
         for vals in vals_list:
             if not vals.get('url_code'):
                 vals['url_code'] = vals.get('iso_code') or vals['code']
@@ -307,7 +301,7 @@ class Lang(models.Model):
 
         res = super(Lang, self).write(vals)
         self.env.flush_all()
-        self.clear_caches()
+        self.env.registry.clear_cache()
         return res
 
     @api.ondelete(at_uninstall=True)
@@ -322,7 +316,7 @@ class Lang(models.Model):
                 raise UserError(_("You cannot delete the language which is Active!\nPlease de-activate the language first."))
 
     def unlink(self):
-        self.clear_caches()
+        self.env.registry.clear_cache()
         return super(Lang, self).unlink()
 
     def format(self, percent, value, grouping=False, monetary=False):

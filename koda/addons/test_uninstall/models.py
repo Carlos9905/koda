@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from koda import models, fields
 
 class test_uninstall_model(models.Model):
     """
     This model uses different types of columns to make it possible to test
-    the uninstall feature of Odoo.
+    the uninstall feature of koda.
     """
     _name = 'test_uninstall.model'
     _description = 'Testing Uninstall Model'

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 from datetime import datetime, timedelta
 import logging
 import pytz
@@ -21,6 +21,8 @@ def _create_sequence(cr, seq_name, number_increment, number_next):
 
 def _drop_sequences(cr, seq_names):
     """ Drop the PostreSQL sequences if they exist. """
+    if not seq_names:
+        return
     names = sql.SQL(',').join(map(sql.Identifier, seq_names))
     # RESTRICT is the default; it prevents dropping the sequence if an
     # object depends on it.
@@ -144,7 +146,7 @@ class IrSequence(models.Model):
     number_increment = fields.Integer(string='Step', required=True, default=1,
                                       help="The next number of the sequence will be incremented by this number")
     padding = fields.Integer(string='Sequence Size', required=True, default=0,
-                             help="Odoo will automatically adds some '0' on the left of the "
+                             help="koda will automatically adds some '0' on the left of the "
                                   "'Next Number' to get the required padding size.")
     company_id = fields.Many2one('res.company', string='Company',
                                  default=lambda s: s.env.company)
@@ -232,7 +234,7 @@ class IrSequence(models.Model):
             interpolated_prefix = _interpolate(self.prefix, d)
             interpolated_suffix = _interpolate(self.suffix, d)
         except ValueError:
-            raise UserError(_('Invalid prefix or suffix for sequence \'%s\'') % self.name)
+            raise UserError(_('Invalid prefix or suffix for sequence %r', self.name))
         return interpolated_prefix, interpolated_suffix
 
     def get_next_char(self, number_next):
@@ -335,7 +337,8 @@ class IrSequenceDateRange(models.Model):
     @api.model
     def default_get(self, fields):
         result = super(IrSequenceDateRange, self).default_get(fields)
-        result['number_next_actual'] = 1
+        if 'number_next_actual' in fields:
+            result['number_next_actual'] = 1
         return result
 
     date_from = fields.Date(string='From', required=True)

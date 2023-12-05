@@ -9,7 +9,7 @@ except ImportError:
     from pylint.checkers.utils import check_messages as only_required_for_messages
 
 
-class OdooBaseChecker(checkers.BaseChecker):
+class kodaBaseChecker(checkers.BaseChecker):
     __implements__ = interfaces.IAstroidChecker
     name = 'koda'
 
@@ -65,4 +65,4 @@ class OdooBaseChecker(checkers.BaseChecker):
         return False
 
 def register(linter):
-    linter.register_checker(OdooBaseChecker(linter))
+    linter.register_checker(kodaBaseChecker(linter))

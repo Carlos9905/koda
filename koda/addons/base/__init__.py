@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from . import controllers
 from . import models
@@ -8,9 +8,6 @@ from . import report
 from . import wizard
 
 
-def post_init(cr, registry):
+def post_init(env):
     """Rewrite ICP's to force groups"""
-    from koda import api, SUPERUSER_ID
-
-    env = api.Environment(cr, SUPERUSER_ID, {})
     env['ir.config_parameter'].init(force=True)

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from koda.tests import BaseCase
 from koda.tools.rendering_tools import parse_inline_template

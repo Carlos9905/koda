@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from koda import models
 from koda.modules.loading import force_demo
@@ -13,7 +13,7 @@ class IrDemo(models.TransientModel):
 
     @assert_log_admin_access
     def install_demo(self):
-        force_demo(self.env.cr)
+        force_demo(self.env)
         return {
             'type': 'ir.actions.act_url',
             'target': 'self',

@@ -1,4 +1,4 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import configparser as ConfigParser
 import errno
@@ -107,7 +107,7 @@ class configmanager(object):
         group = optparse.OptionGroup(parser, "Common options")
         group.add_option("-c", "--config", dest="config", help="specify alternate config file")
         group.add_option("-s", "--save", action="store_true", dest="save", default=False,
-                          help="save configuration to ~/.odoorc (or to ~/.openerp_serverrc if it exists)")
+                          help="save configuration to ~/.kodarc (or to ~/.openerp_serverrc if it exists)")
         group.add_option("-i", "--init", dest="init", help="install one or more modules (comma-separated list, use \"all\" for all modules), requires -d")
         group.add_option("-u", "--update", dest="update",
                           help="update one or more modules (comma-separated list, use \"all\" for all modules). Requires -d.")
@@ -126,7 +126,7 @@ class configmanager(object):
         group.add_option("--load", dest="server_wide_modules", help="Comma-separated list of server-wide modules.", my_default='base,web')
 
         group.add_option("-D", "--data-dir", dest="data_dir", my_default=_get_default_datadir(),
-                         help="Directory where to store Odoo data")
+                         help="Directory where to store koda data")
         parser.add_option_group(group)
 
         # HTTP
@@ -193,7 +193,7 @@ class configmanager(object):
         group.add_option("--screencasts", dest="screencasts", action="store", my_default=None,
                          metavar='DIR',
                          help="Screencasts will go in DIR/{db_name}/screencasts.")
-        temp_tests_dir = os.path.join(tempfile.gettempdir(), 'odoo_tests')
+        temp_tests_dir = os.path.join(tempfile.gettempdir(), 'koda_tests')
         group.add_option("--screenshots", dest="screenshots", action="store", my_default=temp_tests_dir,
                          metavar='DIR',
                          help="Screenshots will go in DIR/{db_name}/screenshots. Defaults to %s." % temp_tests_dir)
@@ -259,12 +259,14 @@ class configmanager(object):
                          help="specify the database ssl connection mode (see PostgreSQL documentation)")
         group.add_option("--db_maxconn", dest="db_maxconn", type='int', my_default=64,
                          help="specify the maximum number of physical connections to PostgreSQL")
+        group.add_option("--db_maxconn_gevent", dest="db_maxconn_gevent", type='int', my_default=False,
+                         help="specify the maximum number of physical connections to PostgreSQL specifically for the gevent worker")
         group.add_option("--db-template", dest="db_template", my_default="template0",
                          help="specify a custom database template to create a new database")
         parser.add_option_group(group)
 
         group = optparse.OptionGroup(parser, "Internationalisation options",
-            "Use these options to translate Odoo to another language. "
+            "Use these options to translate koda to another language. "
             "See i18n section of the user manual. Option '-d' is mandatory. "
             "Option '-l' is mandatory in case of importation"
             )
@@ -307,16 +309,15 @@ class configmanager(object):
                          help="Time limit (decimal value in hours) records created with a "
                               "TransientModel (mostly wizard) are kept in the database. Default to 1 hour.",
                          type="float")
-        group.add_option("--osv-memory-age-limit", dest="osv_memory_age_limit", my_default=False,
-                         help="Deprecated alias to the transient-age-limit option",
-                         type="float")
         group.add_option("--max-cron-threads", dest="max_cron_threads", my_default=2,
                          help="Maximum number of threads processing concurrently cron jobs (default 2).",
                          type="int")
         group.add_option("--unaccent", dest="unaccent", my_default=False, action="store_true",
                          help="Try to enable the unaccent extension when creating new databases.")
-        group.add_option("--geoip-db", dest="geoip_database", my_default='/usr/share/GeoIP/GeoLite2-City.mmdb',
-                         help="Absolute path to the GeoIP database file.")
+        group.add_option("--geoip-city-db", "--geoip-db", dest="geoip_city_db", my_default='/usr/share/GeoIP/GeoLite2-City.mmdb',
+                         help="Absolute path to the GeoIP City database file.")
+        group.add_option("--geoip-country-db", dest="geoip_country_db", my_default='/usr/share/GeoIP/GeoLite2-Country.mmdb',
+                         help="Absolute path to the GeoIP Country database file.")
         parser.add_option_group(group)
 
         if os.name == 'posix':
@@ -408,10 +409,6 @@ class configmanager(object):
             "The config file '%s' selected with -c/--config doesn't exist or is not readable, "\
             "use -s/--save if you want to generate it"% opt.config)
 
-        die(bool(opt.osv_memory_age_limit) and bool(opt.transient_memory_age_limit),
-            "the osv-memory-count-limit option cannot be used with the "
-            "transient-age-limit option, please only use the latter.")
-
         # place/search the config file on Win32 near the server installation
         # (../etc from the server)
         # if the server is run by an unprivileged user, he has to specify location of a config file where he has the rights to write,
@@ -420,18 +417,18 @@ class configmanager(object):
         if os.name == 'nt':
             rcfilepath = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])), 'koda.conf')
         else:
-            rcfilepath = os.path.expanduser('~/.odoorc')
+            rcfilepath = os.path.expanduser('~/.kodarc')
             old_rcfilepath = os.path.expanduser('~/.openerp_serverrc')
 
             die(os.path.isfile(rcfilepath) and os.path.isfile(old_rcfilepath),
-                "Found '.odoorc' and '.openerp_serverrc' in your path. Please keep only one of "\
-                "them, preferably '.odoorc'.")
+                "Found '.kodarc' and '.openerp_serverrc' in your path. Please keep only one of "\
+                "them, preferably '.kodarc'.")
 
             if not os.path.isfile(rcfilepath) and os.path.isfile(old_rcfilepath):
                 rcfilepath = old_rcfilepath
 
         self.rcfile = os.path.abspath(
-            self.config_file or opt.config or os.environ.get('ODOO_RC') or os.environ.get('OPENERP_SERVER') or rcfilepath)
+            self.config_file or opt.config or os.environ.get('koda_RC') or os.environ.get('OPENERP_SERVER') or rcfilepath)
         self.load()
 
         # Verify that we want to log or not, if not the output will go to stdout
@@ -453,10 +450,11 @@ class configmanager(object):
                 'db_port', 'db_template', 'logfile', 'pidfile', 'smtp_port',
                 'email_from', 'smtp_server', 'smtp_user', 'smtp_password', 'from_filter',
                 'smtp_ssl_certificate_filename', 'smtp_ssl_private_key_filename',
-                'db_maxconn', 'import_partial', 'addons_path', 'upgrade_path',
+                'db_maxconn', 'db_maxconn_gevent', 'import_partial', 'addons_path', 'upgrade_path',
                 'syslog', 'without_demo', 'screencasts', 'screenshots',
                 'dbfilter', 'log_level', 'log_db',
-                'log_db_level', 'geoip_database', 'dev_mode', 'shell_interface'
+                'log_db_level', 'geoip_city_db', 'geoip_country_db', 'dev_mode',
+                'shell_interface',
         ]
 
         for arg in keys:
@@ -479,7 +477,7 @@ class configmanager(object):
             'stop_after_init', 'without_demo', 'http_enable', 'syslog',
             'list_db', 'proxy_mode',
             'test_file', 'test_tags',
-            'osv_memory_count_limit', 'osv_memory_age_limit', 'transient_age_limit', 'max_cron_threads', 'unaccent',
+            'osv_memory_count_limit', 'transient_age_limit', 'max_cron_threads', 'unaccent',
             'data_dir',
             'server_wide_modules',
         ]
@@ -503,6 +501,8 @@ class configmanager(object):
             elif isinstance(self.options[arg], str) and self.casts[arg].type in optparse.Option.TYPE_CHECKER:
                 self.options[arg] = optparse.Option.TYPE_CHECKER[self.casts[arg].type](self.casts[arg], arg, self.options[arg])
 
+        ismultidb = ',' in (self.options.get('db_name') or '')
+        die(ismultidb and (opt.init or opt.update), "Cannot use -i/--init or -u/--update with multiple databases in the -d/--database/db_name")
         self.options['root_path'] = self._normalize(os.path.join(os.path.dirname(__file__), '..'))
         if not self.options['addons_path'] or self.options['addons_path']=='None':
             default_addons = []
@@ -544,7 +544,7 @@ class configmanager(object):
             self.save()
 
         # normalize path options
-        for key in ['data_dir', 'logfile', 'pidfile', 'test_file', 'screencasts', 'screenshots', 'pg_path', 'translate_out', 'translate_in', 'geoip_database']:
+        for key in ['data_dir', 'logfile', 'pidfile', 'test_file', 'screencasts', 'screenshots', 'pg_path', 'translate_out', 'translate_in', 'geoip_city_db', 'geoip_country_db']:
             self.options[key] = self._normalize(self.options[key])
 
         conf.addons_paths = self.options['addons_path'].split(',')
@@ -555,12 +555,6 @@ class configmanager(object):
         return opt
 
     def _warn_deprecated_options(self):
-        if self.options['osv_memory_age_limit']:
-            warnings.warn(
-                "The osv-memory-age-limit is a deprecated alias to "
-                "the transient-age-limit option, please use the latter.",
-                DeprecationWarning)
-            self.options['transient_age_limit'] = self.options.pop('osv_memory_age_limit')
         if self.options['longpolling_port']:
             warnings.warn(
                 "The longpolling-port is a deprecated alias to "

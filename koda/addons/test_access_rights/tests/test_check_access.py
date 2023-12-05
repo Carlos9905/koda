@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 import koda.tests
 from koda import Command
 
@@ -51,8 +51,4 @@ class TestAccess(koda.tests.HttpCase):
         })
         document = self.env['test_access_right.ticket'].with_user(no_access_user)
         res = document.sudo().name_search('Need help here')
-        #Invalide cache in case the name is already there
-        #and will not trigget check_access_rights when
-        #the name_get will access the name
-        self.document.invalidate_model(['name'])
         self.assertEqual(res[0][1], "Need help here")

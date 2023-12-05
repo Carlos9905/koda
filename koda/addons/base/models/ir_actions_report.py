@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 from markupsafe import Markup
 
 from koda import api, fields, models, tools, SUPERUSER_ID, _
 from koda.exceptions import UserError, AccessError
 from koda.tools.safe_eval import safe_eval, time
 from koda.tools.misc import find_in_path, ustr
-from koda.tools import check_barcode_encoding, config, is_html_empty, parse_version
+from koda.tools import check_barcode_encoding, config, is_html_empty, parse_version, split_every
 from koda.http import request
 from koda.osv.expression import NEGATIVE_TERM_OPERATORS, FALSE_DOMAIN
 
@@ -26,6 +26,8 @@ from PyPDF2 import PdfFileWriter, PdfFileReader
 from collections import OrderedDict
 from collections.abc import Iterable
 from PIL import Image, ImageFile
+from itertools import islice
+
 # Allow truncated images
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -39,7 +41,7 @@ _logger = logging.getLogger(__name__)
 # A lock occurs when the user wants to print a report having multiple barcode while the server is
 # started in threaded-mode. The reason is that reportlab has to build a cache of the T1 fonts
 # before rendering a barcode (done in a C extension) and this part is not thread safe. We attempt
-# here to init the T1 fonts cache at the start-up of Odoo so that rendering of barcode in multiple
+# here to init the T1 fonts cache at the start-up of koda so that rendering of barcode in multiple
 # thread does not lock the server.
 try:
     createBarcodeDrawing('Code128', value='foo', format='png', width=100, height=100, humanReadable=1).asString('png')
@@ -50,8 +52,27 @@ except Exception:
 def _get_wkhtmltopdf_bin():
     return find_in_path('wkhtmltopdf')
 
+def _split_table(tree, max_rows):
+    """
+    Walks through the etree and splits tables with more than max_rows rows into
+    multiple tables with max_rows rows.
 
-# Check the presence of Wkhtmltopdf and return its version at Odoo start-up
+    This function is needed because wkhtmltopdf has a exponential processing
+    time growth when processing tables with many rows. This function is a
+    workaround for this problem.
+
+    :param tree: The etree to process
+    :param max_rows: The maximum number of rows per table
+    """
+    for table in list(tree.iter('table')):
+        prev = table
+        for rows in islice(split_every(max_rows, table), 1, None):
+            sibling = etree.Element('table', attrib=table.attrib)
+            sibling.extend(rows)
+            prev.addnext(sibling)
+            prev = sibling
+
+# Check the presence of Wkhtmltopdf and return its version at koda start-up
 wkhtmltopdf_state = 'install'
 wkhtmltopdf_dpi_zoom_ratio = False
 try:
@@ -75,7 +96,7 @@ else:
             wkhtmltopdf_dpi_zoom_ratio = True
 
         if config['workers'] == 1:
-            _logger.info('You need to start Odoo with at least two workers to print a pdf version of the reports.')
+            _logger.info('You need to start koda with at least two workers to print a pdf version of the reports.')
             wkhtmltopdf_state = 'workers'
     else:
         _logger.info('Wkhtmltopdf seems to be broken.')
@@ -127,6 +148,9 @@ class IrActionsReport(models.Model):
         if isinstance(value, str):
             names = self.env['ir.model'].name_search(value, operator=operator)
             ir_model_ids = [n[0] for n in names]
+
+        elif operator in ('any', 'not any'):
+            ir_model_ids = self.env['ir.model']._search(value)
 
         elif isinstance(value, Iterable):
             ir_model_ids = value
@@ -210,16 +234,6 @@ class IrActionsReport(models.Model):
         :return: wkhtmltopdf_state
         '''
         return wkhtmltopdf_state
-
-    @api.model
-    def datamatrix_available(self):
-        '''Returns whether or not datamatrix creation is possible.
-        * True: Reportlab seems to be able to create datamatrix without error.
-        * False: Reportlab cannot seem to create datamatrix, most likely due to missing package dependency
-
-        :return: Boolean
-        '''
-        return True
 
     def get_paperformat(self):
         return self.paperformat_id or self.env.company.paperformat_id
@@ -332,7 +346,7 @@ class IrActionsReport(models.Model):
             return {}
         base_url = IrConfig.get_param('report.url') or layout.get_base_url()
 
-        root = lxml.html.fromstring(html, parser=lxml.html.HTMLParser(encoding='utf-8'))
+        root = lxml.html.fromstring(html)
         match_klass = "//div[contains(concat(' ', normalize-space(@class), ' '), ' {} ')]"
 
         header_node = etree.Element('div', id='minimal_layout_report_headers')
@@ -447,7 +461,19 @@ class IrActionsReport(models.Model):
             prefix = '%s%d.' % ('report.body.tmp.', i)
             body_file_fd, body_file_path = tempfile.mkstemp(suffix='.html', prefix=prefix)
             with closing(os.fdopen(body_file_fd, 'wb')) as body_file:
-                body_file.write(body.encode())
+                # HACK: wkhtmltopdf doesn't like big table at all and the
+                #       processing time become exponential with the number
+                #       of rows (like 1H for 250k rows).
+                #
+                #       So we split the table into multiple tables containing
+                #       500 rows each. This reduce the processing time to 1min
+                #       for 250k rows. The number 500 was taken from opw-1689673
+                if len(body) < 4 * 1024 * 1024: # 4Mib
+                    body_file.write(body.encode())
+                else:
+                    tree = lxml.html.fromstring(body)
+                    _split_table(tree, 500)
+                    body_file.write(lxml.html.tostring(tree))
             paths.append(body_file_path)
             temporary_files.append(body_file_path)
 
@@ -464,11 +490,18 @@ class IrActionsReport(models.Model):
             if process.returncode not in [0, 1]:
                 if process.returncode == -11:
                     message = _(
-                        'Wkhtmltopdf failed (error code: %s). Memory limit too low or maximum file number of subprocess reached. Message : %s')
+                        'Wkhtmltopdf failed (error code: %s). Memory limit too low or maximum file number of subprocess reached. Message : %s',
+                        process.returncode,
+                        err[-1000:],
+                    )
                 else:
-                    message = _('Wkhtmltopdf failed (error code: %s). Message: %s')
-                _logger.warning(message, process.returncode, err[-1000:])
-                raise UserError(message % (str(process.returncode), err[-1000:]))
+                    message = _(
+                        'Wkhtmltopdf failed (error code: %s). Message: %s',
+                        process.returncode,
+                        err[-1000:],
+                    )
+                _logger.warning(message)
+                raise UserError(message)
             else:
                 if err:
                     _logger.warning('wkhtmltopdf: %s' % err)
@@ -550,9 +583,6 @@ class IrActionsReport(models.Model):
         elif barcode_type == 'auto':
             symbology_guess = {8: 'EAN8', 13: 'EAN13'}
             barcode_type = symbology_guess.get(len(value), 'Code128')
-        elif barcode_type == 'DataMatrix':
-            # Prevent a crash due to a lib change from pylibdmtx to reportlab
-            barcode_type = 'ECC200DataMatrix'
         elif barcode_type == 'QR':
             # for `QR` type, `quiet` is not supported. And is simply ignored.
             # But we can use `barBorder` to get a similar behaviour.
@@ -630,7 +660,7 @@ class IrActionsReport(models.Model):
                 reader = PdfFileReader(stream)
                 writer.appendPagesFromReader(reader)
             except (PdfReadError, TypeError, NotImplementedError, ValueError):
-                raise UserError(_("Odoo is unable to merge the generated PDFs."))
+                raise UserError(_("koda is unable to merge the generated PDFs."))
         result_stream = io.BytesIO()
         streams.append(result_stream)
         writer.write(result_stream)
@@ -653,7 +683,7 @@ class IrActionsReport(models.Model):
             for record in records:
                 stream = None
                 attachment = None
-                if report_sudo.attachment:
+                if report_sudo.attachment and not self._context.get("report_pdf_no_attachment"):
                     attachment = report_sudo.retrieve_attachment(record)
 
                     # Extract the stream from the attachment.
@@ -693,17 +723,6 @@ class IrActionsReport(models.Model):
             # because the resources files are not loaded in time.
             # https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2083
             additional_context = {'debug': False}
-
-            # As the assets are generated during the same transaction as the rendering of the
-            # templates calling them, there is a scenario where the assets are unreachable: when
-            # you make a request to read the assets while the transaction creating them is not done.
-            # Indeed, when you make an asset request, the controller has to read the `ir.attachment`
-            # table.
-            # This scenario happens when you want to print a PDF report for the first time, as the
-            # assets are not in cache and must be generated. To workaround this issue, we manually
-            # commit the writes in the `ir.attachment` table. It is done thanks to a key in the context.
-            if not config['test_enable'] and 'commit_assetsbundle' not in self.env.context:
-                additional_context['commit_assetsbundle'] = True
 
             html = self.with_context(**additional_context)._render_qweb_html(report_ref, res_ids_wo_stream, data=data)[0]
 
@@ -816,13 +835,14 @@ class IrActionsReport(models.Model):
         if (tools.config['test_enable'] or tools.config['test_file']) and not self.env.context.get('force_report_rendering'):
             return self._render_qweb_html(report_ref, res_ids, data=data)
 
+        self = self.with_context(webp_as_jpg=True)
         collected_streams = self._render_qweb_pdf_prepare_streams(report_ref, data, res_ids=res_ids)
 
         # access the report details with sudo() but keep evaluation context as current user
         report_sudo = self._get_report(report_ref)
 
         # Generate the ir.attachment if needed.
-        if report_sudo.attachment:
+        if report_sudo.attachment and not self._context.get("report_pdf_no_attachment"):
             attachment_vals_list = []
             for res_id, stream_data in collected_streams.items():
                 # An attachment already exists.
@@ -966,5 +986,6 @@ class IrActionsReport(models.Model):
         py_ctx = json.loads(action.get('context', {}))
         report_action['close_on_report_download'] = True
         py_ctx['report_action'] = report_action
+        py_ctx['dialog_size'] = 'large'
         action['context'] = py_ctx
         return action

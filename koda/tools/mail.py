@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import base64
 import collections
@@ -11,7 +11,6 @@ import threading
 import time
 from email.utils import getaddresses
 from urllib.parse import urlparse
-import html as htmllib
 
 import idna
 import markupsafe
@@ -33,12 +32,12 @@ safe_attrs = clean.defs.safe_attrs | frozenset(
     ['style',
      'data-o-mail-quote', 'data-o-mail-quote-node',  # quote detection
      'data-oe-model', 'data-oe-id', 'data-oe-field', 'data-oe-type', 'data-oe-expression', 'data-oe-translation-initial-sha', 'data-oe-nodeid',
-     'data-last-history-steps',
+     'data-last-history-steps', 'data-oe-protected', 'data-oe-transient-content',
      'data-publish', 'data-id', 'data-res_id', 'data-interval', 'data-member_id', 'data-scroll-background-ratio', 'data-view-id',
      'data-class', 'data-mimetype', 'data-original-src', 'data-original-id', 'data-gl-filter', 'data-quality', 'data-resize-width',
      'data-shape', 'data-shape-colors', 'data-file-name', 'data-original-mimetype',
-     'data-oe-protected',  # editor
      'data-behavior-props', 'data-prop-name',  # knowledge commands
+     'data-mimetype-before-conversion',
      ])
 SANITIZE_TAGS = {
     # allow new semantic HTML5 tags
@@ -202,9 +201,6 @@ def html_normalize(src, filter_callback=None):
     try:
         src = src.replace('--!>', '-->')
         src = re.sub(r'(<!-->|<!--->)', '<!-- -->', src)
-        # On the specific case of Outlook desktop it adds unnecessary '<o:.*></o:.*>' tags which are parsed
-        # in '<p></p>' which may alter the appearance (eg. spacing) of the mail body
-        src = re.sub(r'</?o:.*?>', '', src)
         doc = html.fromstring(src)
     except etree.ParserError as e:
         # HTML comment only string, whitespace only..
@@ -342,7 +338,6 @@ def html_to_inner_content(html):
     processed = re.sub(HTML_NEWLINES_REGEX, ' ', html)
     processed = re.sub(HTML_TAGS_REGEX, '', processed)
     processed = re.sub(r' {2,}|\t', ' ', processed)
-    processed = htmllib.unescape(processed)
     processed = processed.strip()
     return processed
 
@@ -398,7 +393,7 @@ def html2plaintext(html, body_id=None, encoding='utf-8'):
     html = html.replace('&gt;', '>')
     html = html.replace('&lt;', '<')
     html = html.replace('&amp;', '&')
-    html = html.replace('&nbsp;', u'\N{NO-BREAK SPACE}')
+    html = html.replace('&nbsp;', '\N{NO-BREAK SPACE}')
 
     # strip all lines
     html = '\n'.join([x.strip() for x in html.splitlines()])
@@ -554,25 +549,13 @@ def email_split_tuples(text):
 
     if not text:
         return []
-
-    # found valid pairs, filtering out failed parsing
-    valid_pairs = [
+    return list(map(_parse_based_on_spaces, [
         (addr[0], addr[1]) for addr in getaddresses([text])
         # getaddresses() returns '' when email parsing fails, and
         # sometimes returns emails without at least '@'. The '@'
         # is strictly required in RFC2822's `addr-spec`.
         if addr[1] and '@' in addr[1]
-    ]
-    # corner case: returning '@gmail.com'-like email (see test_email_split)
-    if any(pair[1].startswith('@') for pair in valid_pairs):
-        filtered = [
-            found_email for found_email in email_re.findall(text)
-            if found_email and not found_email.startswith('@')
-        ]
-        if filtered:
-            valid_pairs = [('', found_email) for found_email in filtered]
-
-    return list(map(_parse_based_on_spaces, valid_pairs))
+    ]))
 
 def email_split(text):
     """ Return a list of the email addresses found in ``text`` """
@@ -754,3 +737,30 @@ def encapsulate_email(old_email, new_email):
         name_part,
         new_email_split[0][1],
     ))
+
+def parse_contact_from_email(text):
+    """ Parse contact name and email (given by text) in order to find contact
+    information, able to populate records like partners, leads, ...
+    Supported syntax:
+
+      * Raoul <raoul@grosbedon.fr>
+      * "Raoul le Grand" <raoul@grosbedon.fr>
+      * Raoul raoul@grosbedon.fr (strange fault tolerant support from
+        df40926d2a57c101a3e2d221ecfd08fbb4fea30e now supported directly
+        in 'email_split_tuples';
+
+    Otherwise: default, text is set as name.
+
+    :return: name, email (normalized if possible)
+    """
+    if not text or not text.strip():
+        return '', ''
+    split_results = email_split_tuples(text)
+    name, email = split_results[0] if split_results else ('', '')
+
+    if email:
+        email_normalized = email_normalize(email, strict=False) or email
+    else:
+        name, email_normalized = text, ''
+
+    return name, email_normalized

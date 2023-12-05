@@ -1,4 +1,4 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 import logging
 import os
 import sys
@@ -15,13 +15,13 @@ class Command:
         commands[cls.name] = cls
 
 
-ODOO_HELP = """\
-Odoo CLI, use '{odoo_bin} --help' for regular server options.
+koda_HELP = """\
+koda CLI, use '{koda_bin} --help' for regular server options.
 
 Available commands:
     {command_list}
 
-Use '{odoo_bin} <command> --help' for individual command help."""
+Use '{koda_bin} <command> --help' for individual command help."""
 
 class Help(Command):
     """ Display the list of available commands """
@@ -31,8 +31,8 @@ class Help(Command):
             "    {}{}".format(name.ljust(padding), (command.__doc__ or "").strip())
             for name, command in sorted(commands.items())
         ])
-        print(ODOO_HELP.format(  # pylint: disable=bad-builtin
-            odoo_bin=Path(sys.argv[0]).name,
+        print(koda_HELP.format(  # pylint: disable=bad-builtin
+            koda_bin=Path(sys.argv[0]).name,
             command_list=command_list
         ))
 

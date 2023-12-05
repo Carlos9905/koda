@@ -14,8 +14,8 @@ from koda.exceptions import UserError
 _logger = logging.getLogger(__name__)
 
 
-class odoo_resolver(etree.Resolver):
-    """Odoo specific file resolver that can be added to the XML Parser.
+class koda_resolver(etree.Resolver):
+    """koda specific file resolver that can be added to the XML Parser.
 
     It will search filenames in the ir.attachments
     """
@@ -52,7 +52,7 @@ def _check_with_xsd(tree_or_str, stream, env=None, prefix=None):
         tree_or_str = etree.fromstring(tree_or_str)
     parser = etree.XMLParser()
     if env:
-        parser.resolvers.add(odoo_resolver(env, prefix))
+        parser.resolvers.add(koda_resolver(env, prefix))
         if isinstance(stream, str) and stream.endswith('.xsd'):
             attachment = env['ir.attachment'].search([('name', '=', stream)])
             if not attachment:
@@ -280,3 +280,8 @@ def validate_xml_from_attachment(env, xml_content, xsd_name, reload_files_functi
         _logger.info("XSD validation successful!")
     except FileNotFoundError:
         _logger.info("XSD file not found, skipping validation")
+
+
+def find_xml_value(xpath, xml_element, namespaces=None):
+    element = xml_element.xpath(xpath, namespaces=namespaces)
+    return element[0].text if element else None

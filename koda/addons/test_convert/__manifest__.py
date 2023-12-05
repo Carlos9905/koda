@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'test_convert',
@@ -8,6 +8,7 @@
     'category': 'Hidden/Tests',
     'data': [
         'ir.model.access.csv',
+        'data/test_translated_field/test_model_data.xml',
     ],
     'license': 'LGPL-3',
 }

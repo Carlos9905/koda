@@ -1,13 +1,14 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import base64
 from datetime import datetime, timedelta
+from http import HTTPStatus
 from os.path import basename, join as opj
 from unittest.mock import patch
 from freezegun import freeze_time
 
 import koda
-from koda.tests import new_test_user, tagged
+from koda.tests import new_test_user, tagged, RecordCapturer
 from koda.tools import config, file_open, image_process
 
 from .test_common import TestHttpBase
@@ -264,10 +265,20 @@ class TestHttpStatic(TestHttpStaticCommon):
             assert_content=self.gizeh_data[100:200]
         )
 
-    def test_static16_public_user_image(self):
-        public_user = self.env.ref('base.public_user')
-        res = self.url_open(f'/web/image/res.users/{public_user.id}/image_128?download=1')
-        self.assertEqual(res.status_code, 404)
+    def test_static16_public_access_rights(self):
+        default_user = self.env.ref('base.default_user')
+
+        with self.subTest('model access rights'):
+            res = self.url_open(f'/web/content/res.users/{default_user.id}/image_128')
+            self.assertEqual(res.status_code, 404)
+
+        with self.subTest('attachment + field access rights'):
+            res = self.url_open('/web/content/test_http.pegasus?field=picture')
+            self.assertEqual(res.status_code, 404)
+
+        with self.subTest('related attachment + field access rights'):
+            res = self.url_open('/web/content/test_http.earth?field=galaxy_picture')
+            self.assertEqual(res.status_code, 404)
 
     def test_static17_content_missing_checksum(self):
         att = self.env['ir.attachment'].create({
@@ -416,6 +427,7 @@ class TestHttpStaticLogo(TestHttpStaticCommon):
         self.assertDownloadLogoDefault(company=self.company2, user=self.user_of_company_of_superuser)
 
 
+@tagged('post_install', '-at_install')
 class TestHttpStaticCache(TestHttpStaticCommon):
     @freeze_time(datetime.utcnow())
     def test_static_cache0_standard(self, domain=''):
@@ -469,3 +481,63 @@ class TestHttpStaticCache(TestHttpStaticCommon):
         })
         res2.raise_for_status()
         self.assertEqual(res2.status_code, 304, "We should not download the file again.")
+
+
+@tagged('post_install', '-at_install')
+class TestHttpStaticUpload(TestHttpStaticCommon):
+    def test_upload_small_file(self):
+        new_test_user(self.env, 'jackoneill')
+        self.authenticate('jackoneill', 'jackoneill')
+
+        with RecordCapturer(self.env['ir.attachment'], []) as capture, \
+             file_open('test_http/static/src/img/gizeh.png', 'rb') as file:
+            file_content = file.read()
+            file_size = len(file_content)
+            file.seek(0)
+            res = self.opener.post(
+                f'{self.base_url()}/web/binary/upload_attachment',
+                files={'ufile': file},
+                data={
+                    'csrf_token': koda.http.Request.csrf_token(self),
+                    'model': 'test_http.stargate',
+                    'id': self.env.ref('test_http.earth').id,
+                },
+            )
+        res.raise_for_status()
+
+        self.assertEqual(len(capture.records), 1, "An attachment should have been created")
+        self.assertEqual(capture.records.name, 'gizeh.png')
+        self.assertEqual(capture.records.raw, file_content)
+        self.assertEqual(capture.records.mimetype, 'image/png')
+
+        self.assertEqual(res.json(), [{
+            'filename': 'gizeh.png',
+            'mimetype': 'image/png',
+            'id': capture.records.id,
+            'size': file_size,
+        }])
+
+
+    def test_upload_large_file(self):
+        new_test_user(self.env, 'jackoneill')
+        self.authenticate('jackoneill', 'jackoneill')
+
+        with RecordCapturer(self.env['ir.attachment'], []) as capture, \
+             file_open('test_http/static/src/img/gizeh.png', 'rb') as file:
+            file_size = file.seek(0, 2)
+            file.seek(0)
+            self.env['ir.config_parameter'].sudo().set_param(
+                'web.max_file_upload_size', file_size - 1,
+            )
+            res = self.opener.post(
+                f'{self.base_url()}/web/binary/upload_attachment',
+                files={'ufile': file},
+                data={
+                    'csrf_token': koda.http.Request.csrf_token(self),
+                    'model': 'test_http.stargate',
+                    'id': self.env.ref('test_http.earth').id,
+                    'callback': 'callmemaybe',
+                },
+            )
+        self.assertFalse(capture.records, "No attachment should have been created")
+        self.assertEqual(res.status_code, HTTPStatus.REQUEST_ENTITY_TOO_LARGE)

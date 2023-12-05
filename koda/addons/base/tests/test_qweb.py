@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import collections
 import json
@@ -12,7 +12,6 @@ from lxml.builder import E
 from copy import deepcopy
 from textwrap import dedent
 
-from koda.modules import get_module_resource
 from koda.tests.common import TransactionCase
 from koda.addons.base.models.ir_qweb import QWebException, render
 from koda.tools import misc, mute_logger
@@ -662,6 +661,7 @@ class TestQWebNS(TransactionCase):
             """
         })
 
+        error_msg = None
         try:
             "" + 0
         except TypeError as e:
@@ -1617,7 +1617,7 @@ class TestQWebBasic(TransactionCase):
             QWeb.with_context(preserve_comments=False)._render(view.id),
             markupsafe.Markup('<p></p>'),
             "Should not have the comment")
-        QWeb.clear_caches()
+        self.env.registry.clear_cache('templates')
         self.assertEqual(
             QWeb.with_context(preserve_comments=True)._render(view.id),
             markupsafe.Markup(f'<p>{comment}</p>'),
@@ -1638,7 +1638,7 @@ class TestQWebBasic(TransactionCase):
             QWeb.with_context(preserve_comments=False)._render(view.id),
             markupsafe.Markup('<p></p>'),
             "Should not have the processing instruction")
-        QWeb.clear_caches()
+        self.env.registry.clear_cache('templates')
         self.assertEqual(
             QWeb.with_context(preserve_comments=True)._render(view.id),
             markupsafe.Markup(f'<p>{p_instruction}</p>'),
@@ -3071,33 +3071,13 @@ class TestQwebCache(TransactionCase):
         result = etree.fromstring(IrQweb._render(view2.id, {'value': [10, 20, 30]}))
         self.assertEqual(result, expected_result, 'Next rendering create cache from company and the value 10')
 
-class FileSystemLoader(object):
-    def __init__(self, path):
-        # TODO: support multiple files #add_file() + add cache
-        self.path = path
-        self.doc = etree.parse(path).getroot()
-
-    def __iter__(self):
-        for node in self.doc:
-            name = node.get('t-name')
-            if name:
-                yield name
-
-    def __call__(self, name):
-        for node in self.doc:
-            if node.get('t-name') == name:
-                return (deepcopy(node), name)
-
-class TestQWebStaticXml(TransactionCase):
-    matcher = re.compile(r'^qweb-test-(.*)\.xml$')
-
     def test_render_nodb(self):
         """ Render an html page without db ans wihtout registry
         """
         expected = dedent("""
             <html>
                 <head>
-                    <title>Odoo</title>
+                    <title>koda</title>
                 </head>
                 <body>
                     <section class="toto">
@@ -3111,7 +3091,7 @@ class TestQWebStaticXml(TransactionCase):
             'html': html.document_fromstring("""
                 <html t-name="html">
                     <head>
-                        <title>Odoo</title>
+                        <title>koda</title>
                     </head>
                     <body>
                         <section class="toto">
@@ -3131,58 +3111,3 @@ class TestQWebStaticXml(TransactionCase):
         rendering = render('html', {'val': 3}, load).strip()
 
         self.assertEqual(html.document_fromstring(rendering), html.document_fromstring(expected))
-
-    @classmethod
-    def get_cases(cls):
-        path = cls.qweb_test_file_path()
-        return (
-            cls("test_qweb_{}".format(cls.matcher.match(f).group(1)))
-            for f in os.listdir(path)
-            # js inheritance
-            if f != 'qweb-test-extend.xml'
-            if cls.matcher.match(f)
-        )
-
-    @classmethod
-    def qweb_test_file_path(cls):
-        return os.path.dirname(get_module_resource('web', 'static', 'lib', 'qweb', 'qweb2.js'))
-
-    def __getattr__(self, item):
-        if not item.startswith('test_qweb_'):
-            raise AttributeError("No {} on {}".format(item, self))
-
-        f = 'qweb-test-{}.xml'.format(item[10:])
-        path = self.qweb_test_file_path()
-
-        return lambda: self.run_test_file(os.path.join(path, f))
-
-    @mute_logger('koda.addons.base.models.ir_qweb') # tests t-raw which is deprecated
-    def run_test_file(self, path):
-        self.env.user.tz = 'Europe/Brussels'
-        doc = etree.parse(path).getroot()
-        loader = FileSystemLoader(path)
-        for template in loader:
-            if not template or template.startswith('_'):
-                continue
-            param = doc.find('params[@id="{}"]'.format(template))
-            # OrderedDict to ensure JSON mappings are iterated in source order
-            # so output is predictable & repeatable
-            params = {} if param is None else json.loads(param.text, object_pairs_hook=collections.OrderedDict)
-
-            def remove_space(text):
-                return re.compile(r'\>[ \n\t]*\<').sub('><', text.strip())
-
-            result = remove_space(doc.find('result[@id="{}"]'.format(template)).text or u'').replace('&quot;', '&#34;')
-
-            try:
-                rendering_static = remove_space(render(template, values=params, load=loader))
-                self.assertEqual(rendering_static, result, "%s (static rendering)" % template)
-            except QWebException as e:
-                if not isinstance(e.__cause__, NotImplementedError) and "Please use \"env['ir.qweb']._render\" method" in str(e):
-                    raise
-
-def load_tests(loader, suite, _):
-    # can't override TestQWebStaticXml.__dir__ because dir() called on *class* not
-    # instance
-    suite.addTests(TestQWebStaticXml.get_cases())
-    return suite

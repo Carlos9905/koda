@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from koda.tests.common import TransactionCase
 from koda.tools import pdf
-from koda.modules.module import get_module_resource
+from koda.tools.misc import file_open
 import io
 
 
@@ -12,12 +12,11 @@ class TestPdf(TransactionCase):
 
     def setUp(self):
         super().setUp()
-        file_path = get_module_resource('base', 'tests', 'minimal.pdf')
-        self.file = open(file_path, 'rb').read()
+        self.file = file_open('base/tests/minimal.pdf', 'rb').read()
         self.minimal_reader_buffer = io.BytesIO(self.file)
-        self.minimal_pdf_reader = pdf.OdooPdfFileReader(self.minimal_reader_buffer)
+        self.minimal_pdf_reader = pdf.kodaPdfFileReader(self.minimal_reader_buffer)
 
-    def test_odoo_pdf_file_reader(self):
+    def test_koda_pdf_file_reader(self):
         attachments = list(self.minimal_pdf_reader.getAttachments())
         self.assertEqual(len(attachments), 0)
 
@@ -28,11 +27,11 @@ class TestPdf(TransactionCase):
         attachments = list(self.minimal_pdf_reader.getAttachments())
         self.assertEqual(len(attachments), 1)
 
-    def test_odoo_pdf_file_writer(self):
+    def test_koda_pdf_file_writer(self):
         attachments = list(self.minimal_pdf_reader.getAttachments())
         self.assertEqual(len(attachments), 0)
 
-        pdf_writer = pdf.OdooPdfFileWriter()
+        pdf_writer = pdf.kodaPdfFileWriter()
         pdf_writer.cloneReaderDocumentRoot(self.minimal_pdf_reader)
 
         pdf_writer.addAttachment('test_attachment.txt', b'My awesome attachment')
@@ -43,8 +42,8 @@ class TestPdf(TransactionCase):
         attachments = list(self.minimal_pdf_reader.getAttachments())
         self.assertEqual(len(attachments), 2)
 
-    def test_odoo_pdf_file_reader_with_owner_encryption(self):
-        pdf_writer = pdf.OdooPdfFileWriter()
+    def test_koda_pdf_file_reader_with_owner_encryption(self):
+        pdf_writer = pdf.kodaPdfFileWriter()
         pdf_writer.cloneReaderDocumentRoot(self.minimal_pdf_reader)
 
         pdf_writer.addAttachment('test_attachment.txt', b'My awesome attachment')
@@ -57,7 +56,7 @@ class TestPdf(TransactionCase):
             encrypted_content = writer_buffer.getvalue()
 
         with io.BytesIO(encrypted_content) as reader_buffer:
-            pdf_reader = pdf.OdooPdfFileReader(reader_buffer)
+            pdf_reader = pdf.kodaPdfFileReader(reader_buffer)
             attachments = list(pdf_reader.getAttachments())
 
         self.assertEqual(len(attachments), 2)
@@ -68,7 +67,7 @@ class TestPdf(TransactionCase):
 
         merged_pdf = pdf.merge_pdf([self.file, self.file])
         merged_reader_buffer = io.BytesIO(merged_pdf)
-        merged_pdf_reader = pdf.OdooPdfFileReader(merged_reader_buffer)
+        merged_pdf_reader = pdf.kodaPdfFileReader(merged_reader_buffer)
         self.assertEqual(merged_pdf_reader.getNumPages(), 2)
         merged_reader_buffer.close()
 
@@ -85,8 +84,8 @@ class TestPdf(TransactionCase):
         reader_buffer = io.BytesIO(branded_content)
         pdf_reader = pdf.PdfFileReader(reader_buffer)
         pdf_info = pdf_reader.getDocumentInfo()
-        self.assertEqual(pdf_info['/Producer'], 'Odoo')
-        self.assertEqual(pdf_info['/Creator'], 'Odoo')
+        self.assertEqual(pdf_info['/Producer'], 'koda')
+        self.assertEqual(pdf_info['/Creator'], 'koda')
         reader_buffer.close()
 
     def tearDown(self):

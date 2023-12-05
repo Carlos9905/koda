@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import ast
 import collections.abc
@@ -29,15 +29,17 @@ _DEFAULT_MANIFEST = {
     'application': False,
     'bootstrap': False,  # web
     'assets': {},
-    'author': 'Odoo S.A.',
+    'author': 'koda S.A.',
     'auto_install': False,
     'category': 'Uncategorized',
+    'configurator_snippets': {},  # website themes
+    'countries': [],
     'data': [],
     'demo': [],
     'demo_xml': [],
     'depends': [],
     'description': '',
-    'external_dependencies': [],
+    'external_dependencies': {},
     #icon: f'/{module}/static/description/icon.png',  # automatic
     'init_xml': [],
     'installable': True,
@@ -45,12 +47,12 @@ _DEFAULT_MANIFEST = {
     'images_preview_theme': {},  # website themes
     #license, mandatory
     'live_test_url': '',  # website themes
+    'new_page_templates': {},  # website themes
     #name, mandatory
     'post_init_hook': '',
     'post_load': None,
     'pre_init_hook': '',
     'sequence': 100,
-    'snippet_lists': {},  # website themes
     'summary': '',
     'test': [],
     'update_xml': [],
@@ -61,87 +63,6 @@ _DEFAULT_MANIFEST = {
 }
 
 _logger = logging.getLogger(__name__)
-
-# addons path as a list
-# ad_paths is a deprecated alias, please use koda.addons.__path__
-@tools.lazy
-def ad_paths():
-    warnings.warn(
-        '"koda.modules.module.ad_paths" is a deprecated proxy to '
-        '"koda.addons.__path__".', DeprecationWarning, stacklevel=2)
-    return koda.addons.__path__
-
-# Modules already loaded
-loaded = []
-
-class AddonsHook(object):
-    """ Makes modules accessible through openerp.addons.* """
-
-    def find_module(self, name, path=None):
-        if name.startswith('openerp.addons.') and name.count('.') == 2:
-            warnings.warn(
-                '"openerp.addons" is a deprecated alias to "koda.addons".',
-                DeprecationWarning, stacklevel=2)
-            return self
-
-    def find_spec(self, fullname, path=None, target=None):
-        if fullname.startswith('openerp.addons.') and fullname.count('.') == 2:
-            warnings.warn(
-                '"openerp.addons" is a deprecated alias to "koda.addons".',
-                DeprecationWarning, stacklevel=2)
-            return importlib.util.spec_from_loader(fullname, self)
-
-    def load_module(self, name):
-        assert name not in sys.modules
-
-        odoo_name = re.sub(r'^openerp.addons.(\w+)$', r'koda.addons.\g<1>', name)
-
-        odoo_module = sys.modules.get(odoo_name)
-        if not odoo_module:
-            odoo_module = importlib.import_module(odoo_name)
-
-        sys.modules[name] = odoo_module
-
-        return odoo_module
-
-class OdooHook(object):
-    """ Makes koda package also available as openerp """
-
-    def find_module(self, name, path=None):
-        # openerp.addons.<identifier> should already be matched by AddonsHook,
-        # only framework and subdirectories of modules should match
-        if re.match(r'^openerp\b', name):
-            warnings.warn(
-                'openerp is a deprecated alias to koda.',
-                DeprecationWarning, stacklevel=2)
-            return self
-
-    def find_spec(self, fullname, path=None, target=None):
-        # openerp.addons.<identifier> should already be matched by AddonsHook,
-        # only framework and subdirectories of modules should match
-        if re.match(r'^openerp\b', fullname):
-            warnings.warn(
-                'openerp is a deprecated alias to koda.',
-                DeprecationWarning, stacklevel=2)
-            return importlib.util.spec_from_loader(fullname, self)
-
-    def load_module(self, name):
-        assert name not in sys.modules
-
-        canonical = re.sub(r'^openerp(.*)', r'koda\g<1>', name)
-
-        if canonical in sys.modules:
-            mod = sys.modules[canonical]
-        else:
-            # probable failure: canonical execution calling old naming -> corecursion
-            mod = importlib.import_module(canonical)
-
-        # just set the original module at the new location. Don't proxy,
-        # it breaks *-import (unless you can find how `from a import *` lists
-        # what's supposed to be imported by `*`, and manage to override it)
-        sys.modules[name] = mod
-
-        return sys.modules[name]
 
 
 class UpgradeHook(object):
@@ -154,14 +75,6 @@ class UpgradeHook(object):
             # the tests, and the common files (utility functions) still needs to import from the
             # legacy name.
             return self
-
-    def find_spec(self, fullname, path=None, target=None):
-        if re.match(r"^koda.addons.base.maintenance.migrations\b", fullname):
-            # We can't trigger a DeprecationWarning in this case.
-            # In order to be cross-versions, the multi-versions upgrade scripts (0.0.0 scripts),
-            # the tests, and the common files (utility functions) still needs to import from the
-            # legacy name.
-            return importlib.util.spec_from_loader(fullname, self)
 
     def load_module(self, name):
         assert name not in sys.modules
@@ -217,8 +130,6 @@ def initialize_sys_path():
     # hook deprecated module alias from openerp to koda and "crm"-like to koda.addons
     if not getattr(initialize_sys_path, 'called', False): # only initialize once
         sys.meta_path.insert(0, UpgradeHook())
-        sys.meta_path.insert(0, OdooHook())
-        sys.meta_path.insert(0, AddonsHook())
         initialize_sys_path.called = True
 
 
@@ -286,14 +197,11 @@ def get_resource_path(module, *args):
     :rtype: str
     :return: absolute path to the resource
     """
+    warnings.warn(
+        f"Since 17.0: use tools.misc.file_path instead of get_resource_path({module}, {args})",
+        DeprecationWarning,
+    )
     resource_path = opj(module, *args)
-    try:
-        return file_path(resource_path)
-    except (FileNotFoundError, ValueError):
-        return False
-
-def check_resource_path(mod_path, *args):
-    resource_path = opj(mod_path, *args)
     try:
         return file_path(resource_path)
     except (FileNotFoundError, ValueError):
@@ -301,6 +209,7 @@ def check_resource_path(mod_path, *args):
 
 # backwards compatibility
 get_module_resource = get_resource_path
+check_resource_path = get_resource_path
 
 def get_resource_from_path(path):
     """Tries to extract the module name and the resource's relative path
@@ -335,25 +244,34 @@ def get_resource_from_path(path):
     return None
 
 def get_module_icon(module):
-    iconpath = ['static', 'description', 'icon.png']
-    if get_module_resource(module, *iconpath):
-        return ('/' + module + '/') + '/'.join(iconpath)
-    return '/base/'  + '/'.join(iconpath)
+    fpath = f"{module}/static/description/icon.png"
+    try:
+        file_path(fpath)
+        return "/" + fpath
+    except FileNotFoundError:
+        return "/base/static/description/icon.png"
 
 def get_module_icon_path(module):
-    iconpath = ['static', 'description', 'icon.png']
-    path = get_module_resource(module.name, *iconpath)
-    if not path:
-        path = get_module_resource('base', *iconpath)
-    return path
+    try:
+        return file_path(f"{module}/static/description/icon.png")
+    except FileNotFoundError:
+        return file_path("base/static/description/icon.png")
 
 def module_manifest(path):
     """Returns path to module manifest if one can be found under `path`, else `None`."""
     if not path:
         return None
     for manifest_name in MANIFEST_NAMES:
-        if os.path.isfile(opj(path, manifest_name)):
-            return opj(path, manifest_name)
+        candidate = opj(path, manifest_name)
+        if os.path.isfile(candidate):
+            if manifest_name == '__openerp__.py':
+                warnings.warn(
+                    "__openerp__.py manifests are deprecated since 17.0, "
+                    f"rename {candidate!r} to __manifest__.py "
+                    "(valid since 10.0)",
+                    category=DeprecationWarning
+                )
+            return candidate
 
 def get_module_root(path):
     """
@@ -426,11 +344,15 @@ def load_manifest(module, mod_path=None):
     elif manifest['auto_install']:
         manifest['auto_install'] = set(manifest['depends'])
 
-    manifest['version'] = adapt_version(manifest['version'])
+    try:
+        manifest['version'] = adapt_version(manifest['version'])
+    except ValueError as e:
+        raise ValueError(f"Module {module}: invalid manifest") from e
     manifest['addons_path'] = normpath(opj(mod_path, os.pardir))
 
     return manifest
 
+@functools.lru_cache(maxsize=None)
 def get_manifest(module, mod_path=None):
     """
     Get the module manifest.
@@ -443,10 +365,6 @@ def get_manifest(module, mod_path=None):
         when the manifest was not found.
     :rtype: dict
     """
-    return copy.deepcopy(_get_manifest_cached(module, mod_path))
-
-@functools.lru_cache(maxsize=None)
-def _get_manifest_cached(module, mod_path=None):
     return load_manifest(module, mod_path)
 
 def load_information_from_description_file(module, mod_path=None):
@@ -463,27 +381,24 @@ def load_openerp_module(module_name):
     This is also used to load server-wide module (i.e. it is also used
     when there is no model to register).
     """
-    global loaded
-    if module_name in loaded:
+
+    qualname = f'koda.addons.{module_name}'
+    if qualname in sys.modules:
         return
 
     try:
-        __import__('koda.addons.' + module_name)
+        __import__(qualname)
 
         # Call the module's post-load hook. This can done before any model or
         # data has been initialized. This is ok as the post-load hook is for
         # server-wide (instead of registry-specific) functionalities.
         info = get_manifest(module_name)
         if info['post_load']:
-            getattr(sys.modules['koda.addons.' + module_name], info['post_load'])()
+            getattr(sys.modules[qualname], info['post_load'])()
 
-    except Exception as e:
-        msg = "Couldn't load module %s" % (module_name)
-        _logger.critical(msg)
-        _logger.critical(e)
+    except Exception:
+        _logger.critical("Couldn't load module %s", module_name)
         raise
-    else:
-        loaded.append(module_name)
 
 def get_modules():
     """Returns the list of module names
@@ -527,8 +442,17 @@ def get_modules_with_version():
 def adapt_version(version):
     serie = release.major_version
     if version == serie or not version.startswith(serie + '.'):
+        base_version = version
         version = '%s.%s' % (serie, version)
+    else:
+        base_version = version[len(serie) + 1:]
+
+    if not re.match(r"^[0-9]+\.[0-9]+(?:\.[0-9]+)?$", base_version):
+        raise ValueError(f"Invalid version {base_version!r}. Modules should have a version in format `x.y`, `x.y.z`,"
+                         f" `{serie}.x.y` or `{serie}.x.y.z`.")
+
     return version
+
 
 current_test = None
 

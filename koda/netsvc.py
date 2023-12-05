@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 import contextlib
 import logging
 import logging.handlers
@@ -163,10 +163,11 @@ def init_logger():
         'ofxparse',# ofxparse importing ABC from collections
         'astroid',  # deprecated imp module (fixed in 2.5.1)
         'requests_toolbelt', # importing ABC from collections (fixed in 0.9)
-        'firebase_admin', # deprecated method_whitelist
     ]:
         warnings.filterwarnings('ignore', category=DeprecationWarning, module=module)
 
+    # rsjmin triggers this with Python 3.10+ (that warning comes from the C code and has no `module`)
+    warnings.filterwarnings('ignore', r'^PyUnicode_FromUnicode\(NULL, size\) is deprecated', category=DeprecationWarning)
     # the SVG guesser thing always compares str and bytes, ignore it
     warnings.filterwarnings('ignore', category=BytesWarning, module='koda.tools.image')
     # reportlab does a bunch of bytes/str mixing in a hashmap
@@ -213,7 +214,7 @@ def init_logger():
     def is_a_tty(stream):
         return hasattr(stream, 'fileno') and os.isatty(stream.fileno())
 
-    if os.name == 'posix' and isinstance(handler, logging.StreamHandler) and (is_a_tty(handler.stream) or os.environ.get("ODOO_PY_COLORS")):
+    if os.name == 'posix' and isinstance(handler, logging.StreamHandler) and (is_a_tty(handler.stream) or os.environ.get("koda_PY_COLORS")):
         formatter = ColoredFormatter(format)
         perf_filter = ColoredPerfFilter()
     else:

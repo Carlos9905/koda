@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import logging
 import platform
@@ -43,7 +43,7 @@ class TestPyLint(TransactionCase):
         'csv',
         'urllib',
         'cgi',
-    ] + list(tools.SUPPORTED_DEBUGGER)
+    ] + list(tools.constants.SUPPORTED_DEBUGGER)
 
     def _skip_test(self, reason):
         _logger.warning(reason)
@@ -70,7 +70,7 @@ class TestPyLint(TransactionCase):
             '--enable=%s' % ','.join(self.ENABLED_CODES),
             '--reports=n',
             "--msg-template='{msg} ({msg_id}) at {path}:{line}'",
-            '--load-plugins=pylint.extensions.bad_builtin,_odoo_checker_sql_injection,_odoo_checker_gettext,_odoo_checker_unlink_override',
+            '--load-plugins=pylint.extensions.bad_builtin,_koda_checker_sql_injection,_koda_checker_gettext,_koda_checker_unlink_override',
             '--bad-functions=%s' % ','.join(self.BAD_FUNCTIONS),
             '--deprecated-modules=%s' % ','.join(self.BAD_MODULES)
         ]

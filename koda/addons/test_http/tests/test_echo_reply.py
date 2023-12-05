@@ -1,4 +1,4 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import json
 from urllib.parse import urlparse
@@ -187,7 +187,7 @@ class TestHttpEchoReplyJsonWithDB(TestHttpBase):
         res = self.db_url_open("/test_http/echo-json-context", data=payload, headers=CT_JSON)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(res.text, '{"jsonrpc": "2.0", "id": 0, "result": '
-            f'{{"lang": "en_US", "tz": false, "uid": {self.jackoneill.id}, "name": "Thor"}}'
+            f'{{"lang": "en_US", "tz": false, "uid": {self.jackoneill.id}}}'
             '}')
 
     def test_echojson3_bad_json(self):

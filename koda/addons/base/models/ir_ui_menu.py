@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import base64
 from collections import defaultdict
+from os.path import join as opj
 import operator
 import re
 
 from koda import api, fields, models, tools, _
 from koda.exceptions import ValidationError
 from koda.http import request
-from koda.modules import get_module_resource
 from koda.osv import expression
 
 MENU_ITEM_SEPARATOR = "/"
@@ -31,7 +31,7 @@ class IrUiMenu(models.Model):
     groups_id = fields.Many2many('res.groups', 'ir_ui_menu_group_rel',
                                  'menu_id', 'gid', string='Groups',
                                  help="If you have groups, the visibility of this menu will be based on these groups. "\
-                                      "If this field is empty, Odoo will compute visibility based on the related object's read access.")
+                                      "If this field is empty, koda will compute visibility based on the related object's read access.")
     complete_name = fields.Char(string='Full Path', compute='_compute_complete_name', recursive=True)
     web_icon = fields.Char(string='Web Icon File')
     action = fields.Reference(selection=[('ir.actions.report', 'ir.actions.report'),
@@ -56,16 +56,16 @@ class IrUiMenu(models.Model):
         else:
             return self.name
 
-    def read_image(self, path):
+    def _read_image(self, path):
         if not path:
             return False
         path_info = path.split(',')
-        icon_path = get_module_resource(path_info[0], path_info[1])
-        icon_image = False
-        if icon_path:
-            with tools.file_open(icon_path, 'rb') as icon_file:
-                icon_image = base64.encodebytes(icon_file.read())
-        return icon_image
+        icon_path = opj(path_info[0], path_info[1])
+        try:
+            with tools.file_open(icon_path, 'rb', filter_ext=('.png',)) as icon_file:
+                return base64.encodebytes(icon_file.read())
+        except FileNotFoundError:
+            return False
 
     @api.constrains('parent_id')
     def _check_parent_id(self):
@@ -78,7 +78,7 @@ class IrUiMenu(models.Model):
         """ Return the ids of the menu items visible to the user. """
         # retrieve all menus, and determine which ones are visible
         context = {'ir.ui.menu.full_list': True}
-        menus = self.with_context(context).search([]).sudo()
+        menus = self.with_context(context).search_fetch([], ['action', 'parent_id']).sudo()
 
         groups = self.env.user.groups_id
         if not debug:
@@ -138,9 +138,8 @@ class IrUiMenu(models.Model):
         return self.filtered(lambda menu: menu.id in visible_ids)
 
     @api.model
-    def _search(self, args, offset=0, limit=None, order=None, count=False, access_rights_uid=None):
-        menu_ids = super(IrUiMenu, self)._search(args, offset=0, limit=None, order=order, count=False, access_rights_uid=access_rights_uid)
-        menus = self.browse(menu_ids)
+    def search_fetch(self, domain, field_names, offset=0, limit=None, order=None):
+        menus = super().search_fetch(domain, field_names, order=order)
         if menus:
             # menu filtering is done only on main menu tree, not other menu lists
             if not self._context.get('ir.ui.menu.full_list'):
@@ -149,21 +148,28 @@ class IrUiMenu(models.Model):
                 menus = menus[offset:]
             if limit:
                 menus = menus[:limit]
-        return len(menus) if count else menus.ids
+        return menus
 
-    def name_get(self):
-        return [(menu.id, menu._get_full_name()) for menu in self]
+    @api.model
+    def search_count(self, domain, limit=None):
+        # to be consistent with search() above
+        return len(self.search(domain, limit=limit))
+
+    @api.depends('parent_id')
+    def _compute_display_name(self):
+        for menu in self:
+            menu.display_name = menu._get_full_name()
 
     @api.model_create_multi
     def create(self, vals_list):
-        self.clear_caches()
+        self.env.registry.clear_cache()
         for values in vals_list:
             if 'web_icon' in values:
                 values['web_icon_data'] = self._compute_web_icon_data(values.get('web_icon'))
         return super(IrUiMenu, self).create(vals_list)
 
     def write(self, values):
-        self.clear_caches()
+        self.env.registry.clear_cache()
         if 'web_icon' in values:
             values['web_icon_data'] = self._compute_web_icon_data(values.get('web_icon'))
         return super(IrUiMenu, self).write(values)
@@ -173,10 +179,10 @@ class IrUiMenu(models.Model):
             `web_icon` can either be:
               - an image icon [module, path]
               - a built icon [icon_class, icon_color, background_color]
-            and it only has to call `read_image` if it's an image.
+            and it only has to call `_read_image` if it's an image.
         """
         if web_icon and len(web_icon.split(',')) == 2:
-            return self.read_image(web_icon)
+            return self._read_image(web_icon)
 
     def unlink(self):
         # Detach children and promote them to top-level, because it would be unwise to
@@ -188,7 +194,7 @@ class IrUiMenu(models.Model):
         direct_children = self.with_context(**extra).search([('parent_id', 'in', self.ids)])
         direct_children.write({'parent_id': False})
 
-        self.clear_caches()
+        self.env.registry.clear_cache()
         return super(IrUiMenu, self).unlink()
 
     def copy(self, default=None):
@@ -243,7 +249,7 @@ class IrUiMenu(models.Model):
         :return: the menu root
         :rtype: dict('children': menu_nodes)
         """
-        fields = ['name', 'sequence', 'parent_id', 'action', 'web_icon', 'web_icon_data']
+        fields = ['name', 'sequence', 'parent_id', 'action', 'web_icon']
         menu_roots = self.get_user_roots()
         menu_roots_data = menu_roots.read(fields) if menu_roots else []
         menu_root = {
@@ -273,6 +279,14 @@ class IrUiMenu(models.Model):
         # mapping, resulting in children being correctly set on the roots.
         menu_items.extend(menu_roots_data)
 
+        mi_attachments = self.env['ir.attachment'].sudo().search_read(
+            domain=[('res_model', '=', 'ir.ui.menu'),
+                    ('res_id', 'in', [menu_item['id'] for menu_item in menu_items if menu_item['id']]),
+                    ('res_field', '=', 'web_icon_data')],
+            fields=['res_id', 'datas', 'mimetype'])
+
+        mi_attachment_by_res_id = {attachment['res_id']: attachment for attachment in mi_attachments}
+
         # set children ids and xmlids
         menu_items_map = {menu_item["id"]: menu_item for menu_item in menu_items}
         for menu_item in menu_items:
@@ -282,6 +296,13 @@ class IrUiMenu(models.Model):
             if parent in menu_items_map:
                 menu_items_map[parent].setdefault(
                     'children', []).append(menu_item['id'])
+            attachment = mi_attachment_by_res_id.get(menu_item['id'])
+            if attachment:
+                menu_item['web_icon_data'] = attachment['datas']
+                menu_item['web_icon_data_mimetype'] = attachment['mimetype']
+            else:
+                menu_item['web_icon_data'] = False
+                menu_item['web_icon_data_mimetype'] = False
         all_menus.update(menu_items_map)
 
         # sort by sequence

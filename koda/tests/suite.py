@@ -3,9 +3,9 @@ Vendor unittest.TestSuite
 
 This is a modified version of python 3.8 unitest.TestSuite
 
-Odoo tests customisation combined with the need of a cross version compatibility
+koda tests customisation combined with the need of a cross version compatibility
 started to make TestSuite and other unitest object more complicated than vendoring
-the part we need for Odoo. This versions is simplified in order
+the part we need for koda. This versions is simplified in order
 to minimise the code to maintain
 
 - Removes expected failure support
@@ -53,7 +53,7 @@ class TestSuite(BaseTestSuite):
             return
         if result._moduleSetUpFailed:
             return
-        if getattr(currentClass, "__unittest_skip__", False):
+        if currentClass.__unittest_skip__:
             return
 
         currentClass._classSetupFailed = False
@@ -96,7 +96,7 @@ class TestSuite(BaseTestSuite):
             return
         if previousClass._classSetupFailed:
             return
-        if getattr(previousClass, "__unittest_skip__", False):
+        if previousClass.__unittest_skip__:
             return
         try:
             previousClass.tearDownClass()
@@ -155,7 +155,7 @@ class _ErrorHolder(object):
         return 0
 
 
-class OdooSuite(TestSuite):
+class kodaSuite(TestSuite):
     def _handleClassSetUp(self, test, result):
         previous_test_class = result._previousTestClass
         if not (

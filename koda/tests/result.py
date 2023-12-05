@@ -51,7 +51,7 @@ $
 """, re.VERBOSE)
 
 
-class OdooTestResult(object):
+class kodaTestResult(object):
     """
     This class in inspired from TextTestResult and modifies TestResult
     Instead of using a stream, we are using the logger.
@@ -189,7 +189,7 @@ class OdooTestResult(object):
     def update(self, other):
         """ Merges an other test result into this one, only updates contents
 
-        :type other: OdooTestResult
+        :type other: kodaTestResult
         """
         self.failures_count += other.failures_count
         self.errors_count += other.errors_count

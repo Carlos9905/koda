@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 from koda.tests import BaseCase, tagged
 
 import logging
@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 
 class TestRetryCommon(BaseCase):
     def get_tests_run_count(self):
-        return int(os.environ.get('ODOO_TEST_FAILURE_RETRIES', 0)) + 1
+        return int(os.environ.get('koda_TEST_FAILURE_RETRIES', 0)) + 1
 
     def update_count(self):
         self.count = getattr(self, 'count', 0) + 1
@@ -18,7 +18,7 @@ class TestRetryCommon(BaseCase):
 
 @tagged('-standard', 'test_retry', 'test_retry_success')
 class TestRetry(TestRetryCommon):
-    """ Check some tests behaviour when ODOO_TEST_FAILURE_RETRIES is set"""
+    """ Check some tests behaviour when koda_TEST_FAILURE_RETRIES is set"""
 
     def test_log_levels(self):
         _logger.debug('test debug')

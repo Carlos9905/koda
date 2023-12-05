@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
+from hashlib import sha256
 from unittest.mock import patch
 import logging
 import time
@@ -10,7 +11,7 @@ import io
 
 from koda.exceptions import UserError
 from koda.tools import sql
-from koda.tools.translate import quote, unquote, xml_translate, html_translate, TranslationImporter
+from koda.tools.translate import quote, unquote, xml_translate, html_translate, TranslationImporter, TranslationModuleReader
 from koda.tests.common import TransactionCase, BaseCase, new_test_user, tagged
 
 _stats_logger = logging.getLogger('koda.tests.stats')
@@ -345,6 +346,15 @@ class TestLanguageInstall(TransactionCase):
         self.assertEqual(loaded[0][2], True)
 
 
+@tagged('post_install', '-at_install')
+class TestTranslationExport(TransactionCase):
+
+    def test_export_translatable_resources(self):
+        """Read files of installed modules and export translatable terms"""
+        with self.assertNoLogs('koda.tools.translate', "ERROR"):
+            TranslationModuleReader(self.env.cr)
+
+
 class TestTranslation(TransactionCase):
     @classmethod
     def setUpClass(cls):
@@ -368,7 +378,7 @@ class TestTranslation(TransactionCase):
 
     def test_101_create_translated_record(self):
         category = self.customers.with_context({})
-        self.assertEqual(category.name, 'Customers', "Error in basic name_get")
+        self.assertEqual(category.name, 'Customers', "Error in basic name")
 
         category_fr = category.with_context({'lang': 'fr_FR'})
         self.assertEqual(category_fr.name, 'Clients', "Translation not found")
@@ -482,20 +492,51 @@ class TestTranslation(TransactionCase):
         category_in = CategoryEs.search([('name', 'in', ['Customers'])])
         self.assertIn(self.customers, category_in, "Search with 'in' should use the English name if the current language translation is not available")
 
+    def test_111_prefetch_langs(self):
+        category_en = self.customers.with_context(lang='en_US')
+
+        self.env.ref('base.lang_nl').active = True
+        category_nl = category_en.with_context(lang='nl_NL')
+        category_nl.name = 'Klanten'
+
+        self.assertTrue(self.env.ref('base.lang_fr').active)
+        category_fr = category_en.with_context(lang='fr_FR')
+
+        self.assertFalse(self.env.ref('base.lang_zh_CN').active)
+        category_zh = category_en.with_context(lang='zh_CN')
+
+        self.env['res.partner'].with_context(active_test=False).search([]).write({'lang': 'fr_FR'})
+        self.env.ref('base.lang_en').active = False
+
+        category_fr.with_context(prefetch_langs=True).name
+        category_nl.name
+        category_en.name
+        category_zh.name
+        category_fr.invalidate_recordset()
+
+        with self.assertQueryCount(1):
+            self.assertEqual(category_fr.with_context(prefetch_langs=True).name, 'Clients')
+
+        with self.assertQueryCount(0):
+            self.assertEqual(category_nl.name, 'Klanten')
+            self.assertEqual(category_en.name, 'Customers')
+            self.assertEqual(category_zh.name, 'Customers')
+
+
     # TODO Currently, the unique constraint doesn't work for translatable field
     # def test_111_unique_en(self):
     #     Country = self.env['res.country']
-    #     country_1 = Country.create({'name': 'Odoo'})
-    #     country_1.with_context(lang='fr_FR').name = 'Odoo_Fr'
+    #     country_1 = Country.create({'name': 'koda'})
+    #     country_1.with_context(lang='fr_FR').name = 'koda_Fr'
     #     country_1.flush_recordset()
     #
-    #     country_2 = Country.create({'name': 'Odoo2'})
+    #     country_2 = Country.create({'name': 'koda2'})
     #     with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
-    #         country_2.name = 'Odoo'
+    #         country_2.name = 'koda'
     #         country_2.flush_recordset()
     #
     #     with self.assertRaises(IntegrityError), mute_logger('koda.sql_db'):
-    #         country_3 = Country.create({'name': 'Odoo'})
+    #         country_3 = Country.create({'name': 'koda'})
 
 class TestTranslationWrite(TransactionCase):
     @classmethod
@@ -1118,6 +1159,117 @@ class TestXMLTranslation(TransactionCase):
         self.assertEqual(view.with_context(lang='en_US').arch_db, '<form string="X">Bread and cheese<div>Fork3</div></form>')
         self.assertEqual(view.with_context(lang='es_ES').arch_db, '<form string="X">Bread and cheese<div>Tenedor3</div></form>')
 
+    def test_delay_translations(self):
+        archf = '<form string="%s"><div>%s</div><div>%s</div></form>'
+        terms_en = ('Knife', 'Fork', 'Spoon')
+        terms_fr = ('Couteau', 'Fourchette', 'Cuiller')
+        view0 = self.create_view(archf, terms_en, fr_FR=terms_fr)
+
+        archf2 = '<form string="%s"><p>%s</p><div>%s</div></form>'
+        terms_en2 = ('new Knife', 'Fork', 'Spoon')
+        # write en_US with delay_translations
+        view0.with_context(lang='en_US', delay_translations=True).arch_db = archf2 % terms_en2
+        view0.invalidate_recordset()
+
+        self.assertEqual(
+            view0.with_context(lang='en_US').arch_db,
+            archf2 % terms_en2,
+            'en_US value should be the latest one since it is updated directly'
+        )
+        self.assertEqual(view0.with_context(lang='en_US', check_translations=True).arch_db, archf2 % terms_en2)
+
+        self.assertEqual(
+            view0.with_context(lang='fr_FR').arch_db,
+            archf % terms_fr,
+            "fr_FR value should keep the same since its translations hasn't been confirmed"
+        )
+        self.assertEqual(
+            view0.with_context(lang='fr_FR', edit_translations=True).arch_db,
+            '<form string="'
+                '&lt;span '
+                     'class=&quot;o_delay_translation&quot; '
+                     'data-oe-model=&quot;ir.ui.view&quot; '
+                    f'data-oe-id=&quot;{view0.id}&quot; '
+                     'data-oe-field=&quot;arch_db&quot; '
+                     'data-oe-translation-state=&quot;to_translate&quot; '
+                    f'data-oe-translation-initial-sha=&quot;{sha256(terms_en2[0].encode()).hexdigest()}&quot;'
+                '&gt;'
+                    f'{terms_en2[0]}'
+                '&lt;/span&gt;"'
+            '>'
+                '<p>'
+                    '<span '
+                         'class="o_delay_translation" '
+                         'data-oe-model="ir.ui.view" '
+                        f'data-oe-id="{view0.id}" '
+                         'data-oe-field="arch_db" '
+                         'data-oe-translation-state="translated" '
+                        f'data-oe-translation-initial-sha="{sha256(terms_fr[1].encode()).hexdigest()}"'
+                    '>'
+                        f'{terms_fr[1]}'
+                    '</span>'
+                '</p>'
+                '<div>'
+                    '<span '
+                         'class="o_delay_translation" '
+                         'data-oe-model="ir.ui.view" '
+                        f'data-oe-id="{view0.id}" '
+                         'data-oe-field="arch_db" '
+                         'data-oe-translation-state="translated" '
+                        f'data-oe-translation-initial-sha="{sha256(terms_fr[2].encode()).hexdigest()}"'
+                    '>'
+                        f'{terms_fr[2]}'
+                    '</span>'
+                '</div>'
+            '</form>'
+        )
+        self.assertEqual(
+            view0.with_context(lang='fr_FR', check_translations=True).arch_db,
+            archf2 % (terms_en2[0], terms_fr[1], terms_fr[2])
+        )
+
+        self.assertEqual(
+            view0.with_context(lang='nl_NL').arch_db,
+            archf2 % terms_en2,
+            "nl_NL value should fallback to en_US value"
+        )
+        self.assertEqual(
+            view0.with_context(lang='nl_NL', check_translations=True).arch_db,
+            archf2 % terms_en2
+        )
+
+        # update and confirm translations
+        view0.update_field_translations('arch_db', {'fr_FR': {}})
+        self.assertEqual(
+            view0.with_context(lang='fr_FR').arch_db,
+            archf2 % (terms_en2[0], terms_fr[1], terms_fr[2])
+        )
+        self.assertEqual(
+            view0.with_context(lang='fr_FR', check_translations=True).arch_db,
+            archf2 % (terms_en2[0], terms_fr[1], terms_fr[2])
+        )
+
+    def test_delay_translations_no_term(self):
+        archf = '<form string="%s"><div>%s</div><div>%s</div></form>'
+        terms_en = ('Knife', 'Fork', 'Spoon')
+        terms_fr = ('Couteau', 'Fourchette', 'Cuiller')
+        view0 = self.create_view(archf, terms_en, fr_FR=terms_fr)
+
+        archf2 = '<form/>'
+        # delay_translations only works when the written value has at least one translatable term
+        view0.with_context(lang='en_US', delay_translations=True).arch_db = archf2
+        for lang in ('en_US', 'fr_FR', 'nl_NL'):
+            self.assertEqual(
+                view0.with_context(lang=lang).arch_db,
+                archf2,
+                f'arch_db for {lang} should be {archf2}'
+            )
+            self.assertEqual(
+                view0.with_context(lang=lang, check_translations=True).arch_db,
+                archf2,
+                f'arch_db for {lang} should be {archf2} when check_translations'
+            )
+
 
 class TestHTMLTranslation(TransactionCase):
     def test_write_non_existing(self):
@@ -1131,6 +1283,28 @@ class TestHTMLTranslation(TransactionCase):
         # flushing on non-existing records does not break for scalar fields; the
         # same behavior is expected for translated fields
         company.flush_recordset()
+
+    def test_delay_translations_no_term(self):
+        self.env['res.lang']._activate_lang('fr_FR')
+        self.env['res.lang']._activate_lang('nl_NL')
+        Company = self.env['res.company']
+        company0 = Company.create({'name': 'company_1', 'report_footer': '<h1>Knife</h1>'})
+        company0.update_field_translations('report_footer', {'fr_FR': {'Knife': 'Couteau'}})
+
+        for html in ('<h1></h1>', '', False):
+            # delay_translations only works when the written value has at least one translatable term
+            company0.with_context(lang='en_US', delay_translations=True).report_footer = html
+            for lang in ('en_US', 'fr_FR', 'nl_NL'):
+                self.assertEqual(
+                    company0.with_context(lang=lang).report_footer,
+                    html,
+                    f'report_footer for {lang} should be {html}'
+                )
+                self.assertEqual(
+                    company0.with_context(lang=lang, check_translations=True).report_footer,
+                    html,
+                    f'report_footer for {lang} should be {html} when check_translations'
+                )
 
 
 @tagged('post_install', '-at_install')

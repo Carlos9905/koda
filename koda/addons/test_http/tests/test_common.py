@@ -1,4 +1,4 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import patch
 
@@ -13,11 +13,15 @@ class TestHttpBase(HttpCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        geoip_resolver = MemoryGeoipResolver()
+        session_store = MemorySessionStore(session_class=Session)
+
+        lazy_property.reset_all(koda.http.root)
         cls.addClassCleanup(lazy_property.reset_all, koda.http.root)
         cls.classPatch(koda.conf, 'server_wide_modules', ['base', 'web', 'test_http'])
-        lazy_property.reset_all(koda.http.root)
-        cls.classPatch(koda.http.root, 'session_store', MemorySessionStore(session_class=Session))
-        cls.classPatch(koda.http.root, 'geoip_resolver', MemoryGeoipResolver())
+        cls.classPatch(koda.http.Application, 'session_store', session_store)
+        cls.classPatch(koda.http.Application, 'geoip_city_db', geoip_resolver)
+        cls.classPatch(koda.http.Application, 'geoip_country_db', geoip_resolver)
 
     def setUp(self):
         super().setUp()

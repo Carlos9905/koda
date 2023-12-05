@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 import codecs
 import fnmatch
 import functools
@@ -17,19 +17,20 @@ import tarfile
 import threading
 import warnings
 from collections import defaultdict, namedtuple
+from contextlib import suppress
 from datetime import datetime
 from os.path import join
 
 from pathlib import Path
 from babel.messages import extract
 from lxml import etree, html
+from markupsafe import escape, Markup
 from psycopg2.extras import Json
 
 import koda
 from koda.exceptions import UserError
-from koda.modules.module import get_resource_path
 from . import config, pycompat
-from .misc import file_open, get_iso_codes, SKIPPED_ELEMENT_TYPES
+from .misc import file_open, file_path, get_iso_codes, SKIPPED_ELEMENT_TYPES
 
 _logger = logging.getLogger(__name__)
 
@@ -38,7 +39,7 @@ PYTHON_TRANSLATION_COMMENT = 'koda-python'
 # translation used for javascript code in web client
 JAVASCRIPT_TRANSLATION_COMMENT = 'koda-javascript'
 # used to notify web client that these translations should be loaded in the UI
-# deprecated comment since Odoo 16.0
+# deprecated comment since koda 16.0
 WEB_TRANSLATION_COMMENT = "openerp-web"
 
 SKIPPED_ELEMENTS = ('script', 'style', 'title')
@@ -460,6 +461,8 @@ class GettextAlias(object):
         translation = self._get_translation(source)
         assert not (args and kwargs)
         if args or kwargs:
+            if any(isinstance(a, Markup) for a in itertools.chain(args, kwargs.values())):
+                translation = escape(translation)
             try:
                 return translation % (args or kwargs)
             except (TypeError, ValueError, KeyError):
@@ -579,7 +582,7 @@ def unquote(str):
     return re_escaped_char.sub(_sub_replacement, str[1:-1])
 
 def TranslationFileReader(source, fileformat='po'):
-    """ Iterate over translation file to return Odoo translation entries """
+    """ Iterate over translation file to return koda translation entries """
     if fileformat == 'csv':
         return CSVFileReader(source)
     if fileformat == 'po':
@@ -616,7 +619,7 @@ class CSVFileReader:
             yield entry
 
 class PoFileReader:
-    """ Iterate over po file to return Odoo translation entries """
+    """ Iterate over po file to return koda translation entries """
     def __init__(self, source):
 
         def get_pot_path(source_name):
@@ -706,7 +709,7 @@ class PoFileReader:
                 _logger.error("malformed po file: unknown occurrence: %s", occurrence)
 
 def TranslationFileWriter(target, fileformat='po', lang=None):
-    """ Iterate over translation file to return Odoo translation entries """
+    """ Iterate over translation file to return koda translation entries """
     if fileformat == 'csv':
         return CSVFileWriter(target)
 
@@ -734,7 +737,7 @@ class CSVFileWriter:
 
 
 class PoFileWriter:
-    """ Iterate over po file to return Odoo translation entries """
+    """ Iterate over po file to return koda translation entries """
     def __init__(self, target, lang):
 
         self.buffer = target
@@ -847,6 +850,13 @@ def trans_export(lang, modules, buffer, format, cr):
     reader = TranslationModuleReader(cr, modules=modules, lang=lang)
     writer = TranslationFileWriter(buffer, fileformat=format, lang=lang)
     writer.write_rows(reader)
+
+# pylint: disable=redefined-builtin
+def trans_export_records(lang, model_name, ids, buffer, format, cr):
+    reader = TranslationRecordReader(cr, model_name, ids, lang=lang)
+    writer = TranslationFileWriter(buffer, fileformat=format, lang=lang)
+    writer.write_rows(reader)
+
 
 def _push(callback, term, source_line):
     """ Sanity check before pushing translation terms """
@@ -974,33 +984,14 @@ def extract_spreadsheet_terms(fileobj, keywords, comment_tags, options):
 ImdInfo = namedtuple('ExternalId', ['name', 'model', 'res_id', 'module'])
 
 
-class TranslationModuleReader:
-    """ Retrieve translated records per module
-
-    :param cr: cursor to database to export
-    :param modules: list of modules to filter the exported terms, can be ['all']
-                    records with no external id are always ignored
-    :param lang: language code to retrieve the translations
-                 retrieve source terms only if not set
-    """
-
-    def __init__(self, cr, modules=None, lang=None):
+class TranslationReader:
+    def __init__(self, cr, lang=None):
         self._cr = cr
-        self._modules = modules or ['all']
         self._lang = lang or 'en_US'
         self.env = koda.api.Environment(cr, koda.SUPERUSER_ID, {})
         self._to_translate = []
-        self._path_list = [(path, True) for path in koda.addons.__path__]
-        self._installed_modules = [
-            m['name']
-            for m in self.env['ir.module.module'].search_read([('state', '=', 'installed')], fields=['name'])
-        ]
-
-        self._export_translatable_records()
-        self._export_translatable_resources()
 
     def __iter__(self):
-        """ Export ir.translation values for all retrieved records """
         for module, source, name, res_id, ttype, comments, _record_id, value in self._to_translate:
             yield (module, ttype, name, res_id, source, encode(koda.tools.ustr(value)), comments)
 
@@ -1020,6 +1011,35 @@ class TranslationModuleReader:
         if not sanitized_term or len(sanitized_term) <= 1:
             return
         self._to_translate.append((module, source, name, res_id, ttype, tuple(comments or ()), record_id, value))
+
+    def _export_imdinfo(self, model: str, imd_per_id: dict[int, ImdInfo]):
+        records = self._get_translatable_records(imd_per_id.values())
+        if not records:
+            return
+
+        for record in records.with_context(check_translations=True):
+            module = imd_per_id[record.id].module
+            xml_name = "%s.%s" % (module, imd_per_id[record.id].name)
+            for field_name, field in record._fields.items():
+                # ir_actions_actions.name is filtered because unlike other inherited fields,
+                # this field is inherited as postgresql inherited columns.
+                # From our business perspective, the parent column is no need to be translated,
+                # but it is need to be set to jsonb column, since the child columns need to be translated
+                # And export the parent field may make one value to be translated twice in transifex
+                if not field.translate or not field.store or str(field) == 'ir.actions.actions.name':
+                    continue
+                name = model + "," + field_name
+                value_en = record[field_name] or ''
+                value_lang = record.with_context(lang=self._lang)[field_name] or ''
+                trans_type = 'model_terms' if callable(field.translate) else 'model'
+                try:
+                    translation_dictionary = field.get_translation_dictionary(value_en, {self._lang: value_lang})
+                except Exception:
+                    _logger.exception("Failed to extract terms from %s %s", xml_name, name)
+                    continue
+                for term_en, term_langs in translation_dictionary.items():
+                    term_lang = term_langs.get(self._lang)
+                    self._push_translation(module, trans_type, name, xml_name, term_en, record_id=record.id, value=term_lang if term_lang != term_en else '')
 
     def _get_translatable_records(self, imd_records):
         """ Filter the records that are translatable
@@ -1072,6 +1092,84 @@ class TranslationModuleReader:
         return records
 
 
+class TranslationRecordReader(TranslationReader):
+    """ Retrieve translations for specified records, the reader will
+    1. create external ids for records without external ids
+    2. export translations for stored translated and inherited translated fields
+    :param cr: cursor to database to export
+    :param model_name: model_name for the records to export
+    :param ids: ids of the records to export
+    :param field_names: field names to export, if not set, export all translatable fields
+    :param lang: language code to retrieve the translations retrieve source terms only if not set
+    """
+    def __init__(self, cr, model_name, ids, field_names=None, lang=None):
+        super().__init__(cr, lang)
+        self._records = self.env[model_name].browse(ids)
+        self._field_names = field_names or list(self._records._fields.keys())
+
+        self._export_translatable_records(self._records, self._field_names)
+
+    def _export_translatable_records(self, records, field_names):
+        """ Export translations of all stored/inherited translated fields. Create external id if needed. """
+        if not records:
+            return
+
+        fields = records._fields
+
+        if records._inherits:
+            inherited_fields = defaultdict(list)
+            for field_name in field_names:
+                field = records._fields[field_name]
+                if field.translate and not field.store and field.inherited_field:
+                    inherited_fields[field.inherited_field.model_name].append(field_name)
+            for parent_mname, parent_fname in records._inherits.items():
+                if parent_mname in inherited_fields:
+                    self._export_translatable_records(records[parent_fname], inherited_fields[parent_mname])
+
+        if not any(fields[field_name].translate and fields[field_name].store for field_name in field_names):
+            return
+
+        records._BaseModel__ensure_xml_id()
+
+        model_name = records._name
+        query = """SELECT min(concat(module, '.', name)), res_id
+                             FROM ir_model_data
+                            WHERE model = %s
+                              AND res_id = ANY(%s)
+                         GROUP BY model, res_id"""
+
+        self._cr.execute(query, (model_name, records.ids))
+
+        imd_per_id = {
+            res_id: ImdInfo((tmp := module_xml_name.split('.', 1))[1], model_name, res_id, tmp[0])
+            for module_xml_name, res_id in self._cr.fetchall()
+        }
+
+        self._export_imdinfo(model_name, imd_per_id)
+
+
+class TranslationModuleReader(TranslationReader):
+    """ Retrieve translated records per module
+
+    :param cr: cursor to database to export
+    :param modules: list of modules to filter the exported terms, can be ['all']
+                    records with no external id are always ignored
+    :param lang: language code to retrieve the translations
+                 retrieve source terms only if not set
+    """
+
+    def __init__(self, cr, modules=None, lang=None):
+        super().__init__(cr, lang)
+        self._modules = modules or ['all']
+        self._path_list = [(path, True) for path in koda.addons.__path__]
+        self._installed_modules = [
+            m['name']
+            for m in self.env['ir.module.module'].search_read([('state', '=', 'installed')], fields=['name'])
+        ]
+
+        self._export_translatable_records()
+        self._export_translatable_resources()
+
     def _export_translatable_records(self):
         """ Export translations of all translated records having an external id """
 
@@ -1093,30 +1191,7 @@ class TranslationModuleReader:
             records_per_model[model][res_id] = ImdInfo(xml_name, model, res_id, module)
 
         for model, imd_per_id in records_per_model.items():
-            records = self._get_translatable_records(imd_per_id.values())
-            if not records:
-                continue
-
-            for record in records:
-                module = imd_per_id[record.id].module
-                xml_name = "%s.%s" % (module, imd_per_id[record.id].name)
-                for field_name, field in record._fields.items():
-                    # ir_actions_actions.name is filtered because unlike other inherited fields,
-                    # this field is inherited as postgresql inherited columns.
-                    # From our business perspective, the parent column is no need to be translated,
-                    # but it is need to be set to jsonb column, since the child columns need to be translated
-                    # And export the parent field may make one value to be translated twice in transifex
-                    if field.translate and field.store and str(field) != 'ir.actions.actions.name':
-                        name = model + "," + field_name
-                        try:
-                            value_en = record[field_name] or ''
-                            value_lang = record.with_context(lang=self._lang)[field_name] or ''
-                        except Exception:
-                            continue
-                        trans_type = 'model_terms' if callable(field.translate) else 'model'
-                        for term_en, term_langs in field.get_translation_dictionary(value_en, {self._lang: value_lang}).items():
-                            term_lang = term_langs.get(self._lang)
-                            self._push_translation(module, trans_type, name, xml_name, term_en, record_id=record.id, value=term_lang if term_lang != term_en else '')
+            self._export_imdinfo(model, imd_per_id)
 
     def _get_module_from_path(self, path):
         for (mp, rec) in self._path_list:
@@ -1145,7 +1220,7 @@ class TranslationModuleReader:
         if not module:
             return
         extra_comments = extra_comments or []
-        src_file = open(fabsolutepath, 'rb')
+        src_file = file_open(fabsolutepath, 'rb')
         options = {}
         if extract_method == 'python':
             options['encoding'] = 'UTF-8'
@@ -1238,7 +1313,8 @@ class TranslationImporter:
                      the language must be present and activated in the database
         :param xmlids: if given, only translations for records with xmlid in xmlids will be loaded
         """
-        with file_open(filepath, mode='rb') as fileobj:
+        with suppress(FileNotFoundError), file_open(filepath, mode='rb') as fileobj:
+            _logger.info('loading base translation file %s for language %s', filepath, lang)
             fileformat = os.path.splitext(filepath)[-1][1:].lower()
             self.load(fileobj, fileformat, lang, xmlids=xmlids)
 
@@ -1273,7 +1349,6 @@ class TranslationImporter:
                 continue
             if row.get('type') == 'code':  # ignore code translations
                 continue
-            # TODO: CWG if the po file should not be trusted, we need to check each model term
             model_name = row.get('imd_model')
             module_name = row['module']
             if model_name not in self.env:
@@ -1331,16 +1406,20 @@ class TranslationImporter:
                     for id_, xmlid, values, noupdate in cr.fetchall():
                         if not values:
                             continue
-                        value_en = values.get('en_US')
-                        if not value_en:
+                        _value_en = values.get('_en_US', values['en_US'])
+                        if not _value_en:
                             continue
 
                         # {src: {lang: value}}
                         record_dictionary = field_dictionary[xmlid]
                         langs = {lang for translations in record_dictionary.values() for lang in translations.keys()}
                         translation_dictionary = field.get_translation_dictionary(
-                            value_en,
-                            {k: v for k, v in values.items() if k in langs}
+                            _value_en,
+                            {
+                                k: values.get(f'_{k}', v)
+                                for k, v in values.items()
+                                if k in langs
+                            }
                         )
 
                         if force_overwrite or (not noupdate and overwrite):
@@ -1354,7 +1433,9 @@ class TranslationImporter:
                                 translation_dictionary[term_en] = translations
 
                         for lang in langs:
-                            values[lang] = field.translate(lambda term: translation_dictionary.get(term, {}).get(lang), value_en)
+                            # translate and confirm model_terms translations
+                            values[lang] = field.translate(lambda term: translation_dictionary.get(term, {}).get(lang), _value_en)
+                            values.pop(f'_{lang}', None)
                         params.extend((id_, Json(values)))
                     if params:
                         env.cr.execute(f"""
@@ -1397,7 +1478,7 @@ class TranslationImporter:
         self.model_translations.clear()
 
         env.invalidate_all()
-        env.registry.clear_caches()
+        env.registry.clear_cache()
         if self.verbose:
             _logger.info("translations are loaded successfully")
 
@@ -1471,21 +1552,35 @@ def load_language(cr, lang):
     installer.lang_install()
 
 
+
+def get_po_paths(module_name: str, lang: str):
+    lang_base = lang.split('_')[0]
+    if lang_base == 'es' and lang != 'es_ES':
+        # force es_419 as fallback language for the spanish variations
+        if lang == 'es_419':
+            langs = ['es_419']
+        else:
+            langs = ['es_419', lang]
+    else:
+        langs = [lang_base, lang]
+
+    po_paths = [
+        path
+        for lang_ in langs
+        for dir_ in ('i18n', 'i18n_extra')
+        if (path := join(module_name, dir_, lang_ + '.po'))
+    ]
+    for path in po_paths:
+        with suppress(FileNotFoundError):
+            yield file_path(path)
+
+
 class CodeTranslations:
     def __init__(self):
         # {(module_name, lang): {src: value}}
         self.python_translations = {}
         # {(module_name, lang): {'message': [{'id': src, 'string': value}]}
         self.web_translations = {}
-
-    @staticmethod
-    def _get_po_paths(mod, lang):
-        lang_base = lang.split('_')[0]
-        po_paths = [get_resource_path(mod, 'i18n', lang_base + '.po'),
-                    get_resource_path(mod, 'i18n', lang + '.po'),
-                    get_resource_path(mod, 'i18n_extra', lang_base + '.po'),
-                    get_resource_path(mod, 'i18n_extra', lang + '.po')]
-        return [path for path in po_paths if path]
 
     @staticmethod
     def _read_code_translations_file(fileobj, filter_func):
@@ -1505,7 +1600,7 @@ class CodeTranslations:
 
     @staticmethod
     def _get_code_translations(module_name, lang, filter_func):
-        po_paths = CodeTranslations._get_po_paths(module_name, lang)
+        po_paths = get_po_paths(module_name, lang)
         translations = {}
         for po_path in po_paths:
             try:

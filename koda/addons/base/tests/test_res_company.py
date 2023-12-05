@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 from koda.exceptions import ValidationError
 from koda.tests.common import TransactionCase
@@ -38,3 +38,15 @@ class TestCompany(TransactionCase):
             'company_ids': main_company.ids,
         })
         user.action_unarchive()
+
+    def test_logo_check(self):
+        """Ensure uses_default_logo is properly (re-)computed."""
+        company = self.env['res.company'].create({'name': 'foo'})
+
+        self.assertTrue(company.logo, 'Should have a default logo')
+        self.assertTrue(company.uses_default_logo)
+        company.partner_id.image_1920 = False
+        # No logo means we fall back to another default logo for the website route -> uses_default
+        self.assertTrue(company.uses_default_logo)
+        company.partner_id.image_1920 = "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        self.assertFalse(company.uses_default_logo)

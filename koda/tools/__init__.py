@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Koda
-SUPPORTED_DEBUGGER = {'pdb', 'ipdb', 'wdb', 'pudb'}
+# Part of koda. See LICENSE file for full copyright and licensing details.
 from . import _monkeypatches
 from . import appdirs
 from . import cloc
+from . import constants
 from . import pdf
 from . import pycompat
 from . import win32
@@ -22,5 +22,5 @@ from .translate import *
 from .xml_utils import *
 from .convert import *
 from . import osutil
-from .js_transpiler import transpile_javascript, is_odoo_module, URL_RE, ODOO_MODULE_RE
+from .js_transpiler import transpile_javascript, is_koda_module, URL_RE, koda_MODULE_RE
 from .sourcemap_generator import SourceMapGenerator

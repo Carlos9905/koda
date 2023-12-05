@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 MISC_HTML_SOURCE = u"""
 <font size="2" style="color: rgb(31, 31, 31); font-family: monospace; font-variant: normal; line-height: normal; ">test1</font>
@@ -75,7 +75,7 @@ QUOTE_BLOCKQUOTE = u"""<html>
 cite="mid:CAEJSRZvWvud8c6Qp=wfNG6O1+wK3i_jb33qVrF7XyrgPNjnyUA@mail.gmail.com"
       type="cite"><base href="https://www.koda.com">
       <div dir="ltr">Yep Dominique that is true, as Postgres was the
-        base of all same as Odoo and MySQL etc came much later.Â 
+        base of all same as koda and MySQL etc came much later.Â 
         <div><br>
         </div>
         <div>Unfortunately many customers who ask for and ERP are with
@@ -89,7 +89,7 @@ cite="mid:CAEJSRZvWvud8c6Qp=wfNG6O1+wK3i_jb33qVrF7XyrgPNjnyUA@mail.gmail.com"
     </blockquote>
     <br>
     I don't care how much you are highlighting the advantages of Erpnext
-    on this Odoo mailinglist, but when you start implying that Postgres
+    on this koda mailinglist, but when you start implying that Postgres
     is not well documented it really hurts.<br>
     <br>
     <pre class="moz-signature" cols="72">-- 
@@ -235,7 +235,7 @@ QUOTE_THUNDERBIRD_1 = u"""<div>On 11/08/2012 05:29 PM,
           <li>9.45 AM: summary</li>
           <li>10 AM: meeting with Fabien to present our app</li>
         </ul></div>
-      <div>Is everything ok for you ?</div>
+      <div>Is everything ok for you?</div>
       <div>
         <p>--<br>
           Administrator</p>
@@ -246,7 +246,7 @@ QUOTE_THUNDERBIRD_1 = u"""<div>On 11/08/2012 05:29 PM,
       </div>
     </blockquote>
     Ok for me. I am replying directly below your mail, using Thunderbird, with a signature.<br><br>
-    Did you receive my email about my new laptop, by the way ?<br><br>
+    Did you receive my email about my new laptop, by the way?<br><br>
     Raoul.<br><pre>-- 
 Raoul Grosbedonn&#233;e
 </pre>"""
@@ -300,7 +300,7 @@ TEXT_1 = u"""I contact you about our meeting tomorrow. Here is the schedule I pr
 9 AM: brainstorming about our new amazing business app
 9.45 AM: summary
 10 AM: meeting with Ignasse to present our app
-Is everything ok for you ?
+Is everything ok for you?
 --
 MySignature"""
 
@@ -308,7 +308,7 @@ TEXT_1_IN = [u"""I contact you about our meeting tomorrow. Here is the schedule 
 9 AM: brainstorming about our new amazing business app
 9.45 AM: summary
 10 AM: meeting with Ignasse to present our app
-Is everything ok for you ?"""]
+Is everything ok for you?"""]
 TEXT_1_OUT = [u"""
 --
 MySignature"""]
@@ -358,7 +358,7 @@ TEXT_2_OUT = [u"""
 # MISC
 
 GMAIL_1 = u"""Hello,<div><br></div><div>Ok for me. I am replying directly in gmail, without signature.</div><div><br></div><div>Kind regards,</div><div><br></div><div>Demo.<br><br><div>On Thu, Nov 8, 2012 at 5:29 PM,  <span>&lt;<a href="mailto:dummy@example.com">dummy@example.com</a>&gt;</span> wrote:<br><blockquote><div>I contact you about our meeting for tomorrow. Here is the schedule I propose:</div><div><ul><li>9 AM: brainstorming about our new amazing business app&lt;/span&gt;&lt;/li&gt;</li>
-<li>9.45 AM: summary</li><li>10 AM: meeting with Fabien to present our app</li></ul></div><div>Is everything ok for you ?</div>
+<li>9.45 AM: summary</li><li>10 AM: meeting with Fabien to present our app</li></ul></div><div>Is everything ok for you?</div>
 <div><p>-- <br>Administrator</p></div>
 
 <div><p>Log in our portal at: <a href="http://localhost:8069#action=login&amp;db=mail_1&amp;login=demo">http://localhost:8069#action=login&amp;db=mail_1&amp;login=demo</a></p></div>
@@ -383,7 +383,7 @@ HOTMAIL_1 = u"""<div>
             <br>
             You indicated that you wish to use OpenERP in your own company.
             We would like to know more about your your business needs and requirements, and see how
-            we can help you. When would you be available to discuss your project ?<br>
+            we can help you. When would you be available to discuss your project?<br>
             Best regards,<br>
             <pre>
                 <a href="http://openerp.com" target="_blank">http://openerp.com</a>
@@ -574,7 +574,7 @@ Web: http://www.openerp.com"""]
 REMOVE_CLASS = u"""
 <div style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'; COLOR: #000000">
     <div>Hello</div>
-    <div>I have just installed Odoo 9 and I've got the following error:</div>
+    <div>I have just installed koda 9 and I've got the following error:</div>
     <div>&nbsp;</div>
     <div class="openerp openerp_webclient_container oe_webclient">
         <div class="oe_loading" style="DISPLAY: none">&nbsp;</div>
@@ -584,7 +584,7 @@ REMOVE_CLASS = u"""
         <div class="modal-dialog modal-lg">
             <div class="modal-content openerp">
                 <div class="modal-header"> 
-                    <h4 class="modal-title">Odoo Error<span class="o_subtitle text-muted"></span></h4>
+                    <h4 class="modal-title">koda Error<span class="o_subtitle text-muted"></span></h4>
                 </div>
                 <div class="o_error_detail modal-body">
                     <pre>An error occurred in a modal and I will send you back the html to try opening one on your end</pre>

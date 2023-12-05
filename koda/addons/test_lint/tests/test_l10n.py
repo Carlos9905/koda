@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 import ast
 import itertools
 import os
 
 from . import lint_case
-
+from koda.tools.misc import file_open
 
 class L10nChecker(lint_case.NodeVisitor):
     def matches_tagged(self, node):
@@ -44,7 +44,7 @@ class L10nLinter(lint_case.LintCase):
         checker = L10nChecker()
         rs = []
         for path in self.iter_module_files('**/l10n_*/tests/*.py'):
-            with open(path, 'rb') as f:
+            with file_open(path, 'rb') as f:
                 t = ast.parse(f.read(), path)
             rs.extend(zip(itertools.repeat(os.path.relpath(path)), checker.visit(t)))
 

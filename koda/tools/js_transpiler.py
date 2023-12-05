@@ -1,6 +1,6 @@
 """
 This code is what let us use ES6-style modules in koda.
-Classic Odoo modules are composed of a top-level :samp:`koda.define({name},{body_function})` call.
+Classic koda modules are composed of a top-level :samp:`koda.define({name},{dependencies},{body_function})` call.
 This processor will take files starting with an `@koda-module` annotation (in a comment) and convert them to classic modules.
 If any file has the ``/** koda-module */`` on top of it, it will get processed by this class.
 It performs several operations to get from ES6 syntax to the usual koda one with minimal changes.
@@ -15,6 +15,8 @@ import re
 import logging
 from functools import partial
 
+from koda.tools.misc import OrderedSet
+
 _logger = logging.getLogger(__name__)
 
 def transpile_javascript(url, content):
@@ -26,8 +28,8 @@ def transpile_javascript(url, content):
     :return: The transpiled source code
     """
     module_path = url_to_module_path(url)
-    legacy_odoo_define = get_aliased_odoo_define_content(module_path, content)
-
+    legacy_koda_define = get_aliased_koda_define_content(module_path, content)
+    dependencies = OrderedSet()
     # The order of the operations does sometimes matter.
     steps = [
         convert_legacy_default_import,
@@ -39,19 +41,20 @@ def transpile_javascript(url, content):
         convert_unnamed_relative_import,
         convert_from_export,
         convert_star_from_export,
-        partial(convert_relative_require, url),
         remove_index,
+        partial(convert_relative_require, url, dependencies),
         convert_export_function,
         convert_export_class,
         convert_variable_export,
         convert_object_export,
         convert_default_export,
-        partial(wrap_with_odoo_define, module_path),
+        partial(wrap_with_qunit_module, url),
+        partial(wrap_with_koda_define, module_path, dependencies),
     ]
     for s in steps:
         content = s(content)
-    if legacy_odoo_define:
-        content += legacy_odoo_define
+    if legacy_koda_define:
+        content += legacy_koda_define
     return content
 
 
@@ -65,7 +68,7 @@ URL_RE = re.compile(r"""
 
 def url_to_module_path(url):
     """
-    Odoo modules each have a name. (koda.define("<the name>", async function (require) {...});
+    koda modules each have a name. (koda.define("<the name>", [<dependencies>], function (require) {...});
     It is used in to be required later. (const { something } = require("<the name>").
     The transpiler transforms the url of the file in the project to this name.
     It takes the module name and add a @ on the start of it, and map it to be the source of the static/src (or
@@ -94,13 +97,23 @@ def url_to_module_path(url):
     else:
         raise ValueError("The js file %r must be in the folder '/static/src' or '/static/lib' or '/static/test'" % url)
 
+def wrap_with_qunit_module(url, content):
+    """
+    Wraps the test file content (source code) with the QUnit.module('module_name', function() {...}).
+    """
+    if "tests" in url and re.search(r'QUnit\.(test|debug|only)\(', content):
+        match = URL_RE.match(url)
+        return f"""QUnit.module("{match["module"]}", function() {{{content}}});"""
+    else:
+        return content
 
-def wrap_with_odoo_define(module_path, content):
+def wrap_with_koda_define(module_path, dependencies, content):
     """
     Wraps the current content (source code) with the koda.define call.
+    It adds as a second argument the list of dependencies.
     Should logically be called once all other operations have been performed.
     """
-    return f"""koda.define({module_path!r}, async function (require) {{
+    return f"""koda.define({module_path!r}, {list(dependencies)}, function (require) {{
 'use strict';
 let __exports = {{}};
 {content}
@@ -503,14 +516,15 @@ def convert_default_and_named_import(content):
 
 
 RELATIVE_REQUIRE_RE = re.compile(r"""
-    require\((?P<quote>["'`])([^@"'`]+)(?P=quote)\)  # require("some/path")
-    """, re.VERBOSE)
+    ^[^/*\n]*require\((?P<quote>[\"'`])([^\"'`]+)(?P=quote)\) # require("some/path")
+    """, re.MULTILINE | re.VERBOSE)
 
 
-def convert_relative_require(url, content):
+def convert_relative_require(url, dependencies, content):
     """
     Convert the relative path contained in a 'require()'
-    to the new path system (@module/path)
+    to the new path system (@module/path).
+    Adds all modules path to dependencies.
     .. code-block:: javascript
 
         // Relative path:
@@ -527,10 +541,13 @@ def convert_relative_require(url, content):
     """
     new_content = content
     for quote, path in RELATIVE_REQUIRE_RE.findall(new_content):
+        module_path = path
         if path.startswith(".") and "/" in path:
             pattern = rf"require\({quote}{path}{quote}\)"
-            repl = f'require("{relative_path_to_module_path(url, path)}")'
+            module_path = relative_path_to_module_path(url, path)
+            repl = f'require("{module_path}")'
             new_content = re.sub(pattern, repl, new_content)
+        dependencies.add(module_path)
     return new_content
 
 
@@ -644,7 +661,7 @@ def relative_path_to_module_path(url, path_rel):
     return url_to_module_path(result)
 
 
-ODOO_MODULE_RE = re.compile(r"""
+koda_MODULE_RE = re.compile(r"""
     \s*                                       # some starting space
     \/(\*|\/).*\s*                            # // or /*
     @koda-module                              # @koda-module
@@ -653,7 +670,7 @@ ODOO_MODULE_RE = re.compile(r"""
 """, re.VERBOSE)
 
 
-def is_odoo_module(content):
+def is_koda_module(content):
     """
     Detect if the file is a native koda module.
     We look for a comment containing @koda-module.
@@ -661,11 +678,11 @@ def is_odoo_module(content):
     :param content: source code
     :return: is this a koda module that need transpilation ?
     """
-    result = ODOO_MODULE_RE.match(content)
+    result = koda_MODULE_RE.match(content)
     return bool(result)
 
 
-def get_aliased_odoo_define_content(module_path, content):
+def get_aliased_koda_define_content(module_path, content):
     """
     To allow smooth transition between the new system and the legacy one, we have the possibility to
     defined an alternative module name (an alias) that will act as proxy between legacy require calls and
@@ -677,7 +694,7 @@ def get_aliased_odoo_define_content(module_path, content):
     we have a problem when we will have converted to module to ES6: its new name will be more like
     "web/chrome/abstract_action". So the require would fail !
     So we add a second small modules, an alias, as such:
-    > koda.define("web/chrome/abstract_action", async function(require) {
+    > koda.define("web/chrome/abstract_action", ['web.AbstractAction'], function (require) {
     >  return require('web.AbstractAction')[Symbol.for("default")];
     > });
 
@@ -702,18 +719,18 @@ def get_aliased_odoo_define_content(module_path, content):
 
     :return: the alias content to append to the source code.
     """
-    matchobj = ODOO_MODULE_RE.match(content)
+    matchobj = koda_MODULE_RE.match(content)
     if matchobj:
         alias = matchobj['alias']
         if alias:
             if matchobj['default']:
-                return """\nodoo.define(`%s`, async function(require) {
+                return """\nkoda.define(`%s`, ['%s'], function (require) {
                         return require('%s');
-                        });\n""" % (alias, module_path)
+                        });\n""" % (alias, module_path, module_path)
             else:
-                return """\nodoo.define(`%s`, async function(require) {
+                return """\nkoda.define(`%s`, ['%s'], function (require) {
                         return require('%s')[Symbol.for("default")];
-                        });\n""" % (alias, module_path)
+                        });\n""" % (alias, module_path, module_path)
 
 
 def convert_as(val):

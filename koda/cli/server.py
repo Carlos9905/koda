@@ -1,4 +1,4 @@
-# Koda
+# Part of koda. See LICENSE file for full copyright and licensing details.
 
 """
 OpenERP - Server
@@ -14,11 +14,8 @@ import atexit
 import csv # pylint: disable=deprecated-module
 import logging
 import os
-import signal
+import re
 import sys
-import threading
-import traceback
-import time
 from pathlib import Path
 
 from psycopg2 import ProgrammingError, errorcodes
@@ -32,6 +29,8 @@ __version__ = koda.release.version
 
 # Also use the `koda` logger for the main script.
 _logger = logging.getLogger('koda')
+
+re._MAXCACHE = 4096  # default is 512, a little too small for koda
 
 def check_root_user():
     """Warn if the process's user is 'root' (on POSIX system)."""
@@ -56,7 +55,7 @@ def report_configuration():
     This function assumes the configuration has been initialized.
     """
     config = koda.tools.config
-    _logger.info("Odoo version %s", __version__)
+    _logger.info("koda version %s", __version__)
     if os.path.isfile(config.rcfile):
         _logger.info("Using configuration file at " + config.rcfile)
     _logger.info('addons paths: %s', koda.addons.__path__)
