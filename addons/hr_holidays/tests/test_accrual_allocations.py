@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 import datetime
 from freezegun import freeze_time
 from dateutil.relativedelta import relativedelta

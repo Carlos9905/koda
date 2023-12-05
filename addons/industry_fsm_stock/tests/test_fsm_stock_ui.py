@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 # -*- coding: utf-8 -*-
 
 from dateutil.relativedelta import relativedelta

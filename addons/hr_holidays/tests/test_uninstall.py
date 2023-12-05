@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
 from koda.tests import tagged, TransactionCase

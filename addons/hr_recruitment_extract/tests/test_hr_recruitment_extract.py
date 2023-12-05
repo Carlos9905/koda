@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.hr.tests.common import TestHrCommon
 from koda.addons.iap_extract.tests.test_extract_mixin import TestExtractMixin

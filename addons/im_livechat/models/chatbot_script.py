@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import _, api, models, fields
 from koda.tools import email_normalize, html2plaintext, is_html_empty, plaintext2html

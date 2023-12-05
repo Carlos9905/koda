@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 {
     'name': "Field Service - Sale",
     'summary': "Schedule and track onsite operations, invoice time and material",

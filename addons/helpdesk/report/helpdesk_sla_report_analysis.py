@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda import api, fields, models, tools
 from koda.addons.helpdesk.models.helpdesk_ticket import TICKET_PRIORITY

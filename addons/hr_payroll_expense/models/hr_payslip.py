@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from collections import defaultdict
 from koda import api, fields, models, _, Command

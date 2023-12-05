@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.http import route
 from koda.addons.mail.controllers.thread import ThreadController

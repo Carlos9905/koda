@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Koda
 
 from koda.addons.im_livechat.tests import chatbot_common
 from koda.exceptions import ValidationError
