@@ -3,7 +3,7 @@
 import { usePopover } from "@web/core/popover/popover_hook";
 import { useService } from "@web/core/utils/hooks";
 import { StudioApprovalInfos } from "@web_studio/approval/approval_infos";
-import { Component, onWillUnmount, useRef } from "@koda/owl";
+import { Component, onWillUnmount, useRef } from "@odoo/owl";
 
 function useOpenExternal() {
     const closeFns = [];

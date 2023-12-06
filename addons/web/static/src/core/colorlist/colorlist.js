@@ -2,7 +2,7 @@
 
 import { _t } from "@web/core/l10n/translation";
 
-import { Component, useRef, useState, useExternalListener } from "@koda/owl";
+import { Component, useRef, useState, useExternalListener } from "@odoo/owl";
 
 export class ColorList extends Component {
     setup() {

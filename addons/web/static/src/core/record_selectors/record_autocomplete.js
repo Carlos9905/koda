@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { AutoComplete } from "@web/core/autocomplete/autocomplete";
 import { _t } from "@web/core/l10n/translation";
 import { Domain } from "@web/core/domain";

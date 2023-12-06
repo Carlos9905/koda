@@ -7,7 +7,7 @@ import publicRootData from '@web/legacy/js/public/public_root';
 import "@website/libs/zoomkoda/zoomkoda";
 import { pick } from "@web/core/utils/objects";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 export const WebsiteRoot = publicRootData.PublicRoot.extend({
     events: Object.assign({}, publicRootData.PublicRoot.prototype.events || {}, {

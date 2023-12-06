@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 import { useService } from "@web/core/utils/hooks";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 class ConnectedUntil extends Component {
     static template = "account_online_synchronization.ConnectedUntil";

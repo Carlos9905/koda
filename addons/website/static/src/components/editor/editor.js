@@ -11,7 +11,7 @@ import {
     onWillStart,
     onMounted,
     onWillUnmount,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class WebsiteEditorComponent extends Component {
     /**

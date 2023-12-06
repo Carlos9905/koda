@@ -3,7 +3,7 @@ import { ProductCatalogKanbanRecord } from "@product/product_catalog/kanban_reco
 import { ProductCatalogPurchaseOrderLine } from "./purchase_order_line/purchase_order_line";
 import { patch } from "@web/core/utils/patch";
 import { useService } from "@web/core/utils/hooks";
-import { useSubEnv } from "@koda/owl";
+import { useSubEnv } from "@odoo/owl";
 
 patch(ProductCatalogKanbanRecord.prototype, {
     setup() {

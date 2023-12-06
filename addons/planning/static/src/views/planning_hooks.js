@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { markup, useEnv } from "@koda/owl";
+import { markup, useEnv } from "@odoo/owl";
 import { serializeDateTime } from "@web/core/l10n/dates";
 import { useService } from "@web/core/utils/hooks";
 import { escape } from "@web/core/utils/strings";

@@ -21,7 +21,7 @@ import {
     Component,
     markup,
     xml,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { LinkTools } from '@web_editor/js/wysiwyg/widgets/link_tools';
 import { touching, closest } from "@web/core/utils/ui";
 import { _t } from "@web/core/l10n/translation";

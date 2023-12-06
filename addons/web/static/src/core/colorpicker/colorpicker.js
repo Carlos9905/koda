@@ -17,7 +17,7 @@ import {
     onMounted,
     onWillUpdateProps,
     onWillDestroy,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class Colorpicker extends Component {
     static template = "web.Colorpicker";

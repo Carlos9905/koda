@@ -16,7 +16,7 @@ import { toStringExpression, BUTTON_CLICK_PARAMS } from "./utils";
  * @property {(el: Element, params: Record<string, any>) => Element} fn
  */
 
-import { xml } from "@koda/owl";
+import { xml } from "@odoo/owl";
 
 const BUTTON_STRING_PROPS = ["string", "size", "title", "icon", "id"];
 const INTERP_REGEXP = /(\{\{|#\{)(.*?)(\}{1,2})/g;

@@ -2,7 +2,7 @@
 
 import { makeContext } from "@web/core/context";
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { useEffect } from "@koda/owl";
+import { useEffect } from "@odoo/owl";
 
 export class QuestionPageListRenderer extends ListRenderer {
     setup() {

@@ -5,7 +5,7 @@ import { formatDate } from "@web/core/l10n/dates";
 import { getColor } from "../colors";
 import { getFormattedDateSpan } from '@web/views/calendar/utils';
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class CalendarYearPopover extends Component {
     get recordGroups() {

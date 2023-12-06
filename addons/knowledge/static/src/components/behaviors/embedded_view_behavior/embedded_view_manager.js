@@ -13,7 +13,7 @@ import {
     onWillStart,
     useState,
     useSubEnv
-} from "@koda/owl";
+} from "@odoo/owl";
 import { decodeDataBehaviorProps, encodeDataBehaviorProps } from "@knowledge/js/knowledge_utils";
 import {
     BehaviorToolbar,

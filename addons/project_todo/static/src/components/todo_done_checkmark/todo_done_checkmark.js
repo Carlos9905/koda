@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { useState, onRendered, onMounted } from "@koda/owl";
+import { useState, onRendered, onMounted } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { StateSelectionField, stateSelectionField } from "@web/views/fields/state_selection/state_selection_field";
 

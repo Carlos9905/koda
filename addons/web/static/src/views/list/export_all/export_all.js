@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry";
 import { archParseBoolean } from "@web/views/utils";
 import { STATIC_ACTIONS_GROUP_NUMBER } from "@web/search/action_menus/action_menus";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 const cogMenuRegistry = registry.category("cogMenu");
 

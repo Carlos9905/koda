@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 import { Correspondence } from "@voip/core/correspondence_model";
 

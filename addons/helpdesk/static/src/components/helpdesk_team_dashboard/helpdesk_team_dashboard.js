@@ -5,7 +5,7 @@ import { formatFloatTime } from '@web/views/fields/formatters';
 import { formatFloat } from "@web/core/utils/numbers";
 import { useService } from "@web/core/utils/hooks";
 import { HelpdeskTeamTarget } from "../helpdesk_team_target/helpdesk_team_target";
-import { Component, useState, onWillStart } from "@koda/owl";
+import { Component, useState, onWillStart } from "@odoo/owl";
 
 export class HelpdeskTeamDashboard extends Component {
     setup() {

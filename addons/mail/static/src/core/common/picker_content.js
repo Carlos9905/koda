@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { markEventHandled } from "@web/core/utils/misc";
 import { EmojiPicker } from "@web/core/emoji_picker/emoji_picker";
 

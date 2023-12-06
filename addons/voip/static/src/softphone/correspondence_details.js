@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, useEffect, useRef, useState } from "@koda/owl";
+import { Component, useEffect, useRef, useState } from "@odoo/owl";
 
 import { DeviceSelectionDialog } from "@voip/mobile/device_selection_dialog";
 import { TransferPopover } from "@voip/softphone/transfer_popover";

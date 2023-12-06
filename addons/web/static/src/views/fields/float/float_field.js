@@ -8,7 +8,7 @@ import { formatFloat } from "@web/core/utils/numbers";
 import { parseFloat } from "../parsers";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 export class FloatField extends Component {
     static template = "web.FloatField";

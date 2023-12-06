@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { registry } from "@web/core/registry";
 import { parseInteger  } from "@web/views/fields/parsers";
 import { getId } from "@web/model/relational_model/utils";
-import { Component, useRef, xml, onMounted } from "@koda/owl";
+import { Component, useRef, xml, onMounted } from "@odoo/owl";
 
 export class GenerateDialog extends Component {
     setup() {

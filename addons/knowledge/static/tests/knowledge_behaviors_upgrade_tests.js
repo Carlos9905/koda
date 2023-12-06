@@ -1,7 +1,7 @@
 /** @koda-module */
 
 // web
-import { status } from "@koda/owl";
+import { status } from "@odoo/owl";
 import { getFixture, makeDeferred, nextTick, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { getOrigin } from "@web/core/utils/urls";

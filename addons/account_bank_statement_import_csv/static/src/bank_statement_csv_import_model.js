@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 import { BaseImportModel } from "@base_import/import_model";
 
 class BankStatementCSVImportModel extends BaseImportModel {

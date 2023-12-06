@@ -4,7 +4,7 @@ import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { registry } from "@web/core/registry";
 import { supportedEmbeddedViews } from "@knowledge/components/external_embedded_view_insertion/views_renderers_patches";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 const cogMenuRegistry = registry.category("cogMenu");
 

@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { TicketScreen } from "@point_of_sale/app/screens/ticket_screen/ticket_screen";

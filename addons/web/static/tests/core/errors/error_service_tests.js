@@ -24,7 +24,7 @@ import {
 } from "../../helpers/mock_services";
 import { getFixture, makeDeferred, mount, nextTick, patchWithCleanup } from "../../helpers/utils";
 
-import { Component, xml, onError, OwlError, onWillStart } from "@koda/owl";
+import { Component, xml, onError, OwlError, onWillStart } from "@odoo/owl";
 import { defaultHandler } from "@web/core/errors/error_handlers";
 const errorDialogRegistry = registry.category("error_dialogs");
 const errorHandlerRegistry = registry.category("error_handlers");

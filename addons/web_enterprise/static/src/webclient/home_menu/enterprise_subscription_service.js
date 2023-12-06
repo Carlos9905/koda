@@ -10,7 +10,7 @@ import { ExpirationPanel } from "./expiration_panel";
 import { cookie } from "@web/core/browser/cookie";
 
 const { DateTime } = luxon;
-import { Component, xml, useState } from "@koda/owl";
+import { Component, xml, useState } from "@odoo/owl";
 
 function daysUntil(datetime) {
     const duration = datetime.diff(DateTime.utc(), "days");

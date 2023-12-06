@@ -13,7 +13,7 @@ import {
     useRef,
     useState,
     useSubEnv,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { RPCError } from "@web/core/network/rpc_service";
 import { extractFieldsFromArchInfo } from "@web/model/relational_model/utils";
 import { formView } from "../form/form_view";

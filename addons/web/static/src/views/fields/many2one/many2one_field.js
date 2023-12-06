@@ -13,7 +13,7 @@ import { Many2XAutocomplete, useOpenMany2XRecord } from "@web/views/fields/relat
 import * as BarcodeScanner from "@web/webclient/barcode/barcode_scanner";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component, onWillUpdateProps, useState, markup } from "@koda/owl";
+import { Component, onWillUpdateProps, useState, markup } from "@odoo/owl";
 
 class CreateConfirmationDialog extends Component {
     static template = "web.Many2OneField.CreateConfirmationDialog";

@@ -7,7 +7,7 @@ import {
     Component,
     onMounted,
     useRef,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class Toolbar extends Component {
     static template = 'web_editor.toolbar';

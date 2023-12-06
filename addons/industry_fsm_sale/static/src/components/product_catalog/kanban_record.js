@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { useSubEnv } from "@koda/owl";
+import { useSubEnv } from "@odoo/owl";
 import { ProductCatalogKanbanRecord } from "@product/product_catalog/kanban_record";
 import { useService } from '@web/core/utils/hooks';
 

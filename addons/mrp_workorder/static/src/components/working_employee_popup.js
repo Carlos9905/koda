@@ -3,7 +3,7 @@
 import { MrpTimer } from "@mrp/widgets/timer";
 import { useService } from "@web/core/utils/hooks";
 import { parseDate } from "@web/core/l10n/dates";
-import { Component, onWillStart } from "@koda/owl";
+import { Component, onWillStart } from "@odoo/owl";
 
 const { DateTime } = luxon;
 

@@ -2,7 +2,7 @@
 
 import { threadActionsRegistry } from "@mail/core/common/thread_actions";
 import { _t } from "@web/core/l10n/translation";
-import { useComponent } from "@koda/owl";
+import { useComponent } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 threadActionsRegistry.add("open-hr-profile", {

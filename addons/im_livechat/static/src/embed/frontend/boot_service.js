@@ -4,7 +4,7 @@ import { makeRoot, makeShadow } from "@im_livechat/embed/common/boot_helpers";
 import { LivechatRoot } from "@im_livechat/embed/frontend/livechat_root";
 import { isAvailable } from "@im_livechat/embed/common/livechat_data";
 import { _t } from "@web/core/l10n/translation";
-import { App } from "@koda/owl";
+import { App } from "@odoo/owl";
 
 import { templates } from "@web/core/assets";
 import { registry } from "@web/core/registry";

@@ -7,7 +7,7 @@ import { registry } from "@web/core/registry";
 import { popupService } from "@point_of_sale/app/popup/popup_service";
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { useService } from "@web/core/utils/hooks";
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 // Note that we are creating new popups here to decouple this test from the pos app.
 class CustomPopup1 extends AbstractAwaitablePopup {}

@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, onMounted, useRef, useState } from "@koda/owl";
+import { Component, onMounted, useRef, useState } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { redirect } from "@web/core/utils/urls";

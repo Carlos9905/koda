@@ -2,7 +2,7 @@
 
 import { LinkPreviewConfirmDelete } from "@mail/core/common/link_preview_confirm_delete";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

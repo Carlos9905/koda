@@ -3,7 +3,7 @@
 import { isBrowserChrome, isMobileOS } from "@web/core/browser/feature_detection";
 import { registry } from "@web/core/registry";
 import { session } from "@web/session";
-import { EventBus, whenReady } from "@koda/owl";
+import { EventBus, whenReady } from "@odoo/owl";
 
 function isEditable(element) {
     return element.matches('input,textarea,[contenteditable="true"]');

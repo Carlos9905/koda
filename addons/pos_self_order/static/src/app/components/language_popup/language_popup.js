@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { cookie } from "@web/core/browser/cookie";
 

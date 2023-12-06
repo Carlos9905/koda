@@ -24,7 +24,7 @@ import {
     useRef,
     useState,
     onWillStart,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class FloorScreen extends Component {
     static components = { EditableTable, EditBar, Table };

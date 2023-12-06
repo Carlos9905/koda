@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { onMounted } from "@koda/owl";
+import { onMounted } from "@odoo/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";

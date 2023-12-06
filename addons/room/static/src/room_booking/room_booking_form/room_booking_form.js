@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { scrollTo } from "@web/core/utils/scrolling";
 
-import { Component, onWillUpdateProps, useEffect, useRef, useState } from "@koda/owl";
+import { Component, onWillUpdateProps, useEffect, useRef, useState } from "@odoo/owl";
 
 export class RoomBookingForm extends Component {
     static template = "room.RoomBookingForm";

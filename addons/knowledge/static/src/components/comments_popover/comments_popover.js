@@ -12,7 +12,7 @@ import {
     useExternalListener,
     useRef,
     useState
-} from '@koda/owl';
+} from '@odoo/owl';
 
 /**
  * This Popover is used in the case of the editable zone being too small to display the full comment

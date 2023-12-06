@@ -44,7 +44,7 @@ import { RelationalModel } from "@web/model/relational_model/relational_model";
 import { ViewButton } from "@web/views/view_button/view_button";
 import { AnimatedNumber } from "@web/views/view_components/animated_number";
 
-import { Component, onRendered, onWillRender, xml } from "@koda/owl";
+import { Component, onRendered, onWillRender, xml } from "@odoo/owl";
 import { SampleServer } from "@web/model/sample_server";
 import { KanbanRenderer } from "@web/views/kanban/kanban_renderer";
 

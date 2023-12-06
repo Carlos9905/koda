@@ -8,7 +8,7 @@ import {
     makeTestEnv,
 } from "./helpers/mock_env";
 import { getFixture, makeDeferred, nextTick, patchWithCleanup } from "./helpers/utils";
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
 
 const serviceRegistry = registry.category("services");

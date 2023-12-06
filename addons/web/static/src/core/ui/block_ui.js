@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { browser } from "@web/core/browser/browser";
 
-import { EventBus, Component, useState, xml } from "@koda/owl";
+import { EventBus, Component, useState, xml } from "@odoo/owl";
 
 export class BlockUI extends Component {
     setup() {

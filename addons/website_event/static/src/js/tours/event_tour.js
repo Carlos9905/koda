@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import EventAdditionalTourSteps from "@event/js/tours/event_steps";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 import { patch } from "@web/core/utils/patch";
 
 patch(EventAdditionalTourSteps.prototype, {

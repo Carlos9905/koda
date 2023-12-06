@@ -8,7 +8,7 @@ import { KanbanRenderer } from "@web/views/kanban/kanban_renderer";
 import { useService } from "@web/core/utils/hooks";
 import { ListRenderer } from '@web/views/list/list_renderer';
 
-import { Component, onWillStart } from "@koda/owl";
+import { Component, onWillStart } from "@odoo/owl";
 
 export class CampaignActionHelper extends Component {
     setup() {

@@ -6,7 +6,7 @@ import { getColor } from "../colors";
 import { useCalendarPopover, useFullCalendar } from "../hooks";
 import { CalendarYearPopover } from "./calendar_year_popover";
 
-import { Component, useEffect, useRef } from "@koda/owl";
+import { Component, useEffect, useRef } from "@odoo/owl";
 
 export class CalendarYearRenderer extends Component {
     setup() {

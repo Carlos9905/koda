@@ -6,7 +6,7 @@ import { ActivityMarkAsDone } from "@mail/core/web/activity_markasdone_popover";
 import { computeDelay, getMsToTomorrow } from "@mail/utils/common/dates";
 import { AvatarCardPopover } from "@mail/discuss/web/avatar_card/avatar_card_popover";
 
-import { Component, onMounted, onWillUnmount, useState } from "@koda/owl";
+import { Component, onMounted, onWillUnmount, useState } from "@odoo/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { deserializeDateTime } from "@web/core/l10n/dates";

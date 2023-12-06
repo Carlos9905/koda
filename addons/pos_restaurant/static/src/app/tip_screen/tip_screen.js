@@ -7,7 +7,7 @@ import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_popup";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { useService } from "@web/core/utils/hooks";
-import { Component, useRef, onMounted } from "@koda/owl";
+import { Component, useRef, onMounted } from "@odoo/owl";
 import { TipReceipt } from "@pos_restaurant/app/tip_receipt/tip_receipt";
 
 export class TipScreen extends Component {

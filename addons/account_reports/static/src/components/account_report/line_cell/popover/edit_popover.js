@@ -2,7 +2,7 @@
 
 import { useAutofocus, useService } from "@web/core/utils/hooks";
 
-import { Component, useRef } from "@koda/owl";
+import { Component, useRef } from "@odoo/owl";
 
 export class AccountReportEditPopover extends Component {
     static template = "account_reports.AccountReportEditPopover";

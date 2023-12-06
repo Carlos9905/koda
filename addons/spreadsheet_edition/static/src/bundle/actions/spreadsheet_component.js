@@ -9,7 +9,7 @@ import { InputDialog } from "@spreadsheet_edition/bundle/actions/input_dialog/in
 
 import { Spreadsheet, Model } from "@koda/o-spreadsheet";
 
-import { useSubEnv, Component } from "@koda/owl";
+import { useSubEnv, Component } from "@odoo/owl";
 
 /**
  * @typedef {Object} User

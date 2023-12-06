@@ -5,7 +5,7 @@ import { evaluateBooleanExpr } from "@web/core/py_js/py";
 import { registry } from "@web/core/registry";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 const formatters = registry.category("formatters");
 
 export class BadgeField extends Component {

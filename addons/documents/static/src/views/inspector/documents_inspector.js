@@ -27,7 +27,7 @@ import {
     onPatched,
     onWillUpdateProps,
     onWillStart,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 const { DateTime } = luxon;
 

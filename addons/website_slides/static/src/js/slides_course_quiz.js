@@ -11,7 +11,7 @@
 
     import { _t } from "@web/core/l10n/translation";
 
-    import { markup } from "@koda/owl";
+    import { markup } from "@odoo/owl";
 
     const CourseJoinWidget = CourseJoin.courseJoinWidget;
 

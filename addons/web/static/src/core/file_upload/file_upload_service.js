@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "../registry";
 
-import { EventBus, reactive } from "@koda/owl";
+import { EventBus, reactive } from "@odoo/owl";
 
 export const fileUploadService = {
     dependencies: ["notification"],

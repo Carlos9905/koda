@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { _t } from "@web/core/l10n/translation";

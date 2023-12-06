@@ -11,7 +11,7 @@ import { setCursorStart } from "@web_editor/js/editor/koda-editor/src/utils/util
 import {
     useRef,
     markup,
-} from "@koda/owl";
+} from "@odoo/owl";
 import {
     BehaviorToolbar,
     BehaviorToolbarButton,

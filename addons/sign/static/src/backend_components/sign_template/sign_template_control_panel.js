@@ -2,7 +2,7 @@
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 import { multiFileUpload } from "@sign/backend_components/multi_file_upload";
 

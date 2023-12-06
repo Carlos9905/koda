@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { useMandatoryDays } from "../../hooks";
 import { useCalendarPopover } from "@web/views/calendar/hooks";
 import { TimeOffCalendarYearPopover } from "./calendar_year_popover";
-import { useEffect } from "@koda/owl";
+import { useEffect } from "@odoo/owl";
 
 export class TimeOffCalendarYearRenderer extends CalendarYearRenderer {
     setup() {

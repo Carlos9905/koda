@@ -10,7 +10,7 @@ import { translatedTerms, translationLoaded, _t } from "@web/core/l10n/translati
 import { registry } from "@web/core/registry";
 import { session } from "@web/session";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 const { DateTime, Settings } = luxon;
 
 const terms = { Hello: "Bonjour" };

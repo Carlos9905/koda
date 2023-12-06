@@ -17,7 +17,7 @@ import { registry } from "@web/core/registry";
 import { uiService } from "@web/core/ui/ui_service";
 import { getFixture, mount, nextTick, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { BaseAutomationErrorDialog } from "@base_automation/base_automation_error_dialog";
-import { toRaw } from "@koda/owl";
+import { toRaw } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

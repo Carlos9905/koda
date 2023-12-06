@@ -18,7 +18,7 @@ import {
     validateSearch,
 } from "./helpers";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { SearchBar } from "@web/search/search_bar/search_bar";
 const serviceRegistry = registry.category("services");
 

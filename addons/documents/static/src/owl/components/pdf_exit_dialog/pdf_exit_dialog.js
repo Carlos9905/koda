@@ -3,7 +3,7 @@
 import { Dialog } from "@web/core/dialog/dialog";
 import { _t } from "@web/core/l10n/translation";
 import { useChildRef } from "@web/core/utils/hooks";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class ExitSplitToolsDialog extends Component {
     static components = { Dialog };

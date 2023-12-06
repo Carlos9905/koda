@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, onMounted, useState } from "@koda/owl";
+import { Component, onMounted, useState } from "@odoo/owl";
 
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { _t } from "@web/core/l10n/translation";

@@ -4,7 +4,7 @@ import { Composer } from "@mail/core/common/composer";
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
 
-import { onWillDestroy, useEffect } from "@koda/owl";
+import { onWillDestroy, useEffect } from "@odoo/owl";
 
 patch(Composer.prototype, {
     setup() {

@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 
 export function assignDefined(obj, data, keys = Object.keys(data)) {
     for (const key of keys) {

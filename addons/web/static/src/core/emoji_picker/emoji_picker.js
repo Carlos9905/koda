@@ -13,7 +13,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 import { loadBundle } from "@web/core/assets";
 import { browser } from "@web/core/browser/browser";

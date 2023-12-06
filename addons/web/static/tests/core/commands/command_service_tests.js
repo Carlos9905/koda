@@ -22,7 +22,7 @@ import {
     triggerHotkey,
 } from "../../helpers/utils";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 let env;
 let target;

@@ -28,7 +28,7 @@ import {
     drawTextHighlightSVG,
 } from "@website/js/text_processing";
 
-import { Component, markup, useRef, useState } from "@koda/owl";
+import { Component, markup, useRef, useState } from "@odoo/owl";
 
 const InputUserValueWidget = options.userValueWidgetsRegistry['we-input'];
 const SelectUserValueWidget = options.userValueWidgetsRegistry['we-select'];

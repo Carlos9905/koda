@@ -3,7 +3,7 @@
 import { FloatField, floatField } from "@web/views/fields/float/float_field";
 import { registry } from "@web/core/registry";
 import { formatFloat } from "@web/core/utils/numbers";
-import { useRef, onPatched, onMounted, useState } from "@koda/owl";
+import { useRef, onPatched, onMounted, useState } from "@odoo/owl";
 
 /**
  * This widget is used to display alongside the total quantity to consume of a production order,

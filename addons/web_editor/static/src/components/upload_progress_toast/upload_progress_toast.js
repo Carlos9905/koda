@@ -1,7 +1,7 @@
 /** @koda-module */
 import { useService } from '@web/core/utils/hooks';
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 export class ProgressBar extends Component {
     get progress() {

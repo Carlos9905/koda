@@ -28,7 +28,7 @@ import { commandService } from "@web/core/commands/command_service";
 import { CustomFavoriteItem } from "@web/search/custom_favorite_item/custom_favorite_item";
 import { overlayService } from "@web/core/overlay/overlay_service";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { fieldService } from "@web/core/field_service";
 import { nameService } from "@web/core/name_service";
 import { datetimePickerService } from "@web/core/datetime/datetimepicker_service";

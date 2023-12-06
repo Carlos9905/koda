@@ -3,7 +3,7 @@
 import KnowledgeIcon from "@knowledge/components/knowledge_icon/knowledge_icon";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, onWillUpdateProps, useState } from "@koda/owl";
+import { Component, onWillUpdateProps, useState } from "@odoo/owl";
 
 /**
  * The SidebarRow component is responsible of displaying an article (and its

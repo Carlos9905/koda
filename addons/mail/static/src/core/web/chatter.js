@@ -22,7 +22,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { Dropdown } from "@web/core/dropdown/dropdown";

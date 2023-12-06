@@ -6,7 +6,7 @@ import { RELATIVE_DATE_RANGE_TYPES } from "@spreadsheet/helpers/constants";
 import { AbstractFilterEditorSidePanel } from "./filter_editor_side_panel";
 import { FilterEditorFieldMatching } from "./filter_editor_field_matching";
 
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 const RANGE_TYPES = [
     { type: "fixedPeriod", description: _t("Month / Quarter") },

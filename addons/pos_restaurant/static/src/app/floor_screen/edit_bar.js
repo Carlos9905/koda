@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useExternalListener, useState } from "@koda/owl";
+import { Component, useExternalListener, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class EditBar extends Component {

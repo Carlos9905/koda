@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 import { browser } from "@web/core/browser/browser";
 import {
     isDisplayStandalone,

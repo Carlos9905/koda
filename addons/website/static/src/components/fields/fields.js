@@ -7,7 +7,7 @@ import {useService} from '@web/core/utils/hooks';
 import {Switch} from '@website/components/switch/switch';
 import {registry} from '@web/core/registry';
 import { _t } from '@web/core/l10n/translation';
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 /**
  * Displays website page dependencies and URL redirect options when the page URL

@@ -4,7 +4,7 @@ import { session } from "@web/session";
 import { ConfirmationDialog, AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { _t } from "@web/core/l10n/translation";
 import { useService } from '@web/core/utils/hooks';
-import { Component, onWillStart, useState } from "@koda/owl";
+import { Component, onWillStart, useState } from "@odoo/owl";
 
 const permissionLevel = {'none': 0, 'read': 1, 'write': 2}
 const restrictMessage = _t("Are you sure you want to restrict access to this article? "

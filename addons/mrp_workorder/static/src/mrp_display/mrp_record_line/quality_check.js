@@ -6,7 +6,7 @@ import { MrpQualityCheckConfirmationDialog } from "../dialog/mrp_quality_check_c
 import { FileUploader } from "@web/views/fields/file_handler";
 import { useService } from "@web/core/utils/hooks";
 
-import { useRef } from "@koda/owl";
+import { useRef } from "@odoo/owl";
 
 export class QualityCheck extends MrpWorkorder {
     static template = "mrp_workorder.QualityCheck";

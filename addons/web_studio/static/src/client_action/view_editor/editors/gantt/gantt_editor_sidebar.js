@@ -3,7 +3,7 @@
 import { ganttView } from "@web_gantt/gantt_view";
 import { registry } from "@web/core/registry";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
 import { InteractiveEditorSidebar } from "@web_studio/client_action/view_editor/interactive_editor/interactive_editor_sidebar";
 import { Property } from "@web_studio/client_action/view_editor/property/property";

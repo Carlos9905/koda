@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { useService, useOwnedDialogs } from "@web/core/utils/hooks";
 import { FormViewDialog } from "@web/views/view_dialogs/form_view_dialog";
-import { useComponent } from "@koda/owl";
+import { useComponent } from "@odoo/owl";
 
 export function formatNumber(lang, number, maxDecimals = 2) {
     const userLang = lang.split("_").join("-");

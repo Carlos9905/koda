@@ -4,7 +4,7 @@ import { browser } from "@web/core/browser/browser";
 import { useService } from "@web/core/utils/hooks";
 import { patch } from "@web/core/utils/patch";
 import { WebClient } from "@web/webclient/webclient";
-import { onWillDestroy } from "@koda/owl";
+import { onWillDestroy } from "@odoo/owl";
 
 const USER_DEVICES_MODEL = "mail.partner.device";
 

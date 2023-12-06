@@ -1,7 +1,7 @@
 /** @koda-module **/
 import { escapeRegExp } from "@web/core/utils/strings";
 
-import { Component, useState, onWillRender } from "@koda/owl";
+import { Component, useState, onWillRender } from "@odoo/owl";
 
 export class HighlightText extends Component {
     setup() {

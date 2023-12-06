@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from '@koda/owl';
+import { Component } from '@odoo/owl';
 import { renderToElement } from "@web/core/utils/render";
 import { Wysiwyg } from '@web_editor/js/wysiwyg/wysiwyg';
 import { PromptEmbeddedViewNameDialog } from '@knowledge/components/prompt_embedded_view_name_dialog/prompt_embedded_view_name_dialog';

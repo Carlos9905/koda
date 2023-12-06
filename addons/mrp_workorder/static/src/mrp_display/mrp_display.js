@@ -14,7 +14,7 @@ import { SelectionPopup } from "@mrp_workorder/components/popup";
 import { PinPopup } from "@mrp_workorder/components/pin_popup";
 import { useConnectedEmployee } from "@mrp_workorder/mrp_display/hooks/employee_hooks";
 import { SearchBar } from "@web/search/search_bar/search_bar";
-import { Component, onWillDestroy, onWillStart, useState, useSubEnv } from "@koda/owl";
+import { Component, onWillDestroy, onWillStart, useState, useSubEnv } from "@odoo/owl";
 
 export class MrpDisplay extends Component {
     static template = "mrp_workorder.MrpDisplay";

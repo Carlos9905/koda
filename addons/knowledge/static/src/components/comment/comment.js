@@ -19,7 +19,7 @@ import {
     useRef,
     useEffect,
     useState
-} from '@koda/owl';
+} from '@odoo/owl';
 
 export class KnowledgeCommentsThread extends Component {
 

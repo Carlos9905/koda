@@ -3,8 +3,8 @@
 
 declare const luxon: typeof import("luxon");
 
-declare module "@koda/owl" {
-    export * from "@koda/owl/dist/types/owl"
+declare module "@odoo/owl" {
+    export * from "@odoo/owl/dist/types/owl"
 }
 
 // declare const Qunit: typeof import("qunit"); => Because we add methods to QUnit, we define our own..

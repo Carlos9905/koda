@@ -19,7 +19,7 @@ import {
     onWillUpdateProps,
     useEffect,
     useRef,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 // Behaviors:
 

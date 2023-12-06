@@ -14,7 +14,7 @@ import {
     toRaw,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 /**
  A line of some TaxTotalsComponent, giving the values of a tax group.

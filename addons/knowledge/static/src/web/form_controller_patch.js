@@ -8,7 +8,7 @@ import { CallbackRecorder } from "@web/webclient/actions/action_hook";
 import {
     useEffect,
     useSubEnv
-} from "@koda/owl";
+} from "@odoo/owl";
 
 
 /**

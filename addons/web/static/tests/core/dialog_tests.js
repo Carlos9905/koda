@@ -18,7 +18,7 @@ import {
 } from "../helpers/utils";
 import { makeFakeDialogService } from "../helpers/mock_services";
 
-import { Component, useState, onMounted, xml } from "@koda/owl";
+import { Component, useState, onMounted, xml } from "@odoo/owl";
 const serviceRegistry = registry.category("services");
 let parent;
 let target;

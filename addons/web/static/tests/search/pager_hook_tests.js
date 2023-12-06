@@ -5,7 +5,7 @@ import { usePager } from "@web/search/pager_hook";
 import { click, getFixture, nextTick } from "../helpers/utils";
 import { makeWithSearch, setupControlPanelServiceRegistry } from "./helpers";
 
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 
 let target;
 let serverData;

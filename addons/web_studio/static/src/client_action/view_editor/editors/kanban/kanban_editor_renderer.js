@@ -1,7 +1,7 @@
 /** @koda-module */
 import { kanbanView } from "@web/views/kanban/kanban_view";
 import { KanbanEditorRecord } from "@web_studio/client_action/view_editor/editors/kanban/kanban_editor_record";
-import { useRef, useEffect } from "@koda/owl";
+import { useRef, useEffect } from "@odoo/owl";
 
 export class KanbanEditorRenderer extends kanbanView.Renderer {
     setup() {

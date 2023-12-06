@@ -2,7 +2,7 @@
 
 import { useAutofocus } from "@web/core/utils/hooks";
 import { ModelFieldSelectorPopover } from "@web/core/model_field_selector/model_field_selector_popover";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 export class DynamicPlaceholderPopover extends Component {
     static template = "web.DynamicPlaceholderPopover";

@@ -2,7 +2,7 @@
 
 import { useService } from '@web/core/utils/hooks';
 import { getCurrency } from '@web/core/currency';
-import { Component, onWillStart, useState } from "@koda/owl";
+import { Component, onWillStart, useState } from "@odoo/owl";
 
 export class ExpenseDashboard extends Component {
 

@@ -6,7 +6,7 @@ import { useService } from "@web/core/utils/hooks";
 
 import { SelectionField, selectionField } from "@web/views/fields/selection/selection_field";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class DocumentStatePopover extends Component {
     static template = "l10n_mx_edi.DocumentStatePopover";

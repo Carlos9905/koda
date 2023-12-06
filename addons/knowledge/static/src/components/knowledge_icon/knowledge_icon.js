@@ -7,7 +7,7 @@ import { useEmojiPicker } from "@web/core/emoji_picker/emoji_picker";
 
 import { getRandomIcon } from "@knowledge/js/knowledge_utils";
 
-import { Component, useRef } from "@koda/owl";
+import { Component, useRef } from "@odoo/owl";
 
 export default class KnowledgeIcon extends Component {
     static template = "knowledge.KnowledgeIcon";

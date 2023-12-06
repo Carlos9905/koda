@@ -2,7 +2,7 @@
 
 import { isValidEmail } from "@im_livechat/embed/common/misc";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

@@ -2,7 +2,7 @@
 
 import { ActionDialog } from "./action_dialog";
 
-import { Component, xml, onWillDestroy } from "@koda/owl";
+import { Component, xml, onWillDestroy } from "@odoo/owl";
 
 // -----------------------------------------------------------------------------
 // ActionContainer (Component)

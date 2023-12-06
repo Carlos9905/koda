@@ -10,7 +10,7 @@ import {
     useExternalListener,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { hasTouch, isMobileOS } from "@web/core/browser/feature_detection";
 import { Domain } from "@web/core/domain";
 import { formatDateTime, serializeDate, serializeDateTime } from "@web/core/l10n/dates";

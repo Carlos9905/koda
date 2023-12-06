@@ -15,7 +15,7 @@ import { useNestedSortable } from "@web/core/utils/nested_sortable";
 import { useService } from "@web/core/utils/hooks";
 import { useRecordObserver } from "@web/model/relational_model/utils";
 
-import { Component, onWillStart, reactive, useRef, useState, useChildSubEnv } from "@koda/owl";
+import { Component, onWillStart, reactive, useRef, useState, useChildSubEnv } from "@odoo/owl";
 
 export const SORTABLE_TOLERANCE = 10;
 

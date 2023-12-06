@@ -3,7 +3,7 @@
 import { DateTimeInput } from '@web/core/datetime/datetime_input';
 import { Dialog } from "@web/core/dialog/dialog";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 const { DateTime } = luxon;
 
 export class ExpectedDateDialog extends Component {

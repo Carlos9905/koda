@@ -50,7 +50,7 @@ class TSConfig(Command):
                     owl_path = self.prefix_suffix_path(module, path, "/static/lib/owl/owl.js")
 
         content = self.generate_file_content(modules, paths)
-        content["compilerOptions"]["paths"]["@koda/owl"] = [owl_path]
+        content["compilerOptions"]["paths"]["@odoo/owl"] = [owl_path]
         # pylint: disable=bad-builtin
         print(json.dumps(content, indent=2))
 

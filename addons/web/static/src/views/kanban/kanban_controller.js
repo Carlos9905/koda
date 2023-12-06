@@ -19,7 +19,7 @@ import { addFieldDependencies, extractFieldsFromArchInfo } from "@web/model/rela
 import { KanbanRenderer } from "./kanban_renderer";
 import { useProgressBar } from "./progress_bar_hook";
 
-import { Component, reactive, useRef, useState } from "@koda/owl";
+import { Component, reactive, useRef, useState } from "@odoo/owl";
 
 const QUICK_CREATE_FIELD_TYPES = ["char", "boolean", "many2one", "selection", "many2many"];
 

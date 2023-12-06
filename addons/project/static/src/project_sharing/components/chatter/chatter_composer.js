@@ -4,7 +4,7 @@ import { useService } from '@web/core/utils/hooks';
 import { TextField } from '@web/views/fields/text/text_field';
 import { PortalAttachDocument } from '../portal_attach_document/portal_attach_document';
 import { ChatterAttachmentsViewer } from './chatter_attachments_viewer';
-import { Component, useState, onWillUpdateProps, useRef } from "@koda/owl";
+import { Component, useState, onWillUpdateProps, useRef } from "@odoo/owl";
 
 export class ChatterComposer extends Component {
     setup() {

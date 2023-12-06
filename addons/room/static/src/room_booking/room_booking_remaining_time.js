@@ -2,7 +2,7 @@
 
 import { useInterval } from "@room/room_booking/useInterval";
 
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 
 export class RoomBookingRemainingTime extends Component {
     static template = xml`

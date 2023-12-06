@@ -1,7 +1,7 @@
 /** @koda-module **/
 import { makeDraggableHook } from "@web/core/utils/draggable_hook_builder";
 import { pick } from "@web/core/utils/objects";
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 import { throttleForAnimation } from "@web/core/utils/timing";
 import { touching } from "@web/core/utils/ui";
 

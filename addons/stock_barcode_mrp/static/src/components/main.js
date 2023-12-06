@@ -6,7 +6,7 @@ import HeaderComponent from "./header";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 patch(MainComponent.prototype, {
     setup() {

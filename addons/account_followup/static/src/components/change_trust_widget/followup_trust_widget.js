@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { usePopover } from "@web/core/popover/popover_hook";
 import { localization } from "@web/core/l10n/localization";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 class FollowupTrustPopOver extends Component {}
 FollowupTrustPopOver.template = "account_followup.FollowupTrustPopOver";

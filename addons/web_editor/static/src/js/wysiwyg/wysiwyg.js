@@ -42,7 +42,7 @@ import {
     onWillUpdateProps,
     markup,
     status,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { isCSSColor } from '@web/core/utils/colors';
 import { EmojiPicker } from '@web/core/emoji_picker/emoji_picker';
 import { Tooltip } from "@web/core/tooltip/tooltip";

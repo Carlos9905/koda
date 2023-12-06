@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import wTourUtils from "@website/js/tours/tour_utils";
-import { whenReady } from "@koda/owl";
+import { whenReady } from "@odoo/owl";
 
 wTourUtils.registerWebsitePreviewTour('rte_translator', {
     test: true,

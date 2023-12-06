@@ -6,7 +6,7 @@ import publicWidget from "@web/legacy/js/public/public_widget";
 import portalComposer from "@portal/js/portal_composer";
 import { range } from "@web/core/utils/numbers";
 
-import { Component, markup } from "@koda/owl";
+import { Component, markup } from "@odoo/owl";
 
 /**
  * Widget PortalChatter

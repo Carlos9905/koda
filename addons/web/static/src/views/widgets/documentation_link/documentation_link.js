@@ -2,7 +2,7 @@
 
 import { session } from "@web/session";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
 const LINK_REGEX = new RegExp("^https?://");

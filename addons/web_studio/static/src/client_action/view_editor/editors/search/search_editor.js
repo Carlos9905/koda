@@ -1,5 +1,5 @@
 /** @koda-module */
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import {
     computeXpath,

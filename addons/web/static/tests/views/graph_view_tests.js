@@ -27,7 +27,7 @@ import { registry } from "@web/core/registry";
 import { getBorderWhite, DEFAULT_BG, getColors, hexToRGBA } from "@web/core/colors/colors";
 import { GraphArchParser } from "@web/views/graph/graph_arch_parser";
 import { GraphRenderer } from "@web/views/graph/graph_renderer";
-import { onRendered } from "@koda/owl";
+import { onRendered } from "@odoo/owl";
 import { patchWithCleanup } from "../helpers/utils";
 import { Domain } from "@web/core/domain";
 import { SampleServer } from "@web/model/sample_server";

@@ -17,7 +17,7 @@ import {
 } from "../../helpers/utils";
 import { registerCleanup } from "../../helpers/cleanup";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

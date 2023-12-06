@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, onMounted, useRef } from "@koda/owl";
+import { Component, onMounted, useRef } from "@odoo/owl";
 
 export class FilterEditorLabel extends Component {
     setup() {

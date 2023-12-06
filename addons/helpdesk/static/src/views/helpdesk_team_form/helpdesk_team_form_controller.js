@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { FormController } from "@web/views/form/form_controller";
-import { onMounted } from "@koda/owl";
+import { onMounted } from "@odoo/owl";
 
 export class HelpdeskTeamController extends FormController {
     setup() {

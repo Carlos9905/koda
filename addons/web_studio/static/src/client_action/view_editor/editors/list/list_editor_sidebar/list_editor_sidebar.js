@@ -1,5 +1,5 @@
 /** @koda-module */
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { InteractiveEditorSidebar } from "@web_studio/client_action/view_editor/interactive_editor/interactive_editor_sidebar";
 import {
     ExistingFields,

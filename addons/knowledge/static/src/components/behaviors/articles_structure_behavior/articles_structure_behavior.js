@@ -8,7 +8,7 @@ import {
     useState,
     onMounted,
     onWillStart,
-} from "@koda/owl";
+} from "@odoo/owl";
 import {
     BehaviorToolbar,
     BehaviorToolbarButton,

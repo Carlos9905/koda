@@ -2,7 +2,7 @@
 
 import { Chatter } from "@mail/core/web/chatter";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class ChatterContainer extends Chatter {
     onClick(ev) {

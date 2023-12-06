@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, onMounted, onWillUnmount, useState } from "@koda/owl";
+import { Component, onMounted, onWillUnmount, useState } from "@odoo/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { _t } from "@web/core/l10n/translation";

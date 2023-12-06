@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 /**
  *   tModel is an array that represents the state variable that this component

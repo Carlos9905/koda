@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
 
 const FIELD_OFFSETS = [

@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useRef, useState, onMounted } from "@koda/owl";
+import { Component, useRef, useState, onMounted } from "@odoo/owl";
 
 export class AccountReportSearchBar extends Component {
     static template = "account_reports.AccountReportSearchBar";

@@ -9,7 +9,7 @@ import { calendarView } from '@web/views/calendar/calendar_view';
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { ItemCalendarModel } from "@knowledge/views/item_calendar/item_calendar_model";
 import { registry } from "@web/core/registry";
-import { onMounted, onWillUpdateProps } from "@koda/owl";
+import { onMounted, onWillUpdateProps } from "@odoo/owl";
 
 export class KnowledgeArticleItemsCalendarController extends CalendarController {
     static template = "knowledge.ArticleItemsCalendarController";

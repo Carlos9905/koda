@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { _t } from '@web/core/l10n/translation';
-import { Component } from '@koda/owl';
+import { Component } from '@odoo/owl';
 
 import PaymentForm from '@payment/js/payment_form';
 

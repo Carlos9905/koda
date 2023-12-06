@@ -5,7 +5,7 @@ import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 import { click, patchWithCleanup, getFixture, getNodesTextContent } from "@web/../tests/helpers/utils";
 import { registry } from "@web/core/registry";
 import { browser } from "@web/core/browser/browser";
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 import { AvatarCardPopover } from "@mail/discuss/web/avatar_card/avatar_card_popover";
 import { patchAvatarCardPopover } from "@hr/components/avatar_card/avatar_card_popover_patch";
 

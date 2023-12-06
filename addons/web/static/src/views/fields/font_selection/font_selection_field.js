@@ -5,7 +5,7 @@ import { _t } from "@web/core/l10n/translation";
 import { standardFieldProps } from "../standard_field_props";
 import { formatSelection } from "../formatters";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class FontSelectionField extends Component {
     static template = "web.FontSelectionField";

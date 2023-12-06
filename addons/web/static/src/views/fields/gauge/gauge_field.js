@@ -6,7 +6,7 @@ import { registry } from "@web/core/registry";
 import { formatFloat } from "@web/core/utils/numbers";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 
-import { Component, onWillStart, useEffect, useRef } from "@koda/owl";
+import { Component, onWillStart, useEffect, useRef } from "@odoo/owl";
 
 export class GaugeField extends Component {
     setup() {

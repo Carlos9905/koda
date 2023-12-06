@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, useRef, onMounted } from "@koda/owl";
+import { Component, useRef, onMounted } from "@odoo/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 
 export class AltDialog extends Component {

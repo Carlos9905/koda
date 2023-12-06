@@ -5,7 +5,7 @@ import {
     useComponent,
     useEffect,
     useRef,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 
 // List of icons that should be avoided when adding a random icon

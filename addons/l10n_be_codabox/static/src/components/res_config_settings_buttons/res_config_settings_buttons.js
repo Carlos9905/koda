@@ -7,7 +7,7 @@ import { pick } from "@web/core/utils/objects";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 
-import { Component, onMounted } from "@koda/owl";
+import { Component, onMounted } from "@odoo/owl";
 
 
 class L10nBeCodaboxSettingsButtons extends Component {

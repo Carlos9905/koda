@@ -10,7 +10,7 @@ import {
     useEffect,
     useState,
     xml,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { makeServerError } from "@web/../tests/helpers/mock_server";
 import { makeFakeNotificationService } from "@web/../tests/helpers/mock_services";
 import {

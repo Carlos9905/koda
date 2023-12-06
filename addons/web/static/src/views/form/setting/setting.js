@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { session } from "@web/session";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { FormLabel } from "../form_label";
 import { DocumentationLink } from "@web/views/widgets/documentation_link/documentation_link";
 

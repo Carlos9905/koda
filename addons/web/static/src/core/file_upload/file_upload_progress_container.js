@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class FileUploadProgressContainer extends Component {}
 FileUploadProgressContainer.template = "web.FileUploadProgressContainer";

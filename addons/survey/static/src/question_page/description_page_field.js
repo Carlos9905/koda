@@ -2,7 +2,7 @@
 
 import { CharField, charField } from "@web/views/fields/char/char_field";
 import { registry } from "@web/core/registry";
-import { useEffect, useRef } from "@koda/owl";
+import { useEffect, useRef } from "@odoo/owl";
 
 class DescriptionPageField extends CharField {
     setup() {

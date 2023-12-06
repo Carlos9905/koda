@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { markRaw } from "@koda/owl";
+import { markRaw } from "@odoo/owl";
 import { registry } from "../registry";
 import { POPOVER_SYMBOL, PopoverController } from "./popover_controller";
 
@@ -24,7 +24,7 @@ export const popoverService = {
          * Signals the manager to add a popover.
          *
          * @param {HTMLElement} target
-         * @param {typeof import("@koda/owl").Component} component
+         * @param {typeof import("@odoo/owl").Component} component
          * @param {object} props
          * @param {PopoverServiceAddOptions} [options]
          * @returns {() => void}

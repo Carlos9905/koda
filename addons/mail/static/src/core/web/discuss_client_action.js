@@ -2,7 +2,7 @@
 
 import { Discuss } from "@mail/core/common/discuss";
 
-import { Component, onWillStart, onWillUpdateProps, useState } from "@koda/owl";
+import { Component, onWillStart, onWillUpdateProps, useState } from "@odoo/owl";
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";

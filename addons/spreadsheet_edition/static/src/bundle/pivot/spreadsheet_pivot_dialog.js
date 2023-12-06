@@ -8,7 +8,7 @@ import * as spreadsheet from "@koda/o-spreadsheet";
 
 import { makePivotFormula } from "@spreadsheet/pivot/pivot_helpers";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 const formatValue = spreadsheet.helpers.formatValue;
 
 /**

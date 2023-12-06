@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 import { DocumentsInspector } from "@documents/views/inspector/documents_inspector";
 import { patch } from '@web/core/utils/patch';
 import { useService } from "@web/core/utils/hooks";

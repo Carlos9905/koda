@@ -6,7 +6,7 @@ import { registry } from "@web/core/registry";
 import { getFixture, patchWithCleanup } from "../../helpers/utils";
 import { createElement } from "@web/core/utils/xml";
 import { makeFakeLocalizationService } from "@web/../tests/helpers/mock_services";
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 function compileTemplate(arch) {
     const parser = new DOMParser();

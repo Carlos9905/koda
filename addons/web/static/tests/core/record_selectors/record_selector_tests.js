@@ -6,7 +6,7 @@ import { getFixture, mount, click } from "../../helpers/utils";
 import { registry } from "@web/core/registry";
 import { hotkeyService } from "@web/core/hotkeys/hotkey_service";
 
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 import { nameService } from "@web/core/name_service";
 import { dialogService } from "@web/core/dialog/dialog_service";
 

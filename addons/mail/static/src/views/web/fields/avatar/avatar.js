@@ -2,7 +2,7 @@
 
 import { useOpenChat } from "@mail/core/web/open_chat_hook";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class Avatar extends Component {
     setup() {

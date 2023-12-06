@@ -19,7 +19,7 @@ import {
     useSubEnv,
     onWillStart,
     useExternalListener,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 const ROUTES = {
     descriptionScreen: 2,

@@ -4,7 +4,7 @@ import { renderToElement } from "@web/core/utils/render";
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { escape } from "@web/core/utils/strings";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 publicWidget.registry.twitter = publicWidget.Widget.extend({
     selector: '.twitter',

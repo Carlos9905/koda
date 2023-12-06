@@ -4,7 +4,7 @@ import { CodeEditor } from "@web/core/code_editor/code_editor";
 import options from '@web_editor/js/editor/snippets.options';
 import { _t } from "@web/core/l10n/translation";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 class CodeEditorDialog extends Component {
     static template = "website.s_embed_code_dialog";

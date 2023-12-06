@@ -5,7 +5,7 @@ import { standardWidgetProps } from '@web/views/widgets/standard_widget_props';
 
 import { PropertiesField } from '@web/views/fields/properties/properties_field';
 
-import { Component, useRef, useState } from '@koda/owl';
+import { Component, useRef, useState } from '@odoo/owl';
 
 export class KnowledgeArticleProperties extends Component {
     static template = 'knowledge.KnowledgeArticleProperties';

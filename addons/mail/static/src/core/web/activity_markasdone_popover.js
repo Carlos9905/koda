@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, onMounted, useExternalListener, useRef, useState } from "@koda/owl";
+import { Component, onMounted, useExternalListener, useRef, useState } from "@odoo/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

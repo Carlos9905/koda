@@ -7,7 +7,7 @@ import {
     useEnv,
     useState,
     useSubEnv,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { useOwnedDialogs, useService } from "@web/core/utils/hooks";
 import { viewTypeToString } from "@web_studio/studio_service";
 import {

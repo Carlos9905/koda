@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { CommandPalette } from "./command_palette";
 
-import { Component, xml, EventBus } from "@koda/owl";
+import { Component, xml, EventBus } from "@odoo/owl";
 
 /**
  * @typedef {import("./command_palette").CommandPaletteConfig} CommandPaletteConfig

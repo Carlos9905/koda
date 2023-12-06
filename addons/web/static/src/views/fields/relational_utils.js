@@ -47,7 +47,7 @@ import {
     useEnv,
     useState,
     useSubEnv,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 //
 // Commons

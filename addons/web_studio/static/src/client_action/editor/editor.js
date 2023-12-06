@@ -1,5 +1,5 @@
 /** @koda-module **/
-import { Component, EventBus, onWillDestroy, useState, useSubEnv, xml } from "@koda/owl";
+import { Component, EventBus, onWillDestroy, useState, useSubEnv, xml } from "@odoo/owl";
 
 import { registry } from "@web/core/registry";
 import { actionService } from "@web/webclient/actions/action_service";

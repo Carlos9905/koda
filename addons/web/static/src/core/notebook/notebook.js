@@ -9,7 +9,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 /**
  * A notebook component that will render only the current page and allow

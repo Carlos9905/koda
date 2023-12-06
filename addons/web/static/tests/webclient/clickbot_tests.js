@@ -5,7 +5,7 @@ import { createWebClient } from "./helpers";
 import { makeDeferred, patchDate, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { browser } from "@web/core/browser/browser";
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { onWillStart, onWillUpdateProps } from "@koda/owl";
+import { onWillStart, onWillUpdateProps } from "@odoo/owl";
 
 let serverData;
 let clickEverywhereDef;

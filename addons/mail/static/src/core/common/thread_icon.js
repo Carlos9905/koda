@@ -2,7 +2,7 @@
 
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 /**
  * @typedef {Object} Props

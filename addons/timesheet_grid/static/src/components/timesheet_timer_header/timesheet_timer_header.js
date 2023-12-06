@@ -5,7 +5,7 @@ import { Domain } from "@web/core/domain";
 import { evaluateExpr } from "@web/core/py_js/py";
 import { TimesheetDisplayTimer } from "../timesheet_display_timer/timesheet_display_timer";
 import { useService, useAutofocus } from "@web/core/utils/hooks";
-import { Component, onWillStart, onWillUpdateProps } from "@koda/owl";
+import { Component, onWillStart, onWillUpdateProps } from "@odoo/owl";
 
 export class TimesheetTimerHeader extends Component {
     static template = "timesheet_grid.TimesheetTimerHeader";

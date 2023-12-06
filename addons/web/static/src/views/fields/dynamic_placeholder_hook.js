@@ -2,7 +2,7 @@
 
 import { usePopover } from "@web/core/popover/popover_hook";
 import { useService } from "@web/core/utils/hooks";
-import { useComponent } from "@koda/owl";
+import { useComponent } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
 import { DynamicPlaceholderPopover } from "./dynamic_placeholder_popover";
 

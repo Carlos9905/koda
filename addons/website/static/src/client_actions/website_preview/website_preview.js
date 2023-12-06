@@ -25,7 +25,7 @@ import {
     useEffect,
     useState,
     useExternalListener,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 class BlockPreview extends Component {}
 BlockPreview.template = 'website.BlockPreview';

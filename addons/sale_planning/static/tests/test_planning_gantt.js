@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 import { Domain } from "@web/core/domain";
 import { getFixture, mount, nextTick, patchDate, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";

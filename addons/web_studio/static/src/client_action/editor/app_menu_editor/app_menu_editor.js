@@ -1,5 +1,5 @@
 /** @koda-module */
-import { Component, useRef, useState } from "@koda/owl";
+import { Component, useRef, useState } from "@odoo/owl";
 import { useBus, useService, useOwnedDialogs } from "@web/core/utils/hooks";
 import { Dialog } from "@web/core/dialog/dialog";
 import { useNestedSortable } from "@web/core/utils/nested_sortable";

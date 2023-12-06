@@ -16,7 +16,7 @@ import { NumberPopup } from "@point_of_sale/app/utils/input_popups/number_popup"
 
 import { SaleOrderList } from "@pos_sale/app/order_management_screen/sale_order_list/sale_order_list";
 import { SaleOrderManagementControlPanel } from "@pos_sale/app/order_management_screen/sale_order_management_control_panel/sale_order_management_control_panel";
-import { Component, onMounted, useRef } from "@koda/owl";
+import { Component, onMounted, useRef } from "@odoo/owl";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 
 /**

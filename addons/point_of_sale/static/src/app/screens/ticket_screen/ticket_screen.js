@@ -18,7 +18,7 @@ import { CenteredIcon } from "@point_of_sale/app/generic_components/centered_ico
 import { ReprintReceiptButton } from "@point_of_sale/app/screens/ticket_screen/reprint_receipt_button/reprint_receipt_button";
 import { SearchBar } from "@point_of_sale/app/screens/ticket_screen/search_bar/search_bar";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component, onMounted, useState } from "@koda/owl";
+import { Component, onMounted, useState } from "@odoo/owl";
 import { Numpad } from "@point_of_sale/app/generic_components/numpad/numpad";
 
 const { DateTime } = luxon;

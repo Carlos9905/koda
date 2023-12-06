@@ -5,7 +5,7 @@ import { useService } from "@web/core/utils/hooks";
 import { useRecordObserver } from "@web/model/relational_model/utils";
 
 import { formatDate } from "@web/core/l10n/dates";
-import { Component, useState, onWillStart } from "@koda/owl";
+import { Component, useState, onWillStart } from "@odoo/owl";
 
 const { DateTime } = luxon;
 

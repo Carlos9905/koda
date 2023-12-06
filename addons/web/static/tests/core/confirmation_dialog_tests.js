@@ -15,7 +15,7 @@ import {
     triggerHotkey,
 } from "../helpers/utils";
 import { makeFakeDialogService } from "../helpers/mock_services";
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 let target;

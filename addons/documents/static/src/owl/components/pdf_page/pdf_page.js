@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, onMounted, onPatched, useState, useRef } from "@koda/owl";
+import { Component, onMounted, onPatched, useState, useRef } from "@odoo/owl";
 
 /**
  * Represents the page of a PDF.

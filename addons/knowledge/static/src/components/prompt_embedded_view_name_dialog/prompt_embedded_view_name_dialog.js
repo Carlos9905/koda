@@ -5,7 +5,7 @@ import { Dialog } from "@web/core/dialog/dialog";
 import {
     Component,
     onMounted,
-    useRef } from "@koda/owl";
+    useRef } from "@odoo/owl";
 
 export class PromptEmbeddedViewNameDialog extends Component {
     /**

@@ -2,7 +2,7 @@
 
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 import { useService } from "@web/core/utils/hooks";
-import { Component, markup } from "@koda/owl";
+import { Component, markup } from "@odoo/owl";
 import { SignRefusalDialog } from "@sign/dialogs/dialogs";
 
 export class SignableRequestControlPanel extends Component {

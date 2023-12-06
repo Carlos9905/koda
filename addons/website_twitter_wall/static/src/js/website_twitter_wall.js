@@ -5,7 +5,7 @@ import { renderToElement } from "@web/core/utils/render";
 import Widget from "@web/legacy/js/core/widget";
 import publicWidget from "@web/legacy/js/public/public_widget";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 var TweetWall = Widget.extend({
     template: 'website_twitter_wall_tweets',

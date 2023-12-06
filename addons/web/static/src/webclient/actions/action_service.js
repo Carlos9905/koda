@@ -24,7 +24,7 @@ import {
     useChildSubEnv,
     xml,
     reactive,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { downloadReport, getReportUrl } from "./reports/utils";
 
 class BlankComponent extends Component {

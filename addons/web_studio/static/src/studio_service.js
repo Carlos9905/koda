@@ -4,7 +4,7 @@ import { resetViewCompilerCache } from "@web/views/view_compiler";
 import { _t } from "@web/core/l10n/translation";
 import { cookie } from "@web/core/browser/cookie";
 
-import { EventBus, onWillUnmount, useState } from "@koda/owl";
+import { EventBus, onWillUnmount, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 const URL_VIEW_KEY = "_view_type";

@@ -8,7 +8,7 @@ import { getFieldContext } from "@web/model/relational_model/utils";
 import { archParseBoolean, getClassNameFromDecoration, X2M_TYPES } from "@web/views/utils";
 import { getTooltipInfo } from "./field_tooltip";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 const isSmall = utils.isSmall;
 

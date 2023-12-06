@@ -6,7 +6,7 @@ import { FilterEditorFieldMatching } from "./filter_editor_field_matching";
 import { useService } from "@web/core/utils/hooks";
 import { MultiRecordSelector } from "@web/core/record_selectors/multi_record_selector";
 
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 /**
  * @typedef {import("@spreadsheet/data_sources/metadata_repository").Field} Field

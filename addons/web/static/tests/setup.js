@@ -13,7 +13,7 @@ import { loadLanguages } from "@web/core/l10n/translation";
 transitionConfig.disabled = true;
 
 import { patch } from "@web/core/utils/patch";
-import { App, EventBus, whenReady } from "@koda/owl";
+import { App, EventBus, whenReady } from "@odoo/owl";
 import { currencies } from "@web/core/currency";
 import { cookie } from "@web/core/browser/cookie";
 

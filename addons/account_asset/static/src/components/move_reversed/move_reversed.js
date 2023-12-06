@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { registry } from "@web/core/registry";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class MoveReversed extends Component {}
 MoveReversed.template = "account_asset.moveReversed";

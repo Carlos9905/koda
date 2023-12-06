@@ -6,7 +6,7 @@ import { loadBundle } from "@web/core/assets";
 
 import { FullscreenIndication } from '../components/fullscreen_indication/fullscreen_indication';
 import { WebsiteLoader } from '../components/website_loader/website_loader';
-import { reactive, EventBus } from "@koda/owl";
+import { reactive, EventBus } from "@odoo/owl";
 
 const websiteSystrayRegistry = registry.category('website_systray');
 

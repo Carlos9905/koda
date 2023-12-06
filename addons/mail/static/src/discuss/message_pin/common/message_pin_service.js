@@ -6,7 +6,7 @@ import { Message as MessageModel } from "@mail/core/common/message_model";
 import { Record } from "@mail/core/common/record";
 import { Thread } from "@mail/core/common/thread_model";
 
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";

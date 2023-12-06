@@ -4,7 +4,7 @@ import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 import { loadLanguages, _t } from "@web/core/l10n/translation";
 
-import { Component, onWillStart } from "@koda/owl";
+import { Component, onWillStart } from "@odoo/owl";
 
 export class TranslationDialog extends Component {
     setup() {

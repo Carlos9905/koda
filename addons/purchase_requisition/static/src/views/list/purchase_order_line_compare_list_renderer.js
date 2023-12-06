@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { onWillStart, useState, useSubEnv } from "@koda/owl";
+import { onWillStart, useState, useSubEnv } from "@odoo/owl";
 
 export class PurchaseOrderLineCompareListRenderer extends ListRenderer {
     setup() {

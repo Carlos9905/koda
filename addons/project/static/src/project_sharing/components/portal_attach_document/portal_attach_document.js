@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { PortalFileInput } from '../portal_file_input/portal_file_input';
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class PortalAttachDocument extends Component {}
 

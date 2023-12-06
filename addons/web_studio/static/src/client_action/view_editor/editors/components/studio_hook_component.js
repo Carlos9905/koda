@@ -1,5 +1,5 @@
 /** @koda-module **/
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 const formGrid = xml`
     <div class="o_web_studio_hook"

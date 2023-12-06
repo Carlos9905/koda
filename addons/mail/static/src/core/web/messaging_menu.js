@@ -4,7 +4,7 @@ import { ImStatus } from "@mail/core/common/im_status";
 import { NotificationItem } from "@mail/core/web/notification_item";
 import { onExternalClick, useDiscussSystray } from "@mail/utils/common/hooks";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 import { hasTouch } from "@web/core/browser/feature_detection";
 import { Dropdown } from "@web/core/dropdown/dropdown";

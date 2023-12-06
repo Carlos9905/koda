@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { onMounted, onWillUnmount } from "@koda/owl";
+import { onMounted, onWillUnmount } from "@odoo/owl";
 
 /**
  * Creates an interval that will call the given callback every

@@ -1,7 +1,7 @@
 /** @koda-module */
 import { listView } from "@web/views/list/list_view";
 import { useThrottleForAnimation } from "@web/core/utils/timing";
-import { reactive, useEffect, useState } from "@koda/owl";
+import { reactive, useEffect, useState } from "@odoo/owl";
 import { AddButtonAction } from "../../interactive_editor/action_button/action_button";
 
 const colSelectedClass = "o-web-studio-editor--element-clicked";

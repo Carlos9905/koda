@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, useRef, useState } from "@koda/owl";
+import { Component, useRef, useState } from "@odoo/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { useService } from "@web/core/utils/hooks";

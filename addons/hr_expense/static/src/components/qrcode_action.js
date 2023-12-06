@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { registry } from "@web/core/registry";
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { sprintf } from "@web/core/utils/strings";
 
 const actionRegistry = registry.category("actions");

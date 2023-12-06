@@ -3,7 +3,7 @@
 import { SERVICES_METADATA } from "@web/env";
 import { isMobileOS } from "@web/core/browser/feature_detection";
 
-import { status, useComponent, useEffect, useRef, onWillUnmount } from "@koda/owl";
+import { status, useComponent, useEffect, useRef, onWillUnmount } from "@odoo/owl";
 
 /**
  * This file contains various custom hooks.
@@ -74,7 +74,7 @@ export function useAutofocus({ refName, selectAll, mobile } = {}) {
 /**
  * Ensures a bus event listener is attached and cleared the proper way.
  *
- * @param {import("@koda/owl").EventBus} bus
+ * @param {import("@odoo/owl").EventBus} bus
  * @param {string} eventName
  * @param {EventListener} callback
  */

@@ -8,7 +8,7 @@ import { listView } from "@web/views/list/list_view";
 import { ListRenderer } from "@web/views/list/list_renderer";
 import { ListController } from "@web/views/list/list_controller";
 import { SIZES } from '@web/core/ui/ui_service';
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 import { makeActiveField } from "@web/model/relational_model/utils";
 
 export class AccountMoveLineListController extends ListController {

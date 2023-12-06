@@ -2,7 +2,7 @@
 
 import { FormController } from "@web/views/form/form_controller";
 import { useService } from "@web/core/utils/hooks";
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 
 export class CalendarFormController extends FormController {
     setup() {

@@ -4,7 +4,7 @@ import { Dialog } from "@web/core/dialog/dialog";
 import { DebugMenu } from "@web/core/debug/debug_menu";
 import { useOwnDebugContext } from "@web/core/debug/debug_context";
 
-import { useEffect } from "@koda/owl";
+import { useEffect } from "@odoo/owl";
 
 export class ActionDialog extends Dialog {
     setup() {

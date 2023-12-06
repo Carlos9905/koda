@@ -11,7 +11,7 @@ import { omit } from "@web/core/utils/objects";
 import { _t } from "@web/core/l10n/translation";
 import { SpreadsheetSelectorDialog } from "@spreadsheet_edition/assets/components/spreadsheet_selector_dialog/spreadsheet_selector_dialog";
 
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 
 patch(PivotRenderer.prototype, {
     setup() {

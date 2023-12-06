@@ -18,7 +18,7 @@ import {
     onWillUnmount,
     useExternalListener,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 // Time (in ms, so 2 minutes) after which the user is considered inactive
 // and the app goes back to the main screen

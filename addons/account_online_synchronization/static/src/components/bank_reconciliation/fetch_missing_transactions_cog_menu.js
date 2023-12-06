@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";

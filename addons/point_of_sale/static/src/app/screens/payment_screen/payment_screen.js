@@ -15,7 +15,7 @@ import { ConnectionLostError } from "@web/core/network/rpc_service";
 import { PaymentScreenPaymentLines } from "@point_of_sale/app/screens/payment_screen/payment_lines/payment_lines";
 import { PaymentScreenStatus } from "@point_of_sale/app/screens/payment_screen/payment_status/payment_status";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component, useState, onMounted } from "@koda/owl";
+import { Component, useState, onMounted } from "@odoo/owl";
 import { Numpad } from "@point_of_sale/app/generic_components/numpad/numpad";
 import { floatIsZero } from "@web/core/utils/numbers";
 import { OrderReceipt } from "@point_of_sale/app/screens/receipt_screen/receipt/order_receipt";

@@ -5,7 +5,7 @@ import { parseHash, parseSearchQuery, routeToUrl } from "@web/core/browser/route
 import { makeFakeRouterService } from "../helpers/mock_services";
 import { nextTick, patchWithCleanup } from "../helpers/utils";
 
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 async function createRouter(params = {}) {
     const env = params.env || {};

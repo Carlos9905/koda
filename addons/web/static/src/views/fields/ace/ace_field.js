@@ -6,7 +6,7 @@ import { useBus } from "@web/core/utils/hooks";
 import { standardFieldProps } from "../standard_field_props";
 
 import { CodeEditor } from "@web/core/code_editor/code_editor";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { useRecordObserver } from "@web/model/relational_model/utils";
 import { formatText } from "@web/views/fields/formatters";
 import { cookie } from "@web/core/browser/cookie";

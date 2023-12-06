@@ -4,7 +4,7 @@ import { _t } from "@web/core/l10n/translation";
 import { Dialog } from '@web/core/dialog/dialog';
 import { FormViewDialog } from '@web/views/view_dialogs/form_view_dialog';
 import { useChildRef, useService } from '@web/core/utils/hooks';
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class AddSocialStreamDialog extends Component {
 

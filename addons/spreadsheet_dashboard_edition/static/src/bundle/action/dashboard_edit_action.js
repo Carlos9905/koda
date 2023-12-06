@@ -6,7 +6,7 @@ import { SpreadsheetComponent } from "@spreadsheet_edition/bundle/actions/spread
 import { SpreadsheetControlPanel } from "@spreadsheet_edition/bundle/actions/control_panel/spreadsheet_control_panel";
 import { _t } from "@web/core/l10n/translation";
 
-import { useSubEnv } from "@koda/owl";
+import { useSubEnv } from "@odoo/owl";
 
 export class DashboardEditAction extends AbstractSpreadsheetAction {
     resModel = "spreadsheet.dashboard";

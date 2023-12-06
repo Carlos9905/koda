@@ -28,7 +28,7 @@ import {
     useEffect,
     onWillUnmount,
     status,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { uniqueId } from '@web/core/utils/functions';
 // Ensure `@web/views/fields/html/html_field` is loaded first as this module
 // must override the html field in the registry.

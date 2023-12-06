@@ -6,7 +6,7 @@ import { stepUtils } from "@web_tour/tour_service/tour_utils";
 
 import EventAdditionalTourSteps from "@event/js/tours/event_steps";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 registry.category("web_tour.tours").add('event_tour', {
     url: '/web',

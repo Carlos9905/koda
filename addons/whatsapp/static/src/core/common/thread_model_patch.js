@@ -5,7 +5,7 @@ import { assignDefined, assignIn } from "@mail/utils/common/misc";
 import { patch } from "@web/core/utils/patch";
 import { deserializeDateTime } from "@web/core/l10n/dates";
 
-import { toRaw } from "@koda/owl";
+import { toRaw } from "@odoo/owl";
 
 patch(Thread, {
     _insert(data) {

@@ -22,7 +22,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 import { ActionSwiper } from "@web/core/action_swiper/action_swiper";
 import { hasTouch } from "@web/core/browser/feature_detection";

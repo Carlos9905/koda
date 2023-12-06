@@ -6,7 +6,7 @@ import { formView } from "@web/views/form/form_view";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { ViewButton } from "@web/views/view_button/view_button";
-import { useSubEnv, useEnv } from "@koda/owl";
+import { useSubEnv, useEnv } from "@odoo/owl";
 
 /*
 * Common code for theme installation/update handler.

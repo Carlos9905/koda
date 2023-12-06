@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, reactive, useExternalListener, useState } from "@koda/owl";
+import { Component, reactive, useExternalListener, useState } from "@odoo/owl";
 import { useAutofocus, useService } from "@web/core/utils/hooks";
 import { BG_COLORS, COLORS, ICONS } from "@web_studio/utils";
 import { ModelConfigurator } from "@web_studio/client_action/model_configurator/model_configurator";

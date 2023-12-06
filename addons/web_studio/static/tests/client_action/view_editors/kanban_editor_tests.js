@@ -17,7 +17,7 @@ import {
 import { KanbanRecord } from "@web/views/kanban/kanban_record";
 import { registry } from "@web/core/registry";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
-import { onWillRender } from "@koda/owl";
+import { onWillRender } from "@odoo/owl";
 
 /** @type {Node} */
 let target;

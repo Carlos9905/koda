@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { registry } from "@web/core/registry";
-import { Component, onMounted, onWillUnmount, useRef } from "@koda/owl";
+import { Component, onMounted, onWillUnmount, useRef } from "@odoo/owl";
 
 export class VisitorForm extends Component {
     setup() {

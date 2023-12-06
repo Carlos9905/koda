@@ -24,7 +24,7 @@ import {
     loadState,
 } from "@web/../tests/webclient/helpers";
 
-import { Component, onWillStart, xml } from "@koda/owl";
+import { Component, onWillStart, xml } from "@odoo/owl";
 const actionRegistry = registry.category("actions");
 
 function getBreadCrumbTexts(target) {

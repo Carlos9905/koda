@@ -2,7 +2,7 @@
 
 import {
     Component,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { useForwardRefToParent } from "@web/core/utils/hooks";
 
 export class BehaviorToolbar extends Component {

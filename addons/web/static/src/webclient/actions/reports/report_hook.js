@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { useComponent, useEffect } from "@koda/owl";
+import { useComponent, useEffect } from "@odoo/owl";
 
 /**
  * Hook used to enrich html and provide automatic links to action.

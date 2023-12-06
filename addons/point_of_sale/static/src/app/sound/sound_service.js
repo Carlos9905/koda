@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, reactive, xml } from "@koda/owl";
+import { Component, reactive, xml } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
 registry

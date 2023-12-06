@@ -1,7 +1,7 @@
 /** @koda-module **/
 import { PreparationDisplay } from "@pos_preparation_display/app/components/preparation_display/preparation_display";
 import { makeEnv, startServices } from "@web/env";
-import { App, whenReady } from "@koda/owl";
+import { App, whenReady } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { session } from "@web/session";
 import { _t } from "@web/core/l10n/translation";

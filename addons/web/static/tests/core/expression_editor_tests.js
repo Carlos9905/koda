@@ -9,7 +9,7 @@ import {
     nextTick,
     patchWithCleanup,
 } from "../helpers/utils";
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { ExpressionEditor } from "@web/core/expression_editor/expression_editor";
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { makeTestEnv } from "../helpers/mock_env";

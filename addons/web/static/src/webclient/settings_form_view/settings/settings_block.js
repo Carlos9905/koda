@@ -3,7 +3,7 @@
 import { HighlightText } from "../highlight_text/highlight_text";
 import { escapeRegExp } from "@web/core/utils/strings";
 
-import { Component, useState, useRef, useEffect, onWillRender, useChildSubEnv } from "@koda/owl";
+import { Component, useState, useRef, useEffect, onWillRender, useChildSubEnv } from "@odoo/owl";
 
 export class SettingsBlock extends Component {
     setup() {

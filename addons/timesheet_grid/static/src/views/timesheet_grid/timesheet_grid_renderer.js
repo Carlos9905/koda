@@ -2,7 +2,7 @@
 
 import { deserializeDate } from "@web/core/l10n/dates";
 import { GridRenderer } from "@web_grid/views/grid_renderer";
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 
 export class TimesheetGridRenderer extends GridRenderer {
     static components = {

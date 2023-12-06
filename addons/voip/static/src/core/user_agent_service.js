@@ -1,7 +1,7 @@
 /* @koda-module */
 /* global SIP */
 
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 
 import { Registerer } from "@voip/core/registerer";
 

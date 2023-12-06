@@ -3,7 +3,7 @@ import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { formatFloat } from "@web/views/fields/formatters";
 import { registry } from "@web/core/registry";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 export class SendcloudProductSelectionWidget extends Component {
     setup() {

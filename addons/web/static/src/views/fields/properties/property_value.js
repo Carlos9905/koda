@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { AutoComplete } from "@web/core/autocomplete/autocomplete";
 import { CheckBox } from "@web/core/checkbox/checkbox";
 import { DateTimeInput } from "@web/core/datetime/datetime_input";

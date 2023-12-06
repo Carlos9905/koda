@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { onMounted, onWillStart, status } from "@koda/owl";
+import { onMounted, onWillStart, status } from "@odoo/owl";
 import { FormController } from "@web/views/form/form_controller";
 import { registry } from "@web/core/registry";
 import { click, getFixture, makeDeferred, nextTick, patchWithCleanup } from "@web/../tests/helpers/utils";

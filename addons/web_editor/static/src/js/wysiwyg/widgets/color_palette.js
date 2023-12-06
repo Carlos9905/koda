@@ -15,7 +15,7 @@ import {
     onWillStart,
     onMounted,
     onWillUpdateProps,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class ColorPalette extends Component {
     static template = 'web_editor.ColorPalette';

@@ -1,5 +1,5 @@
 /** @koda-module */
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { ModelFieldSelector } from "@web/core/model_field_selector/model_field_selector";

@@ -10,7 +10,7 @@ import { Dropdown } from "@web/core/dropdown/dropdown";
 import { useCommand } from "@web/core/commands/command_hook";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 
-import { Component, useState, onMounted, useExternalListener, useRef, useEffect } from "@koda/owl";
+import { Component, useState, onMounted, useExternalListener, useRef, useEffect } from "@odoo/owl";
 
 const STICKY_CLASS = "o_mobile_sticky";
 

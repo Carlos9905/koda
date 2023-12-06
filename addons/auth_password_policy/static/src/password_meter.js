@@ -2,7 +2,7 @@
 
 import { _t } from "@web/core/l10n/translation";
 import { computeScore } from "./password_policy";
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 export class Meter extends Component {
     get title() {

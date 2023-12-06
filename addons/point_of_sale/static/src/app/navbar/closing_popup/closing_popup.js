@@ -5,7 +5,7 @@ import { SaleDetailsButton } from "@point_of_sale/app/navbar/sale_details_button
 import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_popup";
 import { MoneyDetailsPopup } from "@point_of_sale/app/utils/money_details_popup/money_details_popup";
 import { useService } from "@web/core/utils/hooks";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { ConnectionLostError } from "@web/core/network/rpc_service";
 import { _t } from "@web/core/l10n/translation";

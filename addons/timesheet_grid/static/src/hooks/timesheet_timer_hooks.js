@@ -15,7 +15,7 @@ import {
     useEffect,
     useExternalListener,
     useSubEnv,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class TimesheetTimerRendererHook {
     constructor(propsList, env) {

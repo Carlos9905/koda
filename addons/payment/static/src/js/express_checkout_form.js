@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import publicWidget from '@web/legacy/js/public/public_widget';
-import { Component } from '@koda/owl';
+import { Component } from '@odoo/owl';
 
 publicWidget.registry.PaymentExpressCheckoutForm = publicWidget.Widget.extend({
     selector: 'form[name="o_payment_express_checkout_form"]',

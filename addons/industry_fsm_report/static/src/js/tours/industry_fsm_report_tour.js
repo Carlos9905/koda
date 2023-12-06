@@ -4,7 +4,7 @@
  * Adapt the step that is specific to the work details when the `worksheet` module is not installed.
  */
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 import { registry } from "@web/core/registry";
 import { _t } from "@web/core/l10n/translation";

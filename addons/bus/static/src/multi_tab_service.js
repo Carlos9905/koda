@@ -2,7 +2,7 @@
 
 import { registry } from "@web/core/registry";
 import { browser } from "@web/core/browser/browser";
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 let multiTabId = 0;
 /**

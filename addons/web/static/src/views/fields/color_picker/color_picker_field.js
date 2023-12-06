@@ -4,7 +4,7 @@ import { ColorList } from "@web/core/colorlist/colorlist";
 import { registry } from "@web/core/registry";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class ColorPickerField extends Component {
     static template = "web.ColorPickerField";

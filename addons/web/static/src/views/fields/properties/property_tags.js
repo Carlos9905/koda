@@ -8,7 +8,7 @@ import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { TagsList } from "@web/core/tags_list/tags_list";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 class PropertyTagsColorListPopover extends Component {}
 PropertyTagsColorListPopover.template = "web.PropertyTagsColorListPopover";

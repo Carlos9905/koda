@@ -13,7 +13,7 @@ import { HtmlField, htmlField } from "@web_editor/js/backend/html_field";
 import { MassMailingMobilePreviewDialog } from "./mass_mailing_mobile_preview";
 import { getRangePosition } from '@web_editor/js/editor/koda-editor/src/utils/utils';
 import { utils as uiUtils } from "@web/core/ui/ui_service";
-import { useSubEnv, status, markup } from "@koda/owl";
+import { useSubEnv, status, markup } from "@odoo/owl";
 
 export class MassMailingHtmlField extends HtmlField {
     static props = {

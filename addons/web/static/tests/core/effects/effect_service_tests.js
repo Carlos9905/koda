@@ -16,7 +16,7 @@ import {
     patchWithCleanup,
 } from "../../helpers/utils";
 
-import { Component, markup, xml } from "@koda/owl";
+import { Component, markup, xml } from "@odoo/owl";
 import { MainComponentsContainer } from "@web/core/main_components_container";
 const serviceRegistry = registry.category("services");
 

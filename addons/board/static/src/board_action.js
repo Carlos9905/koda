@@ -3,7 +3,7 @@
 import { useService } from "@web/core/utils/hooks";
 import { View } from "@web/views/view";
 import { makeContext } from "@web/core/context";
-import { Component, onWillStart } from "@koda/owl";
+import { Component, onWillStart } from "@odoo/owl";
 
 export class BoardAction extends Component {
     setup() {

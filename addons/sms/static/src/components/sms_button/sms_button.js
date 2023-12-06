@@ -2,7 +2,7 @@
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
-import { Component, status } from "@koda/owl";
+import { Component, status } from "@odoo/owl";
 
 export class SendSMSButton extends Component {
     setup() {

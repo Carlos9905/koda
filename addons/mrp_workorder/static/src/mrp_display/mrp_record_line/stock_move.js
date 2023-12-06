@@ -2,7 +2,7 @@
 
 import { _t } from "@web/core/l10n/translation";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class StockMove extends Component {
     static props = {

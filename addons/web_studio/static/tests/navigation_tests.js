@@ -31,7 +31,7 @@ import { StudioView } from "@web_studio/client_action/view_editor/studio_view";
 import { ViewEditor } from "@web_studio/client_action/view_editor/view_editor";
 import { StudioClientAction } from "@web_studio/client_action/studio_client_action";
 import { ListEditorRenderer } from "@web_studio/client_action/view_editor/editors/list/list_editor_renderer";
-import { onMounted } from "@koda/owl";
+import { onMounted } from "@odoo/owl";
 import { selectorContains } from "@web_studio/../tests/client_action/view_editors/view_editor_tests_utils";
 
 // -----------------------------------------------------------------------------

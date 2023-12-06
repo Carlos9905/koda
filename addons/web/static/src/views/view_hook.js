@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { browser } from "@web/core/browser/browser";
 import { evaluateExpr } from "@web/core/py_js/py";
 
-import { useComponent, useEffect, xml } from "@koda/owl";
+import { useComponent, useEffect, xml } from "@odoo/owl";
 
 export function useSetupView(params) {
     const component = useComponent();

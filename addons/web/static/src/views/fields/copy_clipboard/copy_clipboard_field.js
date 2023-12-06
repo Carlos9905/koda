@@ -11,7 +11,7 @@ import { CharField } from "../char/char_field";
 import { TextField } from "../text/text_field";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 class CopyClipboardField extends Component {
     static template = "web.CopyClipboardField";

@@ -8,7 +8,7 @@ import { useService } from "@web/core/utils/hooks";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 
-import { Component, markup } from "@koda/owl";
+import { Component, markup } from "@odoo/owl";
 
 
 class PeppolSettingsButtons extends Component {

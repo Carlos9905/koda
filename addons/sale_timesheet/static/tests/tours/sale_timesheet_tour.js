@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 registry.category("web_tour.tours").add('sale_timesheet_tour', {
     test: true,

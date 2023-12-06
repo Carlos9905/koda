@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, onWillStart, useRef } from "@koda/owl";
+import { Component, onWillStart, useRef } from "@odoo/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { Dialog } from "@web/core/dialog/dialog";

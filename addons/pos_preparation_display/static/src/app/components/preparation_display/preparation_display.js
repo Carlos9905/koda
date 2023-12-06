@@ -3,7 +3,7 @@ import { Category } from "@pos_preparation_display/app/components/category/categ
 import { Stages } from "@pos_preparation_display/app/components/stages/stages";
 import { Order } from "@pos_preparation_display/app/components/order/order";
 import { usePreparationDisplay } from "@pos_preparation_display/app/preparation_display_service";
-import { Component, onPatched, useState } from "@koda/owl";
+import { Component, onPatched, useState } from "@odoo/owl";
 
 export class PreparationDisplay extends Component {
     static props = {};

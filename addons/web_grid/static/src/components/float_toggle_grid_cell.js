@@ -5,7 +5,7 @@ import { formatFloatFactor } from "@web/views/fields/formatters";
 import { useGridCell, useMagnifierGlass } from "@web_grid/hooks/grid_cell_hook";
 import { standardGridCellProps } from "./grid_cell";
 
-import { Component, useRef, useState, useEffect } from "@koda/owl";
+import { Component, useRef, useState, useEffect } from "@odoo/owl";
 
 function formatter(value, options = {}) {
     return formatFloatFactor(value, options);

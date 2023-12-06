@@ -5,7 +5,7 @@ import { uniqueId } from "@web/core/utils/functions";
 import { renderToString } from "@web/core/utils/render";
 import { listenSizeChange, utils as uiUtils } from "@web/core/ui/ui_service";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 const DEFAULT_NUMBER_OF_ELEMENTS = 4;
 const DEFAULT_NUMBER_OF_ELEMENTS_SM = 1;

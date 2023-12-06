@@ -4,7 +4,7 @@ import { Dialog } from '@web/core/dialog/dialog';
 import { useService } from "@web/core/utils/hooks";
 import { SelectMenu } from '@web/core/select_menu/select_menu';
 
-import { Component, onWillStart, useEffect, useRef, useState } from "@koda/owl";
+import { Component, onWillStart, useEffect, useRef, useState } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
 
 class MoveArticleDialog extends Component {

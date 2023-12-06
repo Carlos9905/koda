@@ -16,7 +16,7 @@ import { makeFakeNotificationService } from "@web/../tests/helpers/mock_services
 import { ImportDataProgress } from "../src/import_data_progress/import_data_progress";
 import { ImportAction } from "../src/import_action/import_action";
 import { ImportBlockUI } from "../src/import_block_ui";
-import { useEffect } from "@koda/owl";
+import { useEffect } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

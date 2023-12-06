@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { registry } from "../registry";
-import { Component, markRaw, reactive, xml } from "@koda/owl";
+import { Component, markRaw, reactive, xml } from "@odoo/owl";
 import { WithEnv } from "../utils/components";
 
 class DialogWrapper extends Component {
@@ -22,7 +22,7 @@ class DialogWrapper extends Component {
 /**
  *  @typedef {{
  *      add(
- *          Component: typeof import("@koda/owl").Component,
+ *          Component: typeof import("@odoo/owl").Component,
  *          props: {},
  *          options?: DialogServiceInterfaceAddOptions
  *      ): () => void;

@@ -25,7 +25,7 @@ import {
     useExternalListener,
     onWillStart,
     onPatched,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class AnalyticDistribution extends Component {
     static template = "analytic.AnalyticDistribution";

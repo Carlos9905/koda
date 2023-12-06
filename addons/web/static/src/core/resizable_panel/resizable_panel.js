@@ -9,7 +9,7 @@ import {
     useExternalListener,
     useRef,
     useComponent,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 function useResizable({
     containerRef,

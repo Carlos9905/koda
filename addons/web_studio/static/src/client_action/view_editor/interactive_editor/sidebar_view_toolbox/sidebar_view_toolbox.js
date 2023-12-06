@@ -1,5 +1,5 @@
 /** @koda-module */
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class SidebarViewToolbox extends Component {
     static template = "web_studio.ViewEditor.ViewToolbox";

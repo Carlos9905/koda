@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { EmbeddedListView } from "./embedded_list_view";
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { useState, onWillUnmount } from "@koda/owl";
+import { useState, onWillUnmount } from "@odoo/owl";
 
 export class BankRecAmlsRenderer extends ListRenderer {
     setup() {

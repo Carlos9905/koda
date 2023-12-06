@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, onWillStart, onWillUpdateProps, useState, toRaw } from "@koda/owl";
+import { Component, onWillStart, onWillUpdateProps, useState, toRaw } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { Property } from "@web_studio/client_action/view_editor/property/property";

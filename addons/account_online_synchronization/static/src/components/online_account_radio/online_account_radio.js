@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { onMounted, useState } from "@koda/owl";
+import { onMounted, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { RadioField, radioField } from "@web/views/fields/radio/radio_field";
 import { useService } from '@web/core/utils/hooks';

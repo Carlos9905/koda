@@ -15,7 +15,7 @@ import {
     onWillUpdateProps,
     useState,
     useRef,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 class FooterComponent extends Component {
     setup() {

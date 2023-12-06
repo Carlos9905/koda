@@ -2,7 +2,7 @@
 
 import { ActivityListPopoverItem } from "@mail/core/web/activity_list_popover_item";
 
-import { Component, onWillUpdateProps, useState } from "@koda/owl";
+import { Component, onWillUpdateProps, useState } from "@odoo/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

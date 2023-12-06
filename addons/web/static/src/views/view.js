@@ -20,7 +20,7 @@ import {
     toRaw,
     useSubEnv,
     reactive,
-} from "@koda/owl";
+} from "@odoo/owl";
 const viewRegistry = registry.category("views");
 
 /** @typedef {Object} Config

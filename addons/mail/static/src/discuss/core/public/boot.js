@@ -2,7 +2,7 @@
 
 import { DiscussPublic } from "@mail/discuss/core/public/discuss_public";
 
-import { mount, whenReady } from "@koda/owl";
+import { mount, whenReady } from "@odoo/owl";
 
 import { templates } from "@web/core/assets";
 import { MainComponentsContainer } from "@web/core/main_components_container";

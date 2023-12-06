@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import wTourUtils from "@website/js/tours/tour_utils";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 wTourUtils.registerWebsitePreviewTour('slides_tour', {
     url: '/slides',

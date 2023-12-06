@@ -2,7 +2,7 @@
 
 import { _t } from "@web/core/l10n/translation";
 import { useBus, useService } from '@web/core/utils/hooks';
-import { useRef, useEffect, useState } from "@koda/owl";
+import { useRef, useEffect, useState } from "@odoo/owl";
 
 export const ExpenseDocumentDropZone = (T) => class ExpenseDocumentDropZone extends T {
     setup() {

@@ -10,7 +10,7 @@ import {
     editInput,
 } from "@web/../tests/helpers/utils";
 
-import { Component, markup, useState, xml } from "@koda/owl";
+import { Component, markup, useState, xml } from "@odoo/owl";
 import { CodeEditor } from "@web/core/code_editor/code_editor";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
 

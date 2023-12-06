@@ -2,7 +2,7 @@
 
 import { useEmojiPicker } from "@web/core/emoji_picker/emoji_picker";
 
-import { useRef } from "@koda/owl";
+import { useRef } from "@odoo/owl";
 
 /*
  * Common code for EmojisTextField and EmojisCharField

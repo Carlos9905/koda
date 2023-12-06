@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, onWillStart, markup } from "@koda/owl";
+import { Component, onWillStart, markup } from "@odoo/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 import { formatDuration } from "@web/core/l10n/dates";

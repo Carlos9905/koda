@@ -5,7 +5,7 @@ import { useService } from "@web/core/utils/hooks";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { ListRenderer } from '@web/views/list/list_renderer';
 
-import { useEffect } from "@koda/owl";
+import { useEffect } from "@odoo/owl";
 
 export class SubtaskListRenderer extends ListRenderer {
     setup() {

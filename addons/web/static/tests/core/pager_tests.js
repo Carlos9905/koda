@@ -14,7 +14,7 @@ import {
 import { registry } from "@web/core/registry";
 import { uiService } from "@web/core/ui/ui_service";
 
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

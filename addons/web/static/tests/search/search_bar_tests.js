@@ -30,7 +30,7 @@ function getDomain(controlPanel) {
     return controlPanel.env.searchModel.domain;
 }
 
-import { Component, onWillUpdateProps, xml } from "@koda/owl";
+import { Component, onWillUpdateProps, xml } from "@odoo/owl";
 import { SearchBar } from "@web/search/search_bar/search_bar";
 
 let target;

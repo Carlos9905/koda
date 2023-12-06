@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { reactive, Component } from "@koda/owl";
+import { reactive, Component } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { Transition } from "@web/core/transition";
 

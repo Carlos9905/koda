@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { useRef, useEffect, useState } from "@koda/owl";
+import { useRef, useEffect, useState } from "@odoo/owl";
 import { formView } from "@web/views/form/form_view";
 import * as formEditorRendererComponents from "@web_studio/client_action/view_editor/editors/form/form_editor_renderer/form_editor_renderer_components";
 

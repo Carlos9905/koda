@@ -12,7 +12,7 @@ import {
     onWillDestroy,
     useState,
     useRef,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { deduceURLfromText } from "@web_editor/js/editor/koda-editor/src/utils/sanitize";
 
 const { getDeepRange, getInSelection, EMAIL_REGEX, PHONE_REGEX } = OdooEditorLib;

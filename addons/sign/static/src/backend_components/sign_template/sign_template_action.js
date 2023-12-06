@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { SignTemplateControlPanel } from "./sign_template_control_panel";
 import { SignTemplateBody } from "./sign_template_body";
-import { Component, onWillStart } from "@koda/owl";
+import { Component, onWillStart } from "@odoo/owl";
 
 export class SignTemplate extends Component {
     setup() {

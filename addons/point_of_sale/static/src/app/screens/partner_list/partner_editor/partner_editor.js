@@ -4,7 +4,7 @@ import { _t } from "@web/core/l10n/translation";
 import { getDataURLFromFile } from "@web/core/utils/urls";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { useService } from "@web/core/utils/hooks";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 
 export class PartnerDetailsEdit extends Component {

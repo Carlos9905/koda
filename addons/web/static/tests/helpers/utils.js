@@ -23,7 +23,7 @@ import {
     onWillUnmount,
     onWillUpdateProps,
     useComponent,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 /**
  * @typedef {keyof HTMLElementEventMap | keyof WindowEventMap} EventType

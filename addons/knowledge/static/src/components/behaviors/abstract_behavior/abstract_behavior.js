@@ -4,7 +4,7 @@ import { useService } from "@web/core/utils/hooks";
 import {
     Component,
     onMounted,
-} from "@koda/owl";
+} from "@odoo/owl";
 import {
     copyOids,
     getPropNameNode,

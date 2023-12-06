@@ -13,7 +13,7 @@ import {
     useRef,
     useState,
     useExternalListener,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 import { usePopover } from "@web/core/popover/popover_hook";
 import { useService } from "@web/core/utils/hooks";

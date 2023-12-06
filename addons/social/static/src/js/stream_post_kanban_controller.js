@@ -8,7 +8,7 @@ import { useModelWithSampleData } from "@web/model/model";
 
 import { KanbanController } from '@web/views/kanban/kanban_controller';
 import { useService } from '@web/core/utils/hooks';
-import { onWillStart, useEffect, useSubEnv, useState } from "@koda/owl";
+import { onWillStart, useEffect, useSubEnv, useState } from "@odoo/owl";
 
 export class StreamPostKanbanController extends KanbanController {
 

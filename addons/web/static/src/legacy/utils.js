@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { App, Component, useState, xml } from "@koda/owl";
+import { App, Component, useState, xml } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { _t } from "@web/core/l10n/translation";
 

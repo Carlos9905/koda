@@ -1,5 +1,5 @@
 /** @koda-module */
-import { reactive, useComponent, useEnv, useSubEnv } from "@koda/owl";
+import { reactive, useComponent, useEnv, useSubEnv } from "@odoo/owl";
 
 export function useDialogConfirmation({ confirm, cancel, before, close }) {
     before = before || (() => {});

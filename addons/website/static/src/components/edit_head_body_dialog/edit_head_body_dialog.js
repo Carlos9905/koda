@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart, useState } from "@koda/owl";
+import { Component, onWillStart, useState } from "@odoo/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { CodeEditor } from "@web/core/code_editor/code_editor";
 

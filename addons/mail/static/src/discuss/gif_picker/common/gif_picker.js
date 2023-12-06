@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, onWillStart, useState, useEffect } from "@koda/owl";
+import { Component, onWillStart, useState, useEffect } from "@odoo/owl";
 import { useOnBottomScrolled, useSequential } from "@mail/utils/common/hooks";
 
 import { useService, useAutofocus } from "@web/core/utils/hooks";

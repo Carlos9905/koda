@@ -34,7 +34,7 @@ import { Record } from "@web/model/relational_model/record";
 import { getPickerCell } from "../../core/datetime/datetime_test_helpers";
 import { makeServerError } from "@web/../tests/helpers/mock_server";
 import { errorService } from "../../../src/core/errors/error_service";
-import { onWillDestroy, onWillStart, reactive, useState } from "@koda/owl";
+import { onWillDestroy, onWillStart, reactive, useState } from "@odoo/owl";
 import { X2ManyField, x2ManyField } from "@web/views/fields/x2many/x2many_field";
 
 const serviceRegistry = registry.category("services");

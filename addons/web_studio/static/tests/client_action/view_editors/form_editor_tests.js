@@ -32,7 +32,7 @@ import { start } from "@mail/../tests/helpers/test_utils";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
 import { RPCError } from "@web/core/network/rpc_service";
 import { setupManager } from "@mail/../tests/helpers/webclient_setup";
-import { Component, EventBus, onMounted, xml } from "@koda/owl";
+import { Component, EventBus, onMounted, xml } from "@odoo/owl";
 import { fieldService } from "@web/core/field_service";
 import { Setting } from "@web/views/form/setting/setting";
 

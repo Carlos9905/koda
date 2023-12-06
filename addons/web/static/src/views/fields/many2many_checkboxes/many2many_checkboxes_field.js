@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, onWillUnmount } from "@koda/owl";
+import { Component, onWillUnmount } from "@odoo/owl";
 import { CheckBox } from "@web/core/checkbox/checkbox";
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";

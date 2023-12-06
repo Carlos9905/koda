@@ -4,7 +4,7 @@ import { registry } from "@web/core/registry";
 import { session } from "@web/session";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 import { useService } from "@web/core/utils/hooks";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 const providerData = {
     google: {

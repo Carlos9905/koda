@@ -3,7 +3,7 @@
 import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class UpgradeDialog extends Component {
     setup() {

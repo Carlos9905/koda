@@ -2,7 +2,7 @@
 
 import { registry } from '@web/core/registry';
 import { useBus } from "@web/core/utils/hooks";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 class FieldIframePreview extends Component {
     setup() {

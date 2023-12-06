@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { onWillUnmount } from "@koda/owl"
+import { onWillUnmount } from "@odoo/owl"
 import { useService } from "@web/core/utils/hooks";
 import { patch } from "@web/core/utils/patch";
 import { TimerTimesheetGridRenderer } from "@timesheet_grid/views/timer_timesheet_grid/timer_timesheet_grid_renderer";

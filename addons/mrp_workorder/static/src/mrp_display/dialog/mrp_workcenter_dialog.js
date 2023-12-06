@@ -2,7 +2,7 @@
 
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { useService } from "@web/core/utils/hooks";
-import { onWillStart, useState } from "@koda/owl";
+import { onWillStart, useState } from "@odoo/owl";
 
 export class MrpWorkcenterDialog extends ConfirmationDialog {
     static template = "mrp_workorder.MrpWorkcenterDialog";

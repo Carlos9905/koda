@@ -2,7 +2,7 @@
 
 import { WysiwygAdapterComponent } from '@website/components/wysiwyg_adapter/wysiwyg_adapter';
 import { patch } from "@web/core/utils/patch";
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 patch(WysiwygAdapterComponent.prototype, {
     /**

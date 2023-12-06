@@ -2,7 +2,7 @@
 /* global html2canvas */
 
 import { registry } from "@web/core/registry";
-import { Component, onRendered, reactive, useRef, xml } from "@koda/owl";
+import { Component, onRendered, reactive, useRef, xml } from "@odoo/owl";
 
 export class RenderContainer extends Component {
     static props = ["comp", "onRendered"];

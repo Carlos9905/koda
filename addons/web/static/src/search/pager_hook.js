@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { useEnv, useChildSubEnv, useState, onWillRender } from "@koda/owl";
+import { useEnv, useChildSubEnv, useState, onWillRender } from "@odoo/owl";
 
 /**
  * @typedef PagerUpdateParams

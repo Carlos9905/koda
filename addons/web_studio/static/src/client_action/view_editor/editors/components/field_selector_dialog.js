@@ -2,7 +2,7 @@
 
 import { Dialog } from "@web/core/dialog/dialog";
 
-import { Component, useRef } from "@koda/owl";
+import { Component, useRef } from "@odoo/owl";
 
 export class FieldSelectorDialog extends Component {
     static props = {

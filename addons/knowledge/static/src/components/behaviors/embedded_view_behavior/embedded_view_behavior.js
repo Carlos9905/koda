@@ -16,7 +16,7 @@ import {
     onWillDestroy,    
     useExternalListener,
     useState,
-    useSubEnv } from "@koda/owl";
+    useSubEnv } from "@odoo/owl";
 
 /**
  * This component will have the responsibility to load the embedded view lazily

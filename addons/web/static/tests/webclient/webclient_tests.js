@@ -14,7 +14,7 @@ import { clearRegistryWithCleanup, makeTestEnv } from "../helpers/mock_env";
 import { fakeTitleService } from "../helpers/mock_services";
 import { destroy, getFixture, mount, patchWithCleanup, triggerEvent } from "../helpers/utils";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 const mainComponentRegistry = registry.category("main_components");
 const serviceRegistry = registry.category("services");
 

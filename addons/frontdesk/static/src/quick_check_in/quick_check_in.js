@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class QuickCheckIn extends Component {

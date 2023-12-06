@@ -16,7 +16,7 @@ import {
     status,
     useEffect,
     useRef
-} from '@koda/owl';
+} from '@odoo/owl';
 
 
 export class KnowledgeCommentsHandler extends Component {

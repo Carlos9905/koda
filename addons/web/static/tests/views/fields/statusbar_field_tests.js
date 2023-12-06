@@ -15,7 +15,7 @@ import { browser } from "@web/core/browser/browser";
 import { registry } from "@web/core/registry";
 import { session } from "@web/session";
 
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 let serverData;
 let target;

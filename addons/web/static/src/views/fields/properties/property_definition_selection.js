@@ -3,7 +3,7 @@
 import { useService } from "@web/core/utils/hooks";
 import { uuid } from "../../utils";
 
-import { Component, useState, useRef, useEffect } from "@koda/owl";
+import { Component, useState, useRef, useEffect } from "@odoo/owl";
 import { useSortable } from "@web/core/utils/sortable_owl";
 
 export class PropertyDefinitionSelection extends Component {

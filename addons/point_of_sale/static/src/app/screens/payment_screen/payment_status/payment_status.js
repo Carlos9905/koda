@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class PaymentScreenStatus extends Component {
     static template = "point_of_sale.PaymentScreenStatus";

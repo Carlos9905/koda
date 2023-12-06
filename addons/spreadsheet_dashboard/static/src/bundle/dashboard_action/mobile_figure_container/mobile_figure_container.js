@@ -2,7 +2,7 @@
 
 import * as spreadsheet from "@koda/o-spreadsheet";
 
-import { Component, useSubEnv } from "@koda/owl";
+import { Component, useSubEnv } from "@odoo/owl";
 const { registries } = spreadsheet;
 const { figureRegistry } = registries;
 

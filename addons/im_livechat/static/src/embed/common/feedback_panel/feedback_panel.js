@@ -3,7 +3,7 @@
 import { RATING } from "@im_livechat/embed/common/livechat_service";
 import { TranscriptSender } from "@im_livechat/embed/common/feedback_panel/transcript_sender";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 import { useService } from "@web/core/utils/hooks";
 import { session } from "@web/session";

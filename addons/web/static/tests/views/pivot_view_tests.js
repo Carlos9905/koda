@@ -36,7 +36,7 @@ import { _t } from "@web/core/l10n/translation";
 
 const serviceRegistry = registry.category("services");
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 /**
  * Helper function that returns, given a pivot instance, the values of the

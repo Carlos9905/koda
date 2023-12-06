@@ -1,5 +1,5 @@
 /** @koda-module **/
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 export class BankRecFinishButtons extends Component {
     static template = "account_accountant.BankRecFinishButtons";

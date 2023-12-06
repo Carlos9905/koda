@@ -4,7 +4,7 @@ import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 import { useHotkey } from "@web/core/hotkeys/hotkey_hook";
 import { useKEProxy } from "./ke_proxy_hook";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 
 export class KEProxyDialog extends Component {

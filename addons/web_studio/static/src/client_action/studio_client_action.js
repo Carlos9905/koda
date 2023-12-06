@@ -11,7 +11,7 @@ import { Editor } from "./editor/editor";
 import { StudioNavbar } from "./navbar/navbar";
 import { StudioHomeMenu } from "./studio_home_menu/studio_home_menu";
 
-import { Component, onWillStart, onMounted, onPatched, onWillUnmount } from "@koda/owl";
+import { Component, onWillStart, onMounted, onPatched, onWillUnmount } from "@odoo/owl";
 import { ormService } from "@web/core/orm_service";
 
 const studioUserService = {

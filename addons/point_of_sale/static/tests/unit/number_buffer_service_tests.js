@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { numberBufferService } from "@point_of_sale/app/utils/number_buffer_service";
 import { registry } from "@web/core/registry";
 
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 
 QUnit.module("unit tests for NumberBuffer", {
     async beforeEach() {

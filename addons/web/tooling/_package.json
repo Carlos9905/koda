@@ -21,7 +21,7 @@
         "@types/luxon": "^3.1.0",
         "@types/qunit": "^2.19.3",
         "@koda/o-spreadsheet": "alpha",
-        "@koda/owl": "^2.0.1"
+        "@odoo/owl": "^2.0.1"
     },
     "lint-staged": {
         "*.js": [

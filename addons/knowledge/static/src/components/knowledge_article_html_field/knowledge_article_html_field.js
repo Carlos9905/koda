@@ -8,7 +8,7 @@ import { ItemCalendarPropsDialog } from "@knowledge/components/item_calendar_pro
 import {
     onWillUnmount,
     onWillUpdateProps,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { KnowledgePlugin } from "@knowledge/js/knowledge_plugin";
 import { PromptEmbeddedViewNameDialog } from "@knowledge/components/prompt_embedded_view_name_dialog/prompt_embedded_view_name_dialog";
 import { registry } from "@web/core/registry";

@@ -2,7 +2,7 @@
 
 import { useService } from "@web/core/utils/hooks";
 
-import { onWillUnmount, status, useComponent, useEnv } from "@koda/owl";
+import { onWillUnmount, status, useComponent, useEnv } from "@odoo/owl";
 import { POPOVER_SYMBOL } from "./popover_controller";
 
 /**
@@ -41,7 +41,7 @@ export function makePopover(popoverService, component, options) {
 /**
  * Manages a component to be used as a popover.
  *
- * @param {typeof import("@koda/owl").Component} component
+ * @param {typeof import("@odoo/owl").Component} component
  * @param {import("@web/core/popover/popover_service").PopoverServiceAddOptions} [options]
  * @returns {PopoverHookReturnType}
  */

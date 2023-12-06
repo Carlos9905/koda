@@ -5,7 +5,7 @@ import { HEADINGS, fetchValidHeadings } from "@knowledge/js/tools/knowledge_tool
 import {
     onWillStart,
     useEffect,
-    useState } from "@koda/owl";
+    useState } from "@odoo/owl";
 
 export class TableOfContentBehavior extends AbstractBehavior {
     static template = "knowledge.TableOfContentBehavior";

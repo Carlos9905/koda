@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { getColor } from "../colors";
 
 export class CalendarMobileFilterPanel extends Component {

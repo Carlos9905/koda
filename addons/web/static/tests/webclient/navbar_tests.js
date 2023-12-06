@@ -20,7 +20,7 @@ import {
     mockTimeout,
 } from "../helpers/utils";
 
-import { Component, xml, onRendered } from "@koda/owl";
+import { Component, xml, onRendered } from "@odoo/owl";
 
 const systrayRegistry = registry.category("systray");
 const serviceRegistry = registry.category("services");

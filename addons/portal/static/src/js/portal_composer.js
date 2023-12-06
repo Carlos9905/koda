@@ -5,7 +5,7 @@ import { escape } from "@web/core/utils/strings";
 import { renderToElement } from "@web/core/utils/render";
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { post } from "@web/core/network/http_service";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { RPCError } from "@web/core/network/rpc_service";
 
 /**

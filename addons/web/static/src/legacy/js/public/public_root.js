@@ -12,7 +12,7 @@ import { loadJS, templates } from '@web/core/assets';
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { browser } from '@web/core/browser/browser';
 import { _t } from "@web/core/l10n/translation";
-import { App, Component, whenReady } from "@koda/owl";
+import { App, Component, whenReady } from "@odoo/owl";
 import { RPCError } from '@web/core/network/rpc_service';
 
 const { Settings } = luxon;

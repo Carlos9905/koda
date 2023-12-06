@@ -28,7 +28,7 @@ import { ListRenderer } from "@web/views/list/list_renderer";
 import { ListEditorRenderer } from "@web_studio/client_action/view_editor/editors/list/list_editor_renderer";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
 import { SIDEBAR_SAFE_FIELDS } from "@web_studio/client_action/view_editor/editors/sidebar_safe_fields";
-import { onWillRender } from "@koda/owl";
+import { onWillRender } from "@odoo/owl";
 
 /** @type {Node} */
 let target;

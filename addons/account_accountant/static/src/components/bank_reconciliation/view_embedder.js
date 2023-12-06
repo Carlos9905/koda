@@ -1,6 +1,6 @@
 /** @koda-module */
 import { View } from "@web/views/view";
-import { Component, useSubEnv } from "@koda/owl";
+import { Component, useSubEnv } from "@odoo/owl";
 
 export class BankRecViewEmbedder extends Component {
     static props = ["viewProps"];

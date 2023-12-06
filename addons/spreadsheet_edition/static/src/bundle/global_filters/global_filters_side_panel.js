@@ -2,7 +2,7 @@
 
 import { FilterValue } from "@spreadsheet/global_filters/components/filter_value/filter_value";
 import { _t } from "@web/core/l10n/translation";
-import { Component, useRef } from "@koda/owl";
+import { Component, useRef } from "@odoo/owl";
 import { hooks } from "@koda/o-spreadsheet";
 
 /**

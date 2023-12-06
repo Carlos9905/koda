@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 registry.category("web_tour.tours").add("discuss_channel_tour", {
     url: "/web#action=mail.action_discuss",

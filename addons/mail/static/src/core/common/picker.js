@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, useExternalListener, useState } from "@koda/owl";
+import { Component, useExternalListener, useState } from "@odoo/owl";
 import { browser } from "@web/core/browser/browser";
 import { isEventHandled } from "@web/core/utils/misc";
 import { usePopover } from "@web/core/popover/popover_hook";

@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useRef, onPatched } from "@koda/owl";
+import { Component, useRef, onPatched } from "@odoo/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";

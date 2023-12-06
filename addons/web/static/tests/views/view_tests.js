@@ -16,7 +16,7 @@ import { OnboardingBanner } from "@web/views/onboarding_banner";
 import { View } from "@web/views/view";
 import { actionService } from "@web/webclient/actions/action_service";
 
-import { Component, onWillStart, onWillUpdateProps, useState, xml } from "@koda/owl";
+import { Component, onWillStart, onWillUpdateProps, useState, xml } from "@odoo/owl";
 import { CallbackRecorder } from "@web/webclient/actions/action_hook";
 
 const serviceRegistry = registry.category("services");

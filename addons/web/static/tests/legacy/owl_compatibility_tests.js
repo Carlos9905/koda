@@ -12,7 +12,7 @@
         onWillStart,
         onWillUpdateProps,
         xml,
-    } from "@koda/owl";
+    } from "@odoo/owl";
     import { nextTick } from "./helpers/test_utils";
 
     QUnit.module("Owl Compatibility", function () {

@@ -4,7 +4,7 @@ import { _t } from "@web/core/l10n/translation";
 import { localization } from "@web/core/l10n/localization";
 import { escapeRegExp } from "@web/core/utils/strings";
 import { useAutofocus, useService } from '@web/core/utils/hooks';
-import { Component, useRef, useState } from "@koda/owl";
+import { Component, useRef, useState } from "@odoo/owl";
 
 export class HelpdeskTeamTarget extends Component {
     setup() {

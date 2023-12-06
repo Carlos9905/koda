@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { ListingDetailsSidePanel } from "./listing_details_side_panel";
 
-import { Component, onWillUpdateProps } from "@koda/owl";
+import { Component, onWillUpdateProps } from "@odoo/owl";
 
 export class ListingAllSidePanel extends Component {
     setup() {

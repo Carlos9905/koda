@@ -33,7 +33,7 @@ import { FormCompiler } from "./form_compiler";
 import { FormErrorDialog } from "./form_error_dialog/form_error_dialog";
 import { FormStatusIndicator } from "./form_status_indicator/form_status_indicator";
 
-import { Component, onRendered, useEffect, useRef, useState } from "@koda/owl";
+import { Component, onRendered, useEffect, useRef, useState } from "@odoo/owl";
 
 const viewRegistry = registry.category("views");
 

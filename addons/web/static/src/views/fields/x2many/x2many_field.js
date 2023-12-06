@@ -19,7 +19,7 @@ import { computeViewClassName } from "@web/views/utils";
 import { ViewButton } from "@web/views/view_button/view_button";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class X2ManyField extends Component {
     static template = "web.X2ManyField";

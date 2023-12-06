@@ -14,7 +14,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 import { Transition } from "@web/core/transition";
 import { useBus, useService } from "@web/core/utils/hooks";

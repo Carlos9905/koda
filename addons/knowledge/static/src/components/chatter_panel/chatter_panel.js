@@ -8,7 +8,7 @@ import { Chatter } from '@mail/core/web/chatter';
 import { SIZES } from "@web/core/ui/ui_service";
 
 
-import { Component, useRef, useState } from '@koda/owl';
+import { Component, useRef, useState } from '@odoo/owl';
 
 export class KnowledgeArticleChatter extends Component {
     static template = 'knowledge.KnowledgeArticleChatter';

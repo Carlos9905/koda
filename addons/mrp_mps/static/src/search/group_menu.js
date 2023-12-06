@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { CheckboxItem } from "@web/core/dropdown/checkbox_item";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class GroupMenu extends Component {
     get items() {

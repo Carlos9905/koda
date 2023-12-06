@@ -1,5 +1,5 @@
 /** @koda-module */
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class ViewEditorSnackbar extends Component {
     static template = "web_studio.ViewEditor.Snackbar";

@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { AddPageDialog } from "@website/components/dialog/add_page_dialog";
 import {useService} from "@web/core/utils/hooks";
-import { onWillStart, useState } from "@koda/owl";
+import { onWillStart, useState } from "@odoo/owl";
 
 /**
  * Used to share code and keep the same behaviour on different types of 'website

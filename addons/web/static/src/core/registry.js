@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 // -----------------------------------------------------------------------------
 // Errors

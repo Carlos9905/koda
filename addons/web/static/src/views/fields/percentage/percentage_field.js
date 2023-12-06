@@ -8,7 +8,7 @@ import { useInputField } from "../input_field_hook";
 import { useNumpadDecimal } from "../numpad_decimal_hook";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class PercentageField extends Component {
     static template = "web.PercentageField";

@@ -2,7 +2,7 @@
 
 import { Meter } from "@auth_password_policy/password_meter";
 import { ConcretePolicy, recommendations } from "@auth_password_policy/password_policy";
-import { Component, useExternalListener, useState, xml } from "@koda/owl";
+import { Component, useExternalListener, useState, xml } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
 class PasswordMeter extends Component {

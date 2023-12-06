@@ -7,7 +7,7 @@ import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { escape, sprintf } from "@web/core/utils/strings";
 
-import { Component, markup, onMounted, xml } from "@koda/owl";
+import { Component, markup, onMounted, xml } from "@odoo/owl";
 
 export function displayNotificationAction(env, action) {
     const params = action.params || {};

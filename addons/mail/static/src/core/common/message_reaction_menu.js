@@ -10,7 +10,7 @@ import {
     useExternalListener,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";

@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 import { useService } from "@web/core/utils/hooks";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class TimerToggleButton extends Component {
     setup() {

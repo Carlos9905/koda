@@ -3,7 +3,7 @@
 import { Chrome } from "@point_of_sale/app/pos_app";
 import { patch } from "@web/core/utils/patch";
 import { ClosePosPopup } from "@point_of_sale/app/navbar/closing_popup/closing_popup";
-import { onMounted } from "@koda/owl";
+import { onMounted } from "@odoo/owl";
 
 patch(Chrome.prototype, {
     setup() {

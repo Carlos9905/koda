@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, onWillUnmount, useState, useSubEnv } from "@koda/owl";
+import { Component, onWillUnmount, useState, useSubEnv } from "@odoo/owl";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { AttributeSelection } from "@pos_self_order/app/components/attribute_selection/attribute_selection";
 import { Line } from "@pos_self_order/app/models/line";

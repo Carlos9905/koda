@@ -7,7 +7,7 @@ import { registerCleanup } from "./cleanup";
 import { makeMockServer } from "./mock_server";
 import { mocks } from "./mock_services";
 import { patchWithCleanup } from "./utils";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 function prepareRegistry(registry, keepContent = false) {
     const _addEventListener = registry.addEventListener.bind(registry);

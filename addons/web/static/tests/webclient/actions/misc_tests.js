@@ -14,7 +14,7 @@ import {
 } from "./../helpers";
 import { listView } from "@web/views/list/list_view";
 import { companyService } from "@web/webclient/company_service";
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 
 let serverData;
 let target;

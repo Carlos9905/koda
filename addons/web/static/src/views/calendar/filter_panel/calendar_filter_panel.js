@@ -6,7 +6,7 @@ import { Transition } from "@web/core/transition";
 import { useOwnedDialogs, useService } from "@web/core/utils/hooks";
 import { SelectCreateDialog } from "@web/views/view_dialogs/select_create_dialog";
 import { getColor } from "../colors";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 let nextId = 1;
 

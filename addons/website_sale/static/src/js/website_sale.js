@@ -10,7 +10,7 @@ import { ProductImageViewer } from "@website_sale/js/components/website_sale_ima
 import { jsonrpc } from "@web/core/network/rpc_service";
 import { debounce, throttleForAnimation } from "@web/core/utils/timing";
 import { listenSizeChange, SIZES, utils as uiUtils } from "@web/core/ui/ui_service";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export const WebsiteSale = publicWidget.Widget.extend(VariantMixin, cartHandlerMixin, {
     selector: '.oe_website_sale',

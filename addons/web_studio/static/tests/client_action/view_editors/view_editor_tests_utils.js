@@ -31,7 +31,7 @@ import {
     patchWithCleanup,
 } from "@web/../tests/helpers/utils";
 import { ViewEditor } from "@web_studio/client_action/view_editor/view_editor";
-import { Component, useSubEnv, xml } from "@koda/owl";
+import { Component, useSubEnv, xml } from "@odoo/owl";
 
 import { EditionFlow } from "@web_studio/client_action/editor/edition_flow";
 import { useService } from "@web/core/utils/hooks";

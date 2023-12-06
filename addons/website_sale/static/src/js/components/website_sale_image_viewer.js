@@ -2,7 +2,7 @@
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { useHotkey } from "@web/core/hotkeys/hotkey_hook";
-import { onRendered, useRef, useEffect, useState } from "@koda/owl";
+import { onRendered, useRef, useEffect, useState } from "@odoo/owl";
 
 const ZOOM_STEP = 0.1;
 

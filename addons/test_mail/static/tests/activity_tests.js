@@ -16,7 +16,7 @@ import { editInput, patchWithCleanup, click, patchDate } from "@web/../tests/hel
 import { toggleSearchBarMenu } from "@web/../tests/search/helpers";
 import { contains } from "@web/../tests/utils";
 import { doAction } from "@web/../tests/webclient/helpers";
-import { onMounted, onWillUnmount } from "@koda/owl";
+import { onMounted, onWillUnmount } from "@odoo/owl";
 const { DateTime } = luxon;
 
 let serverData;

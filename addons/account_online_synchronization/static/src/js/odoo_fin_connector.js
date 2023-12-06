@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { loadJS } from "@web/core/assets";
 import { cookie } from "@web/core/browser/cookie";
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 const actionRegistry = registry.category('actions');
 /* global OdooFin, debugMode */
 

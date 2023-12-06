@@ -13,7 +13,7 @@ import {
     toggleMenuItem,
 } from "./helpers";
 
-import { Component, onWillUpdateProps, onWillStart, useState, xml, useSubEnv } from "@koda/owl";
+import { Component, onWillUpdateProps, onWillStart, useState, xml, useSubEnv } from "@odoo/owl";
 
 let target;
 let serverData;

@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class MessageNotificationPopover extends Component {
     static template = "mail.MessageNotificationPopover";

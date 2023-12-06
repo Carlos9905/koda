@@ -11,7 +11,7 @@ import { EndPage } from "@frontdesk/end_page/end_page";
 import { QuickCheckIn } from "@frontdesk/quick_check_in/quick_check_in";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, useState, onWillStart, markup } from "@koda/owl";
+import { Component, useState, onWillStart, markup } from "@odoo/owl";
 
 export class Frontdesk extends Component {
     setup() {

@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { App, Component, xml, whenReady, useEffect, useComponent } from "@koda/owl";
+import { App, Component, xml, whenReady, useEffect, useComponent } from "@odoo/owl";
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { useService } from "@web/core/utils/hooks";
 import { templates } from "@web/core/assets";

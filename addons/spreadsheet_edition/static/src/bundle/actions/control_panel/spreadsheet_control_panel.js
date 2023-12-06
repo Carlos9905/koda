@@ -9,7 +9,7 @@ import { _t } from "@web/core/l10n/translation";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 
-import { Component, onWillUnmount, useState } from "@koda/owl";
+import { Component, onWillUnmount, useState } from "@odoo/owl";
 import { helpers } from "@koda/o-spreadsheet";
 
 /**

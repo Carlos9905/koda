@@ -3,7 +3,7 @@
 import { debounce } from "@web/core/utils/timing";
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { _t } from "@web/core/l10n/translation";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 publicWidget.registry.websiteEventTrackReminder = publicWidget.Widget.extend({
     selector: '.o_wetrack_js_reminder',

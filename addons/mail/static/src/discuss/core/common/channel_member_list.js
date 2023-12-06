@@ -3,7 +3,7 @@
 import { ImStatus } from "@mail/core/common/im_status";
 import { ActionPanel } from "@mail/discuss/core/common/action_panel";
 
-import { Component, onWillUpdateProps, onWillStart, useState, onWillRender } from "@koda/owl";
+import { Component, onWillUpdateProps, onWillStart, useState, onWillRender } from "@odoo/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";

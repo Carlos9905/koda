@@ -8,7 +8,7 @@ import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_pop
 import { OrderImportPopup } from "@point_of_sale/app/debug/order_import_popup/order_import_popup";
 import { useBus, useService } from "@web/core/utils/hooks";
 
-import { useEffect, useRef, useState, Component } from "@koda/owl";
+import { useEffect, useRef, useState, Component } from "@odoo/owl";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { serializeDateTime } from "@web/core/l10n/dates";
 const { DateTime } = luxon;

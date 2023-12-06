@@ -2,7 +2,7 @@
 
 import { evaluateBooleanExpr } from "@web/core/py_js/py";
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { onWillUpdateProps } from "@koda/owl";
+import { onWillUpdateProps } from "@odoo/owl";
 
 export class ProjectSharingListRenderer extends ListRenderer {
     setup() {

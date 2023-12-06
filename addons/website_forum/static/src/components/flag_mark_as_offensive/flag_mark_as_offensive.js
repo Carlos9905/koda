@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, useEffect } from "@koda/owl";
+import { Component, useEffect } from "@odoo/owl";
 import { useChildRef } from "@web/core/utils/hooks";
 import { Dialog } from "@web/core/dialog/dialog";
 

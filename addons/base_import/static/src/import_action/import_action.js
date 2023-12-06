@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, onWillStart, onMounted, useState } from "@koda/owl";
+import { Component, onWillStart, onMounted, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { FileInput } from "@web/core/file_input/file_input";

@@ -22,7 +22,7 @@ import {
 } from "@web/../tests/search/helpers";
 import { browser } from "@web/core/browser/browser";
 import { makeFakeLocalizationService } from "@web/../tests/helpers/mock_services";
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

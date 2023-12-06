@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 import { EditableName } from "../../o_spreadsheet/editable_name/editable_name";
 
-import { Component, onWillStart, onWillUpdateProps } from "@koda/owl";
+import { Component, onWillStart, onWillUpdateProps } from "@odoo/owl";
 
 export class PivotDetailsSidePanel extends Component {
     setup() {

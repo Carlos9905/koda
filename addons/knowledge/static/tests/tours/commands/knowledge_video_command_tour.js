@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { endKnowledgeTour, openCommandBar } from "../knowledge_tour_utils.js";
 import { patch } from "@web/core/utils/patch";
 import { registry } from "@web/core/registry";

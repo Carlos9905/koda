@@ -4,7 +4,7 @@ import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { formatFloatTime, formatMonetary } from "@web/views/fields/formatters";
 import { formatFloat } from "@web/core/utils/numbers";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class BomOverviewLine extends Component {
     setup() {

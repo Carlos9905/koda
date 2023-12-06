@@ -5,7 +5,7 @@ import { useService } from "@web/core/utils/hooks";
 import { SettingsBlock } from "../settings/settings_block";
 import { Setting } from "../../../views/form/setting/setting";
 
-import { Component, onWillStart } from "@koda/owl";
+import { Component, onWillStart } from "@odoo/owl";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 
 /**

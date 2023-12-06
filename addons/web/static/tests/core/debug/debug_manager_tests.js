@@ -38,7 +38,7 @@ import {
 } from "@web/views/debug_items";
 import { fieldService } from "@web/core/field_service";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 export class DebugMenuParent extends Component {
     setup() {

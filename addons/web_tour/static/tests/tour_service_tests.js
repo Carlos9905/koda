@@ -21,7 +21,7 @@ import {
     patchWithCleanup,
 } from "@web/../tests/helpers/utils";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 import { session } from "@web/session";
 
 let target, mock;

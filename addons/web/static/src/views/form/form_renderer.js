@@ -26,7 +26,7 @@ import {
     useRef,
     useState,
     xml,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class FormRenderer extends Component {
     setup() {

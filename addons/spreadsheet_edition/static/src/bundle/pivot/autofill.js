@@ -2,7 +2,7 @@
 
 import * as spreadsheet from "@koda/o-spreadsheet";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { containsReferences } from "@spreadsheet/helpers/helpers";
 
 const { autofillModifiersRegistry, autofillRulesRegistry } = spreadsheet.registries;

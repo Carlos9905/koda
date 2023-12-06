@@ -15,7 +15,7 @@ import { PropertyTags } from "./property_tags";
 import { SelectCreateDialog } from "@web/views/view_dialogs/select_create_dialog";
 import { uuid } from "../../utils";
 
-import { Component, useState, onWillUpdateProps, useEffect, useRef } from "@koda/owl";
+import { Component, useState, onWillUpdateProps, useEffect, useRef } from "@odoo/owl";
 
 export class PropertyDefinition extends Component {
     setup() {

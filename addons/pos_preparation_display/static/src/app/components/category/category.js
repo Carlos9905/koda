@@ -1,5 +1,5 @@
 /** @koda-module **/
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { usePreparationDisplay } from "@pos_preparation_display/app/preparation_display_service";
 
 export class Category extends Component {

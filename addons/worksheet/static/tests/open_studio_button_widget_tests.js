@@ -2,7 +2,7 @@
 import { click, getFixture } from "@web/../tests/helpers/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { registry } from "@web/core/registry";
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

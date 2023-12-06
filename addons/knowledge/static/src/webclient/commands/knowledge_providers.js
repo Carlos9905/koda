@@ -5,7 +5,7 @@ import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { HotkeyCommandItem } from "@web/core/commands/default_providers";
 import { splitCommandName } from "@web/core/commands/command_palette";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 // Articles command
 class KnowledgeCommand extends Component {}

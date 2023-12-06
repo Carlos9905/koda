@@ -6,7 +6,7 @@ import { loadJS } from "@web/core/assets";
 // temporary for OnNoResultReturned bug
 import { UncaughtCorsError } from "@web/core/errors/error_service";
 const errorHandlerRegistry = registry.category("error_handlers");
-import { Component, onWillRender, useEffect, useRef, useState, xml } from "@koda/owl";
+import { Component, onWillRender, useEffect, useRef, useState, xml } from "@odoo/owl";
 
 const MONDIALRELAY_SCRIPT_URL = "https://widget.mondialrelay.com/parcelshop-picker/jquery.plugin.mondialrelay.parcelshoppicker.min.js"
 

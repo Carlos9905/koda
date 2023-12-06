@@ -4,7 +4,7 @@ import { registry } from "@web/core/registry";
 import { endKnowledgeTour, openCommandBar } from '../knowledge_tour_utils.js';
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
 import { setSelection } from '@web_editor/js/editor/koda-editor/src/utils/utils';
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 registry.category("web_tour.tours").add('knowledge_kanban_cards_command_tour', {
     url: '/web',

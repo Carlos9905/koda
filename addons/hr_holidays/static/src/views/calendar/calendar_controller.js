@@ -11,7 +11,7 @@ import { serializeDate } from "@web/core/l10n/dates";
 import { TimeOffCalendarFilterPanel } from "./filter_panel/calendar_filter_panel";
 import { TimeOffFormViewDialog } from "../view_dialog/form_view_dialog";
 import { useLeaveCancelWizard } from "../hooks";
-import { EventBus, useSubEnv } from "@koda/owl";
+import { EventBus, useSubEnv } from "@odoo/owl";
 
 export class TimeOffCalendarController extends CalendarController {
     setup() {

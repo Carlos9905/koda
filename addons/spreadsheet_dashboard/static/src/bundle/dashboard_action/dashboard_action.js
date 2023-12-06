@@ -13,7 +13,7 @@ import { standardActionServiceProps } from "@web/webclient/actions/action_servic
 import { SpreadsheetShareButton } from "@spreadsheet/components/share_button/share_button";
 import { useSpreadsheetPrint } from "@spreadsheet/hooks";
 
-import { Component, onWillStart, useState, useEffect } from "@koda/owl";
+import { Component, onWillStart, useState, useEffect } from "@odoo/owl";
 
 export class SpreadsheetDashboardAction extends Component {
     setup() {

@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, onWillRender, useState, xml } from "@koda/owl";
+import { Component, onWillRender, useState, xml } from "@odoo/owl";
 import { escapeRegExp } from "@web/core/utils/strings";
 import { zip } from "@web/core/utils/arrays";
 import { useService } from "@web/core/utils/hooks";

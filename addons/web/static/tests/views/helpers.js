@@ -18,7 +18,7 @@ import {
     setupControlPanelServiceRegistry,
 } from "../search/helpers";
 
-import { Component, useSubEnv, xml } from "@koda/owl";
+import { Component, useSubEnv, xml } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

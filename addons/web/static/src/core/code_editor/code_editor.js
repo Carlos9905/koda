@@ -1,5 +1,5 @@
 /** @koda-module */
-import { Component, onWillDestroy, onWillStart, useEffect, useRef } from "@koda/owl";
+import { Component, onWillDestroy, onWillStart, useEffect, useRef } from "@odoo/owl";
 import { loadBundle } from "@web/core/assets";
 import { useDebounced } from "@web/core/utils/timing";
 

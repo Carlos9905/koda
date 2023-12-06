@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 import { defaultLocalization } from "@web/../tests/helpers/mock_services";
 import { patchWithCleanup } from "@web/../tests/helpers/utils";
 import { currencies } from "@web/core/currency";

@@ -8,7 +8,7 @@ import { useSetupView } from "@web/views/view_hook";
 import { SearchBar } from "@web/search/search_bar/search_bar";
 import { CogMenu } from "@web/search/cog_menu/cog_menu";
 
-import { Component, toRaw, useRef } from "@koda/owl";
+import { Component, toRaw, useRef } from "@odoo/owl";
 
 export class CohortController extends Component {
     setup() {

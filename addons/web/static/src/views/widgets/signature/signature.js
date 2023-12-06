@@ -5,7 +5,7 @@ import { SignatureDialog } from "@web/core/signature/signature_dialog";
 import { useService } from "@web/core/utils/hooks";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class SignatureWidget extends Component {
     static template = "web.SignatureWidget";

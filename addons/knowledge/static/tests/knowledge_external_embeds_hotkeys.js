@@ -14,7 +14,7 @@ import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { HtmlField } from "@web_editor/js/backend/html_field";
 import { encodeDataBehaviorProps } from "@knowledge/js/knowledge_utils";
 
-import { onMounted } from "@koda/owl";
+import { onMounted } from "@odoo/owl";
 
 let serverData;
 let htmlFieldReadyPromise;

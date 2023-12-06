@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, reactive, xml } from "@koda/owl";
+import { Component, reactive, xml } from "@odoo/owl";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { getFixture, mount, nextTick } from "@web/../tests/helpers/utils";
 import { XmlResourceEditor } from "@web_studio/client_action/xml_resource_editor/xml_resource_editor";

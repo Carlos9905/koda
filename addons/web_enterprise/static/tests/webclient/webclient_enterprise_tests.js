@@ -25,7 +25,7 @@ import { actionService } from "@web/webclient/actions/action_service";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { UserMenu } from "@web/webclient/user_menu/user_menu";
 
-import { Component, onMounted, xml } from "@koda/owl";
+import { Component, onMounted, xml } from "@odoo/owl";
 
 let serverData;
 let fixture;

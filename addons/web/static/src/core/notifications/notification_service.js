@@ -4,7 +4,7 @@ import { browser } from "../browser/browser";
 import { registry } from "../registry";
 import { NotificationContainer } from "./notification_container";
 
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 
 const AUTOCLOSE_DELAY = 4000;
 

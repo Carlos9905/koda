@@ -4,7 +4,7 @@
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { browser } from "@web/core/browser/browser";
 import NotificationRequestPopup from "@social_push_notifications/js/push_notification_request_popup";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 publicWidget.registry.NotificationWidget =  publicWidget.Widget.extend({
     selector: '#wrapwrap',

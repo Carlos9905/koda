@@ -14,7 +14,7 @@
     import { SIZES, utils as uiUtils } from "@web/core/ui/ui_service";
     import { browser } from '@web/core/browser/browser';
 
-    import { markup } from "@koda/owl";
+    import { markup } from "@odoo/owl";
 
     /**
      * Helper: Get the slide dict matching the given criteria

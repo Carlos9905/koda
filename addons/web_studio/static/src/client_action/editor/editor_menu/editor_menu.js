@@ -4,7 +4,7 @@ import { _t } from "@web/core/l10n/translation";
 import { localization } from "@web/core/l10n/localization";
 import { registry } from "@web/core/registry";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 const editorTabRegistry = registry.category("web_studio.editor_tabs");
 
 class Breadcrumbs extends Component {

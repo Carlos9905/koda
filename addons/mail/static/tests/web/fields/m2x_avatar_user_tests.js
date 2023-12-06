@@ -4,7 +4,7 @@ import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 
 import { start } from "@mail/../tests/helpers/test_utils";
 
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { popoverService } from "@web/core/popover/popover_service";

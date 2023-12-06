@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { SERVICES_METADATA } from "@web/env";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 function protectMethod(widget, fn) {
     return function (...args) {

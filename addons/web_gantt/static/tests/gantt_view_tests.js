@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { markup, onPatched, useEffect, useRef } from "@koda/owl";
+import { markup, onPatched, useEffect, useRef } from "@odoo/owl";
 import {
     click,
     editInput,

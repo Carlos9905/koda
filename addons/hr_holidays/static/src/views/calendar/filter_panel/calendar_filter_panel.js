@@ -6,7 +6,7 @@ import { getFormattedDateSpan } from "@web/views/calendar/utils";
 
 import { useService } from "@web/core/utils/hooks";
 import { serializeDate } from "@web/core/l10n/dates";
-import { useState, onWillStart, onWillUpdateProps } from "@koda/owl";
+import { useState, onWillStart, onWillUpdateProps } from "@odoo/owl";
 
 export class TimeOffCalendarFilterPanel extends CalendarFilterPanel {
     setup() {

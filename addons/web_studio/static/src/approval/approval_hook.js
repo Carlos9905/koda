@@ -3,7 +3,7 @@ import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 import { renderToMarkup } from "@web/core/utils/render";
 
-import { xml, reactive, useComponent, useEnv, toRaw, onMounted, onWillDestroy } from "@koda/owl";
+import { xml, reactive, useComponent, useEnv, toRaw, onMounted, onWillDestroy } from "@odoo/owl";
 import { useRecordObserver } from "@web/model/relational_model/utils";
 
 const missingApprovalsTemplate = xml`

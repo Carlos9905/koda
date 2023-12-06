@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 
 import { Softphone } from "@voip/softphone/softphone";
 import { useService } from "@web/core/utils/hooks";

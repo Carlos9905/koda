@@ -8,7 +8,7 @@ import {
     useComponent,
     useEffect,
     useRef,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { localization } from "@web/core/l10n/localization";
 
 /**

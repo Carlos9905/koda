@@ -2,7 +2,7 @@
 
 import { formView } from "@web/views/form/form_view";
 import { registry } from "@web/core/registry";
-import { toRaw } from "@koda/owl";
+import { toRaw } from "@odoo/owl";
 
 export class MailComposerFormController extends formView.Controller {
     setup() {

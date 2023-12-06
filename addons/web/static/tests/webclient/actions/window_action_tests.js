@@ -25,7 +25,7 @@ import {
 } from "../../helpers/utils";
 import { createWebClient, doAction, getActionManagerServerData, loadState } from "./../helpers";
 
-import { onMounted } from "@koda/owl";
+import { onMounted } from "@odoo/owl";
 let serverData;
 let target;
 const serviceRegistry = registry.category("services");

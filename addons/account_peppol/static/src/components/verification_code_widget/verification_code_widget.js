@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 
-import { Component, onMounted, useRef } from "@koda/owl";
+import { Component, onMounted, useRef } from "@odoo/owl";
 
 class VerificationCodeWidget extends Component {
     static props = {

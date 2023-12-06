@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry";
 import { pick } from "@web/core/utils/objects";
 import { groupBy, sortBy } from "@web/core/utils/arrays";
 import { memoize } from "@web/core/utils/functions";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 import { ImportBlockUI } from "./import_block_ui";
 
 const mainComponentRegistry = registry.category("main_components");

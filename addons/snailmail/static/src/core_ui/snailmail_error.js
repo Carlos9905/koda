@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 
 import { _t } from "@web/core/l10n/translation";

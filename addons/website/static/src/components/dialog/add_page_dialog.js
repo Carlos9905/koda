@@ -6,7 +6,7 @@ import { useAutofocus, useService } from '@web/core/utils/hooks';
 import { _t } from "@web/core/l10n/translation";
 import { WebsiteDialog } from '@website/components/dialog/dialog';
 import { Switch } from '@website/components/switch/switch';
-import { useRef, useState, useSubEnv, Component, onWillStart, onMounted } from "@koda/owl";
+import { useRef, useState, useSubEnv, Component, onWillStart, onMounted } from "@odoo/owl";
 import wUtils from '@website/js/utils';
 
 const NO_OP = () => {};

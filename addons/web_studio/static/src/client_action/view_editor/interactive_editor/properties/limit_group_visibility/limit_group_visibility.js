@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { Record } from "@web/model/record";
 import { useEditNodeAttributes } from "@web_studio/client_action/view_editor/view_editor_model";
 import { MultiRecordSelector } from "@web/core/record_selectors/multi_record_selector";

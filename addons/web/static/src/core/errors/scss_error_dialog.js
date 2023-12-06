@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { Dialog } from "@web/core/dialog/dialog";
 import { _t } from "@web/core/l10n/translation";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 class ScssErrorDialog extends Component {}
 ScssErrorDialog.template = "web.ScssErrorDialog";

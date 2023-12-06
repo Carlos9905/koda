@@ -5,7 +5,7 @@ import { ProductScreen } from "@point_of_sale/app/screens/product_screen/product
 import { useService } from "@web/core/utils/hooks";
 import { SelectionPopup } from "@point_of_sale/app/utils/input_popups/selection_popup";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class RewardButton extends Component {
     static template = "pos_loyalty.RewardButton";

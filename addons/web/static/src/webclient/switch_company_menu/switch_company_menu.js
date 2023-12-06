@@ -4,7 +4,7 @@ import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { registry } from "@web/core/registry";
 
-import { Component, useChildSubEnv, useState } from "@koda/owl";
+import { Component, useChildSubEnv, useState } from "@odoo/owl";
 import { debounce } from "@web/core/utils/timing";
 import { useService } from "@web/core/utils/hooks";
 

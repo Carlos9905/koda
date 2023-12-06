@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { onWillUnmount, reactive, useEffect, useExternalListener } from "@koda/owl";
+import { onWillUnmount, reactive, useEffect, useExternalListener } from "@odoo/owl";
 import { useThrottleForAnimation } from "./timing";
 import { useSortable as nativeUseSortable } from "@web/core/utils/sortable";
 

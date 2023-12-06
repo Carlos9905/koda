@@ -8,7 +8,7 @@ import { getFixture, mount, nextTick } from "@web/../tests/helpers/utils";
 
 import { TimesheetDisplayTimer, TimesheetTimerFloatTimerField } from "@timesheet_grid/components/timesheet_display_timer/timesheet_display_timer";
 import { timerService } from "@timer/services/timer_service";
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 const { DateTime } = luxon;
 

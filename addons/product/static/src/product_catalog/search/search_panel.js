@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { SearchPanel } from "@web/search/search_panel/search_panel";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 
 export class ProductCatalogSearchPanel extends SearchPanel {

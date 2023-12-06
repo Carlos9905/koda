@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { KanbanController } from "@web/views/kanban/kanban_controller";
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 

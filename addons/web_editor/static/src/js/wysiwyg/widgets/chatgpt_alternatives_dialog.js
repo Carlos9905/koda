@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { ChatGPTDialog } from '@web_editor/js/wysiwyg/widgets/chatgpt_dialog';
-import { useState, status } from "@koda/owl";
+import { useState, status } from "@odoo/owl";
 
 export class ChatGPTAlternativesDialog extends ChatGPTDialog {
     static template = 'web_edior.ChatGPTAlternativesDialog';

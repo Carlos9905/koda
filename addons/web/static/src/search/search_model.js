@@ -17,7 +17,7 @@ import {
 } from "./utils/dates";
 import { FACET_ICONS, FACET_COLORS } from "./utils/misc";
 
-import { EventBus, toRaw } from "@koda/owl";
+import { EventBus, toRaw } from "@odoo/owl";
 import { domainFromTree, treeFromDomain } from "@web/core/tree_editor/condition_tree";
 import { _t } from "@web/core/l10n/translation";
 import { useGetDomainTreeDescription } from "@web/core/domain_selector/utils";

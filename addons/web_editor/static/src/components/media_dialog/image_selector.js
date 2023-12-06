@@ -6,7 +6,7 @@ import weUtils from '@web_editor/js/common/utils';
 import { Attachment, FileSelector, IMAGE_MIMETYPES, IMAGE_EXTENSIONS } from './file_selector';
 import { KeepLast } from "@web/core/utils/concurrency";
 
-import { useRef, useState, useEffect } from "@koda/owl";
+import { useRef, useState, useEffect } from "@odoo/owl";
 
 export class AutoResizeImage extends Attachment {
     setup() {

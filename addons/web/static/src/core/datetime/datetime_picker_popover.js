@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { useHotkey } from "../hotkeys/hotkey_hook";
 import { DateTimePicker } from "./datetime_picker";
 

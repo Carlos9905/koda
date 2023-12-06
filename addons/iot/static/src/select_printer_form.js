@@ -3,7 +3,7 @@
 import { formView } from "@web/views/form/form_view";
 import { registry } from "@web/core/registry";
 import { FormController } from "@web/views/form/form_controller";
-import { useSubEnv } from "@koda/owl"
+import { useSubEnv } from "@odoo/owl"
 
 export class selectPrinterFormController extends FormController {
     setup () {

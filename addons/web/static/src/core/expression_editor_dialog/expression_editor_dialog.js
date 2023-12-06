@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, useRef, useState } from "@koda/owl";
+import { Component, useRef, useState } from "@odoo/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { ExpressionEditor } from "@web/core/expression_editor/expression_editor";
 import { evaluateExpr } from "@web/core/py_js/py";

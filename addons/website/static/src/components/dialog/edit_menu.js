@@ -5,7 +5,7 @@ import { useService, useAutofocus } from '@web/core/utils/hooks';
 import { useNestedSortable } from "@web/core/utils/nested_sortable";
 import wUtils from '@website/js/utils';
 import { WebsiteDialog } from './dialog';
-import { Component, useState, useEffect, onWillStart, useRef } from "@koda/owl";
+import { Component, useState, useEffect, onWillStart, useRef } from "@odoo/owl";
 
 const useControlledInput = (initialValue, validate) => {
     const input = useState({

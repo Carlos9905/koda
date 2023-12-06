@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, useEffect, useRef, useState } from "@koda/owl";
+import { Component, useEffect, useRef, useState } from "@odoo/owl";
 
 import { ActivitiesTab } from "@voip/softphone/activities_tab";
 import { CallInvitation } from "@voip/softphone/call_invitation";

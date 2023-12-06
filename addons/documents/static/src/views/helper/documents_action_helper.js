@@ -2,7 +2,7 @@
 
 import { useService } from "@web/core/utils/hooks";
 import { Domain } from "@web/core/domain";
-import { Component, markup, onWillStart, onWillUpdateProps, useState } from "@koda/owl";
+import { Component, markup, onWillStart, onWillUpdateProps, useState } from "@odoo/owl";
 import { escape } from "@web/core/utils/strings";
 import { _t } from "@web/core/l10n/translation";
 

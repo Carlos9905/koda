@@ -1,7 +1,7 @@
 /** @koda-module **/
 import { ActionSwiper } from "@web/core/action_swiper/action_swiper";
 
-import { Component, useState, useRef, useEffect } from "@koda/owl";
+import { Component, useState, useRef, useEffect } from "@odoo/owl";
 
 export class SettingsPage extends Component {
     setup() {

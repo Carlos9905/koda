@@ -5,7 +5,7 @@ import { _t } from "@web/core/l10n/translation";
 import "@crm/js/tours/crm";
 import { patch } from "@web/core/utils/patch";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 patch(registry.category("web_tour.tours").get("crm_tour"), {
     steps() {

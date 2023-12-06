@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { useSubEnv } from "@koda/owl";
+import { useSubEnv } from "@odoo/owl";
 import { KanbanController } from "@web/views/kanban/kanban_controller";
 
 export class TimesheetTimerKanbanController extends KanbanController {

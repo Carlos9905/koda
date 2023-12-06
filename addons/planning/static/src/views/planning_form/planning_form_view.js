@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { markup, onMounted, useState } from "@koda/owl";
+import { markup, onMounted, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { escape } from "@web/core/utils/strings";

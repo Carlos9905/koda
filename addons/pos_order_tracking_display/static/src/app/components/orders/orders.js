@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class Orders extends Component {
     static template = "pos_order_tracking_display.Orders";

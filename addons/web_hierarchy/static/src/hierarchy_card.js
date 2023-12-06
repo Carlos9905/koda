@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 import { Field } from "@web/views/fields/field";
 import { Record } from "@web/model/record";

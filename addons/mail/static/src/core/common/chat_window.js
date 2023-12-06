@@ -13,7 +13,7 @@ import {
 } from "@mail/utils/common/hooks";
 import { isEventHandled } from "@web/core/utils/misc";
 
-import { Component, useChildSubEnv, useRef, useState } from "@koda/owl";
+import { Component, useChildSubEnv, useRef, useState } from "@odoo/owl";
 
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";

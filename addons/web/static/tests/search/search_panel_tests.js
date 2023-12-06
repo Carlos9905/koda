@@ -25,7 +25,7 @@ import {
     xml,
     onWillStart as onWillStartOWL,
     onWillUpdateProps as onWillUpdatePropsOWL,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

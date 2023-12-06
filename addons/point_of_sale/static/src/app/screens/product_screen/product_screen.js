@@ -13,7 +13,7 @@ import { ControlButtonPopup } from "@point_of_sale/app/screens/product_screen/co
 import { ConnectionLostError } from "@web/core/network/rpc_service";
 
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component, onMounted, useExternalListener, useState } from "@koda/owl";
+import { Component, onMounted, useExternalListener, useState } from "@odoo/owl";
 import { ErrorBarcodePopup } from "@point_of_sale/app/barcode/error_popup/barcode_error_popup";
 
 import { Numpad } from "@point_of_sale/app/generic_components/numpad/numpad";

@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { useComponent } from "@koda/owl";
+import { useComponent } from "@odoo/owl";
 
 /**
  * Hook to get the props for the timesheet overtime component use in the

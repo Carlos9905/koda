@@ -4,7 +4,7 @@ import { FieldContentOverlay } from "./field_content_overlay";
 
 import { useStudioRef, studioIsVisible } from "@web_studio/client_action/view_editor/editors/utils";
 
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 /*
  * Field:

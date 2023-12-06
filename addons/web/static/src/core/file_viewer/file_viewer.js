@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, useRef, useState } from "@koda/owl";
+import { Component, useRef, useState } from "@odoo/owl";
 import { useAutofocus, useService } from "@web/core/utils/hooks";
 
 /**

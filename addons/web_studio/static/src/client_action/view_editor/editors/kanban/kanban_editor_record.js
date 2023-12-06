@@ -14,7 +14,7 @@ import { computeXpath } from "@web_studio/client_action/view_editor/editors/xml_
 import { useService } from "@web/core/utils/hooks";
 import { AlertDialog, ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 
-import { Component, toRaw, useEnv, useState, xml, useEffect, useRef, onError } from "@koda/owl";
+import { Component, toRaw, useEnv, useState, xml, useEffect, useRef, onError } from "@odoo/owl";
 
 class FieldStudioKanbanRecord extends FieldStudio {
     isX2ManyEditable() {

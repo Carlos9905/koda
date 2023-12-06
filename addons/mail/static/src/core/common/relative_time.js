@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, onWillDestroy, xml } from "@koda/owl";
+import { Component, onWillDestroy, xml } from "@odoo/owl";
 
 import { _t } from "@web/core/l10n/translation";
 

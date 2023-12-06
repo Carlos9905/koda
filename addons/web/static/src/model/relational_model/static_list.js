@@ -7,7 +7,7 @@ import { completeActiveFields } from "@web/model/relational_model/utils";
 import { DataPoint } from "./datapoint";
 import { fromUnityToServerValues, getId, patchActiveFields } from "./utils";
 
-import { markRaw } from "@koda/owl";
+import { markRaw } from "@odoo/owl";
 
 function compareFieldValues(v1, v2, fieldType) {
     if (fieldType === "many2one") {

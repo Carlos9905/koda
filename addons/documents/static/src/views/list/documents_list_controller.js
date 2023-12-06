@@ -3,7 +3,7 @@
 import { ListController } from "@web/views/list/list_controller";
 import { _t } from "@web/core/l10n/translation";
 import { preSuperSetup, useDocumentView } from "@documents/views/hooks";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 export class DocumentsListController extends ListController {
     setup() {

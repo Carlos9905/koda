@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, onWillUpdateProps } from "@koda/owl";
+import { Component, onWillUpdateProps } from "@odoo/owl";
 import { DateTimeInput } from "@web/core/datetime/datetime_input";
 import { FILTER_DATE_OPTION, monthsOptions } from "@spreadsheet/assets_backend/constants";
 import { getPeriodOptions } from "@web/search/utils/dates";

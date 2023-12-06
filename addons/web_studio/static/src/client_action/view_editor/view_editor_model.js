@@ -8,7 +8,7 @@ import {
     parseStringToXml,
     serializeXmlToString,
 } from "@web_studio/client_action/view_editor/editors/xml_utils";
-import { EventBus, markRaw, useEnv, reactive, toRaw } from "@koda/owl";
+import { EventBus, markRaw, useEnv, reactive, toRaw } from "@odoo/owl";
 import { sprintf } from "@web/core/utils/strings";
 import { parseXML } from "@web/core/utils/xml";
 import { viewTypeToString } from "@web_studio/studio_service";

@@ -4,7 +4,7 @@ import { _t } from "@web/core/l10n/translation";
 import { CalendarModel } from "@web/views/calendar/calendar_model";
 import { askRecurrenceUpdatePolicy } from "@calendar/views/ask_recurrence_update_policy_hook";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 
 export class AttendeeCalendarModel extends CalendarModel {
     setup(params, { dialog, rpc }) {

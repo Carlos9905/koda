@@ -1,5 +1,5 @@
 /** @koda-module **/
-import { App, whenReady } from "@koda/owl";
+import { App, whenReady } from "@odoo/owl";
 import { PublicReadonlySpreadsheet } from "./public_readonly";
 import { templates } from "@web/core/assets";
 import { makeEnv, startServices } from "@web/env";

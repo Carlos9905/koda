@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 import { FlagMarkAsOffensiveDialog } from "../components/flag_mark_as_offensive/flag_mark_as_offensive";
 import dom from "@web/legacy/js/core/dom";
 import { cookie } from "@web/core/browser/cookie";;

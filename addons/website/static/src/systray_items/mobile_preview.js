@@ -2,7 +2,7 @@
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 class MobilePreviewSystray extends Component {
     setup() {

@@ -4,7 +4,7 @@ import { fieldVisualFeedback } from "@web/views/fields/field";
 import { session } from "@web/session";
 import { getTooltipInfo } from "@web/views/fields/field_tooltip";
 import { _t } from "@web/core/l10n/translation";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class FormLabel extends Component {
     get className() {

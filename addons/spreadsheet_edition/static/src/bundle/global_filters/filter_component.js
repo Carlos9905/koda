@@ -1,7 +1,7 @@
 /** @koda-module */
 import * as spreadsheet from "@koda/o-spreadsheet";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 const { Menu } = spreadsheet;
 
 export class FilterComponent extends Component {

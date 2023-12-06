@@ -7,7 +7,7 @@ import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 
 import { SpreadsheetCollaborativeChannel } from "@spreadsheet_edition/bundle/o_spreadsheet/collaborative/spreadsheet_collaborative_channel";
 
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 class MockBusService {
     constructor() {

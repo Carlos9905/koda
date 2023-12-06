@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { Many2OneField, many2OneField } from "@web/views/fields/many2one/many2one_field";
 

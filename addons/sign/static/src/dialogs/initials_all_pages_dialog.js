@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, useRef } from "@koda/owl";
+import { Component, useRef } from "@odoo/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 
 export class InitialsAllPagesDialog extends Component {

@@ -7,7 +7,7 @@ import { ChannelSelector } from "@mail/discuss/core/web/channel_selector";
 import { onExternalClick } from "@mail/utils/common/hooks";
 import { cleanTerm } from "@mail/utils/common/format";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { _t } from "@web/core/l10n/translation";

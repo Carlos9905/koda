@@ -30,7 +30,7 @@ import {
 } from "./../helpers";
 import { errorService } from "@web/core/errors/error_service";
 
-import { Component, onMounted, xml } from "@koda/owl";
+import { Component, onMounted, xml } from "@odoo/owl";
 
 function getBreadCrumbTexts(target) {
     return getNodesTextContent(target.querySelectorAll(".breadcrumb-item, .o_breadcrumb .active"));

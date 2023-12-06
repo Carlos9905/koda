@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { checkFileSize } from "@web/core/utils/files";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class AttachDocumentWidget extends Component {
     static template = "web.AttachDocument";

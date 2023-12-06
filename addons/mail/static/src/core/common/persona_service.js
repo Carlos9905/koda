@@ -2,7 +2,7 @@
 
 import { registry } from "@web/core/registry";
 import { useSequential } from "@mail/utils/common/hooks";
-import { markRaw } from "@koda/owl";
+import { markRaw } from "@odoo/owl";
 
 export const DEFAULT_AVATAR = "/mail/static/src/img/smiley/avatar.jpg";
 

@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, onPatched, useState } from "@koda/owl";
+import { Component, onPatched, useState } from "@odoo/owl";
 
 export const ACCORDION = Symbol("Accordion");
 export class AccordionItem extends Component {

@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { useState, onRendered, useRef } from "@koda/owl";
+import { useState, onRendered, useRef } from "@odoo/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { CharField } from "@web/views/fields/char/char_field";

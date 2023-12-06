@@ -3,7 +3,7 @@ import { COLORS, BG_COLORS, ICONS } from "@web_studio/utils";
 import { FileInput } from "@web/core/file_input/file_input";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, onWillUpdateProps, useRef, useState } from "@koda/owl";
+import { Component, onWillUpdateProps, useRef, useState } from "@odoo/owl";
 
 const DEFAULT_ICON = {
     backgroundColor: BG_COLORS[5],

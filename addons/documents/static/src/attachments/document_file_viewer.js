@@ -2,7 +2,7 @@
 
 import { useService } from "@web/core/utils/hooks";
 import { FileViewer as WebFileViewer } from "@web/core/file_viewer/file_viewer";
-import { onWillUpdateProps } from "@koda/owl";
+import { onWillUpdateProps } from "@odoo/owl";
 
 export class FileViewer extends WebFileViewer {
     static template = "documents.FileViewer";

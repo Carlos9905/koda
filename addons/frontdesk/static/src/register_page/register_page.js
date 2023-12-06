@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { registry } from "@web/core/registry";
-import { Component, markup, onWillUnmount } from "@koda/owl";
+import { Component, markup, onWillUnmount } from "@odoo/owl";
 import { useInactivity } from "../use_inactivity";
 
 export class RegisterPage extends Component {

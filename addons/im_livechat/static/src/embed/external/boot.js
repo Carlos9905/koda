@@ -4,7 +4,7 @@ import { LivechatButton } from "@im_livechat/embed/common/livechat_button";
 import { makeShadow, makeRoot } from "@im_livechat/embed/common/boot_helpers";
 import { serverUrl } from "@im_livechat/embed/common/livechat_data";
 
-import { mount, whenReady } from "@koda/owl";
+import { mount, whenReady } from "@odoo/owl";
 
 import { templates } from "@web/core/assets";
 import { MainComponentsContainer } from "@web/core/main_components_container";

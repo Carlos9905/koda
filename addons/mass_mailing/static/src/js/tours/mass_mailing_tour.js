@@ -4,7 +4,7 @@
     import { stepUtils } from "@web_tour/tour_service/tour_utils";
     import { _t } from "@web/core/l10n/translation";
 
-    import { markup } from "@koda/owl";
+    import { markup } from "@odoo/owl";
 
     const { DateTime } = luxon;
 

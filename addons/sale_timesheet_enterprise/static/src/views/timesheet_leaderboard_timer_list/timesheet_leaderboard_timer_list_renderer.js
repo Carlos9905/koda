@@ -5,7 +5,7 @@ import { TimesheetLeaderboard } from "@sale_timesheet_enterprise/components/time
 
 import { patch } from "@web/core/utils/patch";
 import { useService } from "@web/core/utils/hooks";
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 
 patch(TimesheetTimerListRenderer, {
     components: {

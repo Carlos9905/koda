@@ -4,7 +4,7 @@ import { ImStatus } from "@mail/core/common/im_status";
 import { RelativeTime } from "@mail/core/common/relative_time";
 import { useHover } from "@mail/utils/common/hooks";
 
-import { Component, useRef, useState } from "@koda/owl";
+import { Component, useRef, useState } from "@odoo/owl";
 
 import { ActionSwiper } from "@web/core/action_swiper/action_swiper";
 import { useService } from "@web/core/utils/hooks";

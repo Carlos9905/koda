@@ -12,7 +12,7 @@ import {
     insertThousandsSep,
 } from "@web/core/utils/numbers";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 import { formatCurrency } from "@web/core/currency";
 
 // -----------------------------------------------------------------------------

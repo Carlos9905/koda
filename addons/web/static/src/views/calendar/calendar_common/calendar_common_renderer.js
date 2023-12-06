@@ -10,7 +10,7 @@ import { useCalendarPopover, useClickHandler, useFullCalendar } from "../hooks";
 import { CalendarCommonPopover } from "./calendar_common_popover";
 import { browser } from "@web/core/browser/browser";
 
-import { Component, onMounted, useEffect } from "@koda/owl";
+import { Component, onMounted, useEffect } from "@odoo/owl";
 
 const SCALE_TO_FC_VIEW = {
     day: "timeGridDay",

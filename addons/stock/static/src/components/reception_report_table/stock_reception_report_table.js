@@ -2,7 +2,7 @@
 
 import { useService } from "@web/core/utils/hooks";
 import { ReceptionReportLine } from "../reception_report_line/stock_reception_report_line";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class ReceptionReportTable extends Component {
     setup() {

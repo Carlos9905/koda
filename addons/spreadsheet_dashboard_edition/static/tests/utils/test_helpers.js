@@ -9,7 +9,7 @@ import {
 } from "@spreadsheet_edition/../tests/utils/webclient_helpers";
 import { DashboardEditAction } from "../../src/bundle/action/dashboard_edit_action";
 import { getDashboardBasicServerData } from "./test_data";
-import { onMounted } from "@koda/owl";
+import { onMounted } from "@odoo/owl";
 
 /**
  * @typedef {import("@spreadsheet/../tests/utils/data").ServerData} ServerData

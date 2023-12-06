@@ -13,7 +13,7 @@ import { useService } from "@web/core/utils/hooks";
 
 import { ExitSplitToolsDialog } from "@documents/owl/components/pdf_exit_dialog/pdf_exit_dialog";
 
-import { Component, onWillStart, toRaw, useRef, useState, useEffect } from "@koda/owl";
+import { Component, onWillStart, toRaw, useRef, useState, useEffect } from "@odoo/owl";
 
 export class PdfManager extends Component {
     static components = {

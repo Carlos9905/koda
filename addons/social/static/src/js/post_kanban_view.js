@@ -7,7 +7,7 @@ import { registry } from "@web/core/registry";
 import { useService } from '@web/core/utils/hooks';
 
 import { ImagesCarouselDialog } from './images_carousel_dialog';
-import { useEffect, useRef } from "@koda/owl";
+import { useEffect, useRef } from "@odoo/owl";
 
 export class PostKanbanRenderer extends KanbanRenderer {
     setup() {

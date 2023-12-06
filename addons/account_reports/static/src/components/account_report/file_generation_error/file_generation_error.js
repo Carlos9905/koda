@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { registry } from "@web/core/registry";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class FileGenerationErrorWidget extends Component {
     static template = "account_reports.FileGenerationErrorWidget";

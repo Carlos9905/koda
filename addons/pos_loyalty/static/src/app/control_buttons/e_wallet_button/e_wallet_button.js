@@ -6,7 +6,7 @@ import { SelectionPopup } from "@point_of_sale/app/utils/input_popups/selection_
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { useService } from "@web/core/utils/hooks";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class eWalletButton extends Component {
     static template = "point_of_sale.eWalletButton";

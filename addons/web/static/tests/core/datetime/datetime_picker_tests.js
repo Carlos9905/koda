@@ -13,7 +13,7 @@ import {
     getTimePickers,
     useTwelveHourClockFormat,
 } from "./datetime_test_helpers";
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 import { nextTick } from "../../helpers/utils";
 
 const { DateTime } = luxon;

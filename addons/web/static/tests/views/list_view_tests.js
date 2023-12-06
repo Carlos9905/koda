@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, markup, onRendered, onWillStart, xml } from "@koda/owl";
+import { Component, markup, onRendered, onWillStart, xml } from "@odoo/owl";
 import { browser } from "@web/core/browser/browser";
 import { Domain } from "@web/core/domain";
 import { currencies } from "@web/core/currency";

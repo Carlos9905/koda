@@ -2,7 +2,7 @@
 
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, onMounted, useRef, useState } from "@koda/owl";
+import { Component, onMounted, useRef, useState } from "@odoo/owl";
 import { checkFileSize } from "@web/core/utils/files";
 
 /**

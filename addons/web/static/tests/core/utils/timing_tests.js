@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { browser } from "@web/core/browser/browser";
 import {
     batched,

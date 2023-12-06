@@ -2,7 +2,7 @@
 
 import { Dialog } from "@web/core/dialog/dialog";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class FormErrorDialog extends Component {
     async discard() {

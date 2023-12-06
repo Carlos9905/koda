@@ -2,7 +2,7 @@
 
 import { Record } from "@mail/core/common/record";
 import { assignIn } from "@mail/utils/common/misc";
-import { markRaw } from "@koda/owl";
+import { markRaw } from "@odoo/owl";
 
 import { _t } from "@web/core/l10n/translation";
 

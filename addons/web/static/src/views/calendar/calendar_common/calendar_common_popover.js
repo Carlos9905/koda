@@ -8,7 +8,7 @@ import { Field } from "@web/views/fields/field";
 import { Record } from "@web/model/record";
 import { getFormattedDateSpan } from "@web/views/calendar/utils";
 
-import { Component, useExternalListener } from "@koda/owl";
+import { Component, useExternalListener } from "@odoo/owl";
 
 export class CalendarCommonPopover extends Component {
     setup() {

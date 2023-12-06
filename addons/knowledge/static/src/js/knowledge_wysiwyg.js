@@ -9,7 +9,7 @@ import {
     getSelectedNodes,
     closestElement,
 } from "@web_editor/js/editor/koda-editor/src/utils/utils";
-import { useRef } from '@koda/owl';
+import { useRef } from '@odoo/owl';
 
 /**
  * This widget will extend Wysiwyg and contain all code that are specific to

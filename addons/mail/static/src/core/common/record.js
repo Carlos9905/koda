@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { markRaw, markup, reactive, toRaw } from "@koda/owl";
+import { markRaw, markup, reactive, toRaw } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
 export const modelRegistry = registry.category("discuss.model");

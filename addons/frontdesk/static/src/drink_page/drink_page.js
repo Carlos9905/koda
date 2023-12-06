@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { registry } from "@web/core/registry";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 import { useInactivity } from "../use_inactivity";
 

@@ -5,7 +5,7 @@ import { TagsList } from "@web/core/tags_list/tags_list";
 import { makeTestEnv } from "../helpers/mock_env";
 import { getFixture, patchWithCleanup, mount, click } from "../helpers/utils";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 QUnit.module("Web Components", (hooks) => {
     QUnit.module("TagsList");

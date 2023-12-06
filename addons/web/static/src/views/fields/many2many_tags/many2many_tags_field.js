@@ -17,7 +17,7 @@ import { usePopover } from "@web/core/popover/popover_hook";
 import { useService } from "@web/core/utils/hooks";
 import { useTagNavigation } from "@web/core/record_selectors/tag_navigation_hook";
 
-import { Component, useRef } from "@koda/owl";
+import { Component, useRef } from "@odoo/owl";
 
 class Many2ManyTagsFieldColorListPopover extends Component {
     static template = "web.Many2ManyTagsFieldColorListPopover";

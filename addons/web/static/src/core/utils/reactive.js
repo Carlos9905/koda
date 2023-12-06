@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 
 /**
  * This class should be used as a base when creating a class that is intended to

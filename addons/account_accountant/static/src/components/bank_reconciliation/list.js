@@ -4,7 +4,7 @@ import { registry } from "@web/core/registry";
 import { listView } from "@web/views/list/list_view";
 import { ListController } from "@web/views/list/list_controller";
 
-import { useChildSubEnv } from "@koda/owl";
+import { useChildSubEnv } from "@odoo/owl";
 
 export class BankRecListController extends ListController {
 

@@ -38,7 +38,7 @@ import { BankRecRainbowContent } from "./rainbowman_content";
 import { BankRecFinishButtons } from "./finish_buttons";
 import { BankRecGlobalInfo } from "./global_info";
 
-import { useState, useEffect, useRef, useChildSubEnv, markRaw } from "@koda/owl";
+import { useState, useEffect, useRef, useChildSubEnv, markRaw } from "@odoo/owl";
 
 export class BankRecKanbanRecord extends KanbanRecord {
     static template = "account.BankRecKanbanRecord";

@@ -3,7 +3,7 @@
 import { LoadableDataSource } from "./data_source";
 import { MetadataRepository } from "./metadata_repository";
 
-import { EventBus } from "@koda/owl";
+import { EventBus } from "@odoo/owl";
 
 /** *
  * @typedef {object} DataSourceServices

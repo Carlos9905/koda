@@ -2,7 +2,7 @@
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart, useEffect, useRef, useState, markup } from "@koda/owl";
+import { Component, onWillStart, useEffect, useRef, useState, markup } from "@odoo/owl";
 import { SignRequestControlPanel } from "@sign/backend_components/sign_request/sign_request_control_panel";
 import { Document } from "@sign/components/sign_request/document_signable";
 import { PDFIframe } from "@sign/components/sign_request/PDF_iframe";

@@ -14,7 +14,7 @@ import {
     triggerEvent,
 } from "../../helpers/utils";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 let target;
 const serviceRegistry = registry.category("services");

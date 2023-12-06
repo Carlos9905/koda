@@ -9,7 +9,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

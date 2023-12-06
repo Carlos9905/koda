@@ -37,7 +37,7 @@ import {
     useRef,
     useState,
     useSubEnv,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 // -----------------------------------------------------------------------------
 

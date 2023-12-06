@@ -21,7 +21,7 @@ import { Dialog } from "../../src/core/dialog/dialog";
 import { popoverService } from "@web/core/popover/popover_service";
 import { usePopover } from "@web/core/popover/popover_hook";
 import { useAutofocus } from "@web/core/utils/hooks";
-import { Component, onMounted, xml } from "@koda/owl";
+import { Component, onMounted, xml } from "@odoo/owl";
 
 let env;
 let target;

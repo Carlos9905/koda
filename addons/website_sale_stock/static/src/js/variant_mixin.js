@@ -6,7 +6,7 @@ import { renderToFragment } from "@web/core/utils/render";
 
 import "@website_sale/js/website_sale";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 /**
  * Addition to the variant_mixin._onChangeCombination

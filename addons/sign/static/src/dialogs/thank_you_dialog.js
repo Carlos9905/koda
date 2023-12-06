@@ -5,7 +5,7 @@ import { session } from "@web/session";
 import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 import { EncryptedDialog } from "./encrypted_dialog";
-import { Component, onWillStart, useState } from "@koda/owl";
+import { Component, onWillStart, useState } from "@odoo/owl";
 
 export class ThankYouDialog extends Component {
     setup() {

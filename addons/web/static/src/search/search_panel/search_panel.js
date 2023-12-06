@@ -2,7 +2,7 @@
 
 import { useBus } from "@web/core/utils/hooks";
 
-import { Component, onMounted, onWillUpdateProps, onWillStart, useRef, useState } from "@koda/owl";
+import { Component, onMounted, onWillUpdateProps, onWillStart, useRef, useState } from "@odoo/owl";
 
 //-------------------------------------------------------------------------
 // Helpers

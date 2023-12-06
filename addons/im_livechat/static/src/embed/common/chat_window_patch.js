@@ -5,7 +5,7 @@ import { FeedbackPanel } from "@im_livechat/embed/common/feedback_panel/feedback
 
 import { ChatWindow } from "@mail/core/common/chat_window";
 
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 import { useService } from "@web/core/utils/hooks";
 import { patch } from "@web/core/utils/patch";

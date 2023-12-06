@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 /**

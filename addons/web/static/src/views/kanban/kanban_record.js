@@ -25,7 +25,7 @@ import { KanbanCompiler } from "./kanban_compiler";
 import { KanbanCoverImageDialog } from "./kanban_cover_image_dialog";
 import { KanbanDropdownMenuWrapper } from "./kanban_dropdown_menu_wrapper";
 
-import { Component, onMounted, onWillUpdateProps, useRef, useState } from "@koda/owl";
+import { Component, onMounted, onWillUpdateProps, useRef, useState } from "@odoo/owl";
 const { COLORS } = ColorList;
 
 const formatters = registry.category("formatters");

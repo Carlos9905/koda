@@ -2,7 +2,7 @@
 
 import { useHotkey } from "../hotkeys/hotkey_hook";
 
-import { Component, useRef } from "@koda/owl";
+import { Component, useRef } from "@odoo/owl";
 
 /**
  * Custom checkbox

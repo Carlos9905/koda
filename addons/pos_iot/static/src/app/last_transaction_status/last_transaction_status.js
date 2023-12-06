@@ -2,7 +2,7 @@
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { useService } from "@web/core/utils/hooks";
-import { useState, Component } from "@koda/owl";
+import { useState, Component } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 

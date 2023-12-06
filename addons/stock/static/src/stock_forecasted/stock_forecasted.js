@@ -10,7 +10,7 @@ import { ForecastedButtons } from "./forecasted_buttons";
 import { ForecastedDetails } from "./forecasted_details";
 import { ForecastedHeader } from "./forecasted_header";
 import { ForecastedWarehouseFilter } from "./forecasted_warehouse_filter";
-import { Component, onWillStart, useState } from "@koda/owl";
+import { Component, onWillStart, useState } from "@odoo/owl";
 
 export class StockForecasted extends Component {
     setup() {

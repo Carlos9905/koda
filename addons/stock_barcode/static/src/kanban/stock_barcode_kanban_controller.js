@@ -2,7 +2,7 @@
 
 import { KanbanController } from '@web/views/kanban/kanban_controller';
 import { useBus, useService } from '@web/core/utils/hooks';
-import { onMounted } from "@koda/owl";
+import { onMounted } from "@odoo/owl";
 
 export class StockBarcodeKanbanController extends KanbanController {
     setup() {

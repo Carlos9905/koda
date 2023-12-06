@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, onMounted, useState } from "@koda/owl";
+import { Component, onMounted, useState } from "@odoo/owl";
 
 export class LoadingOverlay extends Component {
     static template = "pos_self_order.LoadingOverlay";

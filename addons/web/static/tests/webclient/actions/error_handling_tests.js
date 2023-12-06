@@ -5,7 +5,7 @@ import { createWebClient, doAction, getActionManagerServerData } from "./../help
 import { click, getFixture, nextTick } from "../../helpers/utils";
 import { errorService } from "@web/core/errors/error_service";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 let serverData;
 let target;

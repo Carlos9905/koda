@@ -9,7 +9,7 @@ import { parseDate, formatDate } from "@web/core/l10n/dates";
 
 import { formatMonetary } from "@web/views/fields/formatters";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 class AccountPaymentPopOver extends Component {}
 AccountPaymentPopOver.props = {

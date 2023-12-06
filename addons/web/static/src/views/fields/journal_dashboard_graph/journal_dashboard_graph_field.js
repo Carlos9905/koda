@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry";
 import { getColor, hexToRGBA } from "@web/core/colors/colors";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component, onWillStart, useEffect, useRef } from "@koda/owl";
+import { Component, onWillStart, useEffect, useRef } from "@odoo/owl";
 import { cookie } from "@web/core/browser/cookie";
 
 export class JournalDashboardGraphField extends Component {

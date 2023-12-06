@@ -4,7 +4,7 @@ import { registry } from "@web/core/registry";
 import { useBus, useService } from "@web/core/utils/hooks";
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 import { ReceptionReportTable } from "../reception_report_table/stock_reception_report_table";
-import { Component, onWillStart, useState } from "@koda/owl";
+import { Component, onWillStart, useState } from "@odoo/owl";
 
 export class ReceptionReportMain extends Component {
     setup() {

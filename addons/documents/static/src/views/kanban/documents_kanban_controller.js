@@ -3,7 +3,7 @@
 import { KanbanController } from "@web/views/kanban/kanban_controller";
 
 import { preSuperSetup, useDocumentView } from "@documents/views/hooks";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 export class DocumentsKanbanController extends KanbanController {
     setup() {

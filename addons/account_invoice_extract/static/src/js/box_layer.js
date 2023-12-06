@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { Box } from '@account_invoice_extract/js/box';
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class BoxLayer extends Component {
     /**

@@ -5,7 +5,7 @@ import { useService } from '@web/core/utils/hooks';
 import { Dialog } from '@web/core/dialog/dialog';
 import { SelectMenu } from '@web/core/select_menu/select_menu';
 import { DropdownItem } from '@web/core/dropdown/dropdown_item';
-import { Component, useEffect, onWillStart, useRef, useState } from '@koda/owl';
+import { Component, useEffect, onWillStart, useRef, useState } from '@odoo/owl';
 
 export class ArticleSelectionBehaviorDialog extends Component {
 

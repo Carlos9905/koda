@@ -15,7 +15,7 @@ import {
     useRef,
     useState,
     useChildSubEnv,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 const DIRECTION_CARET_CLASS = {
     bottom: "dropdown",

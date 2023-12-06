@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { useService } from '@web/core/utils/hooks';
 import { KanbanHeader } from "@web/views/kanban/kanban_header";
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 
 export class ProjectTaskKanbanHeader extends KanbanHeader {
     setup() {

@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, useEffect, useState } from "@koda/owl";
+import { Component, useEffect, useState } from "@odoo/owl";
 
 export class DocumentsDropZone extends Component {
     static props = [

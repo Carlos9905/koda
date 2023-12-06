@@ -4,7 +4,7 @@ import { BaseStore, Record, makeStore, modelRegistry } from "@mail/core/common/r
 
 import { registry } from "@web/core/registry";
 import { clearRegistryWithCleanup, makeTestEnv } from "@web/../tests/helpers/mock_env";
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

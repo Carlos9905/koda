@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class WarningNotification extends Component {
     static template = "website_sale.warningNotification";

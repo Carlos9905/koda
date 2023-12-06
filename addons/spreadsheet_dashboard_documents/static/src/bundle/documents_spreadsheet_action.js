@@ -5,7 +5,7 @@ import * as spreadsheet from "@koda/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
 const { topbarMenuRegistry } = spreadsheet.registries;
-import { useSubEnv } from "@koda/owl";
+import { useSubEnv } from "@odoo/owl";
 
 topbarMenuRegistry.addChild("add_document_to_dashboard", ["file"], {
     name: _t("Add to dashboard"),

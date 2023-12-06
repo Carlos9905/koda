@@ -9,7 +9,7 @@ import { CheckboxItem } from "@web/core/dropdown/checkbox_item";
 import { getIntervalOptions } from "@web/search/utils/dates";
 import { FACET_ICONS, GROUPABLE_TYPES } from "@web/search/utils/misc";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class PivotGroupByMenu extends Component {
     setup() {

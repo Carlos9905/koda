@@ -8,7 +8,7 @@ import { errorService } from "@web/core/errors/error_service";
 import { useService } from "@web/core/utils/hooks";
 import { ClientErrorDialog } from "@web/core/errors/error_dialogs";
 
-import { Component, onMounted, xml } from "@koda/owl";
+import { Component, onMounted, xml } from "@odoo/owl";
 
 let serverData;
 let target;

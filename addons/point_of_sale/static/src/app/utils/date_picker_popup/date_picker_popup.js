@@ -2,7 +2,7 @@
 
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { _t } from "@web/core/l10n/translation";
-import { onMounted, useRef, useState } from "@koda/owl";
+import { onMounted, useRef, useState } from "@odoo/owl";
 
 export class DatePickerPopup extends AbstractAwaitablePopup {
     static template = "point_of_sale.DatePickerPopup";

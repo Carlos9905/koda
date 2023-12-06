@@ -7,7 +7,7 @@ import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, onWillStart, onWillUpdateProps } from "@koda/owl";
+import { Component, onWillStart, onWillUpdateProps } from "@odoo/owl";
 
 export const STATIC_ACTIONS_GROUP_NUMBER = 1;
 export const ACTIONS_GROUP_NUMBER = 100;

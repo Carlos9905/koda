@@ -9,7 +9,7 @@ import { useOpenChat } from "@mail/core/web/open_chat_hook";
 import { utils as uiUtils } from "@web/core/ui/ui_service";
 import { _t } from "@web/core/l10n/translation";
 
-import { Component, onWillStart, useEffect, useRef, useState } from '@koda/owl';
+import { Component, onWillStart, useEffect, useRef, useState } from '@odoo/owl';
 
 import { getRandomIcon } from '@knowledge/js/knowledge_utils';
 import KnowledgeIcon from '@knowledge/components/knowledge_icon/knowledge_icon';

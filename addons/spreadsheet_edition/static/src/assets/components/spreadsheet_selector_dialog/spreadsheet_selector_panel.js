@@ -6,7 +6,7 @@ import { KeepLast } from "@web/core/utils/concurrency";
 import { useService } from "@web/core/utils/hooks";
 import { Pager } from "@web/core/pager/pager";
 
-import { Component, onWillStart, useState, onWillUnmount } from "@koda/owl";
+import { Component, onWillStart, useState, onWillUnmount } from "@odoo/owl";
 
 const DEFAULT_LIMIT = 9;
 

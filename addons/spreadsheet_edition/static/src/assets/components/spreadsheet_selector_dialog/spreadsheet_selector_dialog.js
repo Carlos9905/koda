@@ -5,7 +5,7 @@ import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 import { Notebook } from "@web/core/notebook/notebook";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 const LABELS = {
     PIVOT: _t("pivot"),

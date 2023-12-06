@@ -2,7 +2,7 @@
 
 import { _t } from "@web/core/l10n/translation";
 import { Dialog } from "@web/core/dialog/dialog";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class AskRecurrenceUpdatePolicyDialog extends Component {
     setup() {

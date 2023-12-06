@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry";
 import { InsertViewSpreadsheet } from "../insert_action_link_menu/insert_action_link_menu";
 import { InsertListSpreadsheetMenu } from "../list_view/insert_list_spreadsheet_menu_owl";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 const cogMenuRegistry = registry.category("cogMenu");
 
 export class SpreadsheetCogMenu extends Component {

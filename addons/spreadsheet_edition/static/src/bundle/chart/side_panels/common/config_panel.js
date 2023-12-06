@@ -7,7 +7,7 @@ import { DomainSelectorDialog } from "@web/core/domain_selector_dialog/domain_se
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 
-import { Component, onWillStart, onWillUpdateProps } from "@koda/owl";
+import { Component, onWillStart, onWillUpdateProps } from "@odoo/owl";
 
 export class CommonOdooChartConfigPanel extends Component {
     setup() {

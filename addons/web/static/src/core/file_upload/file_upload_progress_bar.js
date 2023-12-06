@@ -4,7 +4,7 @@ import { _t } from "@web/core/l10n/translation";
 import { useService } from "../utils/hooks";
 import { ConfirmationDialog } from "../confirmation_dialog/confirmation_dialog";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class FileUploadProgressBar extends Component {
     setup() {

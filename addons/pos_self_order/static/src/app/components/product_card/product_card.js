@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useRef } from "@koda/owl";
+import { Component, useRef } from "@odoo/owl";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { useService, useForwardRefToParent } from "@web/core/utils/hooks";
 import { Line } from "@pos_self_order/app/models/line";

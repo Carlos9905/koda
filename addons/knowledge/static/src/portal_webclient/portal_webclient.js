@@ -5,7 +5,7 @@ import { ActionContainer } from '@web/webclient/actions/action_container';
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { useOwnDebugContext } from "@web/core/debug/debug_context";
 import { session } from '@web/session';
-import { Component, onMounted, useExternalListener, useState } from "@koda/owl";
+import { Component, onMounted, useExternalListener, useState } from "@odoo/owl";
 
 export class KnowledgePortalWebClient extends Component {
     setup() {

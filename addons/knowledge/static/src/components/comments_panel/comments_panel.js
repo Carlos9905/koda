@@ -6,7 +6,7 @@ import { useBus, useService } from '@web/core/utils/hooks';
 
 import { KnowledgeCommentsThread } from '../comment/comment';
 
-import { Component, onWillStart, useRef, useState } from '@koda/owl';
+import { Component, onWillStart, useRef, useState } from '@odoo/owl';
 
 
 export class KnowledgeArticleCommentsPanel extends Component {

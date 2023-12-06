@@ -7,7 +7,7 @@ import '@industry_fsm/js/tours/industry_fsm_tour';
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 patch(registry.category("web_tour.tours").get("industry_fsm_tour"), {
     steps() {

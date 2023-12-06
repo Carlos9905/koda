@@ -8,7 +8,7 @@ import {
     onMounted,
     onWillUnmount,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { normalizeCSSColor } from '@web/core/utils/colors';
 
 /**

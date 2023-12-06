@@ -6,7 +6,7 @@ import { FormController } from '@web/views/form/form_controller';
 import { HtmlField } from "@web_editor/js/backend/html_field";
 import { MediaDialog } from "@web_editor/components/media_dialog/media_dialog";
 import { parseHTML, setSelection } from "@web_editor/js/editor/koda-editor/src/utils/utils";
-import { onRendered } from "@koda/owl";
+import { onRendered } from "@odoo/owl";
 import { wysiwygData } from "@web_editor/../tests/test_utils";
 import { OdooEditor } from '@web_editor/js/editor/koda-editor/src/OdooEditor';
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";

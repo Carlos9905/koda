@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class AttachmentImageField extends Component {
     static template = "web.AttachmentImageField";

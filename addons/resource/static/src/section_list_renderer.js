@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { useEffect } from "@koda/owl";
+import { useEffect } from "@odoo/owl";
 
 export class SectionListRenderer extends ListRenderer {
     setup() {

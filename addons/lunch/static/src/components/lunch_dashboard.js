@@ -2,7 +2,7 @@
 
 import { useBus, useService } from "@web/core/utils/hooks";
 import { Many2XAutocomplete } from "@web/views/fields/relational_utils";
-import { Component, useState, onWillStart, markup, xml } from "@koda/owl";
+import { Component, useState, onWillStart, markup, xml } from "@odoo/owl";
 
 export class LunchCurrency extends Component {
     get amount() {

@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { cohortView } from "@web_cohort/cohort_view";

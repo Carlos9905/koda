@@ -4,7 +4,7 @@ import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { SignTemplateIframe } from "./sign_template_iframe";
 import { SignTemplateTopBar } from "./sign_template_top_bar";
-import { Component, useRef, useEffect, onWillUnmount } from "@koda/owl";
+import { Component, useRef, useEffect, onWillUnmount } from "@odoo/owl";
 import { buildPDFViewerURL } from "@sign/components/sign_request/utils";
 import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 

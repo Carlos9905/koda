@@ -1,7 +1,7 @@
 /* @koda-module */
 
 import { Discuss } from "@mail/core/common/discuss";
-import { useChildSubEnv, useEffect, useState } from "@koda/owl";
+import { useChildSubEnv, useEffect, useState } from "@odoo/owl";
 
 import { patch } from "@web/core/utils/patch";
 

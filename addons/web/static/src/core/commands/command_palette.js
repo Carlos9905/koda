@@ -20,7 +20,7 @@ import {
     useState,
     markRaw,
     useExternalListener,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 const DEFAULT_PLACEHOLDER = _t("Search...");
 const DEFAULT_EMPTY_MESSAGE = _t("No result found");

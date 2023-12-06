@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { useEffect } from "@koda/owl";
+import { useEffect } from "@odoo/owl";
 import { makeDraggableHook } from "@web/core/utils/draggable_hook_builder_owl";
 import { clamp } from "@web/core/utils/numbers";
 import { pick } from "@web/core/utils/objects";

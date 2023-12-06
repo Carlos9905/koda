@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useEffect, useRef, useState } from "@koda/owl";
+import { Component, useEffect, useRef, useState } from "@odoo/owl";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { ProductCard } from "@pos_self_order/app/components/product_card/product_card";
 import { CancelPopup } from "@pos_self_order/app/components/cancel_popup/cancel_popup";

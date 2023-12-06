@@ -4,7 +4,7 @@
 import { PosCollection, Order, Product } from "@point_of_sale/app/store/models";
 import { Mutex } from "@web/core/utils/concurrency";
 import { PosDB } from "@point_of_sale/app/store/db";
-import { markRaw, reactive } from "@koda/owl";
+import { markRaw, reactive } from "@odoo/owl";
 import { roundPrecision as round_pr, floatIsZero } from "@web/core/utils/numbers";
 import { registry } from "@web/core/registry";
 import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_popup";

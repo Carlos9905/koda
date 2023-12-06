@@ -6,7 +6,7 @@ import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_d
 import { _t } from "@web/core/l10n/translation";
 import { escape } from '@web/core/utils/strings';
 import { session } from '@web/session';
-import { markup } from '@koda/owl';
+import { markup } from '@odoo/owl';
 import { formatFloat } from "@web/core/utils/numbers";
 
 export default class BarcodePickingModel extends BarcodeModel {

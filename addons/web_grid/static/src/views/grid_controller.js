@@ -15,7 +15,7 @@ import { CogMenu } from "@web/search/cog_menu/cog_menu";
 import { SearchBar } from "@web/search/search_bar/search_bar";
 import { useSearchBarToggler } from "@web/search/search_bar/search_bar_toggler";
 
-import { Component, useState, onWillUpdateProps, onWillUnmount, useRef } from "@koda/owl";
+import { Component, useState, onWillUpdateProps, onWillUnmount, useRef } from "@odoo/owl";
 
 export class GridController extends Component {
     static components = {

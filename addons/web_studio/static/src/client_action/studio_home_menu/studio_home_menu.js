@@ -6,7 +6,7 @@ import { useService } from "@web/core/utils/hooks";
 import { NotEditableActionError } from "../../studio_service";
 import { IconCreatorDialog } from "./icon_creator_dialog/icon_creator_dialog";
 
-import { onMounted, onWillUnmount, useRef } from "@koda/owl";
+import { onMounted, onWillUnmount, useRef } from "@odoo/owl";
 const NEW_APP_BUTTON = {
     isNewAppButton: true,
     label: "New App",

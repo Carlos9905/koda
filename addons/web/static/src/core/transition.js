@@ -1,7 +1,7 @@
 /** @koda-module */
 import { browser } from "./browser/browser";
 
-import { Component, useState, useEffect, xml, onWillUpdateProps, useComponent } from "@koda/owl";
+import { Component, useState, useEffect, xml, onWillUpdateProps, useComponent } from "@odoo/owl";
 
 // Allows to disable transitions globally, useful for testing (and maybe for
 // a reduced motion setting in the future?)

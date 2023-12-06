@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { useRefListener } from "@web/core/utils/hooks";
-import { onWillUnmount } from "@koda/owl";
+import { onWillUnmount } from "@odoo/owl";
 
 /**
  * constrains a number to the given bounds.

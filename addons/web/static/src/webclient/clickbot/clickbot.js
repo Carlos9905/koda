@@ -5,7 +5,7 @@
  * view. On each view, click on each filter.
  */
 
-import { App } from "@koda/owl";
+import { App } from "@odoo/owl";
 import { patch } from "@web/core/utils/patch";
 import { ORM } from "@web/core/orm_service";
 import { browser } from "@web/core/browser/browser";

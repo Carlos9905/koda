@@ -14,7 +14,7 @@ import {
     useEffect,
     useRef,
     onWillUnmount,
-} from "@koda/owl";
+} from "@odoo/owl";
 const systrayRegistry = registry.category("systray");
 
 const getBoundingClientRect = Element.prototype.getBoundingClientRect;

@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { useService } from "@web/core/utils/hooks";
-import { useState, useRef, onMounted } from "@koda/owl";
+import { useState, useRef, onMounted } from "@odoo/owl";
 import { Numpad } from "@point_of_sale/app/generic_components/numpad/numpad";
 
 export class NumberPopup extends AbstractAwaitablePopup {

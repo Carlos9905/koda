@@ -5,7 +5,7 @@ import { StreamPostKanbanRecord } from '@social/js/stream_post_kanban_record';
 import { StreamPostCommentsFacebook } from './stream_post_comments';
 
 import { patch } from "@web/core/utils/patch";
-import { useEffect } from "@koda/owl";
+import { useEffect } from "@odoo/owl";
 
 patch(StreamPostKanbanRecord.prototype, {
 

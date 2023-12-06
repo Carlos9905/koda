@@ -20,7 +20,7 @@ import { ViewScaleSelector } from "@web/views/view_components/view_scale_selecto
 import { CogMenu } from "@web/search/cog_menu/cog_menu";
 import { browser } from "@web/core/browser/browser";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 const { DateTime } = luxon;
 

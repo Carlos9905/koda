@@ -22,7 +22,7 @@ import {
     reactive,
     useRef,
     useExternalListener,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 export class GridRenderer extends Component {
     static components = {

@@ -17,7 +17,7 @@ import {
 } from "@web/../tests/helpers/utils";
 import { setupViewRegistries } from "@web/../tests/views/helpers";
 
-import { Component, xml, useState } from "@koda/owl";
+import { Component, xml, useState } from "@odoo/owl";
 
 let serverData;
 let target;

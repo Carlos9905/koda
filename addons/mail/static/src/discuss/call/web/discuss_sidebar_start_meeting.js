@@ -2,7 +2,7 @@
 
 import { discussSidebarItemsRegistry } from "@mail/core/web/discuss_sidebar";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 /**

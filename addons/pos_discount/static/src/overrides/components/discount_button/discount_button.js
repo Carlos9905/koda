@@ -5,7 +5,7 @@ import { ProductScreen } from "@point_of_sale/app/screens/product_screen/product
 import { useService } from "@web/core/utils/hooks";
 import { NumberPopup } from "@point_of_sale/app/utils/input_popups/number_popup";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 import { parseFloat } from "@web/views/fields/parsers";
 

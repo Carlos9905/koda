@@ -8,7 +8,7 @@ import { getRawValue } from "@web/views/kanban/kanban_record";
 
 import { TimesheetTimerHeader } from "../timesheet_timer_header/timesheet_timer_header";
 
-import { Component, onWillStart } from "@koda/owl";
+import { Component, onWillStart } from "@odoo/owl";
 
 export class GridTimesheetTimerHeader extends Component {
     static components = {

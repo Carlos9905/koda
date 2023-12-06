@@ -4,7 +4,7 @@ import { memoize } from "./utils/functions";
 import { browser } from "./browser/browser";
 import { registry } from "./registry";
 import { session } from "@web/session";
-import { Component, xml, onWillStart, App } from "@koda/owl";
+import { Component, xml, onWillStart, App } from "@odoo/owl";
 
 /**
  * This export is done only in order to modify the behavior of the exported

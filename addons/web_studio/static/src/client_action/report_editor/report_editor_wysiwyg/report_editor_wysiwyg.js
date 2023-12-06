@@ -7,7 +7,7 @@ import {
     onWillUnmount,
     reactive,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { loadBundle } from "@web/core/assets";
 import { _t } from "@web/core/l10n/translation";
 import { omit } from "@web/core/utils/objects";

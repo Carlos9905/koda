@@ -2,7 +2,7 @@
 
 import { _t } from "@web/core/l10n/translation";
 import { BarcodeScanner } from "@barcodes/components/barcode_scanner";
-import { Component, onWillStart } from "@koda/owl";
+import { Component, onWillStart } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { useBus, useService } from "@web/core/utils/hooks";
 import { EventRegistrationSummaryDialog } from "./event_registration_summary_dialog";

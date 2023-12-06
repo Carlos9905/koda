@@ -3,12 +3,12 @@
 import { registry } from "../registry";
 import { useSortable } from "@web/core/utils/sortable";
 import { throttleForAnimation } from "@web/core/utils/timing";
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 
 /**
  * @typedef SortableServiceHookParams
  * @extends SortableParams
- * @property {{el: HTMLElement} | ReturnType<typeof import("@koda/owl").useRef>} [ref] container of sortable
+ * @property {{el: HTMLElement} | ReturnType<typeof import("@odoo/owl").useRef>} [ref] container of sortable
  * @property {string | Symbol} [sortableId] identifier when multiple sortable on the same container
  */
 

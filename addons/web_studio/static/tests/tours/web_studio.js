@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import utils from "@web_studio/utils";
 import { registry } from "@web/core/registry";
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 registry.category("web_tour.tours").add("web_studio_home_menu_background_tour", {
     url: "/web",

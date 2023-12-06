@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
 

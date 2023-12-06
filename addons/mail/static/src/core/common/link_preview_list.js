@@ -2,7 +2,7 @@
 
 import { LinkPreview } from "@mail/core/common/link_preview";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 /**
  * @typedef {Object} Props

@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useExternalListener } from "@koda/owl";
+import { Component, useExternalListener } from "@odoo/owl";
 
 /**
  * Implement this abstract class by extending it like so:

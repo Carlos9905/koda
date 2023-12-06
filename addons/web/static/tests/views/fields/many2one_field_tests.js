@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { makeServerError } from "@web/../tests/helpers/mock_server";
 import {

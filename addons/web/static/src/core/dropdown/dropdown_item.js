@@ -1,7 +1,7 @@
 /** @koda-module **/
 import { DROPDOWN } from "./dropdown";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 /**
  * @enum {string}

@@ -7,7 +7,7 @@ import { useService } from '@web/core/utils/hooks';
 
 import { StreamPostKanbanRecord } from './stream_post_kanban_record';
 import { ImagesCarouselDialog } from './images_carousel_dialog';
-import { useEffect, useRef } from "@koda/owl";
+import { useEffect, useRef } from "@odoo/owl";
 
 class StreamPostKanbanHeader extends KanbanHeader {
     static template = "social.KanbanHeader";

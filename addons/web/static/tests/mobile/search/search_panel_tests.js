@@ -6,7 +6,7 @@ import { makeWithSearch, setupControlPanelServiceRegistry } from "@web/../tests/
 import { registry } from "@web/core/registry";
 import { uiService } from "@web/core/ui/ui_service";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 let serverData;
 let target;

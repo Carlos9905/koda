@@ -3,7 +3,7 @@
 import { AbstractAwaitablePopup } from "@point_of_sale/app/popup/abstract_awaitable_popup";
 import { useAutoFocusToLast } from "@point_of_sale/app/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 import { EditListInput } from "@point_of_sale/app/store/select_lot_popup/edit_list_input/edit_list_input";
 
 /**

@@ -4,7 +4,7 @@ import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_d
 import { omit } from "@web/core/utils/objects";
 import { useService } from "@web/core/utils/hooks";
 
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 export class SpreadsheetCloneXlsxDialog extends ConfirmationDialog {
     static template = "documents_spreadsheet.SpreadsheetCloneXlsxDialog";

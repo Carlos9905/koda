@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry";
 import { formatFloatFactor } from "../formatters";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class FloatToggleField extends Component {
     static template = "web.FloatToggleField";

@@ -12,7 +12,7 @@ import { AbstractSpreadsheetAction } from "@spreadsheet_edition/bundle/actions/a
 import { DocumentsSpreadsheetControlPanel } from "../components/control_panel/spreadsheet_control_panel";
 import { _t } from "@web/core/l10n/translation";
 
-import { useState, useSubEnv } from "@koda/owl";
+import { useState, useSubEnv } from "@odoo/owl";
 
 export class SpreadsheetAction extends AbstractSpreadsheetAction {
     resModel = "documents.document";

@@ -8,7 +8,7 @@ import { globalFiltersFieldMatchers } from "@spreadsheet/global_filters/plugins/
 import { SidePanelCollapsible } from "../side_panel_collapsible/side_panel_collapsible";
 import { FilterEditorLabel } from "./filter_editor_label";
 
-import { onWillStart, Component, useRef, useState, toRaw } from "@koda/owl";
+import { onWillStart, Component, useRef, useState, toRaw } from "@odoo/owl";
 
 const { toNumber } = spreadsheet.helpers;
 const uuidGenerator = new spreadsheet.helpers.UuidGenerator();

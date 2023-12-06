@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { onMounted, onWillUnmount } from "@koda/owl";
+import { onMounted, onWillUnmount } from "@odoo/owl";
 
 export function useInactivity(callback, delay) {
     let timeoutId = null;

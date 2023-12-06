@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { useState, useEffect } from "@koda/owl";
+import { useState, useEffect } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { reposition } from "@web/core/position_hook";
 import {

@@ -1,7 +1,7 @@
 /* @koda-module */
 
 import { Record } from "@mail/core/common/record";
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";

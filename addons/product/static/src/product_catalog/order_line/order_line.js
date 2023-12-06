@@ -1,5 +1,5 @@
 /** @koda-module */
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { formatFloat, formatMonetary } from "@web/views/fields/formatters";
 
 export class ProductCatalogOrderLine extends Component {

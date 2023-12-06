@@ -1,6 +1,6 @@
 /** @koda-module **/
 
-import { App, blockDom, Component, markup } from "@koda/owl";
+import { App, blockDom, Component, markup } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { _t } from "@web/core/l10n/translation";
 

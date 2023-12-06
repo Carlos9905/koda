@@ -8,7 +8,7 @@ import { SelectMenu } from "@web/core/select_menu/select_menu";
 import { useAutofocus, useService } from "@web/core/utils/hooks";
 import { uuid } from "@web/views/utils";
 
-import { Component, onWillStart, useExternalListener, useState } from "@koda/owl";
+import { Component, onWillStart, useExternalListener, useState } from "@odoo/owl";
 
 /**
  * Dialog allowing to dynamically edit the item calendar view configuration

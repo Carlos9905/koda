@@ -17,7 +17,7 @@ import {
     triggerEvents,
 } from "../helpers/utils";
 
-import { Component, useState, xml } from "@koda/owl";
+import { Component, useState, xml } from "@odoo/owl";
 
 const serviceRegistry = registry.category("services");
 

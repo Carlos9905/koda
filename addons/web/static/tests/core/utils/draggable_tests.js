@@ -4,7 +4,7 @@ import { drag, dragAndDrop, getFixture, mount, nextTick, patchWithCleanup } from
 import { useDraggable } from "@web/core/utils/draggable";
 import { browser } from "@web/core/browser/browser";
 
-import { Component, reactive, useRef, useState, xml } from "@koda/owl";
+import { Component, reactive, useRef, useState, xml } from "@odoo/owl";
 
 let target;
 QUnit.module("Draggable", ({ beforeEach }) => {

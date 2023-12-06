@@ -1,7 +1,7 @@
 /** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
-import { reactive } from "@koda/owl";
+import { reactive } from "@odoo/owl";
 import { session } from "@web/session";
 import { TimerTimesheetGridDataPoint, TimerTimesheetGridModel } from "@timesheet_grid/views/timer_timesheet_grid/timer_timesheet_grid_model";
 

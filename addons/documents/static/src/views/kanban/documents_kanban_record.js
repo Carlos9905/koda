@@ -4,7 +4,7 @@ import { KanbanRecord } from "@web/views/kanban/kanban_record";
 import { DocumentsKanbanCompiler } from "./documents_kanban_compiler";
 import { FileUploadProgressBar } from "@web/core/file_upload/file_upload_progress_bar";
 import { useBus, useService } from "@web/core/utils/hooks";
-import { xml } from "@koda/owl";
+import { xml } from "@odoo/owl";
 
 const CANCEL_GLOBAL_CLICK = ["a", ".dropdown", ".oe_kanban_action"].join(",");
 

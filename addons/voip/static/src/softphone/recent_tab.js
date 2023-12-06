@@ -1,6 +1,6 @@
 /* @koda-module */
 
-import { Component, onMounted, useState } from "@koda/owl";
+import { Component, onMounted, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class RecentTab extends Component {

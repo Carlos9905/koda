@@ -7,7 +7,7 @@ import { getFixture, nextTick } from "@web/../tests/helpers/utils";
 import { loadBundle, templates } from "@web/core/assets";
 import { PublicReadonlySpreadsheet } from "@spreadsheet/public_readonly_app/public_readonly";
 
-import { App } from "@koda/owl";
+import { App } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
 /** @typedef {import("@spreadsheet/o_spreadsheet/o_spreadsheet").Model} Model */

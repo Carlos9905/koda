@@ -2,7 +2,7 @@
 
 import { ModelFieldSelector } from "@web/core/model_field_selector/model_field_selector";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 /**
  * @typedef {import("@spreadsheet/global_filters/plugins/global_filters_core_plugin").FieldMatching} FieldMatching

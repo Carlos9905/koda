@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 
 export class AccountReportEllipsisPopover extends Component {
     static template = "account_reports.AccountReportEllipsisPopover";

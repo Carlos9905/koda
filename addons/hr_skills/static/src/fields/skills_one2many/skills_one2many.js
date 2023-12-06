@@ -9,7 +9,7 @@ import { registry } from "@web/core/registry";
 import { _t } from "@web/core/l10n/translation";
 import { CommonSkillsListRenderer } from "../../views/skills_list_renderer";
 import { useService } from '@web/core/utils/hooks';
-import { onWillStart } from "@koda/owl";
+import { onWillStart } from "@odoo/owl";
 
 
 export class SkillsListRenderer extends CommonSkillsListRenderer {

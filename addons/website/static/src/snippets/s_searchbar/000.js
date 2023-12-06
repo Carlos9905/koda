@@ -6,7 +6,7 @@ import publicWidget from '@web/legacy/js/public/public_widget';
 import { renderToElement, renderToString } from "@web/core/utils/render";
 import { debounce } from '@web/core/utils/timing';
 
-import { markup } from "@koda/owl";
+import { markup } from "@odoo/owl";
 
 publicWidget.registry.searchBar = publicWidget.Widget.extend({
     selector: '.o_searchbar_form',

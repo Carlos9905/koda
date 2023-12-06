@@ -10,7 +10,7 @@ import {
     onWillDestroy,
     onWillUpdateProps,
     markup,
-} from "@koda/owl";
+} from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class ImageCrop extends Component {

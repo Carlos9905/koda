@@ -14,7 +14,7 @@ import {
     triggerEvent,
 } from "../helpers/utils";
 import { localization } from "@web/core/l10n/localization";
-import { Component, useRef, xml } from "@koda/owl";
+import { Component, useRef, xml } from "@odoo/owl";
 
 const FLEXBOX_STYLE = {
     display: "flex",

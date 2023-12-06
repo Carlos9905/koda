@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 
 export class EditableName extends Component {
     setup() {

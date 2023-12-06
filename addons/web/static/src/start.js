@@ -4,7 +4,7 @@ import { mountComponent } from "./env";
 import { localization } from "@web/core/l10n/localization";
 import { session } from "@web/session";
 import { hasTouch } from "@web/core/browser/feature_detection";
-import { Component, whenReady } from "@koda/owl";
+import { Component, whenReady } from "@odoo/owl";
 
 /**
  * Function to start a webclient.

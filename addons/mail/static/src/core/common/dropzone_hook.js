@@ -2,7 +2,7 @@
 
 import { Dropzone } from "@mail/core/common/dropzone";
 
-import { useEffect, useExternalListener } from "@koda/owl";
+import { useEffect, useExternalListener } from "@odoo/owl";
 
 import { registry } from "@web/core/registry";
 

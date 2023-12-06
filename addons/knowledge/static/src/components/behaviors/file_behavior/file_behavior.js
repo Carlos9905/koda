@@ -14,7 +14,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 import { setSelection, rightPos } from "@web_editor/js/editor/koda-editor/src/utils/utils";
 

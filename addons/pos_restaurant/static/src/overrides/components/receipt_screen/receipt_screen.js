@@ -2,7 +2,7 @@
 
 import { ReceiptScreen } from "@point_of_sale/app/screens/receipt_screen/receipt_screen";
 import { patch } from "@web/core/utils/patch";
-import { onWillUnmount } from "@koda/owl";
+import { onWillUnmount } from "@odoo/owl";
 import { FloorScreen } from "@pos_restaurant/app/floor_screen/floor_screen";
 
 patch(ReceiptScreen.prototype, {

@@ -3,7 +3,7 @@
 import { isVisible as isElemVisible } from "@web/core/utils/ui";
 import { fullTraceback, fullAnnotatedTraceback } from "@web/core/errors/error_utils";
 import { registry } from "@web/core/registry";
-import { Component, whenReady } from "@koda/owl";
+import { Component, whenReady } from "@odoo/owl";
 
 const consoleError = console.error;
 

@@ -3,7 +3,7 @@
 import { _t } from "@web/core/l10n/translation";
 import { formatPercentage, formatFloat } from "@web/views/fields/formatters";
 
-import { Component } from "@koda/owl";
+import { Component } from "@odoo/owl";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { ViewScaleSelector } from "@web/views/view_components/view_scale_selector";

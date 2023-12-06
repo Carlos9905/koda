@@ -4,7 +4,7 @@ import { registry } from "@web/core/registry";
 import { CharField, charField } from "@web/views/fields/char/char_field";
 import { useDebounced } from "@web/core/utils/timing";
 import { useService } from "@web/core/utils/hooks";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 export const DELAY = 400;
 

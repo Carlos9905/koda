@@ -13,7 +13,7 @@ import {
 import { _t } from "@web/core/l10n/translation";
 import { useOwnedDialogs } from "@web/core/utils/hooks";
 
-import { Component, useState } from "@koda/owl";
+import { Component, useState } from "@odoo/owl";
 import { AddButtonAction } from "../../../interactive_editor/action_button/action_button";
 
 /**

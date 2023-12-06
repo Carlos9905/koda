@@ -7,7 +7,7 @@ import testUtils from "@web/../tests/legacy/helpers/test_utils";
 import { click, getFixture, makeDeferred, nextTick, patchWithCleanup } from "../../helpers/utils";
 import { createWebClient, doAction, getActionManagerServerData } from "./../helpers";
 
-import { Component, xml } from "@koda/owl";
+import { Component, xml } from "@odoo/owl";
 
 let serverData;
 let target;

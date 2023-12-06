@@ -8,7 +8,7 @@ import { useCallbackRecorder } from "@web/webclient/actions/action_hook";
 import {
     onWillUnmount,
     useEffect,
-} from "@koda/owl";
+} from "@odoo/owl";
 
 /**
  * Knowledge articles can interact with some records with the help of the

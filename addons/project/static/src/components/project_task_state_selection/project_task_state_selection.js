@@ -9,7 +9,7 @@ import { useCommand } from "@web/core/commands/command_hook";
 import { formatSelection } from "@web/views/fields/formatters";
 
 import { registry } from "@web/core/registry";
-import { useState } from "@koda/owl";
+import { useState } from "@odoo/owl";
 
 export class ProjectTaskStateSelection extends StateSelectionField {
     setup() {

@@ -2,7 +2,7 @@
 
 import { usePopover } from "@web/core/popover/popover_hook";
 import { formatNumber, useNewAllocationRequest } from "@hr_holidays/views/hooks";
-import { Component, onWillRender } from "@koda/owl";
+import { Component, onWillRender } from "@odoo/owl";
 
 export class TimeOffCardPopover extends Component {}
 

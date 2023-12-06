@@ -27,7 +27,7 @@ import {
 import { SearchBar } from "@web/search/search_bar/search_bar";
 import { SearchBarMenu } from "@web/search/search_bar_menu/search_bar_menu";
 import { registry } from "@web/core/registry";
-import { Component, onWillUpdateProps, xml } from "@koda/owl";
+import { Component, onWillUpdateProps, xml } from "@odoo/owl";
 import { createWebClient, doAction } from "../webclient/helpers";
 import { openModelFieldSelectorPopover } from "@web/../tests/core/model_field_selector_tests";
 import * as dsHelpers from "@web/../tests/core/domain_selector_tests";
