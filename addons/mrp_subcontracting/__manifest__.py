@@ -64,7 +64,7 @@
 
             'web/static/lib/luxon/luxon.js',
             'web/static/lib/owl/owl.js',
-            'web/static/lib/owl/koda_module.js',
+            'web/static/lib/owl/odoo_module.js',
             'web/static/lib/jquery/jquery.js',
             'web/static/lib/popper/popper.js',
             'web/static/lib/bootstrap/js/dist/dom/data.js',

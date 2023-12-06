@@ -45,7 +45,7 @@ class HitMiss:
 counter = collections.defaultdict(HitMiss)
 
 
-def get_koda_module_name(python_module_name):
+def get_odoo_module_name(python_module_name):
     if python_module_name.startswith('koda.addons.'):
         return python_module_name.split('.')[2]
     if python_module_name == 'koda.models':
@@ -127,7 +127,7 @@ class TestLintOverrideSignatures(LintCase):
                     if callable(method):
                         break
 
-                parent_module = get_koda_module_name(parent_class.__module__)
+                parent_module = get_odoo_module_name(parent_class.__module__)
                 original_signature = inspect.signature(method)
 
                 # Assert that all child classes correctly override the method
@@ -136,7 +136,7 @@ class TestLintOverrideSignatures(LintCase):
                         continue
                     override = getattr(child_class, method_name)
 
-                    child_module = get_koda_module_name(child_class.__module__)
+                    child_module = get_odoo_module_name(child_class.__module__)
                     override_signature = inspect.signature(override)
 
                     with self.subTest(module=child_module, model=model_name, method=method_name):

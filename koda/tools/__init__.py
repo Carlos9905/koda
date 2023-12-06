@@ -22,5 +22,5 @@ from .translate import *
 from .xml_utils import *
 from .convert import *
 from . import osutil
-from .js_transpiler import transpile_javascript, is_koda_module, URL_RE, koda_MODULE_RE
+from .js_transpiler import transpile_javascript, is_odoo_module, URL_RE, koda_MODULE_RE
 from .sourcemap_generator import SourceMapGenerator

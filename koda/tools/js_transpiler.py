@@ -670,7 +670,7 @@ koda_MODULE_RE = re.compile(r"""
 """, re.VERBOSE)
 
 
-def is_koda_module(content):
+def is_odoo_module(content):
     """
     Detect if the file is a native koda module.
     We look for a comment containing @koda-module.
