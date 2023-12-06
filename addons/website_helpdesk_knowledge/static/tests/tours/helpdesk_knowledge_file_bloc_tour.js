@@ -5,7 +5,7 @@ import { openCommandBar } from '@knowledge/../tests/tours/knowledge_tour_utils';
 
 const createFileBehaviorSteps = [
     { // open the powerBox
-        trigger: '.koda-editor-editable p',
+        trigger: '.odoo-editor-editable p',
         run: function () {
             openCommandBar(this.$anchor[0]);
         },

@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import wTourUtils from '@website/js/tours/tour_utils';
-import { boundariesIn, setSelection } from '@web_editor/js/editor/koda-editor/src/utils/utils';
+import { boundariesIn, setSelection } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
 
 const clickOnImgStep = {
     content: "Click somewhere else to save.",

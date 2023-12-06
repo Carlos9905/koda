@@ -2,7 +2,7 @@
 
 import { SORTABLE_TOLERANCE } from "@knowledge/components/sidebar/sidebar";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
-import { setSelection, boundariesIn } from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import { setSelection, boundariesIn } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 import { insertText } from "@web/../tests/utils";
 
 export const changeInternalPermission = (permission) => {
@@ -82,7 +82,7 @@ export const dragAndDropArticle = ($element, $target) => {
  */
 export function appendArticleLink(htmlFieldContainerSelector, articleName, offset=0) {
     return [{ // open the command bar
-        trigger: `${htmlFieldContainerSelector} .koda-editor-editable > p:last-child`,
+        trigger: `${htmlFieldContainerSelector} .odoo-editor-editable > p:last-child`,
         run: function () {
             openCommandBar(this.$anchor[0], offset);
         },

@@ -394,7 +394,7 @@ function _backgroundImagePartsToCss(parts) {
  * @returns {boolean}
  */
 function _isColorGradient(value) {
-    // FIXME duplicated in koda-editor/utils.js
+    // FIXME duplicated in odoo-editor/utils.js
     return value && value.includes('-gradient(');
 }
 /**

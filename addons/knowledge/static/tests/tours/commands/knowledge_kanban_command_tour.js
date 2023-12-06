@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { endKnowledgeTour, openCommandBar } from '../knowledge_tour_utils.js';
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
-import { setSelection } from '@web_editor/js/editor/koda-editor/src/utils/utils';
+import { setSelection } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
 import { markup } from "@odoo/owl";
 
 registry.category("web_tour.tours").add('knowledge_kanban_cards_command_tour', {
@@ -12,7 +12,7 @@ registry.category("web_tour.tours").add('knowledge_kanban_cards_command_tour', {
     steps: () => [stepUtils.showAppsMenuItem(), { // open the Knowledge App
     trigger: '.o_app[data-menu-xmlid="knowledge.knowledge_menu_root"]',
 }, { // open the command bar
-    trigger: '.koda-editor-editable > p',
+    trigger: '.odoo-editor-editable > p',
     run: function () {
         openCommandBar(this.$anchor[0]);
     },
@@ -39,7 +39,7 @@ registry.category("web_tour.tours").add('knowledge_kanban_command_tour', {
     steps: () => [stepUtils.showAppsMenuItem(), { // open the Knowledge App
     trigger: '.o_app[data-menu-xmlid="knowledge.knowledge_menu_root"]',
 }, { // open the command bar
-    trigger: '.koda-editor-editable > p',
+    trigger: '.odoo-editor-editable > p',
     run: function () {
         openCommandBar(this.$anchor[0]);
     },
@@ -103,9 +103,9 @@ registry.category("web_tour.tours").add('knowledge_item_kanban_custom_act_window
     steps: () => [stepUtils.showAppsMenuItem(), { // open the Knowledge App
     trigger: '.o_app[data-menu-xmlid="knowledge.knowledge_menu_root"]',
 }, { // manually insert view from act_window object
-    trigger: '.koda-editor-editable > p',
+    trigger: '.odoo-editor-editable > p',
     run: function () {
-        const wysiwyg = $(this.$anchor[0].closest('.koda-editor-editable')).data('wysiwyg');
+        const wysiwyg = $(this.$anchor[0].closest('.odoo-editor-editable')).data('wysiwyg');
         const context = articleItemsKanbanActionContext(wysiwyg);
         const restoreSelection = () => {
             return setSelection(this.$anchor[0]);
@@ -153,7 +153,7 @@ function domHelpFieldSteps () {
             trigger: '.o_section_header:contains(Workspace) .o_section_create',
             run: 'click'
         }, { // check that the article is correctly created
-            trigger: '.koda-editor-editable > h1',
+            trigger: '.odoo-editor-editable > h1',
             run: () => {},
         }, { // switch back to the first article
             trigger: '.o_knowledge_tree .o_article_name:contains("EditorCommandsArticle")',
@@ -181,7 +181,7 @@ function domHelpFieldSteps () {
                 this.$anchor[0].scrollIntoView();
             },
         }, { // wait for the kanban view to be mounted
-            trigger: '.koda-editor-editable',
+            trigger: '.odoo-editor-editable',
             extra_trigger: '.o_knowledge_behavior_type_embedded_view .o_kanban_renderer',
             run: function () {
                 const helpField = document.querySelector('.o_knowledge_content[data-prop-name="action_help"]');
@@ -197,7 +197,7 @@ function domHelpFieldSteps () {
             trigger: '.o_knowledge_tree .o_article_name:contains("Untitled")',
             run: 'click',
         }, { // check that the article is loaded
-            trigger: '.koda-editor-editable > h1',
+            trigger: '.odoo-editor-editable > h1',
             run: () => {},
         }, { // reswitch to the other article
             trigger: '.o_knowledge_tree .o_article_name:contains("EditorCommandsArticle")',

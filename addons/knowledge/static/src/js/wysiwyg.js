@@ -8,7 +8,7 @@ import {
     isSelectionInSelectors,
     preserveCursor,
     setCursorEnd,
-} from "@web_editor/js/editor/koda-editor/src/utils/utils";
+} from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 import { VideoSelectorDialog } from '@knowledge/components/video_selector_dialog/video_selector_dialog';
 import { ArticleSelectionBehaviorDialog } from '@knowledge/components/behaviors/article_behavior_dialog/article_behavior_dialog';
 import {

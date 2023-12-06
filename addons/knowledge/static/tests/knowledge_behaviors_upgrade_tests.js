@@ -9,8 +9,8 @@ import { getOrigin } from "@web/core/utils/urls";
 
 // web_editor
 import { HtmlField } from "@web_editor/js/backend/html_field";
-import { unformat } from "@web_editor/js/editor/koda-editor/test/utils";
-import { parseHTML } from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import { unformat } from "@web_editor/js/editor/odoo-editor/test/utils";
+import { parseHTML } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 
 
 // knowledge

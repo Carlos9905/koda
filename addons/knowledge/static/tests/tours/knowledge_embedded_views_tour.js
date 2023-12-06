@@ -11,7 +11,7 @@ registry.category("web_tour.tours").add('knowledge_embedded_view_filters_tour', 
         // open Knowledge App
         trigger: '.o_app[data-menu-xmlid="knowledge.knowledge_menu_root"]',
     }, { // open the command bar
-        trigger: '.koda-editor-editable > p',
+        trigger: '.odoo-editor-editable > p',
         run: function () {
             openCommandBar(this.$anchor[0]);
         },

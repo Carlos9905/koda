@@ -87,8 +87,8 @@ Note: Only the admin user is allowed to make those customizations.
             "web/static/src/webclient/actions/reports/report.scss",
             'web_studio/static/src/client_action/report_editor/report_iframe.scss',
             "web/static/src/module_loader.js",
-            "web_editor/static/src/js/editor/koda-editor/src/**/*",
-            ("remove", "web_editor/static/src/js/editor/koda-editor/src/qweb_sample.js")
+            "web_editor/static/src/js/editor/odoo-editor/src/**/*",
+            ("remove", "web_editor/static/src/js/editor/odoo-editor/src/qweb_sample.js")
         ],
         'web.qunit_suite_tests': [
             # In tests we don't want to lazy load this

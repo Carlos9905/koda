@@ -73,7 +73,7 @@ registry.category("web_tour.tours").add('payroll_dashboard_ui_tour', {
     },
     {
         content: "Write in the note",
-        trigger: ".note-editable.koda-editor-editable",
+        trigger: ".note-editable.odoo-editor-editable",
         run: "text Todo List"
     }
 ]});

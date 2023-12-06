@@ -64,7 +64,7 @@
             'web/static/lib/bootstrap/js/dist/scrollspy.js',
             "point_of_sale/static/src/app/store/models/product_custom_attribute.js",
             "point_of_sale/static/src/utils.js",
-            'web_editor/static/src/js/editor/koda-editor/src/base_style.scss',
+            'web_editor/static/src/js/editor/odoo-editor/src/base_style.scss',
             'web_editor/static/src/scss/web_editor.common.scss',
             "point_of_sale/static/src/app/generic_components/**/*",
             "point_of_sale/static/src/css/pos_receipts.css",

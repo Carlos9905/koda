@@ -6,7 +6,7 @@ import { useChildRef } from "@web/core/utils/hooks";
 import weSnippetEditor from "@web_editor/js/editor/snippets.editor";
 import wSnippetOptions from "@website/js/editor/snippets.options";
 import wUtils from "@website/js/utils";
-import * as OdooEditorLib from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import * as OdooEditorLib from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 import { Component, onMounted, useRef, useState } from "@odoo/owl";
 import { throttleForAnimation } from "@web/core/utils/timing";
 import {

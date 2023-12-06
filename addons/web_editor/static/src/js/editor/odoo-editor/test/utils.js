@@ -680,7 +680,7 @@ async function pasteData (editor, text, type) {
 
 export const pasteText = async (editor, text) => pasteData(editor, text, 'text/plain');
 export const pasteHtml = async (editor, html) => pasteData(editor, html, 'text/html');
-export const pasteOdooEditorHtml = async (editor, html) => pasteData(editor, html, 'text/koda-editor');
+export const pasteOdooEditorHtml = async (editor, html) => pasteData(editor, html, 'text/odoo-editor');
 const overridenDomClass = [
     'HTMLBRElement',
     'HTMLHeadingElement',

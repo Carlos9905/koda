@@ -16,7 +16,7 @@ import {
     useState,
 } from "@odoo/owl";
 
-import { setSelection, rightPos } from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import { setSelection, rightPos } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 
 import { AttachToMessageMacro, UseAsAttachmentMacro } from "@knowledge/macros/file_macros";
 import { AbstractBehavior } from "@knowledge/components/behaviors/abstract_behavior/abstract_behavior";

@@ -3,7 +3,7 @@
 import { loadBundle } from "@web/core/assets";
 import { attachComponent } from "@web/legacy/utils";
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";
-import { closestElement } from "@web_editor/js/editor/koda-editor/src/OdooEditor";
+import { closestElement } from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
 import { Toolbar } from "@web_editor/js/editor/toolbar";
 import "@web_editor/js/wysiwyg/wysiwyg_iframe";
 

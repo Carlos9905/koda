@@ -5,7 +5,7 @@ import { Composer } from '@mail/core/common/composer';
 import { Thread } from '@mail/core/common/thread';
 import { KnowledgeCommentsPopover } from '../comments_popover/comments_popover';
 import { KnowledgeCommentCreatorComposer } from '../composer/composer';
-import { closestBlock } from '@web_editor/js/editor/koda-editor/src/utils/utils';
+import { closestBlock } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
 import { _t } from '@web/core/l10n/translation';
 
 import {

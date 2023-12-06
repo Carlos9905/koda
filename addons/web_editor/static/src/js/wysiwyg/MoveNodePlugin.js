@@ -4,7 +4,7 @@ import {
     closestElement,
     resetOuids,
     setSelection,
-} from '@web_editor/js/editor/koda-editor/src/OdooEditor';
+} from '@web_editor/js/editor/odoo-editor/src/OdooEditor';
 import { useNativeDraggable } from "@web_editor/js/editor/drag_and_drop";
 
 const simpleDraggableHook = {

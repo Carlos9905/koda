@@ -37,10 +37,10 @@ registry.category("web_tour.tours").add('knowledge_article_command_dialog_tour',
     trigger: `${composeBody} .o_knowledge_behavior_type_article:contains("EditorCommandsArticle")`,
     run: () => {},
 }, ...appendArticleLink(`${composeBody}`, 'LinkedArticle', 1), { // wait for the block to appear in the editor, after the previous one
-    trigger: `${composeBody} .koda-editor-editable > p > a:nth-child(2).o_knowledge_behavior_type_article:contains("LinkedArticle")[contenteditable="false"]`,
+    trigger: `${composeBody} .odoo-editor-editable > p > a:nth-child(2).o_knowledge_behavior_type_article:contains("LinkedArticle")[contenteditable="false"]`,
     run: () => {},
 }, { // verify that the first block is still there and contenteditable=false
-    trigger: `${composeBody} .koda-editor-editable > p > a:nth-child(1).o_knowledge_behavior_type_article:contains("EditorCommandsArticle")[contenteditable="false"]`,
+    trigger: `${composeBody} .odoo-editor-editable > p > a:nth-child(1).o_knowledge_behavior_type_article:contains("EditorCommandsArticle")[contenteditable="false"]`,
     run: () => {},
 }, { // send the message
     trigger: '.o_mail_send',

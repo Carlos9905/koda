@@ -47,7 +47,7 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
     //-----------------------------------------------
     
     // Open the command bar
-    trigger: '.koda-editor-editable > p',
+    trigger: '.odoo-editor-editable > p',
     run: function () {
         openCommandBar(this.$anchor[0]);
     },
@@ -81,7 +81,7 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
         }
     },
 }, { // Set the name of the item
-    trigger: '.o_knowledge_editor .koda-editor-editable h1',
+    trigger: '.o_knowledge_editor .odoo-editor-editable h1',
     run: 'text Item Article',
 }, { // Go back to parent article
     trigger: '.o_knowledge_tree .o_article_name:contains("EditorCommandsArticle")',
@@ -96,14 +96,14 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
     //--------------------------------------------------------------
 
     // Remove previous item calendar view
-    trigger: '.koda-editor-editable',
+    trigger: '.odoo-editor-editable',
     run: function () {
         this.$anchor.data('wysiwyg').kodaEditor.resetContent();
     },
 }, {
     // Click on the "Create Item Calednar" helper
     trigger: '.o_knowledge_helper .o_knowledge_add_item_calendar',
-    extra_trigger: '.koda-editor-editable:not(:has(.o_knowledge_behavior_type_embedded_view))',
+    extra_trigger: '.odoo-editor-editable:not(:has(.o_knowledge_behavior_type_embedded_view))',
     run: 'click',
 }, { // Open the start date dropdown
     trigger: '.o_knowledge_item_calendar_dialog_date_start .o_select_menu_toggler',
@@ -166,7 +166,7 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
     trigger: '.o_field_property_definition_type .dropdown-menu .dropdown-item:contains("Date"):not(:contains("Time"))',
     run: 'click',
 }, {
-    trigger: '.o_knowledge_editor .koda-editor-editable',
+    trigger: '.o_knowledge_editor .odoo-editor-editable',
     run: 'click',
 }, { // Create a new checkbox property
     trigger: '.o_knowledge_properties_field .o_field_property_add button',
@@ -181,7 +181,7 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
     trigger: '.o_field_property_definition_type .dropdown-menu .dropdown-item:contains("Checkbox")',
     run: 'click',
 }, {
-    trigger: '.o_knowledge_editor .koda-editor-editable',
+    trigger: '.o_knowledge_editor .odoo-editor-editable',
     run: 'click',
 }, { // Create a text property
     trigger: '.o_knowledge_properties_field .o_field_property_add button',
@@ -196,13 +196,13 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
     trigger: '.o_field_property_definition_type .dropdown-menu .dropdown-item:contains("Text")',
     run: 'click',
 }, {
-    trigger: '.o_knowledge_editor .koda-editor-editable',
+    trigger: '.o_knowledge_editor .odoo-editor-editable',
     run: 'click',
 }, { // Set the text property
     trigger: '.o_knowledge_properties_field .o_property_field:contains("Text Property") input',
     run: 'text Custom text',
 }, { // Set the name of the item 
-    trigger: '.o_knowledge_editor .koda-editor-editable h1',
+    trigger: '.o_knowledge_editor .odoo-editor-editable h1',
     run: 'text Item Article',
 }, { // Go back to parent article
     trigger: '.o_knowledge_tree .o_article_name:contains("EditorCommandsArticle")',

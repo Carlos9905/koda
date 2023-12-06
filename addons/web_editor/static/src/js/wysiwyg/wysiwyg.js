@@ -7,7 +7,7 @@ import { browser } from "@web/core/browser/browser";
 import { useService } from "@web/core/utils/hooks";
 import customColors from "@web_editor/js/editor/custom_colors";
 import { localization } from "@web/core/l10n/localization";
-import * as OdooEditorLib from "@web_editor/js/editor/koda-editor/src/OdooEditor";
+import * as OdooEditorLib from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
 import { Toolbar } from "@web_editor/js/editor/toolbar";
 import { LinkPopoverWidget } from '@web_editor/js/wysiwyg/widgets/link_popover_widget';
 import { AltDialog } from '@web_editor/js/wysiwyg/widgets/alt_dialog';
@@ -17,7 +17,7 @@ import { ImageCrop } from '@web_editor/js/wysiwyg/widgets/image_crop';
 
 import * as wysiwygUtils from "@web_editor/js/common/wysiwyg_utils";
 import weUtils from "@web_editor/js/common/utils";
-import { isSelectionInSelectors, peek } from '@web_editor/js/editor/koda-editor/src/utils/utils';
+import { isSelectionInSelectors, peek } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
 import { PeerToPeer, RequestError } from "@web_editor/js/wysiwyg/PeerToPeer";
 import { uniqueId } from "@web/core/utils/functions";
 import { groupBy } from "@web/core/utils/arrays";
@@ -892,7 +892,7 @@ export class Wysiwyg extends Component {
             this.$editable.css('max-height', this.options.maxHeight);
         }
         if (this.options.resizable && !isMobileOS()) {
-            const $wrapper = $('<div class="o_wysiwyg_wrapper koda-editor">');
+            const $wrapper = $('<div class="o_wysiwyg_wrapper odoo-editor">');
             this.$root = $wrapper;
             $wrapper.append(this.$editable);
             this.$resizer = $(`<div class="o_wysiwyg_resizer">

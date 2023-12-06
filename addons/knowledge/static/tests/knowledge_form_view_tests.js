@@ -8,7 +8,7 @@ import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { renderToElement } from "@web/core/utils/render";
 import { patch } from "@web/core/utils/patch";
 import { HtmlField } from "@web_editor/js/backend/html_field";
-import { parseHTML } from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import { parseHTML } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 import { ArticlesStructureBehavior } from "@knowledge/components/behaviors/articles_structure_behavior/articles_structure_behavior";
 import { TableOfContentBehavior } from "@knowledge/components/behaviors/table_of_content_behavior/table_of_content_behavior";
 import { TemplateBehavior } from "@knowledge/components/behaviors/template_behavior/template_behavior";
@@ -125,7 +125,7 @@ QUnit.module("Knowledge - Articles Structure Command", (hooks) => {
             }
         });
 
-        const editable = fixture.querySelector('.koda-editor-editable');
+        const editable = fixture.querySelector('.odoo-editor-editable');
         const target = editable.querySelector('p.test_target');
         await insertArticlesStructure(editable, target, true);
 
@@ -161,7 +161,7 @@ QUnit.module("Knowledge - Articles Structure Command", (hooks) => {
             }
         });
 
-        const editable = fixture.querySelector('.koda-editor-editable');
+        const editable = fixture.querySelector('.odoo-editor-editable');
         const target = editable.querySelector('p.test_target');
         await insertArticlesStructure(editable, target, false);
 
@@ -250,7 +250,7 @@ QUnit.module("Knowledge - External View Insertion", (hooks) => {
             resId: 1
         });
 
-        const editable = fixture.querySelector('.koda-editor-editable');
+        const editable = fixture.querySelector('.odoo-editor-editable');
         await testAppendBehavior(editable);
 
         // We are checking if the anchor has been correctly inserted inside
@@ -724,7 +724,7 @@ QUnit.module("Knowledge Table of Content", (hooks) => {
             resId: 1,
         });
 
-        const editable = fixture.querySelector('.koda-editor-editable');
+        const editable = fixture.querySelector('.odoo-editor-editable');
         const target = editable.querySelector('p.test_target');
         await insertTableOfContent(editable, target);
 
@@ -759,7 +759,7 @@ QUnit.module("Knowledge Table of Content", (hooks) => {
             resId: 2,
         });
 
-        const editable = fixture.querySelector('.koda-editor-editable');
+        const editable = fixture.querySelector('.odoo-editor-editable');
         const target = editable.querySelector('p.test_target');
         await insertTableOfContent(editable, target);
 
@@ -787,7 +787,7 @@ QUnit.module("Knowledge Table of Content", (hooks) => {
             resId: 3,
         });
 
-        const editable = fixture.querySelector('.koda-editor-editable');
+        const editable = fixture.querySelector('.odoo-editor-editable');
         const target = editable.querySelector('p.test_target');
         await insertTableOfContent(editable, target);
 

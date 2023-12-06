@@ -59,7 +59,7 @@ const cleanTestHtml = () => {
 const insertTestHtml = innerHtml => {
     cleanTestHtml();
     const container = document.createElement('DIV');
-    container.classList.add('koda-editor-editable');
+    container.classList.add('odoo-editor-editable');
     container.setAttribute('contenteditable', true);
     container.innerHTML = innerHtml;
     document.body.appendChild(container);

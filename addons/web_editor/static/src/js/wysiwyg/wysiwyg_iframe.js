@@ -77,8 +77,8 @@ patch(Wysiwyg.prototype, {
     _loadIframe() {
         var self = this;
         const isEditableRoot = this.$editable === this.$root;
-        this.$editable = $('<div class="note-editable oe_structure koda-editor-editable"></div>');
-        this.$el.removeClass('note-editable oe_structure koda-editor-editable');
+        this.$editable = $('<div class="note-editable oe_structure odoo-editor-editable"></div>');
+        this.$el.removeClass('note-editable oe_structure odoo-editor-editable');
         if (isEditableRoot) {
             this.$root = this.$editable;
         }
@@ -106,7 +106,7 @@ patch(Wysiwyg.prototype, {
                 const $utilsZone = $('<div class="iframe-utils-zone">');
                 self.$utilsZone = $utilsZone;
 
-                const $iframeWrapper = $('<div class="iframe-editor-wrapper koda-editor">');
+                const $iframeWrapper = $('<div class="iframe-editor-wrapper odoo-editor">');
                 const $codeview = $('<textarea class="o_codeview d-none"/>');
                 self.$editable.addClass('o_editable oe_structure');
 

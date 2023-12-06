@@ -17,7 +17,7 @@ import { sortBy } from "@web/core/utils/arrays";
 import { useOwnedDialogs, useService } from "@web/core/utils/hooks";
 import { SelectMenu } from '@web/core/select_menu/select_menu';
 import { QWebPlugin } from "@web_editor/js/backend/QWebPlugin";
-import { setSelection, startPos, endPos } from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import { setSelection, startPos, endPos } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 
 import { StudioDynamicPlaceholderPopover } from "./studio_dynamic_placeholder_popover";
 import { Many2ManyTagsField } from "@web/views/fields/many2many_tags/many2many_tags_field";

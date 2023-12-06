@@ -175,10 +175,10 @@
             # Form style should be computed before
             'web/static/src/views/form/button_box/*.scss',
 
-            'web_editor/static/src/js/editor/koda-editor/src/base_style.scss',
+            'web_editor/static/src/js/editor/odoo-editor/src/base_style.scss',
             'web_editor/static/lib/vkbeautify/**/*',
             'web_editor/static/src/js/common/**/*',
-            'web_editor/static/src/js/editor/koda-editor/src/utils/utils.js',
+            'web_editor/static/src/js/editor/odoo-editor/src/utils/utils.js',
             'web_editor/static/src/js/wysiwyg/fonts.js',
 
             'web_editor/static/src/components/**/*',

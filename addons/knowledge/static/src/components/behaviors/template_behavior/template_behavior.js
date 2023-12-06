@@ -7,7 +7,7 @@ import { SendAsMessageMacro, UseAsDescriptionMacro } from "@knowledge/macros/tem
 import { Tooltip } from "@web/core/tooltip/tooltip";
 import { usePopover } from "@web/core/popover/popover_hook";
 import { useChildRef, useService } from "@web/core/utils/hooks";
-import { setCursorStart } from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import { setCursorStart } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 import {
     useRef,
     markup,
@@ -70,7 +70,7 @@ export class TemplateBehavior extends AbstractBehavior {
     _createHtmlDataTransfer() {
         const dataTransfer = new DataTransfer();
         const content = this.props.anchor.querySelector('.o_knowledge_content');
-        dataTransfer.setData('text/koda-editor', `<p></p>${content.innerHTML}<p></p>`);
+        dataTransfer.setData('text/odoo-editor', `<p></p>${content.innerHTML}<p></p>`);
         return dataTransfer;
     }
 

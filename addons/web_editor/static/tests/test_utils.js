@@ -3,7 +3,7 @@
 import { MockServer } from "@web/../tests/helpers/mock_server";
 import testUtils from "@web/../tests/legacy/helpers/test_utils";
 import { patch } from "@web/core/utils/patch";
-import * as OdooEditorLib from "@web_editor/js/editor/koda-editor/src/OdooEditor";
+import * as OdooEditorLib from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
 import { Wysiwyg } from '@web_editor/js/wysiwyg/wysiwyg';
 import options from "@web_editor/js/editor/snippets.options";
 import { TABLE_ATTRIBUTES, TABLE_STYLES } from '@web_editor/js/backend/convert_inline';

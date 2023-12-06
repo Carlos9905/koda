@@ -37,7 +37,7 @@ registry.category("web_tour.tours").add("knowledge_video_command_tour", {
                 });
             },
         }, { // open the command bar
-            trigger: ".koda-editor-editable > p",
+            trigger: ".odoo-editor-editable > p",
             run: function () {
                 openCommandBar(this.$anchor[0]);
             },

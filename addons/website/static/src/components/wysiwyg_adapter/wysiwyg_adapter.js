@@ -6,7 +6,7 @@ import { useService, useBus } from "@web/core/utils/hooks";
 import { useHotkey } from '@web/core/hotkeys/hotkey_hook';
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";
 import weUtils from '@web_editor/js/common/utils';
-import { isMediaElement } from '@web_editor/js/editor/koda-editor/src/utils/utils';
+import { isMediaElement } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
 
 import { EditMenuDialog, MenuDialog } from "../dialog/edit_menu";
 import { WebsiteDialog } from '../dialog/dialog';

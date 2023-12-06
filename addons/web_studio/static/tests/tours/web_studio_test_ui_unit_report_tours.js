@@ -278,7 +278,7 @@ registry.category("web_tour.tours").add("web_studio.test_basic_report_edition_er
             // Brutally add a t-else: this will crash in python on save
             trigger: ".o-web-studio-report-editor-wysiwyg iframe body",
             run() {
-                const editable = this.$anchor[0].querySelector(".koda-editor-editable");
+                const editable = this.$anchor[0].querySelector(".odoo-editor-editable");
                 const wysiwyg = $(editable).data("wysiwyg");
                 const telse = wysiwyg.kodaEditor.document.createElement("t");
                 telse.setAttribute("t-else", "");

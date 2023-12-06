@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { isEmptyBlock } from "@web_editor/js/editor/koda-editor/src/OdooEditor";
+import { isEmptyBlock } from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";
 import { useBus } from '@web/core/utils/hooks';
 import {
@@ -8,7 +8,7 @@ import {
     getDeepRange,
     getSelectedNodes,
     closestElement,
-} from "@web_editor/js/editor/koda-editor/src/utils/utils";
+} from "@web_editor/js/editor/odoo-editor/src/utils/utils";
 import { useRef } from '@odoo/owl';
 
 /**

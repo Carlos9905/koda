@@ -766,7 +766,7 @@ registry.category("web_tour.tours").add("web_studio_new_report_tour", {
             run() {},
         },
         {
-            trigger: ".o-web-studio-report-editor-wysiwyg iframe .koda-editor-editable div.page",
+            trigger: ".o-web-studio-report-editor-wysiwyg iframe .odoo-editor-editable div.page",
             run($anchor) {
                 const element = this.$anchor[0];
                 element.ownerDocument.getSelection().setPosition(element);
@@ -774,14 +774,14 @@ registry.category("web_tour.tours").add("web_studio_new_report_tour", {
             },
         },
         {
-            trigger: ".o-web-studio-report-editor-wysiwyg iframe .koda-editor-editable div.page",
+            trigger: ".o-web-studio-report-editor-wysiwyg iframe .odoo-editor-editable div.page",
             run() {
                 const element = this.$anchor[0];
                 assertEqual(element.classList.contains("oe-command-temporary-hint"), true);
             },
         },
         {
-            trigger: ".o-web-studio-report-editor-wysiwyg iframe .koda-editor-editable div.page",
+            trigger: ".o-web-studio-report-editor-wysiwyg iframe .odoo-editor-editable div.page",
             run: "text some new text",
         },
         {

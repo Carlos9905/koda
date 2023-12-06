@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { CLIPBOARD_WHITELISTS } from '@web_editor/js/editor/koda-editor/src/OdooEditor';
+import { CLIPBOARD_WHITELISTS } from '@web_editor/js/editor/odoo-editor/src/OdooEditor';
 
 /**
  * Allow @see o_knowledge_ classes to be preserved in the editor on paste.

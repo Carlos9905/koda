@@ -15,7 +15,7 @@ import {
     getAdjacentPreviousSiblings,
     getAdjacentNextSiblings,
     getRangePosition
-} from '@web_editor/js/editor/koda-editor/src/utils/utils';
+} from '@web_editor/js/editor/odoo-editor/src/utils/utils';
 import { toInline } from '@web_editor/js/backend/convert_inline';
 import { getBundle, loadBundle } from '@web/core/assets';
 import {
@@ -298,7 +298,7 @@ export class HtmlField extends Component {
     async startWysiwyg(wysiwyg) {
         this.wysiwyg = wysiwyg;
         await this.wysiwyg.startEdition();
-        wysiwyg.$editable[0].classList.add("koda-editor-qweb");
+        wysiwyg.$editable[0].classList.add("odoo-editor-qweb");
 
         if (this.props.codeview) {
             const $codeviewButtonToolbar = $(`
@@ -541,14 +541,14 @@ export class HtmlField extends Component {
         const $editable = this.wysiwyg.getEditable();
         this.wysiwyg.kodaEditor.sanitize(this.wysiwyg.kodaEditor.editable);
         const html = this.wysiwyg.getValue();
-        const $kodaEditor = $editable.closest('.koda-editor-editable');
+        const $kodaEditor = $editable.closest('.odoo-editor-editable');
         // Save correct nodes references.
         // Remove temporarily the class so that css editing will not be converted.
-        $kodaEditor.removeClass('koda-editor-editable');
+        $kodaEditor.removeClass('odoo-editor-editable');
         $editable.html(html);
 
         await toInline($editable, this.cssRules, this.wysiwyg.$iframe);
-        $kodaEditor.addClass('koda-editor-editable');
+        $kodaEditor.addClass('odoo-editor-editable');
 
         this.wysiwyg.setValue($editable.html());
         this.wysiwyg.kodaEditor.sanitize(this.wysiwyg.kodaEditor.editable);

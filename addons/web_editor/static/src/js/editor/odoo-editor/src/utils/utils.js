@@ -318,7 +318,7 @@ export function closestElement(node, predicate = "*") {
         element = element?.closest(predicate);
     }
 
-    return element?.closest('.koda-editor-editable') && element;
+    return element?.closest('.odoo-editor-editable') && element;
 }
 
 /**
@@ -493,7 +493,7 @@ export function hasValidSelection(editable) {
  *     positions which are not possible, like the cursor inside an image).
  */
 export function getNormalizedCursorPosition(node, offset, full = true) {
-    const editable = closestElement(node, '.koda-editor-editable');
+    const editable = closestElement(node, '.odoo-editor-editable');
     let closest = closestElement(node);
     while (
         closest &&
@@ -1850,7 +1850,7 @@ export function isColorGradient(value) {
  *
  * @private
  * @todo probably move `getCSSVariableValue` and `convertNumericToUnit` as
- *       koda-editor utils.
+ *       odoo-editor utils.
  * @param {Selection} sel The current selection.
  * @returns {Float} The font size to display.
  */
@@ -2254,7 +2254,7 @@ export function prepareUpdate(...args) {
         const left = getState(el, offset, DIRECTIONS.LEFT);
         const right = getState(el, offset, DIRECTIONS.RIGHT, left.cType);
         if (options.debug) {
-            const editable = el && closestElement(el, '.koda-editor-editable');
+            const editable = el && closestElement(el, '.odoo-editor-editable');
             const oldEditableHTML = editable && editable.innerHTML.replaceAll(' ', '_').replaceAll('\u200B', 'ZWS') || '';
             left.oldEditableHTML = oldEditableHTML;
             right.oldEditableHTML = oldEditableHTML;
@@ -2546,7 +2546,7 @@ export function restoreState(prevStateData, debug=false) {
     const ruleHashCode = restoreStateRuleHashCode(direction, cType1, cType2);
     const rule = allRestoreStateRules.get(ruleHashCode);
     if (debug) {
-        const editable = closestElement(node, '.koda-editor-editable');
+        const editable = closestElement(node, '.odoo-editor-editable');
         console.log(
             '%c' + node.textContent.replaceAll(' ', '_').replaceAll('\u200B', 'ZWS') + '\n' +
             '%c' + (direction === DIRECTIONS.LEFT ? 'left' : 'right') + '\n' +

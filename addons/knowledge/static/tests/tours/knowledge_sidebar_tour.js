@@ -43,7 +43,7 @@ registry.category("web_tour.tours").add('knowledge_sidebar_tour', {
     run: () => {},
 }, {
     // Add content to the article
-    trigger: '.note-editable.koda-editor-editable',
+    trigger: '.note-editable.odoo-editor-editable',
     run: 'text Content of Workspace Article',
 },
 // Create a private article
@@ -165,7 +165,7 @@ registry.category("web_tour.tours").add('knowledge_sidebar_tour', {
     trigger: '.o_article_name:contains("Workspace Article")',
 }, {
     // Check that article is correctly opened
-    trigger: '.note-editable.koda-editor-editable:contains("Content of Workspace Article")',
+    trigger: '.note-editable.odoo-editor-editable:contains("Content of Workspace Article")',
     extra_trigger: '.o_article_active:contains("Workspace Article")',
     run: () => {},
 },

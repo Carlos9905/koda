@@ -2,7 +2,7 @@
 
 import { renderToElement } from "@web/core/utils/render";
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";
-import { closestBlock, setCursorEnd } from "@web_editor/js/editor/koda-editor/src/OdooEditor";
+import { closestBlock, setCursorEnd } from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
 import { patch } from "@web/core/utils/patch";
 import { MentionList } from "@mail/core/web/mention_list";
 import { url } from "@web/core/utils/urls";

@@ -34,7 +34,7 @@ registry.category("web_tour.tours").add('knowledge_properties_tour', {
     trigger: '.o_field_property_definition_header',
     run: 'text_blur myproperty',
 }, { // verify property and finish property edition
-    trigger: '.o_knowledge_editor .koda-editor-editable',
+    trigger: '.o_knowledge_editor .odoo-editor-editable',
     extra_trigger: '.o_field_property_label:contains("myproperty")',
     run: 'click',
 }, { // go to InheritPropertiesArticle

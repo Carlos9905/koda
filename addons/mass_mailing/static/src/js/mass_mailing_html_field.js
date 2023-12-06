@@ -11,7 +11,7 @@ import { renderToElement } from "@web/core/utils/render";
 import { useService } from "@web/core/utils/hooks";
 import { HtmlField, htmlField } from "@web_editor/js/backend/html_field";
 import { MassMailingMobilePreviewDialog } from "./mass_mailing_mobile_preview";
-import { getRangePosition } from '@web_editor/js/editor/koda-editor/src/utils/utils';
+import { getRangePosition } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
 import { utils as uiUtils } from "@web/core/ui/ui_service";
 import { useSubEnv, status, markup } from "@odoo/owl";
 
@@ -179,7 +179,7 @@ export class MassMailingHtmlField extends HtmlField {
         // named so they are handled properly by the snippets menu.
         this.wysiwyg.$iframeBody.find('.o_layout').addBack().data('name', 'Mailing');
         // We don't want to drop snippets directly within the wysiwyg.
-        this.wysiwyg.$iframeBody.find('.koda-editor-editable').removeClass('o_editable');
+        this.wysiwyg.$iframeBody.find('.odoo-editor-editable').removeClass('o_editable');
 
         initializeDesignTabCss(this.wysiwyg.getEditable());
         this.wysiwyg.getEditable().find('img').attr('loading', '');

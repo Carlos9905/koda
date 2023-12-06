@@ -39,7 +39,7 @@ describe('Copy', () => {
         });
     });
     describe('range not collapsed', async () => {
-        it('should copy a selection as text/plain, text/html and text/koda-editor', async () => {
+        it('should copy a selection as text/plain, text/html and text/odoo-editor', async () => {
             await testEditor(BasicEditor, {
                 contentBefore: '<p>a[bcd]e</p>',
                 stepFunction: async editor => {
@@ -47,7 +47,7 @@ describe('Copy', () => {
                     await triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('bcd');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p>bcd</p>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p>bcd</p>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p>bcd</p>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -57,7 +57,7 @@ describe('Copy', () => {
                     await triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('abc\nefg');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p>abc<br>efg</p>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p>abc<br>efg</p>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p>abc<br>efg</p>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -67,7 +67,7 @@ describe('Copy', () => {
                     await triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('a');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<table><tbody><tr><td><ul><li>a</li><li>b</li><li>c</li></ul></td><td><br></td></tr></tbody></table>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<table><tbody><tr><td><ul><li>a</li><li>b</li><li>c</li></ul></td><td><br></td></tr></tbody></table>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<table><tbody><tr><td><ul><li>a</li><li>b</li><li>c</li></ul></td><td><br></td></tr></tbody></table>');
                 },
             });
         });
@@ -79,7 +79,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('Test Test');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p><span style="font-size: 16px;">Test</span> <span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">Test</font></span></p>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p><span style="font-size: 16px;">Test</span> <span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">Test</font></span></p>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p><span style="font-size: 16px;">Test</span> <span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">Test</font></span></p>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -89,7 +89,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('there');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p><strong><em><u><font class="text-o-color-1">there</font></u></em></strong></p>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p><strong><em><u><font class="text-o-color-1">there</font></u></em></strong></p>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p><strong><em><u><font class="text-o-color-1">there</font></u></em></strong></p>');
                 },
             });
         });
@@ -101,7 +101,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('First');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<li>First</li>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<li>First</li>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<li>First</li>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -111,7 +111,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('List');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<li>List</li>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<li>List</li>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<li>List</li>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -121,7 +121,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('First');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<li><span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">First</font></span></li>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<li><span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">First</font></span></li>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<li><span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">First</font></span></li>');
                 },
             });
         })
@@ -133,7 +133,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('First\nSecond');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<ul><li>First</li><li>Second</li></ul>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<ul><li>First</li><li>Second</li></ul>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<ul><li>First</li><li>Second</li></ul>');
                 },
             });
         });
@@ -164,7 +164,7 @@ describe('Cut', () => {
         });
     });
     describe('range not collapsed', async () => {
-        it('should cut a selection as text/plain, text/html and text/koda-editor', async () => {
+        it('should cut a selection as text/plain, text/html and text/odoo-editor', async () => {
             await testEditor(BasicEditor, {
                 contentBefore: '<p>a[bcd]e</p>',
                 stepFunction: async editor => {
@@ -172,7 +172,7 @@ describe('Cut', () => {
                     await triggerEvent(editor.editable, 'cut', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('bcd');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p>bcd</p>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p>bcd</p>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p>bcd</p>');
                 },
                 contentAfter: '<p>a[]e</p>',
             });
@@ -183,7 +183,7 @@ describe('Cut', () => {
                     await triggerEvent(editor.editable, 'cut', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('abc\nefg');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p>abc<br>efg</p>');
-                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p>abc<br>efg</p>');
+                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p>abc<br>efg</p>');
                 },
                 contentAfter: '<p>[]<br></p>',
             });
