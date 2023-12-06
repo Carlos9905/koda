@@ -318,7 +318,7 @@ export class Thread extends Record {
     get allowCalls() {
         return (
             this.typesAllowingCalls.includes(this.type) &&
-            !this.correspondent?.eq(this._store.odoobot)
+            !this.correspondent?.eq(this._store.kodabot)
         );
     }
 

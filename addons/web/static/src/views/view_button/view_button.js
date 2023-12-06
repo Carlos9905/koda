@@ -16,7 +16,7 @@ const explicitRankClasses = [
     "btn-danger",
 ];
 
-const odooToBootstrapClasses = {
+const kodaToBootstrapClasses = {
     oe_highlight: "btn-primary",
     oe_link: "btn-link",
 };
@@ -111,8 +111,8 @@ export class ViewButton extends Component {
         let hasExplicitRank = false;
         if (this.props.className) {
             for (let cls of this.props.className.split(" ")) {
-                if (cls in odooToBootstrapClasses) {
-                    cls = odooToBootstrapClasses[cls];
+                if (cls in kodaToBootstrapClasses) {
+                    cls = kodaToBootstrapClasses[cls];
                 }
                 classNames.push(cls);
                 if (!hasExplicitRank && explicitRankClasses.includes(cls)) {

@@ -1616,7 +1616,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_pie",
+                        "type": "koda_pie",
                         "fieldMatching": {
                             "e6db018b-19ec-42c3-b29e-11b1e3910916": {
                                 "chain": "country_id",
@@ -1709,7 +1709,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_pie",
+                        "type": "koda_pie",
                         "fieldMatching": {
                             "e6db018b-19ec-42c3-b29e-11b1e3910916": {
                                 "chain": "country_id",
@@ -1802,7 +1802,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_pie",
+                        "type": "koda_pie",
                         "fieldMatching": {
                             "e6db018b-19ec-42c3-b29e-11b1e3910916": {
                                 "chain": "country_id",
@@ -1895,7 +1895,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_pie",
+                        "type": "koda_pie",
                         "fieldMatching": {
                             "e6db018b-19ec-42c3-b29e-11b1e3910916": {
                                 "chain": "country_id",
@@ -2268,7 +2268,7 @@
             "formulaArgSeparator": ","
         }
     },
-    "odooVersion": 6,
+    "kodaVersion": 6,
     "globalFilters": [
         {
             "id": "e6db018b-19ec-42c3-b29e-11b1e3910916",

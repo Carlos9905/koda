@@ -37,7 +37,7 @@ a periodic and automatic synchronization of their bank statements.
     'assets': {
         'web.assets_backend': [
             'account_online_synchronization/static/src/components/**/*',
-            'account_online_synchronization/static/src/js/odoo_fin_connector.js',
+            'account_online_synchronization/static/src/js/koda_fin_connector.js',
         ],
         'web.assets_frontend': [
             'account_online_synchronization/static/src/js/online_sync_portal.js',

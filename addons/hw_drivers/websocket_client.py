@@ -12,7 +12,7 @@ from koda.addons.hw_drivers.tools import helpers
 _logger = logging.getLogger(__name__)
 
 def send_to_controller(print_id, device_identifier):
-    server = helpers.get_odoo_server_url()
+    server = helpers.get_koda_server_url()
     try:
         urllib3.disable_warnings()
         http = urllib3.PoolManager(cert_reqs='CERT_NONE')

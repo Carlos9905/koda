@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'utm_campaign': 'utmCampaign',
     };
     for (const [name, dsName] of Object.entries(cookieNamesToDataNames)) {
-        const cookie = cookieManager.get(`odoo_${name}`);
+        const cookie = cookieManager.get(`koda_${name}`);
         if (cookie) {
             // Remove leading and trailing " and '
             htmlEl.dataset[dsName] = cookie.replace(/(^["']|["']$)/g, '');

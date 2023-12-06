@@ -1973,7 +1973,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 }
@@ -2301,7 +2301,7 @@
         "67858d0e-b5ba-4a3c-bf9e-c0fceaeedf65": "sale.menu_reporting_sales",
         "d43375c1-73a6-42a2-8dbd-0f13c285824f": "sale.menu_reporting_sales"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {
         "1": {
             "columns": [

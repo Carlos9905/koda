@@ -768,7 +768,7 @@
                             "groupBy": [],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 },
@@ -1038,7 +1038,7 @@
         "01657be1-2ed9-48bd-aab5-158f7d15e752": "sale_renting.rental_orders_all",
         "097038ff-456e-48b7-9908-2a07d5ff3440": "sale_renting.menu_rental_reporting"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

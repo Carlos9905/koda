@@ -154,16 +154,16 @@ export class Wysiwyg extends Component {
         const getColorPickedHandler = (colorType) => {
             return (params) => {
                 if (this.hadNonCollapsedSelectionBeforeColorpicker) {
-                    this.odooEditor.historyResetLatestComputedSelection(true);
+                    this.kodaEditor.historyResetLatestComputedSelection(true);
                 }
                 // Unstash the mutations now that the color is picked.
-                this.odooEditor.historyUnstash();
+                this.kodaEditor.historyUnstash();
                 this._processAndApplyColor(colorType, params.color);
                 // Deselect tables so the applied color can be seen
                 // without using `!important` (otherwise the selection
                 // hides it).
-                if (this.odooEditor.deselectTable() && hasValidSelection(this.odooEditor.editable)) {
-                    this.odooEditor.document.getSelection().collapseToStart();
+                if (this.kodaEditor.deselectTable() && hasValidSelection(this.kodaEditor.editable)) {
+                    this.kodaEditor.document.getSelection().collapseToStart();
                 }
                 this._updateEditorUI(this.lastMediaClicked && { target: this.lastMediaClicked });
             };
@@ -172,13 +172,13 @@ export class Wysiwyg extends Component {
         const getColorHoverHandler = (colorType) => {
             return (props) => {
                 if (this.hadNonCollapsedSelectionBeforeColorpicker) {
-                    this.odooEditor.historyResetLatestComputedSelection(true);
+                    this.kodaEditor.historyResetLatestComputedSelection(true);
                 }
-                this.odooEditor.historyPauseSteps();
+                this.kodaEditor.historyPauseSteps();
                 try {
                     this._processAndApplyColor(colorType, props.color, true);
                 } finally {
-                    this.odooEditor.historyUnpauseSteps();
+                    this.kodaEditor.historyUnpauseSteps();
                 }
             }
         };
@@ -189,7 +189,7 @@ export class Wysiwyg extends Component {
             selectedTab: 'theme-colors',
             withGradients: true,
             onColorLeave: () => {
-                this.odooEditor.historyRevertCurrentStep();
+                this.kodaEditor.historyRevertCurrentStep();
             },
             onInputEnter: (ev) => {
                 const pickergroup = ev.target.closest('.colorpicker-group');
@@ -385,7 +385,7 @@ export class Wysiwyg extends Component {
         };
 
         const _getContentEditableAreas = this.options.getContentEditableAreas;
-        this.odooEditor = new OdooEditor(this.$editable[0], Object.assign({
+        this.kodaEditor = new OdooEditor(this.$editable[0], Object.assign({
             _t: _t,
             toolbar: this.toolbarEl,
             document: this.options.document,
@@ -471,22 +471,22 @@ export class Wysiwyg extends Component {
             convertNumericToUnit: options.convertNumericToUnit,
         }, editorCollaborationOptions));
 
-        this.odooEditor.addEventListener('contentChanged', function () {
+        this.kodaEditor.addEventListener('contentChanged', function () {
             self.$editable.trigger('content_changed');
         });
         document.addEventListener("mousemove", this._signalOnline, true);
         document.addEventListener("keydown", this._signalOnline, true);
         document.addEventListener("keyup", this._signalOnline, true);
-        if (this.odooEditor.document !== document) {
-            this.odooEditor.document.addEventListener("mousemove", this._signalOnline, true);
-            this.odooEditor.document.addEventListener("keydown", this._signalOnline, true);
-            this.odooEditor.document.addEventListener("keyup", this._signalOnline, true);
+        if (this.kodaEditor.document !== document) {
+            this.kodaEditor.document.addEventListener("mousemove", this._signalOnline, true);
+            this.kodaEditor.document.addEventListener("keydown", this._signalOnline, true);
+            this.kodaEditor.document.addEventListener("keyup", this._signalOnline, true);
         }
 
         this._initialValue = this.getValue();
         const $wrapwrap = $('#wrapwrap');
         if ($wrapwrap.length) {
-            $wrapwrap[0].addEventListener('scroll', this.odooEditor.multiselectionRefresh, { passive: true });
+            $wrapwrap[0].addEventListener('scroll', this.kodaEditor.multiselectionRefresh, { passive: true });
             this.$root = this.$root || $wrapwrap;
         }
 
@@ -501,7 +501,7 @@ export class Wysiwyg extends Component {
             'mousedown touchstart',
             '[data-oe-field]',
             function () {
-                self.odooEditor.observerUnactive();
+                self.kodaEditor.observerUnactive();
                 const $field = $(this);
                 if (($field.data('oe-type') === "datetime" || $field.data('oe-type') === "date")) {
                     let selector = '[data-oe-id="' + $field.data('oe-id') + '"]';
@@ -537,7 +537,7 @@ export class Wysiwyg extends Component {
                         $field.attr('contenteditable', false);
                     }
                 }
-                self.odooEditor.observerActive();
+                self.kodaEditor.observerActive();
             }
         );
 
@@ -562,7 +562,7 @@ export class Wysiwyg extends Component {
             if (isEditable) {
                 this.showTooltip = false;
 
-                if (!isProtected(this.odooEditor.document.getSelection().anchorNode)) {
+                if (!isProtected(this.kodaEditor.document.getSelection().anchorNode)) {
                     if (this.options.onDblClickEditableMedia && targetEl.nodeName === 'IMG' && targetEl.src) {
                         this.options.onDblClickEditableMedia(ev);
                     } else {
@@ -573,7 +573,7 @@ export class Wysiwyg extends Component {
         });
 
         if (options.snippets) {
-            $(this.odooEditor.document.body).addClass('editor_enable');
+            $(this.kodaEditor.document.body).addClass('editor_enable');
             this.snippetsMenu = await this._createSnippetsMenuInstance(options);
             await this._insertSnippetMenu();
 
@@ -585,7 +585,7 @@ export class Wysiwyg extends Component {
             window.addEventListener('beforeunload', this._onBeforeUnload);
         }
         if (this.options.getContentEditableAreas) {
-            $(this.options.getContentEditableAreas(this.odooEditor)).find('*').off('mousedown mouseup click');
+            $(this.options.getContentEditableAreas(this.kodaEditor)).find('*').off('mousedown mouseup click');
         }
 
         // The toolbar must be configured after the snippetMenu is loaded
@@ -593,9 +593,9 @@ export class Wysiwyg extends Component {
         // buttons must use the jquery loaded in that iframe.
         this._configureToolbar(options);
 
-        $(this.odooEditor.editable).on('mouseup', this._updateEditorUI.bind(this));
-        $(this.odooEditor.editable).on('keydown', this._updateEditorUI.bind(this));
-        $(this.odooEditor.editable).on('keydown', this._handleShortcuts.bind(this));
+        $(this.kodaEditor.editable).on('mouseup', this._updateEditorUI.bind(this));
+        $(this.kodaEditor.editable).on('keydown', this._updateEditorUI.bind(this));
+        $(this.kodaEditor.editable).on('keydown', this._handleShortcuts.bind(this));
         // Ensure the Toolbar always have the correct layout in note.
         this._updateEditorUI();
 
@@ -657,21 +657,21 @@ export class Wysiwyg extends Component {
         });
 
         this._onSelectionChange = this._onSelectionChange.bind(this);
-        this.odooEditor.document.addEventListener('selectionchange', this._onSelectionChange);
+        this.kodaEditor.document.addEventListener('selectionchange', this._onSelectionChange);
         this.setCSSVariables(this.snippetsMenu ? this.snippetsMenu.el : this.toolbarEl);
 
-        this.odooEditor.addEventListener('preObserverActive', () => {
+        this.kodaEditor.addEventListener('preObserverActive', () => {
             // The onPostSanitize will be called right after the
             // editor sanitization (to be right before the historyStep).
             // If any `.o_not_editable` is created while the observer is
             // unactive, now is the time to call `onPostSanitize` before the
             // editor could register a mutation.
-            this._onPostSanitize(this.odooEditor.editable);
+            this._onPostSanitize(this.kodaEditor.editable);
         });
 
         if (this.options.autohideToolbar) {
-            if (this.odooEditor.isMobile) {
-                this.odooEditor.editable.before(this.toolbarEl);
+            if (this.kodaEditor.isMobile) {
+                this.kodaEditor.editable.before(this.toolbarEl);
             } else {
                 document.body.append(this.toolbarEl);
             }
@@ -804,7 +804,7 @@ export class Wysiwyg extends Component {
     }
     setupToolbar(toolbarEl) {
         this.toolbarEl = toolbarEl;
-        this.odooEditor.setupToolbar(toolbarEl);
+        this.kodaEditor.setupToolbar(toolbarEl);
         this._configureToolbar(this.options)
         this._updateEditorUI();
     }
@@ -824,12 +824,12 @@ export class Wysiwyg extends Component {
         document.removeEventListener("keydown", this._signalOnline, true);
         document.removeEventListener("keyup", this._signalOnline, true);
         this._collaborationStopBus && this._collaborationStopBus();
-        if (this.odooEditor) {
-            this.odooEditor.document.removeEventListener("mousemove", this._signalOnline, true);
-            this.odooEditor.document.removeEventListener("keydown", this._signalOnline, true);
-            this.odooEditor.document.removeEventListener("keyup", this._signalOnline, true);
-            this.odooEditor.document.removeEventListener('selectionchange', this._onSelectionChange);
-            this.odooEditor.destroy();
+        if (this.kodaEditor) {
+            this.kodaEditor.document.removeEventListener("mousemove", this._signalOnline, true);
+            this.kodaEditor.document.removeEventListener("keydown", this._signalOnline, true);
+            this.kodaEditor.document.removeEventListener("keyup", this._signalOnline, true);
+            this.kodaEditor.document.removeEventListener('selectionchange', this._onSelectionChange);
+            this.kodaEditor.destroy();
         }
         if (this.snippetsMenu) {
             this.snippetsMenu.destroy();
@@ -848,8 +848,8 @@ export class Wysiwyg extends Component {
         $body.off('mousemove', this.resizerMousemove);
         $body.off('mouseup', this.resizerMouseup);
         const $wrapwrap = $('#wrapwrap');
-        if ($wrapwrap.length && this.odooEditor) {
-            $('#wrapwrap')[0].removeEventListener('scroll', this.odooEditor.multiselectionRefresh, { passive: true });
+        if ($wrapwrap.length && this.kodaEditor) {
+            $('#wrapwrap')[0].removeEventListener('scroll', this.kodaEditor.multiselectionRefresh, { passive: true });
         }
         $(this.$root).off('click');
         this.toolbarEl?.remove();
@@ -983,7 +983,7 @@ export class Wysiwyg extends Component {
         $editable.find('[data-editor-message]').removeAttr('data-editor-message');
         $editable.find('a.o_image, span.fa, i.fa').html('');
         $editable.find('[aria-describedby]').removeAttr('aria-describedby').removeAttr('data-bs-original-title');
-        this.odooEditor && this.odooEditor.cleanForSave($editable[0]);
+        this.kodaEditor && this.kodaEditor.cleanForSave($editable[0]);
         this._attachHistoryIds($editable[0]);
         return $editable.html();
     }
@@ -1009,7 +1009,7 @@ export class Wysiwyg extends Component {
      * Reset the history.
      */
     historyReset() {
-        this.odooEditor.historyReset();
+        this.kodaEditor.historyReset();
     }
     /**
      * Saves the content or the given editable.
@@ -1022,7 +1022,7 @@ export class Wysiwyg extends Component {
         this.savingContent = true;
         if (!editable) {
             await this.cleanForSave();
-            const editables = "getContentEditableAreas" in this.options ? this.options.getContentEditableAreas(this.odooEditor) : [];
+            const editables = "getContentEditableAreas" in this.options ? this.options.getContentEditableAreas(this.kodaEditor) : [];
             await this.savePendingImages(editables.length ? $(editables) : this.$editable);
             await this._saveViewBlocks();
         } else {
@@ -1113,19 +1113,19 @@ export class Wysiwyg extends Component {
      * @returns {String}
      */
     setValue(value) {
-        this.odooEditor.resetContent(value);
+        this.kodaEditor.resetContent(value);
     }
     /**
      * Undo one step of change in the editor.
      */
     undo() {
-        this.odooEditor.historyUndo();
+        this.kodaEditor.historyUndo();
     }
     /**
      * Redo one step of change in the editor.
      */
     redo() {
-        this.odooEditor.historyRedo();
+        this.kodaEditor.historyRedo();
     }
     /**
      * Focus inside the editor.
@@ -1133,7 +1133,7 @@ export class Wysiwyg extends Component {
      * Set cursor to the editor latest position before blur or to the last editable node, ready to type.
      */
     focus() {
-        if (this.odooEditor && !this.odooEditor.historyResetLatestComputedSelection(true)) {
+        if (this.kodaEditor && !this.kodaEditor.historyResetLatestComputedSelection(true)) {
             // If the editor don't have an history step to focus to,
             // We place the cursor after the end of the editor exiting content.
             const range = document.createRange();
@@ -1141,20 +1141,20 @@ export class Wysiwyg extends Component {
             range.selectNodeContents(elementToTarget);
             range.collapse();
 
-            const selection = this.odooEditor.document.getSelection();
+            const selection = this.kodaEditor.document.getSelection();
             selection.removeAllRanges();
             selection.addRange(range);
         }
     }
     getDeepRange() {
-        return getDeepRange(this.odooEditor.editable);
+        return getDeepRange(this.kodaEditor.editable);
     }
     closestElement(...args) {
         return closestElement(...args);
     }
-    async cleanForSave(editable = this.odooEditor.editable) {
-        if (this.odooEditor) {
-            this.odooEditor.cleanForSave(editable);
+    async cleanForSave(editable = this.kodaEditor.editable) {
+        if (this.kodaEditor) {
+            this.kodaEditor.cleanForSave(editable);
             this._attachHistoryIds(editable);
         }
 
@@ -1163,7 +1163,7 @@ export class Wysiwyg extends Component {
         }
     }
     isSelectionInEditable() {
-        return this.odooEditor.isSelectionInEditable();
+        return this.kodaEditor.isSelectionInEditable();
     }
     /**
      * Start or resume the Odoo field changes muation observers.
@@ -1178,18 +1178,18 @@ export class Wysiwyg extends Component {
             characterData: true,
             attributeOldValue: true,
         };
-        if (this.odooFieldObservers) {
-            for (let observerData of this.odooFieldObservers) {
+        if (this.kodaFieldObservers) {
+            for (let observerData of this.kodaFieldObservers) {
                 observerData.observer.observe(observerData.field, observerOptions);
             }
         } else {
-            const odooFieldSelector = '[data-oe-model], [data-oe-translation-initial-sha]';
-            const $odooFields = this.$editable.find(odooFieldSelector);
-            this.odooFieldObservers = [];
+            const kodaFieldSelector = '[data-oe-model], [data-oe-translation-initial-sha]';
+            const $kodaFields = this.$editable.find(kodaFieldSelector);
+            this.kodaFieldObservers = [];
 
-            $odooFields.each((i, field) => {
+            $kodaFields.each((i, field) => {
                 const observer = new MutationObserver((mutations) => {
-                    mutations = this.odooEditor.filterMutationRecords(mutations);
+                    mutations = this.kodaEditor.filterMutationRecords(mutations);
                     mutations = mutations.filter(rec =>
                         !(rec.type === "attributes" && (rec.attributeName.startsWith("data-oe-t")))
                     );
@@ -1202,7 +1202,7 @@ export class Wysiwyg extends Component {
                     if ($node.hasClass('o_translation_without_style')) {
                         return;
                     }
-                    let $nodes = $odooFields.filter(function () {
+                    let $nodes = $kodaFields.filter(function () {
                         return this !== field;
                     });
                     if ($node.data('oe-model')) {
@@ -1253,7 +1253,7 @@ export class Wysiwyg extends Component {
                         $nodes.addClass('o_editable_date_field_format_changed');
                     }
                     const html = $node.html();
-                    this.odooEditor.withoutRollback(() => {
+                    this.kodaEditor.withoutRollback(() => {
                         for (const node of $nodes) {
                             if (node.classList.contains('o_translation_without_style')) {
                                 // For generated elements such as the navigation
@@ -1273,7 +1273,7 @@ export class Wysiwyg extends Component {
                     this._observeOdooFieldChanges();
                 });
                 observer.observe(field, observerOptions);
-                this.odooFieldObservers.push({field: field, observer: observer});
+                this.kodaFieldObservers.push({field: field, observer: observer});
             });
         }
     }
@@ -1281,7 +1281,7 @@ export class Wysiwyg extends Component {
      * Stop the field changes mutation observers.
      */
     _pauseOdooFieldObservers() {
-        for (let observerData of this.odooFieldObservers) {
+        for (let observerData of this.kodaFieldObservers) {
             observerData.observer.disconnect();
         }
     }
@@ -1289,11 +1289,11 @@ export class Wysiwyg extends Component {
      * Open the link tools or the image link tool depending on the selection.
      */
     openLinkToolsFromSelection() {
-        const targetEl = this.odooEditor.document.getSelection().getRangeAt(0).startContainer;
+        const targetEl = this.kodaEditor.document.getSelection().getRangeAt(0).startContainer;
         // Link tool is different if the selection is an image or a text.
         if (targetEl.nodeType === Node.ELEMENT_NODE
                 && (targetEl.tagName === 'IMG' || targetEl.querySelectorAll('img').length === 1)) {
-            this.odooEditor.dispatchEvent(new Event('activate_image_link_tool'));
+            this.kodaEditor.dispatchEvent(new Event('activate_image_link_tool'));
             return;
         }
         this.toggleLinkTools();
@@ -1310,7 +1310,7 @@ export class Wysiwyg extends Component {
     async toggleLinkTools(options = {}) {
         const shouldFocusUrl = options.shouldFocusUrl === undefined ? true : options.shouldFocusUrl;
 
-        const linkEl = getInSelection(this.odooEditor.document, 'a');
+        const linkEl = getInSelection(this.kodaEditor.document, 'a');
         if (linkEl && (!linkEl.matches(this.customizableLinksSelector) || !linkEl.isContentEditable)) {
             return;
         }
@@ -1324,7 +1324,7 @@ export class Wysiwyg extends Component {
                     this.snippetsMenu._mutex.exec(() => {
                         // This is needed to focus the URL input when clicking
                         // on the "Edit link" of the popover.
-                        this.odooEditor.dispatchEvent(new Event('activate_image_link_tool'));
+                        this.kodaEditor.dispatchEvent(new Event('activate_image_link_tool'));
                     });
                 }
                 return;
@@ -1333,23 +1333,23 @@ export class Wysiwyg extends Component {
                 const $button = $(this.toolbarEl.querySelector('#create-link'));
                 if (!this.state.linkToolProps || ![options.link, ...wysiwygUtils.ancestors(options.link)].includes(this.linkToolsInfos.link)) {
                     const { link } = getOrCreateLink({
-                        containerNode: this.odooEditor.editable,
+                        containerNode: this.kodaEditor.editable,
                         startNode: options.link || this.lastMediaClicked,
                     });
                     if (!link) {
                         return;
                     }
                     const addHintClasses = () => {
-                        this.odooEditor.observerUnactive("hint_classes");
+                        this.kodaEditor.observerUnactive("hint_classes");
                         link.classList.add('oe_edited_link');
                         $button.addClass('active');
-                        this.odooEditor.observerActive("hint_classes");
+                        this.kodaEditor.observerActive("hint_classes");
                     };
                     const removeHintClasses = () => {
-                        this.odooEditor.observerUnactive("hint_classes");
+                        this.kodaEditor.observerUnactive("hint_classes");
                         link.classList.remove('oe_edited_link');
                         $button.removeClass('active');
-                        this.odooEditor.observerActive("hint_classes");
+                        this.kodaEditor.observerActive("hint_classes");
                     };
                     this.linkToolsInfos = {
                         onDestroy: () => {},
@@ -1361,7 +1361,7 @@ export class Wysiwyg extends Component {
                     this.state.linkToolProps = {
                         ...this.options.linkOptions,
                         wysiwyg: this,
-                        editable: this.odooEditor.editable,
+                        editable: this.kodaEditor.editable,
                         link,
                         // If the link contains an image or an icon do not
                         // display the label input (e.g. some mega menu links).
@@ -1391,30 +1391,30 @@ export class Wysiwyg extends Component {
                         // Destroy the link tools on click anywhere outside the
                         // toolbar if the target is the orgiginal target not in the original target.
                         this.destroyLinkTools();
-                        this.odooEditor.document.removeEventListener('click', _onClick, true);
+                        this.kodaEditor.document.removeEventListener('click', _onClick, true);
                         document.removeEventListener('click', _onClick, true);
                     }
                 };
-                this.odooEditor.document.addEventListener('click', _onClick, true);
+                this.kodaEditor.document.addEventListener('click', _onClick, true);
                 document.addEventListener('click', _onClick, true);
             } else {
                 this.destroyLinkTools();
             }
         } else {
-            const historyStepIndex = this.odooEditor.historySize() - 1;
-            this.odooEditor.historyPauseSteps();
+            const historyStepIndex = this.kodaEditor.historySize() - 1;
+            this.kodaEditor.historyPauseSteps();
             let { link } = getOrCreateLink({
-                containerNode: this.odooEditor.editable,
+                containerNode: this.kodaEditor.editable,
                 startNode: options.link,
             });
             if (!link) {
-                this.odooEditor.historyUnpauseSteps();
+                this.kodaEditor.historyUnpauseSteps();
                 return
             }
             this._shouldDelayBlur = true;
             this.env.services.dialog.add(LinkDialog, {
                 ...this.options.linkOptions,
-                editable: this.odooEditor.editable,
+                editable: this.kodaEditor.editable,
                 link,
                 needLabel: true,
                 focusField: link.innerHTML ? 'url' : '',
@@ -1427,15 +1427,15 @@ export class Wysiwyg extends Component {
                         data.rel = 'ugc';
                     }
                     data.linkDialog.applyLinkToDom(data);
-                    this.odooEditor.historyUnpauseSteps();
-                    this.odooEditor.historyStep();
+                    this.kodaEditor.historyUnpauseSteps();
+                    this.kodaEditor.historyStep();
                     const link = data.linkDialog.$link[0];
                     setSelection(link, 0, link, link.childNodes.length, false);
                     link.focus();
                 },
                 onClose: () => {
-                    this.odooEditor.historyUnpauseSteps();
-                    this.odooEditor.historyRevertUntil(historyStepIndex)
+                    this.kodaEditor.historyUnpauseSteps();
+                    this.kodaEditor.historyRevertUntil(historyStepIndex)
                 }
             });
         }
@@ -1446,23 +1446,23 @@ export class Wysiwyg extends Component {
      * @param {'prompt'|'alternatives'} [mode='prompt']
      */
     openChatGPTDialog(mode = 'prompt') {
-        const restore = preserveCursor(this.odooEditor.document);
+        const restore = preserveCursor(this.kodaEditor.document);
         const params = {
             insert: content => {
-                this.odooEditor.historyPauseSteps();
-                const insertedNodes = this.odooEditor.execCommand('insert', content);
-                this.odooEditor.historyUnpauseSteps();
+                this.kodaEditor.historyPauseSteps();
+                const insertedNodes = this.kodaEditor.execCommand('insert', content);
+                this.kodaEditor.historyUnpauseSteps();
                 this.notification.add(_t('Your content was successfully generated.'), {
                     title: _t('Content generated'),
                     type: 'success',
                 });
-                this.odooEditor.historyStep();
+                this.kodaEditor.historyStep();
                 // Add a frame around the inserted content to highlight it for 2
                 // seconds.
                 const start = insertedNodes?.length && closestElement(insertedNodes[0]);
                 const end = insertedNodes?.length && closestElement(insertedNodes[insertedNodes.length - 1]);
                 if (start && end) {
-                    const divContainer = this.odooEditor.editable.parentElement;
+                    const divContainer = this.kodaEditor.editable.parentElement;
                     let [parent, left, top] = [start.offsetParent, start.offsetLeft, start.offsetTop - start.scrollTop];
                     while (parent && !parent.contains(divContainer)) {
                         left += parent.offsetLeft;
@@ -1487,9 +1487,9 @@ export class Wysiwyg extends Component {
             },
         };
         if (mode === 'alternatives') {
-            params.originalText = this.odooEditor.document.getSelection().toString() || '';
+            params.originalText = this.kodaEditor.document.getSelection().toString() || '';
         }
-        this.odooEditor.document.getSelection().collapseToEnd();
+        this.kodaEditor.document.getSelection().collapseToEnd();
         this.env.services.dialog.add(
             mode === 'prompt' ? ChatGPTPromptDialog : ChatGPTAlternativesDialog,
             params,
@@ -1503,10 +1503,10 @@ export class Wysiwyg extends Component {
         if (this.snippetsMenu && wysiwygUtils.isImg(this.lastElement)) {
             this.snippetsMenu._mutex.exec(() => {
                 // Wait for the editor panel to be fully updated.
-                this.odooEditor.dispatchEvent(new Event('deactivate_image_link_tool'));
+                this.kodaEditor.dispatchEvent(new Event('deactivate_image_link_tool'));
             });
         } else {
-            this.odooEditor.execCommand('unlink');
+            this.kodaEditor.execCommand('unlink');
         }
     }
     /**
@@ -1515,7 +1515,7 @@ export class Wysiwyg extends Component {
     // todo: review me
     async destroyLinkTools() {
         if (this.state.linkToolProps) {
-            const selection = this.odooEditor.document.getSelection();
+            const selection = this.kodaEditor.document.getSelection();
             const link = this.linkToolsInfos.link;
             let anchorNode
             let focusNode;
@@ -1572,8 +1572,8 @@ export class Wysiwyg extends Component {
                 },
             },
         });
-        this.odooEditor.document.getSelection()?.collapseToEnd();
-        this.odooEditor.editable.blur();
+        this.kodaEditor.document.getSelection()?.collapseToEnd();
+        this.kodaEditor.editable.blur();
     }
     /**
      * Open the media dialog.
@@ -1586,7 +1586,7 @@ export class Wysiwyg extends Component {
      * @param {Class} [params.MediaDialog] Optional
      */
     openMediaDialog(params = {}) {
-        const sel = this.odooEditor.document.getSelection();
+        const sel = this.kodaEditor.document.getSelection();
 
         if (!sel.rangeCount) {
             return;
@@ -1595,9 +1595,9 @@ export class Wysiwyg extends Component {
         // We lose the current selection inside the content editable when we
         // click the media dialog button so we need to be able to restore the
         // selection when the modal is closed.
-        const restoreSelection = preserveCursor(this.odooEditor.document);
+        const restoreSelection = preserveCursor(this.kodaEditor.document);
 
-        const editable = OdooEditorLib.closestElement(params.node || range.startContainer, '.o_editable') || this.odooEditor.editable;
+        const editable = OdooEditorLib.closestElement(params.node || range.startContainer, '.o_editable') || this.kodaEditor.editable;
         const { resModel, resId, field, type } = this._getRecordInfo(editable);
 
         this.env.services.dialog.add(params.MediaDialog || MediaDialog, {
@@ -1617,14 +1617,14 @@ export class Wysiwyg extends Component {
     }
     // todo: test me
     showEmojiPicker() {
-        const targetEl = this.odooEditor.document.getSelection();
+        const targetEl = this.kodaEditor.document.getSelection();
         const closest = closestBlock(targetEl.anchorNode);
-        const restoreSelection = preserveCursor(this.odooEditor.document);
+        const restoreSelection = preserveCursor(this.kodaEditor.document);
         const blockWidth = parseInt(getComputedStyle(closest).width.slice(0, -2)); // remove 'px'
         // Calculate one/fouth portion of blockWidth, and then on the basis of our cursor position
         // check in which quadrant it falls, give the popover its position accordingly
         const portionWidth = (blockWidth / 4);
-        const cursorAt = getRangePosition(targetEl, this.odooEditor.document).left;
+        const cursorAt = getRangePosition(targetEl, this.kodaEditor.document).left;
         let position = 'end';
         if (cursorAt < portionWidth * 2) {
             position = 'start';
@@ -1635,7 +1635,7 @@ export class Wysiwyg extends Component {
         this.popover.add(closest, EmojiPicker, {
                 onSelect: (str) => {
                     restoreSelection();
-                    this.odooEditor.execCommand('insert', str);
+                    this.kodaEditor.execCommand('insert', str);
                 },
             },
             { position: `bottom-${position}`}
@@ -1685,10 +1685,10 @@ export class Wysiwyg extends Component {
             } else {
                 params.node.replaceWith(element);
             }
-            this.odooEditor.unbreakableStepUnactive();
-            this.odooEditor.historyStep();
+            this.kodaEditor.unbreakableStepUnactive();
+            this.kodaEditor.historyStep();
         } else {
-            return this.odooEditor.execCommand('insert', element);
+            return this.kodaEditor.execCommand('insert', element);
         }
 
         if (this.snippetsMenu) {
@@ -1700,7 +1700,7 @@ export class Wysiwyg extends Component {
         }
     }
     getInSelection(selector) {
-        return getInSelection(this.odooEditor.document, selector);
+        return getInSelection(this.kodaEditor.document, selector);
     }
     /**
      * Adds an empty action in the mutex. Can be used to wait for some options
@@ -1807,7 +1807,7 @@ export class Wysiwyg extends Component {
                     break;
                 }
                 case 'open-chatgpt': {
-                    this.openChatGPTDialog(this.odooEditor.document.getSelection()?.isCollapsed ? 'prompt' : 'alternatives');
+                    this.openChatGPTDialog(this.kodaEditor.document.getSelection()?.isCollapsed ? 'prompt' : 'alternatives');
                     break;
                 }
             }
@@ -1875,8 +1875,8 @@ export class Wysiwyg extends Component {
             }
             this.imageCropProps.media = this.lastMediaClicked;
             this.imageCropProps.showCount++;
-            this.odooEditor.toolbarHide();
-            $(this.lastMediaClicked).on('image_cropper_destroyed', () => this.odooEditor.toolbarShow());
+            this.kodaEditor.toolbarHide();
+            $(this.lastMediaClicked).on('image_cropper_destroyed', () => this.kodaEditor.toolbarShow());
         });
         $toolbar.find('#image-transform').click(e => {
             if (!this.lastMediaClicked) {
@@ -1887,22 +1887,22 @@ export class Wysiwyg extends Component {
                 $image.removeData('transfo-destroy');
                 return;
             }
-            $image.transfo({document: this.odooEditor.document});
+            $image.transfo({document: this.kodaEditor.document});
             const mouseup = () => {
                 $('#image-transform').toggleClass('active', $image.is('[style*="transform"]'));
             };
-            $(this.odooEditor.document).on('mouseup', mouseup);
+            $(this.kodaEditor.document).on('mouseup', mouseup);
             const mousedown = mousedownEvent => {
                 if (!$(mousedownEvent.target).closest('.transfo-container').length) {
                     $image.transfo('destroy');
-                    $(this.odooEditor.document).off('mousedown', mousedown).off('mouseup', mouseup);
+                    $(this.kodaEditor.document).off('mousedown', mousedown).off('mouseup', mouseup);
                 }
                 if ($(mousedownEvent.target).closest('#image-transform').length) {
                     $image.data('transfo-destroy', true).attr('style', ($image.attr('style') || '').replace(/[^;]*transform[\w:]*;?/g, ''));
                 }
                 $image.trigger('content_changed');
             };
-            $(this.odooEditor.document).on('mousedown', mousedown);
+            $(this.kodaEditor.document).on('mousedown', mousedown);
         });
         $toolbar.find('#image-delete').click(e => {
             if (!this.lastMediaClicked) {
@@ -1910,7 +1910,7 @@ export class Wysiwyg extends Component {
             }
             $(this.lastMediaClicked).remove();
             this.lastMediaClicked = undefined;
-            this.odooEditor.toolbarHide();
+            this.kodaEditor.toolbarHide();
         });
         $toolbar.find('#fa-resize div').click(e => {
             if (!this.lastMediaClicked) {
@@ -1936,7 +1936,7 @@ export class Wysiwyg extends Component {
      * @returns {String} color
      */
     _getSelectedColor($, colorType) {
-        const selection = this.odooEditor.document.getSelection();
+        const selection = this.kodaEditor.document.getSelection();
         if (!selection) return;
         const range = selection.rangeCount && selection.getRangeAt(0);
         const targetNode = range && range.startContainer;
@@ -1961,22 +1961,22 @@ export class Wysiwyg extends Component {
         this.colorPalettesProps[colorType].resetTabCount++;
         this.colorPalettesProps[colorType].selectedColor = selectedColor;
 
-        const selection = this.odooEditor.document.getSelection();
+        const selection = this.kodaEditor.document.getSelection();
         const range = selection.rangeCount && selection.getRangeAt(0);
         this.hadNonCollapsedSelectionBeforeColorpicker = range && !selection.isCollapsed;
 
         // The color_leave event will revert the mutations with
         // `historyRevertCurrentStep`. We must stash the current
         // mutations to prevent them from being reverted.
-        this.odooEditor.historyStash();
+        this.kodaEditor.historyStash();
     }
     _processAndApplyColor(colorType, color, previewMode) {
         if (color && !isCSSColor(color) && !weUtils.isColorGradient(color)) {
             color = (colorType === "text" ? 'text-' : 'bg-') + color;
         }
-        let coloredElements = this.odooEditor.execCommand('applyColor', color, colorType === 'text' ? 'color' : 'backgroundColor', this.lastMediaClicked);
+        let coloredElements = this.kodaEditor.execCommand('applyColor', color, colorType === 'text' ? 'color' : 'backgroundColor', this.lastMediaClicked);
         // Some nodes returned by applyColor can be removed of the document by the sanitization in historyStep
-        coloredElements = coloredElements.filter(element => this.odooEditor.document.contains(element));
+        coloredElements = coloredElements.filter(element => this.kodaEditor.document.contains(element));
 
         const coloredTds = coloredElements && coloredElements.length && Array.isArray(coloredElements) && coloredElements.filter(coloredElement => coloredElement.classList.contains('o_selected_td'));
         if (coloredTds.length) {
@@ -1991,7 +1991,7 @@ export class Wysiwyg extends Component {
             const first = coloredElements[0];
             const last = coloredElements[coloredElements.length - 1];
 
-            const sel = this.odooEditor.document.getSelection();
+            const sel = this.kodaEditor.document.getSelection();
             sel.removeAllRanges();
             const range = new Range();
             range.setStart(first, 0);
@@ -2000,7 +2000,7 @@ export class Wysiwyg extends Component {
         }
 
         const hexColor = this._colorToHex(color);
-        this.odooEditor.updateColorpickerLabels({
+        this.kodaEditor.updateColorpickerLabels({
             [colorType === 'text' ? 'text' : 'hiliteColor']: hexColor,
         });
     }
@@ -2036,7 +2036,7 @@ export class Wysiwyg extends Component {
         // Override selectAll (CTRL+A) to restrict it to the editable zone / current snippet and prevent traceback.
         if (e && e.key === 'a' && (e.ctrlKey || e.metaKey)) {
             e.preventDefault();
-            const selection = this.odooEditor.document.getSelection();
+            const selection = this.kodaEditor.document.getSelection();
             const containerSelector = '#wrap>*, .oe_structure>*, [contenteditable]';
             const container =
                 (selection &&
@@ -2056,21 +2056,21 @@ export class Wysiwyg extends Component {
      * Update any editor UI that is not handled by the editor itself.
      */
     _updateEditorUI(e) {
-        let selection = this.odooEditor.document.getSelection();
+        let selection = this.kodaEditor.document.getSelection();
         if (!selection) return;
         const anchorNode = selection.anchorNode;
         if (isProtected(anchorNode)) {
             return;
         }
 
-        this.odooEditor.automaticStepSkipStack();
+        this.kodaEditor.automaticStepSkipStack();
         // Clear "d-none" for button groups.
         for (const buttonGroup of this.toolbarEl.querySelectorAll('.btn-group')) {
             buttonGroup.classList.remove('d-none');
         }
         // We need to use the editor's window so the tooltip displays in its
         // document even if it's in an iframe.
-        const editorWindow = this.odooEditor.document.defaultView;
+        const editorWindow = this.kodaEditor.document.defaultView;
         const $target = e ? editorWindow.$(e.target) : editorWindow.$();
         // Restore paragraph dropdown button's default ID.
         this.toolbarEl.querySelector('#mediaParagraphDropdownButton')?.setAttribute('id', 'paragraphDropdownButton');
@@ -2136,7 +2136,7 @@ export class Wysiwyg extends Component {
             }
         }
         // Hide the create-link button if the selection spans several blocks.
-        selection = this.odooEditor.document.getSelection();
+        selection = this.kodaEditor.document.getSelection();
         const range = selection && selection.rangeCount && selection.getRangeAt(0);
         const $rangeContainer = range && $(range.commonAncestorContainer);
         const spansBlocks = range && !!$rangeContainer.contents().filter((i, node) => isBlock(node)).length;
@@ -2144,17 +2144,17 @@ export class Wysiwyg extends Component {
             this.toolbarEl.querySelector('#create-link')?.classList.toggle('d-none', true);
         }
         // Toggle unlink button. Always hide it on media.
-        const linkNode = getInSelection(this.odooEditor.document, 'a');
+        const linkNode = getInSelection(this.kodaEditor.document, 'a');
         this.toolbarEl.querySelector('#unlink')?.classList.toggle('d-none', !linkNode || isInMedia);
         // Toggle the toolbar arrow.
         this.toolbarEl.classList.toggle('noarrow', isInMedia);
         // Unselect all media.
         this.$editable.find('.o_we_selected_image').removeClass('o_we_selected_image');
         if (isInMedia) {
-            this.odooEditor.automaticStepSkipStack();
+            this.kodaEditor.automaticStepSkipStack();
             // Select the media in the DOM.
-            const selection = this.odooEditor.document.getSelection();
-            const range = this.odooEditor.document.createRange();
+            const selection = this.kodaEditor.document.getSelection();
+            const range = this.kodaEditor.document.createRange();
             range.selectNode(this.lastMediaClicked);
             selection.removeAllRanges();
             selection.addRange(range);
@@ -2178,9 +2178,9 @@ export class Wysiwyg extends Component {
                 }
                 // Tooltips need to be cleared before leaving the editor.
                 this.saving_mutex.exec(() => {
-                    this.odooEditor.observerUnactive();
+                    this.kodaEditor.observerUnactive();
                     const removeTooltip = this.popover.add(e.target, Tooltip, { tooltip: _t('Double-click to edit') });
-                    this.odooEditor.observerActive();
+                    this.kodaEditor.observerActive();
                     this.tooltipTimeouts.push(setTimeout(() => removeTooltip(), 800));
                 });
             }, 400));
@@ -2192,7 +2192,7 @@ export class Wysiwyg extends Component {
             }
         }
         // Toolbar might have changed size, update its position.
-        this.odooEditor.updateToolbarPosition();
+        this.kodaEditor.updateToolbarPosition();
         // Update color of already opened colorpickers.
         setTimeout(() => {
             for (const colorType in this.colorPalettesProps) {
@@ -2275,9 +2275,9 @@ export class Wysiwyg extends Component {
             priority: priority,
             description: description,
             fontawesome: iconClass,
-            isDisabled: () => isSelectionInSelectors('.o_editor_banner') || !this.odooEditor.isSelectionInBlockRoot(),
+            isDisabled: () => isSelectionInSelectors('.o_editor_banner') || !this.kodaEditor.isSelectionInBlockRoot(),
             callback: () => {
-                const bannerElement = parseHTML(this.odooEditor.document, `
+                const bannerElement = parseHTML(this.kodaEditor.document, `
                     <div class="o_editor_banner o_not_editable lh-1 d-flex align-items-center alert alert-${alertClass} pb-0 pt-3" role="status" data-oe-protected="true">
                         <i class="fs-4 fa ${iconClass} mb-3" aria-label="${_t(title)}"></i>
                         <div class="w-100 ms-3" data-oe-protected="false">
@@ -2285,7 +2285,7 @@ export class Wysiwyg extends Component {
                         </div>
                     </div>
                 `).childNodes[0];
-                this.odooEditor.execCommand('insert', bannerElement);
+                this.kodaEditor.execCommand('insert', bannerElement);
                 setSelection(bannerElement.querySelector('.o_editor_banner > div'), 0);
             },
         }
@@ -2347,9 +2347,9 @@ export class Wysiwyg extends Component {
                 priority: 30,
                 description: _t('Add a blockquote section'),
                 fontawesome: 'fa-quote-right',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
-                    this.odooEditor.execCommand('setTag', 'blockquote');
+                    this.kodaEditor.execCommand('setTag', 'blockquote');
                 },
             },
             {
@@ -2358,9 +2358,9 @@ export class Wysiwyg extends Component {
                 priority: 20,
                 description: _t('Add a code section'),
                 fontawesome: 'fa-code',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
-                    this.odooEditor.execCommand('setTag', 'pre');
+                    this.kodaEditor.execCommand('setTag', 'pre');
                 },
             },
             {
@@ -2368,7 +2368,7 @@ export class Wysiwyg extends Component {
                 name: _t('Signature'),
                 description: _t('Insert your signature'),
                 fontawesome: 'fa-pencil-square-o',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: async () => {
                     const [user] = await this.orm.read(
                         'res.users',
@@ -2376,7 +2376,7 @@ export class Wysiwyg extends Component {
                         ['signature'],
                     );
                     if (user && user.signature) {
-                        this.odooEditor.execCommand('insert', parseHTML(this.odooEditor.document, user.signature));
+                        this.kodaEditor.execCommand('insert', parseHTML(this.kodaEditor.document, user.signature));
                     }
                 },
             },
@@ -2386,7 +2386,7 @@ export class Wysiwyg extends Component {
                 description: _t('Generate or transform content with AI.'),
                 fontawesome: 'fa-magic',
                 priority: 1,
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: async () => this.openChatGPTDialog(),
             },
         ];
@@ -2398,12 +2398,12 @@ export class Wysiwyg extends Component {
                     priority: 13,
                     description: _t('Convert into 2 columns'),
                     fontawesome: 'fa-columns',
-                    callback: () => this.odooEditor.execCommand('columnize', 2, editorOptions.insertParagraphAfterColumns),
+                    callback: () => this.kodaEditor.execCommand('columnize', 2, editorOptions.insertParagraphAfterColumns),
                     isDisabled: () => {
-                        if (!this.odooEditor.isSelectionInBlockRoot()) {
+                        if (!this.kodaEditor.isSelectionInBlockRoot()) {
                             return true;
                         }
-                        const anchor = this.odooEditor.document.getSelection().anchorNode;
+                        const anchor = this.kodaEditor.document.getSelection().anchorNode;
                         const row = closestElement(anchor, '.o_text_columns .row');
                         return row && row.childElementCount === 2;
                     },
@@ -2414,12 +2414,12 @@ export class Wysiwyg extends Component {
                     priority: 12,
                     description: _t('Convert into 3 columns'),
                     fontawesome: 'fa-columns',
-                    callback: () => this.odooEditor.execCommand('columnize', 3, editorOptions.insertParagraphAfterColumns),
+                    callback: () => this.kodaEditor.execCommand('columnize', 3, editorOptions.insertParagraphAfterColumns),
                     isDisabled: () => {
-                        if (!this.odooEditor.isSelectionInBlockRoot()) {
+                        if (!this.kodaEditor.isSelectionInBlockRoot()) {
                             return true;
                         }
-                        const anchor = this.odooEditor.document.getSelection().anchorNode;
+                        const anchor = this.kodaEditor.document.getSelection().anchorNode;
                         const row = closestElement(anchor, '.o_text_columns .row');
                         return row && row.childElementCount === 3;
                     },
@@ -2430,12 +2430,12 @@ export class Wysiwyg extends Component {
                     priority: 11,
                     description: _t('Convert into 4 columns'),
                     fontawesome: 'fa-columns',
-                    callback: () => this.odooEditor.execCommand('columnize', 4, editorOptions.insertParagraphAfterColumns),
+                    callback: () => this.kodaEditor.execCommand('columnize', 4, editorOptions.insertParagraphAfterColumns),
                     isDisabled: () => {
-                        if (!this.odooEditor.isSelectionInBlockRoot()) {
+                        if (!this.kodaEditor.isSelectionInBlockRoot()) {
                             return true;
                         }
-                        const anchor = this.odooEditor.document.getSelection().anchorNode;
+                        const anchor = this.kodaEditor.document.getSelection().anchorNode;
                         const row = closestElement(anchor, '.o_text_columns .row');
                         return row && row.childElementCount === 4;
                     },
@@ -2446,12 +2446,12 @@ export class Wysiwyg extends Component {
                     priority: 10,
                     description: _t('Back to one column'),
                     fontawesome: 'fa-columns',
-                    callback: () => this.odooEditor.execCommand('columnize', 0),
+                    callback: () => this.kodaEditor.execCommand('columnize', 0),
                     isDisabled: () => {
-                        if (!this.odooEditor.isSelectionInBlockRoot()) {
+                        if (!this.kodaEditor.isSelectionInBlockRoot()) {
                             return true;
                         }
-                        const anchor = this.odooEditor.document.getSelection().anchorNode;
+                        const anchor = this.kodaEditor.document.getSelection().anchorNode;
                         const row = closestElement(anchor, '.o_text_columns .row');
                         return !row;
                     },
@@ -2749,9 +2749,9 @@ export class Wysiwyg extends Component {
         }
     }
     _onSelectionChange() {
-        if (this.odooEditor.autohideToolbar) {
+        if (this.kodaEditor.autohideToolbar) {
             const isVisible = this.linkPopover && this.linkPopover.el.offsetParent;
-            if (isVisible && !this.odooEditor.document.getSelection().isCollapsed) {
+            if (isVisible && !this.kodaEditor.document.getSelection().isCollapsed) {
                 this.linkPopover.hide();
             }
         }
@@ -2784,7 +2784,7 @@ export class Wysiwyg extends Component {
     _onScroll(ev) {
         if (ev.target.contains(this.$editable[0])) {
             this.scrollContainer = ev.target;
-            this.odooEditor.updateToolbarPosition();
+            this.kodaEditor.updateToolbarPosition();
         }
     }
     _signalOffline() {
@@ -2804,7 +2804,7 @@ export class Wysiwyg extends Component {
         this.ptp.notifyAllClients('ptp_join');
         // Send last step to all peers. If the peers cannot add the step, they
         // will ask for missing steps.
-        this.ptp.notifyAllClients('oe_history_step', peek(this.odooEditor.historyGetSteps()), { transport: 'rtc' });
+        this.ptp.notifyAllClients('oe_history_step', peek(this.kodaEditor.historyGetSteps()), { transport: 'rtc' });
     }
     /**
      * Process missing steps received from a peer.
@@ -2825,12 +2825,12 @@ export class Wysiwyg extends Component {
         if (missingSteps === -1 || !missingSteps.length) {
             return false;
         }
-        this.ptp && this.odooEditor.onExternalHistorySteps(missingSteps);
+        this.ptp && this.kodaEditor.onExternalHistorySteps(missingSteps);
         return true;
     }
     _showConflictDialog() {
         if (this._conflictDialogOpened) return;
-        const content = markup(this.odooEditor.editable.cloneNode(true).outerHTML);
+        const content = markup(this.kodaEditor.editable.cloneNode(true).outerHTML);
         this._conflictDialogOpened = true;
         this.env.services.dialog.add(ConflictDialog, {
             content,
@@ -2883,16 +2883,16 @@ export class Wysiwyg extends Component {
                     return this._userName;
                 },
                 get_client_avatar: () => `${browser.location.origin}/web/image?model=res.users&field=avatar_128&id=${encodeURIComponent(session.uid)}`,
-                get_missing_steps: (params) => this.odooEditor.historyGetMissingSteps(params.requestPayload),
+                get_missing_steps: (params) => this.kodaEditor.historyGetMissingSteps(params.requestPayload),
                 get_history_from_snapshot: () => this._getHistorySnapshot(),
-                get_collaborative_selection: () => this.odooEditor.getCurrentCollaborativeSelection(),
+                get_collaborative_selection: () => this.kodaEditor.getCurrentCollaborativeSelection(),
                 recover_document: (params) => {
                     const { serverDocumentId, fromStepId } = params.requestPayload;
-                    if (!this.odooEditor.historyGetBranchIds().includes(serverDocumentId)) {
+                    if (!this.kodaEditor.historyGetBranchIds().includes(serverDocumentId)) {
                         return;
                     }
                     return {
-                        missingSteps: this.odooEditor.historyGetMissingSteps({ fromStepId }),
+                        missingSteps: this.kodaEditor.historyGetMissingSteps({ fromStepId }),
                         snapshot: this._getHistorySnapshot(),
                     };
                 },
@@ -2900,11 +2900,11 @@ export class Wysiwyg extends Component {
             onNotification: async ({ fromClientId, notificationName, notificationPayload }) => {
                 switch (notificationName) {
                     case 'ptp_remove':
-                        this.odooEditor.multiselectionRemove(notificationPayload);
+                        this.kodaEditor.multiselectionRemove(notificationPayload);
                         break;
                     case 'ptp_disconnect':
                         this.ptp.removeClient(fromClientId);
-                        this.odooEditor.multiselectionRemove(fromClientId);
+                        this.kodaEditor.multiselectionRemove(fromClientId);
                         break;
                     case 'rtc_data_channel_open': {
                         fromClientId = notificationPayload.connectionClientId;
@@ -2928,7 +2928,7 @@ export class Wysiwyg extends Component {
                         } else {
                             // Make both send their last step to each other to
                             // ensure they are in sync.
-                            this.ptp.notifyAllClients('oe_history_step', peek(this.odooEditor.historyGetSteps()), { transport: 'rtc' });
+                            this.ptp.notifyAllClients('oe_history_step', peek(this.kodaEditor.historyGetSteps()), { transport: 'rtc' });
                             this._setCollaborativeSelection(fromClientId);
                         }
 
@@ -2937,21 +2937,21 @@ export class Wysiwyg extends Component {
                         ).then((clientName) => {
                             if (clientName === REQUEST_ERROR) return;
                             this.ptp.clientsInfos[fromClientId].clientName = clientName;
-                            this.odooEditor.multiselectionRefresh();
+                            this.kodaEditor.multiselectionRefresh();
                         });
                         const getClientAvatar = this.requestClient(
                             fromClientId, 'get_client_avatar', undefined, { transport: 'rtc' }
                         ).then(clientAvatarUrl => {
                             if (clientAvatarUrl === REQUEST_ERROR) return;
                             this.ptp.clientsInfos[fromClientId].clientAvatarUrl = clientAvatarUrl;
-                            this.odooEditor.multiselectionRefresh();
+                            this.kodaEditor.multiselectionRefresh();
                         });
                         await Promise.all([getClientAvatar, getClientNamePromise]);
                         break;
                     }
                     case 'oe_history_step':
                         if (this._historySyncFinished) {
-                            this.odooEditor.onExternalHistorySteps([notificationPayload]);
+                            this.kodaEditor.onExternalHistorySteps([notificationPayload]);
                         } else {
                             this._historyStepsBuffer.push(notificationPayload);
                         }
@@ -2964,7 +2964,7 @@ export class Wysiwyg extends Component {
                         const selection = notificationPayload;
                         selection.clientName = client.clientName;
                         selection.clientAvatarUrl = client.clientAvatarUrl;
-                        this.odooEditor.onExternalMultiselectionUpdate(selection);
+                        this.kodaEditor.onExternalMultiselectionUpdate(selection);
                         break;
                     }
                 }
@@ -2999,7 +2999,7 @@ export class Wysiwyg extends Component {
         const remoteSelection = await this.requestClient(fromClientId, 'get_collaborative_selection', undefined, { transport: 'rtc' });
         if (remoteSelection === REQUEST_ERROR) return;
         if (remoteSelection) {
-            this.odooEditor.onExternalMultiselectionUpdate(remoteSelection);
+            this.kodaEditor.onExternalMultiselectionUpdate(remoteSelection);
         }
     }
     /**
@@ -3021,7 +3021,7 @@ export class Wysiwyg extends Component {
         if (!this._serverLastStepId) {
             return false;
         }
-        return !this.odooEditor.historyGetBranchIds().includes(this._serverLastStepId);
+        return !this.kodaEditor.historyGetBranchIds().includes(this._serverLastStepId);
     }
     /**
      * Update the server document last step id and recover from a stale document
@@ -3092,7 +3092,7 @@ export class Wysiwyg extends Component {
                     peerId,
                     'recover_document', {
                         serverDocumentId: this._serverLastStepId,
-                        fromStepId: peek(this.odooEditor.historyGetBranchIds()),
+                        fromStepId: peek(this.kodaEditor.historyGetBranchIds()),
                     },
                     { transport: 'rtc' }
                 ).then((response) => {
@@ -3235,7 +3235,7 @@ export class Wysiwyg extends Component {
         this._historySyncFinished = true;
         // In case there are steps received in the meantime, process them.
         if (this._historyStepsBuffer.length) {
-            this.odooEditor.onExternalHistorySteps(this._historyStepsBuffer);
+            this.kodaEditor.onExternalHistorySteps(this._historyStepsBuffer);
             this._historyStepsBuffer = [];
         }
         this.options.onHistoryResetFromSteps();
@@ -3255,11 +3255,11 @@ export class Wysiwyg extends Component {
      */
     async resetValue(value) {
         this.setValue(value);
-        this.odooEditor.historyReset();
+        this.kodaEditor.historyReset();
         this._historyShareId = Math.floor(Math.random() * Math.pow(2,52)).toString();
         this._serverLastStepId = value && this._getLastHistoryStepId(value);
         if (this._serverLastStepId) {
-            this.odooEditor.historySetInitialId(this._serverLastStepId);
+            this.kodaEditor.historySetInitialId(this._serverLastStepId);
         }
     }
     /**
@@ -3283,7 +3283,7 @@ export class Wysiwyg extends Component {
             return;
         }
         this._currentClientId = this._generateClientId();
-        this.odooEditor.collaborationSetClientId(this._currentClientId);
+        this.kodaEditor.collaborationSetClientId(this._currentClientId);
         this.resetValue(value);
         this.setupCollaboration(collaborationChannel);
         if (this.options.collaborativeTrigger === 'start') {
@@ -3298,7 +3298,7 @@ export class Wysiwyg extends Component {
     _getHistorySnapshot() {
         return Object.assign(
             {},
-            this.odooEditor.historyGetSnapshotSteps(),
+            this.kodaEditor.historyGetSnapshotSteps(),
             { historyShareId: this._historyShareId }
         );
     }
@@ -3312,8 +3312,8 @@ export class Wysiwyg extends Component {
         }
         this._historyShareId = historyShareId;
         this._historySyncAtLeastOnce = true;
-        this.odooEditor.historyResetFromSteps(steps, historyIds);
-        this.odooEditor.historyResetLatestComputedSelection();
+        this.kodaEditor.historyResetFromSteps(steps, historyIds);
+        this.kodaEditor.historyResetLatestComputedSelection();
         return true;
     }
     /**
@@ -3324,7 +3324,7 @@ export class Wysiwyg extends Component {
     _onPostSanitize(node) {
         // _fixLinkMutatedElements check to be removed after the new link edge
         // solution is merged.
-        if (node?.querySelectorAll && this.odooEditor && !this.odooEditor._fixLinkMutatedElements) {
+        if (node?.querySelectorAll && this.kodaEditor && !this.kodaEditor._fixLinkMutatedElements) {
             // TODO rethink o_editable as a content-editable marker without
             // breaking the o_editable behaviors (website, mass_mailing, ...)
             for (const element of node.querySelectorAll('.o_not_editable')) {
@@ -3334,14 +3334,14 @@ export class Wysiwyg extends Component {
             }
         }
     }
-    _attachHistoryIds(editable = this.odooEditor.editable) {
+    _attachHistoryIds(editable = this.kodaEditor.editable) {
         if (this.options.collaborative) {
             // clean existig 'data-last-history-steps' attributes
             editable.querySelectorAll('[data-last-history-steps]').forEach(
                 el => el.removeAttribute('data-last-history-steps')
             );
 
-            const historyIds = this.odooEditor.historyGetBranchIds().join(',');
+            const historyIds = this.kodaEditor.historyGetBranchIds().join(',');
             const firstChild = editable.children[0];
             if (firstChild) {
                 firstChild.setAttribute('data-last-history-steps', historyIds);

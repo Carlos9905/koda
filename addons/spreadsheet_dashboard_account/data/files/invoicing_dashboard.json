@@ -1267,7 +1267,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 },
@@ -1563,7 +1563,7 @@
         "bdfb27d0-5902-4a2a-9b7e-514a6625578c": "account.menu_action_account_invoice_report_all",
         "b1673523-d139-47fb-b5ea-9e4f969aacb6": "account.menu_action_account_invoice_report_all"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {
         "1": {
             "columns": [

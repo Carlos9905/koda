@@ -628,7 +628,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -661,7 +661,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -965,7 +965,7 @@
         "98d2b15d-9117-4ecf-9732-dc62df949dc1": "event_sale.menu_action_show_revenues",
         "6510bff8-7b28-42c6-af4b-c750bed2205c": "event.menu_action_registration"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

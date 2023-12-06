@@ -163,5 +163,5 @@ cython_debug/
 .vscode/
 
 # Configuracion KODA
-odoo.conf
+koda.conf
 koda.conf

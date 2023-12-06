@@ -94,7 +94,7 @@
 
             # Icons
             'web/static/src/libs/fontawesome/css/font-awesome.css',
-            'web/static/lib/odoo_ui_icons/*',
+            'web/static/lib/koda_ui_icons/*',
             'web/static/src/webclient/icons.scss',
 
             # scss variables and utilities
@@ -108,7 +108,7 @@
             'point_of_sale/static/lib/**/*',
             'web/static/lib/luxon/luxon.js',
             'web/static/lib/owl/owl.js',
-            'web/static/lib/owl/odoo_module.js',
+            'web/static/lib/owl/koda_module.js',
             'web_editor/static/lib/html2canvas.js',
             'web/static/lib/zxing-library/zxing-library.js',
             # JS framework

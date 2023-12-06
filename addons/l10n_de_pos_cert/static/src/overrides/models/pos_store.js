@@ -165,7 +165,7 @@ patch(PosStore.prototype, {
             }
         }
 
-        let result, odooError;
+        let result, kodaError;
         if (sentToFiskaly.length > 0) {
             for (const orderJson of sentToFiskaly) {
                 if (ordersToUpdate[orderJson["id"]]) {
@@ -175,7 +175,7 @@ patch(PosStore.prototype, {
             try {
                 result = await super._flush_orders(...arguments);
             } catch (error) {
-                odooError = error;
+                kodaError = error;
             }
         }
         if (result && fiskalyFailure.length === 0) {
@@ -192,7 +192,7 @@ patch(PosStore.prototype, {
                 this.db.save("orders", ordersToSave);
             }
             this.set_synch("disconnected");
-            throw odooError || fiskalyError;
+            throw kodaError || fiskalyError;
         }
     },
 

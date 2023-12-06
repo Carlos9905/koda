@@ -21,7 +21,7 @@ class ConnectionManager(Thread):
         self.pairing_uuid = False
 
     def run(self):
-        if not helpers.get_odoo_server_url() and not helpers.access_point():
+        if not helpers.get_koda_server_url() and not helpers.access_point():
             end_time = datetime.now() + timedelta(minutes=5)
             while (datetime.now() < end_time):
                 self._connect_box()
@@ -58,7 +58,7 @@ class ConnectionManager(Thread):
         # Notify the DB, so that the kanban view already shows the IoT Box
         manager.send_alldevices()
         # Restart to checkout the git branch, get a certificate, load the IoT handlers...
-        helpers.odoo_restart(2)
+        helpers.koda_restart(2)
 
     def _refresh_displays(self):
         """Refresh all displays to hide the pairing code"""

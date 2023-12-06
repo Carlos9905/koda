@@ -44,7 +44,7 @@ async function openMenuSelector(params = {}) {
     await insertLinkMenu.execute(env);
     await nextTick();
     await click(target, ".o-special-link");
-    await click(target, ".o-menu-item[data-name='odooMenu']");
+    await click(target, ".o-menu-item[data-name='kodaMenu']");
     return { webClient, env, model };
 }
 

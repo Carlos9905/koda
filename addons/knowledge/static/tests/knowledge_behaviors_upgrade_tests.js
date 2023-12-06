@@ -165,7 +165,7 @@ QUnit.module("Knowledge - Behaviors Full Upgrade from original version", (hooks)
         assert.equal(status(anchor.oKnowledgeBehavior.root.component), "mounted");
 
         // File with an href that can be fully parsed
-        const editor = htmlField.wysiwyg.odooEditor;
+        const editor = htmlField.wysiwyg.kodaEditor;
         const newFileEl = parseHTML(editor.document, unformat(`
             <div class="o_knowledge_behavior_anchor o_knowledge_behavior_type_file">
                 <div data-prop-name="fileImage">

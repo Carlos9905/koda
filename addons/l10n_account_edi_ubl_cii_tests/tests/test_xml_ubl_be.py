@@ -157,7 +157,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
                     <attribute name="filename">{invoice.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/bis3_out_invoice.xml',
+            expected_file_path='from_koda/bis3_out_invoice.xml',
         )
         self.assertEqual(attachment.name[-12:], "ubl_bis3.xml")
         self._assert_imported_invoice_from_etree(invoice, attachment)
@@ -215,7 +215,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
                     <attribute name="filename">{refund.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/bis3_out_refund.xml',
+            expected_file_path='from_koda/bis3_out_refund.xml',
         )
         self.assertEqual(attachment.name[-12:], "ubl_bis3.xml")
         self._assert_imported_invoice_from_etree(refund, attachment)
@@ -270,7 +270,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
                     <attribute name="filename">{invoice.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/bis3_out_invoice_public_admin.xml',
+            expected_file_path='from_koda/bis3_out_invoice_public_admin.xml',
         )
 
     def test_rounding_price_unit(self):
@@ -299,7 +299,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
                 }
             ],
         )
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_odoo/bis3_out_invoice_rounding.xml')
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_koda/bis3_out_invoice_rounding.xml')
 
     def test_export_with_fixed_taxes_case1(self):
         # CASE 1: simple invoice with a recupel tax
@@ -317,7 +317,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
             ],
         )
         self.assertEqual(invoice.amount_total, 121)
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_odoo/bis3_ecotaxes_case1.xml')
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_koda/bis3_ecotaxes_case1.xml')
 
     def test_export_with_fixed_taxes_case2(self):
         # CASE 2: Same but with several ecotaxes
@@ -335,7 +335,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
             ],
         )
         self.assertEqual(invoice.amount_total, 121)
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_odoo/bis3_ecotaxes_case2.xml')
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_koda/bis3_ecotaxes_case2.xml')
 
     def test_export_with_fixed_taxes_case3(self):
         # CASE 3: same as Case 1 but taxes are Price Included
@@ -357,7 +357,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
             ],
         )
         self.assertEqual(invoice.amount_total, 121)
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_odoo/bis3_ecotaxes_case3.xml')
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_koda/bis3_ecotaxes_case3.xml')
 
     def test_export_payment_terms(self):
         """
@@ -393,7 +393,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
                 }
             ],
         )
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_odoo/bis3_pay_term.xml')
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_koda/bis3_pay_term.xml')
 
     def test_export_payment_terms_fixed_tax(self):
         """
@@ -423,7 +423,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
                 },
             ],
         )
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_odoo/bis3_pay_term_ecotax.xml')
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, None, 'from_koda/bis3_pay_term_ecotax.xml')
 
     ####################################################
     # Test import
@@ -467,7 +467,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
         })
         self._update_invoice_from_file(
             module_name='l10n_account_edi_ubl_cii_tests',
-            subfolder='tests/test_files/from_odoo',
+            subfolder='tests/test_files/from_koda',
             filename='ubl_test_import_partner.xml',
             invoice=invoice)
 
@@ -528,7 +528,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
 
     def test_import_invoice_xml(self):
         kwargs = {
-            'subfolder': 'tests/test_files/from_odoo',
+            'subfolder': 'tests/test_files/from_koda',
             'amount_total': 3164.22,
             'amount_tax': 482.22,
             'list_line_subtotals': [1782, 1000, -100],
@@ -565,7 +565,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
         invoice = self.env['account.move'].create({'move_type': 'out_invoice'})
         self._update_invoice_from_file(
             'l10n_account_edi_ubl_cii_tests',
-            'tests/test_files/from_odoo',
+            'tests/test_files/from_koda',
             'bis3_out_refund.xml',
             invoice,
         )
@@ -576,7 +576,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
         See the tests above to create these xml attachments ('test_export_with_fixed_taxes_case_[X]').
         NB: use move_type = 'out_invoice' s.t. we can retrieve the taxes used to create the invoices.
         """
-        subfolder = "tests/test_files/from_odoo"
+        subfolder = "tests/test_files/from_koda"
         # The tax 21% from l10n_be is retrieved since it's a duplicate of self.tax_21
         tax_21 = self.env.ref(f'account.{self.env.company.id}_attn_VAT-OUT-21-L')
         self._assert_imported_invoice_from_file(
@@ -600,7 +600,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
         tax_21 = self.env.ref(f'account.{self.env.company.id}_attn_VAT-OUT-21-L')
         tax_0 = self.env.ref(f'account.{self.env.company.id}_attn_VAT-OUT-00-L')
         self._assert_imported_invoice_from_file(
-            subfolder='tests/test_files/from_odoo', filename='bis3_pay_term.xml', amount_total=3105.68,
+            subfolder='tests/test_files/from_koda', filename='bis3_pay_term.xml', amount_total=3105.68,
             amount_tax=505.68, list_line_subtotals=[-4, -48, 52, 200, 2400],
             currency_id=self.currency_data['currency'].id, list_line_price_unit=[-4, -48, 52, 200, 2400],
             list_line_discount=[0, 0, 0, 0, 0], list_line_taxes=[self.tax_6, tax_21, tax_0, self.tax_6, tax_21],
@@ -691,7 +691,7 @@ class TestUBLBE(TestUBLCommon, TestAccountMoveSendCommon):
     def test_import_quantity_and_or_unit_price_zero(self):
         """ Tests some special handling cases in which the quantity or unit_price are missing.
         """
-        subfolder = "tests/test_files/from_odoo"
+        subfolder = "tests/test_files/from_koda"
         # The tax 21% from l10n_be is retrieved since it's a duplicate of self.tax_21
         tax_21 = self.env.ref(f'account.{self.env.company.id}_attn_VAT-OUT-21-L')
         self._assert_imported_invoice_from_file(

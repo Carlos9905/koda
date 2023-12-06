@@ -33,9 +33,9 @@ QUnit.module("documents_spreadsheet > chart side panel", { beforeEach }, () => {
         /** @type {NodeListOf<HTMLOptionElement>} */
         const options = target.querySelectorAll(".o-type-selector option");
         assert.strictEqual(options.length, 3);
-        assert.strictEqual(options[0].value, "odoo_bar");
-        assert.strictEqual(options[1].value, "odoo_line");
-        assert.strictEqual(options[2].value, "odoo_pie");
+        assert.strictEqual(options[0].value, "koda_bar");
+        assert.strictEqual(options[1].value, "koda_line");
+        assert.strictEqual(options[2].value, "koda_pie");
     });
 
     QUnit.test(
@@ -60,22 +60,22 @@ QUnit.module("documents_spreadsheet > chart side panel", { beforeEach }, () => {
         const { model, env } = await createSpreadsheetFromGraphView();
         const sheetId = model.getters.getActiveSheetId();
         const chartId = model.getters.getChartIds(sheetId)[0];
-        assert.strictEqual(model.getters.getChart(chartId).type, "odoo_bar");
+        assert.strictEqual(model.getters.getChart(chartId).type, "koda_bar");
         await openChartSidePanel(model, env);
         const target = getFixture();
         /** @type {HTMLSelectElement} */
         const select = target.querySelector(".o-type-selector");
-        select.value = "odoo_pie";
+        select.value = "koda_pie";
         await triggerEvent(select, null, "change");
-        assert.strictEqual(model.getters.getChart(chartId).type, "odoo_pie");
-        select.value = "odoo_line";
+        assert.strictEqual(model.getters.getChart(chartId).type, "koda_pie");
+        select.value = "koda_line";
         await triggerEvent(select, null, "change");
-        assert.strictEqual(model.getters.getChart(chartId).type, "odoo_line");
+        assert.strictEqual(model.getters.getChart(chartId).type, "koda_line");
         assert.strictEqual(model.getters.getChart(chartId).verticalAxisPosition, "left");
         assert.strictEqual(model.getters.getChart(chartId).stacked, false);
-        select.value = "odoo_bar";
+        select.value = "koda_bar";
         await triggerEvent(select, null, "change");
-        assert.strictEqual(model.getters.getChart(chartId).type, "odoo_bar");
+        assert.strictEqual(model.getters.getChart(chartId).type, "koda_bar");
         assert.strictEqual(model.getters.getChart(chartId).stacked, false);
     });
 
@@ -87,7 +87,7 @@ QUnit.module("documents_spreadsheet > chart side panel", { beforeEach }, () => {
         const target = getFixture();
         /** @type {HTMLSelectElement} */
         const select = target.querySelector(".o-type-selector");
-        select.value = "odoo_line";
+        select.value = "koda_line";
         await triggerEvent(select, null, "change");
 
         // checked by default
@@ -113,7 +113,7 @@ QUnit.module("documents_spreadsheet > chart side panel", { beforeEach }, () => {
         const { model, env } = await createSpreadsheetFromGraphView();
         const sheetId = model.getters.getActiveSheetId();
         const chartId = model.getters.getChartIds(sheetId)[0];
-        assert.strictEqual(model.getters.getChart(chartId).type, "odoo_bar");
+        assert.strictEqual(model.getters.getChart(chartId).type, "koda_bar");
         await openChartSidePanel(model, env);
         const target = getFixture();
         await click(target, ".o-panel-design");
@@ -182,7 +182,7 @@ QUnit.module("documents_spreadsheet > chart side panel", { beforeEach }, () => {
         const target = getFixture();
         /** @type {HTMLSelectElement} */
         const select = target.querySelector(".o-type-selector");
-        select.value = "odoo_line";
+        select.value = "koda_line";
         await triggerEvent(select, null, "change");
         await click(target, ".o_checkbox input[name='stackedBar']");
         await click(target, ".o_checkbox input[name='cumulative']");

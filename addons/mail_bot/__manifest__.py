@@ -19,7 +19,7 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'mail_bot/static/src/scss/odoobot_style.scss',
+            'mail_bot/static/src/scss/kodabot_style.scss',
         ],
     },
     'license': 'LGPL-3',

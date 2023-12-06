@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import { OdooViewsDataSource } from "../data_sources/odoo_views_data_source";
+import { OdooViewsDataSource } from "../data_sources/koda_views_data_source";
 import { SpreadsheetPivotModel } from "./pivot_model";
 import { Domain } from "@web/core/domain";
 

@@ -69,8 +69,8 @@ export class Store extends BaseStore {
      */
     inPublicPage = false;
     companyName = "";
-    odoobot = Record.one("Persona");
-    odoobotOnboarding;
+    kodabot = Record.one("Persona");
+    kodabotOnboarding;
     users = {};
     internalUserGroupId = null;
     imStatusTrackedPersonas = Record.many("Persona", {
@@ -120,14 +120,14 @@ export class Store extends BaseStore {
              * - threads with needaction
              * - unread channels
              * - read channels
-             * - odoobot chat
+             * - kodabot chat
              *
              * In each group, thread with most recent message comes first
              */
-            if (a.correspondent?.eq(this.odoobot) && !b.correspondent?.eq(this.odoobot)) {
+            if (a.correspondent?.eq(this.kodabot) && !b.correspondent?.eq(this.kodabot)) {
                 return 1;
             }
-            if (b.correspondent?.eq(this.odoobot) && !a.correspondent?.eq(this.odoobot)) {
+            if (b.correspondent?.eq(this.kodabot) && !a.correspondent?.eq(this.kodabot)) {
                 return -1;
             }
             if (a.needactionMessages.length > 0 && b.needactionMessages.length === 0) {

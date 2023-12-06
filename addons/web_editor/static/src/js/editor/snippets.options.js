@@ -4261,7 +4261,7 @@ const SnippetOptionWidget = Widget.extend({
         let $applyTo = null;
 
         if (previewMode === true) {
-            this.options.wysiwyg.odooEditor.automaticStepUnactive('preview_option');
+            this.options.wysiwyg.kodaEditor.automaticStepUnactive('preview_option');
         }
 
         // Call each option method sequentially
@@ -4284,7 +4284,7 @@ const SnippetOptionWidget = Widget.extend({
         }
 
         if (previewMode === 'reset' || previewMode === false) {
-            this.options.wysiwyg.odooEditor.automaticStepActive('preview_option');
+            this.options.wysiwyg.kodaEditor.automaticStepActive('preview_option');
         }
 
         // We trigger the event on elements targeted by apply-to if any as
@@ -4393,7 +4393,7 @@ const SnippetOptionWidget = Widget.extend({
         // Ask a mutexed snippet update according to the widget value change
         const shouldRecordUndo = (!previewMode && !ev.data.isSimulatedEvent);
         if (shouldRecordUndo) {
-            this.options.wysiwyg.odooEditor.unbreakableStepUnactive();
+            this.options.wysiwyg.kodaEditor.unbreakableStepUnactive();
         }
         this.trigger_up('snippet_edition_request', {exec: async () => {
             // If some previous snippet edition in the mutex removed the target from
@@ -4435,7 +4435,7 @@ const SnippetOptionWidget = Widget.extend({
             // If it is not preview mode, the user selected the option for good
             // (so record the action)
             if (shouldRecordUndo) {
-                this.options.wysiwyg.odooEditor.historyStep();
+                this.options.wysiwyg.kodaEditor.historyStep();
             }
 
             if (previewMode || requiresReload) {
@@ -4526,7 +4526,7 @@ registry.sizing = SnippetOptionWidget.extend({
         let resizeValues = this._getSize();
         this.$handles.on('mousedown', function (ev) {
             ev.preventDefault();
-            self.options.wysiwyg.odooEditor.automaticStepUnactive('resizing');
+            self.options.wysiwyg.kodaEditor.automaticStepUnactive('resizing');
             isMobile = weUtils.isMobileView(self.$target[0]);
 
             // First update size values as some element sizes may not have been
@@ -4586,9 +4586,9 @@ registry.sizing = SnippetOptionWidget.extend({
             const rowEl = self.$target[0].parentNode;
             let backgroundGridEl;
             if (rowEl.classList.contains("o_grid_mode") && !isMobile) {
-                self.options.wysiwyg.odooEditor.observerUnactive('displayBackgroundGrid');
+                self.options.wysiwyg.kodaEditor.observerUnactive('displayBackgroundGrid');
                 backgroundGridEl = gridUtils._addBackgroundGrid(rowEl, 0);
-                self.options.wysiwyg.odooEditor.observerActive('displayBackgroundGrid');
+                self.options.wysiwyg.kodaEditor.observerActive('displayBackgroundGrid');
                 gridUtils._setElementToMaxZindex(backgroundGridEl, rowEl);
             }
 
@@ -4679,9 +4679,9 @@ registry.sizing = SnippetOptionWidget.extend({
                 // Also sync the col-* class with the g-col-* class so the
                 // toggle to normal mode and the mobile view are well done.
                 if (rowEl.classList.contains("o_grid_mode") && !isMobile) {
-                    self.options.wysiwyg.odooEditor.observerUnactive('displayBackgroundGrid');
+                    self.options.wysiwyg.kodaEditor.observerUnactive('displayBackgroundGrid');
                     backgroundGridEl.remove();
-                    self.options.wysiwyg.odooEditor.observerActive('displayBackgroundGrid');
+                    self.options.wysiwyg.kodaEditor.observerActive('displayBackgroundGrid');
                     gridUtils._resizeGrid(rowEl);
 
                     const colClass = [...self.$target[0].classList].find(c => /^col-/.test(c));
@@ -4695,10 +4695,10 @@ registry.sizing = SnippetOptionWidget.extend({
                 }
 
                 setTimeout(function () {
-                    self.options.wysiwyg.odooEditor.historyStep();
+                    self.options.wysiwyg.kodaEditor.historyStep();
                 }, 0);
 
-                self.options.wysiwyg.odooEditor.automaticStepActive('resizing');
+                self.options.wysiwyg.kodaEditor.automaticStepActive('resizing');
             };
             $body.on('mousemove', bodyMouseMove);
             $body.on('mouseup', bodyMouseUp);
@@ -5380,11 +5380,11 @@ registry.layout_column = SnippetOptionWidget.extend(ColumnLayoutMixin, {
             void rowEl.offsetWidth; // Trigger a DOM reflow.
 
             // Add an animated grid preview.
-            this.options.wysiwyg.odooEditor.observerUnactive("addGridPreview");
+            this.options.wysiwyg.kodaEditor.observerUnactive("addGridPreview");
             this.gridPreviewEl = gridUtils._addBackgroundGrid(rowEl, 0);
             this.gridPreviewEl.classList.add("o_we_grid_preview");
             gridUtils._setElementToMaxZindex(this.gridPreviewEl, rowEl);
-            this.options.wysiwyg.odooEditor.observerActive("addGridPreview");
+            this.options.wysiwyg.kodaEditor.observerActive("addGridPreview");
             this.removeGridPreview = this._removeGridPreview.bind(this);
             rowEl.addEventListener("animationend", this.removeGridPreview);
         }
@@ -5539,14 +5539,14 @@ registry.layout_column = SnippetOptionWidget.extend(ColumnLayoutMixin, {
      * @private
      */
     _removeGridPreview() {
-        this.options.wysiwyg.odooEditor.observerUnactive("removeGridPreview");
+        this.options.wysiwyg.kodaEditor.observerUnactive("removeGridPreview");
         this.$target[0].removeEventListener("animationend", this.removeGridPreview);
         if (this.gridPreviewEl) {
             this.gridPreviewEl.remove();
             delete this.gridPreviewEl;
         }
         delete this.removeGridPreview;
-        this.options.wysiwyg.odooEditor.observerActive("removeGridPreview");
+        this.options.wysiwyg.kodaEditor.observerActive("removeGridPreview");
     },
     /**
      * @returns {boolean}
@@ -5581,9 +5581,9 @@ registry.GridColumns = SnippetOptionWidget.extend({
 
             // Highlight the padding when changing it, by adding a pseudo-
             // element with an animated colored border inside the grid item.
-            this.options.wysiwyg.odooEditor.observerUnactive("addPaddingPreview");
+            this.options.wysiwyg.kodaEditor.observerUnactive("addPaddingPreview");
             this.$target[0].classList.add("o_we_padding_highlight");
-            this.options.wysiwyg.odooEditor.observerActive("addPaddingPreview");
+            this.options.wysiwyg.kodaEditor.observerActive("addPaddingPreview");
             this.removePaddingPreview = this._removePaddingPreview.bind(this);
             this.$target[0].addEventListener("animationend", this.removePaddingPreview);
         }
@@ -5609,11 +5609,11 @@ registry.GridColumns = SnippetOptionWidget.extend({
      * @private
      */
     _removePaddingPreview() {
-        this.options.wysiwyg.odooEditor.observerUnactive("removePaddingPreview");
+        this.options.wysiwyg.kodaEditor.observerUnactive("removePaddingPreview");
         this.$target[0].removeEventListener("animationend", this.removePaddingPreview);
         this.$target[0].classList.remove("o_we_padding_highlight");
         delete this.removePaddingPreview;
-        this.options.wysiwyg.odooEditor.observerActive("removePaddingPreview");
+        this.options.wysiwyg.kodaEditor.observerActive("removePaddingPreview");
     },
 });
 
@@ -5832,8 +5832,8 @@ registry.ReplaceMedia = SnippetOptionWidget.extend({
      * @override
      */
     onFocus() {
-        this.options.wysiwyg.odooEditor.addEventListener('activate_image_link_tool', this._activateLinkTool);
-        this.options.wysiwyg.odooEditor.addEventListener('deactivate_image_link_tool', this._deactivateLinkTool);
+        this.options.wysiwyg.kodaEditor.addEventListener('activate_image_link_tool', this._activateLinkTool);
+        this.options.wysiwyg.kodaEditor.addEventListener('deactivate_image_link_tool', this._deactivateLinkTool);
         // When we start editing an image, rerender the UI to ensure the
         // we-select that suggests the anchors is in a consistent state.
         this.rerender = true;
@@ -5842,8 +5842,8 @@ registry.ReplaceMedia = SnippetOptionWidget.extend({
      * @override
      */
     onBlur() {
-        this.options.wysiwyg.odooEditor.removeEventListener('activate_image_link_tool', this._activateLinkTool);
-        this.options.wysiwyg.odooEditor.removeEventListener('deactivate_image_link_tool', this._deactivateLinkTool);
+        this.options.wysiwyg.kodaEditor.removeEventListener('activate_image_link_tool', this._activateLinkTool);
+        this.options.wysiwyg.kodaEditor.removeEventListener('deactivate_image_link_tool', this._deactivateLinkTool);
     },
 
     //--------------------------------------------------------------------------
@@ -8624,9 +8624,9 @@ registry.ColoredLevelBackground = registry.BackgroundToggler.extend({
      * @private
      */
     _markColorLevel: function () {
-        this.options.wysiwyg.odooEditor.observerUnactive('_markColorLevel');
+        this.options.wysiwyg.kodaEditor.observerUnactive('_markColorLevel');
         this.$target.addClass('o_colored_level');
-        this.options.wysiwyg.odooEditor.observerActive('_markColorLevel');
+        this.options.wysiwyg.kodaEditor.observerActive('_markColorLevel');
     },
 });
 

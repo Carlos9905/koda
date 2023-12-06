@@ -35,10 +35,10 @@ export class PaymentVivaWallet extends PaymentInterface {
                 action,
                 [[this.payment_method.id], data]
             )
-            .catch(this._handle_odoo_connection_failure.bind(this));
+            .catch(this._handle_koda_connection_failure.bind(this));
     }
 
-    _handle_odoo_connection_failure(data = {}) {
+    _handle_koda_connection_failure(data = {}) {
         // handle timeout
         var line = this.pending_viva_wallet_line();
         if (line) {
@@ -129,7 +129,7 @@ export class PaymentVivaWallet extends PaymentInterface {
         );
 
         if (!notification) {
-            this._handle_odoo_connection_failure();
+            this._handle_koda_connection_failure();
             return;
         }
 

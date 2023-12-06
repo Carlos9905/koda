@@ -790,7 +790,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 },
@@ -1013,7 +1013,7 @@
         "dba70661-e001-43b9-9dab-d97e0469e83a": "stock_enterprise.stock_dashboard_menuitem",
         "eccd9e96-997e-4a92-ad09-91f142d23248": "stock_enterprise.stock_dashboard_menuitem"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

@@ -209,11 +209,11 @@ patch(Wysiwyg.prototype, {
             const scrollInIframe = ev.target === iframeDocument || ev.target.ownerDocument === iframeDocument;
             if (ev.target.contains(this.$iframe[0]))  {
                 this.scrollContainer = ev.target;
-                this.odooEditor.updateToolbarPosition();
+                this.kodaEditor.updateToolbarPosition();
             } else if (scrollInIframe) {
                 // UpdateToolbarPosition needs a scroll container in the top document.
                 this.scrollContainer = this.$iframe[0];
-                this.odooEditor.updateToolbarPosition();
+                this.kodaEditor.updateToolbarPosition();
             }
         } else {
             return super._onScroll(...arguments);

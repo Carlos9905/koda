@@ -1747,7 +1747,7 @@ class AccountMoveLine(models.Model):
         def is_payment(aml):
             return aml.move_id.payment_id or aml.move_id.statement_line_id
 
-        def get_odoo_rate(aml, other_aml, currency):
+        def get_koda_rate(aml, other_aml, currency):
             if aml.move_id.is_invoice(include_receipts=True):
                 exchange_rate_date = aml.move_id.invoice_date
             else:
@@ -1790,7 +1790,7 @@ class AccountMoveLine(models.Model):
             and is_rec_pay_account \
             and not has_zero_residual \
             and counterpart_currency != company_currency:
-            rate = get_odoo_rate(aml, other_aml, counterpart_currency)
+            rate = get_koda_rate(aml, other_aml, counterpart_currency)
             residual_in_foreign_curr = counterpart_currency.round(remaining_amount * rate)
             if not counterpart_currency.is_zero(residual_in_foreign_curr):
                 available_residual_per_currency[counterpart_currency] = {

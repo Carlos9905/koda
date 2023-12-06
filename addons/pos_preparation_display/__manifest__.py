@@ -36,7 +36,7 @@
 
             # Icons
             'web/static/src/libs/fontawesome/css/font-awesome.css',
-            'web/static/lib/odoo_ui_icons/*',
+            'web/static/lib/koda_ui_icons/*',
             'web/static/src/webclient/icons.scss',
 
             ('include', 'web._assets_core'),

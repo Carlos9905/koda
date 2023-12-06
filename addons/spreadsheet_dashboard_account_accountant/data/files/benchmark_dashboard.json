@@ -1279,7 +1279,7 @@
     "borders": {},
     "revisionId": "START_REVISION",
     "uniqueFigureIds": true,
-    "odooVersion": 5,
+    "kodaVersion": 5,
     "globalFilters": [
         {
             "id": "069d7cf1-9623-4d6e-8226-ad7c60112662",

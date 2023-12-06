@@ -30,7 +30,7 @@ class Manager(Thread):
         """
         This method send IoT Box and devices informations to Odoo database
         """
-        server = helpers.get_odoo_server_url()
+        server = helpers.get_koda_server_url()
         if server:
             subject = helpers.read_file_first_line('koda-subject.conf')
             if subject:
@@ -88,7 +88,7 @@ class Manager(Thread):
             _logger.warning("An error happened when trying to get the HTTPS certificate: %s",
                             certificate_details)
 
-        iot_client = WebsocketClient(helpers.get_odoo_server_url())
+        iot_client = WebsocketClient(helpers.get_koda_server_url())
         # We first add the IoT Box to the connected DB because IoT handlers cannot be downloaded if
         # the identifier of the Box is not found in the DB. So add the Box to the DB.
         self.send_alldevices(iot_client)
@@ -105,7 +105,7 @@ class Manager(Thread):
                 _logger.error("Error in %s: %s", str(interface), e)
 
         #Setup the websocket connection
-        if helpers.get_odoo_server_url():
+        if helpers.get_koda_server_url():
             iot_client.start()
         # Check every 3 secondes if the list of connected devices has changed and send the updated
         # list to the connected DB.

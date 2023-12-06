@@ -21,9 +21,9 @@ function OdooFinConnector(parent, action) {
     if (!modeRegexp.test(action.params.proxyMode) && !runbotRegexp.test(action.params.proxyMode)) {
         return;
     }
-    let url = 'https://' + action.params.proxyMode + '.odoofin.com/proxy/v1/odoofin_link';
+    let url = 'https://' + action.params.proxyMode + '.kodafin.com/proxy/v1/kodafin_link';
     if (runbotRegexp.test(action.params.proxyMode)) {
-        url = action.params.proxyMode + '/proxy/v1/odoofin_link';
+        url = action.params.proxyMode + '/proxy/v1/kodafin_link';
     }
     let actionResult = false;
 
@@ -76,6 +76,6 @@ function OdooFinConnector(parent, action) {
     return;
 }
 
-actionRegistry.add('odoo_fin_connector', OdooFinConnector);
+actionRegistry.add('koda_fin_connector', OdooFinConnector);
 
 export default OdooFinConnector;

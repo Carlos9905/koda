@@ -12,7 +12,7 @@ import { createPeers, removePeers } from '@web_editor/../tests/test_wysiwyg_coll
  * @returns {String} html value with selection represented as `[]`
  */
 function getCleanedValue(peer) {
-    peer.wysiwyg.odooEditor.cleanForSave();
+    peer.wysiwyg.kodaEditor.cleanForSave();
     return peer.getValue();
 }
 
@@ -67,7 +67,7 @@ QUnit.module("Knowledge - Collaboration", (hooks) => {
         await peers.p1.focus();
         await peers.p2.focus();
 
-        await peers.p1.wysiwyg.odooEditor.execCommand('insert', 's1');
+        await peers.p1.wysiwyg.kodaEditor.execCommand('insert', 's1');
 
         const behaviorEl = peers.p2.document.createElement('DIV');
         const paragraph = peers.p2.document.createElement('P');

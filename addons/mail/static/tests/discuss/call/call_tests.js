@@ -36,12 +36,12 @@ QUnit.test("basic rendering", async () => {
     await contains("[title='Enter Full Screen']");
 });
 
-QUnit.test("no call with odoobot", async () => {
+QUnit.test("no call with kodabot", async () => {
     const pyEnv = await startServer();
     const channelId = pyEnv["discuss.channel"].create({
         channel_member_ids: [
             Command.create({ partner_id: pyEnv.currentPartnerId }),
-            Command.create({ partner_id: pyEnv.odoobotId }),
+            Command.create({ partner_id: pyEnv.kodabotId }),
         ],
         channel_type: "chat",
     });

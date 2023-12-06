@@ -26,7 +26,7 @@ QUnit.test("Chart link to koda menu collaborative", async (assert) => {
         alice.dispatch("DELETE_FIGURE", { id: chartId, sheetId });
         bob.dispatch("LINK_ODOO_MENU_TO_CHART", {
             chartId,
-            odooMenuId: "odooTestMenu",
+            kodaMenuId: "kodaTestMenu",
         });
     });
     assert.spreadsheetIsSynchronized(

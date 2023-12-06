@@ -139,7 +139,7 @@
                             "groupBy": [],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -149,7 +149,7 @@
             "isVisible": true
         }
     ],
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {
         "1": {
             "columns": [],

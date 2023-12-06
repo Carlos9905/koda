@@ -6,7 +6,7 @@
         </div>
         <div class="o-section">
             <div class="o-section-title">Domain</div>
-            <DomainSelector resModel="model" domain="domain" t-key="'odoo_chart_' + props.figureId" />
+            <DomainSelector resModel="model" domain="domain" t-key="'koda_chart_' + props.figureId" />
             <div class="btn btn-link o_edit_domain" t-on-click="openDomainEdition">
                 <i class="oi oi-arrow-right me-1" />Edit domain</div>
         </div>

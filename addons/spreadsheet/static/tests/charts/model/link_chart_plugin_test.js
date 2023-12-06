@@ -122,7 +122,7 @@ QUnit.module(
                 createBasicChart(model, chartId);
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: 1,
+                    kodaMenuId: 1,
                 });
                 const exportedData = model.exportData();
                 assert.equal(
@@ -142,7 +142,7 @@ QUnit.module(
             createBasicChart(model, chartId);
             model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                 chartId,
-                odooMenuId: 1,
+                kodaMenuId: 1,
             });
             assert.equal(model.getters.getChartOdooMenu(chartId).id, 1);
             model.dispatch("REQUEST_UNDO");
@@ -157,7 +157,7 @@ QUnit.module(
             createBasicChart(model, chartId);
             model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                 chartId,
-                odooMenuId: 1,
+                kodaMenuId: 1,
             });
             assert.equal(model.getters.getChartOdooMenu(chartId).id, 1);
             model.dispatch("DELETE_FIGURE", {

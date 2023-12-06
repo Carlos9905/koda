@@ -1535,7 +1535,7 @@ describe('Paste', () => {
                     },
                     contentAfter: '<p>xy<a href="http://koda.com">http://koda.com</a>[]z</p>',
                 });
-                const imageUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const imageUrl = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>xy<a href="#" oe-zws-empty-inline="">\u200B[]</a>z</p>',
                     stepFunction: async editor => {
@@ -1588,7 +1588,7 @@ describe('Paste', () => {
             });
             it('should paste and transform URL among text', async () => {
                 const url = 'https://www.koda.com';
-                const imgUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const imgUrl = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 const videoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[]</p>',
@@ -1620,7 +1620,7 @@ describe('Paste', () => {
             });
             it('should paste and transform multiple URLs', async () => {
                 const url = 'https://www.koda.com';
-                const imgUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const imgUrl = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 const videoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[]</p>',
@@ -1717,7 +1717,7 @@ describe('Paste', () => {
             });
             it('should paste and transform URLs among text or multiple URLs', async () => {
                 const url = 'https://www.koda.com';
-                const imgUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const imgUrl = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 const videoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[xyz]<br></p>',
@@ -1789,7 +1789,7 @@ describe('Paste', () => {
                     },
                     contentAfter: '<p>abc <a href="http://www.koda.com">www.koda.com</a> xyz[]</p>',
                 });
-                const imageUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const imageUrl = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>ab<a href="http://www.xyz.com">[http://www.xyz.com]</a>cd</p>',
                     stepFunction: async editor => {
@@ -1831,41 +1831,41 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>ab[]cd</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'https://download.odoocdn.com/icons/website/static/description/icon.png');
+                        await pasteText(editor, 'https://download.kodacdn.com/icons/website/static/description/icon.png');
                         // Ensure the powerbox is active
                         window.chai.expect(editor.powerbox.isOpen).to.be.true;
                         // Force powerbox validation on the default first choice
                         await editor.powerbox._pickCommand();
                     },
-                    contentAfter: '<p>ab<img src="https://download.odoocdn.com/icons/website/static/description/icon.png">[]cd</p>',
+                    contentAfter: '<p>ab<img src="https://download.kodacdn.com/icons/website/static/description/icon.png">[]cd</p>',
                 });
             });
             it('should paste and transform an image URL in a span', async () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>a<span class="a">b[]c</span>d</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'https://download.odoocdn.com/icons/website/static/description/icon.png');
+                        await pasteText(editor, 'https://download.kodacdn.com/icons/website/static/description/icon.png');
                         // Ensure the powerbox is active
                         window.chai.expect(editor.powerbox.isOpen).to.be.true;
                         // Force powerbox validation on the default first choice
                         await editor.powerbox._pickCommand();
                     },
-                    contentAfter: '<p>a<span class="a">b<img src="https://download.odoocdn.com/icons/website/static/description/icon.png">[]c</span>d</p>',
+                    contentAfter: '<p>a<span class="a">b<img src="https://download.kodacdn.com/icons/website/static/description/icon.png">[]c</span>d</p>',
                 });
             });
             it('should paste and transform an image URL in an existing link', async () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>a<a href="http://existing.com">b[]c</a>d</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'https://download.odoocdn.com/icons/website/static/description/icon.png');
+                        await pasteText(editor, 'https://download.kodacdn.com/icons/website/static/description/icon.png');
                         // Powerbox should not open
                         window.chai.expect(editor.powerbox.isOpen).to.be.false;
                     },
-                    contentAfter: '<p>a<a href="http://existing.com">b<img src="https://download.odoocdn.com/icons/website/static/description/icon.png">[]c</a>d</p>',
+                    contentAfter: '<p>a<a href="http://existing.com">b<img src="https://download.kodacdn.com/icons/website/static/description/icon.png">[]c</a>d</p>',
                 });
             });
             it('should paste an image URL as a link in a p', async () => {
-                const url = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const url = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[]</p>',
                     stepFunction: async editor => {
@@ -1880,7 +1880,7 @@ describe('Paste', () => {
                 });
             });
             it('should not revert a history step when pasting an image URL as a link', async () => {
-                const url = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const url = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[]</p>',
                     stepFunction: async editor => {
@@ -1902,41 +1902,41 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>ab[xxx]cd</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'https://download.odoocdn.com/icons/website/static/description/icon.png');
+                        await pasteText(editor, 'https://download.kodacdn.com/icons/website/static/description/icon.png');
                         // Ensure the powerbox is active
                         window.chai.expect(editor.powerbox.isOpen).to.be.true;
                         // Force powerbox validation on the default first choice
                         await editor.powerbox._pickCommand();
                     },
-                    contentAfter: '<p>ab<img src="https://download.odoocdn.com/icons/website/static/description/icon.png">[]cd</p>',
+                    contentAfter: '<p>ab<img src="https://download.kodacdn.com/icons/website/static/description/icon.png">[]cd</p>',
                 });
             });
             it('should paste and transform an image URL in a span', async () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>a<span class="a">b[x<a href="http://existing.com">546</a>x]c</span>d</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'https://download.odoocdn.com/icons/website/static/description/icon.png');
+                        await pasteText(editor, 'https://download.kodacdn.com/icons/website/static/description/icon.png');
                         // Ensure the powerbox is active
                         window.chai.expect(editor.powerbox.isOpen).to.be.true;
                         // Force powerbox validation on the default first choice
                         await editor.powerbox._pickCommand();
                     },
-                    contentAfter: '<p>a<span class="a">b<img src="https://download.odoocdn.com/icons/website/static/description/icon.png">[]c</span>d</p>',
+                    contentAfter: '<p>a<span class="a">b<img src="https://download.kodacdn.com/icons/website/static/description/icon.png">[]c</span>d</p>',
                 });
             });
             it('should paste and transform an image URL inside an existing link', async () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>a<a href="http://existing.com">b[qsdqsd]c</a>d</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'https://download.odoocdn.com/icons/website/static/description/icon.png');
+                        await pasteText(editor, 'https://download.kodacdn.com/icons/website/static/description/icon.png');
                         // Powerbox should not open
                         window.chai.expect(editor.powerbox.isOpen).to.be.false;
                     },
-                    contentAfter: '<p>a<a href="http://existing.com">b<img src="https://download.odoocdn.com/icons/website/static/description/icon.png">[]c</a>d</p>',
+                    contentAfter: '<p>a<a href="http://existing.com">b<img src="https://download.kodacdn.com/icons/website/static/description/icon.png">[]c</a>d</p>',
                 });
             });
             it('should paste an image URL as a link in a p', async () => {
-                const url = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const url = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>ab[xxx]cd</p>',
                     stepFunction: async editor => {
@@ -1951,7 +1951,7 @@ describe('Paste', () => {
                 });
             });
             it('should not revert a history step when pasting an image URL as a link', async () => {
-                const url = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const url = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[]</p>',
                     stepFunction: async editor => {
@@ -1980,7 +1980,7 @@ describe('Paste', () => {
                 });
             });
             it('should restore selection after pasting image URL followed by UNDO', async () => {
-                const url = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
+                const url = 'https://download.kodacdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[abc]</p>',
                     stepFunction: async editor => {

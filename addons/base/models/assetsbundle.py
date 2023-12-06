@@ -29,7 +29,7 @@ from rjsmin import jsmin as rjsmin
 from koda import release, SUPERUSER_ID, _
 from koda.http import request
 from koda.tools import (func, misc, transpile_javascript,
-    is_odoo_module, SourceMapGenerator, profiler,
+    is_koda_module, SourceMapGenerator, profiler,
     apply_inheritance_specs)
 from koda.tools.constants import SCRIPT_EXTENSIONS, STYLE_EXTENSIONS
 from koda.tools.misc import file_open, file_path
@@ -845,7 +845,7 @@ class JavascriptAsset(WebAsset):
     @property
     def is_transpiled(self):
         if self._is_transpiled is None:
-            self._is_transpiled = bool(is_odoo_module(super().content))
+            self._is_transpiled = bool(is_koda_module(super().content))
         return self._is_transpiled
 
     @property

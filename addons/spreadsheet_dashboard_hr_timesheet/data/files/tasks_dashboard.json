@@ -752,7 +752,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -790,7 +790,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_pie"
+                        "type": "koda_pie"
                     }
                 },
                 {
@@ -1068,7 +1068,7 @@
         "488da38e-01db-46a0-b4b0-e2fafc4ad390": "project.menu_project_report_task_analysis",
         "ce7e17ea-eed0-493e-9968-5905c0969ca9": "project.menu_project_report_task_analysis"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

@@ -33,7 +33,7 @@ QUnit.test("Odoo formulas are migrated", (assert) => {
 
 QUnit.test("Pivot 'day' arguments are migrated", (assert) => {
     const data = {
-        odooVersion: 1,
+        kodaVersion: 1,
         sheets: [
             {
                 cells: {
@@ -205,7 +205,7 @@ QUnit.test("fieldMatchings are moved from filters to their respective datasource
                         id: "fig1",
                         tag: "chart",
                         data: {
-                            type: "odoo_bar",
+                            type: "koda_bar",
                         },
                     },
                 ],
@@ -271,7 +271,7 @@ QUnit.test("fieldMatchings offsets are correctly preserved after migration", (as
                         id: "fig1",
                         tag: "chart",
                         data: {
-                            type: "odoo_bar",
+                            type: "koda_bar",
                         },
                     },
                 ],
@@ -293,7 +293,7 @@ QUnit.test("fieldMatchings offsets are correctly preserved after migration", (as
 QUnit.test("group year/quarter/month filters to a single filter type", (assert) => {
     const data = {
         version: 14,
-        odooVersion: 5,
+        kodaVersion: 5,
         globalFilters: [
             {
                 id: "1",
@@ -378,5 +378,5 @@ QUnit.test("group year/quarter/month filters to a single filter type", (assert) 
 
 QUnit.test("Odoo version is exported", (assert) => {
     const model = new Model();
-    assert.strictEqual(model.exportData().odooVersion, ODOO_VERSION);
+    assert.strictEqual(model.exportData().kodaVersion, ODOO_VERSION);
 });

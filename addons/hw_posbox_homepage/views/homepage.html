@@ -115,14 +115,14 @@
         $('.error-message').text(xhrStatus + ": " + thrownError);
     }
 
-    function restart_odoo_or_reboot(action) {
+    function restart_koda_or_reboot(action) {
         /// Call restart method on server, then ping it until restarting is finished
         /// If an error is encountered, display it and stop
         $('.loading-block').removeClass('o_hide');
         $('.message-title').text('Restarting');
         $('.message-status').text('Please wait');
         $.ajax({
-            url: '/iot_restart_odoo_or_reboot/',
+            url: '/iot_restart_koda_or_reboot/',
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify({ params: {action: action} }),
@@ -161,9 +161,9 @@
             <div class="content">
                 <div class="device-status">
                     {% if system == "Linux" %}
-                        <button class="btn btn-sm btn-sm-restart" onclick="restart_odoo_or_reboot('reboot_iot_box')">Reboot the IoT Box</button>
+                        <button class="btn btn-sm btn-sm-restart" onclick="restart_koda_or_reboot('reboot_iot_box')">Reboot the IoT Box</button>
                     {% endif %}
-                    <button class="btn btn-sm btn-sm-restart" onclick="restart_odoo_or_reboot('restart_odoo')">Restart Odoo service</button>
+                    <button class="btn btn-sm btn-sm-restart" onclick="restart_koda_or_reboot('restart_koda')">Restart Odoo service</button>
                 </div>
             </div>
         </div>

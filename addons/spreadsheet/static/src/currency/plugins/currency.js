@@ -83,4 +83,4 @@ class CurrencyPlugin extends UIPlugin {
 
 CurrencyPlugin.getters = ["getCurrencyRate", "getCurrencyFormat", "getCompanyCurrencyFormat"];
 
-featurePluginRegistry.add("odooCurrency", CurrencyPlugin);
+featurePluginRegistry.add("kodaCurrency", CurrencyPlugin);

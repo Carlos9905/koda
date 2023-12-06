@@ -15,7 +15,7 @@ const { DateTime } = luxon;
 /**
  * @typedef {import("./pivot_core_plugin").PivotDefinition} PivotDefinition
  * @typedef {import("@spreadsheet/global_filters/plugins/global_filters_core_plugin").FieldMatching} FieldMatching
- * @typedef {import("@spreadsheet/helpers/odoo_functions_helpers").Token} Token
+ * @typedef {import("@spreadsheet/helpers/koda_functions_helpers").Token} Token
  */
 
 /**

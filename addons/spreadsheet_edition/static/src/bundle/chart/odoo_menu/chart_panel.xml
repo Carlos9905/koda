@@ -4,7 +4,7 @@
         <div class="o-section">
             <div class="o-section-title">Link to Odoo menu</div>
             <IrMenuSelector
-                menuId="odooMenuId"
+                menuId="kodaMenuId"
                 onValueChanged.bind="updateOdooLink"/>
         </div>
     </t>

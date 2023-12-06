@@ -27,14 +27,14 @@ class ResConfigSettings(models.TransientModel):
     enable_ocn = fields.Boolean('Push Notifications', config_parameter='mail_mobile.enable_ocn')
 
     def _get_endpoint(self):
-        return self.env['ir.config_parameter'].sudo().get_param('odoo_ocn.endpoint', DEFAULT_ENDPOINT)
+        return self.env['ir.config_parameter'].sudo().get_param('koda_ocn.endpoint', DEFAULT_ENDPOINT)
 
     @api.model
     def get_fcm_project_id(self):
         ir_params_sudo = self.env['ir.config_parameter'].sudo()
         if not ir_params_sudo.get_param('mail_mobile.enable_ocn'):
             return
-        project_id = ir_params_sudo.get_param('odoo_ocn.project_id')
+        project_id = ir_params_sudo.get_param('koda_ocn.project_id')
         if not project_id:
             params = {
                 'ocnuuid': self._get_ocn_uuid(),
@@ -47,7 +47,7 @@ class ResConfigSettings(models.TransientModel):
                 # Register instance to ocn service. Unique with ocn.uuid
                 project_id = iap_tools.iap_jsonrpc(self._get_endpoint() + '/iap/ocn/enable_service', params=params)
                 # Storing project id for generate token
-                ir_params_sudo.set_param('odoo_ocn.project_id', project_id)
+                ir_params_sudo.set_param('koda_ocn.project_id', project_id)
             except Exception as e:
                 _logger.error('An error occurred while contacting the ocn server: %s', e.args[0])
         return project_id

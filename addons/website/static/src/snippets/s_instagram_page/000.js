@@ -98,9 +98,9 @@ const InstagramPage = publicWidget.Widget.extend({
         // Instagram can return a height of 0 before the real height.
         if (height) {
             // Prevent history step in edit mode.
-            this.options.wysiwyg?.odooEditor.observerUnactive();
+            this.options.wysiwyg?.kodaEditor.observerUnactive();
             iframeEl.height = height;
-            this.options.wysiwyg?.odooEditor.observerActive();
+            this.options.wysiwyg?.kodaEditor.observerActive();
         }
     },
 });

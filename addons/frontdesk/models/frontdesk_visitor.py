@@ -109,21 +109,21 @@ class FrontdeskVisitor(models.Model):
 
     def _notify_by_discuss(self, recipients, msg, is_host=False):
         for recipient in recipients:
-            odoobot_id = self.env.ref("base.partner_root").id
+            kodabot_id = self.env.ref("base.partner_root").id
             partners_to = [recipient.user_partner_id.id] if is_host else [recipient.partner_id.id]
             channel = self.env["discuss.channel"].with_user(SUPERUSER_ID).channel_get(partners_to)
-            channel.message_post(body=msg, author_id=odoobot_id, message_type="comment", subtype_xmlid="mail.mt_comment")
+            channel.message_post(body=msg, author_id=kodabot_id, message_type="comment", subtype_xmlid="mail.mt_comment")
 
     def _notify_by_email(self):
         for host in self.host_ids:
             if host.work_email:
-                odoobot = self.env.ref('base.partner_root')
+                kodabot = self.env.ref('base.partner_root')
                 mail_template = self.station_id.mail_template_id
                 ctx = {'host_name': host.name, 'lang': host.user_partner_id.lang}
                 body = mail_template.with_context(ctx)._render_field('body_html', self.ids, compute_lang=True)[self.id]
                 subject = mail_template.with_context(ctx)._render_field('subject', self.ids, compute_lang=True)[self.id]
                 host.message_notify(
-                    email_from=odoobot.email_formatted,
+                    email_from=kodabot.email_formatted,
                     author_id=self.env.user.partner_id.id,
                     body=body,
                     subject=subject,
@@ -135,11 +135,11 @@ class FrontdeskVisitor(models.Model):
     def _notify_by_sms(self):
         for host in self.host_ids:
             if host.work_phone:
-                odoobot_id = self.env['ir.model.data']._xmlid_to_res_id("base.partner_root")
+                kodabot_id = self.env['ir.model.data']._xmlid_to_res_id("base.partner_root")
                 sms_template = self.station_id.sms_template_id
                 body = sms_template._render_field('body', self.ids, compute_lang=True)[self.id]
                 host._message_sms(
-                    author_id=odoobot_id,
+                    author_id=kodabot_id,
                     body=body,
                     partner_ids=host.user_partner_id.ids,
                 )

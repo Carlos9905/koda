@@ -41,7 +41,7 @@ class TestCreateEvents(TestCommon):
         record = self.env["calendar.event"].with_user(self.organizer_user).create(self.simple_event_values)
 
         with self.assertRaises(ValidationError):
-            record._sync_odoo2microsoft()
+            record._sync_koda2microsoft()
 
     @patch.object(MicrosoftCalendarService, 'get_events')
     def test_create_simple_event_from_outlook_organizer_calendar(self, mock_get_events):
@@ -60,12 +60,12 @@ class TestCreateEvents(TestCommon):
         records = self.env["calendar.event"].search([])
         new_records = (records - existing_records)
         self.assertEqual(len(new_records), 1)
-        self.assert_odoo_event(new_records, self.expected_odoo_event_from_outlook)
+        self.assert_koda_event(new_records, self.expected_koda_event_from_outlook)
         self.assertEqual(new_records.user_id, self.organizer_user)
         self.assertEqual(new_records.need_sync_m, False)
 
     @patch.object(MicrosoftCalendarService, 'get_events')
-    def test_create_simple_event_from_outlook_attendee_calendar_and_organizer_exists_in_odoo(self, mock_get_events):
+    def test_create_simple_event_from_outlook_attendee_calendar_and_organizer_exists_in_koda(self, mock_get_events):
         """
         An event has been created in Outlook and synced in the Odoo attendee calendar.
         There is a Odoo user that matches with the organizer email address.
@@ -82,11 +82,11 @@ class TestCreateEvents(TestCommon):
         records = self.env["calendar.event"].search([])
         new_records = (records - existing_records)
         self.assertEqual(len(new_records), 1)
-        self.assert_odoo_event(new_records, self.expected_odoo_event_from_outlook)
+        self.assert_koda_event(new_records, self.expected_koda_event_from_outlook)
         self.assertEqual(new_records.user_id, self.organizer_user)
 
     @patch.object(MicrosoftCalendarService, 'get_events')
-    def test_create_simple_event_from_outlook_attendee_calendar_and_organizer_does_not_exist_in_odoo(self, mock_get_events):
+    def test_create_simple_event_from_outlook_attendee_calendar_and_organizer_does_not_exist_in_koda(self, mock_get_events):
         """
         An event has been created in Outlook and synced in the Odoo attendee calendar.
         no Odoo user that matches with the organizer email address.
@@ -97,7 +97,7 @@ class TestCreateEvents(TestCommon):
         outlook_event = dict(self.simple_event_from_outlook_attendee, organizer={
             'emailAddress': {'address': "john.doe@koda.com", 'name': "John Doe"},
         })
-        expected_event = dict(self.expected_odoo_event_from_outlook, user_id=False)
+        expected_event = dict(self.expected_koda_event_from_outlook, user_id=False)
 
         mock_get_events.return_value = (MicrosoftEvent([outlook_event]), None)
         existing_records = self.env["calendar.event"].search([])
@@ -109,14 +109,14 @@ class TestCreateEvents(TestCommon):
         records = self.env["calendar.event"].search([])
         new_records = (records - existing_records)
         self.assertEqual(len(new_records), 1)
-        self.assert_odoo_event(new_records, expected_event)
+        self.assert_koda_event(new_records, expected_event)
 
     @patch.object(MicrosoftCalendarService, 'insert')
     def test_create_recurrent_event_without_sync(self, mock_insert):
         """
         A Odoo recurrent event is created when Outlook sync is not enabled.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
 
         # arrange
@@ -137,7 +137,7 @@ class TestCreateEvents(TestCommon):
         """
         A Odoo recurrent event is created when Outlook sync is enabled.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
 
         # >>> first phase: create the recurrence
@@ -182,7 +182,7 @@ class TestCreateEvents(TestCommon):
         should happen as it we prevent sync of recurrences from other users
         ( see microsoft_calendar/models/calendar_recurrence_rule.py::_get_microsoft_sync_domain() )
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # >>> first phase: create the recurrence
 
@@ -236,9 +236,9 @@ class TestCreateEvents(TestCommon):
         new_recurrences = (self.env["calendar.recurrence"].search([]) - existing_recurrences)
         self.assertEqual(len(new_recurrences), 1)
         self.assertEqual(len(new_events), self.recurrent_events_count)
-        self.assert_odoo_recurrence(new_recurrences, self.expected_odoo_recurrency_from_outlook)
+        self.assert_koda_recurrence(new_recurrences, self.expected_koda_recurrency_from_outlook)
         for i, e in enumerate(sorted(new_events, key=lambda e: e.id)):
-            self.assert_odoo_event(e, self.expected_odoo_recurrency_events_from_outlook[i])
+            self.assert_koda_event(e, self.expected_koda_recurrency_events_from_outlook[i])
 
     @patch.object(MicrosoftCalendarService, 'get_events')
     def test_create_recurrent_event_from_outlook_attendee_calendar(self, mock_get_events):
@@ -259,9 +259,9 @@ class TestCreateEvents(TestCommon):
         new_recurrences = (self.env["calendar.recurrence"].search([]) - existing_recurrences)
         self.assertEqual(len(new_recurrences), 1)
         self.assertEqual(len(new_events), self.recurrent_events_count)
-        self.assert_odoo_recurrence(new_recurrences, self.expected_odoo_recurrency_from_outlook)
+        self.assert_koda_recurrence(new_recurrences, self.expected_koda_recurrency_from_outlook)
         for i, e in enumerate(sorted(new_events, key=lambda e: e.id)):
-            self.assert_odoo_event(e, self.expected_odoo_recurrency_events_from_outlook[i])
+            self.assert_koda_event(e, self.expected_koda_recurrency_events_from_outlook[i])
 
     @patch.object(MicrosoftCalendarService, 'insert')
     def test_forbid_recurrences_creation_synced_outlook_calendar(self, mock_insert):

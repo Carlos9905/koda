@@ -103,14 +103,14 @@ class TestSaleAvalara(TestAccountAvataxCommon):
             order.action_quotation_send()
         self.assertOrder(order, mocked_response=mocked_response)
 
-    def test_01_odoo_sale_order(self):
+    def test_01_koda_sale_order(self):
         order = self._create_sale_order()
         mocked_response = generate_response(order.order_line)
         with self._capture_request(return_value=mocked_response):
             order.button_external_tax_calculation()
         self.assertOrder(order, mocked_response=mocked_response)
 
-    def test_integration_01_odoo_sale_order(self):
+    def test_integration_01_koda_sale_order(self):
         with self._skip_no_credentials():
             order = self._create_sale_order()
             order.button_external_tax_calculation()

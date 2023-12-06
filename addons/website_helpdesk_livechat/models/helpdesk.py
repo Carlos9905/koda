@@ -70,9 +70,9 @@ class DiscussChannel(models.Model):
                 customer = partners[:1]
                 list_value = key[1:]
                 description = ''
-                odoobot = self.env.ref('base.partner_root')
+                kodabot = self.env.ref('base.partner_root')
                 for message in self.message_ids.sorted(key=lambda r: r.id):
-                    if is_html_empty(message.body) or message.author_id == odoobot:
+                    if is_html_empty(message.body) or message.author_id == kodabot:
                         continue
                     name = message.author_id.name or 'Anonymous'
                     description += '%s: ' % name + '%s\n' % re.sub('<[^>]*>', '', message.body)

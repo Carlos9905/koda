@@ -89,9 +89,9 @@ class FetchmailServer(models.Model):
         self.configuration = """Use the below script with the following command line options with your Mail Transport Agent (MTA)
 koda-mailgate.py --host=HOSTNAME --port=PORT -u %(uid)d -p PASSWORD -d %(dbname)s
 Example configuration for the postfix mta running locally:
-/etc/postfix/virtual_aliases: @youdomain odoo_mailgate@localhost
+/etc/postfix/virtual_aliases: @youdomain koda_mailgate@localhost
 /etc/aliases:
-odoo_mailgate: "|/path/to/koda-mailgate.py --host=localhost -u %(uid)d -p PASSWORD -d %(dbname)s"
+koda_mailgate: "|/path/to/koda-mailgate.py --host=localhost -u %(uid)d -p PASSWORD -d %(dbname)s"
         """ % conf
 
     @api.model_create_multi

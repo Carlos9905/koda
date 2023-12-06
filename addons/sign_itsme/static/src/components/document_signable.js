@@ -85,7 +85,7 @@ function deleteQueryParamFromURL(param) {
 function processErrorMessage(errorMessage) {
     const defaultTitle = false;
     const errorMap = {
-        err_connection_odoo_instance: [
+        err_connection_koda_instance: [
             _t(
                 "The itsme® identification data could not be forwarded to Odoo, the signature could not be saved."
             ),

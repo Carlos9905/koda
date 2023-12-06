@@ -91,9 +91,9 @@ async function autoHideMenu(el, options) {
 
     function _adapt() {
         const wysiwyg = window.$ && $('#wrapwrap').data('wysiwyg');
-        const odooEditor = wysiwyg && wysiwyg.odooEditor;
-        if (odooEditor) {
-            odooEditor.withoutRollback(__adapt);
+        const kodaEditor = wysiwyg && wysiwyg.kodaEditor;
+        if (kodaEditor) {
+            kodaEditor.withoutRollback(__adapt);
             return;
         }
         __adapt();

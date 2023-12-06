@@ -99,10 +99,10 @@ class TestAccountOnlineAccount(AccountOnlineSynchronizationCommon):
         )
 
     @freeze_time('2023-07-25')
-    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
-    def test_retrieve_pending_transactions(self, patched_fetch_odoofin):
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_koda_fin')
+    def test_retrieve_pending_transactions(self, patched_fetch_kodafin):
         self.account_online_link.state = 'connected'
-        patched_fetch_odoofin.side_effect = [{
+        patched_fetch_kodafin.side_effect = [{
             'transactions': [
                 self._create_one_online_transaction(transaction_identifier='ABCD01', date='2023-07-06'),
                 self._create_one_online_transaction(transaction_identifier='ABCD02', date='2023-07-22'),
@@ -200,7 +200,7 @@ class TestAccountOnlineAccount(AccountOnlineSynchronizationCommon):
     @freeze_time('2023-01-01 01:10:15')
     @patch('koda.addons.base.models.ir_cron.ir_cron._trigger')
     @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineAccount._retrieve_transactions', return_value={})
-    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_koda_fin')
     def test_refresh_incomplete_fetching_transactions(self, patched_refresh, patched_transactions, patched_trigger):
         patched_refresh.return_value = {'success': False}
         # Call fetch_transaction and if call result is false, don't call transaction

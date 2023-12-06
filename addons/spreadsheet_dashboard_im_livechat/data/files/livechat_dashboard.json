@@ -552,7 +552,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -586,7 +586,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -854,7 +854,7 @@
         "e0b92164-4451-4c0b-bd28-3bab46fd88de": "im_livechat.menu_reporting_livechat_channel",
         "5b8972f1-db5f-48dd-aeca-c0bc87c7155d": "im_livechat.rating_rating_menu_livechat"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

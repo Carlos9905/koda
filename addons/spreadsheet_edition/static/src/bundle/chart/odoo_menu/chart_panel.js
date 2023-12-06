@@ -13,25 +13,25 @@ const { LineBarPieConfigPanel, ScorecardChartConfigPanel, GaugeChartConfigPanel 
  */
 function patchChartPanelWithMenu(PanelComponent) {
     patch(PanelComponent.prototype, {
-        get odooMenuId() {
+        get kodaMenuId() {
             const menu = this.env.model.getters.getChartOdooMenu(this.props.figureId);
             return menu ? menu.id : undefined;
         },
         /**
-         * @param {number | undefined} odooMenuId
+         * @param {number | undefined} kodaMenuId
          */
-        updateOdooLink(odooMenuId) {
-            if (!odooMenuId) {
+        updateOdooLink(kodaMenuId) {
+            if (!kodaMenuId) {
                 this.env.model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId: this.props.figureId,
-                    odooMenuId: undefined,
+                    kodaMenuId: undefined,
                 });
                 return;
             }
-            const menu = this.env.model.getters.getIrMenu(odooMenuId);
+            const menu = this.env.model.getters.getIrMenu(kodaMenuId);
             this.env.model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                 chartId: this.props.figureId,
-                odooMenuId: menu.xmlid || menu.id,
+                kodaMenuId: menu.xmlid || menu.id,
             });
         },
     });

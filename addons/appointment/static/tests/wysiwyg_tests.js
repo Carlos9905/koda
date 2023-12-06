@@ -14,7 +14,7 @@ let serverData;
 let wysiwyg;
 
 function onMount() {
-    const editor = wysiwyg.odooEditor;
+    const editor = wysiwyg.kodaEditor;
     const editable = editor.editable;
     editor.clean();
     const originalContent = editable.innerHTML;
@@ -24,11 +24,11 @@ function onMount() {
 
 function assertHistorySteps(assert, editable, originalContent) {
     const currentContent = editable.innerHTML;
-    wysiwyg.odooEditor.historyUndo();
-    wysiwyg.odooEditor.clean();
+    wysiwyg.kodaEditor.historyUndo();
+    wysiwyg.kodaEditor.clean();
     assert.strictEqual(editable.innerHTML, originalContent);
-    wysiwyg.odooEditor.historyRedo();
-    wysiwyg.odooEditor.clean();
+    wysiwyg.kodaEditor.historyRedo();
+    wysiwyg.kodaEditor.clean();
     assert.strictEqual(editable.innerHTML, currentContent);
 }
 

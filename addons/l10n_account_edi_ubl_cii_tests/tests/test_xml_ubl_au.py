@@ -109,7 +109,7 @@ class TestUBLAU(TestUBLCommon):
                     <attribute name="filename">{invoice.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/a_nz_out_invoice.xml',
+            expected_file_path='from_koda/a_nz_out_invoice.xml',
         )
         self.assertEqual(attachment.name[-8:], "a_nz.xml")
         self._assert_imported_invoice_from_etree(invoice, attachment)
@@ -167,7 +167,7 @@ class TestUBLAU(TestUBLCommon):
                     <attribute name="filename">{refund.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/a_nz_out_refund.xml',
+            expected_file_path='from_koda/a_nz_out_refund.xml',
         )
         self.assertEqual(attachment.name[-8:], "a_nz.xml")
         self._assert_imported_invoice_from_etree(refund, attachment)
@@ -178,7 +178,7 @@ class TestUBLAU(TestUBLCommon):
 
     def test_import_invoice_xml(self):
         self._assert_imported_invoice_from_file(
-            subfolder='tests/test_files/from_odoo',
+            subfolder='tests/test_files/from_koda',
             filename='a_nz_out_invoice.xml',
             amount_total=2950.2,
             amount_tax=268.2,

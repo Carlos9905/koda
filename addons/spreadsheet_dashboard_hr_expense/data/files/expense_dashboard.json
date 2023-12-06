@@ -679,7 +679,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -911,7 +911,7 @@
         "62c97109-f819-42a7-929d-e76a1204be62": "hr_expense.menu_hr_expense_all_expenses",
         "a84056d3-f845-4555-9bd9-3281b8b1c872": "hr_expense.menu_hr_expense_all_expenses"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {
         "1": {
             "columns": [

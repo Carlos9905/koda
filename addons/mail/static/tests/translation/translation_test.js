@@ -14,7 +14,7 @@ QUnit.test("Toggle display of original/translated version of chatter message", a
     pyEnv["mail.message"].create({
         model: "res.partner",
         body: "Al mal tiempo, buena cara.",
-        author_id: pyEnv.odoobotId,
+        author_id: pyEnv.kodabotId,
         res_id: partnerId,
     });
     const { openFormView } = await start({

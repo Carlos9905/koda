@@ -164,7 +164,7 @@ class AccountGenericTaxReport(models.AbstractModel):
         data = {
             'xmlns': 'no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0',
             'submission_ref': 1,  # Always 1 - no online submission (yet)
-            'odoo_version': release.version,
+            'koda_version': release.version,
             'company_kid': sender_company.vat,
             'company_bronnoysund_number': sender_company.l10n_no_bronnoysund_number,
             'company_name': sender_company.name,

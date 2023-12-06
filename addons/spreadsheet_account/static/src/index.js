@@ -11,7 +11,7 @@ const { cellMenuRegistry, featurePluginRegistry } = spreadsheet.registries;
 const { astToFormula } = spreadsheet;
 const { toString, toBoolean } = spreadsheet.helpers;
 
-featurePluginRegistry.add("odooAccountingAggregates", AccountingPlugin);
+featurePluginRegistry.add("kodaAccountingAggregates", AccountingPlugin);
 
 cellMenuRegistry.add("move_lines_see_records", {
     name: _t("See records"),

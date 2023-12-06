@@ -29,7 +29,7 @@ export class PaymentAdyen extends PaymentInterface {
         return this.pos.getPendingPaymentLine("adyen");
     }
 
-    _handle_odoo_connection_failure(data = {}) {
+    _handle_koda_connection_failure(data = {}) {
         // handle timeout
         var line = this.pending_adyen_line();
         if (line) {
@@ -52,7 +52,7 @@ export class PaymentAdyen extends PaymentInterface {
                 data,
                 operation,
             ])
-            .catch(this._handle_odoo_connection_failure.bind(this));
+            .catch(this._handle_koda_connection_failure.bind(this));
     }
 
     _adyen_get_sale_id() {
@@ -224,7 +224,7 @@ export class PaymentAdyen extends PaymentInterface {
         );
 
         if (!notification) {
-            this._handle_odoo_connection_failure();
+            this._handle_koda_connection_failure();
             return;
         }
         const line = this.pending_adyen_line();

@@ -50,7 +50,7 @@ class SocialAccountTwitter(models.Model):
         return res
 
     def twitter_get_user_by_username(self, username):
-        """Search a user based on his username (e.g: "fpodoo").
+        """Search a user based on his username (e.g: "fpkoda").
 
         Can not search by name, can only get user by their usernames
         See: https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference

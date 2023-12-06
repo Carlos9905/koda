@@ -57,7 +57,7 @@ class TestPayslipValidation(AccountTestInvoicingCommon):
             ]],
         }])
 
-        cls.resource_calendar_38_hours_per_week_odoo = cls.env['resource.calendar'].create([{
+        cls.resource_calendar_38_hours_per_week_koda = cls.env['resource.calendar'].create([{
             'name': "Test Calendar : 38 Hours/Week",
             'company_id': cls.env.company.id,
             'hours_per_day': 7.6,

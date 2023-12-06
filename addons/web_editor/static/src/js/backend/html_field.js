@@ -260,8 +260,8 @@ export class HtmlField extends Component {
      */
     _filterPowerBoxCommands(commands) {
         let selectionIsInForbidenSnippet = false;
-        if (this.wysiwyg && this.wysiwyg.odooEditor) {
-            const selection = this.wysiwyg.odooEditor.document.getSelection();
+        if (this.wysiwyg && this.wysiwyg.kodaEditor) {
+            const selection = this.wysiwyg.kodaEditor.document.getSelection();
             selectionIsInForbidenSnippet = this.wysiwyg.closestElement(
                 selection.anchorNode,
                 'div[data-snippet="s_cover"], div[data-snippet="s_masonry_block"]'
@@ -311,7 +311,7 @@ export class HtmlField extends Component {
             this.wysiwyg.toolbarEl.append($codeviewButtonToolbar[0]);
             $codeviewButtonToolbar.click(this.toggleCodeView.bind(this));
         }
-        this.wysiwyg.odooEditor.addEventListener("historyStep", () =>
+        this.wysiwyg.kodaEditor.addEventListener("historyStep", () =>
             this.props.record.model.bus.trigger("FIELD_IS_DIRTY", this._isDirty())
         );
 
@@ -324,14 +324,14 @@ export class HtmlField extends Component {
         this.state.showCodeView = !this.state.showCodeView;
 
         if (this.wysiwyg) {
-            this.wysiwyg.odooEditor.observerUnactive('toggleCodeView');
+            this.wysiwyg.kodaEditor.observerUnactive('toggleCodeView');
             if (this.state.showCodeView) {
                 this.wysiwyg.$editable.remove();
-                this.wysiwyg.odooEditor.toolbarHide();
+                this.wysiwyg.kodaEditor.toolbarHide();
                 const value = this.wysiwyg.getValue();
                 this.props.record.update({ [this.props.name]: value });
             } else {
-                this.wysiwyg.odooEditor.observerActive('toggleCodeView');
+                this.wysiwyg.kodaEditor.observerActive('toggleCodeView');
             }
         }
         if (!this.state.showCodeView) {
@@ -350,9 +350,9 @@ export class HtmlField extends Component {
             dynamicPlaceholder += defaultValue && defaultValue !== '' ? ` or '''${defaultValue}'''` : '';
             const t = document.createElement('T');
             t.setAttribute('t-out', dynamicPlaceholder);
-            this.wysiwyg.odooEditor.execCommand('insert', t);
+            this.wysiwyg.kodaEditor.execCommand('insert', t);
             // Ensure the dynamic placeholder <t> element is sanitized.
-            this.wysiwyg.odooEditor.sanitize(t);
+            this.wysiwyg.kodaEditor.sanitize(t);
         }
     }
     onDynamicPlaceholderClose() {
@@ -376,8 +376,8 @@ export class HtmlField extends Component {
     async commitChanges({ urgent } = {}) {
         if (this._isDirty() || urgent) {
             let savePendingImagesPromise, toInlinePromise;
-            if (this.wysiwyg && this.wysiwyg.odooEditor) {
-                this.wysiwyg.odooEditor.observerUnactive('commitChanges');
+            if (this.wysiwyg && this.wysiwyg.kodaEditor) {
+                this.wysiwyg.kodaEditor.observerUnactive('commitChanges');
                 savePendingImagesPromise = this.wysiwyg.savePendingImages();
                 if (this.props.isInlineStyle) {
                     // Avoid listening to changes made during the _toInline process.
@@ -390,7 +390,7 @@ export class HtmlField extends Component {
                 if (this.props.isInlineStyle) {
                     await toInlinePromise;
                 }
-                this.wysiwyg.odooEditor.observerActive('commitChanges');
+                this.wysiwyg.kodaEditor.observerActive('commitChanges');
             }
             if (status(this) !== 'destroyed') {
                 await this.updateValue();
@@ -539,19 +539,19 @@ export class HtmlField extends Component {
      */
     async _toInline() {
         const $editable = this.wysiwyg.getEditable();
-        this.wysiwyg.odooEditor.sanitize(this.wysiwyg.odooEditor.editable);
+        this.wysiwyg.kodaEditor.sanitize(this.wysiwyg.kodaEditor.editable);
         const html = this.wysiwyg.getValue();
-        const $odooEditor = $editable.closest('.koda-editor-editable');
+        const $kodaEditor = $editable.closest('.koda-editor-editable');
         // Save correct nodes references.
         // Remove temporarily the class so that css editing will not be converted.
-        $odooEditor.removeClass('koda-editor-editable');
+        $kodaEditor.removeClass('koda-editor-editable');
         $editable.html(html);
 
         await toInline($editable, this.cssRules, this.wysiwyg.$iframe);
-        $odooEditor.addClass('koda-editor-editable');
+        $kodaEditor.addClass('koda-editor-editable');
 
         this.wysiwyg.setValue($editable.html());
-        this.wysiwyg.odooEditor.sanitize(this.wysiwyg.odooEditor.editable);
+        this.wysiwyg.kodaEditor.sanitize(this.wysiwyg.kodaEditor.editable);
     }
     _onAttachmentChange(attachment) {
         // This only needs to happen for the composer for now

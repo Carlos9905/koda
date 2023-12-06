@@ -31,10 +31,10 @@ import {
 corePluginRegistry.add("OdooGlobalFiltersCorePlugin", GlobalFiltersCorePlugin);
 corePluginRegistry.add("OdooPivotCorePlugin", PivotCorePlugin);
 corePluginRegistry.add("OdooListCorePlugin", ListCorePlugin);
-corePluginRegistry.add("odooChartCorePlugin", OdooChartCorePlugin);
+corePluginRegistry.add("kodaChartCorePlugin", OdooChartCorePlugin);
 corePluginRegistry.add("chartOdooMenuPlugin", ChartOdooMenuPlugin);
 
 coreViewsPluginRegistry.add("OdooGlobalFiltersUIPlugin", GlobalFiltersUIPlugin);
 coreViewsPluginRegistry.add("OdooPivotUIPlugin", PivotUIPlugin);
 coreViewsPluginRegistry.add("OdooListUIPlugin", ListUIPlugin);
-coreViewsPluginRegistry.add("odooChartUIPlugin", OdooChartUIPlugin);
+coreViewsPluginRegistry.add("kodaChartUIPlugin", OdooChartUIPlugin);

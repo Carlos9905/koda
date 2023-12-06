@@ -1769,7 +1769,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 },
@@ -2093,7 +2093,7 @@
         "f146ff41-fce3-4f51-a21c-f0903a4e2c96": "purchase.purchase_report",
         "05fe6a6d-5d49-4d24-a916-f89b7199c470": "purchase.purchase_report"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {
         "1": {
             "columns": [

@@ -47,7 +47,7 @@ else:
         _logger.error("Failed to link the TIM SDK dependent library: %s", e.output)
 
 # Import Odoo Timapi Library
-TIMAPI_LIB_PATH = f'{LIB_PATH}/tim/libsix_odoo{LIB_EXTENSION}'
+TIMAPI_LIB_PATH = f'{LIB_PATH}/tim/libsix_koda{LIB_EXTENSION}'
 try:
     TIMAPI = IMPORT_LIBRARY(TIMAPI_LIB_PATH)
 except IOError as e:

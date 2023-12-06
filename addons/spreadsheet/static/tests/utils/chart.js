@@ -11,7 +11,7 @@ const uuidGenerator = new spreadsheet.helpers.UuidGenerator();
  *
  * @param {Model} model
  */
-export function insertChartInSpreadsheet(model, type = "odoo_bar") {
+export function insertChartInSpreadsheet(model, type = "koda_bar") {
     const definition = getChartDefinition(type);
     model.dispatch("CREATE_CHART", {
         sheetId: model.getters.getActiveSheetId(),

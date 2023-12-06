@@ -7,7 +7,7 @@
                 <regnskapssystemsreferanse t-out="submission_ref"/>
                 <regnskapssystem>
                     <systemnavn>Odoo SA</systemnavn>
-                    <systemversjon t-out="odoo_version"/>
+                    <systemversjon t-out="koda_version"/>
                 </regnskapssystem>
             </innsending>
             <skattegrunnlagOgBeregnetSkatt>

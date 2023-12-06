@@ -40,7 +40,7 @@
                 this.factories.set(name, {
                     deps,
                     fn: factory,
-                    ignoreMissingDeps: globalThis.__odooIgnoreMissingDependencies,
+                    ignoreMissingDeps: globalThis.__kodaIgnoreMissingDependencies,
                 });
                 this.addJob(name);
                 this.checkErrorProm ||= Promise.resolve().then(() => {

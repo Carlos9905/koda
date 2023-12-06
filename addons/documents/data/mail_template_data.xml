@@ -40,7 +40,7 @@
                                         <div>
                                             Hello <t t-out="object.owner_id.name or ''">OdooBot</t>,
                                             <br/><br/>
-                                            <t t-out="object.create_uid.name or ''">OdooBot</t> (<t t-out="object.create_uid.email or ''">odoobot@example.com</t>) asks you to provide the following document:
+                                            <t t-out="object.create_uid.name or ''">OdooBot</t> (<t t-out="object.create_uid.email or ''">kodabot@example.com</t>) asks you to provide the following document:
                                             <br/><br/>
                                             <center>
                                                 <div>

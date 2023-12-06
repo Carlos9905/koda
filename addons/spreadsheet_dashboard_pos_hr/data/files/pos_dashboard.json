@@ -1105,7 +1105,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 }
@@ -1296,7 +1296,7 @@
         "d141cc35-0b60-4e91-b736-5c1453fea925": "point_of_sale.menu_report_pos_order_all",
         "615fb94e-8098-456e-9f71-7799b82f04c4": "point_of_sale.menu_report_pos_order_all"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {
         "1": {
             "columns": [

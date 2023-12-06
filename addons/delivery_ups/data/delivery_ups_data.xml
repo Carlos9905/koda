@@ -92,7 +92,7 @@
         <field name="delivery_type">ups</field>
         <field name="ups_package_weight_unit">LBS</field>
         <field name="ups_package_dimension_unit">IN</field>
-        <field name="ups_username">ups_odoo_test</field>
+        <field name="ups_username">ups_koda_test</field>
         <field name="ups_passwd">Zh7~Q-bk/R7CeCxQS}Iw</field>
         <field name="ups_shipper_number">R5R012</field>
         <field name="ups_access_number">ED7F8A752151DEF5</field>

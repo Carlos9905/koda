@@ -26,10 +26,10 @@ QUnit.test("send", async (assert) => {
     await click(".o-mail-ChatWindow-command[title*='Close']");
     await contains(".form-text", { text: "Receive a copy of this conversation." });
     await contains("button[data-action='sendTranscript']:disabled");
-    await insertText("input[placeholder='mail@example.com']", "odoobot@koda.com");
+    await insertText("input[placeholder='mail@example.com']", "kodabot@koda.com");
     await click("button[data-action='sendTranscript']:enabled");
     await contains(".form-text", { text: "The conversation was sent." });
-    assert.verifySteps(["send_transcript - odoobot@koda.com"]);
+    assert.verifySteps(["send_transcript - kodabot@koda.com"]);
 });
 
 QUnit.test("send failed", async () => {
@@ -47,7 +47,7 @@ QUnit.test("send failed", async () => {
     triggerHotkey("Enter");
     await contains(".o-mail-Message-content", { text: "Hello World!" });
     await click(".o-mail-ChatWindow-command[title*='Close']");
-    await insertText("input[placeholder='mail@example.com']", "odoobot@koda.com");
+    await insertText("input[placeholder='mail@example.com']", "kodabot@koda.com");
     await click("button[data-action='sendTranscript']:enabled");
     await contains(".form-text", { text: "An error occurred. Please try again." });
 });

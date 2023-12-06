@@ -64,11 +64,11 @@ export function usePartnerAutocomplete() {
         value = value.trim();
 
         const isVAT = await isTAXNumber(value);
-        let odooSuggestions = [];
+        let kodaSuggestions = [];
         let clearbitSuggestions = [];
         return new Promise((resolve, reject) => {
-            const odooPromise = getOdooSuggestions(value, isVAT).then((suggestions) => {
-                odooSuggestions = suggestions;
+            const kodaPromise = getOdooSuggestions(value, isVAT).then((suggestions) => {
+                kodaSuggestions = suggestions;
             });
 
             // Only get Clearbit suggestions if not a VAT number
@@ -84,27 +84,27 @@ export function usePartnerAutocomplete() {
             const concatResults = () => {
                 // Add Clearbit result with Odoo result (with unique domain)
                 if (clearbitSuggestions && clearbitSuggestions.length) {
-                    const websites = odooSuggestions.map((suggestion) => {
+                    const websites = kodaSuggestions.map((suggestion) => {
                         return suggestion.website;
                     });
                     clearbitSuggestions.forEach((suggestion) => {
                         if (websites.indexOf(suggestion.domain) < 0) {
                             websites.push(suggestion.domain);
-                            odooSuggestions.push(suggestion);
+                            kodaSuggestions.push(suggestion);
                         }
                     });
                 }
 
-                odooSuggestions = odooSuggestions.filter((suggestion) => {
+                kodaSuggestions = kodaSuggestions.filter((suggestion) => {
                     return !suggestion.ignored;
                 });
-                odooSuggestions.forEach((suggestion) => {
+                kodaSuggestions.forEach((suggestion) => {
                     delete suggestion.ignored;
                 });
-                return resolve(odooSuggestions);
+                return resolve(kodaSuggestions);
             };
 
-            whenAll([odooPromise, clearbitPromise]).then(concatResults, concatResults);
+            whenAll([kodaPromise, clearbitPromise]).then(concatResults, concatResults);
         });
     }
 

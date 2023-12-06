@@ -217,7 +217,7 @@ class TestKnowledgeUI(TestKnowledgeUICommon):
             f.seek(0)
             image = base64.b64encode(f.read())
         attachment = self.env['ir.attachment'].create({
-            'name': 'odoo_logo.png',
+            'name': 'koda_logo.png',
             'datas': image,
             'res_model': 'knowledge.cover',
             'res_id': 0,

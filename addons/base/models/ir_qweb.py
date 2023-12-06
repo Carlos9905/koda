@@ -2579,7 +2579,7 @@ class IrQWeb(models.AbstractModel):
                     attributes['src'] = path
 
             if is_asset_bundle:
-                attributes['onerror'] = "__odooAssetError=1"
+                attributes['onerror'] = "__kodaAssetError=1"
 
             return ('script', attributes)
 

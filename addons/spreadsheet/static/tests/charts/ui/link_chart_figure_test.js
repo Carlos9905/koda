@@ -174,8 +174,8 @@ QUnit.module(
                 const fixture = await mountSpreadsheet(model);
                 createBasicChart(model, chartId);
                 await nextTick();
-                const odooMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(odooMenu, undefined, "No menu linked with the chart");
+                const kodaMenu = model.getters.getChartOdooMenu(chartId);
+                assert.equal(kodaMenu, undefined, "No menu linked with the chart");
 
                 const externalRefIcon = fixture.querySelector(".o-chart-external-link");
                 assert.equal(externalRefIcon, null);
@@ -192,7 +192,7 @@ QUnit.module(
                 createBasicChart(model, chartId);
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: 1,
+                    kodaMenuId: 1,
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
                 assert.equal(chartMenu.id, 1, "Odoo menu is linked to chart");
@@ -212,7 +212,7 @@ QUnit.module(
                 createBasicChart(model, chartId);
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: "menu which does not exist",
+                    kodaMenuId: "menu which does not exist",
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
                 assert.equal(chartMenu, undefined, "cannot get a wrong menu");
@@ -231,7 +231,7 @@ QUnit.module(
                 createBasicChart(model, chartId);
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: 1,
+                    kodaMenuId: 1,
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
                 assert.equal(chartMenu.id, 1, "Odoo menu is linked to chart");
@@ -255,7 +255,7 @@ QUnit.module(
                 createBasicChart(model, chartId);
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: 2,
+                    kodaMenuId: 2,
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
                 assert.equal(chartMenu.id, 2, "Odoo menu is linked to chart");
@@ -280,7 +280,7 @@ QUnit.module(
                 createBasicChart(model, chartId);
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: 2,
+                    kodaMenuId: 2,
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
                 assert.equal(chartMenu.id, 2, "Odoo menu is linked to chart");
@@ -328,7 +328,7 @@ QUnit.module(
             createBasicChart(model, chartId);
             model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                 chartId,
-                odooMenuId: "documents_spreadsheet.test.menu2",
+                kodaMenuId: "documents_spreadsheet.test.menu2",
             });
             await nextTick();
 
@@ -358,7 +358,7 @@ QUnit.module(
                 createBasicChart(model, chartId);
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: "documents_spreadsheet.test.menu_without_action",
+                    kodaMenuId: "documents_spreadsheet.test.menu_without_action",
                 });
                 await nextTick();
 

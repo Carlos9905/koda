@@ -2,7 +2,7 @@
 
 const urlParams = new URLSearchParams(window.location.search);
 const collaborationDebug = urlParams.get('collaborationDebug');
-const COLLABORATION_LOCALSTORAGE_KEY = 'odoo_editor_collaboration_debug';
+const COLLABORATION_LOCALSTORAGE_KEY = 'koda_editor_collaboration_debug';
 if (typeof collaborationDebug === 'string') {
     if (collaborationDebug === 'false') {
         localStorage.removeItem(

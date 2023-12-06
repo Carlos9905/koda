@@ -157,7 +157,7 @@ class TestSynchStatementCreation(AccountOnlineSynchronizationCommon):
         self.assertEqual(bank_journal_with_account_usd.bank_account_id, bank_account_2, "Bank Account should not have changed")
         self.assertEqual(bank_journal_with_account_usd.currency_id, self.currency_data['currency'], "Currency should have changed")
 
-    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_odoo_fin')
+    @patch('koda.addons.account_online_synchronization.models.account_online.AccountOnlineLink._fetch_koda_fin')
     def test_fetch_transaction_date_start(self, patched_fetch):
         """ This test verifies that the start_date params used when fetching transaction is correct """
         patched_fetch.return_value = {'transactions': []}
@@ -231,7 +231,7 @@ class TestSynchStatementCreation(AccountOnlineSynchronizationCommon):
                 # this hand-written self.assertRaises() does not roll back self.cr,
                 # which is necessary below to inspect the message being posted
                 try:
-                    test_link_account._fetch_odoo_fin('/testthisurl')
+                    test_link_account._fetch_koda_fin('/testthisurl')
                 except RedirectWarning as exception:
                     self.assertEqual(exception.args[0], 'This kind of things can happen')
                     self.assertEqual(exception.args[1], return_act_url)

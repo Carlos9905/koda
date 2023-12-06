@@ -24,7 +24,7 @@ registries.sidePanelRegistry.add("VersionHistory", {
     Body: VersionHistorySidePanel,
 });
 
-registries.featurePluginRegistry.add("odooVersionHistory", VersionHistoryPlugin);
+registries.featurePluginRegistry.add("kodaVersionHistory", VersionHistoryPlugin);
 
 readonlyAllowedCommands.add("GO_TO_REVISION");
 invalidateEvaluationCommands.add("GO_TO_REVISION");

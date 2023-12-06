@@ -1705,10 +1705,10 @@ options.registry.menu_data = options.Class.extend({
                             "save",
                             [websiteId, {'data': [data]}]
                         ).then(function () {
-                            widget.wysiwyg.odooEditor.observerUnactive();
+                            widget.wysiwyg.kodaEditor.observerUnactive();
                             widget.$target.attr('href', url);
                             $menu.text(name);
-                            widget.wysiwyg.odooEditor.observerActive();
+                            widget.wysiwyg.kodaEditor.observerActive();
                         });
                     },
                 });

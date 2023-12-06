@@ -31,7 +31,7 @@ class TestUpdateEvents(TestCommon):
     # ------ Simple event ------
 
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_odoo_simple_event_without_sync(self, mock_patch):
+    def test_update_koda_simple_event_without_sync(self, mock_patch):
         """
         Update an Odoo event without Outlook sync enabled
         """
@@ -50,7 +50,7 @@ class TestUpdateEvents(TestCommon):
         self.assertEqual(self.simple_event.need_sync_m, False)
 
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_simple_event_from_odoo(self, mock_patch):
+    def test_update_simple_event_from_koda(self, mock_patch):
         """
         Update an Odoo event with Outlook sync enabled
         """
@@ -74,7 +74,7 @@ class TestUpdateEvents(TestCommon):
         self.assertEqual(self.simple_event.name, "my new simple event")
 
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_simple_event_from_odoo_attendee_calendar(self, mock_patch):
+    def test_update_simple_event_from_koda_attendee_calendar(self, mock_patch):
         """
         Update an Odoo event from the attendee calendar.
         """
@@ -100,11 +100,11 @@ class TestUpdateEvents(TestCommon):
     # ------ One event in a recurrence ------
 
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_name_of_one_event_of_recurrence_from_odoo(self, mock_patch):
+    def test_update_name_of_one_event_of_recurrence_from_koda(self, mock_patch):
         """
         Update one Odoo event name from a recurrence from the organizer calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_name = "my specific event in recurrence"
@@ -134,11 +134,11 @@ class TestUpdateEvents(TestCommon):
                 self.assertNotEqual(self.recurrent_events[i].name, new_name)
 
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_start_of_one_event_of_recurrence_from_odoo(self, mock_patch):
+    def test_update_start_of_one_event_of_recurrence_from_koda(self, mock_patch):
         """
         Update one Odoo event start date from a recurrence from the organizer calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_date = datetime(2021, 9, 29, 10, 0, 0)
@@ -181,12 +181,12 @@ class TestUpdateEvents(TestCommon):
                 self.assertEqual(self.recurrent_events[i].follow_recurrence, True)
 
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_start_of_one_event_of_recurrence_from_odoo_with_overlap(self, mock_patch):
+    def test_update_start_of_one_event_of_recurrence_from_koda_with_overlap(self, mock_patch):
         """
         Update one Odoo event start date from a recurrence from the organizer calendar, in order to
         overlap another existing event.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_date = datetime(2021, 9, 27, 10, 0, 0)
@@ -205,11 +205,11 @@ class TestUpdateEvents(TestCommon):
         mock_patch.assert_not_called()
 
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_name_of_one_event_of_recurrence_from_odoo_attendee_calendar(self, mock_patch):
+    def test_update_name_of_one_event_of_recurrence_from_koda_attendee_calendar(self, mock_patch):
         """
         Update one Odoo event name from a recurrence from the atendee calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_name = "my specific event in recurrence"
@@ -239,13 +239,13 @@ class TestUpdateEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'delete')
     @patch.object(MicrosoftCalendarService, 'insert')
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_name_of_one_and_future_events_of_recurrence_from_odoo(
+    def test_update_name_of_one_and_future_events_of_recurrence_from_koda(
         self, mock_patch, mock_insert, mock_delete
     ):
         """
         Update a Odoo event name and future events from a recurrence from the organizer calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_name = "my specific event in recurrence"
@@ -279,13 +279,13 @@ class TestUpdateEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'delete')
     @patch.object(MicrosoftCalendarService, 'insert')
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_start_of_one_and_future_events_of_recurrence_from_odoo(
+    def test_update_start_of_one_and_future_events_of_recurrence_from_koda(
         self, mock_patch, mock_insert, mock_delete
     ):
         """
         Update a Odoo event start date and future events from a recurrence from the organizer calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # When a time-related field is changed, the event does not follow the recurrence scheme anymore.
         # With Outlook, another constraint is that the new start of the event cannot overlap/cross the start
@@ -356,14 +356,14 @@ class TestUpdateEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'delete')
     @patch.object(MicrosoftCalendarService, 'insert')
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_start_of_one_and_future_events_of_recurrence_from_odoo_with_overlap(
+    def test_update_start_of_one_and_future_events_of_recurrence_from_koda_with_overlap(
         self, mock_patch, mock_insert, mock_delete
     ):
         """
         Update a Odoo event start date and future events from a recurrence from the organizer calendar,
         overlapping an existing event.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_date = datetime(2021, 9, 27, 10, 0, 0)
@@ -429,13 +429,13 @@ class TestUpdateEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'delete')
     @patch.object(MicrosoftCalendarService, 'insert')
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_one_and_future_events_of_recurrence_from_odoo_attendee_calendar(
+    def test_update_one_and_future_events_of_recurrence_from_koda_attendee_calendar(
         self, mock_patch, mock_insert, mock_delete
     ):
         """
         Update a Odoo event name and future events from a recurrence from the attendee calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_date = datetime(2021, 9, 29, 10, 0, 0)
@@ -499,13 +499,13 @@ class TestUpdateEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'delete')
     @patch.object(MicrosoftCalendarService, 'insert')
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_name_of_all_events_of_recurrence_from_odoo(
+    def test_update_name_of_all_events_of_recurrence_from_koda(
         self, mock_patch, mock_insert, mock_delete
     ):
         """
         Update all events name from a recurrence from the organizer calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_name = "my specific event in recurrence"
@@ -534,13 +534,13 @@ class TestUpdateEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'delete')
     @patch.object(MicrosoftCalendarService, 'insert')
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_start_of_all_events_of_recurrence_from_odoo(
+    def test_update_start_of_all_events_of_recurrence_from_koda(
         self, mock_patch, mock_insert, mock_delete
     ):
         """
         Update all events start date from a recurrence from the organizer calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_date = datetime(2021, 9, 25, 10, 0, 0)
@@ -598,13 +598,13 @@ class TestUpdateEvents(TestCommon):
     @patch.object(MicrosoftCalendarService, 'delete')
     @patch.object(MicrosoftCalendarService, 'insert')
     @patch.object(MicrosoftCalendarService, 'patch')
-    def test_update_all_events_of_recurrence_from_odoo_attendee_calendar(
+    def test_update_all_events_of_recurrence_from_koda_attendee_calendar(
         self, mock_patch, mock_insert, mock_delete
     ):
         """
         Update all events start date from a recurrence from the attendee calendar.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         new_date = datetime(2021, 9, 25, 10, 0, 0)
@@ -937,7 +937,7 @@ class TestUpdateEvents(TestCommon):
         self.assertEqual(new_recurrences.ms_universal_event_id, "REC456_new")
 
         for i, e in enumerate(sorted(new_events, key=lambda e: e.id)):
-            self.assert_odoo_event(e, {
+            self.assert_koda_event(e, {
                 "start": new_rec_first_event_start_date + timedelta(days=i * self.recurrent_event_interval),
                 "stop": new_rec_first_event_end_date + timedelta(days=i * self.recurrent_event_interval),
                 "microsoft_id": combine_ids(f'REC123_new_{i+1}', f'REC456_new_{i+1}'),
@@ -1056,7 +1056,7 @@ class TestUpdateEvents(TestCommon):
         self.assertEqual(new_recurrences.ms_universal_event_id, "REC456_new")
 
         for i, e in enumerate(sorted(new_events, key=lambda e: e.id)):
-            self.assert_odoo_event(e, {
+            self.assert_koda_event(e, {
                 "start": new_rec_first_event_start_date + timedelta(days=i * self.recurrent_event_interval),
                 "stop": new_rec_first_event_end_date + timedelta(days=i * self.recurrent_event_interval),
                 "microsoft_id": combine_ids(f'REC123_new_{i+1}', f'REC456_new_{i+1}'),

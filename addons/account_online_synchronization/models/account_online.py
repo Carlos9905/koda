@@ -15,7 +15,7 @@ from requests.exceptions import RequestException, Timeout, ConnectionError
 from koda import api, fields, models, modules, tools, _
 from koda.exceptions import UserError, CacheMiss, MissingError, ValidationError, RedirectWarning
 from koda.http import request
-from koda.addons.account_online_synchronization.models.odoofin_auth import OdooFinAuth
+from koda.addons.account_online_synchronization.models.kodafin_auth import OdooFinAuth
 from koda.tools.misc import format_amount, format_date, get_lang
 
 _logger = logging.getLogger(__name__)
@@ -149,7 +149,7 @@ class AccountOnlineAccount(models.Model):
                 'account_data': self.account_data,
                 'fetching_status': self.fetching_status,
             })
-            resp_json = self.account_online_link_id._fetch_odoo_fin('/proxy/v1/refresh', data=data)
+            resp_json = self.account_online_link_id._fetch_koda_fin('/proxy/v1/refresh', data=data)
             if resp_json.get('account_data'):
                 self.account_data = resp_json['account_data']
             currently_fetching = resp_json.get('currently_fetching')
@@ -192,7 +192,7 @@ class AccountOnlineAccount(models.Model):
                 'provider_data': self.account_online_link_id.provider_data,
                 'account_data': self.account_data,
             })
-            resp_json = self.account_online_link_id._fetch_odoo_fin('/proxy/v1/transactions', data=data)
+            resp_json = self.account_online_link_id._fetch_koda_fin('/proxy/v1/transactions', data=data)
             if resp_json.get('balance'):
                 sign = -1 if self.inverse_balance_sign else 1
                 self.balance = sign * resp_json['balance']
@@ -433,7 +433,7 @@ class AccountOnlineLink(models.Model):
             # In case the status is in error, and we aren't in test mode, we commit to save the last connection state and to send the websocket message
             self.env.cr.commit()
 
-    def _handle_odoofin_redirect_exception(self, mode='link'):
+    def _handle_kodafin_redirect_exception(self, mode='link'):
         if mode == 'link':
             return self.action_new_synchronization()
         return self._open_iframe(mode=mode)
@@ -442,7 +442,7 @@ class AccountOnlineLink(models.Model):
     # Generic methods to contact server and handle errors #
     #######################################################
 
-    def _fetch_odoo_fin(self, url, data=None, ignore_status=False):
+    def _fetch_koda_fin(self, url, data=None, ignore_status=False):
         """
         Method used to fetch data from the Odoo Fin proxy.
         :param url: Proxy's URL end point.
@@ -460,7 +460,7 @@ class AccountOnlineLink(models.Model):
         proxy_mode = self.env['ir.config_parameter'].sudo().get_param('account_online_synchronization.proxy_mode') or 'production'
         if not pattern.match(proxy_mode) and not runbot_pattern.match(proxy_mode):
             raise UserError(_('Invalid value for proxy_mode config parameter.'))
-        endpoint_url = 'https://%s.odoofin.com%s' % (proxy_mode, url)
+        endpoint_url = 'https://%s.kodafin.com%s' % (proxy_mode, url)
         if runbot_pattern.match(proxy_mode):
             endpoint_url = '%s%s' % (proxy_mode, url)
         cron = self.env.context.get('cron', False)
@@ -473,7 +473,7 @@ class AccountOnlineLink(models.Model):
         }
         if request:
             # many banking institutions require the end-user IP/user_agent for traceability
-            # of client-initiated actions. It won't be stored on odoofin side.
+            # of client-initiated actions. It won't be stored on kodafin side.
             data['utils']['psu_info'] = {
                 'ip': request.httprequest.remote_addr,
                 'user_agent': request.httprequest.user_agent.string,
@@ -495,7 +495,7 @@ class AccountOnlineLink(models.Model):
         # and inside result in case of success.
         if not resp_json.get('error'):
             result = resp_json.get('result')
-            state = result.get('odoofin_state') or False
+            state = result.get('kodafin_state') or False
             message = result.get('display_message') or False
             subject = message and _('Message') or False
             self._log_information(state=state, message=message, subject=subject)
@@ -513,7 +513,7 @@ class AccountOnlineLink(models.Model):
             # Not considered as error
             if error.get('code') == 101:  # access token expired, not an error
                 self._get_access_token()
-                return self._fetch_odoo_fin(url, data, ignore_status)
+                return self._fetch_koda_fin(url, data, ignore_status)
             elif error.get('code') == 102:  # refresh token expired, not an error
                 self._get_refresh_token()
                 self._get_access_token()
@@ -521,7 +521,7 @@ class AccountOnlineLink(models.Model):
                 # It means that the token is active on the proxy and any further call resulting in an
                 # error would lose the new refresh_token hence blocking the account ad vitam eternam
                 self.env.cr.commit()
-                return self._fetch_odoo_fin(url, data, ignore_status)
+                return self._fetch_koda_fin(url, data, ignore_status)
             elif error.get('code') == 300:  # redirect, not an error
                 raise OdooFinRedirectException(mode=error.get('data', {}).get('mode', 'link'))
             # If we are in the process of deleting the record ignore code 100 (invalid signature), 104 (account deleted)
@@ -532,7 +532,7 @@ class AccountOnlineLink(models.Model):
             error_details = error.get('data')
             subject = error.get('message')
             message = error_details.get('message')
-            state = error_details.get('odoofin_state') or 'error'
+            state = error_details.get('kodafin_state') or 'error'
             ctx = self.env.context.copy()
             ctx['error_reference'] = error_details.get('error_reference')
             ctx['provider_type'] = error_details.get('provider_type')
@@ -549,9 +549,9 @@ class AccountOnlineLink(models.Model):
             if reset_tx:
                 error_reference = self.env.context.get('error_reference')
                 provider = self.env.context.get('provider_type')
-                odoo_help_description = f'''ClientID: {self.client_id}\nInstitution: {self.name}\nError Reference: {error_reference}\nError Message: {message}\n'''
-                odoo_help_summary = f'Bank sync error ref: {error_reference} - Provider: {provider} - Client ID: {self.client_id}'
-                url_params = urllib.parse.urlencode({'stage': 'bank_sync', 'summary': odoo_help_summary, 'description': odoo_help_description[:1500]})
+                koda_help_description = f'''ClientID: {self.client_id}\nInstitution: {self.name}\nError Reference: {error_reference}\nError Message: {message}\n'''
+                koda_help_summary = f'Bank sync error ref: {error_reference} - Provider: {provider} - Client ID: {self.client_id}'
+                url_params = urllib.parse.urlencode({'stage': 'bank_sync', 'summary': koda_help_summary, 'description': koda_help_description[:1500]})
                 url = f'https://www.koda.com/help?{url_params}'
             # if state is disconnected, and new state is error: ignore it
             if state == 'error' and self.state == 'disconnected':
@@ -585,20 +585,20 @@ class AccountOnlineLink(models.Model):
 
     def _get_access_token(self):
         for link in self:
-            resp_json = link._fetch_odoo_fin('/proxy/v1/get_access_token', ignore_status=True)
+            resp_json = link._fetch_koda_fin('/proxy/v1/get_access_token', ignore_status=True)
             link.access_token = resp_json.get('access_token', False)
 
     def _get_refresh_token(self):
         # Use sudo as refresh_token field is not accessible to most user
         for link in self.sudo():
-            resp_json = link._fetch_odoo_fin('/proxy/v1/renew_token', ignore_status=True)
+            resp_json = link._fetch_koda_fin('/proxy/v1/renew_token', ignore_status=True)
             link.refresh_token = resp_json.get('refresh_token', False)
 
     def unlink(self):
         to_unlink = self.env['account.online.link']
         for link in self:
             try:
-                resp_json = link.with_context(delete_sync=True)._fetch_odoo_fin('/proxy/v1/delete_user', data={'provider_data': link.provider_data}, ignore_status=True)  # delete proxy user
+                resp_json = link.with_context(delete_sync=True)._fetch_koda_fin('/proxy/v1/delete_user', data={'provider_data': link.provider_data}, ignore_status=True)  # delete proxy user
                 if resp_json.get('delete', True) is True:
                     to_unlink += link
             except (UserError, RedirectWarning):
@@ -629,7 +629,7 @@ class AccountOnlineLink(models.Model):
             if online_identifier:
                 data['online_identifier'] = online_identifier
 
-            resp_json = self._fetch_odoo_fin('/proxy/v1/accounts', data)
+            resp_json = self._fetch_koda_fin('/proxy/v1/accounts', data)
             for acc in resp_json.get('accounts', []):
                 acc['account_online_link_id'] = self.id
                 currency_id = self.env['res.currency'].with_context(active_test=False).search([('name', '=', acc.pop('currency_code', ''))], limit=1)
@@ -720,8 +720,8 @@ class AccountOnlineLink(models.Model):
                         journal=journal,
                         connection_state_details={
                             'status': 'error',
-                            'error_type': 'odoofin_redirect',
-                            'action': self._handle_odoofin_redirect_exception(mode=redirect_exception.mode),
+                            'error_type': 'kodafin_redirect',
+                            'action': self._handle_kodafin_redirect_exception(mode=redirect_exception.mode),
                         },
                     )
                     raise
@@ -742,7 +742,7 @@ class AccountOnlineLink(models.Model):
             self.env['ir.cron.trigger'].search([('cron_id', '=', cron_record.id), ('call_at', '>', fields.Datetime.now())]).unlink()
             return
         except OdooFinRedirectException as e:
-            return self._handle_odoofin_redirect_exception(mode=e.mode)
+            return self._handle_kodafin_redirect_exception(mode=e.mode)
 
     @api.model
     def _trigger_fetch_transactions_cron(self, execution_time=None):
@@ -760,7 +760,7 @@ class AccountOnlineLink(models.Model):
 
     def _get_consent_expiring_date(self):
         self.ensure_one()
-        resp_json = self._fetch_odoo_fin('/proxy/v1/consent_expiring_date', ignore_status=True)
+        resp_json = self._fetch_koda_fin('/proxy/v1/consent_expiring_date', ignore_status=True)
 
         if resp_json.get('consent_expiring_date'):
             expiring_synchronization_date = fields.Date.to_date(resp_json['consent_expiring_date'])
@@ -805,7 +805,7 @@ class AccountOnlineLink(models.Model):
             'record_access_token': data_access_token,
         }
         try:
-            resp_json = self._fetch_odoo_fin('/proxy/v1/authorize_access', data)
+            resp_json = self._fetch_koda_fin('/proxy/v1/authorize_access', data)
             self.has_unlinked_accounts = resp_json.get('has_unlinked_accounts')
         except UserError:
             # We don't want to throw an error to the customer so ignore error
@@ -885,7 +885,7 @@ class AccountOnlineLink(models.Model):
             'company_id': self.env.company.id,
             'user_id': self.env.user.id
         }
-        resp_json = self._fetch_odoo_fin('/proxy/v1/exchange_token', data=data, ignore_status=True)
+        resp_json = self._fetch_koda_fin('/proxy/v1/exchange_token', data=data, ignore_status=True)
         # Write in sudo mode as those fields are protected from users
         self.sudo().write({
             'client_id': resp_json.get('client_id'),
@@ -949,7 +949,7 @@ class AccountOnlineLink(models.Model):
         country = self.env.company.country_id
         action = {
             'type': 'ir.actions.client',
-            'tag': 'odoo_fin_connector',
+            'tag': 'koda_fin_connector',
             'id': self.id,
             'params': {
                 'proxyMode': proxy_mode,

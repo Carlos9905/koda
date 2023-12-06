@@ -498,7 +498,7 @@ class TestReportEditorUIUnit(HttpCase):
         self.start_tour(self.tour_url, "web_studio.test_table_rendering", login="admin")
         self.assertXMLEqual(self.main_view_document.arch, """
             <t t-name="web_studio.test_report_document" class="">
-               <p>p edited with odooEditor</p>
+               <p>p edited with kodaEditor</p>
                <table class="valid_table">
                  <tbody>
                    <tr>
@@ -509,7 +509,7 @@ class TestReportEditorUIUnit(HttpCase):
                <table class="invalid_table">
                  <t t-foreach="doc.child_ids" t-as="child">
                    <tr>
-                     <td>edited with odooEditor</td>
+                     <td>edited with kodaEditor</td>
                    </tr>
                  </t>
                </table>
@@ -529,7 +529,7 @@ class TestReportEditorUIUnit(HttpCase):
             <t t-name="web_studio.test_report">
                <t t-call="web.html_container">
                  <div class="">
-                   <p><br/>edited with odooEditor</p>
+                   <p><br/>edited with kodaEditor</p>
                  </div>
                  <t t-foreach="docs" t-as="doc">
                    <t t-call="web_studio.test_report_document"/>

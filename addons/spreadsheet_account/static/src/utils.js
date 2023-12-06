@@ -1,9 +1,9 @@
 /** @koda-module **/
-import { getOdooFunctions } from "@spreadsheet/helpers/odoo_functions_helpers";
+import { getOdooFunctions } from "@spreadsheet/helpers/koda_functions_helpers";
 
 /**
- * @typedef {import("@spreadsheet/helpers/odoo_functions_helpers").Token} Token
- * @typedef  {import("@spreadsheet/helpers/odoo_functions_helpers").OdooFunctionDescription} OdooFunctionDescription
+ * @typedef {import("@spreadsheet/helpers/koda_functions_helpers").Token} Token
+ * @typedef  {import("@spreadsheet/helpers/koda_functions_helpers").OdooFunctionDescription} OdooFunctionDescription
  */
 
 /**

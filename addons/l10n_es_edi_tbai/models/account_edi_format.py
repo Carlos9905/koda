@@ -250,7 +250,7 @@ class AccountEdiFormat(models.Model):
     def _l10n_es_tbai_get_header_values(self, invoice):
         return {
             'tbai_version': self.L10N_ES_TBAI_VERSION,
-            'odoo_version': release.version,
+            'koda_version': release.version,
         }
 
     def _l10n_es_tbai_get_subject_values(self, invoice, cancel):

@@ -67,7 +67,7 @@ QUnit.module("freezing spreadsheet", {}, function () {
     });
 
     QUnit.test("koda charts are replaced with an image", async function (assert) {
-        const { model } = await createSpreadsheetWithChart({ type: "odoo_bar" });
+        const { model } = await createSpreadsheetWithChart({ type: "koda_bar" });
         const data = await freezeOdooData(model);
         assert.strictEqual(data.sheets[0].figures.length, 1);
         assert.strictEqual(data.sheets[0].figures[0].tag, "image");

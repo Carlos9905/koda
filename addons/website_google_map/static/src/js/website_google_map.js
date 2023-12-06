@@ -76,9 +76,9 @@ function initialize_map() {
 
     /* eslint-disable no-undef */
     // Create the markers and cluster them on the map
-    if (odoo_partner_data){ /* odoo_partner_data special variable should have been defined in google_map.xml */
-        for (var i = 0; i < odoo_partner_data.counter; i++) {
-            set_marker(odoo_partner_data.partners[i]);
+    if (koda_partner_data){ /* koda_partner_data special variable should have been defined in google_map.xml */
+        for (var i = 0; i < koda_partner_data.counter; i++) {
+            set_marker(koda_partner_data.partners[i]);
         }
         new MarkerClusterer(map, markers, options);
     }

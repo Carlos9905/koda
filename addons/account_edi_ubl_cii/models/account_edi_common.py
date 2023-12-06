@@ -547,7 +547,7 @@ class AccountEdiCommon(models.AbstractModel):
             uom_xml = quantity_node.attrib.get('unitCode')
             if uom_xml:
                 uom_infered_xmlid = [
-                    odoo_xmlid for odoo_xmlid, uom_unece in UOM_TO_UNECE_CODE.items() if uom_unece == uom_xml
+                    koda_xmlid for koda_xmlid, uom_unece in UOM_TO_UNECE_CODE.items() if uom_unece == uom_xml
                 ]
                 if uom_infered_xmlid:
                     product_uom_id = self.env.ref(uom_infered_xmlid[0], raise_if_not_found=False)

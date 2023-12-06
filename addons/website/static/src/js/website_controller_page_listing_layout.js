@@ -24,7 +24,7 @@ publicWidget.registry.WebsiteControllerPageListingLayout = publicWidget.Widget.e
     _onApplyLayoutChange(ev) {
         const wysiwyg = this.options.wysiwyg;
         if (wysiwyg) {
-            wysiwyg.odooEditor.observerUnactive("_onApplyLayoutChange");
+            wysiwyg.kodaEditor.observerUnactive("_onApplyLayoutChange");
         }
         const clickedValue = ev.target.value;
         const isList = clickedValue === "list";
@@ -46,7 +46,7 @@ publicWidget.registry.WebsiteControllerPageListingLayout = publicWidget.Widget.e
         this._toggle_view_mode(el, isList);
 
         if (wysiwyg) {
-            wysiwyg.odooEditor.observerActive("_onApplyLayoutChange");
+            wysiwyg.kodaEditor.observerActive("_onApplyLayoutChange");
         }
     },
 

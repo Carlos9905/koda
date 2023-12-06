@@ -10,7 +10,7 @@ from koda.exceptions import UserError
 from koda.osv import expression
 from koda.release import version
 from koda.tools import DEFAULT_SERVER_DATE_FORMAT as DF
-from koda.tools.misc import formatLang, format_date as odoo_format_date, get_lang
+from koda.tools.misc import formatLang, format_date as koda_format_date, get_lang
 
 
 def group_by_journal(vals_list):
@@ -113,7 +113,7 @@ class account_journal(models.Model):
                 'status': activity['status'],
                 'name': activity['summary'] or activity['act_type_name'],
                 'activity_category': activity['activity_category'],
-                'date': odoo_format_date(self.env, activity['date_deadline'])
+                'date': koda_format_date(self.env, activity['date_deadline'])
             }
             if activity['activity_category'] == 'tax_report' and activity['res_model'] == 'account.move':
                 act['name'] = activity['ref']

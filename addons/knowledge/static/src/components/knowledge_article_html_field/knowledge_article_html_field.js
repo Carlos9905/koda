@@ -40,10 +40,10 @@ export class KnowledgeArticleHtmlField extends HtmlField {
         });
         this.editorStepsCallback = () => this.state.isEmpty = this.wysiwyg.isEmpty();
         onWillUnmount(() => {
-            if (this.wysiwyg?.odooEditor) {
-                this.wysiwyg.odooEditor.removeEventListener("historyStep", this.editorStepsCallback);
-                this.wysiwyg.odooEditor.removeEventListener("onExternalHistorySteps", this.editorStepsCallback);
-                this.wysiwyg.odooEditor.removeEventListener("historyResetFromSteps", this.editorStepsCallback);
+            if (this.wysiwyg?.kodaEditor) {
+                this.wysiwyg.kodaEditor.removeEventListener("historyStep", this.editorStepsCallback);
+                this.wysiwyg.kodaEditor.removeEventListener("onExternalHistorySteps", this.editorStepsCallback);
+                this.wysiwyg.kodaEditor.removeEventListener("historyResetFromSteps", this.editorStepsCallback);
             }
         });
     }
@@ -64,9 +64,9 @@ export class KnowledgeArticleHtmlField extends HtmlField {
             isEmpty: this.wysiwyg.isEmpty(),
             isWysiwygHelperActive: this.isWysiwygHelperActive(this.props)
         });
-        this.wysiwyg.odooEditor.addEventListener("historyStep", this.editorStepsCallback);
-        this.wysiwyg.odooEditor.addEventListener("onExternalHistorySteps", this.editorStepsCallback);
-        this.wysiwyg.odooEditor.addEventListener("historyResetFromSteps", this.editorStepsCallback);
+        this.wysiwyg.kodaEditor.addEventListener("historyStep", this.editorStepsCallback);
+        this.wysiwyg.kodaEditor.addEventListener("onExternalHistorySteps", this.editorStepsCallback);
+        this.wysiwyg.kodaEditor.addEventListener("historyResetFromSteps", this.editorStepsCallback);
     }
 
     /**

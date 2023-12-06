@@ -15,7 +15,7 @@ class AccountMove(models.Model):
         ("partially_matched", "Partially Matched"),
         ("exception", "Exception"),
         ("bills_not_in_gstr2", "Bills Not in GSTR-2"),
-        ("gstr2_bills_not_in_odoo", "GSTR-2 Bills not in Odoo")],
+        ("gstr2_bills_not_in_koda", "GSTR-2 Bills not in Odoo")],
         string="GSTR-2B Reconciliation",
         readonly=True,
         default="pending"
@@ -23,6 +23,6 @@ class AccountMove(models.Model):
 
     def _post(self, soft=True):
         for invoice in self:
-            if invoice.l10n_in_gstr2b_reconciliation_status == "gstr2_bills_not_in_odoo":
+            if invoice.l10n_in_gstr2b_reconciliation_status == "gstr2_bills_not_in_koda":
                 invoice.l10n_in_gstr2b_reconciliation_status = "pending"
         return super(AccountMove, self)._post(soft=soft)

@@ -5,7 +5,7 @@ import { makeEnv, startServices } from "@web/env";
 import { templates } from "@web/core/assets";
 import { _t } from "@web/core/l10n/translation";
 import { Orders } from "@pos_order_tracking_display/app/components/orders/orders";
-import { OdooLogo } from "@point_of_sale/app/generic_components/odoo_logo/odoo_logo";
+import { OdooLogo } from "@point_of_sale/app/generic_components/koda_logo/koda_logo";
 import { useOrderStatusDisplay } from "./order_tracking_display_service";
 class OrderStatusDisplay extends Component {
     static components = { Orders, OdooLogo };

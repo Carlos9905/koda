@@ -19,7 +19,7 @@ class CalendarBooking(models.Model):
 
     def _log_booking_collisions(self):
         super()._log_booking_collisions()
-        odoobot = self.env.ref('base.partner_root')
+        kodabot = self.env.ref('base.partner_root')
         for order, order_lines in self.order_line_id.grouped("order_id").items():
             order._message_log(
                 body=Markup("<p>%s</p>") % escape(
@@ -27,5 +27,5 @@ class CalendarBooking(models.Model):
                 ) % Markup(', ').join([
                     booking._get_html_link() for booking in order_lines.calendar_booking_ids
                 ]),
-                author_id=odoobot.id
+                author_id=kodabot.id
             )

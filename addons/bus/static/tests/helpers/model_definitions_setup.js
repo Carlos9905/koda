@@ -72,7 +72,7 @@ insertRecords("res.partner", [
     {
         active: false,
         display_name: "OdooBot",
-        id: TEST_USER_IDS.odoobotId,
+        id: TEST_USER_IDS.kodabotId,
         im_status: "bot",
         name: "OdooBot",
     },

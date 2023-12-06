@@ -79,7 +79,7 @@ QUnit.test("Message post in chat window of chatter should log a note", async () 
     const messageId = pyEnv["mail.message"].create({
         model: "res.partner",
         body: "A needaction message to have it in messaging menu",
-        author_id: pyEnv.odoobotId,
+        author_id: pyEnv.kodabotId,
         needaction: true,
         needaction_partner_ids: [pyEnv.currentPartnerId],
         res_id: partnerId,
@@ -751,11 +751,11 @@ QUnit.test("chat window should open when receiving a new DM", async () => {
 
 QUnit.test("chat window should not open when receiving a new DM from kodabot", async () => {
     const pyEnv = await startServer();
-    const userId = pyEnv["res.users"].create({ partner_id: pyEnv.odoobotId });
+    const userId = pyEnv["res.users"].create({ partner_id: pyEnv.kodabotId });
     const channelId = pyEnv["discuss.channel"].create({
         channel_member_ids: [
             Command.create({ is_pinned: false, partner_id: pyEnv.currentPartnerId }),
-            Command.create({ partner_id: pyEnv.odoobotId }),
+            Command.create({ partner_id: pyEnv.kodabotId }),
         ],
         channel_type: "chat",
     });

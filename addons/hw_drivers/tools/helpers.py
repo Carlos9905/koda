@@ -89,7 +89,7 @@ def check_certificate():
     Check if the current certificate is up to date or not authenticated
     :return CheckCertificateStatus
     """
-    server = get_odoo_server_url()
+    server = get_koda_server_url()
 
     if not server:
         return {"status": CertificateStatus.ERROR,
@@ -129,7 +129,7 @@ def check_git_branch():
     Check if the local branch is the same than the connected Odoo DB and
     checkout to match it if needed.
     """
-    server = get_odoo_server_url()
+    server = get_koda_server_url()
     if server:
         urllib3.disable_warnings()
         http = urllib3.PoolManager(cert_reqs='CERT_NONE')
@@ -261,7 +261,7 @@ def get_ssid():
     process_grep = subprocess.Popen(['grep', 'ESSID:"'], stdin=process_iwconfig.stdout, stdout=subprocess.PIPE)
     return subprocess.check_output(['sed', 's/.*"\\(.*\\)"/\\1/'], stdin=process_grep.stdout).decode('utf-8').rstrip()
 
-def get_odoo_server_url():
+def get_koda_server_url():
     if platform.system() == 'Linux':
         ap = subprocess.call(['systemctl', 'is-active', '--quiet', 'hostapd']) # if service is active return 0 else inactive
         if not ap:
@@ -335,7 +335,7 @@ def load_certificate():
         Path(get_path_nginx()).joinpath('conf/nginx-cert.key').write_text(result['private_key_pem'])
     time.sleep(3)
     if platform.system() == 'Windows':
-        odoo_restart(0)
+        koda_restart(0)
     elif platform.system() == 'Linux':
         start_nginx_server()
     return True
@@ -344,7 +344,7 @@ def download_iot_handlers(auto=True):
     """
     Get the drivers from the configured Odoo server
     """
-    server = get_odoo_server_url()
+    server = get_koda_server_url()
     if server:
         urllib3.disable_warnings()
         pm = urllib3.PoolManager(cert_reqs='CERT_NONE')
@@ -392,7 +392,7 @@ def list_file_by_os(file_list):
     elif platform_os == 'Windows':
         return [x.name for x in Path(file_list).glob('*[!L].*')]
 
-def odoo_restart(delay):
+def koda_restart(delay):
     IR = IoTRestart(delay)
     IR.start()
 

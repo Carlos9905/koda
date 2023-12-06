@@ -24,7 +24,7 @@ class TestDeleteEvents(TestCommon):
         self.create_events_for_tests()
 
     @patch.object(MicrosoftCalendarService, 'delete')
-    def test_delete_simple_event_from_odoo_organizer_calendar(self, mock_delete):
+    def test_delete_simple_event_from_koda_organizer_calendar(self, mock_delete):
         event_id = self.simple_event.ms_organizer_event_id
 
         self.simple_event.with_user(self.organizer_user).unlink()
@@ -39,7 +39,7 @@ class TestDeleteEvents(TestCommon):
         )
 
     @patch.object(MicrosoftCalendarService, 'delete')
-    def test_delete_simple_event_from_odoo_attendee_calendar(self, mock_delete):
+    def test_delete_simple_event_from_koda_attendee_calendar(self, mock_delete):
         event_id = self.simple_event.ms_organizer_event_id
 
         self.simple_event.with_user(self.attendee_user).unlink()
@@ -54,7 +54,7 @@ class TestDeleteEvents(TestCommon):
         )
 
     @patch.object(MicrosoftCalendarService, 'delete')
-    def test_archive_simple_event_from_odoo_organizer_calendar(self, mock_delete):
+    def test_archive_simple_event_from_koda_organizer_calendar(self, mock_delete):
         event_id = self.simple_event.ms_organizer_event_id
 
         self.simple_event.with_user(self.organizer_user).write({'active': False})
@@ -70,7 +70,7 @@ class TestDeleteEvents(TestCommon):
         )
 
     @patch.object(MicrosoftCalendarService, 'delete')
-    def test_archive_simple_event_from_odoo_attendee_calendar(self, mock_delete):
+    def test_archive_simple_event_from_koda_attendee_calendar(self, mock_delete):
         event_id = self.simple_event.ms_organizer_event_id
 
         self.simple_event.with_user(self.attendee_user).write({'active': False})
@@ -137,7 +137,7 @@ class TestDeleteEvents(TestCommon):
         """
 
     @patch.object(MicrosoftCalendarService, 'delete')
-    def test_delete_one_event_from_recurrence_from_odoo_calendar(self, mock_delete):
+    def test_delete_one_event_from_recurrence_from_koda_calendar(self, mock_delete):
         # arrange
         idx = 2
         event_id = self.recurrent_events[idx].ms_organizer_event_id
@@ -156,7 +156,7 @@ class TestDeleteEvents(TestCommon):
         )
 
     @patch.object(MicrosoftCalendarService, 'delete')
-    def test_delete_first_event_from_recurrence_from_odoo_calendar(self, mock_delete):
+    def test_delete_first_event_from_recurrence_from_koda_calendar(self, mock_delete):
 
         # arrange
         idx = 0
@@ -227,7 +227,7 @@ class TestDeleteEvents(TestCommon):
 
     @patch.object(MicrosoftCalendarService, 'get_events')
     def test_delete_one_event_and_future_from_recurrence_from_outlook_calendar(self, mock_get_events):
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         idx = range(4, self.recurrent_events_count)
@@ -278,11 +278,11 @@ class TestDeleteEvents(TestCommon):
         """
 
     @patch.object(MicrosoftCalendarService, 'delete')
-    def test_delete_single_event_from_recurrence_from_odoo_calendar(self, mock_delete):
+    def test_delete_single_event_from_recurrence_from_koda_calendar(self, mock_delete):
         """
         Deletes the base_event of a recurrence and checks if the event was archived and the recurrence was updated.
         """
-        if not self.sync_odoo_recurrences_with_outlook_feature():
+        if not self.sync_koda_recurrences_with_outlook_feature():
             return
         # arrange
         idx = 0

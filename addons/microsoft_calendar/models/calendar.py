@@ -276,7 +276,7 @@ class Meeting(models.Model):
 
 
     @api.model
-    def _microsoft_to_odoo_values(self, microsoft_event, default_reminders=(), default_values=None, with_ids=False):
+    def _microsoft_to_koda_values(self, microsoft_event, default_reminders=(), default_values=None, with_ids=False):
         if microsoft_event.is_cancelled():
             return {'active': False}
 
@@ -286,7 +286,7 @@ class Meeting(models.Model):
             'confidential': 'confidential',
         }
 
-        commands_attendee, commands_partner = self._odoo_attendee_commands_m(microsoft_event)
+        commands_attendee, commands_partner = self._koda_attendee_commands_m(microsoft_event)
         timeZone_start = pytz.timezone(microsoft_event.start.get('timeZone'))
         timeZone_stop = pytz.timezone(microsoft_event.end.get('timeZone'))
         start = parse(microsoft_event.start.get('dateTime')).astimezone(timeZone_start).replace(tzinfo=None)
@@ -333,14 +333,14 @@ class Meeting(models.Model):
         if microsoft_event.is_recurrent():
             values['microsoft_recurrence_master_id'] = microsoft_event.seriesMasterId
 
-        alarm_commands = self._odoo_reminders_commands_m(microsoft_event)
+        alarm_commands = self._koda_reminders_commands_m(microsoft_event)
         if alarm_commands:
             values['alarm_ids'] = alarm_commands
 
         return values
 
     @api.model
-    def _microsoft_to_odoo_recurrence_values(self, microsoft_event, default_values=None):
+    def _microsoft_to_koda_recurrence_values(self, microsoft_event, default_values=None):
         timeZone_start = pytz.timezone(microsoft_event.start.get('timeZone'))
         timeZone_stop = pytz.timezone(microsoft_event.end.get('timeZone'))
         start = parse(microsoft_event.start.get('dateTime')).astimezone(timeZone_start).replace(tzinfo=None)
@@ -358,7 +358,7 @@ class Meeting(models.Model):
         return values
 
     @api.model
-    def _odoo_attendee_commands_m(self, microsoft_event):
+    def _koda_attendee_commands_m(self, microsoft_event):
         commands_attendee = []
         commands_partner = []
 
@@ -369,9 +369,9 @@ class Meeting(models.Model):
             if email_normalize(a.get('emailAddress').get('address'))
         ]
         existing_attendees = self.env['calendar.attendee']
-        if microsoft_event.match_with_odoo_events(self.env):
+        if microsoft_event.match_with_koda_events(self.env):
             existing_attendees = self.env['calendar.attendee'].search([
-                ('event_id', '=', microsoft_event.odoo_id(self.env)),
+                ('event_id', '=', microsoft_event.koda_id(self.env)),
                 ('email', 'in', emails)])
         elif self.env.user.partner_id.email not in emails:
             commands_attendee += [(0, 0, {'state': 'accepted', 'partner_id': self.env.user.partner_id.id})]
@@ -396,18 +396,18 @@ class Meeting(models.Model):
                 commands_partner += [(4, partner.id)]
                 if attendee_info.get('emailAddress').get('name') and not partner.name:
                     partner.name = attendee_info.get('emailAddress').get('name')
-        for odoo_attendee in attendees_by_emails.values():
+        for koda_attendee in attendees_by_emails.values():
             # Remove old attendees
-            if odoo_attendee.email not in emails:
-                commands_attendee += [(2, odoo_attendee.id)]
-                commands_partner += [(3, odoo_attendee.partner_id.id)]
+            if koda_attendee.email not in emails:
+                commands_attendee += [(2, koda_attendee.id)]
+                commands_partner += [(3, koda_attendee.partner_id.id)]
         return commands_attendee, commands_partner
 
     @api.model
-    def _odoo_reminders_commands_m(self, microsoft_event):
+    def _koda_reminders_commands_m(self, microsoft_event):
         reminders_commands = []
         if microsoft_event.isReminderOn:
-            event_id = self.browse(microsoft_event.odoo_id(self.env))
+            event_id = self.browse(microsoft_event.koda_id(self.env))
             alarm_type_label = _("Notification")
 
             minutes = microsoft_event.reminderMinutesBeforeStart or 0
@@ -453,7 +453,7 @@ class Meeting(models.Model):
                 reminders_commands += [(3, a.id) for a in alarm_to_rm]
 
         else:
-            event_id = self.browse(microsoft_event.odoo_id(self.env))
+            event_id = self.browse(microsoft_event.koda_id(self.env))
             alarm_to_rm = event_id.alarm_ids.filtered(lambda a: a.alarm_type == 'notification')
             if alarm_to_rm:
                 reminders_commands = [(3, a.id) for a in alarm_to_rm]

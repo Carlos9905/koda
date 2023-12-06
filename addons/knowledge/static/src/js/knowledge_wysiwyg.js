@@ -24,7 +24,7 @@ export class KnowledgeWysiwyg extends Wysiwyg {
 
     setup() {
         super.setup(...arguments);
-        useBus(this.env.bus, 'KNOWLEDGE_WYSIWYG:HISTORY_STEP', () => this.odooEditor.historyStep());
+        useBus(this.env.bus, 'KNOWLEDGE_WYSIWYG:HISTORY_STEP', () => this.kodaEditor.historyStep());
         this.knowledgeCommentsToolbarBtnRef = useRef('knowledgeCommentsToolbarBtn');
     }
 
@@ -60,7 +60,7 @@ export class KnowledgeWysiwyg extends Wysiwyg {
      */
     async startEdition() {
         await super.startEdition(...arguments);
-        this.odooEditor.options.renderingClasses = [...this.odooEditor.options.renderingClasses, 'focused-comment'];
+        this.kodaEditor.options.renderingClasses = [...this.kodaEditor.options.renderingClasses, 'focused-comment'];
     }
 
     /**

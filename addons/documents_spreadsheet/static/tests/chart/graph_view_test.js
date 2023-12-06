@@ -33,7 +33,7 @@ QUnit.module("documents_spreadsheet > graph view", { beforeEach }, () => {
         const sheetId = model.getters.getActiveSheetId();
         assert.strictEqual(model.getters.getChartIds(sheetId).length, 1);
         const chartId = model.getters.getChartIds(sheetId)[0];
-        assert.strictEqual(model.getters.getChart(chartId).type, "odoo_pie");
+        assert.strictEqual(model.getters.getChart(chartId).type, "koda_pie");
     });
 
     QUnit.test("The chart order is the selected one when selecting desc", async (assert) => {

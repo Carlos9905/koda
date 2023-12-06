@@ -250,7 +250,7 @@ class Users(models.Model):
 
     def _init_messaging(self):
         self.ensure_one()
-        odoobot = self.env.ref('base.partner_root')
+        kodabot = self.env.ref('base.partner_root')
         values = {
             'companyName': self.env.company.name,
             'currentGuest': False,
@@ -263,7 +263,7 @@ class Users(models.Model):
             'menu_id': self.env['ir.model.data']._xmlid_to_res_id('mail.menu_root_discuss'),
             'mt_comment_id': self.env['ir.model.data']._xmlid_to_res_id('mail.mt_comment'),
             'needaction_inbox_counter': self.partner_id._get_needaction_count(),
-            'odoobot': odoobot.sudo().mail_partner_format().get(odoobot),
+            'kodabot': kodabot.sudo().mail_partner_format().get(kodabot),
             'shortcodes': self.env['mail.shortcode'].sudo().search_read([], ['source', 'substitution']),
             'starred_counter': self.env['mail.message'].search_count([('starred_partner_ids', 'in', self.partner_id.ids)]),
         }

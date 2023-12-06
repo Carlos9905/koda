@@ -88,7 +88,7 @@ class RecurrenceRule(models.Model):
         super()._write_from_google(gevent, vals)
 
         base_event_time_fields = ['start', 'stop', 'allday']
-        new_event_values = self.env["calendar.event"]._odoo_values(gevent)
+        new_event_values = self.env["calendar.event"]._koda_values(gevent)
         # We update the attendee status for all events in the recurrence
         google_attendees = gevent.attendees or []
         emails = [a.get('email') for a in google_attendees]
@@ -111,10 +111,10 @@ class RecurrenceRule(models.Model):
                 if attendee[2].get('displayName') and not partner.name:
                     partner.name = attendee[2].get('displayName')
 
-        for odoo_attendee_email in set(existing_attendees.mapped('email')):
+        for koda_attendee_email in set(existing_attendees.mapped('email')):
             # Remove old attendees. Sometimes, several partners have the same email.
-            if email_normalize(odoo_attendee_email) not in emails:
-                attendees = existing_attendees.exists().filtered(lambda att: att.email == email_normalize(odoo_attendee_email))
+            if email_normalize(koda_attendee_email) not in emails:
+                attendees = existing_attendees.exists().filtered(lambda att: att.email == email_normalize(koda_attendee_email))
                 self.calendar_event_ids.write({'need_sync': False, 'partner_ids': [Command.unlink(att.partner_id.id) for att in attendees]})
 
         # Update the recurrence values
@@ -164,7 +164,7 @@ class RecurrenceRule(models.Model):
         attendee_values = {}
         for gevent, vals in zip(gevents, vals_list):
             base_values = dict(
-                self.env['calendar.event']._odoo_values(gevent),  # FIXME default reminders
+                self.env['calendar.event']._koda_values(gevent),  # FIXME default reminders
                 need_sync=False,
             )
             # If we convert a single event into a recurrency on Google, we should reuse this event on Odoo
@@ -198,7 +198,7 @@ class RecurrenceRule(models.Model):
         return [('calendar_event_ids.user_id', '=', self.env.user.id), ('rrule', '!=', False)]
 
     @api.model
-    def _odoo_values(self, google_recurrence, default_reminders=()):
+    def _koda_values(self, google_recurrence, default_reminders=()):
         return {
             'rrule': google_recurrence.rrule,
             'google_id': google_recurrence.id,
@@ -226,7 +226,7 @@ class RecurrenceRule(models.Model):
         property_location = 'shared' if event.user_id else 'private'
         values['extendedProperties'] = {
             property_location: {
-                '%s_odoo_id' % self.env.cr.dbname: self.id,
+                '%s_koda_id' % self.env.cr.dbname: self.id,
             },
         }
         return values

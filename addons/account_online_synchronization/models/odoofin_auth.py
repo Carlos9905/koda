@@ -45,9 +45,9 @@ class OdooFinAuth(requests.auth.AuthBase):
         h = hmac.new(base64.b64decode(self.refresh_token), message.encode('utf-8'), digestmod=hashlib.sha256)
 
         request.headers.update({
-            'odoofin-client-id': self.client_id,
-            'odoofin-access-token': self.access_token,
-            'odoofin-signature': base64.b64encode(h.digest()),
-            'odoofin-timestamp': msg_timestamp,
+            'kodafin-client-id': self.client_id,
+            'kodafin-access-token': self.access_token,
+            'kodafin-signature': base64.b64encode(h.digest()),
+            'kodafin-timestamp': msg_timestamp,
         })
         return request

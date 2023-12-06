@@ -20,7 +20,7 @@ export function useSpreadsheetLocales() {
 export function useSpreadsheetCurrencies() {
     const orm = useService("orm");
     async function loadCurrencies() {
-        const odooCurrencies = await orm.searchRead(
+        const kodaCurrencies = await orm.searchRead(
             "res.currency", // model
             [], // domain
             ["symbol", "full_name", "position", "name", "decimal_places"], // fields
@@ -30,7 +30,7 @@ export function useSpreadsheetCurrencies() {
                 context: { active_test: false },
             }
         );
-        return odooCurrencies.map((currency) => {
+        return kodaCurrencies.map((currency) => {
             return {
                 code: currency.name,
                 symbol: currency.symbol,

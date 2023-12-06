@@ -1091,7 +1091,7 @@
             </p>
             <div class="o_knowledge_behavior_anchor o_knowledge_behavior_type_file" data-oe-protected="true">
                 <div class="o_knowledge_file_image" data-prop-name="fileImage">
-                    <a href="https://odoocdn.com/openerp_website/static/src/img/assets/png/odoo_logo.png?download=true" title="logo.jpg" data-mimetype="image/jpeg" class="o_image"></a>
+                    <a href="https://kodacdn.com/openerp_website/static/src/img/assets/png/koda_logo.png?download=true" title="logo.jpg" data-mimetype="image/jpeg" class="o_image"></a>
                 </div>
                 <div class="o_knowledge_file_description">
                     <div class="o_knowledge_file_name" data-prop-name="fileName">Odoo Logo</div>
@@ -2177,7 +2177,7 @@
             <div class="container o_text_columns">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1><img src="/knowledge/static/src/img/odoo_experience.jpg"
+                        <h1><img src="/knowledge/static/src/img/koda_experience.jpg"
                                 class="img img-fluid o_we_custom_image"/><br/></h1>
                     </div>
                     <div class="col-lg-6">
@@ -2207,7 +2207,7 @@
                         <p>We already cannot wait for the next one🏃</p>
                     </div>
                     <div class="col-lg-6">
-                        <p><img src="/knowledge/static/src/img/odoo_run.jpg"
+                        <p><img src="/knowledge/static/src/img/koda_run.jpg"
                                 class="img img-fluid o_we_custom_image rounded-circle" style="width: 50%;"/><br/></p>
                     </div>
                 </div>

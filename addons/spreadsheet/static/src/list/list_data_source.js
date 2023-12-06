@@ -1,6 +1,6 @@
 /** @koda-module */
 
-import { OdooViewsDataSource } from "@spreadsheet/data_sources/odoo_views_data_source";
+import { OdooViewsDataSource } from "@spreadsheet/data_sources/koda_views_data_source";
 import { LoadingDataError } from "@spreadsheet/o_spreadsheet/errors";
 import { _t } from "@web/core/l10n/translation";
 import { sprintf } from "@web/core/utils/strings";

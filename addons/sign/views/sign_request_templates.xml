@@ -71,8 +71,8 @@
                             <div class="o_logo d-flex">
                                 <a href="/"><img t-attf-src="/logo.png?company={{ company_id }}" alt="Logo"/></a>
                             </div>
-                            <div class="o_odoo">
-                                <a href="https://www.koda.com/app/sign?utm_source=db&amp;utm_medium=sign"><img src="/sign/static/img/odoo_signed.png" alt="Signed"/></a>
+                            <div class="o_koda">
+                                <a href="https://www.koda.com/app/sign?utm_source=db&amp;utm_medium=sign"><img src="/sign/static/img/koda_signed.png" alt="Signed"/></a>
                             </div>
                         </div>
                         <div class="justify-content-end d-flex">

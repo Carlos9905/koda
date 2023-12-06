@@ -1417,7 +1417,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 },
@@ -1821,7 +1821,7 @@
         "9cd65dd7-0333-4fa3-bc21-fa53de78dfbf": "crm.crm_opportunity_report_menu_lead",
         "8c6ddf6e-2c14-4e32-9499-1b3608f05d1b": "crm.crm_opportunity_report_menu_lead"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

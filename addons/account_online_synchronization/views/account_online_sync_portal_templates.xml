@@ -10,7 +10,7 @@
             </div>
             <div class="row justify-content-center mb-4">
                 <div class="col-auto">
-                    <img alt="Odoo" src="/web/static/img/odoo_logo.svg" style="height: 5em;" class="align-baseline w-auto"/>
+                    <img alt="Odoo" src="/web/static/img/koda_logo.svg" style="height: 5em;" class="align-baseline w-auto"/>
                 </div>
             </div>
             <div class="js_reconnect">

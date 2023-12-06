@@ -81,7 +81,7 @@ class TestSyncOdoo2Microsoft(TransactionCase):
         })
 
         user.with_user(user).restart_microsoft_synchronization()
-        event.with_user(user)._sync_odoo2microsoft(self.microsoft_service)
+        event.with_user(user)._sync_koda2microsoft(self.microsoft_service)
         microsoft_guid = self.env['ir.config_parameter'].sudo().get_param('microsoft_calendar.microsoft_guid', False)
         self.assertMicrosoftEventPatched(event.microsoft_id, {
             'id': event.microsoft_id,
@@ -99,10 +99,10 @@ class TestSyncOdoo2Microsoft(TransactionCase):
             'organizer': {'emailAddress': {'address': 'jean-luc@opoo.com', 'name': 'Test user Calendar'}},
             'reminderMinutesBeforeStart': 0,
             'singleValueExtendedProperties': [{
-                    'id': 'String {%s} Name odoo_id' % microsoft_guid,
+                    'id': 'String {%s} Name koda_id' % microsoft_guid,
                     'value': str(event.id),
                 }, {
-                    'id': 'String {%s} Name owner_odoo_id' % microsoft_guid,
+                    'id': 'String {%s} Name owner_koda_id' % microsoft_guid,
                     'value': str(user.id),
                 }
             ]

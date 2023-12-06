@@ -128,13 +128,13 @@ class CalendarBooking(models.Model):
         """ Logs an error message on reference invoice listing the bookings that were not
             successfully made into meetings when confirming / paying the invoice.
         """
-        odoobot = self.env.ref('base.partner_root')
+        kodabot = self.env.ref('base.partner_root')
         for booking in self.filtered("account_move_id"):
             booking.account_move_id._message_log(
                 body=Markup("<p>%s</p>") % escape(
                     _("The following booking was not confirmed due to insufficient availability or configuration changes: %s")
                 ) % booking._get_html_link(),
-                author_id=odoobot.id
+                author_id=kodabot.id
             )
 
     def _make_event_from_paid_booking(self):

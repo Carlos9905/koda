@@ -14,9 +14,9 @@ export class LinkPopoverWidget {
             return null;
         }
         const popoverWidget = new this(params);
-        params.wysiwyg?.odooEditor.observerUnactive('LinkPopoverWidget');
+        params.wysiwyg?.kodaEditor.observerUnactive('LinkPopoverWidget');
         popoverWidget.start();
-        params.wysiwyg?.odooEditor.observerActive('LinkPopoverWidget');
+        params.wysiwyg?.kodaEditor.observerActive('LinkPopoverWidget');
         return popoverWidget;
     };
 
@@ -100,19 +100,19 @@ export class LinkPopoverWidget {
             container: this.container,
         })
         .on('show.bs.popover.link_popover', () => {
-            this.wysiwyg.odooEditor.observerUnactive('show.bs.popover');
+            this.wysiwyg.kodaEditor.observerUnactive('show.bs.popover');
             this._loadAsyncLinkPreview();
             popoverShown = true;
         })
         .on('inserted.bs.popover', () => {
-            this.wysiwyg.odooEditor.observerActive('show.bs.popover');
+            this.wysiwyg.kodaEditor.observerActive('show.bs.popover');
         })
         .on('hide.bs.popover.link_popover', () => {
-            this.wysiwyg.odooEditor.observerUnactive('hide.bs.popover');
+            this.wysiwyg.kodaEditor.observerUnactive('hide.bs.popover');
             popoverShown = false;
         })
         .on('hidden.bs.popover.link_popover', () => {
-            this.wysiwyg.odooEditor.observerActive('hide.bs.popover');
+            this.wysiwyg.kodaEditor.observerActive('hide.bs.popover');
             for (const tooltip of tooltips) {
                 tooltip.hide();
             }
@@ -153,8 +153,8 @@ export class LinkPopoverWidget {
             }
         }
         $(document).on('mouseup.link_popover', onClickDocument);
-        if (document !== this.wysiwyg.odooEditor.document) {
-            $(this.wysiwyg.odooEditor.document).on('mouseup.link_popover', onClickDocument);
+        if (document !== this.wysiwyg.kodaEditor.document) {
+            $(this.wysiwyg.kodaEditor.document).on('mouseup.link_popover', onClickDocument);
         }
 
         // Update popover's content and position upon changes
@@ -185,7 +185,7 @@ export class LinkPopoverWidget {
         // mode so this should not be a huge problem.
         this.$target.off('.link_popover');
         $(document).off('.link_popover');
-        $(this.wysiwyg.odooEditor.document).off('.link_popover');
+        $(this.wysiwyg.kodaEditor.document).off('.link_popover');
         this.$target.popover('dispose');
         this._observer.disconnect();
     }

@@ -27,16 +27,16 @@ patch(Wysiwyg.prototype, {
         const res = await super.startEdition(...arguments);
         // Only enable mention list in full chatter mode web editor
         if (this.inDiscuss) {
-            this.odooEditor.document.addEventListener("keydown", this.triggerMentionList, true);
-            this.odooEditor.document.addEventListener("click", this.triggerMentionList, true);
+            this.kodaEditor.document.addEventListener("keydown", this.triggerMentionList, true);
+            this.kodaEditor.document.addEventListener("click", this.triggerMentionList, true);
         }
         return res;
     },
     destroy() {
         super.destroy();
-        if (this.inDiscuss && this.odooEditor) {
-            this.odooEditor.document.removeEventListener("keydown", this.triggerMentionList, true);
-            this.odooEditor.document.removeEventListener("click", this.triggerMentionList, true);
+        if (this.inDiscuss && this.kodaEditor) {
+            this.kodaEditor.document.removeEventListener("keydown", this.triggerMentionList, true);
+            this.kodaEditor.document.removeEventListener("click", this.triggerMentionList, true);
         }
     },
     async triggerMentionList(ev) {
@@ -45,7 +45,7 @@ patch(Wysiwyg.prototype, {
         }
         // Let event be handled by bubbling handlers and other handlers from koda Editor first.
         await new Promise((resolve) => setTimeout(resolve, 0));
-        const selection = this.odooEditor.document.getSelection();
+        const selection = this.kodaEditor.document.getSelection();
         if (
             this.isSelectionInEditable() &&
             selection.isCollapsed &&
@@ -53,8 +53,8 @@ patch(Wysiwyg.prototype, {
             !this.mentionList.isOpen &&
             (ev.key === "@" || ev.key === "#")
         ) {
-            this.stepBeforeMention = this.odooEditor._historySteps.length - 2;
-            const closest = closestBlock(this.odooEditor.document.getSelection().anchorNode);
+            this.stepBeforeMention = this.kodaEditor._historySteps.length - 2;
+            const closest = closestBlock(this.kodaEditor.document.getSelection().anchorNode);
             this.mentionList.open(closest, {
                 type: ev.key === "@" ? "partner" : "channel",
                 onSelect: this.selectMention.bind(this),
@@ -77,10 +77,10 @@ patch(Wysiwyg.prototype, {
         const nameNode = document.createTextNode(`${option.partner ? "@" : "#"}${option.label}`);
         const space = document.createTextNode("\u00A0");
         mentionBlock.appendChild(nameNode);
-        this.odooEditor.historyRevertUntil(this.stepBeforeMention);
-        this.odooEditor.execCommand("insert", mentionBlock);
-        this.odooEditor.execCommand("insert", space);
+        this.kodaEditor.historyRevertUntil(this.stepBeforeMention);
+        this.kodaEditor.execCommand("insert", mentionBlock);
+        this.kodaEditor.execCommand("insert", space);
         setCursorEnd(space, false);
-        this.odooEditor.historyStep();
+        this.kodaEditor.historyStep();
     },
 });

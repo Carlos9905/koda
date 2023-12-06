@@ -32,7 +32,7 @@ export class MassMailingWysiwyg extends Wysiwyg {
         });
         if (this.snippetsMenu.folded) {
             // Hide toolbar and avoid it being re-displayed after getDeepRange.
-            this.odooEditor.document.getSelection().collapseToEnd();
+            this.kodaEditor.document.getSelection().collapseToEnd();
         }
     }
 
@@ -59,8 +59,8 @@ export class MassMailingWysiwyg extends Wysiwyg {
                 this._configureToolbar({ snippets: false });
                 this._updateEditorUI();
                 this.setCSSVariables(this.toolbarEl);
-                this.odooEditor.setupToolbar(this.toolbarEl);
-                if (this.odooEditor.isMobile) {
+                this.kodaEditor.setupToolbar(this.toolbarEl);
+                if (this.kodaEditor.isMobile) {
                     document.body.querySelector('.o_mail_body').prepend(this.toolbarEl);
                 } else {
                     document.body.append(this.toolbarEl);
@@ -69,13 +69,13 @@ export class MassMailingWysiwyg extends Wysiwyg {
                 this.toolbarEl = this.floatingToolbarEl;
             }
             this.toolbarEl.classList.remove('d-none');
-            this.odooEditor.autohideToolbar = true;
-            this.odooEditor.toolbarHide();
+            this.kodaEditor.autohideToolbar = true;
+            this.kodaEditor.toolbarHide();
         } else {
             this.snippetsMenu.setFolded(false);
             this.toolbarEl = this.snippetsMenuToolbarEl;
 
-            this.odooEditor.autohideToolbar = false;
+            this.kodaEditor.autohideToolbar = false;
             if (this.floatingToolbarEl) {
                 this.floatingToolbarEl.classList.add('d-none');
             }
@@ -90,7 +90,7 @@ export class MassMailingWysiwyg extends Wysiwyg {
         // Opening the dialog in the outer document does not trigger the selectionChange
         // (that would normally hide the toolbar) in the iframe.
         if (this.snippetsMenu.folded) {
-            this.odooEditor.toolbarHide();
+            this.kodaEditor.toolbarHide();
         }
     }
 
@@ -135,7 +135,7 @@ export class MassMailingWysiwyg extends Wysiwyg {
                 if (superIsDisabled && superIsDisabled()) {
                     return true;
                 } else {
-                    const selection = this.odooEditor.document.getSelection();
+                    const selection = this.kodaEditor.document.getSelection();
                     const range = selection.rangeCount && selection.getRangeAt(0);
                     return !!range && !!closestElement(range.startContainer, '[style*=background-image]');
                 }
@@ -150,7 +150,7 @@ export class MassMailingWysiwyg extends Wysiwyg {
         super._updateEditorUI(...arguments);
         // Hide the create-link button if the selection is within a
         // background-image.
-        const selection = this.odooEditor.document.getSelection();
+        const selection = this.kodaEditor.document.getSelection();
         if (!selection) return;
         const range = selection.rangeCount && selection.getRangeAt(0);
         const isWithinBackgroundImage = !!range && !!closestElement(range.startContainer, '[style*=background-image]');

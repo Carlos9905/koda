@@ -1,8 +1,8 @@
 /** @koda-module */
 
-import { getOdooFunctions } from "../helpers/odoo_functions_helpers";
+import { getOdooFunctions } from "../helpers/koda_functions_helpers";
 
-/** @typedef {import("@spreadsheet/helpers/odoo_functions_helpers").Token} Token */
+/** @typedef {import("@spreadsheet/helpers/koda_functions_helpers").Token} Token */
 
 /**
  * Parse a spreadsheet formula and detect the number of LIST functions that are
@@ -21,7 +21,7 @@ export function getNumberOfListFormulas(tokens) {
  *
  * @param {Token[]} tokens
  *
- * @returns {import("../helpers/odoo_functions_helpers").OdooFunctionDescription|undefined}
+ * @returns {import("../helpers/koda_functions_helpers").OdooFunctionDescription|undefined}
  */
 export function getFirstListFunction(tokens) {
     return getOdooFunctions(tokens, ["ODOO.LIST", "ODOO.LIST.HEADER"])[0];

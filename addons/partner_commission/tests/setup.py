@@ -84,13 +84,13 @@ class TestCommissionsSetup(TransactionCase):
         })
 
         # koda sh
-        self.odoo_sh = self.env['product.category'].create({
+        self.koda_sh = self.env['product.category'].create({
             'name': 'Odoo.SH',
         })
 
         self.worker = self.env['product.product'].create({
             'name': 'Odoo.sh Worker',
-            'categ_id': self.odoo_sh.id,
+            'categ_id': self.koda_sh.id,
             'list_price': 100.0,
             'recurring_invoice': True,
             'purchase_ok': True,
@@ -100,7 +100,7 @@ class TestCommissionsSetup(TransactionCase):
         self.worker_pricing = self.env['sale.subscription.pricing'].create({'plan_id': self.plan_year.id, 'price': 100, 'product_template_id': self.worker.product_tmpl_id.id})
         self.staging = self.env['product.product'].create({
             'name': 'Odoo.sh Staging Branch',
-            'categ_id': self.odoo_sh.id,
+            'categ_id': self.koda_sh.id,
             'list_price': 30.0,
             'recurring_invoice': True,
             'purchase_ok': True,
@@ -144,8 +144,8 @@ class TestCommissionsSetup(TransactionCase):
             'name': 'Learning Plan',
             'product_id': self.env.ref('partner_commission.product_commission').id,
             'commission_rule_ids': [
-                (0, 0, self._make_rule(self.odoo_sh, 10, product=self.worker, pricelist=self.eur_20, is_capped=True, max_comm=150)),
-                (0, 0, self._make_rule(self.odoo_sh, 10, product=self.worker, pricelist=self.usd_8, is_capped=True, max_comm=180)),
+                (0, 0, self._make_rule(self.koda_sh, 10, product=self.worker, pricelist=self.eur_20, is_capped=True, max_comm=150)),
+                (0, 0, self._make_rule(self.koda_sh, 10, product=self.worker, pricelist=self.usd_8, is_capped=True, max_comm=180)),
                 (0, 0, self._make_rule(self.apps_support, 10)),
             ],
         })
@@ -154,8 +154,8 @@ class TestCommissionsSetup(TransactionCase):
             'name': 'Ready Plan',
             'product_id': self.env.ref('partner_commission.product_commission').id,
             'commission_rule_ids': [
-                (0, 0, self._make_rule(self.odoo_sh, 100, product=self.worker, pricelist=self.eur_20, is_capped=True, max_comm=150)),
-                (0, 0, self._make_rule(self.odoo_sh, 100, product=self.worker, pricelist=self.usd_8, is_capped=True, max_comm=180)),
+                (0, 0, self._make_rule(self.koda_sh, 100, product=self.worker, pricelist=self.eur_20, is_capped=True, max_comm=150)),
+                (0, 0, self._make_rule(self.koda_sh, 100, product=self.worker, pricelist=self.usd_8, is_capped=True, max_comm=180)),
                 (0, 0, self._make_rule(self.apps_support, 10)),
             ],
         })
@@ -164,8 +164,8 @@ class TestCommissionsSetup(TransactionCase):
             'name': 'Silver Plan',
             'product_id': self.env.ref('partner_commission.product_commission').id,
             'commission_rule_ids': [
-                (0, 0, self._make_rule(self.odoo_sh, 100, product=self.worker, pricelist=self.eur_20, is_capped=True, max_comm=150)),
-                (0, 0, self._make_rule(self.odoo_sh, 100, product=self.worker, pricelist=self.usd_8, is_capped=True, max_comm=180)),
+                (0, 0, self._make_rule(self.koda_sh, 100, product=self.worker, pricelist=self.eur_20, is_capped=True, max_comm=150)),
+                (0, 0, self._make_rule(self.koda_sh, 100, product=self.worker, pricelist=self.usd_8, is_capped=True, max_comm=180)),
                 (0, 0, self._make_rule(self.apps_support, 15)),
             ],
         })
@@ -174,8 +174,8 @@ class TestCommissionsSetup(TransactionCase):
             'name': 'Gold Plan',
             'product_id': self.env.ref('partner_commission.product_commission').id,
             'commission_rule_ids': [
-                (0, 0, self._make_rule(self.odoo_sh, 100, pricelist=self.eur_20, is_capped=True, max_comm=150)),
-                (0, 0, self._make_rule(self.odoo_sh, 100, pricelist=self.usd_8, is_capped=True, max_comm=180)),
+                (0, 0, self._make_rule(self.koda_sh, 100, pricelist=self.eur_20, is_capped=True, max_comm=150)),
+                (0, 0, self._make_rule(self.koda_sh, 100, pricelist=self.usd_8, is_capped=True, max_comm=180)),
                 (0, 0, self._make_rule(self.apps_support, 20)),
             ],
         })
@@ -184,7 +184,7 @@ class TestCommissionsSetup(TransactionCase):
             'name': 'Greedy Plan',
             'product_id': self.env.ref('partner_commission.product_commission').id,
             'commission_rule_ids': [
-                (0, 0, self._make_rule(self.odoo_sh, 100, pricelist=self.usd_8, is_capped=True, max_comm=18)),
+                (0, 0, self._make_rule(self.koda_sh, 100, pricelist=self.usd_8, is_capped=True, max_comm=18)),
             ],
         })
 

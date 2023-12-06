@@ -83,12 +83,12 @@ class DisplayDriver(Driver):
 
     def load_url(self):
         url = None
-        if helpers.get_odoo_server_url():
+        if helpers.get_koda_server_url():
             # disable certifiacte verification
             urllib3.disable_warnings()
             http = urllib3.PoolManager(cert_reqs='CERT_NONE')
             try:
-                response = http.request('GET', "%s/iot/box/%s/display_url" % (helpers.get_odoo_server_url(), helpers.get_mac_address()))
+                response = http.request('GET', "%s/iot/box/%s/display_url" % (helpers.get_koda_server_url(), helpers.get_mac_address()))
                 if response.status == 200:
                     data = json.loads(response.data.decode('utf8'))
                     url = data[self.device_identifier]

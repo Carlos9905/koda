@@ -25,9 +25,9 @@ class TestConflictMarkers(lint_case.LintCase):
 
         counter = 0
 
-        odoo_path = os.path.abspath(os.path.dirname(koda.__file__))
-        paths = koda.addons.__path__ + [odoo_path]
-        paths.remove(os.path.join(odoo_path, 'addons'))  # avoid checking koda/addons twice
+        koda_path = os.path.abspath(os.path.dirname(koda.__file__))
+        paths = koda.addons.__path__ + [koda_path]
+        paths.remove(os.path.join(koda_path, 'addons'))  # avoid checking koda/addons twice
 
         for p in paths:
             for dp, _, file_names in os.walk(p):

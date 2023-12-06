@@ -142,13 +142,13 @@ class CarvajalRequest():
             if invoice.journal_id.l10n_co_edi_debit_note or invoice.l10n_co_edi_operation_type in ['30', '32', '33']:
                 carvajal_type = 'ND'
             else:
-                odoo_type_to_carvajal_type = {
+                koda_type_to_carvajal_type = {
                     '1': 'FV',
                     '2': 'FE',
                     '3': 'FC',
                     '4': 'FC',
                 }
-                carvajal_type = odoo_type_to_carvajal_type[invoice.l10n_co_edi_type]
+                carvajal_type = koda_type_to_carvajal_type[invoice.l10n_co_edi_type]
         elif invoice.move_type == 'in_invoice':
             carvajal_type = 'DS'
         elif invoice.move_type == 'in_refund':

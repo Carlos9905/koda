@@ -144,8 +144,8 @@ class AccountEdiFormat(models.Model):
                 })
                 if not response.get("error"):
                     error = []
-                    odoobot = self.env.ref("base.partner_root")
-                    invoice.message_post(author_id=odoobot.id, body=Markup(_(
+                    kodabot = self.env.ref("base.partner_root")
+                    invoice.message_post(author_id=kodabot.id, body=Markup(_(
                         "Somehow this invoice had been submited to government before." \
                         "<br/>Normally, this should not happen too often" \
                         "<br/>Just verify value of invoice by uploade json to government website " \
@@ -199,8 +199,8 @@ class AccountEdiFormat(models.Model):
                         error_codes = [e.get("code") for e in error]
             if "9999" in error_codes:
                 response = {}
-                odoobot = self.env.ref("base.partner_root")
-                invoice.message_post(author_id=odoobot.id, body=Markup(_(
+                kodabot = self.env.ref("base.partner_root")
+                invoice.message_post(author_id=kodabot.id, body=Markup(_(
                     "Somehow this invoice had been cancelled to government before." \
                     "<br/>Normally, this should not happen too often" \
                     "<br/>Just verify by logging into government website " \

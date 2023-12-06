@@ -91,7 +91,7 @@ class IoTboxHomepage(Home):
             'ip': helpers.get_ip(),
             'mac': helpers.get_mac_address(),
             'iot_device_status': iot_device,
-            'server_status': helpers.get_odoo_server_url() or 'Not Configured',
+            'server_status': helpers.get_koda_server_url() or 'Not Configured',
             'pairing_code': connection_manager.pairing_code,
             'six_terminal': self.get_six_terminal(),
             'network_status': network,
@@ -150,9 +150,9 @@ class IoTboxHomepage(Home):
             'breadcrumb': 'Handlers list',
             'drivers_list': drivers_list,
             'interfaces_list': interfaces_list,
-            'server': helpers.get_odoo_server_url(),
+            'server': helpers.get_koda_server_url(),
             'root_logger_log_level': self._get_logger_effective_level_str(logging.getLogger()),
-            'odoo_current_log_level': self._get_logger_effective_level_str(logging.getLogger('koda')),
+            'koda_current_log_level': self._get_logger_effective_level_str(logging.getLogger('koda')),
             'recommended_log_level': 'warning',
             'available_log_levels': AVAILABLE_LOG_LEVELS,
             'drivers_logger_info': self._get_iot_handlers_logger(drivers_list, 'drivers'),
@@ -162,7 +162,7 @@ class IoTboxHomepage(Home):
     @http.route('/load_iot_handlers', type='http', auth='none', website=True)
     def load_iot_handlers(self):
         helpers.download_iot_handlers(False)
-        helpers.odoo_restart(0)
+        helpers.koda_restart(0)
         return "<meta http-equiv='refresh' content='20; url=http://" + helpers.get_ip() + ":8069/list_handlers'>"
 
     @http.route('/list_credential', type='http', auth='none', website=True)
@@ -178,14 +178,14 @@ class IoTboxHomepage(Home):
     def save_credential(self, db_uuid, enterprise_code):
         helpers.write_file('koda-db-uuid.conf', db_uuid)
         helpers.write_file('koda-enterprise-code.conf', enterprise_code)
-        helpers.odoo_restart(0)
+        helpers.koda_restart(0)
         return "<meta http-equiv='refresh' content='20; url=http://" + helpers.get_ip() + ":8069'>"
 
     @http.route('/clear_credential', type='http', auth='none', cors='*', csrf=False)
     def clear_credential(self):
         helpers.unlink_file('koda-db-uuid.conf')
         helpers.unlink_file('koda-enterprise-code.conf')
-        helpers.odoo_restart(0)
+        helpers.koda_restart(0)
         return "<meta http-equiv='refresh' content='20; url=http://" + helpers.get_ip() + ":8069'>"
 
     @http.route('/wifi', type='http', auth='none', website=True)
@@ -205,7 +205,7 @@ class IoTboxHomepage(Home):
                 persistent = ""
 
         subprocess.check_call([file_path('point_of_sale/tools/posbox/configuration/connect_to_wifi.sh'), essid, password, persistent])
-        server = helpers.get_odoo_server_url()
+        server = helpers.get_koda_server_url()
         res_payload = {
             'message': 'Connecting to ' + essid,
         }
@@ -250,11 +250,11 @@ class IoTboxHomepage(Home):
             enterprise_code = credential[3]
             helpers.save_conf_server(url, token, db_uuid, enterprise_code)
         else:
-            url = helpers.get_odoo_server_url()
+            url = helpers.get_koda_server_url()
             token = helpers.get_token()
         if iotname and platform.system() == 'Linux':
             subprocess.check_call([file_path('point_of_sale/tools/posbox/configuration/rename_iot.sh'), iotname])
-        helpers.odoo_restart(5)
+        helpers.koda_restart(5)
         return 'http://' + helpers.get_ip() + ':8069'
 
     @http.route('/steps', type='http', auth='none', cors='*', csrf=False)
@@ -264,7 +264,7 @@ class IoTboxHomepage(Home):
             'breadcrumb': 'Configure IoT Box',
             'loading_message': 'Configuring your IoT Box',
             'ssid': helpers.get_wifi_essid(),
-            'server': helpers.get_odoo_server_url() or '',
+            'server': helpers.get_koda_server_url() or '',
             'hostname': subprocess.check_output('hostname').decode('utf-8').strip('\n'),
         })
 
@@ -285,7 +285,7 @@ class IoTboxHomepage(Home):
             'title': 'IoT -> Odoo server configuration',
             'breadcrumb': 'Configure Odoo Server',
             'hostname': subprocess.check_output('hostname').decode('utf-8').strip('\n'),
-            'server_status': helpers.get_odoo_server_url() or 'Not configured yet',
+            'server_status': helpers.get_koda_server_url() or 'Not configured yet',
             'loading_message': 'Configure Domain Server'
         })
 
@@ -408,12 +408,12 @@ class IoTboxHomepage(Home):
             _logger.error('A error encountered : %s ' % e)
             return Response(str(e), status=500)
 
-    @http.route('/iot_restart_odoo_or_reboot', type='json', auth='none', cors='*', csrf=False)
-    def iot_restart_odoo_or_reboot(self, action):
+    @http.route('/iot_restart_koda_or_reboot', type='json', auth='none', cors='*', csrf=False)
+    def iot_restart_koda_or_reboot(self, action):
         """ Reboots the IoT Box / restarts Odoo on it depending on chosen 'action' argument"""
         try:
-            if action == 'restart_odoo':
-                helpers.odoo_restart(3)
+            if action == 'restart_koda':
+                helpers.koda_restart(3)
             else:
                 subprocess.call(['sudo', 'reboot'])
             return 'success'
@@ -431,9 +431,9 @@ class IoTboxHomepage(Home):
         :param handler_folder_name: IoT handler folder name (interfaces or drivers)
         :return: logger if any, False otherwise
         """
-        odoo_addon_handler_path = helpers.compute_iot_handlers_addon_name(handler_folder_name, handler_name)
-        return odoo_addon_handler_path in logging.Logger.manager.loggerDict.keys() and \
-               logging.getLogger(odoo_addon_handler_path)
+        koda_addon_handler_path = helpers.compute_iot_handlers_addon_name(handler_folder_name, handler_name)
+        return koda_addon_handler_path in logging.Logger.manager.loggerDict.keys() and \
+               logging.getLogger(koda_addon_handler_path)
 
     def _update_logger_level(self, logger_name, new_level, available_log_levels, handler_folder=False):
         """

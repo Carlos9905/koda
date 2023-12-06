@@ -47,7 +47,7 @@ class TestPushNotification(SMSCommon):
     def setUpClass(cls):
         super(TestPushNotification, cls).setUpClass()
         sudo_icp = cls.env['ir.config_parameter'].sudo()
-        sudo_icp.set_param('odoo_ocn.project_id', 'Test')
+        sudo_icp.set_param('koda_ocn.project_id', 'Test')
         sudo_icp.set_param('mail_mobile.enable_ocn', True)
 
         channel = cls.env['discuss.channel'].with_context(cls._test_context)

@@ -126,7 +126,7 @@ export class LinkTools extends Link {
         this._observer.disconnect();
         this.props.onPreApplyLink();
         super.applyLinkToDom(...arguments);
-        this.props.wysiwyg.odooEditor.historyStep();
+        this.props.wysiwyg.kodaEditor.historyStep();
         this.props.onPostApplyLink();
         this._observer.observe(this.props.link, this._observerOptions);
     }
@@ -380,12 +380,12 @@ export class LinkTools extends Link {
         range.selectNodeContents(this.linkEl);
         selection.removeAllRanges();
         selection.addRange(range);
-        this.props.wysiwyg.odooEditor.execCommand('applyColor', '', 'color');
-        this.props.wysiwyg.odooEditor.execCommand('applyColor', '', 'backgroundColor');
+        this.props.wysiwyg.kodaEditor.execCommand('applyColor', '', 'color');
+        this.props.wysiwyg.kodaEditor.execCommand('applyColor', '', 'backgroundColor');
 
         this._colorpaletteApply(cssProperty, params);
 
-        this.props.wysiwyg.odooEditor.historyStep();
+        this.props.wysiwyg.kodaEditor.historyStep();
         this._updateOptionsUI();
     }
     /**
@@ -477,7 +477,7 @@ export class LinkTools extends Link {
             // Ensure only one option is active in the dropdown.
             $target.addClass('active');
             $target.siblings('we-button').removeClass("active");
-            this.props.wysiwyg.odooEditor.historyStep();
+            this.props.wysiwyg.kodaEditor.historyStep();
         }
     }
     /**
@@ -485,10 +485,10 @@ export class LinkTools extends Link {
      */
     __onURLInput() {
         super.__onURLInput(...arguments);
-        this.props.wysiwyg.odooEditor.historyPauseSteps('_onURLInput');
+        this.props.wysiwyg.kodaEditor.historyPauseSteps('_onURLInput');
         this._syncContent();
         this._adaptPreview();
-        this.props.wysiwyg.odooEditor.historyUnpauseSteps('_onURLInput');
+        this.props.wysiwyg.kodaEditor.historyUnpauseSteps('_onURLInput');
     }
     /**
      * Updates the DOM content of the link with the input value.

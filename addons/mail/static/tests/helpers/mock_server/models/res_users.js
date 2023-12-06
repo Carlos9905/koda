@@ -39,7 +39,7 @@ patch(MockServer.prototype, {
             initBusId: this.lastBusNotificationId,
             menu_id: false, // not useful in QUnit tests
             needaction_inbox_counter: this._mockResPartner_GetNeedactionCount(user.partner_id),
-            odoobot: this._mockResPartnerMailPartnerFormat(this.odoobotId).get(this.odoobotId),
+            kodabot: this._mockResPartnerMailPartnerFormat(this.kodabotId).get(this.kodabotId),
             shortcodes: this.pyEnv["mail.shortcode"].searchRead([], {
                 fields: ["source", "substitution"],
             }),

@@ -16,7 +16,7 @@ class TestPdf(TransactionCase):
         self.minimal_reader_buffer = io.BytesIO(self.file)
         self.minimal_pdf_reader = pdf.OdooPdfFileReader(self.minimal_reader_buffer)
 
-    def test_odoo_pdf_file_reader(self):
+    def test_koda_pdf_file_reader(self):
         attachments = list(self.minimal_pdf_reader.getAttachments())
         self.assertEqual(len(attachments), 0)
 
@@ -27,7 +27,7 @@ class TestPdf(TransactionCase):
         attachments = list(self.minimal_pdf_reader.getAttachments())
         self.assertEqual(len(attachments), 1)
 
-    def test_odoo_pdf_file_writer(self):
+    def test_koda_pdf_file_writer(self):
         attachments = list(self.minimal_pdf_reader.getAttachments())
         self.assertEqual(len(attachments), 0)
 
@@ -42,7 +42,7 @@ class TestPdf(TransactionCase):
         attachments = list(self.minimal_pdf_reader.getAttachments())
         self.assertEqual(len(attachments), 2)
 
-    def test_odoo_pdf_file_reader_with_owner_encryption(self):
+    def test_koda_pdf_file_reader_with_owner_encryption(self):
         pdf_writer = pdf.OdooPdfFileWriter()
         pdf_writer.cloneReaderDocumentRoot(self.minimal_pdf_reader)
 

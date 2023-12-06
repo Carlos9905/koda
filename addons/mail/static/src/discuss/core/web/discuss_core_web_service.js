@@ -36,9 +36,9 @@ export class DiscussCoreWeb {
                 if (this.ui.isSmall || message.isSelfAuthored) {
                     return;
                 }
-                if (channel.correspondent?.eq(this.store.odoobot) && this.store.odoobotOnboarding) {
-                    // this cancels odoobot onboarding auto-opening of chat window
-                    this.store.odoobotOnboarding = false;
+                if (channel.correspondent?.eq(this.store.kodabot) && this.store.kodabotOnboarding) {
+                    // this cancels kodabot onboarding auto-opening of chat window
+                    this.store.kodabotOnboarding = false;
                     return;
                 }
                 this.threadService.notifyMessageToUser(channel, message);

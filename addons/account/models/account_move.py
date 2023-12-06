@@ -2700,7 +2700,7 @@ class AccountMove(models.Model):
         partner_ref_nr = partner_ref_nr[-21:]
         return format_structured_reference_iso(partner_ref_nr)
 
-    def _get_invoice_reference_odoo_invoice(self):
+    def _get_invoice_reference_koda_invoice(self):
         """ This computes the reference based on the Odoo format.
             We simply return the number of the invoice, defined on the journal
             sequence.
@@ -2708,7 +2708,7 @@ class AccountMove(models.Model):
         self.ensure_one()
         return self.name
 
-    def _get_invoice_reference_odoo_partner(self):
+    def _get_invoice_reference_koda_partner(self):
         """ This computes the reference based on the Odoo format.
             The data used is the reference set on the partner or its database
             id otherwise. For instance if the reference of the customer is
@@ -4524,18 +4524,18 @@ class AccountMove(models.Model):
         if not attachments or self.env.context.get('no_new_invoice') or not self.is_invoice(include_receipts=True):
             return res
 
-        odoobot = self.env.ref('base.partner_root')
+        kodabot = self.env.ref('base.partner_root')
         if attachments and self.state != 'draft':
             self.message_post(body=_('The invoice is not a draft, it was not updated from the attachment.'),
                               message_type='comment',
                               subtype_xmlid='mail.mt_note',
-                              author_id=odoobot.id)
+                              author_id=kodabot.id)
             return res
         if attachments and self.invoice_line_ids:
             self.message_post(body=_('The invoice already contains lines, it was not updated from the attachment.'),
                               message_type='comment',
                               subtype_xmlid='mail.mt_note',
-                              author_id=odoobot.id)
+                              author_id=kodabot.id)
             return res
 
         # As we are coming from the mail, we assume that ONE of the attachments

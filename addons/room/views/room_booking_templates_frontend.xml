@@ -8,7 +8,7 @@
             <link rel="preload" href="/web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" crossorigin=""/>
             <t t-call-assets="room.assets_room_booking" t-js="false"/>
         </xpath>
-        <xpath expr="//head/script[@id='web.layout.odooscript']" position="after">
+        <xpath expr="//head/script[@id='web.layout.kodascript']" position="after">
             <script t-nocache="Session information should always be up to date." type="text/javascript">
                 koda.__session_info__ = <t t-out="json.dumps(request.env['ir.http'].get_frontend_session_info())"/>;
                     if (!/(^|;\s)tz=/.test(document.cookie)) {

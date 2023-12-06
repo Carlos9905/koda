@@ -14,7 +14,7 @@ import { insertList } from "./list_init_callback";
 
 const { featurePluginRegistry, sidePanelRegistry, cellMenuRegistry } = spreadsheet.registries;
 
-featurePluginRegistry.add("odooListAutofillPlugin", ListAutofillPlugin);
+featurePluginRegistry.add("kodaListAutofillPlugin", ListAutofillPlugin);
 
 sidePanelRegistry.add("LIST_PROPERTIES_PANEL", {
     title: () => _t("List properties"),

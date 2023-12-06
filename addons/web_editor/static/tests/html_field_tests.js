@@ -515,7 +515,7 @@ QUnit.module("WebEditor.HtmlField", ({ beforeEach }) => {
         });
         // Let the htmlField be mounted and recover the Component instance.
         const htmlField = await htmlFieldPromise;
-        const editor = htmlField.wysiwyg.odooEditor;
+        const editor = htmlField.wysiwyg.kodaEditor;
 
         // Simulate an urgent save without any image in the content.
         await formController.beforeUnload();
@@ -631,7 +631,7 @@ QUnit.module("WebEditor.HtmlField", ({ beforeEach }) => {
         });
         // Let the htmlField be mounted and recover the Component instance.
         const htmlField = await htmlFieldPromise;
-        const editor = htmlField.wysiwyg.odooEditor;
+        const editor = htmlField.wysiwyg.kodaEditor;
 
         const paragraph = editor.editable.querySelector(".test_target");
         Wysiwyg.setRange(paragraph);
@@ -705,7 +705,7 @@ QUnit.module("WebEditor.HtmlField", ({ beforeEach }) => {
 
         // Let the htmlField be mounted and recover the Component instance.
         const htmlField = await htmlFieldPromise;
-        const editor = htmlField.wysiwyg.odooEditor;
+        const editor = htmlField.wysiwyg.kodaEditor;
         const node = editor.editable.querySelector('p').childNodes[0];
         newHistoryStepPromise();
         node.textContent = 'b';
@@ -768,7 +768,7 @@ QUnit.module("WebEditor.HtmlField", ({ beforeEach }) => {
 
         // Let the htmlField be mounted and recover the Component instance.
         const htmlField = await htmlFieldPromise;
-        const editor = htmlField.wysiwyg.odooEditor;
+        const editor = htmlField.wysiwyg.kodaEditor;
         const node = editor.editable.querySelector('p').childNodes[0];
         newHistoryStepPromise();
         node.textContent = 'b';
@@ -831,7 +831,7 @@ QUnit.module("WebEditor.HtmlField", ({ beforeEach }) => {
 
         // Let the htmlField be mounted and recover the Component instance.
         const htmlField = await htmlFieldPromise;
-        const editor = htmlField.wysiwyg.odooEditor;
+        const editor = htmlField.wysiwyg.kodaEditor;
         const node = editor.editable.querySelector('div.oe_unremovable');
         newHistoryStepPromise();
         node.textContent = 'b';

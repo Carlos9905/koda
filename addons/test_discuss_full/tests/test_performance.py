@@ -30,7 +30,7 @@ class TestDiscussFullPerformance(HttpCase):
                 'login': 'emp',
                 'name': 'Ernest Employee',
                 'notification_type': 'inbox',
-                'odoobot_state': 'disabled',
+                'kodabot_state': 'disabled',
                 'signature': '--\nErnest',
             },
             {'name': 'test1', 'login': 'test1', 'password': self.password, 'email': 'test1@example.com', 'country_id': self.env.ref('base.in').id},
@@ -135,7 +135,7 @@ class TestDiscussFullPerformance(HttpCase):
             'hasMessageTranslationFeature': False,
             'needaction_inbox_counter': 1,
             'starred_counter': 1,
-            'odoobotOnboarding': False,
+            'kodabotOnboarding': False,
             'channels': [
                 {
                     'allow_public_upload': False,
@@ -1026,9 +1026,9 @@ class TestDiscussFullPerformance(HttpCase):
             'internalUserGroupId': self.env.ref('base.group_user').id,
             'menu_id': self.env['ir.model.data']._xmlid_to_res_id('mail.menu_root_discuss'),
             'mt_comment_id': self.env['ir.model.data']._xmlid_to_res_id('mail.mt_comment'),
-            'odoobot': {
+            'kodabot': {
                 'active': False,
-                'email': 'odoobot@example.com',
+                'email': 'kodabot@example.com',
                 'id': self.user_root.partner_id.id,
                 'im_status': 'bot',
                 'is_company': False,

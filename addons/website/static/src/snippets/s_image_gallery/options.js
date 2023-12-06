@@ -124,7 +124,7 @@ options.registry.GalleryLayout = options.registry.CarouselHandler.extend({
         // to the container & layout updates) when adding new images to the
         // snippet.
         if (this.options.wysiwyg) {
-            this.options.wysiwyg.odooEditor.unbreakableStepUnactive();
+            this.options.wysiwyg.kodaEditor.unbreakableStepUnactive();
         }
         await this[`_${modeName}`]();
         this.trigger_up('cover_update');

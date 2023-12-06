@@ -47,7 +47,7 @@ class TestDeliveryBpost(TransactionCase):
                                  'zip': 75008,
                                  'country_id': self.env.ref('base.fr').id,
                                  'phone': '0142928100'})
-        self.odooinc = self.env['res.partner'].create({'name': "Odoo Inc.",
+        self.kodainc = self.env['res.partner'].create({'name': "Odoo Inc.",
                                  'is_company': True,
                                  'street': '1485 Bayshore Blvd',
                                  'street2': 'Suite 450',

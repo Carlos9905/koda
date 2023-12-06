@@ -1296,7 +1296,7 @@
             <t t-set="_label">Image Menu</t>
             <we-button t-att-data-select-label="_label" data-select-template="website.s_mega_menu_menu_image_menu" data-img="/website/static/src/img/snippets_thumbs/s_mega_menu_menu_image_menu.svg" t-out="_label"/>
             <t t-set="_label">Odoo Menu</t>
-            <we-button t-att-data-select-label="_label" data-select-template="website.s_mega_menu_odoo_menu" data-img="/website/static/src/img/snippets_thumbs/s_mega_menu_odoo_menu.svg" t-out="_label"/>
+            <we-button t-att-data-select-label="_label" data-select-template="website.s_mega_menu_koda_menu" data-img="/website/static/src/img/snippets_thumbs/s_mega_menu_koda_menu.svg" t-out="_label"/>
             <t t-set="_label">Little Icons</t>
             <we-button t-att-data-select-label="_label" data-select-template="website.s_mega_menu_little_icons" data-img="/website/static/src/img/snippets_thumbs/s_mega_menu_little_icons.svg" t-out="_label"/>
             <t t-set="_label">Big Icons Subtitles</t>

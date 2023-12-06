@@ -8341,7 +8341,7 @@
             "formulaArgSeparator": ","
         }
     },
-    "odooVersion": 6,
+    "kodaVersion": 6,
     "globalFilters": [],
     "pivots": {
         "1": {

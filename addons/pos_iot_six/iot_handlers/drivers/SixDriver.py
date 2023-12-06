@@ -22,7 +22,7 @@ else:
     lib_extension = '_l.so'
     import_library = ctypes.CDLL
 
-timApi_lib_path = file_path(f"hw_drivers/iot_handlers/lib/tim/libsix_odoo{lib_extension}")
+timApi_lib_path = file_path(f"hw_drivers/iot_handlers/lib/tim/libsix_koda{lib_extension}")
 
 try:
     # Load library

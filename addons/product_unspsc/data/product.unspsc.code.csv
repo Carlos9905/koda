@@ -596,7 +596,7 @@ code|name|applies_to|active
 10202181|{"en_US":"Live valentine rose bush"}|product|True
 10202182|{"en_US":"Live verano rose bush"}|product|True
 10202183|{"en_US":"Live versilia rose bush"}|product|True
-10202184|{"en_US":"Live voodoo rose bush"}|product|True
+10202184|{"en_US":"Live vokoda rose bush"}|product|True
 10202185|{"en_US":"Live wow rose bush"}|product|True
 10202186|{"en_US":"Live yabadabadoo rose bush"}|product|True
 10202200|{"en_US":"Live peach rose bushes"}|product|False
@@ -3056,7 +3056,7 @@ code|name|applies_to|active
 10302181|{"en_US":"Fresh cut valentine rose"}|product|True
 10302182|{"en_US":"Fresh cut verano rose"}|product|True
 10302183|{"en_US":"Fresh cut versilia rose"}|product|True
-10302184|{"en_US":"Fresh cut voodoo rose"}|product|True
+10302184|{"en_US":"Fresh cut vokoda rose"}|product|True
 10302185|{"en_US":"Fresh cut wow rose"}|product|True
 10302186|{"en_US":"Fresh cut yabadabadoo rose"}|product|True
 10302200|{"en_US":"Fresh cut peach rose"}|product|False
@@ -5532,7 +5532,7 @@ code|name|applies_to|active
 10402181|{"en_US":"Dried cut valentine rose"}|product|True
 10402182|{"en_US":"Dried cut verano rose"}|product|True
 10402183|{"en_US":"Dried cut versilia rose"}|product|True
-10402184|{"en_US":"Dried cut voodoo rose"}|product|True
+10402184|{"en_US":"Dried cut vokoda rose"}|product|True
 10402185|{"en_US":"Dried cut wow rose"}|product|True
 10402186|{"en_US":"Dried cut yabadabadoo rose"}|product|True
 10402200|{"en_US":"Dried cut peach rose"}|product|False
@@ -51776,7 +51776,7 @@ code|name|applies_to|active
 85131712|{"en_US":"Toxicology research services"}|product|True
 85131713|{"en_US":"Neurology research services"}|product|True
 85141500|{"en_US":"Faith healers"}|product|False
-85141501|{"en_US":"Witch doctors or voodoo services"}|product|True
+85141501|{"en_US":"Witch doctors or vokoda services"}|product|True
 85141502|{"en_US":"Faith healer services"}|product|True
 85141503|{"en_US":"Shamans"}|product|True
 85141504|{"en_US":"Energy healing work"}|product|True

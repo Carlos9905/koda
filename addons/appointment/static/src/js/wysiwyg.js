@@ -20,9 +20,9 @@ patch(Wysiwyg.prototype, {
                 description: _t('Add a specific appointment'),
                 fontawesome: 'fa-calendar',
                 callback: async () => {
-                    const selection = this.odooEditor.document.getSelection();
+                    const selection = this.kodaEditor.document.getSelection();
                     const anchorNode = selection && selection.anchorNode;
-                    const restoreSelection = preserveCursor(this.odooEditor.document);
+                    const restoreSelection = preserveCursor(this.kodaEditor.document);
                     Component.env.services.dialog.add(AppointmentFormViewDialog, {
                         resModel: 'appointment.invite',
                         context: {
@@ -41,12 +41,12 @@ patch(Wysiwyg.prototype, {
                             if (existingLink) {
                                 existingLink.setAttribute('href', url);
                                 existingLink.textContent = label;
-                                this.odooEditor.historyStep();
+                                this.kodaEditor.historyStep();
                             } else {
                                 const link = document.createElement('a');
                                 link.setAttribute('href', url);
                                 link.textContent = label;
-                                this.odooEditor.execCommand('insert', link);
+                                this.kodaEditor.execCommand('insert', link);
                             }
                         },
                     });

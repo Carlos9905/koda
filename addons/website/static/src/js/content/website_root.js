@@ -4,7 +4,7 @@ import { loadJS } from "@web/core/assets";
 import { _t } from "@web/core/l10n/translation";
 import { session } from "@web/session";
 import publicRootData from '@web/legacy/js/public/public_root';
-import "@website/libs/zoomodoo/zoomodoo";
+import "@website/libs/zoomkoda/zoomkoda";
 import { pick } from "@web/core/utils/objects";
 
 import { markup } from "@koda/owl";
@@ -107,7 +107,7 @@ export const WebsiteRoot = publicRootData.PublicRoot.extend({
             this._gmapAPILoading = new Promise(async resolve => {
                 const key = await this._getGMapAPIKey(refetch);
 
-                window.odoo_gmap_api_post_load = (async function odoo_gmap_api_post_load() {
+                window.koda_gmap_api_post_load = (async function koda_gmap_api_post_load() {
                     await this._startWidgets(undefined, {editableMode: editableMode});
                     resolve(key);
                 }).bind(this);
@@ -128,7 +128,7 @@ export const WebsiteRoot = publicRootData.PublicRoot.extend({
                     this._gmapAPILoading = false;
                     return;
                 }
-                await loadJS(`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&callback=odoo_gmap_api_post_load&key=${encodeURIComponent(key)}`);
+                await loadJS(`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&callback=koda_gmap_api_post_load&key=${encodeURIComponent(key)}`);
             });
         }
         return this._gmapAPILoading;

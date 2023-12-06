@@ -48,9 +48,9 @@ export class OdooChartUIPlugin extends UIPlugin {
         switch (cmd.type) {
             case "CREATE_CHART": {
                 switch (cmd.definition.type) {
-                    case "odoo_pie":
-                    case "odoo_bar":
-                    case "odoo_line":
+                    case "koda_pie":
+                    case "koda_bar":
+                    case "koda_line":
                         this._setupChartDataSource(cmd.id);
                         break;
                 }
@@ -58,9 +58,9 @@ export class OdooChartUIPlugin extends UIPlugin {
             }
             case "UPDATE_CHART": {
                 switch (cmd.definition.type) {
-                    case "odoo_pie":
-                    case "odoo_bar":
-                    case "odoo_line": {
+                    case "koda_pie":
+                    case "koda_bar":
+                    case "koda_line": {
                         const dataSource = this.getChartDataSource(cmd.id);
                         if (
                             dataSource.getInitialDomainString() !==

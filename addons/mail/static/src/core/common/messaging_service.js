@@ -68,7 +68,7 @@ export class Messaging {
                 type: "guest",
             };
         }
-        this.store.odoobot = { ...data.odoobot, type: "partner" };
+        this.store.kodabot = { ...data.kodabot, type: "partner" };
         const settings = data.current_user_settings;
         this.userSettingsService.updateFromCommands(settings);
         this.userSettingsService.id = settings.id;
@@ -83,7 +83,7 @@ export class Messaging {
         this.store.CannedResponse.insert(data.shortcodes ?? []);
         this.store.hasLinkPreviewFeature = data.hasLinkPreviewFeature;
         this.store.initBusId = data.initBusId;
-        this.store.odoobotOnboarding = data.odoobotOnboarding;
+        this.store.kodabotOnboarding = data.kodabotOnboarding;
         this.isReady.resolve(data);
         this.store.isMessagingReady = true;
         this.store.hasMessageTranslationFeature = data.hasMessageTranslationFeature;

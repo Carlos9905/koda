@@ -6,7 +6,7 @@ import { coreTypes, CorePlugin } from "@koda/o-spreadsheet";
 export class ChartOdooMenuPlugin extends CorePlugin {
     constructor(config) {
         super(config);
-        this.odooMenuReference = {};
+        this.kodaMenuReference = {};
     }
 
     /**
@@ -16,10 +16,10 @@ export class ChartOdooMenuPlugin extends CorePlugin {
     handle(cmd) {
         switch (cmd.type) {
             case "LINK_ODOO_MENU_TO_CHART":
-                this.history.update("odooMenuReference", cmd.chartId, cmd.odooMenuId);
+                this.history.update("kodaMenuReference", cmd.chartId, cmd.kodaMenuId);
                 break;
             case "DELETE_FIGURE":
-                this.history.update("odooMenuReference", cmd.id, undefined);
+                this.history.update("kodaMenuReference", cmd.id, undefined);
                 break;
         }
     }
@@ -31,18 +31,18 @@ export class ChartOdooMenuPlugin extends CorePlugin {
      * @returns {object | undefined}
      */
     getChartOdooMenu(chartId) {
-        const menuId = this.odooMenuReference[chartId];
+        const menuId = this.kodaMenuReference[chartId];
         return menuId ? this.getters.getIrMenu(menuId) : undefined;
     }
 
     import(data) {
         if (data.chartOdooMenusReferences) {
-            this.odooMenuReference = data.chartOdooMenusReferences;
+            this.kodaMenuReference = data.chartOdooMenusReferences;
         }
     }
 
     export(data) {
-        data.chartOdooMenusReferences = this.odooMenuReference;
+        data.chartOdooMenusReferences = this.kodaMenuReference;
     }
 }
 ChartOdooMenuPlugin.getters = ["getChartOdooMenu"];

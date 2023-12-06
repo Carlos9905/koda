@@ -22,7 +22,7 @@ export const standardErrorDialogProps = {
     close: Function, // prop added by the Dialog service
 };
 
-export const odooExceptionTitleMap = new Map(
+export const kodaExceptionTitleMap = new Map(
     Object.entries({
         "koda.addons.base.models.ir_mail_server.MailDeliveryException": _t("MailDeliveryException"),
         "koda.exceptions.AccessDenied": _t("Access Denied"),
@@ -80,8 +80,8 @@ export class RPCErrorDialog extends ErrorDialog {
     }
     inferTitle() {
         // If the server provides an exception name that we have in a registry.
-        if (this.props.exceptionName && odooExceptionTitleMap.has(this.props.exceptionName)) {
-            this.title = odooExceptionTitleMap.get(this.props.exceptionName).toString();
+        if (this.props.exceptionName && kodaExceptionTitleMap.has(this.props.exceptionName)) {
+            this.title = kodaExceptionTitleMap.get(this.props.exceptionName).toString();
             return;
         }
         // Fall back to a name based on the error type.
@@ -122,8 +122,8 @@ export class WarningDialog extends Component {
         }
     }
     inferTitle() {
-        if (this.props.exceptionName && odooExceptionTitleMap.has(this.props.exceptionName)) {
-            return odooExceptionTitleMap.get(this.props.exceptionName).toString();
+        if (this.props.exceptionName && kodaExceptionTitleMap.has(this.props.exceptionName)) {
+            return kodaExceptionTitleMap.get(this.props.exceptionName).toString();
         }
         return this.props.title || _t("Odoo Warning");
     }

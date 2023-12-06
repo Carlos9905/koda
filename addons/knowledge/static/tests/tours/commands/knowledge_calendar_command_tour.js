@@ -98,7 +98,7 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
     // Remove previous item calendar view
     trigger: '.koda-editor-editable',
     run: function () {
-        this.$anchor.data('wysiwyg').odooEditor.resetContent();
+        this.$anchor.data('wysiwyg').kodaEditor.resetContent();
     },
 }, {
     // Click on the "Create Item Calednar" helper

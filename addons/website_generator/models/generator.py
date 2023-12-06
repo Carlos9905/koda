@@ -187,21 +187,21 @@ class WebsiteGeneratorRequest(models.Model):
             logger.warning("Error reporting to WS server: %s", e)
 
     def _generate_site(self, tar):
-        odoo_blocks = self._load_input(tar)
-        website = self._get_website(odoo_blocks, tar)
-        # Generate the images attachments (Modifies odoo_blocks in place)
-        self._save_images_as_attachments(odoo_blocks, tar)
-        self._generate_pages(website, odoo_blocks)
-        return website, odoo_blocks
+        koda_blocks = self._load_input(tar)
+        website = self._get_website(koda_blocks, tar)
+        # Generate the images attachments (Modifies koda_blocks in place)
+        self._save_images_as_attachments(koda_blocks, tar)
+        self._generate_pages(website, koda_blocks)
+        return website, koda_blocks
 
     def _load_input(self, tar):
         # Don't inline this method in `_generate_site()`, it's needed for ease
         # of development (overridden in custom dev module)
         return json.load(tar.extractfile('out.json'))
 
-    def _generate_pages(self, website, odoo_blocks):
+    def _generate_pages(self, website, koda_blocks):
         # Create pages
-        for page_url, page_data in odoo_blocks.get('pages', {}).items():
+        for page_url, page_data in koda_blocks.get('pages', {}).items():
             if 'body_html' in page_data:
                 # Create page
                 new_page_info = website.with_context(website_id=website.id).new_page(page_data['name'])
@@ -221,14 +221,14 @@ class WebsiteGeneratorRequest(models.Model):
             'is_published': True,
         })
         # Create home page content
-        homepage._construct_homepage(odoo_blocks['homepage'])
+        homepage._construct_homepage(koda_blocks['homepage'])
 
-    def _get_website(self, odoo_blocks, tar):
+    def _get_website(self, koda_blocks, tar):
         website = self.env['website'].get_current_website()
-        website_info = odoo_blocks.get('website')
+        website_info = koda_blocks.get('website')
         if not website_info:
             raise ValueError("Website info not found in the input")
-        homepage_url = odoo_blocks.get('homepage', {}).get('url')
+        homepage_url = koda_blocks.get('homepage', {}).get('url')
         if not homepage_url:
             raise ValueError("Homepage url not found in the input")
         website_name = urlparse(homepage_url).netloc.split(".")[-2]
@@ -244,8 +244,8 @@ class WebsiteGeneratorRequest(models.Model):
         website.update(website_values)
         return website
 
-    def _save_images_as_attachments(self, odoo_blocks, tar):
-        all_images = odoo_blocks['website'].get('all_images', {})
+    def _save_images_as_attachments(self, koda_blocks, tar):
+        all_images = koda_blocks['website'].get('all_images', {})
         # Create attachments for all images (uncropped)
         attachments_url_src = {}
         for img_url, img_name in all_images.items():
@@ -254,20 +254,20 @@ class WebsiteGeneratorRequest(models.Model):
         # Create attachments for all images (cropped)
         cropped_attachments_url_src = {}
         # Home page
-        for image in odoo_blocks['homepage'].get('images_to_crop', []):
+        for image in koda_blocks['homepage'].get('images_to_crop', []):
             img_name = self._get_cropped_image_name(all_images, image)
             cropped_attachments_url_src = self.try_create_image_attachment(img_name, image['url'], cropped_attachments_url_src, tar)
 
         # Other pages
-        for page_dict in odoo_blocks.get('pages', {}).values():
+        for page_dict in koda_blocks.get('pages', {}).values():
             for image in page_dict.get('images_to_crop', []):
                 img_name = self._get_cropped_image_name(all_images, image)
                 cropped_attachments_url_src = self.try_create_image_attachment(img_name, image['url'], cropped_attachments_url_src, tar)
 
         # Update the html urls
         if attachments_url_src:
-            # Modifies odoo_blocks in place
-            self._update_html_urls(odoo_blocks, attachments_url_src, cropped_attachments_url_src)
+            # Modifies koda_blocks in place
+            self._update_html_urls(koda_blocks, attachments_url_src, cropped_attachments_url_src)
 
     def try_create_image_attachment(self, img_name, img_url, attachments_url_src, tar):
         try:
@@ -300,7 +300,7 @@ class WebsiteGeneratorRequest(models.Model):
             return img_name
         return ""
 
-    def _update_html_urls(self, odoo_blocks, attachments_url_src, cropped_attachments_url_src):
+    def _update_html_urls(self, koda_blocks, attachments_url_src, cropped_attachments_url_src):
         def update_page_html(page_dict):
             images_on_page = page_dict.get('images', [])
             cropped_images = page_dict.get('images_to_crop', [])
@@ -328,7 +328,7 @@ class WebsiteGeneratorRequest(models.Model):
                 return re.sub(pattern=pattern, repl=cropped_img_string, string=new_block_html)
             return new_block_html
 
-        homepage = odoo_blocks['homepage']
+        homepage = koda_blocks['homepage']
         homepage['body_html'] = update_page_html(homepage)
 
         footer = homepage.get('footer', [])
@@ -342,8 +342,8 @@ class WebsiteGeneratorRequest(models.Model):
                 menu_content['content'] = update_page_html({'body_html': [menu_content.get('content', '')], 'images': homepage.get('images', []), 'images_to_crop': homepage.get('images_to_crop', [])})[0]
 
         # Update the html urls for all pages
-        for page_name, page_dict in odoo_blocks.get('pages', {}).items():
-            odoo_blocks['pages'][page_name]['body_html'] = update_page_html(page_dict)
+        for page_name, page_dict in koda_blocks.get('pages', {}).items():
+            koda_blocks['pages'][page_name]['body_html'] = update_page_html(page_dict)
 
     def _get_image_data(self, tar, image_name):
         if not image_name:

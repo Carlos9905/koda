@@ -348,7 +348,7 @@ var Dialog = Widget.extend({
      * Moves the focus to the first button primary in the footer of the dialog
      *
      * @private
-     * @param {odooEvent} e
+     * @param {kodaEvent} e
      */
     _onFocusControlButton: function (e) {
         if (this.$footer) {

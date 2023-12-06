@@ -545,7 +545,7 @@ QUnit.module("Knowledge - Ensure body save scenarios", (hooks) => {
         });
         // Let the htmlField be mounted and recover the Component instance.
         htmlField = await htmlFieldPromise;
-        const editor = htmlField.wysiwyg.odooEditor;
+        const editor = htmlField.wysiwyg.kodaEditor;
 
         // Patch to control when the next mounting is done.
         const isAtWillStart = makeDeferred();
@@ -856,7 +856,7 @@ QUnit.module("Knowledge - Silenced Failure Cases (Recoverable)", (hooks) => {
             resId: 1,
         });
         htmlField = await htmlFieldPromise;
-        const editor = htmlField.wysiwyg.odooEditor;
+        const editor = htmlField.wysiwyg.kodaEditor;
 
         // Patch to control when the mounting is done
         const isAtWillStart = makeDeferred();

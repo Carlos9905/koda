@@ -43,7 +43,7 @@ class TestDocumentRequest(MailCommon):
         self.assertEqual(document.create_share_id.owner_id.id, wizard.requestee_id.id, "Owner of the share is requestee")
         self.assertEqual(document.request_activity_id.user_id, self.doc_user, "Activity assigned to the requestee")
         self.assertEqual(document.owner_id, self.env.user, "Owner of the document is the requester")
-        self.assertSentEmail('"OdooBot" <odoobot@example.com>', self.doc_partner_1, subject='Document Request : Wizard Request')
+        self.assertSentEmail('"OdooBot" <kodabot@example.com>', self.doc_partner_1, subject='Document Request : Wizard Request')
 
     def test_request_document_from_partner_without_user(self):
         wizard = self.env['documents.request_wizard'].create({
@@ -57,4 +57,4 @@ class TestDocumentRequest(MailCommon):
 
         self.assertEqual(document.request_activity_id.user_id, self.env.user, "Activity assigned to the requester because the requestee has no user")
         self.assertEqual(document.owner_id, self.env.user, "Owner of the document is the requester")
-        self.assertSentEmail('"OdooBot" <odoobot@example.com>', self.doc_partner_2, subject='Document Request : Wizard Request 2')
+        self.assertSentEmail('"OdooBot" <kodabot@example.com>', self.doc_partner_2, subject='Document Request : Wizard Request 2')

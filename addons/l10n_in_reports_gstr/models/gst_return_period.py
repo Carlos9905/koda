@@ -1096,8 +1096,8 @@ class L10nInGSTReturnPeriod(models.Model):
                     "gstr1_blocking_level": False,
                     "gstr1_status": "sent",
                 })
-                odoobot = self.env.ref('base.partner_root')
-                self.sudo().message_post(body=_("GSTR-1 Successfully Sent"), author_id=odoobot.id)
+                kodabot = self.env.ref('base.partner_root')
+                self.sudo().message_post(body=_("GSTR-1 Successfully Sent"), author_id=kodabot.id)
             elif data.get("status_cd") == "IP":
                 self.sudo().write({
                     "gstr1_error": "Waiting for GSTR-1 processing, try in a few minutes",
@@ -1418,7 +1418,7 @@ class L10nInGSTReturnPeriod(models.Model):
                         matched_bills = matching_dict.get(matching_key)
                 if matched_bills:
                     created_from_reconciliation = matched_bills.filtered(lambda b:
-                        b.l10n_in_gstr2b_reconciliation_status == 'gstr2_bills_not_in_odoo' and b.state == 'draft')
+                        b.l10n_in_gstr2b_reconciliation_status == 'gstr2_bills_not_in_koda' and b.state == 'draft')
                     checked_bills += created_from_reconciliation
                     matched_bills = matched_bills - created_from_reconciliation
                     if gstr2b_bill['bill_type'] == 'credit_note':
@@ -1489,7 +1489,7 @@ class L10nInGSTReturnPeriod(models.Model):
                         "partner_id": partner.id,
                         "l10n_in_gst_treatment": partner and partner.l10n_in_gst_treatment in ('deemed_export', 'uin_holders') and partner.l10n_in_gst_treatment or default_l10n_in_gst_treatment,
                         "journal_id": journal.id,
-                        "l10n_in_gstr2b_reconciliation_status": "gstr2_bills_not_in_odoo",
+                        "l10n_in_gstr2b_reconciliation_status": "gstr2_bills_not_in_koda",
                         "to_check": True,
                         "l10n_in_gst_return_period_id": self.id,
                         "message_ids":[(0, 0, {

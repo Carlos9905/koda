@@ -53,14 +53,14 @@ class PaymentProvider(models.Model):
         endpoint = f'/v2/{endpoint.strip("/")}'
         url = urls.url_join('https://api.mollie.com/', endpoint)
 
-        odoo_version = service.common.exp_version()['server_version']
+        koda_version = service.common.exp_version()['server_version']
         module_version = self.env.ref('base.module_payment_mollie').installed_version
         headers = {
             "Accept": "application/json",
             "Authorization": f'Bearer {self.mollie_api_key}',
             "Content-Type": "application/json",
             # See https://docs.mollie.com/integration-partners/user-agent-strings
-            "User-Agent": f'Odoo/{odoo_version} MollieNativeOdoo/{module_version}',
+            "User-Agent": f'Odoo/{koda_version} MollieNativeOdoo/{module_version}',
         }
 
         try:

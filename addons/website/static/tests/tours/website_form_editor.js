@@ -367,7 +367,7 @@
             trigger: 'iframe #wrapwrap',
             run: () => {
                 const wysiwyg = $('iframe:not(.o_ignore_in_tour)').contents().find('#wrapwrap').data('wysiwyg');
-                wysiwyg.odooEditor.historyStep(true);
+                wysiwyg.kodaEditor.historyStep(true);
             },
         },
         // Edit the submit button using linkDialog.

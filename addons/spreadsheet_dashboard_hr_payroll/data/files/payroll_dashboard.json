@@ -350,7 +350,7 @@
                             "groupBy": [],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left",
                         "stacked": true,
                         "fieldMatching": {
@@ -743,7 +743,7 @@
             "formulaArgSeparator": ","
         }
     },
-    "odooVersion": 5,
+    "kodaVersion": 5,
     "globalFilters": [
         {
             "id": "856ca699-dd18-47ea-a8c7-bb48a37e0f9f",

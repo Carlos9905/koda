@@ -14,7 +14,7 @@ const { ChartPanel } = spreadsheet.components;
 patch(ChartPanel.prototype, {
     get chartTypes() {
         const definition = this.getChartDefinition();
-        const isOdoo = definition.type.startsWith("odoo_");
+        const isOdoo = definition.type.startsWith("koda_");
         return this.getChartTypes(isOdoo);
     },
 
@@ -24,7 +24,7 @@ patch(ChartPanel.prototype, {
     getChartTypes(isOdoo) {
         const result = {};
         for (const key of chartRegistry.getKeys()) {
-            if ((isOdoo && key.startsWith("odoo_")) || (!isOdoo && !key.startsWith("odoo_"))) {
+            if ((isOdoo && key.startsWith("koda_")) || (!isOdoo && !key.startsWith("koda_"))) {
                 result[key] = chartRegistry.get(key).name;
             }
         }
@@ -32,7 +32,7 @@ patch(ChartPanel.prototype, {
     },
 
     onTypeChange(type) {
-        if (this.getChartDefinition().type.startsWith("odoo_")) {
+        if (this.getChartDefinition().type.startsWith("koda_")) {
             const definition = {
                 stacked: false,
                 verticalAxisPosition: "left",

@@ -32,12 +32,12 @@
         'views/new_page_template.xml',
     ],
     'images': [
-        'static/description/odoo_experts_description.jpg',
-        'static/description/odoo_experts_screenshot.jpg',
+        'static/description/koda_experts_description.jpg',
+        'static/description/koda_experts_screenshot.jpg',
     ],
     'images_preview_theme': {
-        'website.s_picture_default_image': '/theme_odoo_experts/static/src/img/snippets/s_picture.jpg',
-        'website.s_text_image_default_image': '/theme_odoo_experts/static/src/img/snippets/s_text_image.jpg',
+        'website.s_picture_default_image': '/theme_koda_experts/static/src/img/snippets/s_picture.jpg',
+        'website.s_text_image_default_image': '/theme_koda_experts/static/src/img/snippets/s_text_image.jpg',
     },
     'configurator_snippets': {
         'homepage': ['s_picture', 's_references', 's_image_text', 's_text_image', 's_title', 's_comparisons', 's_call_to_action'],
@@ -53,7 +53,7 @@
     'live_test_url': 'https://theme-koda-experts.koda.com',
     'assets': {
         'website.assets_editor': [
-            'theme_odoo_experts/static/src/js/tour.js',
+            'theme_koda_experts/static/src/js/tour.js',
         ],
     }
 }

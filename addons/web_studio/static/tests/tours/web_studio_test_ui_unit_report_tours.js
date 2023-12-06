@@ -280,9 +280,9 @@ registry.category("web_tour.tours").add("web_studio.test_basic_report_edition_er
             run() {
                 const editable = this.$anchor[0].querySelector(".koda-editor-editable");
                 const wysiwyg = $(editable).data("wysiwyg");
-                const telse = wysiwyg.odooEditor.document.createElement("t");
+                const telse = wysiwyg.kodaEditor.document.createElement("t");
                 telse.setAttribute("t-else", "");
-                wysiwyg.odooEditor.execCommand("insert", telse);
+                wysiwyg.kodaEditor.execCommand("insert", telse);
             },
         },
         {
@@ -439,11 +439,11 @@ registry.category("web_tour.tours").add("web_studio.test_table_rendering", {
         {
             trigger:
                 ".o-web-studio-report-editor-wysiwyg iframe .invalid_table [oe-origin-tag='td']",
-            run: "text edited with odooEditor",
+            run: "text edited with kodaEditor",
         },
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(1)",
-            run: "text p edited with odooEditor",
+            run: "text p edited with kodaEditor",
         },
         {
             trigger: ".o_web_studio_sidebar input[id='name']",
@@ -528,7 +528,7 @@ registry.category("web_tour.tours").add("web_studio.test_field_placeholder", {
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(0)",
             run() {
-                insertText(this.$anchor[0], "edited with odooEditor");
+                insertText(this.$anchor[0], "edited with kodaEditor");
             },
         },
         {
@@ -1053,7 +1053,7 @@ registry.category("web_tour.tours").add("web_studio.test_xml_and_form_diff", {
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(2)",
             run() {
-                insertText(this.$anchor[0], "edited with odooEditor");
+                insertText(this.$anchor[0], "edited with kodaEditor");
             },
         },
         {

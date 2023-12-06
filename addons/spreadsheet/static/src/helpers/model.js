@@ -66,9 +66,9 @@ export async function freezeOdooData(model) {
             }
         }
         for (const figure of sheet.figures) {
-            if (figure.tag === "chart" && figure.data.type.startsWith("odoo_")) {
+            if (figure.tag === "chart" && figure.data.type.startsWith("koda_")) {
                 await loadBundle("web.chartjs_lib");
-                const img = odooChartToImage(model, figure);
+                const img = kodaChartToImage(model, figure);
                 figure.tag = "image";
                 figure.data = {
                     path: img,
@@ -171,7 +171,7 @@ function isLoaded(model) {
  * @param {object} figure
  * @returns {string}
  */
-function odooChartToImage(model, figure) {
+function kodaChartToImage(model, figure) {
     const runtime = model.getters.getChartRuntime(figure.id);
     // wrap the canvas in a div with a fixed size because chart.js would
     // fill the whole page otherwise

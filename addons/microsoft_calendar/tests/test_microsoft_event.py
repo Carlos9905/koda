@@ -19,17 +19,17 @@ class TestMicrosoftEvent(TestCommon):
         event_uid = self.simple_event.ms_universal_event_id
         events = MicrosoftEvent([{
             "type": "singleInstance",
-            "_odoo_id": self.simple_event.id,
+            "_koda_id": self.simple_event.id,
             "iCalUId": event_uid,
             "id": event_id,
         }])
 
         # act
-        mapped = events._load_odoo_ids_from_db(self.env)
+        mapped = events._load_koda_ids_from_db(self.env)
 
         # assert
         self.assertEqual(len(mapped._events), 1)
-        self.assertEqual(mapped._events[event_id]["_odoo_id"], self.simple_event.id)
+        self.assertEqual(mapped._events[event_id]["_koda_id"], self.simple_event.id)
 
     def test_map_an_event_using_global_id(self):
 
@@ -38,17 +38,17 @@ class TestMicrosoftEvent(TestCommon):
         event_uid = self.simple_event.ms_universal_event_id
         events = MicrosoftEvent([{
             "type": "singleInstance",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": event_uid,
             "id": event_id,
         }])
 
         # act
-        mapped = events._load_odoo_ids_from_db(self.env)
+        mapped = events._load_koda_ids_from_db(self.env)
 
         # assert
         self.assertEqual(len(mapped._events), 1)
-        self.assertEqual(mapped._events[event_id]["_odoo_id"], self.simple_event.id)
+        self.assertEqual(mapped._events[event_id]["_koda_id"], self.simple_event.id)
 
     def test_map_an_event_using_instance_id(self):
         """
@@ -58,17 +58,17 @@ class TestMicrosoftEvent(TestCommon):
         event_id = self.simple_event.ms_organizer_event_id
         events = MicrosoftEvent([{
             "type": "singleInstance",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": False,
             "id": event_id,
         }])
 
         # act
-        mapped = events._load_odoo_ids_from_db(self.env)
+        mapped = events._load_koda_ids_from_db(self.env)
 
         # assert
         self.assertEqual(len(mapped._events), 1)
-        self.assertEqual(mapped._events[event_id]["_odoo_id"], self.simple_event.id)
+        self.assertEqual(mapped._events[event_id]["_koda_id"], self.simple_event.id)
 
     def test_map_an_event_without_uid_using_instance_id(self):
         """
@@ -81,17 +81,17 @@ class TestMicrosoftEvent(TestCommon):
         self.simple_event.ms_universal_event_id = False
         events = MicrosoftEvent([{
             "type": "singleInstance",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": event_uid,
             "id": event_id,
         }])
 
         # act
-        mapped = events._load_odoo_ids_from_db(self.env)
+        mapped = events._load_koda_ids_from_db(self.env)
 
         # assert
         self.assertEqual(len(mapped._events), 1)
-        self.assertEqual(mapped._events[event_id]["_odoo_id"], self.simple_event.id)
+        self.assertEqual(mapped._events[event_id]["_koda_id"], self.simple_event.id)
         self.assertEqual(self.simple_event.ms_universal_event_id, event_uid)
 
     def test_map_an_event_without_uid_using_instance_id_2(self):
@@ -104,17 +104,17 @@ class TestMicrosoftEvent(TestCommon):
         self.simple_event.ms_universal_event_id = False
         events = MicrosoftEvent([{
             "type": "singleInstance",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": False,
             "id": event_id,
         }])
 
         # act
-        mapped = events._load_odoo_ids_from_db(self.env)
+        mapped = events._load_koda_ids_from_db(self.env)
 
         # assert
         self.assertEqual(len(mapped._events), 1)
-        self.assertEqual(mapped._events[event_id]["_odoo_id"], self.simple_event.id)
+        self.assertEqual(mapped._events[event_id]["_koda_id"], self.simple_event.id)
         self.assertEqual(self.simple_event.ms_universal_event_id, False)
 
     def test_map_a_recurrence_using_global_id(self):
@@ -124,17 +124,17 @@ class TestMicrosoftEvent(TestCommon):
         rec_uid = self.recurrence.ms_universal_event_id
         events = MicrosoftEvent([{
             "type": "seriesMaster",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": rec_uid,
             "id": rec_id,
         }])
 
         # act
-        mapped = events._load_odoo_ids_from_db(self.env)
+        mapped = events._load_koda_ids_from_db(self.env)
 
         # assert
         self.assertEqual(len(mapped._events), 1)
-        self.assertEqual(mapped._events[rec_id]["_odoo_id"], self.recurrence.id)
+        self.assertEqual(mapped._events[rec_id]["_koda_id"], self.recurrence.id)
 
     def test_map_a_recurrence_using_instance_id(self):
 
@@ -142,17 +142,17 @@ class TestMicrosoftEvent(TestCommon):
         rec_id = self.recurrence.ms_organizer_event_id
         events = MicrosoftEvent([{
             "type": "seriesMaster",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": False,
             "id": rec_id,
         }])
 
         # act
-        mapped = events._load_odoo_ids_from_db(self.env)
+        mapped = events._load_koda_ids_from_db(self.env)
 
         # assert
         self.assertEqual(len(mapped._events), 1)
-        self.assertEqual(mapped._events[rec_id]["_odoo_id"], self.recurrence.id)
+        self.assertEqual(mapped._events[rec_id]["_koda_id"], self.recurrence.id)
 
     def test_try_to_map_mixed_of_single_events_and_recurrences(self):
 
@@ -165,13 +165,13 @@ class TestMicrosoftEvent(TestCommon):
         events = MicrosoftEvent([
             {
                 "type": "seriesMaster",
-                "_odoo_id": False,
+                "_koda_id": False,
                 "iCalUId": rec_uid,
                 "id": rec_id,
             },
             {
                 "type": "singleInstance",
-                "_odoo_id": False,
+                "_koda_id": False,
                 "iCalUId": event_uid,
                 "id": event_id,
             },
@@ -179,7 +179,7 @@ class TestMicrosoftEvent(TestCommon):
 
         # act & assert
         with self.assertRaises(TypeError):
-            events._load_odoo_ids_from_db(self.env)
+            events._load_koda_ids_from_db(self.env)
 
     def test_match_event_only(self):
 
@@ -188,17 +188,17 @@ class TestMicrosoftEvent(TestCommon):
         event_uid = self.simple_event.ms_universal_event_id
         events = MicrosoftEvent([{
             "type": "singleInstance",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": event_uid,
             "id": event_id,
         }])
 
         # act
-        matched = events.match_with_odoo_events(self.env)
+        matched = events.match_with_koda_events(self.env)
 
         # assert
         self.assertEqual(len(matched._events), 1)
-        self.assertEqual(matched._events[event_id]["_odoo_id"], self.simple_event.id)
+        self.assertEqual(matched._events[event_id]["_koda_id"], self.simple_event.id)
 
     def test_match_recurrence_only(self):
 
@@ -207,17 +207,17 @@ class TestMicrosoftEvent(TestCommon):
         rec_uid = self.recurrence.ms_universal_event_id
         events = MicrosoftEvent([{
             "type": "seriesMaster",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": rec_uid,
             "id": rec_id,
         }])
 
         # act
-        matched = events.match_with_odoo_events(self.env)
+        matched = events.match_with_koda_events(self.env)
 
         # assert
         self.assertEqual(len(matched._events), 1)
-        self.assertEqual(matched._events[rec_id]["_odoo_id"], self.recurrence.id)
+        self.assertEqual(matched._events[rec_id]["_koda_id"], self.recurrence.id)
 
     def test_match_not_typed_recurrence(self):
         """
@@ -232,17 +232,17 @@ class TestMicrosoftEvent(TestCommon):
             "@removed": {
                 "reason": "deleted",
             },
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": rec_uid,
             "id": rec_id,
         }])
 
         # act
-        matched = events.match_with_odoo_events(self.env)
+        matched = events.match_with_koda_events(self.env)
 
         # assert
         self.assertEqual(len(matched._events), 1)
-        self.assertEqual(matched._events[rec_id]["_odoo_id"], self.recurrence.id)
+        self.assertEqual(matched._events[rec_id]["_koda_id"], self.recurrence.id)
 
     def test_match_mix_of_events_and_recurrences(self):
 
@@ -255,7 +255,7 @@ class TestMicrosoftEvent(TestCommon):
         events = MicrosoftEvent([
             {
                 "type": "singleInstance",
-                "_odoo_id": False,
+                "_koda_id": False,
                 "iCalUId": event_uid,
                 "id": event_id,
             },
@@ -263,32 +263,32 @@ class TestMicrosoftEvent(TestCommon):
                 "@removed": {
                     "reason": "deleted",
                 },
-                "_odoo_id": False,
+                "_koda_id": False,
                 "iCalUId": rec_uid,
                 "id": rec_id,
             }
         ])
 
         # act
-        matched = events.match_with_odoo_events(self.env)
+        matched = events.match_with_koda_events(self.env)
 
         # assert
         self.assertEqual(len(matched._events), 2)
-        self.assertEqual(matched._events[event_id]["_odoo_id"], self.simple_event.id)
-        self.assertEqual(matched._events[rec_id]["_odoo_id"], self.recurrence.id)
+        self.assertEqual(matched._events[event_id]["_koda_id"], self.simple_event.id)
+        self.assertEqual(matched._events[rec_id]["_koda_id"], self.recurrence.id)
 
     def test_ignore_not_found_items(self):
 
         # arrange
         events = MicrosoftEvent([{
             "type": "singleInstance",
-            "_odoo_id": False,
+            "_koda_id": False,
             "iCalUId": "UNKNOWN_EVENT",
             "id": "UNKNOWN_EVENT",
         }])
 
         # act
-        matched = events.match_with_odoo_events(self.env)
+        matched = events.match_with_koda_events(self.env)
 
         # assert
         self.assertEqual(len(matched._events), 0)
@@ -343,7 +343,7 @@ class TestMicrosoftEvent(TestCommon):
         } for x in range(record_count)]
 
         events = MicrosoftEvent(single_event_data)
-        mapped = events._load_odoo_ids_from_db(self.env)
+        mapped = events._load_koda_ids_from_db(self.env)
         self.assertFalse(mapped, "No koda record should correspond to the microsoft values")
 
         recurring_event_data = [{
@@ -404,5 +404,5 @@ class TestMicrosoftEvent(TestCommon):
             } for x in range(record_count)]
 
         recurrences = MicrosoftEvent(recurring_event_data)
-        mapped = recurrences._load_odoo_ids_from_db(self.env)
+        mapped = recurrences._load_koda_ids_from_db(self.env)
         self.assertFalse(mapped, "No koda record should correspond to the microsoft values")

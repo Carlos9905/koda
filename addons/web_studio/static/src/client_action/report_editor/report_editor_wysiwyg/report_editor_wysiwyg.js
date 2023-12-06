@@ -281,15 +281,15 @@ export class ReportEditorWysiwyg extends Component {
                 this.observer = null;
             }
             this.wysiwyg = wysiwyg;
-            const odooEditor = this.wysiwyg.odooEditor;
+            const kodaEditor = this.wysiwyg.kodaEditor;
 
             const undoRedoState = this.undoRedoState;
             undoRedoState.canUndo = false;
             undoRedoState.canRedo = false;
 
-            odooEditor.addEventListener("historyStep", () => {
-                undoRedoState.canUndo = odooEditor.historyCanUndo();
-                undoRedoState.canRedo = odooEditor.historyCanRedo();
+            kodaEditor.addEventListener("historyStep", () => {
+                undoRedoState.canUndo = kodaEditor.historyCanUndo();
+                undoRedoState.canRedo = kodaEditor.historyCanRedo();
                 this.reportEditorModel.isDirty = this.undoRedoState.canUndo;
             });
 
@@ -304,21 +304,21 @@ export class ReportEditorWysiwyg extends Component {
             };
 
             this.observer = new MutationObserver((records) =>
-                this.domChangesDirtyMutations(odooEditor, records)
+                this.domChangesDirtyMutations(kodaEditor, records)
             );
-            odooEditor.addEventListener("observerUnactive", () => {
+            kodaEditor.addEventListener("observerUnactive", () => {
                 if (this.observer) {
-                    this.domChangesDirtyMutations(odooEditor, this.observer.takeRecords());
+                    this.domChangesDirtyMutations(kodaEditor, this.observer.takeRecords());
                     this.observer.disconnect();
                 }
             });
 
-            odooEditor.addEventListener("observerActive", observe);
+            kodaEditor.addEventListener("observerActive", observe);
 
-            odooEditor.observerUnactive();
+            kodaEditor.observerUnactive();
             if (koda.debug) {
                 ["t-esc", "t-out", "t-field"].forEach((tAtt) => {
-                    odooEditor.document.querySelectorAll(`*[${tAtt}]`).forEach((e) => {
+                    kodaEditor.document.querySelectorAll(`*[${tAtt}]`).forEach((e) => {
                         // Save the previous title to set it back before saving the report
                         if (e.hasAttribute("title")) {
                             e.setAttribute("data-oe-title", e.getAttribute("title"));
@@ -327,14 +327,14 @@ export class ReportEditorWysiwyg extends Component {
                     });
                 });
             }
-            odooEditor.observerActive();
+            kodaEditor.observerActive();
         };
 
         this.undoRedoState = reactive({
             canUndo: false,
             canRedo: false,
-            undo: () => this.wysiwyg?.odooEditor.historyUndo(),
-            redo: () => this.wysiwyg?.odooEditor.historyRedo(),
+            undo: () => this.wysiwyg?.kodaEditor.historyUndo(),
+            redo: () => this.wysiwyg?.kodaEditor.historyRedo(),
         });
     }
 
@@ -432,13 +432,13 @@ export class ReportEditorWysiwyg extends Component {
     }
 
     async discard() {
-        this.wysiwyg.odooEditor.document.getSelection().removeAllRanges();
+        this.wysiwyg.kodaEditor.document.getSelection().removeAllRanges();
         await this.wysiwyg.cancel(false);
         await this.reportEditorModel.discardReport();
     }
 
-    domChangesDirtyMutations(odooEditor, records) {
-        records = odooEditor.filterMutationRecords(records);
+    domChangesDirtyMutations(kodaEditor, records) {
+        records = kodaEditor.filterMutationRecords(records);
 
         for (const record of records) {
             if (record.type === "attributes") {
@@ -502,8 +502,8 @@ export class ReportEditorWysiwyg extends Component {
     }
 
     getFieldPopoverParams() {
-        const odooEditor = this.wysiwyg.odooEditor;
-        const doc = odooEditor.document;
+        const kodaEditor = this.wysiwyg.kodaEditor;
+        const doc = kodaEditor.document;
 
         const resModel = this.reportEditorModel.reportResModel;
         const docSelection = doc.getSelection();
@@ -543,7 +543,7 @@ export class ReportEditorWysiwyg extends Component {
                 relationName
             ) => {
                 this.wysiwyg.focus();
-                const doc = this.wysiwyg.odooEditor.document;
+                const doc = this.wysiwyg.kodaEditor.document;
 
                 const table = doc.createElement("table");
                 table.classList.add("table", "table-sm");
@@ -584,7 +584,7 @@ export class ReportEditorWysiwyg extends Component {
                 td.textContent = _t("Insert a field...");
                 tr.appendChild(td);
 
-                this.wysiwyg.odooEditor.execCommand("insert", table);
+                this.wysiwyg.kodaEditor.execCommand("insert", table);
                 this.iframeRef.el.focus();
                 setSelection(...startPos(td), ...endPos(td), true);
             },
@@ -598,7 +598,7 @@ export class ReportEditorWysiwyg extends Component {
             showOnlyX2ManyFields: false,
             validate: (qwebVar, fieldNameChain, defaultValue = "", is_image) => {
                 this.wysiwyg.focus();
-                const doc = this.wysiwyg.odooEditor.document;
+                const doc = this.wysiwyg.kodaEditor.document;
                 const span = doc.createElement("span");
                 span.textContent = defaultValue;
                 span.setAttribute("t-field", `${qwebVar}.${fieldNameChain}`);
@@ -611,7 +611,7 @@ export class ReportEditorWysiwyg extends Component {
                     span.setAttribute("t-options-widget", "'image'");
                     span.setAttribute("t-options-qweb_img_raw_data", 1);
                 }
-                this.wysiwyg.odooEditor.execCommand("insert", span);
+                this.wysiwyg.kodaEditor.execCommand("insert", span);
             },
         });
     }
@@ -642,7 +642,7 @@ export class ReportEditorWysiwyg extends Component {
     }
 
     async resetReport() {
-        this.wysiwyg.odooEditor.document.getSelection().removeAllRanges();
+        this.wysiwyg.kodaEditor.document.getSelection().removeAllRanges();
         const state = reactive({ includeHeaderFooter: true });
         this.addDialog(ResetConfirmatiopnPopup, {
             title: _t("Reset report"),

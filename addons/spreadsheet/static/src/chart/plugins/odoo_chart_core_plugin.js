@@ -51,9 +51,9 @@ export class OdooChartCorePlugin extends CorePlugin {
         switch (cmd.type) {
             case "CREATE_CHART": {
                 switch (cmd.definition.type) {
-                    case "odoo_pie":
-                    case "odoo_bar":
-                    case "odoo_line":
+                    case "koda_pie":
+                    case "koda_bar":
+                    case "koda_line":
                         this._addOdooChart(cmd.id);
                         break;
                 }
@@ -117,7 +117,7 @@ export class OdooChartCorePlugin extends CorePlugin {
         for (const sheet of data.sheets) {
             if (sheet.figures) {
                 for (const figure of sheet.figures) {
-                    if (figure.tag === "chart" && figure.data.type.startsWith("odoo_")) {
+                    if (figure.tag === "chart" && figure.data.type.startsWith("koda_")) {
                         this._addOdooChart(figure.id, figure.data.fieldMatching);
                     }
                 }
@@ -133,7 +133,7 @@ export class OdooChartCorePlugin extends CorePlugin {
         for (const sheet of data.sheets) {
             if (sheet.figures) {
                 for (const figure of sheet.figures) {
-                    if (figure.tag === "chart" && figure.data.type.startsWith("odoo_")) {
+                    if (figure.tag === "chart" && figure.data.type.startsWith("koda_")) {
                         figure.data.fieldMatching = this.getChartFieldMatch(figure.id);
                         figure.data.searchParams.domain = new Domain(
                             figure.data.searchParams.domain
@@ -148,7 +148,7 @@ export class OdooChartCorePlugin extends CorePlugin {
     // -------------------------------------------------------------------------
 
     /**
-     * Get the current odooChartFieldMatching of a chart
+     * Get the current kodaChartFieldMatching of a chart
      *
      * @param {string} chartId
      * @param {string} filterId
@@ -158,7 +158,7 @@ export class OdooChartCorePlugin extends CorePlugin {
     }
 
     /**
-     * Sets the current odooChartFieldMatching of a chart
+     * Sets the current kodaChartFieldMatching of a chart
      *
      * @param {string} filterId
      * @param {Record<string,FieldMatching>} chartFieldMatches

@@ -3,7 +3,7 @@
     <data>
         <template id="ack_template">
             <RespuestaDTE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0" xmlns="http://www.sii.cl/SiiDte">
-                <Resultado ID="odoo_resp">
+                <Resultado ID="koda_resp">
                     <Caratula version="1.0">
                         <RutResponde t-out="format_vat(move.company_id.vat)"/>
                         <RutRecibe t-out="format_vat(move.partner_id.vat)"/>

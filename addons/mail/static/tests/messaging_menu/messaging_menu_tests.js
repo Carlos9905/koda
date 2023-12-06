@@ -824,7 +824,7 @@ QUnit.test("click on preview should mark as read and open the thread", async () 
     const messageId = pyEnv["mail.message"].create({
         model: "res.partner",
         body: "not empty",
-        author_id: pyEnv.odoobotId,
+        author_id: pyEnv.kodabotId,
         needaction: true,
         needaction_partner_ids: [pyEnv.currentPartnerId],
         res_id: partnerId,
@@ -853,7 +853,7 @@ QUnit.test(
         const messageId = pyEnv["mail.message"].create({
             model: "res.partner",
             body: "not empty",
-            author_id: pyEnv.odoobotId,
+            author_id: pyEnv.kodabotId,
             needaction: true,
             needaction_partner_ids: [pyEnv.currentPartnerId],
             res_id: partnerId,

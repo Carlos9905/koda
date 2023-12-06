@@ -244,7 +244,7 @@ class TestMailgateway(MailCommon):
 
     @mute_logger('koda.addons.mail.models.mail_thread')
     def test_message_process_followers(self):
-        """ Incoming email: recognized author not archived and not odoobot:
+        """ Incoming email: recognized author not archived and not kodabot:
         added as follower. Also test corner cases: archived. """
         partner_archived = self.env['res.partner'].create({
             'active': False,
@@ -292,20 +292,20 @@ class TestMailgateway(MailCommon):
                          'message_process: archived partner -> no follower')
 
         # partner_root -> never again
-        odoobot = self.env.ref('base.partner_root')
-        odoobot.active = True
-        odoobot.email = 'odoobot@example.com'
+        kodabot = self.env.ref('base.partner_root')
+        kodabot.active = True
+        kodabot.email = 'kodabot@example.com'
         with self.mock_mail_gateway():
             record4 = self.format_and_process(
-                MAIL_TEMPLATE, odoobot.email_formatted, f'groups@{self.alias_domain}',
+                MAIL_TEMPLATE, kodabot.email_formatted, f'groups@{self.alias_domain}',
                 subject='Odoobot Automatic Answer')
 
-        self.assertEqual(record4.message_ids[0].author_id, odoobot)
-        self.assertEqual(record4.message_ids[0].email_from, odoobot.email_formatted)
+        self.assertEqual(record4.message_ids[0].author_id, kodabot)
+        self.assertEqual(record4.message_ids[0].email_from, kodabot.email_formatted)
         self.assertEqual(record4.message_follower_ids.partner_id, self.env['res.partner'],
-                         'message_process: odoobot -> no follower')
+                         'message_process: kodabot -> no follower')
         self.assertEqual(record4.message_partner_ids, self.env['res.partner'],
-                         'message_process: odoobot -> no follower')
+                         'message_process: kodabot -> no follower')
 
     # --------------------------------------------------
     # Author recognition
@@ -429,7 +429,7 @@ class TestMailgateway(MailCommon):
 
         messages = test_record.message_ids
 
-        self.assertFalse(self.user_root.active, 'notification logic relies on odoobot being archived')
+        self.assertFalse(self.user_root.active, 'notification logic relies on kodabot being archived')
 
         test_users = [self.user_employee, self.user_root]
         email_tos = [f'author-partner@{self.alias_domain}', f'some_non_aliased_email@{self.alias_domain}']
@@ -1262,7 +1262,7 @@ class TestMailgateway(MailCommon):
             extra=f'References: {bot_notification_message.message_id}'
         )
         new_msg = self.test_record.message_ids[0]
-        self.assertFalse(new_msg.is_internal, "Responses to messages sent by odoobot should always be public.")
+        self.assertFalse(new_msg.is_internal, "Responses to messages sent by kodabot should always be public.")
         self.assertEqual(new_msg.parent_id, bot_notification_message)
         self.assertEqual(new_msg.subtype_id, self.env.ref('mail.mt_comment'))
 
@@ -1281,7 +1281,7 @@ class TestMailgateway(MailCommon):
             extra=f'References: {some_notification_message.message_id}'
         )
         new_msg = self.test_record.message_ids[0]
-        self.assertTrue(new_msg.is_internal, "Responses to messages sent by anyone but odoobot should keep"
+        self.assertTrue(new_msg.is_internal, "Responses to messages sent by anyone but kodabot should keep"
                         "the 'is_internal' value of the parent.")
         self.assertEqual(new_msg.parent_id, some_notification_message)
         self.assertEqual(new_msg.subtype_id, self.env.ref('mail.mt_note'))

@@ -228,7 +228,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 },
@@ -349,7 +349,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -390,7 +390,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -632,7 +632,7 @@
         "1f39216f-cebd-4884-8cfb-27d94e5c2e22": "website_slides.website_slides_menu_report_attendees",
         "165a7593-a6b6-4c5d-8758-d9b09572fa30": "website_sale_slides.website_slides_menu_report_revenues"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

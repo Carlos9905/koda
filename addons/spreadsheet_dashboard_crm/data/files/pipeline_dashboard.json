@@ -1454,7 +1454,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -1506,7 +1506,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -1807,7 +1807,7 @@
         "5dc98740-8fc9-432d-b386-59e6e5c8b7e8": "crm.crm_opportunity_report_menu",
         "735dabd8-96dc-44a1-9871-f35a94c347f5": "crm.menu_crm_opportunities"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {
         "1": {
             "columns": [

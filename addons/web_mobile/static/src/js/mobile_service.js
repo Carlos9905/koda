@@ -17,7 +17,7 @@ const mobileService = {
         if (mobile.methods.switchAccount) {
             // remove "Log Out" and "My Odoo.com Account"
             userMenuRegistry.remove('log_out');
-            userMenuRegistry.remove('odoo_account');
+            userMenuRegistry.remove('koda_account');
 
             userMenuRegistry.add("web_mobile.switch", switchAccountItem);
         }

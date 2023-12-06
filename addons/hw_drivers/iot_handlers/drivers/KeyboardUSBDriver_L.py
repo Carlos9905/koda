@@ -84,7 +84,7 @@ class KeyboardUSBDriver(Driver):
 
     @classmethod
     def send_layouts_list(cls):
-        server = helpers.get_odoo_server_url()
+        server = helpers.get_koda_server_url()
         if server:
             urllib3.disable_warnings()
             pm = urllib3.PoolManager(cert_reqs='CERT_NONE')

@@ -25,7 +25,7 @@ patch(MockServer.prototype, {
             initBusId: this.lastBusNotificationId,
             menu_id: false,
             needaction_inbox_counter: false,
-            odoobot: this._mockResPartnerMailPartnerFormat(this.odoobotId).get(this.odoobotId),
+            kodabot: this._mockResPartnerMailPartnerFormat(this.kodabotId).get(this.kodabotId),
             shortcodes: [],
             starred_counter: false,
         };

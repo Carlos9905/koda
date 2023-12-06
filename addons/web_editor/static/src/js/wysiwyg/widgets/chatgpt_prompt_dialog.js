@@ -18,7 +18,7 @@ export class ChatGPTPromptDialog extends ChatGPTDialog {
 
     setup() {
         super.setup();
-        this.assistantAvatarUrl = `${browser.location.origin}/web_editor/static/src/img/odoobot_transparent.png`;
+        this.assistantAvatarUrl = `${browser.location.origin}/web_editor/static/src/img/kodabot_transparent.png`;
         this.userAvatarUrl = `${browser.location.origin}/web/image?model=res.users&field=avatar_128&id=${encodeURIComponent(session.uid)}`;
         this.state = useState({
             ...this.state,

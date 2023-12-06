@@ -3799,11 +3799,11 @@ export class OdooEditor extends EventTarget {
         }
         const dataHtmlElement = document.createElement('data');
         dataHtmlElement.append(rangeContent);
-        const odooHtml = dataHtmlElement.innerHTML;
-        const odooText = selection.toString();
-        clipboardEvent.clipboardData.setData('text/plain', odooText);
-        clipboardEvent.clipboardData.setData('text/html', odooHtml);
-        clipboardEvent.clipboardData.setData('text/koda-editor', odooHtml);
+        const kodaHtml = dataHtmlElement.innerHTML;
+        const kodaText = selection.toString();
+        clipboardEvent.clipboardData.setData('text/plain', kodaText);
+        clipboardEvent.clipboardData.setData('text/html', kodaHtml);
+        clipboardEvent.clipboardData.setData('text/koda-editor', kodaHtml);
     }
     /**
      * @private
@@ -4728,7 +4728,7 @@ export class OdooEditor extends EventTarget {
         }
         ev.preventDefault();
         const files = getImageFiles(ev.clipboardData);
-        const odooEditorHtml = ev.clipboardData.getData('text/koda-editor');
+        const kodaEditorHtml = ev.clipboardData.getData('text/koda-editor');
         const clipboardHtml = ev.clipboardData.getData('text/html');
         const targetSupportsHtmlContent = isHtmlContentSupported(sel.anchorNode);
         // Replace entire link if its label is fully selected.
@@ -4738,8 +4738,8 @@ export class OdooEditor extends EventTarget {
             link.remove();
             setSelection(...start, ...start, false);
         }
-        if (odooEditorHtml && targetSupportsHtmlContent) {
-            const fragment = parseHTML(this.document, odooEditorHtml);
+        if (kodaEditorHtml && targetSupportsHtmlContent) {
+            const fragment = parseHTML(this.document, kodaEditorHtml);
             DOMPurify.sanitize(fragment, { IN_PLACE: true });
             if (fragment.hasChildNodes()) {
                 this._applyCommand('insert', fragment);

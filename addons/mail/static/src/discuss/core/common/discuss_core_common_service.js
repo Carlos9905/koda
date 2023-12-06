@@ -122,7 +122,7 @@ export class DiscussCoreCommon {
                 const lastMessageId = this.messageService.getLastMessageId();
                 const message = this.store.Message.insert(
                     {
-                        author: this.store.odoobot,
+                        author: this.store.kodabot,
                         body,
                         id: lastMessageId + 0.01,
                         is_note: true,
@@ -277,7 +277,7 @@ export class DiscussCoreCommon {
             }
         }
         if (
-            !channel.chatPartner?.eq(this.store.odoobot) &&
+            !channel.chatPartner?.eq(this.store.kodabot) &&
             channel.type !== "channel" &&
             this.store.user
         ) {

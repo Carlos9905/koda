@@ -26,7 +26,7 @@ export class IoTRestartOdooOrReboot extends Component {
     async onClick() {
         this.dialog.add(ConfirmationDialog, {
             body:
-                this.props.action == "restart_odoo"
+                this.props.action == "restart_koda"
                     ? _t("Are you sure you want to restart Odoo on the IoT box?")
                     : _t("Are you sure you want to reboot the IoT box?"),
             confirm: () => this.restartOdooOrReboot(),
@@ -48,7 +48,7 @@ export class IoTRestartOdooOrReboot extends Component {
     }
 
     async callRestartMethodOnServer() {
-        /// Call "restart_odoo_or_reboot" method from "hw_posbox_homepage" controller
+        /// Call "restart_koda_or_reboot" method from "hw_posbox_homepage" controller
         let restartResponse;
         try {
             this.showMsgAndClearInterval(
@@ -57,7 +57,7 @@ export class IoTRestartOdooOrReboot extends Component {
                 _t("Restarting"),
                 "warning"
             );
-            restartResponse = await this.rpc(this.ip_url + "/iot_restart_odoo_or_reboot", {
+            restartResponse = await this.rpc(this.ip_url + "/iot_restart_koda_or_reboot", {
                 action: this.props.action,
             });
         } catch (error) {
@@ -160,4 +160,4 @@ export const ioTRestartOdooOrReboot = {
         };
     },
 };
-registry.category("view_widgets").add("iot_restart_odoo_or_reboot", ioTRestartOdooOrReboot);
+registry.category("view_widgets").add("iot_restart_koda_or_reboot", ioTRestartOdooOrReboot);

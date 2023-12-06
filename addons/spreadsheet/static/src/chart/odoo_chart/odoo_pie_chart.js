@@ -2,14 +2,14 @@
 
 import * as spreadsheet from "@koda/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
-import { OdooChart } from "./odoo_chart";
+import { OdooChart } from "./koda_chart";
 
 const { chartRegistry } = spreadsheet.registries;
 
 const { getDefaultChartJsRuntime, chartFontColor, ChartColors } = spreadsheet.helpers;
 
-chartRegistry.add("odoo_pie", {
-    match: (type) => type === "odoo_pie",
+chartRegistry.add("koda_pie", {
+    match: (type) => type === "koda_pie",
     createChart: (definition, sheetId, getters) => new OdooChart(definition, sheetId, getters),
     getChartRuntime: createOdooChartRuntime,
     validateChartDefinition: (validator, definition) =>
@@ -41,7 +41,7 @@ function createOdooChartRuntime(chart, getters) {
 function getPieConfiguration(chart, labels, locale) {
     const fontColor = chartFontColor(chart.background);
     const config = getDefaultChartJsRuntime(chart, labels, fontColor, { locale });
-    config.type = chart.type.replace("odoo_", "");
+    config.type = chart.type.replace("koda_", "");
     const legend = {
         ...config.options.legend,
         display: chart.legendPosition !== "none",

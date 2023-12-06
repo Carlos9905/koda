@@ -90,7 +90,7 @@ options.registry.TableOfContent = options.Class.extend({
             this.trigger_up('remove_snippet', {$snippet: this.$target});
             return;
         }
-        this.options.wysiwyg && this.options.wysiwyg.odooEditor.unbreakableStepUnactive();
+        this.options.wysiwyg && this.options.wysiwyg.kodaEditor.unbreakableStepUnactive();
         const navEl = this.$target[0].querySelector('.s_table_of_content_navbar');
         const headingsEls = this.$target.find(this.targetedElements).toArray()
             .filter(el => !el.closest('.o_snippet_desktop_invisible'));

@@ -2,7 +2,7 @@
 
 import * as spreadsheet from "@koda/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
-import { OdooChart } from "./odoo_chart";
+import { OdooChart } from "./koda_chart";
 import { LINE_FILL_TRANSPARENCY } from "@web/views/graph/graph_renderer";
 
 const { chartRegistry } = spreadsheet.registries;
@@ -34,8 +34,8 @@ export class OdooLineChart extends OdooChart {
     }
 }
 
-chartRegistry.add("odoo_line", {
-    match: (type) => type === "odoo_line",
+chartRegistry.add("koda_line", {
+    match: (type) => type === "koda_line",
     createChart: (definition, sheetId, getters) => new OdooLineChart(definition, sheetId, getters),
     getChartRuntime: createOdooChartRuntime,
     validateChartDefinition: (validator, definition) =>
@@ -84,7 +84,7 @@ function createOdooChartRuntime(chart, getters) {
 function getLineConfiguration(chart, labels, locale) {
     const fontColor = chartFontColor(chart.background);
     const config = getDefaultChartJsRuntime(chart, labels, fontColor, { locale });
-    config.type = chart.type.replace("odoo_", "");
+    config.type = chart.type.replace("koda_", "");
     const legend = {
         ...config.options.legend,
         display: chart.legendPosition !== "none",

@@ -660,7 +660,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left"
                     }
                 },
@@ -738,7 +738,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -1108,7 +1108,7 @@
         "683afc26-bbb2-4647-8e80-e3699839ffd5": "mrp.menu_mrp_workcenter_productivity_report",
         "9f95d0f4-ad80-45de-970a-9897eab4d56f": "mrp.menu_mrp_workcenter_productivity_report"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

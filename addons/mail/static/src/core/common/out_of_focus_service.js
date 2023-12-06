@@ -132,7 +132,7 @@ export class OutOfFocusService {
     sendNativeNotification(title, message) {
         const notification = new Notification(title, {
             body: message,
-            icon: "/mail/static/src/img/odoobot_transparent.png",
+            icon: "/mail/static/src/img/kodabot_transparent.png",
         });
         notification.addEventListener("click", ({ target: notification }) => {
             window.focus();

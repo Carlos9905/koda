@@ -81,7 +81,7 @@ class TestFrontDesk(MailCommon):
         self.station.notify_email = True
         with self.mock_mail_gateway():
             self.visitor_1.state = 'checked_in'
-        self.assertSentEmail('"OdooBot" <odoobot@example.com>', self.partner_1)
+        self.assertSentEmail('"OdooBot" <kodabot@example.com>', self.partner_1)
 
     def test_host_notify_sms(self):
         '''Test that the host gets the nofication through sms when visitor checks in'''

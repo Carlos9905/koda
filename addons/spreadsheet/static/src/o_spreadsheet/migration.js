@@ -19,7 +19,7 @@ const dmyRegex = /^([0|1|2|3][1-9])\/(0[1-9]|1[0-2])\/(\d{4})$/i;
 
 export function migrate(data) {
     let _data = load(data, !!koda.debug);
-    const version = _data.odooVersion || 0;
+    const version = _data.kodaVersion || 0;
     if (version < 1) {
         _data = migrate0to1(_data);
     }
@@ -239,10 +239,10 @@ function migrate5to6(data) {
 
 export class OdooVersion extends CorePlugin {
     export(data) {
-        data.odooVersion = ODOO_VERSION;
+        data.kodaVersion = ODOO_VERSION;
     }
 }
 
 OdooVersion.getters = [];
 
-corePluginRegistry.add("odooMigration", OdooVersion);
+corePluginRegistry.add("kodaMigration", OdooVersion);

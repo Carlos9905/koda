@@ -552,7 +552,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_line",
+                        "type": "koda_line",
                         "verticalAxisPosition": "left",
                         "stacked": true,
                         "fieldMatching": {
@@ -748,7 +748,7 @@
         }
     },
     "uniqueFigureIds": true,
-    "odooVersion": 5,
+    "kodaVersion": 5,
     "globalFilters": [
         {
             "id": "eefac62b-900a-4197-95e9-9a4cdbb832d6",

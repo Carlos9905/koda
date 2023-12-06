@@ -93,5 +93,5 @@ class WebManifest(http.Controller):
     def offline(self):
         """ Returns the offline page delivered by the service worker """
         return request.render('web.webclient_offline', {
-            'odoo_icon': base64.b64encode(file_open(self._icon_path(), 'rb').read())
+            'koda_icon': base64.b64encode(file_open(self._icon_path(), 'rb').read())
         })

@@ -85,7 +85,7 @@ export function preferencesItem(env) {
     };
 }
 
-function odooAccountItem(env) {
+function kodaAccountItem(env) {
     return {
         type: "item",
         id: "account",
@@ -125,5 +125,5 @@ registry
     .add("shortcuts", shortCutsItem)
     .add("separator", separator)
     .add("profile", preferencesItem)
-    .add("odoo_account", odooAccountItem)
+    .add("koda_account", kodaAccountItem)
     .add("log_out", logOutItem);

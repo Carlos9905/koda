@@ -2734,7 +2734,7 @@
             "formulaArgSeparator": ","
         }
     },
-    "odooVersion": 5,
+    "kodaVersion": 5,
     "globalFilters": [
         {
             "id": "c565eee4-374b-4779-8c12-f59634a490bf",

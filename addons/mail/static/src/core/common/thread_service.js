@@ -934,7 +934,7 @@ export class ThreadService {
             thread.message_needaction_counter++;
         }
         if (
-            thread.chatPartner?.eq(this.store.odoobot) ||
+            thread.chatPartner?.eq(this.store.kodabot) ||
             thread.muteUntilDateTime ||
             thread.custom_notifications === "no_notif" ||
             (thread.custom_notifications === "mentions" &&

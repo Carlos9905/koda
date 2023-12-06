@@ -55,7 +55,7 @@ class TestAccountAvalaraInternalCommon(TestAccountAvataxCommon):
 
 @tagged("-at_install", "post_install")
 class TestAccountAvalaraInternal(TestAccountAvalaraInternalCommon):
-    def test_01_odoo_invoice(self):
+    def test_01_koda_invoice(self):
         invoice, response = self._create_invoice_01_and_expected_response()
         with self._capture_request(return_value=response):
             self.assertInvoice(invoice, test_exact_response=response)
@@ -65,7 +65,7 @@ class TestAccountAvalaraInternal(TestAccountAvalaraInternalCommon):
             invoice.button_draft()
             mocked_uncommit.assert_called()
 
-    def test_02_odoo_invoice(self):
+    def test_02_koda_invoice(self):
         invoice, response = self._create_invoice_02_and_expected_response()
         with self._capture_request(return_value=response):
             self.assertInvoice(invoice, test_exact_response=response)
@@ -75,7 +75,7 @@ class TestAccountAvalaraInternal(TestAccountAvalaraInternalCommon):
             invoice.button_draft()
             mocked_uncommit.assert_called()
 
-    def test_01_odoo_refund(self):
+    def test_01_koda_refund(self):
         invoice, response = self._create_invoice_01_and_expected_response()
 
         with self._capture_request(return_value=response):
@@ -242,13 +242,13 @@ class TestAccountAvalaraInternal(TestAccountAvalaraInternalCommon):
 
 @tagged("external_l10n", "external", "-at_install", "post_install", "-standard")
 class TestAccountAvalaraInternalIntegration(TestAccountAvalaraInternalCommon):
-    def test_integration_01_odoo_invoice(self):
+    def test_integration_01_koda_invoice(self):
         with self._skip_no_credentials():
             invoice, _ = self._create_invoice_01_and_expected_response()
             self.assertInvoice(invoice, test_exact_response=False)
             invoice.button_draft()
 
-    def test_integration_02_odoo_invoice(self):
+    def test_integration_02_koda_invoice(self):
         with self._skip_no_credentials():
             invoice, _ = self._create_invoice_02_and_expected_response()
             self.assertInvoice(invoice, test_exact_response=False)

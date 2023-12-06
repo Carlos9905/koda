@@ -64,7 +64,7 @@ export class OdooChart extends AbstractChart {
         return {
             metaData: {
                 ...this.metaData,
-                mode: this.type.replace("odoo_", ""),
+                mode: this.type.replace("koda_", ""),
             },
             searchParams: this.searchParams,
         };

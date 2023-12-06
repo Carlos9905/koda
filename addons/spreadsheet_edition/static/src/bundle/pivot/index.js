@@ -13,7 +13,7 @@ import { insertPivot } from "./pivot_init_callback";
 
 const { featurePluginRegistry, sidePanelRegistry, cellMenuRegistry } = spreadsheet.registries;
 
-featurePluginRegistry.add("odooPivotAutofillPlugin", PivotAutofillPlugin);
+featurePluginRegistry.add("kodaPivotAutofillPlugin", PivotAutofillPlugin);
 
 sidePanelRegistry.add("PIVOT_PROPERTIES_PANEL", {
     title: () => _t("Pivot properties"),

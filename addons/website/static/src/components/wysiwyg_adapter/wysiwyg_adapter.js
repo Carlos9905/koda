@@ -158,7 +158,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
         var $dropdownMenuToggles = $editableWindow.$('.o_mega_menu_toggle, #o_main_nav .dropdown-toggle');
         $dropdownMenuToggles.removeAttr('data-bs-toggle').dropdown('dispose');
         $dropdownMenuToggles.on('click.wysiwyg_megamenu', ev => {
-            this.odooEditor.observerUnactive();
+            this.kodaEditor.observerUnactive();
             var $toggle = $(ev.currentTarget);
 
             // Each time we toggle a dropdown, we will destroy the dropdown
@@ -176,7 +176,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                         this._toggleMegaMenu($toggle[0]);
                     }
                 })
-                .then(() => this.odooEditor.observerActive());
+                .then(() => this.kodaEditor.observerActive());
         });
 
         // Ensure :blank oe_structure elements are in fact empty as ':blank'
@@ -189,7 +189,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
         await super.startEdition();
 
         // Disable OdooEditor observer's while setting up classes
-        this.odooEditor.observerUnactive();
+        this.kodaEditor.observerUnactive();
         this._addEditorMessages();
         if (this.props.beforeEditorActive) {
             await this.props.beforeEditorActive(this.$editable);
@@ -210,10 +210,10 @@ export class WysiwygAdapterComponent extends Wysiwyg {
         }
         this.props.wysiwygReady();
         // Wait for widgets to be destroyed and restarted before setting
-        // the dirty observer (not to be confused with odooEditor
+        // the dirty observer (not to be confused with kodaEditor
         // observer) as the widgets might trigger DOM mutations.
         this._setObserver();
-        this.odooEditor.observerActive();
+        this.kodaEditor.observerActive();
     }
     /**
      * Stop the widgets and save the content.
@@ -391,11 +391,11 @@ export class WysiwygAdapterComponent extends Wysiwyg {
      */
     _setObserver() {
         const processRecords = (records) => {
-            records = this.odooEditor.filterMutationRecords(records);
+            records = this.kodaEditor.filterMutationRecords(records);
             // Skip the step for this stack because if the editor undo the first
             // step that has a dirty element, the following code would have
             // generated a new stack and break the "redo" of the editor.
-            this.odooEditor.automaticStepSkipStack();
+            this.kodaEditor.automaticStepSkipStack();
             for (const record of records) {
                 const $savable = $(record.target).closest(this.savableSelector);
 
@@ -413,13 +413,13 @@ export class WysiwygAdapterComponent extends Wysiwyg {
 
         this._observe();
 
-        this.odooEditor.addEventListener('observerUnactive', () => {
+        this.kodaEditor.addEventListener('observerUnactive', () => {
             if (this.observer) {
                 processRecords(this.observer.takeRecords());
                 this.observer.disconnect();
             }
         });
-        this.odooEditor.addEventListener('observerActive', this._observe.bind(this));
+        this.kodaEditor.addEventListener('observerActive', this._observe.bind(this));
     }
     /**
      * @private
@@ -645,7 +645,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 100,
                 description: _t('Insert an alert snippet'),
                 fontawesome: 'fa-info',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_alert"]');
                 },
@@ -656,7 +656,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 90,
                 description: _t('Insert a rating snippet'),
                 fontawesome: 'fa-star-half-o',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_rating"]');
                 },
@@ -667,7 +667,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 80,
                 description: _t('Insert a card snippet'),
                 fontawesome: 'fa-sticky-note',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_card"]');
                 },
@@ -678,7 +678,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 70,
                 description: _t('Insert a share snippet'),
                 fontawesome: 'fa-share-square-o',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_share"]');
                 },
@@ -689,7 +689,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 60,
                 description: _t('Insert a text Highlight snippet'),
                 fontawesome: 'fa-sticky-note',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_text_highlight"]');
                 },
@@ -700,7 +700,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 50,
                 description: _t('Insert a chart snippet'),
                 fontawesome: 'fa-bar-chart',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_chart"]');
                 },
@@ -711,7 +711,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 40,
                 description: _t('Insert a progress bar snippet'),
                 fontawesome: 'fa-spinner',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_progress_bar"]');
                 },
@@ -722,7 +722,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 30,
                 description: _t('Insert a badge snippet'),
                 fontawesome: 'fa-tags',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_badge"]');
                 },
@@ -733,7 +733,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 20,
                 description: _t('Insert a blockquote snippet'),
                 fontawesome: 'fa-quote-left',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_blockquote"]');
                 },
@@ -744,7 +744,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
                 priority: 10,
                 description: _t('Insert an horizontal separator snippet'),
                 fontawesome: 'fa-minus',
-                isDisabled: () => !this.odooEditor.isSelectionInBlockRoot(),
+                isDisabled: () => !this.kodaEditor.isSelectionInBlockRoot(),
                 callback: () => {
                     snippetCommandCallback('.oe_snippet_body[data-snippet="s_hr"]');
                 },

@@ -24,7 +24,7 @@ export function insertChart(chartData) {
         background: "#FFFFFF",
         legendPosition: "top",
         verticalAxisPosition: "left",
-        type: `odoo_${chartData.metaData.mode}`,
+        type: `koda_${chartData.metaData.mode}`,
         dataSourceId: uuidGenerator.uuidv4(),
         id: uuidGenerator.uuidv4(),
     };
@@ -41,7 +41,7 @@ export function insertChart(chartData) {
         if (chartData.menuXMLId) {
             model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                 chartId: definition.id,
-                odooMenuId: chartData.menuXMLId,
+                kodaMenuId: chartData.menuXMLId,
             });
         }
     };

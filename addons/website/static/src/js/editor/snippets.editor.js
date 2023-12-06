@@ -319,7 +319,7 @@ const wSnippetMenu = weSnippetEditor.SnippetsMenu.extend({
      * @return {Selection|null}
      */
     _getSelection() {
-        return this.options.wysiwyg.odooEditor.document.getSelection();
+        return this.options.wysiwyg.kodaEditor.document.getSelection();
     },
     /**
      * @override
@@ -338,7 +338,7 @@ const wSnippetMenu = weSnippetEditor.SnippetsMenu.extend({
 
         // As the toolbar displays css variable that are customizable by users,
         // we have the recompute the font size selector values.
-        this.options.wysiwyg.odooEditor.computeFontSizeSelectorValues();
+        this.options.wysiwyg.kodaEditor.computeFontSizeSelectorValues();
     },
     /**
      * Activates & deactivates the button used to add text options, depending
@@ -423,9 +423,9 @@ const wSnippetMenu = weSnippetEditor.SnippetsMenu.extend({
             }
             selectedTextParent.removeChild(selectedTextEl);
             // Update the option's UI.
-            this.options.wysiwyg.odooEditor.historyResetLatestComputedSelection();
+            this.options.wysiwyg.kodaEditor.historyResetLatestComputedSelection();
             this._disableTextOptions(targetEl);
-            this.options.wysiwyg.odooEditor.historyStep(true);
+            this.options.wysiwyg.kodaEditor.historyStep(true);
             restoreCursor();
         } else {
             if (sel.getRangeAt(0).collapsed) {
@@ -453,7 +453,7 @@ const wSnippetMenu = weSnippetEditor.SnippetsMenu.extend({
                     $snippet: $snippet,
                     previewMode: false,
                 });
-                this.options.wysiwyg.odooEditor.historyStep();
+                this.options.wysiwyg.kodaEditor.historyStep();
             } else {
                 this.notification.add(
                     _t("Cannot apply this option on current text selection. Try clearing the format and try again."),

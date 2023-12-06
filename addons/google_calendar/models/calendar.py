@@ -122,7 +122,7 @@ class Meeting(models.Model):
         ]
 
     @api.model
-    def _odoo_values(self, google_event, default_reminders=()):
+    def _koda_values(self, google_event, default_reminders=()):
         if google_event.is_cancelled():
             return {'active': False}
 
@@ -132,8 +132,8 @@ class Meeting(models.Model):
         reminder_command = google_event.reminders.get('overrides')
         if not reminder_command:
             reminder_command = google_event.reminders.get('useDefault') and default_reminders or ()
-        alarm_commands = self._odoo_reminders_commands(reminder_command)
-        attendee_commands, partner_commands = self._odoo_attendee_commands(google_event)
+        alarm_commands = self._koda_reminders_commands(reminder_command)
+        attendee_commands, partner_commands = self._koda_attendee_commands(google_event)
         related_event = self.search([('google_id', '=', google_event.id)], limit=1)
         name = google_event.summary or related_event and related_event.name or _("(No title)")
         values = {
@@ -178,7 +178,7 @@ class Meeting(models.Model):
         return values
 
     @api.model
-    def _odoo_attendee_commands(self, google_event):
+    def _koda_attendee_commands(self, google_event):
         attendee_commands = []
         partner_commands = []
         google_attendees = google_event.attendees or []
@@ -191,7 +191,7 @@ class Meeting(models.Model):
         emails = [a.get('email') for a in google_attendees]
         existing_attendees = self.env['calendar.attendee']
         if google_event.exists(self.env):
-            event = google_event.get_odoo_event(self.env)
+            event = google_event.get_koda_event(self.env)
             existing_attendees = event.attendee_ids
         attendees_by_emails = {tools.email_normalize(a.email): a for a in existing_attendees}
         partners = self._get_sync_partner(emails)
@@ -212,16 +212,16 @@ class Meeting(models.Model):
                 partner_commands += [(4, partner.id)]
                 if attendee[2].get('displayName') and not partner.name:
                     partner.name = attendee[2].get('displayName')
-        for odoo_attendee in attendees_by_emails.values():
+        for koda_attendee in attendees_by_emails.values():
             # Remove old attendees but only if it does not correspond to the current user.
-            email = tools.email_normalize(odoo_attendee.email)
+            email = tools.email_normalize(koda_attendee.email)
             if email not in emails and email != self.env.user.email:
-                attendee_commands += [(2, odoo_attendee.id)]
-                partner_commands += [(3, odoo_attendee.partner_id.id)]
+                attendee_commands += [(2, koda_attendee.id)]
+                partner_commands += [(3, koda_attendee.partner_id.id)]
         return attendee_commands, partner_commands
 
     @api.model
-    def _odoo_reminders_commands(self, reminders=()):
+    def _koda_reminders_commands(self, reminders=()):
         commands = []
         for reminder in reminders:
             alarm_type = 'email' if reminder.get('method') == 'email' else 'notification'
@@ -305,7 +305,7 @@ class Meeting(models.Model):
             'attendees': attendee_values,
             'extendedProperties': {
                 'shared': {
-                    '%s_odoo_id' % self.env.cr.dbname: self.id,
+                    '%s_koda_id' % self.env.cr.dbname: self.id,
                 },
             },
             'reminders': {
@@ -333,7 +333,7 @@ class Meeting(models.Model):
             # values['extendedProperties']['private] should be used if the owner is not an koda user
             values['extendedProperties'] = {
                 'private': {
-                    '%s_odoo_id' % self.env.cr.dbname: self.id,
+                    '%s_koda_id' % self.env.cr.dbname: self.id,
                 },
             }
         return values

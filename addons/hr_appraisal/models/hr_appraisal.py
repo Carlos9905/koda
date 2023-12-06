@@ -344,7 +344,7 @@ class HrAppraisal(models.Model):
         return result
 
     def _appraisal_plan_post(self):
-        odoobot = self.env.ref('base.partner_root')
+        kodabot = self.env.ref('base.partner_root')
         dates = self.employee_id.sudo()._upcoming_appraisal_creation_date()
         for appraisal in self:
             # The only ongoing appraisal is the current one
@@ -352,7 +352,7 @@ class HrAppraisal(models.Model):
                 date = dates[appraisal.employee_id.id]
                 formated_date = format_date(self.env, date, date_format="MMM d y")
                 body = _('Thanks to your Appraisal Plan, without any new manual Appraisal, the new Appraisal will be automatically created on %s.', formated_date)
-                appraisal._message_log(body=body, author_id=odoobot.id)
+                appraisal._message_log(body=body, author_id=kodabot.id)
                 appraisal.appraisal_plan_posted = True
 
     def _generate_activities(self):

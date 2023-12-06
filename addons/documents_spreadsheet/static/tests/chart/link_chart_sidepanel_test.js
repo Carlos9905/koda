@@ -163,8 +163,8 @@ QUnit.module(
                 createBasicChart(model, chartId);
                 await nextTick();
                 await openChartSidePanel();
-                let odooMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(odooMenu, undefined, "No menu linked with chart at start");
+                let kodaMenu = model.getters.getChartOdooMenu(chartId);
+                assert.equal(kodaMenu, undefined, "No menu linked with chart at start");
 
                 const irMenuField = target.querySelector(".o-ir-menu-selector input");
                 assert.ok(
@@ -174,9 +174,9 @@ QUnit.module(
                 await click(irMenuField);
                 await editInput(irMenuField, null, "");
                 await click(document.querySelectorAll(".ui-menu-item")[0]);
-                odooMenu = model.getters.getChartOdooMenu(chartId);
+                kodaMenu = model.getters.getChartOdooMenu(chartId);
                 assert.equal(
-                    odooMenu.xmlid,
+                    kodaMenu.xmlid,
                     "documents_spreadsheet.test.menu",
                     "Odoo menu is linked to chart"
                 );
@@ -192,8 +192,8 @@ QUnit.module(
                 createScorecardChart(model, chartId);
                 await nextTick();
                 await openChartSidePanel();
-                let odooMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(odooMenu, undefined, "No menu linked with chart at start");
+                let kodaMenu = model.getters.getChartOdooMenu(chartId);
+                assert.equal(kodaMenu, undefined, "No menu linked with chart at start");
 
                 const irMenuField = target.querySelector(".o-ir-menu-selector input");
                 assert.ok(
@@ -203,9 +203,9 @@ QUnit.module(
                 await click(irMenuField);
                 await editInput(irMenuField, null, "");
                 await click(document.querySelectorAll(".ui-menu-item")[0]);
-                odooMenu = model.getters.getChartOdooMenu(chartId);
+                kodaMenu = model.getters.getChartOdooMenu(chartId);
                 assert.equal(
-                    odooMenu.xmlid,
+                    kodaMenu.xmlid,
                     "documents_spreadsheet.test.menu",
                     "Odoo menu is linked to chart"
                 );
@@ -221,8 +221,8 @@ QUnit.module(
                 createGaugeChart(model, chartId);
                 await nextTick();
                 await openChartSidePanel();
-                let odooMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(odooMenu, undefined, "No menu linked with chart at start");
+                let kodaMenu = model.getters.getChartOdooMenu(chartId);
+                assert.equal(kodaMenu, undefined, "No menu linked with chart at start");
 
                 const irMenuField = target.querySelector(".o-ir-menu-selector input");
                 assert.ok(
@@ -232,9 +232,9 @@ QUnit.module(
                 await click(irMenuField);
                 await editInput(irMenuField, null, "");
                 await click(document.querySelectorAll(".ui-menu-item")[0]);
-                odooMenu = model.getters.getChartOdooMenu(chartId);
+                kodaMenu = model.getters.getChartOdooMenu(chartId);
                 assert.equal(
-                    odooMenu.xmlid,
+                    kodaMenu.xmlid,
                     "documents_spreadsheet.test.menu",
                     "Odoo menu is linked to chart"
                 );
@@ -251,15 +251,15 @@ QUnit.module(
                 await nextTick();
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: "documents_spreadsheet.test.menu",
+                    kodaMenuId: "documents_spreadsheet.test.menu",
                 });
                 await openChartSidePanel();
                 await nextTick();
                 const irMenuField = target.querySelector(".o-ir-menu-selector input");
                 await editInput(irMenuField, null, "");
                 await nextTick();
-                const odooMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(odooMenu, undefined, "no menu is linked to chart");
+                const kodaMenu = model.getters.getChartOdooMenu(chartId);
+                assert.equal(kodaMenu, undefined, "no menu is linked to chart");
             }
         );
 
@@ -275,11 +275,11 @@ QUnit.module(
                 await nextTick();
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId,
-                    odooMenuId: 1,
+                    kodaMenuId: 1,
                 });
                 model.dispatch("LINK_ODOO_MENU_TO_CHART", {
                     chartId: chartId2,
-                    odooMenuId: 2,
+                    kodaMenuId: 2,
                 });
                 await openChartSidePanel();
                 await nextTick();

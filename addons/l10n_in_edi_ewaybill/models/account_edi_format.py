@@ -157,8 +157,8 @@ class AccountEdiFormat(models.Model):
                 error_message = Markup("<br/>").join([Markup("[%s] %s") % (e.get("code"), e.get("message") or self._l10n_in_edi_ewaybill_get_error_message(e.get('code'))) for e in error])
                 error = []
                 response = {"data": ""}
-                odoobot = self.env.ref("base.partner_root")
-                invoices.message_post(author_id=odoobot.id, body=
+                kodabot = self.env.ref("base.partner_root")
+                invoices.message_post(author_id=kodabot.id, body=
                     Markup("%s<br/>%s:<br/>%s") %(
                         _("Somehow this E-waybill has been canceled in the government portal before. You can verify by checking the details into the government (https://ewaybillgst.gov.in/Others/EBPrintnew.asp)"),
                         _("Error"),
@@ -219,8 +219,8 @@ class AccountEdiFormat(models.Model):
                 response = self._l10n_in_edi_irn_ewaybill_get(invoices.company_id, generate_json.get("Irn"))
                 if not response.get("error"):
                     error = []
-                    odoobot = self.env.ref("base.partner_root")
-                    invoices.message_post(author_id=odoobot.id, body=
+                    kodabot = self.env.ref("base.partner_root")
+                    invoices.message_post(author_id=kodabot.id, body=
                         _("Somehow this E-waybill has been generated in the government portal before. You can verify by checking the invoice details into the government (https://ewaybillgst.gov.in/Others/EBPrintnew.asp)")
                     )
 
@@ -304,8 +304,8 @@ class AccountEdiFormat(models.Model):
                     invoices.company_id, generate_json.get("docType"), generate_json.get("docNo"))
                 if not response.get("error"):
                     error = []
-                    odoobot = self.env.ref("base.partner_root")
-                    invoices.message_post(author_id=odoobot.id, body=
+                    kodabot = self.env.ref("base.partner_root")
+                    invoices.message_post(author_id=kodabot.id, body=
                         _("Somehow this E-waybill has been generated in the government portal before. You can verify by checking the invoice details into the government (https://ewaybillgst.gov.in/Others/EBPrintnew.asp)")
                     )
             if "no-credit" in error_codes:

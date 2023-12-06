@@ -175,8 +175,8 @@ const HtmlFieldPatch = {
     get valueContainerElement() {
         if (this.props.readonly && this.readonlyElementRef.el) {
             return this.readonlyElementRef.el;
-        } else if (this.wysiwyg?.odooEditor) {
-            return this.wysiwyg.odooEditor.editable;
+        } else if (this.wysiwyg?.kodaEditor) {
+            return this.wysiwyg.kodaEditor.editable;
         }
         return null;
     },
@@ -569,15 +569,15 @@ const HtmlFieldPatch = {
             anchor = copyOids(behaviorData.anchor);
             renderingContainerElement.append(anchor);
             behaviorData.insert = (anchor) => {
-                if (this.wysiwyg.odooEditor.editable.contains(behaviorData.anchor)) {
+                if (this.wysiwyg.kodaEditor.editable.contains(behaviorData.anchor)) {
                     // Ignore the insertion if the mounted element
                     // cannot be moved in the DOM.
-                    this.wysiwyg.odooEditor.observerUnactive('mount_knowledge_behaviors');
+                    this.wysiwyg.kodaEditor.observerUnactive('mount_knowledge_behaviors');
                     behaviorData.anchor.parentElement.replaceChild(anchor, behaviorData.anchor);
                     // Bypass the editor observer, so oids have to be set
                     // manually.
-                    this.wysiwyg.odooEditor.idSet(anchor);
-                    this.wysiwyg.odooEditor.observerActive('mount_knowledge_behaviors');
+                    this.wysiwyg.kodaEditor.idSet(anchor);
+                    this.wysiwyg.kodaEditor.observerActive('mount_knowledge_behaviors');
                     return [anchor];
                 }
             };
@@ -658,7 +658,7 @@ const HtmlFieldPatch = {
                 }
                 const insertedNodes = behaviorData.insert ?
                     behaviorData.insert(anchor) :
-                    this.wysiwyg.odooEditor.execCommand('insert', anchor);
+                    this.wysiwyg.kodaEditor.execCommand('insert', anchor);
                 if (!insertedNodes) {
                     return cancelInsertion();
                 }
@@ -748,8 +748,8 @@ const HtmlFieldPatch = {
     //--------------------------------------------------------------------------
 
     _addMountBehaviorsListeners() {
-        if (this.wysiwyg?.odooEditor?.editable) {
-            this.wysiwyg.odooEditor.editable.addEventListener('mount_knowledge_behaviors', this.boundMountBehaviors);
+        if (this.wysiwyg?.kodaEditor?.editable) {
+            this.wysiwyg.kodaEditor.editable.addEventListener('mount_knowledge_behaviors', this.boundMountBehaviors);
         }
     },
 
@@ -759,8 +759,8 @@ const HtmlFieldPatch = {
     },
 
     _removeMountBehaviorsListeners() {
-        if (this.wysiwyg?.odooEditor?.editable) {
-            this.wysiwyg.odooEditor.editable.removeEventListener('mount_knowledge_behaviors', this.boundMountBehaviors);
+        if (this.wysiwyg?.kodaEditor?.editable) {
+            this.wysiwyg.kodaEditor.editable.removeEventListener('mount_knowledge_behaviors', this.boundMountBehaviors);
         }
     },
 };

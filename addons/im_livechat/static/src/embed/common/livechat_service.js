@@ -32,7 +32,7 @@ export const SESSION_STATE = Object.freeze({
 export const ODOO_VERSION_KEY = `${location.origin.replace(
     /:\/{0,2}/g,
     "_"
-)}_im_livechat.odoo_version`;
+)}_im_livechat.koda_version`;
 
 export class LivechatService {
     TEMPORARY_ID = "livechat_temporary_thread";
@@ -83,7 +83,7 @@ export class LivechatService {
             });
             // Clear session if it is outdated.
             const prevOdooVersion = browser.localStorage.getItem(ODOO_VERSION_KEY);
-            const currOdooVersion = init?.odoo_version;
+            const currOdooVersion = init?.koda_version;
             const visitorUid = this.visitorUid || false;
             const userId = session.user_id || false;
             if (

@@ -467,10 +467,10 @@ registry.slider = publicWidget.Widget.extend({
         if (this.editableMode) {
             // Prevent carousel slide to be an history step.
             this.$el.on("slide.bs.carousel", () => {
-                this.options.wysiwyg.odooEditor.observerUnactive();
+                this.options.wysiwyg.kodaEditor.observerUnactive();
             });
             this.$el.on("slid.bs.carousel", () => {
-                this.options.wysiwyg.odooEditor.observerActive();
+                this.options.wysiwyg.kodaEditor.observerActive();
             });
         }
         return this._super.apply(this, arguments);
@@ -506,16 +506,16 @@ registry.slider = publicWidget.Widget.extend({
         $items.toArray().forEach((el) => {
             var $item = $(el);
             var isActive = $item.hasClass('active');
-            this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerUnactive('_computeHeights');
+            this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerUnactive('_computeHeights');
             $item.addClass('active');
-            this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerActive('_computeHeights');
+            this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerActive('_computeHeights');
             var height = $item.outerHeight();
             if (height > maxHeight) {
                 maxHeight = height;
             }
-            this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerUnactive('_computeHeights');
+            this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerUnactive('_computeHeights');
             $item.toggleClass('active', isActive);
-            this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerActive('_computeHeights');
+            this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerActive('_computeHeights');
         });
         $items.css('min-height', maxHeight);
     },
@@ -1804,9 +1804,9 @@ registry.ImageShapeHoverEffet = publicWidget.Widget.extend({
                 resolve();
                 return;
             }
-            this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerUnactive("setImgHoverEffectSrc");
+            this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerUnactive("setImgHoverEffectSrc");
             this.el.src = preloadedImg.src;
-            this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerActive("setImgHoverEffectSrc");
+            this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerActive("setImgHoverEffectSrc");
             this.lastImgSrc = preloadedImg.src;
             this.el.onload = () => {
                 resolve();
@@ -1832,12 +1832,12 @@ registry.TextHighlight = publicWidget.Widget.extend({
         // We need to adapt the text highlights on resize, mainly to take in
         // consideration the rendered line breaks in text nodes...
         this._adaptOnResize = throttleForAnimation(() => {
-            this.options.wysiwyg?.odooEditor.observerUnactive("textHighlightResize");
+            this.options.wysiwyg?.kodaEditor.observerUnactive("textHighlightResize");
             for (const textEl of this.el.querySelectorAll(".o_text_highlight")) {
                 // Remove old effect, normalize content, redraw SVGs...
                 switchTextHighlight(textEl, getCurrentTextHighlight(textEl));
             }
-            this.options.wysiwyg?.odooEditor.observerActive("textHighlightResize");
+            this.options.wysiwyg?.kodaEditor.observerActive("textHighlightResize");
         });
         if (!this.editableMode) {
             this._adaptOnFontsLoading();

@@ -10,7 +10,7 @@ import {
 } from "@web_editor/js/editor/koda-editor/test/utils";
 
 function onMount() {
-    const editor = wysiwyg.odooEditor;
+    const editor = wysiwyg.kodaEditor;
     const editable = editor.editable;
     editor.testMode = true;
     return { editor, editable };

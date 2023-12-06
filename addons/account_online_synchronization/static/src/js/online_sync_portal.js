@@ -16,7 +16,7 @@
             if (!modeRegexp.test(action.params.proxyMode)) {
                 return;
             }
-            const url = 'https://' + action.params.proxyMode + '.odoofin.com/proxy/v1/odoofin_link';
+            const url = 'https://' + action.params.proxyMode + '.kodafin.com/proxy/v1/kodafin_link';
 
             loadJS(url)
                 .then(() => {

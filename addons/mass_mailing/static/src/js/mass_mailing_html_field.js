@@ -58,7 +58,7 @@ export class MassMailingHtmlField extends HtmlField {
             },
             onWysiwygBlur: () => {
                 this.commitChanges();
-                this.wysiwyg.odooEditor.toolbarHide();
+                this.wysiwyg.kodaEditor.toolbarHide();
             },
             dropImageAsAttachment: false,
             useResponsiveFontSizes: false,
@@ -112,7 +112,7 @@ export class MassMailingHtmlField extends HtmlField {
             }
 
             const $editable = this.wysiwyg.getEditable();
-            this.wysiwyg.odooEditor.historyPauseSteps();
+            this.wysiwyg.kodaEditor.historyPauseSteps();
             await this.wysiwyg.cleanForSave();
             await this.wysiwyg.savePendingImages(this.$content);
 
@@ -121,7 +121,7 @@ export class MassMailingHtmlField extends HtmlField {
             const $editorEnable = $editable.closest('.editor_enable');
             $editorEnable.removeClass('editor_enable');
             // Prevent history reverts.
-            this.wysiwyg.odooEditor.observerUnactive('toInline');
+            this.wysiwyg.kodaEditor.observerUnactive('toInline');
             const iframe = document.createElement('iframe');
             iframe.style.height = '0px';
             iframe.style.visibility = 'hidden';
@@ -145,11 +145,11 @@ export class MassMailingHtmlField extends HtmlField {
             this.cssRules = this.cssRules || getCSSRules($editable[0].ownerDocument);
             await toInline($(editableClone), this.cssRules, $(iframe));
             iframe.remove();
-            this.wysiwyg.odooEditor.observerActive('toInline');
+            this.wysiwyg.kodaEditor.observerActive('toInline');
             const inlineHtml = editableClone.innerHTML;
             $editorEnable.addClass('editor_enable');
-            this.wysiwyg.odooEditor.historyUnpauseSteps();
-            this.wysiwyg.odooEditor.historyRevertCurrentStep();
+            this.wysiwyg.kodaEditor.historyUnpauseSteps();
+            this.wysiwyg.kodaEditor.historyRevertCurrentStep();
 
             const fieldName = this.props.inlineField;
             await this.props.record.update({[fieldName]: inlineHtml});
@@ -184,8 +184,8 @@ export class MassMailingHtmlField extends HtmlField {
         initializeDesignTabCss(this.wysiwyg.getEditable());
         this.wysiwyg.getEditable().find('img').attr('loading', '');
 
-        this.wysiwyg.odooEditor.observerFlush();
-        this.wysiwyg.odooEditor.historyReset();
+        this.wysiwyg.kodaEditor.observerFlush();
+        this.wysiwyg.kodaEditor.historyReset();
         this.wysiwyg.$iframeBody.addClass('o_mass_mailing_iframe');
 
         this.onIframeUpdated();
@@ -243,15 +243,15 @@ export class MassMailingHtmlField extends HtmlField {
         // Unbind first the event handler as this method can be called multiple time during the component life.
         $snippetsSideBar.off('click', '.o_codeview_btn');
         $snippetsSideBar.on('click', '.o_codeview_btn', () => {
-            this.wysiwyg.odooEditor.observerUnactive();
+            this.wysiwyg.kodaEditor.observerUnactive();
             $codeview.toggleClass('d-none');
             this.wysiwyg.getEditable().toggleClass('d-none');
-            this.wysiwyg.odooEditor.observerActive();
+            this.wysiwyg.kodaEditor.observerActive();
 
             if ($codeview.hasClass('d-none')) {
                 this.wysiwyg.setValue($codeview.val());
-                this.wysiwyg.odooEditor.sanitize();
-                this.wysiwyg.odooEditor.historyStep(true);
+                this.wysiwyg.kodaEditor.sanitize();
+                this.wysiwyg.kodaEditor.historyStep(true);
             } else {
                 $codeview.val(this.wysiwyg.getValue());
             }
@@ -384,9 +384,9 @@ export class MassMailingHtmlField extends HtmlField {
                 this.wysiwyg.historyReset();
 
                 // The selection has been lost when switching theme.
-                const document = this.wysiwyg.odooEditor.document;
+                const document = this.wysiwyg.kodaEditor.document;
                 const selection = document.getSelection();
-                const p = this.wysiwyg.odooEditor.editable.querySelector('p');
+                const p = this.wysiwyg.kodaEditor.editable.querySelector('p');
                 if (p && selection) {
                     const range = document.createRange();
                     range.setStart(p, 0);
@@ -583,7 +583,7 @@ export class MassMailingHtmlField extends HtmlField {
         $newWrapperContent.append($contents);
         this._switchImages(themeParams, $newWrapperContent);
         old_layout && old_layout.remove();
-        this.wysiwyg.odooEditor.resetContent($newLayout[0].outerHTML);
+        this.wysiwyg.kodaEditor.resetContent($newLayout[0].outerHTML);
 
         $newWrapperContent.find('*').addBack()
             .contents()
@@ -597,7 +597,7 @@ export class MassMailingHtmlField extends HtmlField {
         initializeDesignTabCss(this.wysiwyg.$editable);
         this.wysiwyg.snippetsMenu.reload_snippet_dropzones();
         this.onIframeUpdated();
-        this.wysiwyg.odooEditor.historyStep(true);
+        this.wysiwyg.kodaEditor.historyStep(true);
         // The value of the field gets updated upon editor blur. If for any
         // reason, the selection was not in the editable before modifying
         // another field, ensure that the value is properly set.

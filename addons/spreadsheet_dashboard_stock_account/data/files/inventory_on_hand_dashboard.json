@@ -628,7 +628,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_pie"
+                        "type": "koda_pie"
                     }
                 }
             ],
@@ -732,7 +732,7 @@
         "d84bdd18-3c66-4153-ae2e-7f4ec1672cfb": "stock.menu_stock_root",
         "09d4da42-d66e-47b4-bc71-c6cfab7be7b9": "stock_account.menu_valuation"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

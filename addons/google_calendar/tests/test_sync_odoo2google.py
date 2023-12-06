@@ -13,7 +13,7 @@ from koda.tests.common import users, warmup
 from koda.tests import tagged
 from koda import tools
 
-@tagged('odoo2google')
+@tagged('koda2google')
 @patch.object(User, '_get_google_calendar_token', lambda user: 'dummy-token')
 class TestSyncOdoo2Google(TestSyncGoogle):
 
@@ -43,7 +43,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'need_sync': False,
             'description': description,
         })
-        event._sync_odoo2google(self.google_service)
+        event._sync_koda2google(self.google_service)
         self.assertGoogleEventInserted({
             'id': False,
             'start': {'dateTime': '2020-01-15T08:00:00+00:00'},
@@ -54,9 +54,9 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'visibility': 'private',
             'guestsCanModify': True,
             'reminders': {'useDefault': False, 'overrides': [{'method': 'popup', 'minutes': alarm.duration_minutes}]},
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
             'attendees': [{'email': 'jean-luc@opoo.com', 'responseStatus': 'needsAction'}],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: event.id}}
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: event.id}}
         })
 
     @patch_api
@@ -87,7 +87,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
                 'res_id': partner.id,
             } for i in range(EVENT_COUNT)])
 
-            events._sync_odoo2google(self.google_service)
+            events._sync_koda2google(self.google_service)
 
         with self.assertQueryCount(__system__=27):
             events.unlink()
@@ -155,7 +155,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
         attendee_2.write({
             'state': False,
         })
-        event._sync_odoo2google(self.google_service)
+        event._sync_koda2google(self.google_service)
         self.assertGoogleEventInserted({
             'id': False,
             'start': {'dateTime': '2020-01-15T08:00:00+00:00'},
@@ -166,10 +166,10 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'visibility': 'private',
             'guestsCanModify': True,
             'reminders': {'useDefault': False, 'overrides': []},
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
             'attendees': [{'email': 'jean-luc@opoo.com', 'responseStatus': 'needsAction'},
                           {'email': 'phineas@opoo.com', 'responseStatus': 'needsAction'}],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: event.id}}
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: event.id}}
         })
 
     @patch_api
@@ -181,7 +181,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'stop': datetime(2020, 1, 15),
             'need_sync': False,
         })
-        event._sync_odoo2google(self.google_service)
+        event._sync_koda2google(self.google_service)
         self.assertGoogleEventInserted({
             'id': False,
             'start': {'date': '2020-01-15'},
@@ -192,9 +192,9 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'visibility': 'public',
             'guestsCanModify': True,
             'reminders': {'overrides': [], 'useDefault': False},
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
-            'attendees': [{'email': 'odoobot@example.com', 'responseStatus': 'accepted'}],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: event.id}}
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
+            'attendees': [{'email': 'kodabot@example.com', 'responseStatus': 'accepted'}],
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: event.id}}
         })
 
     @patch_api
@@ -206,7 +206,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'active': False,
             'need_sync': False,
         })
-        event._sync_odoo2google(self.google_service)
+        event._sync_koda2google(self.google_service)
         self.assertGoogleEventNotInserted()
         self.assertGoogleEventNotDeleted()
 
@@ -223,7 +223,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'active': False,
             'need_sync': True,
         })
-        event._sync_odoo2google(self.google_service)
+        event._sync_koda2google(self.google_service)
         self.assertGoogleEventDeleted(google_id)
 
     @patch_api
@@ -242,7 +242,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'calendar_event_ids': [(4, event.id)],
             'need_sync': False,
         })
-        recurrence._sync_odoo2google(self.google_service)
+        recurrence._sync_koda2google(self.google_service)
         self.assertGoogleEventInserted({
             'id': False,
             'start': {'date': '2020-01-15'},
@@ -253,10 +253,10 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'visibility': 'public',
             'guestsCanModify': True,
             'reminders': {'overrides': [], 'useDefault': False},
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
-            'attendees': [{'email': 'odoobot@example.com', 'responseStatus': 'accepted'}],
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
+            'attendees': [{'email': 'kodabot@example.com', 'responseStatus': 'accepted'}],
             'recurrence': ['RRULE:FREQ=WEEKLY;COUNT=2;BYDAY=WE'],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: recurrence.id}}
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: recurrence.id}}
         })
 
     @patch_api
@@ -288,10 +288,10 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'visibility': 'public',
             'guestsCanModify': True,
             'reminders': {'overrides': [], 'useDefault': False},
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
-            'attendees': [{'email': 'odoobot@example.com', 'responseStatus': 'accepted'}],
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
+            'attendees': [{'email': 'kodabot@example.com', 'responseStatus': 'accepted'}],
             'recurrence': ['RRULE:FREQ=WEEKLY;COUNT=2;BYDAY=WE'],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: event.recurrence_id.id}}
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: event.recurrence_id.id}}
         }, timeout=3)
 
         self.assertGoogleEventDeleted(google_id)
@@ -334,9 +334,9 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'description': '',
             'location': '',
             'guestsCanModify': True,
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
-            'attendees': [{'email': 'odoobot@example.com', 'responseStatus': 'accepted'}],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: event.recurrence_id.id}},
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
+            'attendees': [{'email': 'kodabot@example.com', 'responseStatus': 'accepted'}],
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: event.recurrence_id.id}},
             'reminders': {'overrides': [], 'useDefault': False},
             'visibility': 'public',
             'recurrence': ['RRULE:FREQ=WEEKLY;WKST=SU;COUNT=1;BYDAY=WE']
@@ -389,7 +389,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'reminders': {'overrides': [], 'useDefault': False},
             'organizer': {'email': 'jean-luc@opoo.com', 'self': True},
             'attendees': [{'email': 'jean-luc@opoo.com', 'responseStatus': 'accepted'}],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: event.id}}
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: event.id}}
         }, timeout=3)
 
     @patch_api
@@ -422,10 +422,10 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'description': '',
             'location': '',
             'guestsCanModify': True,
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
-            'attendees': [{'email': 'odoobot@example.com', 'responseStatus': 'accepted'}],
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
+            'attendees': [{'email': 'kodabot@example.com', 'responseStatus': 'accepted'}],
             'recurrence': ['RRULE:FREQ=WEEKLY;WKST=SU;COUNT=2;BYDAY=WE'],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: new_recurrence.id}},
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: new_recurrence.id}},
             'reminders': {'overrides': [], 'useDefault': False},
             'visibility': 'public',
         }, timeout=3)
@@ -552,9 +552,9 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'description': '',
             'location': '',
             'guestsCanModify': True,
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
             'attendees': [{'email': 'jean-luc@opoo.com', 'responseStatus': 'declined'}],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: event.id}},
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: event.id}},
             'reminders': {'overrides': [], 'useDefault': False},
             'visibility': 'public',
         })
@@ -589,10 +589,10 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'description': '',
             'location': '',
             'guestsCanModify': True,
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
-            'attendees': [{'email': 'odoobot@example.com', 'responseStatus': 'accepted'}],
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
+            'attendees': [{'email': 'kodabot@example.com', 'responseStatus': 'accepted'}],
             'recurrence': ['RRULE:FREQ=WEEKLY;WKST=SU;COUNT=2;BYDAY=WE'],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: new_recurrence.id}},
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: new_recurrence.id}},
             'reminders': {'overrides': [], 'useDefault': False},
             'visibility': 'public',
         }, timeout=3)
@@ -608,7 +608,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'need_sync': False,
         })
 
-        event.with_context(send_updates=True)._sync_odoo2google(self.google_service)
+        event.with_context(send_updates=True)._sync_koda2google(self.google_service)
         self.call_post_commit_hooks()
         self.assertGoogleEventSendUpdates('all')
 
@@ -622,7 +622,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'need_sync': False,
         })
 
-        event.with_context(send_updates=False)._sync_odoo2google(self.google_service)
+        event.with_context(send_updates=False)._sync_koda2google(self.google_service)
         self.call_post_commit_hooks()
         self.assertGoogleEventSendUpdates('none')
 
@@ -662,9 +662,9 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'description': '',
             'location': '',
             'guestsCanModify': True,
-            'organizer': {'email': 'odoobot@example.com', 'self': True},
-            'attendees': [{'email': 'odoobot@example.com', 'responseStatus': 'accepted'}],
-            'extendedProperties': {'shared': {'%s_odoo_id' % self.env.cr.dbname: event_1.id}},
+            'organizer': {'email': 'kodabot@example.com', 'self': True},
+            'attendees': [{'email': 'kodabot@example.com', 'responseStatus': 'accepted'}],
+            'extendedProperties': {'shared': {'%s_koda_id' % self.env.cr.dbname: event_1.id}},
             'reminders': {'overrides': [], 'useDefault': False},
             'visibility': 'public',
             'status': 'cancelled'
@@ -695,7 +695,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
             'stop': datetime(2023, 6, 29, 18, 0),
             'need_sync': True
         })
-        record._sync_odoo2google(self.google_service)
+        record._sync_koda2google(self.google_service)
 
         # Assert that synchronization is paused, insert wasn't called and record is waiting to be synced.
         self.assertFalse(self.env.user.google_synchronization_stopped)
@@ -725,7 +725,7 @@ class TestSyncOdoo2Google(TestSyncGoogle):
         # Pause synchronization and update synced event. It will only update it locally.
         self.env.user.sudo().pause_google_synchronization()
         record.write({'name': "Updated Event"})
-        record._sync_odoo2google(self.google_service)
+        record._sync_koda2google(self.google_service)
 
         # Assert that synchronization is paused, patch wasn't called and record is waiting to be synced.
         self.assertFalse(self.env.user.google_synchronization_stopped)

@@ -89,8 +89,8 @@ class SaleOrder(models.Model):
         info_to_extract = [('name', 'Name'), ('street', 'Street1'),
                            ('street2', 'Street2'), ('city', 'CityName'),
                            ('zip', 'PostalCode'), ('phone', 'Phone')]
-        for (odoo_name, ebay_name) in info_to_extract:
-            shipping_data[odoo_name] = infos.get(ebay_name, '')
+        for (koda_name, ebay_name) in info_to_extract:
+            shipping_data[koda_name] = infos.get(ebay_name, '')
         shipping_data['country_id'] = self.env['res.country'].search(
                 [('code', '=', infos['Country'])], limit=1).id
         shipping_data['state_id'] = _find_state().id

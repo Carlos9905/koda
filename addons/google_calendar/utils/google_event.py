@@ -68,53 +68,53 @@ class GoogleEvent(abc.Set):
             rrule = next(item for item in self.recurrence if 'RRULE' in item)
             return rrule[6:]  # skip "RRULE:" in the rrule string
 
-    def odoo_id(self, env):
-        self.odoo_ids(env)  # load ids
-        return self._odoo_id
+    def koda_id(self, env):
+        self.koda_ids(env)  # load ids
+        return self._koda_id
 
-    def _meta_odoo_id(self, dbname):
+    def _meta_koda_id(self, dbname):
         """Returns the Odoo id stored in the Google Event metadata.
         This id might not actually exists in the database.
         """
         properties = self.extendedProperties and (self.extendedProperties.get('shared', {}) or self.extendedProperties.get('private', {})) or {}
-        o_id = properties.get('%s_odoo_id' % dbname)
+        o_id = properties.get('%s_koda_id' % dbname)
         if o_id:
             return int(o_id)
 
-    def odoo_ids(self, env):
-        ids = tuple(e._odoo_id for e in self if e._odoo_id)
+    def koda_ids(self, env):
+        ids = tuple(e._koda_id for e in self if e._koda_id)
         if len(ids) == len(self):
             return ids
         model = self._get_model(env)
-        found = self._load_odoo_ids_from_db(env, model)
+        found = self._load_koda_ids_from_db(env, model)
         unsure = self - found
         if unsure:
-            unsure._load_odoo_ids_from_metadata(env, model)
+            unsure._load_koda_ids_from_metadata(env, model)
 
-        return tuple(e._odoo_id for e in self)
+        return tuple(e._koda_id for e in self)
 
-    def _load_odoo_ids_from_metadata(self, env, model):
-        unsure_odoo_ids = tuple(e._meta_odoo_id(env.cr.dbname) for e in self)
-        odoo_events = model.browse(_id for _id in unsure_odoo_ids if _id)
+    def _load_koda_ids_from_metadata(self, env, model):
+        unsure_koda_ids = tuple(e._meta_koda_id(env.cr.dbname) for e in self)
+        koda_events = model.browse(_id for _id in unsure_koda_ids if _id)
 
         # Extended properties are copied when splitting a recurrence Google side.
         # Hence, we may have two Google recurrences linked to the same Odoo id.
         # Therefore, we only consider Odoo records without google id when trying
         # to match events.
-        o_ids = odoo_events.exists().filtered(lambda e: not e.google_id).ids
+        o_ids = koda_events.exists().filtered(lambda e: not e.google_id).ids
         for e in self:
-            odoo_id = e._meta_odoo_id(env.cr.dbname)
-            if odoo_id in o_ids:
-                e._events[e.id]['_odoo_id'] = odoo_id
+            koda_id = e._meta_koda_id(env.cr.dbname)
+            if koda_id in o_ids:
+                e._events[e.id]['_koda_id'] = koda_id
 
-    def _load_odoo_ids_from_db(self, env, model):
-        odoo_events = model.with_context(active_test=False)._from_google_ids(self.ids)
-        mapping = {e.google_id: e.id for e in odoo_events}  # {google_id: odoo_id}
-        existing_google_ids = odoo_events.mapped('google_id')
+    def _load_koda_ids_from_db(self, env, model):
+        koda_events = model.with_context(active_test=False)._from_google_ids(self.ids)
+        mapping = {e.google_id: e.id for e in koda_events}  # {google_id: koda_id}
+        existing_google_ids = koda_events.mapped('google_id')
         for e in self:
-            odoo_id = mapping.get(e.id)
-            if odoo_id:
-                e._events[e.id]['_odoo_id'] = odoo_id
+            koda_id = mapping.get(e.id)
+            if koda_id:
+                e._events[e.id]['_koda_id'] = koda_id
         return self.filter(lambda e: e.id in existing_google_ids)
 
 
@@ -151,7 +151,7 @@ class GoogleEvent(abc.Set):
 
     def clear_type_ambiguity(self, env):
         ambiguous_events = self.filter(GoogleEvent._is_type_ambiguous)
-        recurrences = ambiguous_events._load_odoo_ids_from_db(env, env['calendar.recurrence'])
+        recurrences = ambiguous_events._load_koda_ids_from_db(env, env['calendar.recurrence'])
         for recurrence in recurrences:
             self._events[recurrence.id]['recurrence'] = True
         for event in ambiguous_events - recurrences:
@@ -204,10 +204,10 @@ class GoogleEvent(abc.Set):
     def exists(self, env) -> 'GoogleEvent':
         recurrences = self.filter(GoogleEvent.is_recurrence)
         events = self - recurrences
-        recurrences.odoo_ids(env)
-        events.odoo_ids(env)
+        recurrences.koda_ids(env)
+        events.koda_ids(env)
 
-        return self.filter(lambda e: e._odoo_id)
+        return self.filter(lambda e: e._koda_id)
 
     def _is_type_ambiguous(self):
         """For cancelled events/recurrences, Google only send the id and
@@ -231,8 +231,8 @@ class GoogleEvent(abc.Set):
     def is_available(self):
         return self.transparency == 'transparent'
 
-    def get_odoo_event(self, env):
+    def get_koda_event(self, env):
         if self._get_model(env)._name == 'calendar.event':
-            return env['calendar.event'].browse(self.odoo_id(self.env))
+            return env['calendar.event'].browse(self.koda_id(self.env))
         else:
-            return env['calendar.recurrence'].browse(self.odoo_id(self.env)).base_event_id
+            return env['calendar.recurrence'].browse(self.koda_id(self.env)).base_event_id

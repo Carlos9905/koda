@@ -383,8 +383,8 @@ class SpanishTaxReportCustomHandler(models.AbstractModel):
         rslt += self._l10n_es_boe_format_string(f"<T{modelo_number}0{year}{period}0000>")
         rslt += self._l10n_es_boe_format_string('<AUX>')
         rslt += self._l10n_es_boe_format_string(' ' * 70) # Reserved for AEAT
-        odoo_version = koda.release.version.split('.')
-        rslt += self._l10n_es_boe_format_string(str(odoo_version[0]) + str(odoo_version[1]), length=4)
+        koda_version = koda.release.version.split('.')
+        rslt += self._l10n_es_boe_format_string(str(koda_version[0]) + str(koda_version[1]), length=4)
         rslt += self._l10n_es_boe_format_string(' ' * 4) # Reserved for AEAT
         rslt += self._l10n_es_boe_format_string(self._extract_spanish_tin(current_company.partner_id), length=9)
         rslt += self._l10n_es_boe_format_string(' ' * 213) # Reserved for AEAT
@@ -540,8 +540,8 @@ class SpanishMod303TaxReportCustomHandler(models.AbstractModel):
         rslt = self._l10n_es_boe_format_string('<T3030' + year + period + '0000>')
         rslt += self._l10n_es_boe_format_string('<AUX>')
         rslt += self._l10n_es_boe_format_string(' ' * 70)
-        odoo_version = koda.release.version.split('.')
-        rslt += self._l10n_es_boe_format_string(str(odoo_version[0]) + str(odoo_version[1]), length=4)
+        koda_version = koda.release.version.split('.')
+        rslt += self._l10n_es_boe_format_string(str(koda_version[0]) + str(koda_version[1]), length=4)
         rslt += self._l10n_es_boe_format_string(' ' * 4)
         rslt += self._l10n_es_boe_format_string(self._extract_spanish_tin(current_company.partner_id), length=9)
         rslt += self._l10n_es_boe_format_string(' ' * 213)
@@ -1314,8 +1314,8 @@ class SpanishMod390TaxReportCustomHandler(models.AbstractModel):
         rslt = self._l10n_es_boe_format_string('<T3900' + year + '0A0000>')
         rslt += self._l10n_es_boe_format_string('<AUX>')
         rslt += self._l10n_es_boe_format_string(' ' * 70)
-        odoo_version = koda.release.version.split('.')
-        rslt += self._l10n_es_boe_format_string(str(odoo_version[0]) + str(odoo_version[1]), length=4)
+        koda_version = koda.release.version.split('.')
+        rslt += self._l10n_es_boe_format_string(str(koda_version[0]) + str(koda_version[1]), length=4)
         rslt += self._l10n_es_boe_format_string(' ' * 4)
         rslt += self._l10n_es_boe_format_string(self._extract_spanish_tin(current_company.partner_id), length=9)
         rslt += self._l10n_es_boe_format_string(' ' * 213)

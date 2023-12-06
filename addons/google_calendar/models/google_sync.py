@@ -105,7 +105,7 @@ class GoogleSync(models.AbstractModel):
         elif synced:
             # Since we can not delete such an event (see method comment), we archive it.
             # Notice that archiving an event will delete the associated event on Google.
-            # Then, since it has been deleted on Google, the event is also deleted on Odoo DB (_sync_google2odoo).
+            # Then, since it has been deleted on Google, the event is also deleted on Odoo DB (_sync_google2koda).
             self.action_archive()
             return True
         return super().unlink()
@@ -120,7 +120,7 @@ class GoogleSync(models.AbstractModel):
     def _event_ids_from_google_ids(self, google_ids):
         return self.search([('google_id', 'in', google_ids)]).ids
 
-    def _sync_odoo2google(self, google_service: GoogleCalendarService):
+    def _sync_koda2google(self, google_service: GoogleCalendarService):
         if not self:
             return
         if self._active_name:
@@ -145,7 +145,7 @@ class GoogleSync(models.AbstractModel):
         self.unlink()
 
     @api.model
-    def _sync_google2odoo(self, google_events: GoogleEvent, default_reminders=()):
+    def _sync_google2koda(self, google_events: GoogleEvent, default_reminders=()):
         """Synchronize Google recurrences in Odoo. Creates new recurrences, updates
         existing ones.
 
@@ -155,13 +155,13 @@ class GoogleSync(models.AbstractModel):
         existing = google_events.exists(self.env)
         new = google_events - existing - google_events.cancelled()
 
-        odoo_values = [
-            dict(self._odoo_values(e, default_reminders), need_sync=False)
+        koda_values = [
+            dict(self._koda_values(e, default_reminders), need_sync=False)
             for e in new
         ]
-        new_odoo = self.with_context(dont_notify=True)._create_from_google(new, odoo_values)
+        new_koda = self.with_context(dont_notify=True)._create_from_google(new, koda_values)
         cancelled = existing.cancelled()
-        cancelled_odoo = self.browse(cancelled.odoo_ids(self.env))
+        cancelled_koda = self.browse(cancelled.koda_ids(self.env))
 
         # Check if it is a recurring event that has been rescheduled.
         # We have to check if an event already exists in Odoo.
@@ -172,20 +172,20 @@ class GoogleSync(models.AbstractModel):
         rescheduled_events = new.filter(lambda gevent: not gevent.is_recurrence_follower())
         if rescheduled_events:
             google_ids_to_remove = [event.full_recurring_event_id() for event in rescheduled_events]
-            cancelled_odoo += self.env['calendar.event'].search([('google_id', 'in', google_ids_to_remove)])
+            cancelled_koda += self.env['calendar.event'].search([('google_id', 'in', google_ids_to_remove)])
 
-        cancelled_odoo._cancel()
-        synced_records = new_odoo + cancelled_odoo
+        cancelled_koda._cancel()
+        synced_records = new_koda + cancelled_koda
         for gevent in existing - cancelled:
             # Last updated wins.
             # This could be dangerous if google server time and koda server time are different
             updated = parse(gevent.updated)
-            odoo_record = self.browse(gevent.odoo_id(self.env))
+            koda_record = self.browse(gevent.koda_id(self.env))
             # Migration from 13.4 does not fill write_date. Therefore, we force the update from Google.
-            if not odoo_record.write_date or updated >= pytz.utc.localize(odoo_record.write_date):
-                vals = dict(self._odoo_values(gevent, default_reminders), need_sync=False)
-                odoo_record.with_context(dont_notify=True)._write_from_google(gevent, vals)
-                synced_records |= odoo_record
+            if not koda_record.write_date or updated >= pytz.utc.localize(koda_record.write_date):
+                vals = dict(self._koda_values(gevent, default_reminders), need_sync=False)
+                koda_record.with_context(dont_notify=True)._write_from_google(gevent, vals)
+                synced_records |= koda_record
 
         return synced_records
 
@@ -324,7 +324,7 @@ class GoogleSync(models.AbstractModel):
         return result
 
     @api.model
-    def _odoo_values(self, google_event: GoogleEvent, default_reminders=()):
+    def _koda_values(self, google_event: GoogleEvent, default_reminders=()):
         """Implements this method to return a dict of Odoo values corresponding
         to the Google event given as parameter
         :return: dict of Odoo formatted values

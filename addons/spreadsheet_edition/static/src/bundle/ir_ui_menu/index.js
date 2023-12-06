@@ -7,7 +7,7 @@ import {
     buildIrMenuIdLink,
     buildViewLink,
     buildIrMenuXmlLink,
-} from "@spreadsheet/ir_ui_menu/odoo_menu_link_cell";
+} from "@spreadsheet/ir_ui_menu/koda_menu_link_cell";
 import { IrMenuSelectorDialog } from "@spreadsheet_edition/bundle/ir_menu_selector/ir_menu_selector";
 
 const { markdownLink } = spreadsheet.links;
@@ -16,7 +16,7 @@ const { linkMenuRegistry } = spreadsheet.registries;
 /**
  * Helper to get the function to be called when the spreadsheet is opened
  * in order to insert the link.
- * @param {import("@spreadsheet/ir_ui_menu/odoo_menu_link_cell").ViewLinkDescription} actionToLink
+ * @param {import("@spreadsheet/ir_ui_menu/koda_menu_link_cell").ViewLinkDescription} actionToLink
  * @returns Function to call
  */
 function insertLink(actionToLink) {
@@ -42,7 +42,7 @@ function insertLink(actionToLink) {
 
 initCallbackRegistry.add("insertLink", insertLink);
 
-linkMenuRegistry.add("odooMenu", {
+linkMenuRegistry.add("kodaMenu", {
     name: _t("Link an Odoo menu"),
     sequence: 20,
     execute: async (env) => {

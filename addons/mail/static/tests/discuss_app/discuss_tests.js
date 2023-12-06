@@ -1217,7 +1217,7 @@ QUnit.test(
             {
                 channel_member_ids: [
                     Command.create({ partner_id: pyEnv.currentPartnerId }),
-                    Command.create({ partner_id: TEST_USER_IDS.odoobotId }),
+                    Command.create({ partner_id: TEST_USER_IDS.kodabotId }),
                 ],
                 channel_type: "chat",
             },
@@ -1770,7 +1770,7 @@ QUnit.test(
         const messageId = pyEnv["mail.message"].create({
             model: "res.partner",
             body: "A needaction message to have it in messaging menu",
-            author_id: pyEnv.odoobotId,
+            author_id: pyEnv.kodabotId,
             needaction: true,
             needaction_partner_ids: [pyEnv.currentPartnerId],
             res_id: partnerId,

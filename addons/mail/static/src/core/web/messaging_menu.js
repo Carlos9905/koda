@@ -84,11 +84,11 @@ export class MessagingMenu extends Component {
             (this.store.failures.length > 0 &&
                 this.store.discuss.activeTab === "main" &&
                 !this.env.inDiscussApp) ||
-            (this.store.odoobot &&
+            (this.store.kodabot &&
                 this.notification.permission === "prompt" &&
                 this.store.discuss.activeTab === "main" &&
                 !this.env.inDiscussApp) ||
-            (this.store.odoobot &&
+            (this.store.kodabot &&
                 this.canPromptToInstall &&
                 this.store.discuss.activeTab === "main" &&
                 !this.env.inDiscussApp)
@@ -98,12 +98,12 @@ export class MessagingMenu extends Component {
     get installationRequest() {
         return {
             body: _t("Come here often? Install Odoo on your device!"),
-            displayName: _t("%s has a suggestion", this.store.odoobot.name),
+            displayName: _t("%s has a suggestion", this.store.kodabot.name),
             onClick: () => {
                 this.installPrompt.show();
             },
-            iconSrc: this.threadService.avatarUrl(this.store.odoobot),
-            partner: this.store.odoobot,
+            iconSrc: this.threadService.avatarUrl(this.store.kodabot),
+            partner: this.store.kodabot,
             isShown: this.store.discuss.activeTab === "main" && this.canPromptToInstall,
         };
     }
@@ -111,9 +111,9 @@ export class MessagingMenu extends Component {
     get notificationRequest() {
         return {
             body: _t("Enable desktop notifications to chat"),
-            displayName: _t("%s has a request", this.store.odoobot.name),
-            iconSrc: this.threadService.avatarUrl(this.store.odoobot),
-            partner: this.store.odoobot,
+            displayName: _t("%s has a request", this.store.kodabot.name),
+            iconSrc: this.threadService.avatarUrl(this.store.kodabot),
+            partner: this.store.kodabot,
             isShown:
                 this.store.discuss.activeTab === "main" &&
                 this.notification.permission === "prompt",

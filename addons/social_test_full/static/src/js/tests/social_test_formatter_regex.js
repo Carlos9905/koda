@@ -101,7 +101,7 @@ QUnit.module('Social Formatter Regex', {}, () => {
             "Hello, check this out:",
             "<a href='https://www.koda.com' target='_blank' rel='noreferrer noopener'>https://www.koda.com</a>",
             "<a href='https://www.youtube.com/results?search_query=%23crazydeals' target='_blank'>#crazydeals</a>",
-            "<a href='https://www.youtube.com/results?search_query=%23odoo' target='_blank'>#koda</a>",
+            "<a href='https://www.youtube.com/results?search_query=%23koda' target='_blank'>#koda</a>",
         ].join(' '));
     });
 });

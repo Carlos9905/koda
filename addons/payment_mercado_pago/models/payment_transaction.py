@@ -156,9 +156,9 @@ class PaymentTransaction(models.Model):
 
         # Update the payment method.
         payment_method_type = verified_payment_data.get('payment_type_id', '')
-        for odoo_code, mp_codes in const.PAYMENT_METHODS_MAPPING.items():
+        for koda_code, mp_codes in const.PAYMENT_METHODS_MAPPING.items():
             if any(payment_method_type == mp_code for mp_code in mp_codes.split(',')):
-                payment_method_type = odoo_code
+                payment_method_type = koda_code
                 break
         payment_method = self.env['payment.method']._get_from_code(
             payment_method_type, mapping=const.PAYMENT_METHODS_MAPPING

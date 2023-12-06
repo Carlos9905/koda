@@ -113,7 +113,7 @@ patch(Wysiwyg.prototype, {
                 fontawesome: 'fa-th-large',
                 isDisabled: () => isSelectionInSelectors('.o_knowledge_behavior_anchor, .o_editor_banner, table'),
                 callback: () => {
-                    const restoreSelection = preserveCursor(this.odooEditor.document);
+                    const restoreSelection = preserveCursor(this.kodaEditor.document);
                     const viewType = 'kanban';
                     this._openEmbeddedViewDialog(viewType, async (name) => {
                         await this.orm.call(
@@ -136,7 +136,7 @@ patch(Wysiwyg.prototype, {
                 fontawesome: 'fa-address-card',
                 isDisabled: () => isSelectionInSelectors('.o_editor_banner, .o_knowledge_behavior_anchor, table'),
                 callback: () => {
-                    const restoreSelection = preserveCursor(this.odooEditor.document);
+                    const restoreSelection = preserveCursor(this.kodaEditor.document);
                     const viewType = 'kanban';
                     this._openEmbeddedViewDialog(viewType, name => {
                         this._insertEmbeddedView('knowledge.knowledge_article_item_action', undefined, viewType, name, restoreSelection, {
@@ -154,7 +154,7 @@ patch(Wysiwyg.prototype, {
                 fontawesome: 'fa-th-list',
                 isDisabled: () => isSelectionInSelectors('.o_editor_banner, .o_knowledge_behavior_anchor, table'),
                 callback: () => {
-                    const restoreSelection = preserveCursor(this.odooEditor.document);
+                    const restoreSelection = preserveCursor(this.kodaEditor.document);
                     const viewType = 'list';
                     this._openEmbeddedViewDialog(viewType, name => {
                         this._insertEmbeddedView('knowledge.knowledge_article_item_action', undefined, viewType, name, restoreSelection, {
@@ -189,7 +189,7 @@ patch(Wysiwyg.prototype, {
                 description: _t('Insert a Video'),
                 fontawesome: 'fa-play',
                 callback: () => {
-                    const restoreSelection = preserveCursor(this.odooEditor.document);
+                    const restoreSelection = preserveCursor(this.kodaEditor.document);
                     this._openVideoSelectorDialog(media => {
                         this._insertVideo(media, restoreSelection);
                     });
@@ -231,7 +231,7 @@ patch(Wysiwyg.prototype, {
      * Insert a /toc block (table of content)
      */
     _insertTableOfContent: function () {
-        const restoreSelection = preserveCursor(this.odooEditor.document);
+        const restoreSelection = preserveCursor(this.kodaEditor.document);
         const tableOfContentBlock = renderToElement('knowledge.AbstractBehaviorBlueprint', {
             behaviorType: "o_knowledge_behavior_type_toc",
         });
@@ -243,7 +243,7 @@ patch(Wysiwyg.prototype, {
      * @param {boolean} childrenOnly
      */
     _insertArticlesStructure: function () {
-        const restoreSelection = preserveCursor(this.odooEditor.document);
+        const restoreSelection = preserveCursor(this.kodaEditor.document);
         const articlesStructureBlock = renderToElement('knowledge.ArticlesStructureBehaviorBlueprint');
         this._notifyNewBehavior(articlesStructureBlock, restoreSelection);
     },
@@ -251,7 +251,7 @@ patch(Wysiwyg.prototype, {
      * Insert a /clipboard block
      */
     _insertTemplate() {
-        const restoreSelection = preserveCursor(this.odooEditor.document);
+        const restoreSelection = preserveCursor(this.kodaEditor.document);
         const templateBlock = renderToElement('knowledge.AbstractBehaviorBlueprint', {
             behaviorType: "o_knowledge_behavior_type_template",
         });
@@ -261,7 +261,7 @@ patch(Wysiwyg.prototype, {
      * Insert a /article block (through a dialog)
      */
     _insertArticleLink: function () {
-        const restoreSelection = preserveCursor(this.odooEditor.document);
+        const restoreSelection = preserveCursor(this.kodaEditor.document);
         Component.env.services.dialog.add(ArticleSelectionBehaviorDialog, {
             title: _t('Link an Article'),
             confirmLabel: _t('Insert Link'),
@@ -343,16 +343,16 @@ patch(Wysiwyg.prototype, {
             // Set the cursor to the end of the article by not normalizing the position.
             // By not normalizing we ensure that we will use the articleś body as the container
             // and not an invisible character.
-            return setCursorEnd(this.odooEditor.editable, false);
+            return setCursorEnd(this.kodaEditor.editable, false);
         }
         const insert = (anchor) => {
-            const fragment = this.odooEditor.document.createDocumentFragment();
+            const fragment = this.kodaEditor.document.createDocumentFragment();
             // Add a P after the Behavior to be able to continue typing
             // after it
-            const p = this.odooEditor.document.createElement('p');
-            p.append(this.odooEditor.document.createElement('br'));
+            const p = this.kodaEditor.document.createElement('p');
+            p.append(this.kodaEditor.document.createElement('br'));
             fragment.append(anchor, p);
-            const insertedNodes = this.odooEditor.execCommand('insert', fragment);
+            const insertedNodes = this.kodaEditor.execCommand('insert', fragment);
             if (insertedNodes) {
                 insertedNodes[0].scrollIntoView();
                 return insertedNodes;
@@ -404,7 +404,7 @@ patch(Wysiwyg.prototype, {
      */
     _insertItemCalendar: function () {
         const { ItemCalendarPropsDialog } = koda.loader.modules.get("@knowledge/components/item_calendar_props_dialog/item_calendar_props_dialog");
-        const restoreSelection = preserveCursor(this.odooEditor.document);
+        const restoreSelection = preserveCursor(this.kodaEditor.document);
         // Shows a dialog allowing the user to set the itemCalendarProps
         // (properties used by the itemCalendar view)
         Component.env.services.dialog.add(ItemCalendarPropsDialog, {

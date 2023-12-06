@@ -29,9 +29,9 @@
                         }
                     }
                 }
-                .o_odoo {
-                    $odoo_img_width: calc(#{$nav-link-height} * 300 / 97);
-                    width: calc(max(50vw - #{$logo-max-wdith}, #{$odoo_img_width} / 2) + #{$odoo_img_width} / 2);
+                .o_koda {
+                    $koda_img_width: calc(#{$nav-link-height} * 300 / 97);
+                    width: calc(max(50vw - #{$logo-max-wdith}, #{$koda_img_width} / 2) + #{$koda_img_width} / 2);
                     text-align: right;
                     a {
                         > img {

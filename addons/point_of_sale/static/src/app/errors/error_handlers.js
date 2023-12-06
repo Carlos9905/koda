@@ -1,7 +1,7 @@
 /** @koda-module */
 
 import { registry } from "@web/core/registry";
-import { odooExceptionTitleMap } from "@web/core/errors/error_dialogs";
+import { kodaExceptionTitleMap } from "@web/core/errors/error_dialogs";
 import { ConnectionLostError, RPCError } from "@web/core/network/rpc_service";
 import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 import { ErrorTracebackPopup } from "@point_of_sale/app/errors/popups/error_traceback_popup";
@@ -11,8 +11,8 @@ import { _t } from "@web/core/l10n/translation";
 function rpcErrorHandler(env, error, originalError) {
     if (error instanceof RPCError) {
         const { message, data } = error;
-        if (odooExceptionTitleMap.has(error.exceptionName)) {
-            const title = odooExceptionTitleMap.get(error.exceptionName).toString();
+        if (kodaExceptionTitleMap.has(error.exceptionName)) {
+            const title = kodaExceptionTitleMap.get(error.exceptionName).toString();
             env.services.popup.add(ErrorPopup, { title, body: data.message });
         } else {
             env.services.popup.add(ErrorTracebackPopup, {

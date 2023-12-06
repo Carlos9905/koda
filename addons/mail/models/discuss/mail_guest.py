@@ -131,7 +131,7 @@ class MailGuest(models.Model):
     def _init_messaging(self):
         self.ensure_one()
         # sudo: res.partner - exposing OdooBot name and id
-        odoobot = self.env.ref('base.partner_root').sudo()
+        kodabot = self.env.ref('base.partner_root').sudo()
         # sudo: mail.guest - guest reading their own id/name/channels
         guest_sudo = self.sudo()
         return {
@@ -153,9 +153,9 @@ class MailGuest(models.Model):
             'initBusId': self.env['bus.bus'].sudo()._bus_last_id(),
             'menu_id': False,
             'needaction_inbox_counter': False,
-            'odoobot': {
-                'id': odoobot.id,
-                'name': odoobot.name,
+            'kodabot': {
+                'id': kodabot.id,
+                'name': kodabot.name,
                 'type': "partner",
             },
             'shortcodes': [],

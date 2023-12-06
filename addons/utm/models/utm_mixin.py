@@ -53,9 +53,9 @@ class UtmMixin(models.AbstractModel):
         # methods of utm.mixin, but will ignore overridden method on crm.lead
         return [
             # ("URL_PARAMETER", "FIELD_NAME_MIXIN", "NAME_IN_COOKIES")
-            ('utm_campaign', 'campaign_id', 'odoo_utm_campaign'),
-            ('utm_source', 'source_id', 'odoo_utm_source'),
-            ('utm_medium', 'medium_id', 'odoo_utm_medium'),
+            ('utm_campaign', 'campaign_id', 'koda_utm_campaign'),
+            ('utm_source', 'source_id', 'koda_utm_source'),
+            ('utm_medium', 'medium_id', 'koda_utm_medium'),
         ]
 
     def _find_or_create_record(self, model_name, name):

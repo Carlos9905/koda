@@ -2,7 +2,7 @@
 
 import * as spreadsheet from "@koda/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
-import { OdooChart } from "./odoo_chart";
+import { OdooChart } from "./koda_chart";
 
 const { chartRegistry } = spreadsheet.registries;
 
@@ -24,8 +24,8 @@ export class OdooBarChart extends OdooChart {
     }
 }
 
-chartRegistry.add("odoo_bar", {
-    match: (type) => type === "odoo_bar",
+chartRegistry.add("koda_bar", {
+    match: (type) => type === "koda_bar",
     createChart: (definition, sheetId, getters) => new OdooBarChart(definition, sheetId, getters),
     getChartRuntime: createOdooChartRuntime,
     validateChartDefinition: (validator, definition) =>
@@ -58,7 +58,7 @@ function createOdooChartRuntime(chart, getters) {
 function getBarConfiguration(chart, labels, locale) {
     const fontColor = chartFontColor(chart.background);
     const config = getDefaultChartJsRuntime(chart, labels, fontColor, { locale });
-    config.type = chart.type.replace("odoo_", "");
+    config.type = chart.type.replace("koda_", "");
     const legend = {
         ...config.options.legend,
         display: chart.legendPosition !== "none",

@@ -83,18 +83,18 @@ class TestUBLRO(TestUBLCommon):
     def test_export_invoice(self):
         invoice = self.create_move("out_invoice")
         attachment = self.get_attachment(invoice)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_invoice.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_koda/ciusro_out_invoice.xml')
 
     def test_export_credit_note(self):
         refund = self.create_move("out_refund")
         attachment = self.get_attachment(refund)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_refund.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_koda/ciusro_out_refund.xml')
 
     def test_export_invoice_different_currency(self):
         self.currency_data['currency'] = self.env.ref('base.USD')
         invoice = self.create_move("out_invoice")
         attachment = self.get_attachment(invoice)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_invoice_different_currency.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_koda/ciusro_out_invoice_different_currency.xml')
         self.currency_data['currency'] = self.env.ref('base.RON')
 
     def test_export_no_vat_but_have_company_id_without_prefix(self):
@@ -113,7 +113,7 @@ class TestUBLRO(TestUBLCommon):
         })
         invoice = self.create_move("out_invoice")
         attachment = self.get_attachment(invoice)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_invoice.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_koda/ciusro_out_invoice.xml')
 
     def test_export_vat_without_prefix(self):
         self.company_data['company'].vat = '1234567897'

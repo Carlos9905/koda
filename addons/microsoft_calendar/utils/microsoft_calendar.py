@@ -132,7 +132,7 @@ class MicrosoftCalendarService():
         for event in events:
             if event.get('type') == 'occurrence' and event.get('start') and event.get('end'):
                 # get time values and update min start and max stop from sync context range
-                time_values = self.microsoft_service.env['calendar.event']._microsoft_to_odoo_recurrence_values(MicrosoftEvent([event]))
+                time_values = self.microsoft_service.env['calendar.event']._microsoft_to_koda_recurrence_values(MicrosoftEvent([event]))
                 if not min_start_dt or time_values['start'] < min_start_dt:
                     min_start_dt = time_values['start']
                 if not max_stop_dt or time_values['stop'] > max_stop_dt:

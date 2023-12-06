@@ -32,7 +32,7 @@
         'theme_monglia',
         'theme_nano',
         'theme_notes',
-        'theme_odoo_experts',
+        'theme_koda_experts',
         'theme_orchid',
         'theme_paptic',
         'theme_real_estate',

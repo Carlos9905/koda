@@ -623,7 +623,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_bar",
+                        "type": "koda_bar",
                         "verticalAxisPosition": "left",
                         "stacked": true
                     }
@@ -656,7 +656,7 @@
                             ],
                             "orderBy": []
                         },
-                        "type": "odoo_pie"
+                        "type": "koda_pie"
                     }
                 },
                 {
@@ -973,7 +973,7 @@
         "26af76da-e3c1-4696-8167-1b33773591e2": "helpdesk.helpdesk_ticket_report_menu",
         "26d60f2f-6c8f-4881-9ac5-3a4fde74699e": "helpdesk.helpdesk_ticket_report_menu"
     },
-    "odooVersion": 4,
+    "kodaVersion": 4,
     "lists": {},
     "listNextId": 1,
     "pivots": {

@@ -23,7 +23,7 @@ class SocialPushNotificationsController(http.Controller):
         if current_website.notification_request_icon:
             icon = '/web/image/website/%s/notification_request_icon/48x48' % current_website.id
         else:
-            icon = '/mail/static/src/img/odoobot_transparent.png'
+            icon = '/mail/static/src/img/kodabot_transparent.png'
 
         if not current_website.firebase_use_own_account \
            and (not current_website.firebase_project_id or

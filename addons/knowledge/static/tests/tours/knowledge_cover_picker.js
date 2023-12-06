@@ -45,13 +45,13 @@ registry.category("web_tour.tours").add('knowledge_cover_selector_tour', {
     extra_trigger: '.modal-body .unsplash_error',
     run: () => {},
 }, {
-    // Change the search query to find odoo_logo file
+    // Change the search query to find koda_logo file
     trigger: '.modal-body input.o_we_search',
     extra_trigger: '.modal-body .o_nocontent_help',
-    run: 'text odoo_logo',
+    run: 'text koda_logo',
 }, {
-    // Choose the odoo_logo cover
-    trigger: '.o_existing_attachment_cell img[title*="odoo_logo"]',
+    // Choose the koda_logo cover
+    trigger: '.o_existing_attachment_cell img[title*="koda_logo"]',
     run: 'click',
 }, {
     // Check cover has been added to the article and is initially centered and
@@ -145,7 +145,7 @@ registry.category("web_tour.tours").add('knowledge_cover_selector_tour', {
     // search query, which is the article name, is "koda" which is also in the
     // cover attachment's name, and that clicking on it sets it as cover of the
     // current article
-    trigger: '.modal-body .o_existing_attachment_cell img[title="odoo_logo.png"]',
+    trigger: '.modal-body .o_existing_attachment_cell img[title="koda_logo.png"]',
 }, {
     // Check cover has been set, and open previous article again
     trigger: '.o_knowledge_sidebar .o_article_name:contains("Birds")',
@@ -167,11 +167,11 @@ registry.category("web_tour.tours").add('knowledge_cover_selector_tour', {
 }, {
     // Check that koda logo is now shown in the cover selector, and make the trash
     // button visible
-    trigger: '.modal-body .o_existing_attachment_cell img[title="odoo_logo.png"]',
+    trigger: '.modal-body .o_existing_attachment_cell img[title="koda_logo.png"]',
     run() {},
 }, {
     // Click on delete cover button
-    trigger: '.modal-body .o_existing_attachment_cell:has(img[title="odoo_logo.png"]) .o_existing_attachment_remove',
+    trigger: '.modal-body .o_existing_attachment_cell:has(img[title="koda_logo.png"]) .o_existing_attachment_remove',
     allowInvisible: true,
 }, {
     // Confirm deletion of cover (should ask for confirmation)

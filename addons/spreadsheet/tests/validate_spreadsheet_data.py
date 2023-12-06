@@ -10,17 +10,17 @@ markdown_link_regex = r"^\[([^\[]+)\]\((.+)\)$"
 
 xml_id_url_prefix = "koda://ir_menu_xml_id/"
 
-odoo_view_link_prefix = "koda://view/"
+koda_view_link_prefix = "koda://view/"
 
 
-def odoo_charts(data):
+def koda_charts(data):
     """return all koda chart definition in the spreadsheet"""
     figures = []
     for sheet in data["sheets"]:
         figures += [
             dict(figure["data"], id=figure["id"])
             for figure in sheet["figures"]
-            if figure["tag"] == "chart" and figure["data"]["type"].startswith("odoo_")
+            if figure["tag"] == "chart" and figure["data"]["type"].startswith("koda_")
         ]
     return figures
 
@@ -38,14 +38,14 @@ def links_urls(data):
     return urls
 
 
-def odoo_view_links(data):
+def koda_view_links(data):
     """return all view definitions embedded in link cells.
     urls looks like koda://view/{... view data...}
     """
     return [
-        json.loads(url[len(odoo_view_link_prefix):])
+        json.loads(url[len(koda_view_link_prefix):])
         for url in links_urls(data)
-        if url.startswith(odoo_view_link_prefix)
+        if url.startswith(koda_view_link_prefix)
     ]
 
 
@@ -121,9 +121,9 @@ def chart_fields(chart):
 def filter_fields(data):
     """return all field names used in global filter definitions"""
     fields_by_model = defaultdict(set)
-    charts = odoo_charts(data)
-    odoo_version = data.get("odooVersion", 1)
-    if odoo_version < 5:
+    charts = koda_charts(data)
+    koda_version = data.get("kodaVersion", 1)
+    if koda_version < 5:
         for filter_definition in data.get("globalFilters", []):
             for pivot_id, matching in filter_definition.get("pivotFields", dict()).items():
                 model = data["pivots"][pivot_id]["model"]
@@ -155,7 +155,7 @@ def filter_fields(data):
     return dict(fields_by_model)
 
 
-def odoo_view_fields(view):
+def koda_view_fields(view):
     return view["action"]["modelName"], set(domain_fields(view["action"]["domain"]))
 
 
@@ -172,8 +172,8 @@ def fields_in_spreadsheet(data):
     all_fields = chain(
         extract_fields(list_fields, data.get("lists", dict()).values()).items(),
         extract_fields(pivot_fields, data.get("pivots", dict()).values()).items(),
-        extract_fields(chart_fields, odoo_charts(data)).items(),
-        extract_fields(odoo_view_fields, odoo_view_links(data)).items(),
+        extract_fields(chart_fields, koda_charts(data)).items(),
+        extract_fields(koda_view_fields, koda_view_links(data)).items(),
         filter_fields(data).items(),
     )
     fields_by_model = defaultdict(set)

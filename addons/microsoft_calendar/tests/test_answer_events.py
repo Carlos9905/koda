@@ -32,7 +32,7 @@ class TestAnswerEvents(TestCommon):
 
     @patch.object(MicrosoftCalendarService, '_get_single_event')
     @patch.object(MicrosoftCalendarService, 'answer')
-    def test_attendee_accepts_event_from_odoo_calendar(self, mock_answer, mock_get_single_event):
+    def test_attendee_accepts_event_from_koda_calendar(self, mock_answer, mock_get_single_event):
         attendee = self.env["calendar.attendee"].search([
             ('event_id', '=', self.simple_event.id),
             ('partner_id', '=', self.attendee_user.partner_id.id)
@@ -53,7 +53,7 @@ class TestAnswerEvents(TestCommon):
 
     @patch.object(MicrosoftCalendarService, '_get_single_event')
     @patch.object(MicrosoftCalendarService, 'answer')
-    def test_attendee_declines_event_from_odoo_calendar(self, mock_answer, mock_get_single_event):
+    def test_attendee_declines_event_from_koda_calendar(self, mock_answer, mock_get_single_event):
         attendee = self.env["calendar.attendee"].search([
             ('event_id', '=', self.simple_event.id),
             ('partner_id', '=', self.attendee_user.partner_id.id)

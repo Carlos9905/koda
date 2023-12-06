@@ -14,7 +14,7 @@ const FacebookPageWidget = publicWidget.Widget.extend({
     start: function () {
         var def = this._super.apply(this, arguments);
 
-        this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerUnactive();
+        this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerUnactive();
 
         const params = pick(this.$el[0].dataset, 'href', 'id', 'height', 'tabs', 'small_header', 'hide_cover');
         if (!params.href) {
@@ -43,7 +43,7 @@ const FacebookPageWidget = publicWidget.Widget.extend({
         });
         this.$el.append(this.$iframe);
 
-        this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerActive();
+        this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerActive();
         return def;
     },
     /**
@@ -52,11 +52,11 @@ const FacebookPageWidget = publicWidget.Widget.extend({
     destroy: function () {
         this._super.apply(this, arguments);
 
-        this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerUnactive();
+        this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerUnactive();
         if (this.$iframe) {
             this.$iframe.remove();
         }
-        this.options.wysiwyg && this.options.wysiwyg.odooEditor.observerActive();
+        this.options.wysiwyg && this.options.wysiwyg.kodaEditor.observerActive();
     },
 });
 

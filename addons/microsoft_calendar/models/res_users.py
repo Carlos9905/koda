@@ -125,16 +125,16 @@ class User(models.Model):
         self.microsoft_calendar_account_id.calendar_sync_token = next_sync_token
 
         # Microsoft -> Odoo
-        synced_events, synced_recurrences = self.env['calendar.event']._sync_microsoft2odoo(events) if events else (self.env['calendar.event'], self.env['calendar.recurrence'])
+        synced_events, synced_recurrences = self.env['calendar.event']._sync_microsoft2koda(events) if events else (self.env['calendar.event'], self.env['calendar.recurrence'])
 
         # Odoo -> Microsoft
         recurrences = self.env['calendar.recurrence']._get_microsoft_records_to_sync(full_sync=full_sync)
         recurrences -= synced_recurrences
-        recurrences._sync_odoo2microsoft()
+        recurrences._sync_koda2microsoft()
         synced_events |= recurrences.calendar_event_ids
 
         events = self.env['calendar.event']._get_microsoft_records_to_sync(full_sync=full_sync)
-        (events - synced_events)._sync_odoo2microsoft()
+        (events - synced_events)._sync_koda2microsoft()
         self.microsoft_last_sync_date = fields.datetime.now()
 
         return bool(events | synced_events) or bool(recurrences | synced_recurrences)

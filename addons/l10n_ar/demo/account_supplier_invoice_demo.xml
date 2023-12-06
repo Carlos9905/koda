@@ -79,7 +79,7 @@
 
     <!-- Service Import to Odoo, fiscal position changes tax not correspond -->
     <record id="demo_sup_invoice_6" model="account.move" context="{'allowed_company_ids': [ref('company_ri')]}">
-        <field name="partner_id" ref="res_partner_odoo"/>
+        <field name="partner_id" ref="res_partner_koda"/>
         <field name="invoice_user_id" ref="base.user_demo"/>
         <field name="invoice_payment_term_id" ref="account.account_payment_term_end_following_month"/>
         <field name="move_type">in_invoice</field>
@@ -91,7 +91,7 @@
 
     <!-- Similar to last one but with line that have tax not correspond with negative amount -->
     <record id="demo_sup_invoice_7" model="account.move" context="{'allowed_company_ids': [ref('company_ri')]}">
-        <field name="partner_id" ref="res_partner_odoo"/>
+        <field name="partner_id" ref="res_partner_koda"/>
         <field name="invoice_user_id" ref="base.user_demo"/>
         <field name="invoice_payment_term_id" ref="account.account_payment_term_end_following_month"/>
         <field name="move_type">in_invoice</field>

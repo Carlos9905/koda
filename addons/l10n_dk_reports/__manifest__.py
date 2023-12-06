@@ -6,7 +6,7 @@
     'countries': ['dk'],
     'version': '1.0',
     'author': 'Odoo House ApS',
-    'website': 'https://odoohouse.dk',
+    'website': 'https://kodahouse.dk',
     'category': 'Accounting/Localizations/Reporting',
     'description': """
 Accounting reports for Denmark

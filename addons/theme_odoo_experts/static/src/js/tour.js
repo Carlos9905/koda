@@ -34,7 +34,7 @@ const snippets = [
     },
 ];
 
-wTourUtils.registerThemeHomepageTour("odoo_experts_tour", () => [
+wTourUtils.registerThemeHomepageTour("koda_experts_tour", () => [
     wTourUtils.assertCssVariable('--color-palettes-name', '"koda-experts-1"'),
     wTourUtils.dragNDrop(snippets[0]),
     wTourUtils.dragNDrop(snippets[1]),

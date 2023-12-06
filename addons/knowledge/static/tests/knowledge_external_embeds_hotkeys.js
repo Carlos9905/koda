@@ -32,14 +32,14 @@ const insertKanbanEmbed = async (htmlField, target) => {
         view_type: 'kanban',
         context: {}
     });
-    wysiwyg.odooEditor.observerUnactive();
+    wysiwyg.kodaEditor.observerUnactive();
     const embedDiv = document.createElement('div');
     embedDiv.className = "o_knowledge_behavior_anchor o_knowledge_behavior_type_embedded_view";
     embedDiv.setAttribute('data-behavior-props', behaviorProps);
     target.replaceWith(embedDiv);
     await htmlFieldReadyPromise;
     await htmlField.mountBehaviors();
-    wysiwyg.odooEditor.observerActive();
+    wysiwyg.kodaEditor.observerActive();
     await nextTick();
 };
 
@@ -175,7 +175,7 @@ QUnit.module("Knowledge External Embeds Hotkeys", (hooks) => {
 
         const htmlField = await htmlFieldReadyPromise;
 
-        const editable = htmlField.wysiwyg.odooEditor.editable;
+        const editable = htmlField.wysiwyg.kodaEditor.editable;
         const embedViewTargetNode = editable.querySelector('.embedded_view_target');
         const regularHtmlFieldNode = editable.querySelector('.regular_html_field_node');
 

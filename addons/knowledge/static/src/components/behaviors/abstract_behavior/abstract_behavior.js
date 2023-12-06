@@ -164,6 +164,6 @@ export class AbstractBehavior extends Component {
     //--------------------------------------------------------------------------
 
     get editor () {
-        return this.props.wysiwyg ? this.props.wysiwyg.odooEditor : undefined;
+        return this.props.wysiwyg ? this.props.wysiwyg.kodaEditor : undefined;
     }
 }
