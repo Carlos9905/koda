@@ -163,5 +163,3 @@ cython_debug/
 .vscode/
 
 # Configuracion KODA
-koda.conf
-koda.conf
