@@ -1,4 +1,4 @@
-odoo.define("@odoo/owl", [], function () {
+koda.define("@odoo/owl", [], function () {
     "use strict";
 
     return owl;
