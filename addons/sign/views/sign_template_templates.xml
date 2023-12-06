@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="sign.items_view" name="Digital Signatures - Items View">
         <iframe class="o_sign_pdf_iframe" t-att-readonly="'readonly' if readonly else None"/>
 
@@ -63,4 +63,4 @@
                 t-att-data-value="item_select_option['value']"/>
         </t>
     </template>
-</odoo>
+</koda>

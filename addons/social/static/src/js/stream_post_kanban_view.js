@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { StreamPostKanbanController } from './stream_post_kanban_controller';
 import { StreamPostKanbanModel } from './stream_post_kanban_model';

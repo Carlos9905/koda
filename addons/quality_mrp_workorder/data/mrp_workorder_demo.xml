@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <!-- Quality Control From Manufacturing -->
 
     <record id="quality_point_pass_fail" model="quality.point">
@@ -57,4 +57,4 @@
         <field name="sequence">350</field>
     </record>
 
-</odoo>
+</koda>

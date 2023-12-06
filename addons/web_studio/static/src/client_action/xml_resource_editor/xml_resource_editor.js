@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component, onWillStart, onWillUpdateProps, toRaw, useState } from "@odoo/owl";
+/** @koda-module */
+import { Component, onWillStart, onWillUpdateProps, toRaw, useState } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 import { CodeEditor } from "@web/core/code_editor/code_editor";
 import { ResizablePanel } from "@web/core/resizable_panel/resizable_panel";

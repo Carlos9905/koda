@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "../browser/browser";
 import { Dialog } from "../dialog/dialog";
@@ -7,7 +7,7 @@ import { registry } from "../registry";
 import { useService } from "@web/core/utils/hooks";
 import { capitalize } from "../utils/strings";
 
-import { Component, useState, markup } from "@odoo/owl";
+import { Component, useState, markup } from "@koda/owl";
 
 // This props are added by the error handler
 export const standardErrorDialogProps = {
@@ -24,13 +24,13 @@ export const standardErrorDialogProps = {
 
 export const odooExceptionTitleMap = new Map(
     Object.entries({
-        "odoo.addons.base.models.ir_mail_server.MailDeliveryException": _t("MailDeliveryException"),
-        "odoo.exceptions.AccessDenied": _t("Access Denied"),
-        "odoo.exceptions.MissingError": _t("Missing Record"),
-        "odoo.exceptions.UserError": _t("Invalid Operation"),
-        "odoo.exceptions.ValidationError": _t("Validation Error"),
-        "odoo.exceptions.AccessError": _t("Access Error"),
-        "odoo.exceptions.Warning": _t("Warning"),
+        "koda.addons.base.models.ir_mail_server.MailDeliveryException": _t("MailDeliveryException"),
+        "koda.exceptions.AccessDenied": _t("Access Denied"),
+        "koda.exceptions.MissingError": _t("Missing Record"),
+        "koda.exceptions.UserError": _t("Invalid Operation"),
+        "koda.exceptions.ValidationError": _t("Validation Error"),
+        "koda.exceptions.AccessError": _t("Access Error"),
+        "koda.exceptions.Warning": _t("Warning"),
     })
 );
 
@@ -189,12 +189,12 @@ SessionExpiredDialog.props = { ...standardErrorDialogProps };
 
 registry
     .category("error_dialogs")
-    .add("odoo.exceptions.AccessDenied", WarningDialog)
-    .add("odoo.exceptions.AccessError", WarningDialog)
-    .add("odoo.exceptions.MissingError", WarningDialog)
-    .add("odoo.exceptions.UserError", WarningDialog)
-    .add("odoo.exceptions.ValidationError", WarningDialog)
-    .add("odoo.exceptions.RedirectWarning", RedirectWarningDialog)
-    .add("odoo.http.SessionExpiredException", SessionExpiredDialog)
+    .add("koda.exceptions.AccessDenied", WarningDialog)
+    .add("koda.exceptions.AccessError", WarningDialog)
+    .add("koda.exceptions.MissingError", WarningDialog)
+    .add("koda.exceptions.UserError", WarningDialog)
+    .add("koda.exceptions.ValidationError", WarningDialog)
+    .add("koda.exceptions.RedirectWarning", RedirectWarningDialog)
+    .add("koda.http.SessionExpiredException", SessionExpiredDialog)
     .add("werkzeug.exceptions.Forbidden", SessionExpiredDialog)
     .add("504", Error504Dialog);

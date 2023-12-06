@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { _t } from "@web/core/l10n/translation";
@@ -6,7 +6,7 @@ import { useService } from "@web/core/utils/hooks";
 import { Many2XAutocomplete } from "@web/views/fields/relational_utils";
 import { computeAppsAndMenuItems } from "@web/webclient/menus/menu_helpers";
 
-import { Component, useState, useExternalListener, useRef, onMounted } from "@odoo/owl";
+import { Component, useState, useExternalListener, useRef, onMounted } from "@koda/owl";
 
 export class IrMenuSelector extends Component {
     setup() {
@@ -105,7 +105,7 @@ export class IrMenuSelectorDialog extends Component {
         // The following external listener handles this.
         useExternalListener(document.body, "click", (ev) => {
             ev.stopPropagation();
-            ev.preventDefault(); // stop jumping to odoo home page
+            ev.preventDefault(); // stop jumping to koda home page
         });
     }
     _onConfirm() {

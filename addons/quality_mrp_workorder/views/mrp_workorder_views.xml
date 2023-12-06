@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- MRP.WORKORDER SIMPLIFIED VIEW -->
     <record model="ir.ui.view" id="mrp_production_workorder_tree_editable_view_inherit_quality">
         <field name="name">mrp.production.work.order.tree.editable.inherit.quality</field>
@@ -31,4 +31,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

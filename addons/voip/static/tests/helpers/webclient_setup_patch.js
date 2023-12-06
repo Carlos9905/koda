@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { setupManager } from "@mail/../tests/helpers/webclient_setup";
 

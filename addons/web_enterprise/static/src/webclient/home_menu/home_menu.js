@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { isIosApp, isMobileOS, isMacOS } from "@web/core/browser/feature_detection";
 import { useHotkey } from "@web/core/hotkeys/hotkey_hook";
@@ -15,7 +15,7 @@ import {
     onWillUpdateProps,
     useState,
     useRef,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 class FooterComponent extends Component {
     setup() {

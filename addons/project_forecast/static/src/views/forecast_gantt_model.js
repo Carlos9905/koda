@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry"
 import { PlanningGanttModel } from "@planning/views/planning_gantt/planning_gantt_model";

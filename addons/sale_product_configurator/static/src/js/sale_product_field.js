@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { SaleOrderLineProductField } from '@sale/js/sale_product_field';
 import { serializeDateTime } from "@web/core/l10n/dates";

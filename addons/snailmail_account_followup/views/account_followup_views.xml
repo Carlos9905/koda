@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data>
 
         <record id="view_account_followup_followup_line_tree_inherit_snailmail" model="ir.ui.view">
@@ -30,4 +30,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

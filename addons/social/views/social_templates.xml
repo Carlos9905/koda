@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <template id="social_http_error_view" name="Social HTTP Error Template">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <t t-call="web.layout">
@@ -21,4 +21,4 @@
             </div>
         </t>
     </template>
-</odoo>
+</koda>

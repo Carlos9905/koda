@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { browser } from "@web/core/browser/browser";
@@ -6,7 +6,7 @@ import { KeepLast } from "@web/core/utils/concurrency";
 import { useService } from "@web/core/utils/hooks";
 import { Pager } from "@web/core/pager/pager";
 
-import { Component, onWillStart, useState, onWillUnmount } from "@odoo/owl";
+import { Component, onWillStart, useState, onWillUnmount } from "@koda/owl";
 
 const DEFAULT_LIMIT = 9;
 

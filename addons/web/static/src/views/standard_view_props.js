@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 // TODO: add this in info props description
 

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "../browser/browser";
 import { registry } from "../registry";

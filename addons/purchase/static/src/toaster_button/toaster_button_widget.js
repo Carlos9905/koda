@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 class ButtonWithNotification extends Component {
     setup() {

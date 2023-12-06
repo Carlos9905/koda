@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
     import publicWidget from '@web/legacy/js/public/public_widget';
     import Dialog from '@web/legacy/js/core/dialog';
@@ -11,7 +11,7 @@
 
     import { _t } from "@web/core/l10n/translation";
 
-    import { markup } from "@odoo/owl";
+    import { markup } from "@koda/owl";
 
     const CourseJoinWidget = CourseJoin.courseJoinWidget;
 

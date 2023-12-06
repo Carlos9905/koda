@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { parseFloatTime } from "@web/views/fields/parsers";

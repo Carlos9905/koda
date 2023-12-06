@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { AccountingDataSource } from "../accounting_datasource";
 const DATA_SOURCE_ID = "ACCOUNTING_AGGREGATES";
 

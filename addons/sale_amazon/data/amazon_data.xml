@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <!-- Supported Amazon marketplaces -->
     <!-- North America -->
@@ -172,4 +172,4 @@
         <value eval="[ref('sale_amazon.default_product'), ref('sale_amazon.shipping_product')]"/>
     </function>
 
-</odoo>
+</koda>

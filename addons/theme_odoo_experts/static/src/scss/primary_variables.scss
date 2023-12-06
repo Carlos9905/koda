@@ -72,7 +72,7 @@ $o-theme-font-configs: (
 
 $o-website-values-palettes: (
     (
-        'color-palettes-name': 'odoo-experts-1',
+        'color-palettes-name': 'koda-experts-1',
         'logo-height': (52 / 16) * 1rem,
         'fixed-logo-height': (52 / 16) * 1rem,
         'header-font-size': 1rem,
@@ -94,14 +94,14 @@ $o-website-values-palettes: (
     ),
 );
 
-$o-palette-priority-prefix: 'odoo-experts';
-$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'odoo-experts-1');
+$o-palette-priority-prefix: 'koda-experts';
+$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'koda-experts-1');
 
 $o-color-palettes-compatibility-indexes: (
-    1: 'odoo-experts-1',
-    2: 'odoo-experts-2',
-    3: 'odoo-experts-3',
-    4: 'odoo-experts-4',
+    1: 'koda-experts-1',
+    2: 'koda-experts-2',
+    3: 'koda-experts-3',
+    4: 'koda-experts-4',
     5: 'generic-1',
     6: 'generic-2',
     7: 'generic-3',

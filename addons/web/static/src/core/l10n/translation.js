@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Deferred } from "@web/core/utils/concurrency";
 import { sprintf } from "@web/core/utils/strings";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /**
  * Converts RGB color components to HSL components.

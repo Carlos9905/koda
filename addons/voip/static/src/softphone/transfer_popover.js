@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { Component, markup, onMounted, useRef, useState } from "@odoo/owl";
+import { Component, markup, onMounted, useRef, useState } from "@koda/owl";
 
 import { useService } from "@web/core/utils/hooks";
 import { escape, escapeRegExp } from "@web/core/utils/strings";

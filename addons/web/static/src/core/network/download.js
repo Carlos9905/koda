@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { makeErrorFromResponse, ConnectionLostError } from "@web/core/network/rpc_service";
@@ -497,8 +497,8 @@ download._download = (options) => {
             });
         }
         data.append("token", "dummy-because-api-expects-one");
-        if (odoo.csrf_token) {
-            data.append("csrf_token", odoo.csrf_token);
+        if (koda.csrf_token) {
+            data.append("csrf_token", koda.csrf_token);
         }
         configureBlobDownloadXHR(xhr, {
             onSuccess: resolve,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <!-- Event Type -->
     <record id="event.event_type_0" model="event.type">
@@ -114,7 +114,7 @@
         <li>Point of Sale (POS), Introduction to report customization.</li>
     </ul>
 
-    <p>For any additional information, please contact us at <a href="mailto:events@odoo.com">events@odoo.com</a></p>
+    <p>For any additional information, please contact us at <a href="mailto:events@koda.com">events@koda.com</a></p>
 
     <section class="s_we_speaker p-3 mb-4" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="performer">
         <span class="badge text-bg-secondary o_wevent_badge float-end">SPEAKER</span>
@@ -227,4 +227,4 @@
             (0, 0, {'title': 'Phone', 'question_type': 'phone'})]"/>
     </record>
 
-</odoo>
+</koda>

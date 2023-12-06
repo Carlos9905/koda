@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <record id="social_stream_view_form" model="ir.ui.view">
         <field name="name">social.stream.view.form.inherit.twitter</field>
@@ -12,7 +12,7 @@
                     required="not id and stream_type_type in ('twitter_follow', 'twitter_likes')"
                     widget="twitter_users_autocomplete" />
                 <field name="twitter_followed_account_id" invisible="1" />
-                <field name="twitter_searched_keyword" placeholder="e.g. #odoo"
+                <field name="twitter_searched_keyword" placeholder="e.g. #koda"
                     invisible="stream_type_type != 'twitter_keyword' or not account_id"
                     readonly="id"
                     required="stream_type_type == 'twitter_keyword'" />
@@ -20,4 +20,4 @@
         </field>
     </record>
 </data>
-</odoo>
+</koda>

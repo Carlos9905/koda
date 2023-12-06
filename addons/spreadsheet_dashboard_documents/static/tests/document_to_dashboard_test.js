@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { createSpreadsheet } from "@documents_spreadsheet/../tests/spreadsheet_test_utils";
 import { registry } from "@web/core/registry";
 import { actionService } from "@web/webclient/actions/action_service";

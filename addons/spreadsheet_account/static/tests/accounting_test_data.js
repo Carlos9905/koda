@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getBasicData } from "@spreadsheet/../tests/utils/data";
 

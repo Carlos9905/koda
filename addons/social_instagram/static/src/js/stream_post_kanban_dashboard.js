@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { StreamPostDashboard } from '@social/js/stream_post_kanban_dashboard';
 

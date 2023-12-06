@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { reactive } from "@odoo/owl";
+import { reactive } from "@koda/owl";
 
 import { patch } from "@web/core/utils/patch";
 import { session } from "@web/session";

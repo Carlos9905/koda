@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <template id="portal_timesheet_table_inherit" inherit_id="hr_timesheet.portal_timesheet_table">
         <xpath expr="//thead/tr/th[@t-if='is_uom_day']" position="before">
@@ -19,4 +19,4 @@
         </xpath>
     </template>
 
-</odoo>
+</koda>

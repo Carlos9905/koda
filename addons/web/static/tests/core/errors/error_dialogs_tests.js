@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import {
@@ -175,7 +175,7 @@ QUnit.test("WarningDialog", async (assert) => {
     await mount(WarningDialog, target, {
         env,
         props: {
-            exceptionName: "odoo.exceptions.UserError",
+            exceptionName: "koda.exceptions.UserError",
             message: "...",
             data: { arguments: ["Some strange unreadable message"] },
             close() {},

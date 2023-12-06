@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <!-- Recurring products -->
     <record id="product_fire_insurance" model="product.product">
@@ -142,4 +142,4 @@
 
     <function  model="sale.order" name="_test_demo_generate_subscriptions"/>
 
-</odoo>
+</koda>

@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@koda/owl";
 import { FormController } from "@web/views/form/form_controller";
 
 export class TodoConversionFormController extends FormController {

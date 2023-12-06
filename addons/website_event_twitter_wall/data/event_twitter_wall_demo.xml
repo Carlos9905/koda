@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <record id="openwood_twitter_wall" model="website.twitter.wall">
     <field name="name">OpenWood Wall</field>
@@ -11,4 +11,4 @@
     <field name="twitter_wall_id" ref="openwood_twitter_wall" />
 </record>
 
-</odoo>
+</koda>

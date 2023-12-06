@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { useService } from "@web/core/utils/hooks";

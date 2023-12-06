@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { listView } from "@web/views/list/list_view";
 import { computeXpath } from "../xml_utils";
 import { registry } from "@web/core/registry";
@@ -6,7 +6,7 @@ import { omit } from "@web/core/utils/objects";
 
 import { ListEditorRenderer, columnsStyling } from "./list_editor_renderer";
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@koda/owl";
 import { ListEditorSidebar } from "./list_editor_sidebar/list_editor_sidebar";
 import { getStudioNoFetchFields, useModelConfigFetchInvisible } from "../utils";
 

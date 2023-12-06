@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component, onWillStart, useState } from "@odoo/owl";
+/** @koda-module */
+import { Component, onWillStart, useState } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { registry } from "@web/core/registry";
 import { _t } from "@web/core/l10n/translation";

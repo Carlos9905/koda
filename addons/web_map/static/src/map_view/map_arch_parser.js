@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { unique } from "@web/core/utils/arrays";
 import { visitXML } from "@web/core/utils/xml";

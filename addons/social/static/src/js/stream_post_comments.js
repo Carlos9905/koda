@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { ImagesCarouselDialog } from './images_carousel_dialog';
@@ -8,7 +8,7 @@ import { StreamPostCommentList } from './stream_post_comment_list';
 
 import { Dialog } from '@web/core/dialog/dialog';
 import { useService } from '@web/core/utils/hooks';
-import { Component, markup, useSubEnv, useState } from "@odoo/owl";
+import { Component, markup, useSubEnv, useState } from "@koda/owl";
 
 export class StreamPostComments extends SocialPostFormatterMixin(Component) {
 

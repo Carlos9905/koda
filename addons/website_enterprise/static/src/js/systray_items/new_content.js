@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { NewContentModal, MODULE_STATUS } from '@website/systray_items/new_content';
 import { patch } from "@web/core/utils/patch";
-import { xml } from "@odoo/owl";
+import { xml } from "@koda/owl";
 
 patch(NewContentModal.prototype, {
     setup() {

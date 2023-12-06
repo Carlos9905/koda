@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { BasicEditor, testEditor } from '../utils.js';
 

@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 import { useService } from "@web/core/utils/hooks";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class TimerToggleButton extends Component {
     setup() {

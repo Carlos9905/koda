@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <record id="event_3_mail_1" model="event.mail">
         <field name="event_id" ref="event.event_3"/>
         <field name="notification_type">whatsapp</field>
@@ -14,4 +14,4 @@
         <field name="interval_unit">days</field>
         <field name="template_ref" eval="'whatsapp.template,%i' % ref('whatsapp_event.whatsapp_template_event_reminder')"/>
     </record>
-</odoo>
+</koda>

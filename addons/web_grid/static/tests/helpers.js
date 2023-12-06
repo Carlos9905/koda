@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { nextTick, triggerEvents } from "@web/../tests/helpers/utils";
 

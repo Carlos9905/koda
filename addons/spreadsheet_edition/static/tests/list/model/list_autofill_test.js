@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { nextTick } from "@web/../tests/helpers/utils";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { toCartesian } = spreadsheet.helpers;
 import { getCell, getCellFormula, getCellValue } from "@spreadsheet/../tests/utils/getters";
 import {

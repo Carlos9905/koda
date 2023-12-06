@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 import { AbstractSpreadsheetAction } from "@spreadsheet_edition/bundle/actions/abstract_spreadsheet_action";
 import { registry } from "@web/core/registry";
 import {SpreadsheetComponent} from "@spreadsheet_edition/bundle/actions/spreadsheet_component";
 import { SpreadsheetControlPanel } from "@spreadsheet_edition/bundle/actions/control_panel/spreadsheet_control_panel";
 
-import { useSubEnv } from "@odoo/owl";
+import { useSubEnv } from "@koda/owl";
 
 export class SpreadsheetTestAction extends AbstractSpreadsheetAction {
     resModel = "spreadsheet.test";

@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useHotkey } from "../hotkeys/hotkey_hook";
 
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 /**
  * Custom checkbox

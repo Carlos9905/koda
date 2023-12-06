@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 import { useService } from "@web/core/utils/hooks";
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 export class ProjectControlPanel extends ControlPanel {
     setup() {

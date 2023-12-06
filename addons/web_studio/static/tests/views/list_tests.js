@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { click, getFixture, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { doAction, getActionManagerServerData } from "@web/../tests/webclient/helpers";

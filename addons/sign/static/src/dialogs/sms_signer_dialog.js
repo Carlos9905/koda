@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, useState, useRef, useEffect } from "@odoo/owl";
+import { Component, useState, useRef, useEffect } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { Dialog } from "@web/core/dialog/dialog";
 import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";

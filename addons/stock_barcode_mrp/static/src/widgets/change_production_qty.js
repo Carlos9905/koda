@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, onWillStart } from "@koda/owl";
 
 export class ChangeProductionQty extends Component {
     setup() {

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { session } from "@web/session";
 import mobile from "@web_mobile/js/services/core";

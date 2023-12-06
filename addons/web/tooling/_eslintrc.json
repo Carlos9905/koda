@@ -37,7 +37,7 @@
     }]
   },
   "globals": {
-    "odoo": "readonly",
+    "koda": "readonly",
     "$": "readonly",
     "jQuery": "readonly",
     "_": "readonly",

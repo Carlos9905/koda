@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { Domain } from "@web/core/domain";
 import { globalFiltersFieldMatchers } from "@spreadsheet/global_filters/plugins/global_filters_core_plugin";
 import { ChartDataSource } from "../data_source/chart_data_source";

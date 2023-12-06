@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, onWillStart, useState } from "@odoo/owl";
+import { Component, onWillStart, useState } from "@koda/owl";
 import { download } from "@web/core/network/download";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";

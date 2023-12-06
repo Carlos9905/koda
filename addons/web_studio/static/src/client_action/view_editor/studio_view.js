@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { WithSearch } from "@web/search/with_search/with_search";
 import { cleanClickedElements } from "@web_studio/client_action/view_editor/editors/utils";
-import { Component, onError, onMounted, toRaw, useRef, xml, useSubEnv, useEffect } from "@odoo/owl";
+import { Component, onError, onMounted, toRaw, useRef, xml, useSubEnv, useEffect } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 

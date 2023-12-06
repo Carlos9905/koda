@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import ServiceCore from "@web_mobile/js/services/core";
 
-import { onMounted, onPatched, onWillUnmount, useComponent } from "@odoo/owl";
+import { onMounted, onPatched, onWillUnmount, useComponent } from "@koda/owl";
 
 /**
  * This hook provides support for executing code when the back button is pressed

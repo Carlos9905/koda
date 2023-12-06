@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { browser } from "@web/core/browser/browser";
@@ -407,7 +407,7 @@ QUnit.module("AppCreator", (hooks) => {
     QUnit.test("app creator: debug flow with existing model", async (assert) => {
         assert.expect(17);
 
-        patchWithCleanup(odoo, { debug: "1" });
+        patchWithCleanup(koda, { debug: "1" });
 
         const { state } = await createAppCreator({
             serverData,

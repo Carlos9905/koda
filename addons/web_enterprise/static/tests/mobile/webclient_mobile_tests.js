@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { getActionManagerServerData, doAction } from "@web/../tests/webclient/helpers";
 import { homeMenuService } from "@web_enterprise/webclient/home_menu/home_menu_service";

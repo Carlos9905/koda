@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { useForwardRefToParent } from "@web/core/utils/hooks";
 import { usePosition } from "@web/core/position_hook";
 import { useActiveElement } from "@web/core/ui/ui_service";

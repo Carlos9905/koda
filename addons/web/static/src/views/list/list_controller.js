@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import {
@@ -37,7 +37,7 @@ import {
     useRef,
     useState,
     useSubEnv,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 // -----------------------------------------------------------------------------
 

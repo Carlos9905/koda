@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="quality_check_view_form_inherit_worksheet" model="ir.ui.view">
         <field name="name">quality.check.view.form.inherit.worksheet</field>
@@ -50,4 +50,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

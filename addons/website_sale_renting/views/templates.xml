@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="rental_products_price" inherit_id="website_sale.product_price" name="Rental Product Price">
         <xpath expr="//div[@itemprop='offers']" position="attributes">
             <attribute name="t-attf-class" separator=" " add="{{'o_hidden' if combination_info.get('is_rental') else ''}}"/>
@@ -284,4 +284,4 @@
             <attribute name="t-if" add=" or is_view_active('website_sale_renting.shop_rental_datepicker_opt')" separator=" "/>
         </xpath>
     </template>
-</odoo>
+</koda>

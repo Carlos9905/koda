@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
 
     <menuitem id="menu_ecommerce"
         name="eCommerce"
@@ -107,4 +107,4 @@
         parent="website.menu_content"
         sequence="30"/>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { setCellContent } from "@spreadsheet/../tests/utils/commands";
 import {
@@ -11,7 +11,7 @@ import { getAccountingData } from "../accounting_test_data";
 import { camelToSnakeObject } from "@spreadsheet/helpers/helpers";
 import { sprintf } from "@web/core/utils/strings";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { DEFAULT_LOCALE: locale } = spreadsheet.constants;
 
 let serverData;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
         <!-- Update existing rule : Employee can not modify validated timesheets -->
         <record id="hr_timesheet.timesheet_line_rule_user" model="ir.rule">
@@ -29,4 +29,4 @@
             <field name="perm_read" eval="0"/>
         </record>
 
-</odoo>
+</koda>

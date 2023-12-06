@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { coreTypes, CorePlugin } from "@odoo/o-spreadsheet";
+import { coreTypes, CorePlugin } from "@koda/o-spreadsheet";
 
-/** Plugin that link charts with Odoo menus. It can contain either the Id of the odoo menu, or its xml id. */
+/** Plugin that link charts with Odoo menus. It can contain either the Id of the koda menu, or its xml id. */
 export class ChartOdooMenuPlugin extends CorePlugin {
     constructor(config) {
         super(config);
@@ -25,7 +25,7 @@ export class ChartOdooMenuPlugin extends CorePlugin {
     }
 
     /**
-     * Get odoo menu linked to the chart
+     * Get koda menu linked to the chart
      *
      * @param {string} chartId
      * @returns {object | undefined}

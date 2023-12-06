@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { browser } from "@web/core/browser/browser";
 import { click, getFixture, patchWithCleanup, makeDeferred } from "@web/../tests/helpers/utils";
@@ -10,7 +10,7 @@ import {
     editAnySelect,
 } from "@web_studio/../tests/client_action/view_editors/view_editor_tests_utils";
 import { CodeEditor } from "@web/core/code_editor/code_editor";
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@koda/owl";
 
 /** @type {Node} */
 let target;
@@ -206,7 +206,7 @@ QUnit.module(
             assert.expect(5);
 
             // the XML editor button is only available in debug mode
-            patchWithCleanup(odoo, { debug: true });
+            patchWithCleanup(koda, { debug: true });
 
             // the XML editor lazy loads its libs and its templates so its start
             // method is monkey-patched to know when the widget has started

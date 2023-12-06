@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { click, nextTick, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { session } from "@web/session";
@@ -166,7 +166,7 @@ QUnit.module(
 
     () => {
         QUnit.test(
-            "icon external link isn't on the chart when its not linked to an odoo menu",
+            "icon external link isn't on the chart when its not linked to an koda menu",
             async function (assert) {
                 const model = await createModelWithDataSource({
                     serverData: this.serverData,
@@ -183,7 +183,7 @@ QUnit.module(
         );
 
         QUnit.test(
-            "icon external link is on the chart when its linked to an odoo menu",
+            "icon external link is on the chart when its linked to an koda menu",
             async function (assert) {
                 const model = await createModelWithDataSource({
                     serverData: this.serverData,
@@ -203,7 +203,7 @@ QUnit.module(
         );
 
         QUnit.test(
-            "icon external link is not on the chart when its linked to a wrong odoo menu",
+            "icon external link is not on the chart when its linked to a wrong koda menu",
             async function (assert) {
                 const model = await createModelWithDataSource({
                     serverData: this.serverData,
@@ -242,7 +242,7 @@ QUnit.module(
         );
 
         QUnit.test(
-            "click on icon external link on chart redirect to the odoo menu",
+            "click on icon external link on chart redirect to the koda menu",
             async function (assert) {
                 const doActionStep = "doAction";
                 mockActionService(assert, doActionStep);
@@ -268,7 +268,7 @@ QUnit.module(
         );
 
         QUnit.test(
-            "Click on chart in dashboard mode redirect to the odoo menu",
+            "Click on chart in dashboard mode redirect to the koda menu",
             async function (assert) {
                 const doActionStep = "doAction";
                 mockActionService(assert, doActionStep);
@@ -294,7 +294,7 @@ QUnit.module(
                 await click(fixture, ".o-chart-container");
                 assert.verifySteps(
                     [doActionStep],
-                    "Clicking on a chart while on dashboard mode redirect to the odoo menu"
+                    "Clicking on a chart while on dashboard mode redirect to the koda menu"
                 );
             }
         );

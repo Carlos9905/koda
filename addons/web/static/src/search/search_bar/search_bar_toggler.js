@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, useEffect, useState } from "@odoo/owl";
+import { Component, useEffect, useState } from "@koda/owl";
 import { browser } from "@web/core/browser/browser";
 import { useService } from "@web/core/utils/hooks";
 import { useDebounced } from "@web/core/utils/timing";

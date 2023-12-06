@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { setCellContent } from "../../utils/commands";
 import { getEvaluatedCell, getEvaluatedFormatGrid, getEvaluatedGrid } from "../../utils/getters";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 

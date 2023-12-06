@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /**
  * Builder for BarcodeDetector-like polyfill class using ZXing library.

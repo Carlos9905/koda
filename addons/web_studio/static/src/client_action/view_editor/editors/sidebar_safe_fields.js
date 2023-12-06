@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /**
  * A list of field widget keys of the wowl's field registry (`registry.category("fields")`)

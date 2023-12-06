@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { IconCreator } from "@web_studio/client_action/icon_creator/icon_creator";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 export class IconCreatorDialog extends Component {
     setup() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="s_picture" inherit_id="website.s_picture">
     <!-- Section -->
@@ -36,4 +36,4 @@
     </xpath>
 </template>
 
-</odoo>
+</koda>

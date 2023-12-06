@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, onWillRender, useEffect, useRef } from "@odoo/owl";
+import { Component, onWillRender, useEffect, useRef } from "@koda/owl";
 
 /**
  * @typedef {"error" | "warning"} ConnectorAlert

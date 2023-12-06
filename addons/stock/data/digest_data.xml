@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
     <data>
         <record id="digest_tip_stock_0" model="digest.tip">
             <field name="name">Tip: Speed up inventory operations with barcodes</field>
@@ -23,4 +23,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

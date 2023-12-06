@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@koda/owl";
 import { hotkeyService } from "@web/core/hotkeys/hotkey_service";
 import { popoverService } from "@web/core/popover/popover_service";
 import { registry } from "@web/core/registry";

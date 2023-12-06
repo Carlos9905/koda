@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { startWebClient } from "@web/start";
 import { WebClientEnterprise } from "./webclient/webclient";

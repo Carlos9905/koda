@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { FormController } from '@web/views/form/form_controller';
 import { DeleteSubtasksConfirmationDialog } from "@project/components/delete_subtasks_confirmation_dialog/delete_subtasks_confirmation_dialog";

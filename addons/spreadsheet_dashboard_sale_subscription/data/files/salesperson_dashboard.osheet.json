@@ -41,11 +41,11 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[Subscriptions](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[[\"event_type\",\"!=\",\"3_transfer\"]],\"context\":{\"group_by\":[\"event_type\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"event_type\"],\"graph_order\":null,\"graph_stacked\":true},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Growth\"})"
+                    "content": "[Subscriptions](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[[\"event_type\",\"!=\",\"3_transfer\"]],\"context\":{\"group_by\":[\"event_type\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"event_type\"],\"graph_order\":null,\"graph_stacked\":true},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Growth\"})"
                 },
                 "A19": {
                     "style": 1,
-                    "content": "[Worst Churn](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"event_type\",\"!=\",\"3_transfer\"],[\"event_type\",\"=\",\"2_churn\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Growth\"})"
+                    "content": "[Worst Churn](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"event_type\",\"!=\",\"3_transfer\"],[\"event_type\",\"=\",\"2_churn\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Growth\"})"
                 },
                 "A20": {
                     "style": 2,
@@ -95,7 +95,7 @@
                 },
                 "A33": {
                     "style": 1,
-                    "content": "[Worst Contraction](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"event_type\",\"!=\",\"3_transfer\"],[\"event_type\",\"=\",\"15_contraction\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})"
+                    "content": "[Worst Contraction](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"event_type\",\"!=\",\"3_transfer\"],[\"event_type\",\"=\",\"15_contraction\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})"
                 },
                 "A34": {
                     "style": 2,
@@ -145,7 +145,7 @@
                 },
                 "A46": {
                     "style": 1,
-                    "content": "[Top Recurrence](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"cohort\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions\"})"
+                    "content": "[Top Recurrence](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"cohort\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions\"})"
                 },
                 "A47": {
                     "style": 2,
@@ -526,7 +526,7 @@
                 },
                 "F19": {
                     "style": 1,
-                    "content": "[Top New](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"event_type\",\"!=\",\"3_transfer\"],[\"event_type\",\"=\",\"0_creation\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Growth\"})"
+                    "content": "[Top New](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"event_type\",\"!=\",\"3_transfer\"],[\"event_type\",\"=\",\"0_creation\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Growth\"})"
                 },
                 "F20": {
                     "style": 2,
@@ -576,7 +576,7 @@
                 },
                 "F33": {
                     "style": 1,
-                    "content": "[Top Expansion](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"event_type\",\"!=\",\"3_transfer\"],[\"event_type\",\"=\",\"1_expansion\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Growth\"})"
+                    "content": "[Top Expansion](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"event_type\",\"!=\",\"3_transfer\"],[\"event_type\",\"=\",\"1_expansion\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Growth\"})"
                 },
                 "F34": {
                     "style": 2,

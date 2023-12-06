@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from '@web/core/registry';
 import { useBus } from "@web/core/utils/hooks";
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 class FieldIframePreview extends Component {
     setup() {

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ChatterContainer } from '../../components/chatter/chatter_container';
 import { FormRenderer } from '@web/views/form/form_renderer';

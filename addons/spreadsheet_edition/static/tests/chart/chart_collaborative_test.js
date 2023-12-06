@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getBasicServerData } from "@spreadsheet/../tests/utils/data";
 import { createBasicChart } from "@spreadsheet/../tests/utils/commands";
@@ -18,7 +18,7 @@ QUnit.module("spreadsheet_edition > chart collaborative", {
     },
 });
 
-QUnit.test("Chart link to odoo menu collaborative", async (assert) => {
+QUnit.test("Chart link to koda menu collaborative", async (assert) => {
     const chartId = "1";
     const sheetId = alice.getters.getActiveSheetId();
     createBasicChart(alice, chartId);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="stock_scrap_wizard_inherit_mrp_barcode" model="ir.ui.view">
         <field name="name">stock.scrap.form.inherit.barcode</field>
@@ -26,4 +26,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

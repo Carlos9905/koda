@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, markup, onRendered, onWillStart, xml } from "@odoo/owl";
+import { Component, markup, onRendered, onWillStart, xml } from "@koda/owl";
 import { browser } from "@web/core/browser/browser";
 import { Domain } from "@web/core/domain";
 import { currencies } from "@web/core/currency";
@@ -7329,7 +7329,7 @@ QUnit.module("Views", (hooks) => {
     });
 
     QUnit.test("display a tooltip on a field", async function (assert) {
-        patchWithCleanup(odoo, {
+        patchWithCleanup(koda, {
             debug: false,
         });
 
@@ -7352,7 +7352,7 @@ QUnit.module("Views", (hooks) => {
             "should not have rendered a tooltip"
         );
 
-        patchWithCleanup(odoo, {
+        patchWithCleanup(koda, {
             debug: true,
         });
 

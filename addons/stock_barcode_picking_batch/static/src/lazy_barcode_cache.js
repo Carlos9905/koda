@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import LazyBarcodeCache from '@stock_barcode/lazy_barcode_cache';
 

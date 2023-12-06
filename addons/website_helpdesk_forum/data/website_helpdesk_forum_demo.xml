@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <function model="forum.forum" name="write">
         <value eval="[ref('website_forum.forum_help')]"/>
         <value model="ir.config_parameter" eval="{
@@ -13,4 +13,4 @@
             'karma_comment_all': 0,
         }"/>
     </function>
-</odoo>
+</koda>

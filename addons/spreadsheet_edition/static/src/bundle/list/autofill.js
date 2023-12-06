@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getNumberOfListFormulas } from "@spreadsheet/list/list_helpers";
 import { containsReferences } from "@spreadsheet/helpers/helpers";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
 const { autofillModifiersRegistry, autofillRulesRegistry } = spreadsheet.registries;
 

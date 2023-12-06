@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 
 import { ChatterAttachmentsViewer } from "./chatter_attachments_viewer";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class ChatterMessages extends Component {
     setup() {

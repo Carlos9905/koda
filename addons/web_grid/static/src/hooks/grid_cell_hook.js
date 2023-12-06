@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { useComponent, useEffect } from "@odoo/owl";
+import { useComponent, useEffect } from "@koda/owl";
 
 export function useMagnifierGlass() {
     const component = useComponent();

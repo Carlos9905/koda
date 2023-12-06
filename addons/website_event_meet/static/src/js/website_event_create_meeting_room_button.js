@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { renderToElement } from "@web/core/utils/render";
@@ -25,7 +25,7 @@ publicWidget.registry.websiteEventCreateMeetingRoom = publicWidget.Widget.extend
             this.$createModal = $(renderToElement(
                 'event_meet_create_room_modal',
                 {
-                    csrf_token: odoo.csrf_token,
+                    csrf_token: koda.csrf_token,
                     eventId: this.$el.data("eventId"),
                     defaultLangCode: this.$el.data("defaultLangCode"),
                     langs: langs,

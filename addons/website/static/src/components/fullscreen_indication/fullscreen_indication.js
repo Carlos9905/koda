@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useBus } from "@web/core/utils/hooks";
-import { EventBus, Component, xml, useState } from "@odoo/owl";
+import { EventBus, Component, xml, useState } from "@koda/owl";
 
 export class FullscreenIndication extends Component {
     setup() {

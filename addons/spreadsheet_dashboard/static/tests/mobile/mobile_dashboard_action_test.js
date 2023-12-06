@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { click, getFixture } from "@web/../tests/helpers/utils";
 import { createSpreadsheetDashboard } from "../utils/dashboard_action";

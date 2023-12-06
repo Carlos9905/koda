@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useState, xml } from "@odoo/owl";
+import { Component, useState, xml } from "@koda/owl";
 import { SidebarPropertiesToolbox } from "@web_studio/client_action/view_editor/interactive_editor/properties/sidebar_properties_toolbox/sidebar_properties_toolbox";
 
 class DefaultProperties extends Component {

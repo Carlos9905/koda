@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <menuitem
         id="quality_control_menu_product"
         name="Products"
@@ -40,4 +40,4 @@
             action = record.button_quality_alert()
         </field>
     </record>
-</odoo>
+</koda>

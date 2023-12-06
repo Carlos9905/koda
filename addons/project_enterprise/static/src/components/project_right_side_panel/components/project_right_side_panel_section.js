@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useBus, useService } from '@web/core/utils/hooks';
 import { patch } from "@web/core/utils/patch";
 import { ProjectRightSidePanelSection } from '@project/components/project_right_side_panel/components/project_right_side_panel_section';
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 patch(ProjectRightSidePanelSection.prototype, {
     setup() {

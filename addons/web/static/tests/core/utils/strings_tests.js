@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import {
     escape,
@@ -18,10 +18,10 @@ QUnit.module("utils", () => {
         assert.deepEqual(escapeRegExp(""), "");
         assert.deepEqual(escapeRegExp("wowl"), "wowl");
         assert.deepEqual(escapeRegExp("[wowl]"), "\\[wowl\\]");
-        assert.deepEqual(escapeRegExp("[wowl.odoo]"), "\\[wowl\\.odoo\\]");
+        assert.deepEqual(escapeRegExp("[wowl.koda]"), "\\[wowl\\.koda\\]");
         assert.deepEqual(
-            escapeRegExp("^odoo.define([.]*)$"),
-            "\\^odoo\\.define\\(\\[\\.\\]\\*\\)\\$"
+            escapeRegExp("^koda.define([.]*)$"),
+            "\\^koda\\.define\\(\\[\\.\\]\\*\\)\\$"
         );
         assert.deepEqual(
             escapeRegExp("[.*+?^${}()|[]\\"),
@@ -115,26 +115,26 @@ QUnit.module("utils", () => {
     QUnit.test("escape", (assert) => {
         assert.strictEqual(escape("<a>this is a link</a>"), "&lt;a&gt;this is a link&lt;/a&gt;");
         assert.strictEqual(
-            escape(`<a href="https://www.odoo.com">odoo<a>`),
-            `&lt;a href=&quot;https://www.odoo.com&quot;&gt;odoo&lt;a&gt;`
+            escape(`<a href="https://www.koda.com">koda<a>`),
+            `&lt;a href=&quot;https://www.koda.com&quot;&gt;koda&lt;a&gt;`
         );
         assert.strictEqual(
-            escape(`<a href='https://www.odoo.com'>odoo<a>`),
-            `&lt;a href=&#x27;https://www.odoo.com&#x27;&gt;odoo&lt;a&gt;`
+            escape(`<a href='https://www.koda.com'>koda<a>`),
+            `&lt;a href=&#x27;https://www.koda.com&#x27;&gt;koda&lt;a&gt;`
         );
         assert.strictEqual(
-            escape("<a href='https://www.odoo.com'>Odoo`s website<a>"),
-            `&lt;a href=&#x27;https://www.odoo.com&#x27;&gt;Odoo&#x60;s website&lt;a&gt;`
+            escape("<a href='https://www.koda.com'>Odoo`s website<a>"),
+            `&lt;a href=&#x27;https://www.koda.com&#x27;&gt;Odoo&#x60;s website&lt;a&gt;`
         );
     });
 
     QUnit.test("isEmail", (assert) => {
         assert.notOk(isEmail(""));
         assert.notOk(isEmail("test"));
-        assert.notOk(isEmail("test@odoo"));
-        assert.notOk(isEmail("test@odoo@odoo.com"));
-        assert.notOk(isEmail("te st@odoo.com"));
+        assert.notOk(isEmail("test@koda"));
+        assert.notOk(isEmail("test@koda@koda.com"));
+        assert.notOk(isEmail("te st@koda.com"));
 
-        assert.ok(isEmail("test@odoo.com"));
+        assert.ok(isEmail("test@koda.com"));
     });
 });

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { MapModel } from "@web_map/map_view/map_model";
 import { makeView } from "@web/../tests/views/helpers";

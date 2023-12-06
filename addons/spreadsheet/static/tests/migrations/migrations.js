@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { migrate, ODOO_VERSION } from "@spreadsheet/o_spreadsheet/migration";
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 
 QUnit.module("spreadsheet > migrations");
 
@@ -39,9 +39,9 @@ QUnit.test("Pivot 'day' arguments are migrated", (assert) => {
                 cells: {
                     A1: { content: `=ODOO.PIVOT("1","21/07/2022")` },
                     A2: { content: `=ODOO.PIVOT.HEADER("1","11/12/2022")` },
-                    A3: { content: `=odoo.pivot("1","21/07/2021")` },
+                    A3: { content: `=koda.pivot("1","21/07/2021")` },
                     A4: { content: `=ODOO.PIVOT("1","test")` },
-                    A5: { content: `=odoo.pivot("1","21/07/2021")+"21/07/2021"` },
+                    A5: { content: `=koda.pivot("1","21/07/2021")+"21/07/2021"` },
                     A6: { content: `=BAD_FORMULA(` },
                 },
             },
@@ -53,11 +53,11 @@ QUnit.test("Pivot 'day' arguments are migrated", (assert) => {
         migratedData.sheets[0].cells.A2.content,
         `=ODOO.PIVOT.HEADER("1","12/11/2022")`
     );
-    assert.strictEqual(migratedData.sheets[0].cells.A3.content, `=odoo.pivot("1","07/21/2021")`);
+    assert.strictEqual(migratedData.sheets[0].cells.A3.content, `=koda.pivot("1","07/21/2021")`);
     assert.strictEqual(migratedData.sheets[0].cells.A4.content, `=ODOO.PIVOT("1","test")`);
     assert.strictEqual(
         migratedData.sheets[0].cells.A5.content,
-        `=odoo.pivot("1","07/21/2021")+"21/07/2021"`
+        `=koda.pivot("1","07/21/2021")+"21/07/2021"`
     );
     assert.strictEqual(migratedData.sheets[0].cells.A6.content, `=BAD_FORMULA(`);
 });

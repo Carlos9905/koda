@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, reactive, xml } from "@odoo/owl";
+import { Component, reactive, xml } from "@koda/owl";
 import { browser } from "@web/core/browser/browser";
 import { ResizablePanel } from "@web/core/resizable_panel/resizable_panel";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";

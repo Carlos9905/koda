@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { click, contains } from "@web/../tests/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";

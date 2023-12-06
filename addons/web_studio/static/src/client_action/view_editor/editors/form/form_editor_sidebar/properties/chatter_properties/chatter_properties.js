@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useState, onWillStart, onWillUpdateProps } from "@odoo/owl";
+import { Component, useState, onWillStart, onWillUpdateProps } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { Property } from "@web_studio/client_action/view_editor/property/property";
 import { SidebarPropertiesToolbox } from "@web_studio/client_action/view_editor/interactive_editor/properties/sidebar_properties_toolbox/sidebar_properties_toolbox";

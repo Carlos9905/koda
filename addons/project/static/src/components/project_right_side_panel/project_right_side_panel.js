@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from '@web/core/utils/hooks';
@@ -10,7 +10,7 @@ import { ProjectRightSidePanelSection } from './components/project_right_side_pa
 import { ProjectMilestone } from './components/project_milestone';
 import { ProjectProfitability } from './components/project_profitability';
 import { getCurrency } from '@web/core/currency';
-import { Component, onWillStart, useState } from "@odoo/owl";
+import { Component, onWillStart, useState } from "@koda/owl";
 
 export class ProjectRightSidePanel extends Component {
     setup() {

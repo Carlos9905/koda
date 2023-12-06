@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, onWillUpdateProps, useState } from "@odoo/owl";
+import { Component, onWillUpdateProps, useState } from "@koda/owl";
 
 export class GridTimerButtonCell extends Component {
     static template = "timesheet_grid.GridTimerButtonCell";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { session } from "@web/session";
 import { MediaDialog } from "@web_editor/components/media_dialog/media_dialog";
@@ -7,7 +7,7 @@ import { browser } from "@web/core/browser/browser";
 import { useService } from "@web/core/utils/hooks";
 import customColors from "@web_editor/js/editor/custom_colors";
 import { localization } from "@web/core/l10n/localization";
-import * as OdooEditorLib from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
+import * as OdooEditorLib from "@web_editor/js/editor/koda-editor/src/OdooEditor";
 import { Toolbar } from "@web_editor/js/editor/toolbar";
 import { LinkPopoverWidget } from '@web_editor/js/wysiwyg/widgets/link_popover_widget';
 import { AltDialog } from '@web_editor/js/wysiwyg/widgets/alt_dialog';
@@ -17,7 +17,7 @@ import { ImageCrop } from '@web_editor/js/wysiwyg/widgets/image_crop';
 
 import * as wysiwygUtils from "@web_editor/js/common/wysiwyg_utils";
 import weUtils from "@web_editor/js/common/utils";
-import { isSelectionInSelectors, peek } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
+import { isSelectionInSelectors, peek } from '@web_editor/js/editor/koda-editor/src/utils/utils';
 import { PeerToPeer, RequestError } from "@web_editor/js/wysiwyg/PeerToPeer";
 import { uniqueId } from "@web/core/utils/functions";
 import { groupBy } from "@web/core/utils/arrays";
@@ -42,7 +42,7 @@ import {
     onWillUpdateProps,
     markup,
     status,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { isCSSColor } from '@web/core/utils/colors';
 import { EmojiPicker } from '@web/core/emoji_picker/emoji_picker';
 import { Tooltip } from "@web/core/tooltip/tooltip";
@@ -264,7 +264,7 @@ export class Wysiwyg extends Component {
     }
 
     defaultOptions = {
-        lang: 'odoo',
+        lang: 'koda',
         colors: customColors,
         recordInfo: {context: {}},
         document: document,
@@ -892,7 +892,7 @@ export class Wysiwyg extends Component {
             this.$editable.css('max-height', this.options.maxHeight);
         }
         if (this.options.resizable && !isMobileOS()) {
-            const $wrapper = $('<div class="o_wysiwyg_wrapper odoo-editor">');
+            const $wrapper = $('<div class="o_wysiwyg_wrapper koda-editor">');
             this.$root = $wrapper;
             $wrapper.append(this.$editable);
             this.$resizer = $(`<div class="o_wysiwyg_resizer">
@@ -1737,7 +1737,7 @@ export class Wysiwyg extends Component {
      * @returns {widget}
      */
     async _createSnippetsMenuInstance(options={}) {
-        const snippetsEditor = await odoo.loader.modules.get('@web_editor/js/editor/snippets.editor')[Symbol.for('default')];
+        const snippetsEditor = await koda.loader.modules.get('@web_editor/js/editor/snippets.editor')[Symbol.for('default')];
         const { SnippetsMenu } = snippetsEditor;
         return new SnippetsMenu(this, Object.assign({
             wysiwyg: this,
@@ -3178,7 +3178,7 @@ export class Wysiwyg extends Component {
         const content = record[this.options.collaborationChannel.collaborationFieldName];
         const lastHistoryId = content && this._getLastHistoryStepId(content);
         // If a change was made in the document while retrieving it, the
-        // lastHistoryId will be different if the odoo bus did not have time to
+        // lastHistoryId will be different if the koda bus did not have time to
         // notify the user.
         if (this._serverLastStepId !== lastHistoryId) {
             // todo: instrument it to ensure it never happens

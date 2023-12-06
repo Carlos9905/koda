@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { SpreadsheetAction } from "@documents_spreadsheet/bundle/actions/spreadsheet_action";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
 const { topbarMenuRegistry } = spreadsheet.registries;
-import { useSubEnv } from "@odoo/owl";
+import { useSubEnv } from "@koda/owl";
 
 topbarMenuRegistry.addChild("add_document_to_dashboard", ["file"], {
     name: _t("Add to dashboard"),

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getFixture, nextTick } from "@web/../tests/helpers/utils";
 import { getDashboardServerData } from "../utils/data";
@@ -26,7 +26,7 @@ QUnit.test("A link in a dashboard should be clickable", async (assert) => {
     const data = {
         sheets: [
             {
-                cells: { A1: { content: "[Odoo](https://odoo.com)" } },
+                cells: { A1: { content: "[Odoo](https://koda.com)" } },
             },
         ],
     };

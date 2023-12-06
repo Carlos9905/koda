@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { serializeDateTime, deserializeDateTime, parseDateTime, ConversionError, parseDate } from "@web/core/l10n/dates";
 import { sprintf } from "@web/core/utils/strings";

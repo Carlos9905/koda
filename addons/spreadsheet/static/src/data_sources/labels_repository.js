@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /**
  * This class is responsible for keeping track of the labels of records. It

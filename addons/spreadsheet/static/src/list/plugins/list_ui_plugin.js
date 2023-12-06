@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { getFirstListFunction, getNumberOfListFormulas } from "../list_helpers";
 import { Domain } from "@web/core/domain";
 import { ListDataSource } from "../list_data_source";

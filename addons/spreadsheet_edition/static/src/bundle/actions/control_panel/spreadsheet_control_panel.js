@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 import { useService } from "@web/core/utils/hooks";
@@ -9,8 +9,8 @@ import { _t } from "@web/core/l10n/translation";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 
-import { Component, onWillUnmount, useState } from "@odoo/owl";
-import { helpers } from "@odoo/o-spreadsheet";
+import { Component, onWillUnmount, useState } from "@koda/owl";
+import { helpers } from "@koda/o-spreadsheet";
 
 /**
  * @typedef {import("@spreadsheet_edition/bundle/actions/spreadsheet_component").User} User

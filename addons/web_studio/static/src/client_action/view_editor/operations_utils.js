@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 export function viewGroupByOperation(viewType, type, newValue, oldValue = undefined) {
     const operation_type = newValue ? "add" : "remove";

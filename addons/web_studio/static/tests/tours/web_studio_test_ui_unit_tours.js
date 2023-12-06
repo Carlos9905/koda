@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { registry } from "@web/core/registry";
 import { stepNotInStudio, assertEqual } from "@web_studio/../tests/tours/tour_helpers";
 

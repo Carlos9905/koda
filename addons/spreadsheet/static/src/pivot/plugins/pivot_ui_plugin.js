@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { getFirstPivotFunction, getNumberOfPivotFormulas } from "../pivot_helpers";
 import { FILTER_DATE_OPTION, monthsOptions } from "@spreadsheet/assets_backend/constants";
 import { Domain } from "@web/core/domain";

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 // This module makes it so that some errors only display a notification instead of an error dialog
 
 import { registry } from "@web/core/registry";
@@ -27,7 +27,7 @@ const sessionExpired = {
 
 registry
     .category("error_notifications")
-    .add("odoo.http.SessionExpiredException", sessionExpired)
+    .add("koda.http.SessionExpiredException", sessionExpired)
     .add("werkzeug.exceptions.Forbidden", sessionExpired)
     .add("504", {
         title: _t("Request timeout"),

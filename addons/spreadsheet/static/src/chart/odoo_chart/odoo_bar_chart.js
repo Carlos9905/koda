@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
 import { OdooChart } from "./odoo_chart";
 

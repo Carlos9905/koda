@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { SwitchCompanyMenu, SwitchCompanyItem } from "@web/webclient/switch_company_menu/switch_company_menu";
 
 export class MobileSwitchCompanyItem extends SwitchCompanyItem {}

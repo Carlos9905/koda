@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from '@web/core/utils/hooks';
 import { FormRenderer } from '@web/views/form/form_renderer';
-import { useRef, useEffect } from "@odoo/owl";
+import { useRef, useEffect } from "@koda/owl";
 
 export class FormRendererWithHtmlExpander extends FormRenderer {
     setup() {

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Record } from "@web/model/record";
@@ -8,7 +8,7 @@ import {
 } from "@web/views/fields/many2many_tags/many2many_tags_field";
 import { Many2OneField } from "@web/views/fields/many2one/many2one_field";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 const actionFieldsGet = {
     option_ids: { type: "many2many", relation: "sign.item.option", string: "Selected Options" },

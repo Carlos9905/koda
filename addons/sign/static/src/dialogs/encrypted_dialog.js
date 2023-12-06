@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { Dialog } from "@web/core/dialog/dialog";
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 export class EncryptedDialog extends Component {
     setup() {

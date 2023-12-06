@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { click, getFixture } from "@web/../tests/helpers/utils";
 import { createViewEditor, registerViewEditorDependencies } from "./view_editor_tests_utils";
 

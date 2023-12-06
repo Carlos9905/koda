@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { busService } from "@bus/services/bus_service";
 import { busParametersService } from "@bus/bus_parameters_service";
@@ -14,7 +14,7 @@ import { nameService } from "@web/core/name_service";
 import { registry } from "@web/core/registry";
 import { uiService } from "@web/core/ui/ui_service";
 import { makeFakeSpreadsheetService } from "@spreadsheet_edition/../tests/utils/collaborative_helpers";
-import { Spreadsheet } from "@odoo/o-spreadsheet";
+import { Spreadsheet } from "@koda/o-spreadsheet";
 import { SpreadsheetComponent } from "@spreadsheet_edition/bundle/actions/spreadsheet_component";
 
 const serviceRegistry = registry.category("services");
@@ -55,7 +55,7 @@ function getChildFromComponent(component, cls) {
 }
 
 /**
- * Return the odoo spreadsheet component
+ * Return the koda spreadsheet component
  * @param {*} actionManager
  * @returns {SpreadsheetComponent}
  */

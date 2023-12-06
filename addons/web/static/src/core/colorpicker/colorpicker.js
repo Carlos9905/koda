@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import {
     convertCSSColorToRgba,
@@ -17,7 +17,7 @@ import {
     onMounted,
     onWillUpdateProps,
     onWillDestroy,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 export class Colorpicker extends Component {
     static template = "web.Colorpicker";

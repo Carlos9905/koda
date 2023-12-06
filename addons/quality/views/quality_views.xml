@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="quality_check_view_activity" model="ir.ui.view">
         <field name="name">quality.check.activity</field>
@@ -137,4 +137,4 @@
     </record>
 
     <!-- js stuff -->
-    </odoo>
+    </koda>

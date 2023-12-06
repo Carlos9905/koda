@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Change default images of snippets -->
 <record id="s_banner_default_image" model="theme.ir.attachment">
@@ -243,4 +243,4 @@
     <field name="url">/theme_notes/static/src/img/content/s_call_to_action_default_image.jpg</field>
 </record>
 
-</odoo>
+</koda>

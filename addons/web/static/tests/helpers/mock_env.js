@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { makeEnv, startServices } from "@web/env";
@@ -7,7 +7,7 @@ import { registerCleanup } from "./cleanup";
 import { makeMockServer } from "./mock_server";
 import { mocks } from "./mock_services";
 import { patchWithCleanup } from "./utils";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 function prepareRegistry(registry, keepContent = false) {
     const _addEventListener = registry.addEventListener.bind(registry);

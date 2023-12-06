@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { FormController } from "@web/views/form/form_controller";
 import { TodoEditableBreadcrumbName } from "@project_todo/components/todo_editable_breadcrumb_name/todo_editable_breadcrumb_name";
 import { TodoDoneCheckmark } from "@project_todo/components/todo_done_checkmark/todo_done_checkmark";
 
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 /**
  *  The FormController is overridden to be able to manage the edition of the name of a to-do directly

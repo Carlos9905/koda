@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="view_task_form2_inherit_holidays" model="ir.ui.view">
         <field name="name">project.task.view.form.holidays</field>
         <field name="model">project.task</field>
@@ -35,4 +35,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

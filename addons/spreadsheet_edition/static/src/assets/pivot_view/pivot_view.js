@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { PivotRenderer } from "@web/views/pivot/pivot_renderer";
@@ -11,7 +11,7 @@ import { omit } from "@web/core/utils/objects";
 import { _t } from "@web/core/l10n/translation";
 import { SpreadsheetSelectorDialog } from "@spreadsheet_edition/assets/components/spreadsheet_selector_dialog/spreadsheet_selector_dialog";
 
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 patch(PivotRenderer.prototype, {
     setup() {

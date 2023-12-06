@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export const FACET_ICONS = {
     filter: "fa fa-filter",

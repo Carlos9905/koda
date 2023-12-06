@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { openCommandBar } from '@knowledge/../tests/tours/knowledge_tour_utils';
 
 const createFileBehaviorSteps = [
     { // open the powerBox
-        trigger: '.odoo-editor-editable p',
+        trigger: '.koda-editor-editable p',
         run: function () {
             openCommandBar(this.$anchor[0]);
         },

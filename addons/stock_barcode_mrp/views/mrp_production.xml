@@ -1,4 +1,4 @@
-<odoo>
+<koda>
 
     <record id="mrp_barcode_kanban" model="ir.ui.view">
         <field name="name">mrp.barcode.kanban</field>
@@ -217,4 +217,4 @@
             </p>
         </field>
     </record>
-</odoo>
+</koda>

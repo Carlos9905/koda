@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import {
     BasicEditor,
@@ -39,7 +39,7 @@ describe('Copy', () => {
         });
     });
     describe('range not collapsed', async () => {
-        it('should copy a selection as text/plain, text/html and text/odoo-editor', async () => {
+        it('should copy a selection as text/plain, text/html and text/koda-editor', async () => {
             await testEditor(BasicEditor, {
                 contentBefore: '<p>a[bcd]e</p>',
                 stepFunction: async editor => {
@@ -47,7 +47,7 @@ describe('Copy', () => {
                     await triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('bcd');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p>bcd</p>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p>bcd</p>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p>bcd</p>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -57,7 +57,7 @@ describe('Copy', () => {
                     await triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('abc\nefg');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p>abc<br>efg</p>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p>abc<br>efg</p>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p>abc<br>efg</p>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -67,7 +67,7 @@ describe('Copy', () => {
                     await triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('a');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<table><tbody><tr><td><ul><li>a</li><li>b</li><li>c</li></ul></td><td><br></td></tr></tbody></table>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<table><tbody><tr><td><ul><li>a</li><li>b</li><li>c</li></ul></td><td><br></td></tr></tbody></table>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<table><tbody><tr><td><ul><li>a</li><li>b</li><li>c</li></ul></td><td><br></td></tr></tbody></table>');
                 },
             });
         });
@@ -79,7 +79,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('Test Test');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p><span style="font-size: 16px;">Test</span> <span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">Test</font></span></p>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p><span style="font-size: 16px;">Test</span> <span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">Test</font></span></p>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p><span style="font-size: 16px;">Test</span> <span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">Test</font></span></p>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -89,7 +89,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('there');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p><strong><em><u><font class="text-o-color-1">there</font></u></em></strong></p>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p><strong><em><u><font class="text-o-color-1">there</font></u></em></strong></p>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p><strong><em><u><font class="text-o-color-1">there</font></u></em></strong></p>');
                 },
             });
         });
@@ -101,7 +101,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('First');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<li>First</li>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<li>First</li>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<li>First</li>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -111,7 +111,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('List');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<li>List</li>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<li>List</li>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<li>List</li>');
                 },
             });
             await testEditor(BasicEditor, {
@@ -121,7 +121,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('First');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<li><span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">First</font></span></li>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<li><span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">First</font></span></li>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<li><span style="font-size: 48px;"><font style="color: rgb(255, 0, 0);">First</font></span></li>');
                 },
             });
         })
@@ -133,7 +133,7 @@ describe('Copy', () => {
                     triggerEvent(editor.editable, 'copy', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('First\nSecond');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<ul><li>First</li><li>Second</li></ul>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<ul><li>First</li><li>Second</li></ul>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<ul><li>First</li><li>Second</li></ul>');
                 },
             });
         });
@@ -164,7 +164,7 @@ describe('Cut', () => {
         });
     });
     describe('range not collapsed', async () => {
-        it('should cut a selection as text/plain, text/html and text/odoo-editor', async () => {
+        it('should cut a selection as text/plain, text/html and text/koda-editor', async () => {
             await testEditor(BasicEditor, {
                 contentBefore: '<p>a[bcd]e</p>',
                 stepFunction: async editor => {
@@ -172,7 +172,7 @@ describe('Cut', () => {
                     await triggerEvent(editor.editable, 'cut', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('bcd');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p>bcd</p>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p>bcd</p>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p>bcd</p>');
                 },
                 contentAfter: '<p>a[]e</p>',
             });
@@ -183,7 +183,7 @@ describe('Cut', () => {
                     await triggerEvent(editor.editable, 'cut', { clipboardData });
                     window.chai.expect(clipboardData.getData('text/plain')).to.be.equal('abc\nefg');
                     window.chai.expect(clipboardData.getData('text/html')).to.be.equal('<p>abc<br>efg</p>');
-                    window.chai.expect(clipboardData.getData('text/odoo-editor')).to.be.equal('<p>abc<br>efg</p>');
+                    window.chai.expect(clipboardData.getData('text/koda-editor')).to.be.equal('<p>abc<br>efg</p>');
                 },
                 contentAfter: '<p>[]<br></p>',
             });
@@ -1531,9 +1531,9 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>xy<a href="#" oe-zws-empty-inline="">\u200B[]</a>z</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'http://odoo.com');
+                        await pasteText(editor, 'http://koda.com');
                     },
-                    contentAfter: '<p>xy<a href="http://odoo.com">http://odoo.com</a>[]z</p>',
+                    contentAfter: '<p>xy<a href="http://koda.com">http://koda.com</a>[]z</p>',
                 });
                 const imageUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
@@ -1564,16 +1564,16 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p><a href="#">[]\u200B</a></p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'abc www.odoo.com xyz');
+                        await pasteText(editor, 'abc www.koda.com xyz');
                     },
-                    contentAfter: '<p>abc <a href="http://www.odoo.com">www.odoo.com</a> xyz[]</p>',
+                    contentAfter: '<p>abc <a href="http://www.koda.com">www.koda.com</a> xyz[]</p>',
                 });
                 await testEditor(BasicEditor, {
                     contentBefore: '<p><a href="#">[]\u200B</a></p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'odoo.com\ngoogle.com');
+                        await pasteText(editor, 'koda.com\ngoogle.com');
                     },
-                    contentAfter: '<p style="margin-bottom: 0px;"><a href="http://odoo.com">odoo.com</a></p>' +
+                    contentAfter: '<p style="margin-bottom: 0px;"><a href="http://koda.com">koda.com</a></p>' +
                                   '<p><a href="http://google.com">google.com</a>[]<br></p>'
                 });
             });
@@ -1581,13 +1581,13 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p><a href="#">[]\u200B</a></p>',
                     stepFunction: async editor => {
-                        await pasteHtml(editor, '<a href="www.odoo.com">odoo.com</a><br><a href="www.google.com">google.com</a>');
+                        await pasteHtml(editor, '<a href="www.koda.com">koda.com</a><br><a href="www.google.com">google.com</a>');
                     },
-                    contentAfter: '<p><a href="www.odoo.com">odoo.com</a><br><a href="www.google.com">google.com</a>[]</p>',
+                    contentAfter: '<p><a href="www.koda.com">koda.com</a><br><a href="www.google.com">google.com</a>[]</p>',
                 });
             });
             it('should paste and transform URL among text', async () => {
-                const url = 'https://www.odoo.com';
+                const url = 'https://www.koda.com';
                 const imgUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
                 const videoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                 await testEditor(BasicEditor, {
@@ -1619,7 +1619,7 @@ describe('Paste', () => {
                 });
             });
             it('should paste and transform multiple URLs', async () => {
-                const url = 'https://www.odoo.com';
+                const url = 'https://www.koda.com';
                 const imgUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
                 const videoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                 await testEditor(BasicEditor, {
@@ -1691,7 +1691,7 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[abc]</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'www.odoo.com');
+                        await pasteText(editor, 'www.koda.com');
                         editor.historyUndo();
                     },
                     contentAfter: '<p>[abc]</p>',
@@ -1699,7 +1699,7 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[abc]</p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'def www.odoo.com xyz');
+                        await pasteText(editor, 'def www.koda.com xyz');
                         editor.historyUndo();
                     },
                     contentAfter: '<p>[abc]</p>',
@@ -1709,14 +1709,14 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p>[abc]</p>',
                     stepFunction: async editor => {
-                        await pasteHtml(editor, '<a href="www.odoo.com">odoo.com</a><br><a href="www.google.com">google.com</a>');
+                        await pasteHtml(editor, '<a href="www.koda.com">koda.com</a><br><a href="www.google.com">google.com</a>');
                         editor.historyUndo();
                     },
                     contentAfter: '<p>[abc]</p>',
                 });
             });
             it('should paste and transform URLs among text or multiple URLs', async () => {
-                const url = 'https://www.odoo.com';
+                const url = 'https://www.koda.com';
                 const imgUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
                 const videoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                 await testEditor(BasicEditor, {
@@ -1778,16 +1778,16 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p><a href="#">[xyz]</a></p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'www.odoo.com');
+                        await pasteText(editor, 'www.koda.com');
                     },
-                    contentAfter: '<p><a href="http://www.odoo.com">www.odoo.com</a>[]</p>',
+                    contentAfter: '<p><a href="http://www.koda.com">www.koda.com</a>[]</p>',
                 });
                 await testEditor(BasicEditor, {
                     contentBefore: '<p><a href="#">[xyz]</a></p>',
                     stepFunction: async editor => {
-                        await pasteText(editor, 'abc www.odoo.com xyz');
+                        await pasteText(editor, 'abc www.koda.com xyz');
                     },
-                    contentAfter: '<p>abc <a href="http://www.odoo.com">www.odoo.com</a> xyz[]</p>',
+                    contentAfter: '<p>abc <a href="http://www.koda.com">www.koda.com</a> xyz[]</p>',
                 });
                 const imageUrl = 'https://download.odoocdn.com/icons/website/static/description/icon.png';
                 await testEditor(BasicEditor, {
@@ -1818,9 +1818,9 @@ describe('Paste', () => {
                 await testEditor(BasicEditor, {
                     contentBefore: '<p><a href="#">[xyz]</a></p>',
                     stepFunction: async editor => {
-                        await pasteHtml(editor, '<a href="www.odoo.com">odoo.com</a><br><a href="www.google.com">google.com</a>');
+                        await pasteHtml(editor, '<a href="www.koda.com">koda.com</a><br><a href="www.google.com">google.com</a>');
                     },
-                    contentAfter: '<p><a href="www.odoo.com">odoo.com</a><br><a href="www.google.com">google.com</a>[]</p>',
+                    contentAfter: '<p><a href="www.koda.com">koda.com</a><br><a href="www.google.com">google.com</a>[]</p>',
                 });
             });
         });

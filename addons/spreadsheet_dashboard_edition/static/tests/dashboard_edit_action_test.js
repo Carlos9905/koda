@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { registry } from "@web/core/registry";
 import { actionService } from "@web/webclient/actions/action_service";
 import {
@@ -14,7 +14,7 @@ import { createDashboardEditAction, createNewDashboard } from "./utils/test_help
 import { getCellContent } from "@spreadsheet/../tests/utils/getters";
 import { doMenuAction } from "@spreadsheet/../tests/utils/ui";
 
-import { registries } from "@odoo/o-spreadsheet";
+import { registries } from "@koda/o-spreadsheet";
 
 const { topbarMenuRegistry } = registries;
 

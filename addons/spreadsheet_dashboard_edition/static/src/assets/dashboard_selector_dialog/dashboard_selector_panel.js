@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { SpreadsheetSelectorDialog } from "@spreadsheet_edition/assets/components/spreadsheet_selector_dialog/spreadsheet_selector_dialog";

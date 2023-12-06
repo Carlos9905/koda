@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 
     <record id="event_type_view_form" model="ir.ui.view">
         <field name="name">event.type.view.form.inherit.twitter.wall</field>
@@ -15,4 +15,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

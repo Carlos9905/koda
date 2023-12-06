@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { TimesheetTimerListController } from "./timesheet_timer_list_controller";

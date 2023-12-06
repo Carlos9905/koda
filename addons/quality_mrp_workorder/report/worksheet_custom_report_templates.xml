@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
         <template id="worksheet_page" inherit_id="quality_mrp.worksheet_page">
             <xpath expr="//div[@name='production_order']" position="attributes">
@@ -22,4 +22,4 @@
             </xpath>
         </template>
     </data>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ChannelSelector } from "@mail/discuss/core/web/channel_selector";
 import { cleanTerm } from "@mail/utils/common/format";

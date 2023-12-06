@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { ViewButton } from "@web/views/view_button/view_button";
 import { useStudioRef, studioIsVisible } from "@web_studio/client_action/view_editor/editors/utils";
 import { useBus } from "@web/core/utils/hooks";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 const addNewFiles = (files) => {
     sessionStorage.setItem("signMultiFileData", JSON.stringify(files));

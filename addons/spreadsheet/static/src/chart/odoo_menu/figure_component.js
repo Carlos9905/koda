@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 

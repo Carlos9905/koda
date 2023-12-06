@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import {
@@ -10,7 +10,7 @@ import {
     useExternalListener,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { hasTouch, isMobileOS } from "@web/core/browser/feature_detection";
 import { Domain } from "@web/core/domain";
 import { formatDateTime, serializeDate, serializeDateTime } from "@web/core/l10n/dates";

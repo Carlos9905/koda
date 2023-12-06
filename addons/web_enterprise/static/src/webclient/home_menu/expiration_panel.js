@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useService } from "@web/core/utils/hooks";
 import { Transition } from "@web/core/transition";
 import { _t } from "@web/core/l10n/translation";
-import { Component, useState, useRef } from "@odoo/owl";
+import { Component, useState, useRef } from "@koda/owl";
 
 /**
  * Expiration panel

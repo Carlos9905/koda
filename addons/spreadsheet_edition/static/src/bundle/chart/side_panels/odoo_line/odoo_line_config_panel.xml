@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <t t-name="spreadsheet_edition.OdooLineChartConfigPanel"
         t-inherit="spreadsheet_edition.CommonOdooChartConfigPanel"
         t-inherit-mode="primary"
@@ -34,4 +34,4 @@
             </div>
         </xpath>
     </t>
-</odoo>
+</koda>

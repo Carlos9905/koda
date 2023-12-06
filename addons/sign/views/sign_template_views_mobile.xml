@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Signature Request Template Views -->
     <record id="sign_template_view_kanban_mobile" model="ir.ui.view">
         <field name="name">sign.template.kanban.mobile</field>
@@ -21,4 +21,4 @@
             </kanban>
         </field>
     </record>
-</odoo>
+</koda>

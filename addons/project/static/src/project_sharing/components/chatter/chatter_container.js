@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 import { ChatterComposer } from "./chatter_composer";
 import { ChatterMessageCounter } from "./chatter_message_counter";
 import { ChatterMessages } from "./chatter_messages";
 import { ChatterPager } from "./chatter_pager";
-import { Component, markup, onWillStart, useState, onWillUpdateProps } from "@odoo/owl";
+import { Component, markup, onWillStart, useState, onWillUpdateProps } from "@koda/owl";
 
 export class ChatterContainer extends Component {
     setup() {

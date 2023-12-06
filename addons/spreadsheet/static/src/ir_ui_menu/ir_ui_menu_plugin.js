@@ -1,5 +1,5 @@
-/** @odoo-module */
-import * as spreadsheet from "@odoo/o-spreadsheet";
+/** @koda-module */
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { CorePlugin } = spreadsheet;
 
 export class IrMenuPlugin extends CorePlugin {

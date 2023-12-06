@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="view_country_ebay_tree" model="ir.ui.view">
             <field name="name">res.country.ebay.tree</field>
@@ -30,4 +30,4 @@
             <field name="context">{'active_test': False}</field>
         </record>
     </data>
-</odoo>
+</koda>

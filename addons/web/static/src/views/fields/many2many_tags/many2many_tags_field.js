@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { CheckBox } from "@web/core/checkbox/checkbox";
@@ -17,7 +17,7 @@ import { usePopover } from "@web/core/popover/popover_hook";
 import { useService } from "@web/core/utils/hooks";
 import { useTagNavigation } from "@web/core/record_selectors/tag_navigation_hook";
 
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 class Many2ManyTagsFieldColorListPopover extends Component {
     static template = "web.Many2ManyTagsFieldColorListPopover";

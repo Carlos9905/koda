@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 import { DataSources } from "@spreadsheet/data_sources/data_sources";
-import { Model, parse, helpers, iterateAstNodes } from "@odoo/o-spreadsheet";
+import { Model, parse, helpers, iterateAstNodes } from "@koda/o-spreadsheet";
 import { migrate } from "@spreadsheet/o_spreadsheet/migration";
 import { _t } from "@web/core/l10n/translation";
 import { loadBundle } from "@web/core/assets";

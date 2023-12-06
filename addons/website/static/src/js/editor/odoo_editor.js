@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { OdooEditor } from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
+import { OdooEditor } from "@web_editor/js/editor/koda-editor/src/OdooEditor";
 import { patch } from "@web/core/utils/patch";
 import { removeTextHighlight } from "@website/js/text_processing";
 
@@ -32,7 +32,7 @@ patch(OdooEditor.prototype, {
             const html = data.innerHTML;
             e.clipboardData.setData("text/plain", selection.toString());
             e.clipboardData.setData("text/html", html);
-            e.clipboardData.setData("text/odoo-editor", html);
+            e.clipboardData.setData("text/koda-editor", html);
         }
     },
     /**

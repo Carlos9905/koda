@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
@@ -18,7 +18,7 @@ import {
     onWillUnmount,
     useExternalListener,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 // Time (in ms, so 2 minutes) after which the user is considered inactive
 // and the app goes back to the main screen

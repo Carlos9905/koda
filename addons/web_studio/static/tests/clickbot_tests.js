@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { createEnterpriseWebClient } from "@web_enterprise/../tests/helpers";
@@ -126,7 +126,7 @@ QUnit.module("Studio clickbot", (hooks) => {
                 xmlid: "app2_menu1",
             },
         };
-        patchWithCleanup(odoo, { info: { isEnterprise: 1 } });
+        patchWithCleanup(koda, { info: { isEnterprise: 1 } });
         patchWithCleanup(browser, {
             console: {
                 log: (msg) => {

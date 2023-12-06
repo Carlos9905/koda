@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import BoothRegistration from "@website_event_booth/js/booth_register";
 

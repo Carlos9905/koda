@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Adds a button to CRM leads Kanban view cards that deletes or creates
          call activity from the related record -->
     <record id="lead_button_call_kanban_view" model="ir.ui.view">
@@ -14,4 +14,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

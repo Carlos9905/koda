@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { formatFloat } from "@web/core/utils/numbers";
 import { useService } from "@web/core/utils/hooks";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class ForecastedDetails extends Component {
     setup() {

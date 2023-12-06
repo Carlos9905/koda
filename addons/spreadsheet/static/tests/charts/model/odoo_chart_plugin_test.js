@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { OdooBarChart } from "@spreadsheet/chart/odoo_chart/odoo_bar_chart";
 import { OdooChart } from "@spreadsheet/chart/odoo_chart/odoo_chart";
@@ -9,13 +9,13 @@ import { insertListInSpreadsheet } from "../../utils/list";
 import { createModelWithDataSource, waitForDataSourcesLoaded } from "../../utils/model";
 import { addGlobalFilter } from "../../utils/commands";
 import { THIS_YEAR_GLOBAL_FILTER } from "../../utils/global_filter";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { makeServerError } from "@web/../tests/helpers/mock_server";
 import { session } from "@web/session";
 
 const { toZone } = spreadsheet.helpers;
 
-QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
+QUnit.module("spreadsheet > koda chart plugin", {}, () => {
     QUnit.test("Can add an Odoo Bar chart", async (assert) => {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_bar" });
         const sheetId = model.getters.getActiveSheetId();
@@ -459,7 +459,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
     });
 
     QUnit.test(
-        "Load odoo chart spreadsheet with models that cannot be accessed",
+        "Load koda chart spreadsheet with models that cannot be accessed",
         async function (assert) {
             let hasAccessRights = true;
             const { model } = await createSpreadsheetWithChart({
@@ -523,7 +523,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         );
     });
 
-    QUnit.test("Can insert odoo chart from a different model", async (assert) => {
+    QUnit.test("Can insert koda chart from a different model", async (assert) => {
         const model = await createModelWithDataSource();
         insertListInSpreadsheet(model, { model: "product", columns: ["name"] });
         await addGlobalFilter(model, THIS_YEAR_GLOBAL_FILTER);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="s_masonry_block" inherit_id="website.s_masonry_block" name="Masonry">
     <xpath expr="//section/div" position="attributes">
@@ -77,4 +77,4 @@
     </xpath>
 </template>
 
-</odoo>
+</koda>

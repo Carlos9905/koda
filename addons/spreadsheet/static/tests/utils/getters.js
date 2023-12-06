@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { range } from "@web/core/utils/numbers";
 
 const { toCartesian, toZone } = spreadsheet.helpers;

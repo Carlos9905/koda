@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { LoadingDataError } from "../o_spreadsheet/errors";
 
 /**

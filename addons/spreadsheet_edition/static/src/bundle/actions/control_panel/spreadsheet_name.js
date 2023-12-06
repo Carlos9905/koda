@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { UNTITLED_SPREADSHEET_NAME } from "@spreadsheet/helpers/constants";
 
-import { Component, onMounted, useState, useRef, onWillUpdateProps } from "@odoo/owl";
+import { Component, onMounted, useState, useRef, onWillUpdateProps } from "@koda/owl";
 
 const WIDTH_MARGIN = 3;
 const PADDING_RIGHT = 5;

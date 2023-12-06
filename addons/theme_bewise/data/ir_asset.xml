@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <record id="theme_bewise.s_big_image_parallax_000_scss" model="theme.ir.asset">
     <field name="key">theme_bewise.s_big_image_parallax_000_scss</field>
@@ -40,4 +40,4 @@
     <field name="path">theme_bewise/static/src/scss/primary_variables.scss</field>
 </record>
 
-</odoo>
+</koda>

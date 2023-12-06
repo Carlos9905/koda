@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { useSubEnv } from "@odoo/owl";
+import { useSubEnv } from "@koda/owl";
 
 import { TimesheetGridController } from "../timesheet_grid/timesheet_grid_controller";
 

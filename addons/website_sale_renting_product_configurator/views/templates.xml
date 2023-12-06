@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <template id="configure_optional_products" inherit_id="website_sale_product_configurator.configure_optional_products">
         <xpath expr="//td[hasclass('td-price')]/div[1]" position="attributes">
@@ -45,4 +45,4 @@
             <attribute name="t-out">combination_info.get('current_rental_price') if combination_info.get('is_rental') else combination_info['price']</attribute>
         </xpath>
     </template>
-</odoo>
+</koda>

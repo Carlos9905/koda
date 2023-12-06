@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 class PublishField extends Component {}
 PublishField.template = "website.PublishField";

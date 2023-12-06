@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import BarcodePickingModel from '@stock_barcode/models/barcode_picking_model';
 

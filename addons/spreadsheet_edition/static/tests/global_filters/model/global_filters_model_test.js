@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { nextTick } from "@web/../tests/helpers/utils";
-import { registries } from "@odoo/o-spreadsheet";
+import { registries } from "@koda/o-spreadsheet";
 import { getCellValue, getCell, getEvaluatedGrid } from "@spreadsheet/../tests/utils/getters";
 import { addGlobalFilter, selectCell, setCellContent } from "@spreadsheet/../tests/utils/commands";
 import { createSpreadsheetWithPivot } from "@spreadsheet/../tests/utils/pivot";

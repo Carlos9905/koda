@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { FilterFieldOffset } from "../filter_field_offset";
@@ -6,7 +6,7 @@ import { RELATIVE_DATE_RANGE_TYPES } from "@spreadsheet/helpers/constants";
 import { AbstractFilterEditorSidePanel } from "./filter_editor_side_panel";
 import { FilterEditorFieldMatching } from "./filter_editor_field_matching";
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 const RANGE_TYPES = [
     { type: "fixedPeriod", description: _t("Month / Quarter") },

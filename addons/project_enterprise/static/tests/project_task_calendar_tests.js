@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { getFixture, patchDate, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { clickDate, selectDateRange } from "@web/../tests/views/calendar/helpers";

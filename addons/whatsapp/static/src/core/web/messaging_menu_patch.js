@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { MessagingMenu } from "@mail/core/web/messaging_menu";
 import { ThreadIcon } from "@mail/core/common/thread_icon";

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { CommandResult } from "../../o_spreadsheet/cancelled_reason";
 import { getMaxObjectId } from "../../helpers/helpers";
 import { TOP_LEVEL_STYLE } from "../../helpers/constants";

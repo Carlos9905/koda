@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { SocialPostFormatterMixin } from "./social_post_formatter_mixin";
 
 import { HtmlField, htmlField } from "@web_editor/js/backend/html_field";
 import { registry } from "@web/core/registry";
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 export class FieldPostPreview extends SocialPostFormatterMixin(HtmlField) {
     get markupValue() {

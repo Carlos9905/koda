@@ -1,12 +1,12 @@
-/** @odoo-module **/
-import { onMounted, onWillStart, useState, Component, useSubEnv, onWillUnmount } from "@odoo/owl";
+/** @koda-module **/
+import { onMounted, onWillStart, useState, Component, useSubEnv, onWillUnmount } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { useSetupAction } from "@web/webclient/actions/action_hook";
 import { downloadFile } from "@web/core/network/download";
 import { standardActionServiceProps } from "@web/webclient/actions/action_service";
 
 import { UNTITLED_SPREADSHEET_NAME } from "@spreadsheet/helpers/constants";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { migrate } from "@spreadsheet/o_spreadsheet/migration";
 import { DataSources } from "@spreadsheet/data_sources/data_sources";
 import { initCallbackRegistry } from "@spreadsheet/o_spreadsheet/init_callbacks";

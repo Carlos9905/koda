@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class Tooltip extends Component {}
 Tooltip.template = "web.Tooltip";

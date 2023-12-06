@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { formView } from "@web/views/form/form_view";
 import { studioIsVisible } from "@web_studio/client_action/view_editor/editors/utils";
 import { StudioHook } from "@web_studio/client_action/view_editor/editors/components/studio_hook_component";
 
-import { Component, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, useEffect, useRef, useState } from "@koda/owl";
 
 const components = formView.Renderer.components;
 

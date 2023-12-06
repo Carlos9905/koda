@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { containsReferences } from "@spreadsheet/helpers/helpers";
 
 const { autofillModifiersRegistry, autofillRulesRegistry } = spreadsheet.registries;

@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { PivotRenderer } from "@web/views/pivot/pivot_renderer";
 
-import { useEffect, useRef } from "@odoo/owl";
+import { useEffect, useRef } from "@koda/owl";
 
 patch(PivotRenderer.prototype, {
     setup() {

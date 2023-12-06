@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { registry } from "@web/core/registry";
 import { createFile, inputFiles } from "@web/../tests/utils";
@@ -6,7 +6,7 @@ import { createFile, inputFiles } from "@web/../tests/utils";
 registry.category("web_tour.tours").add("hr_contract_salary_tour_job_change", {
     test: true,
     url: "/web",
-    wait_for: Promise.resolve(odoo.__TipTemplateDef),
+    wait_for: Promise.resolve(koda.__TipTemplateDef),
     steps: () => [
         /*
          * Generate the simulation link for the employee

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { pick } from "@web/core/utils/objects";
 import {getAffineApproximation, getProjective} from "@web_editor/js/editor/perspective_utils";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
         <record id="timer_user_rule_create-write-delete" model="ir.rule">
             <field name="name">timer.user.rule.create-write-delete</field>
@@ -27,4 +27,4 @@
             <field name="perm_read" eval="1"/>
         </record>
 
-</odoo>
+</koda>

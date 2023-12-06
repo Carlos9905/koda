@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import {
     SEE_RECORDS_PIVOT,
     SEE_RECORDS_PIVOT_VISIBLE,

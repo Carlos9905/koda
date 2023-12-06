@@ -508,7 +508,7 @@
         .o_gantt_pill {
             color: inherit;
             margin-left: 1px;
-            background-color: rgba($o-brand-odoo, 0.5);
+            background-color: rgba($o-brand-koda, 0.5);
         }
 
         .o_gantt_pill_wrapper:hover {
@@ -516,14 +516,14 @@
 
             .o_gantt_pill {
                 color: inherit;
-                background-color: rgba($o-brand-odoo, 0.8);
+                background-color: rgba($o-brand-koda, 0.8);
             }
 
             &:before {
                 content: "";
-                border: 1px solid $o-brand-odoo;
+                border: 1px solid $o-brand-koda;
                 border-width: 0 1px;
-                background: rgba($o-brand-odoo, 0.1);
+                background: rgba($o-brand-koda, 0.1);
                 height: 100vh;
                 pointer-events: none;
                 @include o-gantt-zindex(interact);

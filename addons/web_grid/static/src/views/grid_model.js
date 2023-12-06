@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { KeepLast, Mutex } from "@web/core/utils/concurrency";
 import { useService } from "@web/core/utils/hooks";

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, onWillPatch, useState } from "@odoo/owl";
+import { Component, onWillPatch, useState } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { graphView } from "@web/views/graph/graph_view";

@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 /* global firebase */
 
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { browser } from "@web/core/browser/browser";
 import NotificationRequestPopup from "@social_push_notifications/js/push_notification_request_popup";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 publicWidget.registry.NotificationWidget =  publicWidget.Widget.extend({
     selector: '#wrapwrap',

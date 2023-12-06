@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import {PageControllerMixin, PageRendererMixin} from "./page_views_mixin";
 import {registry} from '@web/core/registry';

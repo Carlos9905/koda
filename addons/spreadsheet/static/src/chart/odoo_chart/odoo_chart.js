@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { AbstractChart, CommandResult } from "@odoo/o-spreadsheet";
+import { AbstractChart, CommandResult } from "@koda/o-spreadsheet";
 import { ChartDataSource } from "../data_source/chart_data_source";
 
 /**

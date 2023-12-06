@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component, toRaw } from "@odoo/owl";
+/** @koda-module */
+import { Component, toRaw } from "@koda/owl";
 
 import { closest, touching } from "@web/core/utils/ui";
 import { useDraggable } from "@web/core/utils/draggable";

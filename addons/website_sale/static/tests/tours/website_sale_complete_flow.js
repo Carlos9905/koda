@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
     import { jsonrpc } from "@web/core/network/rpc_service";
     import { registry } from "@web/core/registry";
@@ -44,7 +44,7 @@
         run: function () {
             $('input[name="name"]').val('abc');
             $('input[name="phone"]').val('99999999');
-            $('input[name="email"]').val('abc@odoo.com');
+            $('input[name="email"]').val('abc@koda.com');
             $('input[name="street"]').val('SO1 Billing Street, 33');
             $('input[name="city"]').val('SO1BillingCity');
             $('input[name="zip"]').val('10000');
@@ -232,7 +232,7 @@
         content: "Submit login",
         trigger: '.oe_login_form',
         run: function () {
-            $('.oe_login_form input[name="login"]').val("abc@odoo.com");
+            $('.oe_login_form input[name="login"]').val("abc@koda.com");
             $('.oe_login_form input[name="password"]').val("1admin@admin");
             $('.oe_login_form').submit();
         },
@@ -323,7 +323,7 @@
         content: "Submit login",
         trigger: '.oe_login_form',
         run: function () {
-            $('.oe_login_form input[name="login"]').val("abc@odoo.com");
+            $('.oe_login_form input[name="login"]').val("abc@koda.com");
             $('.oe_login_form input[name="password"]').val("1admin@admin");
             $('.oe_login_form input[name="redirect"]').val("/shop?search=Storage Box Test");
             $('.oe_login_form').submit();

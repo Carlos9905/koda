@@ -1,4 +1,4 @@
-<odoo>
+<koda>
 
     <t t-name="spreadsheet_edition.OdooMenuChartPanelSection">
         <div class="o-section">
@@ -54,4 +54,4 @@
         </xpath>
     </t>
 
-</odoo>
+</koda>

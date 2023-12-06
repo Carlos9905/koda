@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { uiService } from "@web/core/ui/ui_service";
 import {
@@ -13,7 +13,7 @@ import { registry } from "@web/core/registry";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { destroy, getFixture, makeDeferred, mount, nextTick } from "@web/../tests/helpers/utils";
 
-import { Component, onMounted, useState, xml } from "@odoo/owl";
+import { Component, onMounted, useState, xml } from "@koda/owl";
 import { dialogService } from "@web/core/dialog/dialog_service";
 import { hotkeyService } from "@web/core/hotkeys/hotkey_service";
 import { CommandPalette } from "@web/core/commands/command_palette";

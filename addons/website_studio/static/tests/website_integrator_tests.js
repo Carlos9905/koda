@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { click, getFixture, nextTick } from "@web/../tests/helpers/utils";
 import { getActionManagerServerData } from "@web/../tests/webclient/helpers";
 import { createEnterpriseWebClient } from "@web_enterprise/../tests/helpers";

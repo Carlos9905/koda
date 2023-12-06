@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 function addOptionalProduct(productName) {
     return {

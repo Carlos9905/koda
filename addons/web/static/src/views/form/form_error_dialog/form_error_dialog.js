@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Dialog } from "@web/core/dialog/dialog";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class FormErrorDialog extends Component {
     async discard() {

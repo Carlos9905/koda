@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <template id="social_post_to_lead_description">
 <div>
@@ -17,4 +17,4 @@
 </div>
         </template>
     </data>
-</odoo>
+</koda>

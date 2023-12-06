@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { projectTaskCalendarView } from "@project/views/project_task_calendar/project_task_calendar_view";

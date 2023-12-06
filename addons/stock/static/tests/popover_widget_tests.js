@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { getFixture, click } from "@web/../tests/helpers/utils";
 

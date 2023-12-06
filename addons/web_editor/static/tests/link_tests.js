@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import { setSelection } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
+/** @koda-module **/
+import { setSelection } from "@web_editor/js/editor/koda-editor/src/utils/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { patchWithCleanup, nextTick, triggerHotkey } from "@web/../tests/helpers/utils";
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";
@@ -7,7 +7,7 @@ import {
     triggerEvent,
     insertText,
     insertParagraphBreak,
-} from "@web_editor/js/editor/odoo-editor/test/utils";
+} from "@web_editor/js/editor/koda-editor/test/utils";
 
 function onMount() {
     const editor = wysiwyg.odooEditor;
@@ -147,7 +147,7 @@ QUnit.module(
                 const { editor, editable } = onMount();
                 const node = editable.querySelector("p");
                 setSelection(node, 0);
-                inputText(".odoo-editor-editable p", "http://google.co.in");
+                inputText(".koda-editor-editable p", "http://google.co.in");
                 insertText(editor, " ");
                 editor.clean();
                 assert.strictEqual(
@@ -161,10 +161,10 @@ QUnit.module(
             const { editor, editable } = onMount();
             const node = editable.querySelector("p");
             setSelection(node, 0);
-            inputText(".odoo-editor-editable p", "www.odoo");
+            inputText(".koda-editor-editable p", "www.koda");
             insertText(editor, " ");
             editor.clean();
-            assert.strictEqual(editable.innerHTML, "<p>www.odoo </p>");
+            assert.strictEqual(editable.innerHTML, "<p>www.koda </p>");
         });
 
 

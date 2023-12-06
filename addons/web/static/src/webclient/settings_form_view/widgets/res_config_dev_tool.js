@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { SettingsBlock } from "../settings/settings_block";
 import { Setting } from "../../../views/form/setting/setting";
 
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, onWillStart } from "@koda/owl";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
 
 /**
@@ -24,9 +24,9 @@ export class ResConfigDevTool extends Component {
     };
 
     setup() {
-        this.isDebug = Boolean(odoo.debug);
-        this.isAssets = odoo.debug.includes("assets");
-        this.isTests = odoo.debug.includes("tests");
+        this.isDebug = Boolean(koda.debug);
+        this.isAssets = koda.debug.includes("assets");
+        this.isTests = koda.debug.includes("tests");
 
         this.action = useService("action");
         this.demo = useService("demo_data");

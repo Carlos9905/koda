@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import dom from '@web/legacy/js/core/dom';
 import { cookie } from "@web/core/browser/cookie";
@@ -12,7 +12,7 @@ import { loadJS, templates } from '@web/core/assets';
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { browser } from '@web/core/browser/browser';
 import { _t } from "@web/core/l10n/translation";
-import { App, Component, whenReady } from "@odoo/owl";
+import { App, Component, whenReady } from "@koda/owl";
 import { RPCError } from '@web/core/network/rpc_service';
 
 const { Settings } = luxon;
@@ -335,7 +335,7 @@ export async function createPublicRoot(RootWidget) {
         app.mount(document.body),
         publicRoot.attachTo(document.body),
     ]);
-    odoo.__WOWL_DEBUG__ = { root };
+    koda.__WOWL_DEBUG__ = { root };
     return publicRoot;
 }
 

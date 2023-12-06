@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { PivotController } from "@web/views/pivot/pivot_controller";
 import { useService } from "@web/core/utils/hooks";
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 export class TimesheetValidationPivotController extends PivotController {
     setup() {

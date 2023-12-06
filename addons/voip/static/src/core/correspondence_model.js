@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { url } from "@web/core/utils/urls";
 

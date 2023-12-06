@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ganttView } from "@web_gantt/gantt_view";
 import { ProjectControlPanel } from "@project/components/project_control_panel/project_control_panel";

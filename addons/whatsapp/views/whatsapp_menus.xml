@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <menuitem name="WhatsApp"
         id="whatsapp_menu_main"
         web_icon="whatsapp,static/description/icon.png"
@@ -28,4 +28,4 @@
         action="whatsapp_template_action"
         groups="whatsapp.group_whatsapp_admin"/>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { StudioNavbar } from "@web_studio/client_action/navbar/navbar";
 import { browser } from "@web/core/browser/browser";

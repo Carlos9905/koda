@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
@@ -10,7 +10,7 @@ import { ForecastedButtons } from "./forecasted_buttons";
 import { ForecastedDetails } from "./forecasted_details";
 import { ForecastedHeader } from "./forecasted_header";
 import { ForecastedWarehouseFilter } from "./forecasted_warehouse_filter";
-import { Component, onWillStart, useState } from "@odoo/owl";
+import { Component, onWillStart, useState } from "@koda/owl";
 
 export class StockForecasted extends Component {
     setup() {

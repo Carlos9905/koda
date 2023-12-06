@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 import { FilterValue } from "@spreadsheet/global_filters/components/filter_value/filter_value";
 import { addGlobalFilter, setCellContent, setCellFormat } from "../utils/commands";
 import { toRangeData } from "../utils/zones";

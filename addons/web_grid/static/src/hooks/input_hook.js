@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getActiveHotkey } from "@web/core/hotkeys/hotkey_service";
 
-import { useEffect, useRef } from "@odoo/owl";
+import { useEffect, useRef } from "@koda/owl";
 
 export function useInputHook(params) {
     const inputRef = params.ref || useRef(params.refName || "input");

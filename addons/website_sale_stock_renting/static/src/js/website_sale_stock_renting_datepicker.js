@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { deserializeDateTime, serializeDateTime } from "@web/core/l10n/dates";
 import WebsiteSaleDaterangePicker from '@website_sale_renting/js/website_sale_renting_daterangepicker';

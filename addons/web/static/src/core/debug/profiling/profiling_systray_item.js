@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 class ProfilingSystrayItem extends Component {}
 ProfilingSystrayItem.template = "web.ProfilingSystrayItem";

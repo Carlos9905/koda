@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { nextTick } from "@web/../tests/helpers/utils";
 
@@ -6,7 +6,7 @@ import { addGlobalFilter, selectCell } from "@spreadsheet/../tests/utils/command
 import { createSpreadsheetWithPivot } from "@spreadsheet/../tests/utils/pivot";
 import { getCellContent } from "@spreadsheet/../tests/utils/getters";
 import { doMenuAction } from "@spreadsheet/../tests/utils/ui";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
 const { topbarMenuRegistry } = spreadsheet.registries;
 

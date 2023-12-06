@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component, xml } from "@odoo/owl";
+/** @koda-module */
+import { Component, xml } from "@koda/owl";
 import { registry } from "@web/core/registry";
 
 import { actionService } from "@web/webclient/actions/action_service";

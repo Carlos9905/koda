@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="layout" inherit_id="website.layout">
     <xpath expr="//a[hasclass('o_frontend_to_backend_apps_btn')]" position="attributes">
@@ -9,4 +9,4 @@
     <xpath expr="//div[hasclass('o_frontend_to_backend_apps_menu')]" position="replace"/>
 </template>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { GanttArchParser } from "@web_gantt/gantt_arch_parser";
 

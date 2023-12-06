@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useRef, onMounted } from "@odoo/owl";
+import { Component, useRef, onMounted } from "@koda/owl";
 
 export class SidePanelCollapsible extends Component {
     setup() {

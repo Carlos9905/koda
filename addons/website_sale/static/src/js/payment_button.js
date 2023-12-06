@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import paymentButton from '@payment/js/payment_button';
 

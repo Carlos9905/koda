@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import publicWidget from "@web/legacy/js/public/public_widget";
@@ -19,7 +19,7 @@ publicWidget.registry.websiteEventMeetingRoom = publicWidget.Widget.extend({
 
     start: function () {
         this._super.apply(this, arguments);
-        this.csrf_token = odoo.csrf_token;
+        this.csrf_token = koda.csrf_token;
         this.meetingRoomId = parseInt(this.$el.data('meeting-room-id'));
     },
 

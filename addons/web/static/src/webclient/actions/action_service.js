@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { browser } from "@web/core/browser/browser";
@@ -24,7 +24,7 @@ import {
     useChildSubEnv,
     xml,
     reactive,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { downloadReport, getReportUrl } from "./reports/utils";
 
 class BlankComponent extends Component {

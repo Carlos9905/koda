@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
 
     <menuitem id="hr_timesheet_menu_configuration_settings"
               name="Configuration"
@@ -19,4 +19,4 @@
         />
     </menuitem>
 
-</odoo>
+</koda>

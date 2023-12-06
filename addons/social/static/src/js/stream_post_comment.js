@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { SocialPostFormatterMixin } from './social_post_formatter_mixin';
@@ -7,7 +7,7 @@ import { StreamPostCommentsReply } from './stream_post_comments_reply';
 import { ConfirmationDialog } from '@web/core/confirmation_dialog/confirmation_dialog';
 import { escape } from '@web/core/utils/strings';
 import { useService } from '@web/core/utils/hooks';
-import { Component, markup, useState } from "@odoo/owl";
+import { Component, markup, useState } from "@koda/owl";
 
 export class StreamPostComment extends SocialPostFormatterMixin(Component) {
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
 
   <template id="message_signature_link">
       <p>A document has been signed and a copy attached to this order:
@@ -9,4 +9,4 @@
       </p>
   </template>
 
-</odoo>
+</koda>

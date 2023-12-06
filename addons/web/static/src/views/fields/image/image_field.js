@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { isMobileOS } from "@web/core/browser/feature_detection";
 import { _t } from "@web/core/l10n/translation";
@@ -9,7 +9,7 @@ import { isBinarySize } from "@web/core/utils/binary";
 import { FileUploader } from "../file_handler";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 const { DateTime } = luxon;
 
 export const fileTypeMagicWordMap = {

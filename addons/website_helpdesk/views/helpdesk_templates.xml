@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data noupdate="0">
     <!-- Page : default team -->
     <template id="team" name="Helpdesk Team">
@@ -348,4 +348,4 @@
         </xpath>
     </template>
 </data>
-</odoo>
+</koda>

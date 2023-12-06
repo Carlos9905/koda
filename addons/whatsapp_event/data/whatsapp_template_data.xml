@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <record id="whatsapp_template_event_ticket" model="whatsapp.template">
         <field name="name">Event Ticket</field>
         <field name="template_name">event_ticket</field>
@@ -158,4 +158,4 @@ See you there.
             }),
         ]" />
     </record>
-</odoo>
+</koda>

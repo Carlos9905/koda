@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { isComponentNode } from "@web/views/view_compiler";
 import {

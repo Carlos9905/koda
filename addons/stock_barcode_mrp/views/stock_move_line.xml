@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <record id="stock_move_line_product_selector" model="ir.ui.view">
         <field name="name">move.line.product.selector.inherit</field>
         <field name="model">stock.move.line</field>
@@ -28,4 +28,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

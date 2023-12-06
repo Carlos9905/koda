@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { getFixture, nextTick, patchDate } from "@web/../tests/helpers/utils";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";

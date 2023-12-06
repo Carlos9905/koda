@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import wTourUtils from '@website/js/tours/tour_utils';
-import { boundariesIn, setSelection } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
+import { boundariesIn, setSelection } from '@web_editor/js/editor/koda-editor/src/utils/utils';
 
 const clickOnImgStep = {
     content: "Click somewhere else to save.",
@@ -21,64 +21,64 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
     {
         content: "Replace first paragraph, to insert a new link",
         trigger: 'iframe #wrap .s_text_image p',
-        run: 'text Go to odoo: '
+        run: 'text Go to koda: '
     },
     {
         content: "Open link tools",
         trigger: "#toolbar:not(.oe-floating) #create-link",
     },
     {
-        content: "Type the link URL odoo.com",
+        content: "Type the link URL koda.com",
         trigger: '#toolbar:not(.oe-floating) #o_link_dialog_url_input',
-        run: 'text odoo.com'
+        run: 'text koda.com'
     },
     clickOnImgStep,
     // 2. Edit the link with the link tools.
     {
         content: "Click on the newly created link",
-        trigger: 'iframe .s_text_image a[href="http://odoo.com"]:contains("odoo.com")',
+        trigger: 'iframe .s_text_image a[href="http://koda.com"]:contains("koda.com")',
     },
     {
-        content: "Label value should contain odoo.com",
+        content: "Label value should contain koda.com",
         trigger: '#o_link_dialog_label_input',
         run: () => {
-            if ($('#o_link_dialog_label_input').val() !== 'odoo.com') {
-                throw new Error('Label value should contain odoo.com');
+            if ($('#o_link_dialog_label_input').val() !== 'koda.com') {
+                throw new Error('Label value should contain koda.com');
             }
         },
     },
     {
-        content: "Change content (editing the label input) to odoo website_2",
+        content: "Change content (editing the label input) to koda website_2",
         trigger: '#o_link_dialog_label_input',
-        run: 'text odoo website_2',
+        run: 'text koda website_2',
     },
     {
         content: "Click again on the link",
-        trigger: 'iframe .s_text_image a[href="http://odoo.com"]:contains("odoo website_2")',
+        trigger: 'iframe .s_text_image a[href="http://koda.com"]:contains("koda website_2")',
     },
     {
-        content: "Change content (editing the DOM) to odoo website",
-        trigger: 'iframe .s_text_image a[href="http://odoo.com"]:contains("odoo website_2")',
-        run: 'text odoo website',
+        content: "Change content (editing the DOM) to koda website",
+        trigger: 'iframe .s_text_image a[href="http://koda.com"]:contains("koda website_2")',
+        run: 'text koda website',
     },
     clickOnImgStep,
     {
         content: "Click again on the link",
-        trigger: 'iframe .s_text_image a[href="http://odoo.com"]:contains("odoo website")',
+        trigger: 'iframe .s_text_image a[href="http://koda.com"]:contains("koda website")',
     },
     {
-        content: "Label value should contain odoo website",
+        content: "Label value should contain koda website",
         trigger: '#o_link_dialog_label_input',
         run: () => {
-            if ($('#o_link_dialog_label_input').val() !== 'odoo website') {
-                throw new Error('Label value should contain odoo website');
+            if ($('#o_link_dialog_label_input').val() !== 'koda website') {
+                throw new Error('Label value should contain koda website');
             }
         },
     },
     {
         content: "Link tools, should be open, change the url",
         trigger: '#o_link_dialog_url_input',
-        run: 'text odoo.be'
+        run: 'text koda.be'
     },
 
     clickOnImgStep,
@@ -87,11 +87,11 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
     ...wTourUtils.clickOnEditAndWaitEditMode(),
     clickOnImgStep,
     {
-        content: "The new link content should be odoo website and url odoo.be",
-        trigger: 'iframe .s_text_image a[href="http://odoo.be"]:contains("odoo website")',
+        content: "The new link content should be koda website and url koda.be",
+        trigger: 'iframe .s_text_image a[href="http://koda.be"]:contains("koda website")',
     },
     {
-        content: "The new link content should be odoo website and url odoo.be",
+        content: "The new link content should be koda website and url koda.be",
         trigger: '#toolbar:not(.oe-floating) .dropdown:has([name="link_style_color"]) > button',
     },
     {
@@ -111,7 +111,7 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
     ...wTourUtils.clickOnSave(),
     {
         content: "The link should have the secondary button style.",
-        trigger: 'iframe .s_text_image a.btn.btn-secondary[href="http://odoo.be"]:contains("odoo website")',
+        trigger: 'iframe .s_text_image a.btn.btn-secondary[href="http://koda.be"]:contains("koda website")',
         run: () => {}, // It's a check.
     },
     // 4. Add link on image.
@@ -131,7 +131,7 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
     {
         content: "Set URL.",
         trigger: '.o_we_customize_panel we-input:contains("Your URL") input',
-        run: 'text odoo.com',
+        run: 'text koda.com',
     },
     {
         content: "Deselect image.",
@@ -148,13 +148,13 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
     },
     {
         content: "Check that link tools appear.",
-        trigger: 'iframe .popover div a:contains("http://odoo.com")',
+        trigger: 'iframe .popover div a:contains("http://koda.com")',
         run: () => {}, // It's a check.
     },
     // 5. Remove link from image.
     {
         content: "Remove link.",
-        trigger: 'iframe .popover:contains("http://odoo.com") a .fa-chain-broken',
+        trigger: 'iframe .popover:contains("http://koda.com") a .fa-chain-broken',
     },
     {
         content: "Check that image is not within a link anymore.",
@@ -167,11 +167,11 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
     {
         content: "Replace first paragraph, write a URL",
         trigger: 'iframe #wrap .s_text_image p',
-        run: 'text odoo.com'
+        run: 'text koda.com'
     },
     {
         content: "Select text",
-        trigger: 'iframe #wrap .s_text_image p:contains(odoo.com)',
+        trigger: 'iframe #wrap .s_text_image p:contains(koda.com)',
         run() {
             setSelection(...boundariesIn(this.$anchor[0]), false);
         }
@@ -185,7 +185,7 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
         // URL transformation into link should persist, without the need for
         // input at input[name=url]
         content: "Check that link was created",
-        trigger: "iframe .s_text_image p a[href='http://odoo.com']:contains('odoo.com')",
+        trigger: "iframe .s_text_image p a[href='http://koda.com']:contains('koda.com')",
         run: () => null,
     },
     {
@@ -205,21 +205,21 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
     {
         content: "Change URL to https",
         trigger: "#o_link_dialog_url_input",
-        run: 'text https://odoo.com',
+        run: 'text https://koda.com',
     },
     {
         content: "Check that link was updated",
-        trigger: "iframe .s_text_image p a[href='https://odoo.com']:contains('odoo.com')",
+        trigger: "iframe .s_text_image p a[href='https://koda.com']:contains('koda.com')",
         run: () => null,
     },
     {
         content: "Change it back http",
         trigger: "#o_link_dialog_url_input",
-        run: 'text http://odoo.com',
+        run: 'text http://koda.com',
     },
     {
         content: "Check that link was updated",
-        trigger: "iframe .s_text_image p a[href='http://odoo.com']:contains('odoo.com')",
+        trigger: "iframe .s_text_image p a[href='http://koda.com']:contains('koda.com')",
         run: () => null,
     },
     // 8. Test conversion between http and mailto links.
@@ -354,11 +354,11 @@ wTourUtils.registerWebsitePreviewTour('link_tools', {
     {
         content: "Enter an URL",
         trigger: "#o_link_dialog_url_input",
-        run: "text https://www.odoo.com",
+        run: "text https://www.koda.com",
     },
     {
         content: "Check nothing is lost",
-        trigger: "iframe header .s_mega_menu_cards a[href='https://www.odoo.com']:has(img):has(h4):has(p)",
+        trigger: "iframe header .s_mega_menu_cards a[href='https://www.koda.com']:has(img):has(h4):has(p)",
         run: () => {}, // This is a check.
     },
     ...wTourUtils.clickOnSave(),

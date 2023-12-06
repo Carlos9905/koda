@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { deserializeDate } from "@web/core/l10n/dates";
 import { ProjectTaskCalendarModel } from '@project/views/project_task_calendar/project_task_calendar_model';

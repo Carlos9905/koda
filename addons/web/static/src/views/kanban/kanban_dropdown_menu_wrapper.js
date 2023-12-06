@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { DROPDOWN } from "@web/core/dropdown/dropdown";
 
 export class KanbanDropdownMenuWrapper extends Component {

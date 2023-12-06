@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useService } from "@web/core/utils/hooks";
 import { browser } from "../browser/browser";
 import { localization } from "@web/core/l10n/localization";
 import { scrollTo } from "../utils/scrolling";
 
-import { useChildSubEnv, useComponent, useEffect, useRef } from "@odoo/owl";
+import { useChildSubEnv, useComponent, useEffect, useRef } from "@koda/owl";
 import { ACCORDION } from "@web/core/dropdown/accordion_item";
 
 /**

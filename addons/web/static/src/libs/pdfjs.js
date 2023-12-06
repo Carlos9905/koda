@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { isMobileOS } from "@web/core/browser/feature_detection";
 

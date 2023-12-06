@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="spreadsheet_dashboard_helpdesk" model="spreadsheet.dashboard">
         <field name="name">Helpdesk</field>
@@ -9,4 +9,4 @@
         <field name="sequence">300</field>
     </record>
 
-</odoo>
+</koda>

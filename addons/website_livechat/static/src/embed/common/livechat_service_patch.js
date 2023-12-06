@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { LivechatService } from "@im_livechat/embed/common/livechat_service";
 import { patch } from "@web/core/utils/patch";

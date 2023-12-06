@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { click, drag, getFixture, triggerEvent, triggerEvents } from "@web/../tests/helpers/utils";
 import { GanttRenderer } from "@web_gantt/gantt_renderer";

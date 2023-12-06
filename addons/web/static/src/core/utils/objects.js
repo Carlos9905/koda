@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /**
  * Shallow compares two objects.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
 
     <record id="rental_order_form_view" model="ir.ui.view">
         <field name="name">rental.order.form</field>
@@ -371,4 +371,4 @@
         <field name="act_window_id" ref="rental_order_today_return_action"/>
     </record>
 
-</odoo>
+</koda>

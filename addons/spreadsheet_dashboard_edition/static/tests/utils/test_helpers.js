@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { patchWithCleanup, makeDeferred, nextTick } from "@web/../tests/helpers/utils";
 import { createWebClient, doAction } from "@web/../tests/webclient/helpers";
 
@@ -9,7 +9,7 @@ import {
 } from "@spreadsheet_edition/../tests/utils/webclient_helpers";
 import { DashboardEditAction } from "../../src/bundle/action/dashboard_edit_action";
 import { getDashboardBasicServerData } from "./test_data";
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@koda/owl";
 
 /**
  * @typedef {import("@spreadsheet/../tests/utils/data").ServerData} ServerData

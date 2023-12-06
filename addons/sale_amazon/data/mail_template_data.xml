@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="order_sync_failure" model="mail.template">
         <field name="name">Amazon: Order Synchronization Failure</field>
@@ -21,7 +21,7 @@
                     <li>Save the changes and click on the <em>SYNC ORDERS</em> button.</li>
                 </ol>
             </p>
-            <p>If the problem persists, contact <a href="https://www.odoo.com/help/">Odoo support</a>.</p>
+            <p>If the problem persists, contact <a href="https://www.koda.com/help/">Odoo support</a>.</p>
         </div>
         </field>
     </record>
@@ -81,7 +81,7 @@
                                 <t t-else="">An unknown error occurred during the synchronisation with Amazon.
                                     Unfortunately you need to manually check if the state of the order is correct or not.
                                     You can find all information about this
-                                    <a href="https://www.odoo.com/documentation/latest/applications/sales/sales/amazon_connector/manage.html#manage_deliveries_errors">
+                                    <a href="https://www.koda.com/documentation/latest/applications/sales/sales/amazon_connector/manage.html#manage_deliveries_errors">
                                         in the documentation
                                     </a>.</t>
                             </td>
@@ -156,4 +156,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

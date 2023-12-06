@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="period_report_template" inherit_id="planning.period_report_template">
         <xpath expr="//div[hasclass('o_calendar_widget')]" position="before">
             <span class="open_slot_has_sale_line" t-att-value="open_slot_has_sale_line"/>
@@ -30,4 +30,4 @@
             <attribute name="t-if">unwanted_slot_has_sale_line</attribute>
         </xpath>
     </template>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 /* global ZXing */
 
 import { browser } from "@web/core/browser/browser";

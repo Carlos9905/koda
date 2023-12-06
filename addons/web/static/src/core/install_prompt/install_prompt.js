@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { isIOS } from "@web/core/browser/feature_detection";
 

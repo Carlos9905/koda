@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { StreamPostComments } from '@social/js/stream_post_comments';
 

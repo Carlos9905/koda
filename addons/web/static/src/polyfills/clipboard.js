@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 class ClipboardItemImpl {
     constructor(items, options = {}) {

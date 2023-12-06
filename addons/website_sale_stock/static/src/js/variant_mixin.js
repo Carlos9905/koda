@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import VariantMixin from "@website_sale/js/sale_variant_mixin";
 import publicWidget from "@web/legacy/js/public/public_widget";
@@ -6,7 +6,7 @@ import { renderToFragment } from "@web/core/utils/render";
 
 import "@website_sale/js/website_sale";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 /**
  * Addition to the variant_mixin._onChangeCombination

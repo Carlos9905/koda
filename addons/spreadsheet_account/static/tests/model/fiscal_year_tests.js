@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { setCellContent } from "@spreadsheet/../tests/utils/commands";
 import {
     createModelWithDataSource,
@@ -7,7 +7,7 @@ import {
 import { getEvaluatedCell } from "@spreadsheet/../tests/utils/getters";
 import "@spreadsheet_account/index";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { DEFAULT_LOCALE } = spreadsheet.constants;
 
 QUnit.module("spreadsheet_account > fiscal year", {}, () => {

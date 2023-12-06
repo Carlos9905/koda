@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import * as spreadsheet from "@odoo/o-spreadsheet";
+/** @koda-module **/
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { PivotDataSource } from "@spreadsheet/pivot/pivot_data_source";
 import { Domain } from "@web/core/domain";
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="portal_my_tasks_priority_widget_template" name="Priority Widget Template">
         <span t-attf-class="o_priority_star fa fa-star#{'' if task.priority == '1' else '-o'} #{classes if classes else ''}" t-attf-title="Priority: {{'Important' if task.priority == '1' else 'Normal'}}"/>
     </template>
@@ -291,4 +291,4 @@
         <strong t-if="task.allocated_hours > 0">Allocated Time:</strong>
         <span t-out="task.allocated_hours" t-options='{"widget": "float_time"}'/>
     </template>
-</odoo>
+</koda>

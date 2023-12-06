@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { xml } from "@odoo/owl";
+import { xml } from "@koda/owl";
 import { registry } from "@web/core/registry";
 import { notificationService } from "@web/core/notifications/notification_service";
 import { NotificationContainer } from "@web/core/notifications/notification_container";

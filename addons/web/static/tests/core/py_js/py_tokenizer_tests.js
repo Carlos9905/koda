@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { tokenize } from "@web/core/py_js/py";
 

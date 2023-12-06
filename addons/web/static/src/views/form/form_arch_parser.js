@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { visitXML } from "@web/core/utils/xml";
 import { Field } from "@web/views/fields/field";

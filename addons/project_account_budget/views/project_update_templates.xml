@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <template id="project_update_default_description" inherit_id="project.project_update_default_description">
         <xpath expr="//div[@name='milestone']" position="before">
             <div name="budget" t-if="project.budget and project.analytic_account_id and env.user.has_group('account.group_account_readonly')">
@@ -7,4 +7,4 @@
             </div>
         </xpath>
     </template>
-</odoo>
+</koda>

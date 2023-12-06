@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { StreamPostKanbanRecord } from '@social/js/stream_post_kanban_record';
 import { StreamPostCommentsFacebook } from './stream_post_comments';
 
 import { patch } from "@web/core/utils/patch";
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 patch(StreamPostKanbanRecord.prototype, {
 

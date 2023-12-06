@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import {
     addColumns,
@@ -14,7 +14,7 @@ import { nextTick } from "@web/../tests/helpers/utils";
 import { waitForDataSourcesLoaded } from "@spreadsheet/../tests/utils/model";
 import { insertPivot } from "../../pivot/model/pivot_collaborative_test";
 import { setupCollaborativeEnv } from "../../utils/collaborative_helpers";
-import { helpers } from "@odoo/o-spreadsheet";
+import { helpers } from "@koda/o-spreadsheet";
 
 const { toZone } = helpers;
 

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { PopoverController } from "@web/core/popover/popover_controller";
 import { useBackButton } from "@web_mobile/js/core/hooks";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding='UTF-8'?>
-<odoo>
+<koda>
     <!-- Standard Closing Reason -->
     <record id="close_reason_1" model="sale.order.close.reason">
         <field name="name">Subscription is too expensive</field>
@@ -112,4 +112,4 @@
 
     </data>
 
-</odoo>
+</koda>

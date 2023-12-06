@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { sprintf } from "@web/core/utils/strings";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { functionRegistry } = spreadsheet.registries;
 const { arg, toBoolean, toString, toNumber, toJsDate } = spreadsheet.helpers;
 

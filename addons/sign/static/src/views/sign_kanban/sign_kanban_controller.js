@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { KanbanController } from "@web/views/kanban/kanban_controller";
 import { useSignViewButtons } from "@sign/views/hooks";

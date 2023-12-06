@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { session } from "@web/session";
 import testUtils from "@web/../tests/legacy/helpers/test_utils";
@@ -13,7 +13,7 @@ import { mount, getFixture, destroy, patchWithCleanup, clickSave, nextTick } fro
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { registry } from "@web/core/registry";
 
-import { Component, useState, xml } from "@odoo/owl";
+import { Component, useState, xml } from "@koda/owl";
 
 const MY_IMAGE =
     "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==";

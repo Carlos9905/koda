@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { formatFloat, humanNumber } from "@web/core/utils/numbers";
 import { session } from "@web/session";

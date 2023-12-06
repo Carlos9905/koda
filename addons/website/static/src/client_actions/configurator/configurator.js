@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { AutoComplete } from "@web/core/autocomplete/autocomplete";
 import { delay } from "@web/core/utils/concurrency";
@@ -19,7 +19,7 @@ import {
     useSubEnv,
     onWillStart,
     useExternalListener,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 const ROUTES = {
     descriptionScreen: 2,

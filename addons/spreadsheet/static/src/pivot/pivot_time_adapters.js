@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { helpers, constants } from "@odoo/o-spreadsheet";
+import { helpers, constants } from "@koda/o-spreadsheet";
 import { deserializeDate } from "@web/core/l10n/dates";
 import { _t } from "@web/core/l10n/translation";
 import { sprintf } from "@web/core/utils/strings";

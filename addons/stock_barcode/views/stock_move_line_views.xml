@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <record id="stock_move_line_product_selector" model="ir.ui.view">
     <field name="name">stock.product.selector</field>
@@ -204,4 +204,4 @@
         </xpath>
     </field>
 </record>
-</odoo>
+</koda>

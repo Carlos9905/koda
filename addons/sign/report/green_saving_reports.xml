@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<odoo>
+<koda>
     <template id="green_savings_report">
         <t t-call="web.basic_layout">
             <t t-call-assets="sign.assets_green_report" t-js="false"/>
@@ -302,4 +302,4 @@
         </div>
     </template>
 
-</odoo>
+</koda>

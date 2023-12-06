@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="group_timesheet_leaderboard_show_rates" model="res.groups">
         <field name="name">Billing Rate/Total Time indicators</field>
         <field name="category_id" ref="base.module_category_hidden"/>
@@ -8,4 +8,4 @@
         <field name="name">Leaderboard</field>
         <field name="category_id" ref="base.module_category_hidden"/>
     </record>
-</odoo>
+</koda>

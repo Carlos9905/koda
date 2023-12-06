@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="push_notifications_preview" t-name="Push Notification Preview">
         <div class="o_social_preview o_social_push_notification_preview o_home_menu_background pt-5">
             <div class="o_social_push_notification_preview_content bg-black-75 d-flex align-items-start me-3 mb-3 ms-5 p-3">
@@ -22,4 +22,4 @@
             <img class="w-100" src="/social_push_notifications/static/src/img/windows_task_bar.png"/>
         </div>
     </template>
-</odoo>
+</koda>

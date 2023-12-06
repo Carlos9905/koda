@@ -210,17 +210,17 @@
         }
     }
 
-    if (!globalThis.odoo) {
-        globalThis.odoo = {};
+    if (!globalThis.koda) {
+        globalThis.koda = {};
     }
-    const odoo = globalThis.odoo;
-    if (odoo.debug && !new URLSearchParams(location.search).has("debug")) {
+    const koda = globalThis.koda;
+    if (koda.debug && !new URLSearchParams(location.search).has("debug")) {
         // remove debug mode if not explicitely set in url
-        odoo.debug = "";
+        koda.debug = "";
     }
 
     const loader = new ModuleLoader();
-    odoo.define = loader.define.bind(loader);
+    koda.define = loader.define.bind(loader);
 
-    odoo.loader = loader;
+    koda.loader = loader;
 })();

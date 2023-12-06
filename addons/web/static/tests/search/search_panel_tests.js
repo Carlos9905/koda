@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { makeFakeUserService } from "@web/../tests/helpers/mock_services";
 import {
@@ -25,7 +25,7 @@ import {
     xml,
     onWillStart as onWillStartOWL,
     onWillUpdateProps as onWillUpdatePropsOWL,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 const serviceRegistry = registry.category("services");
 

@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import Dialog from "@web/legacy/js/core/dialog";
 import Widget from "@web/legacy/js/core/widget";
 import testUtils from "@web/../tests/legacy/helpers/test_utils";
 import { renderToString } from "@web/core/utils/render";
 import { SERVICES_METADATA } from "@web/env";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 QUnit.module('core', {}, function () {
 

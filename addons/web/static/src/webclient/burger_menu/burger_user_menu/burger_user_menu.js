@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { UserMenu } from "@web/webclient/user_menu/user_menu";
 

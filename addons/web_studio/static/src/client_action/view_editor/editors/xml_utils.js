@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { evaluateExpr } from "@web/core/py_js/py";
 import { isComponentNode, appendAttr } from "@web/views/view_compiler";
 

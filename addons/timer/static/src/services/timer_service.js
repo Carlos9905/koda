@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { deserializeDateTime } from "@web/core/l10n/dates";
 import { registry } from "@web/core/registry";

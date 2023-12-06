@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="sale_subscription_alert_view_form" model="ir.ui.view">
         <field name="name">sale.subscription.alert.view.form</field>
         <field name="model">sale.order.alert</field>
@@ -184,4 +184,4 @@
             </xpath>
         </field>
     </record>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { OdooEditor, parseHTML, setSelection } from '../../src/OdooEditor.js';
 import {

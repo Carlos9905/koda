@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { makeServerError } from "@web/../tests/helpers/mock_server";
 import { makeFakeDialogService } from "@web/../tests/helpers/mock_services";
@@ -44,7 +44,7 @@ import { RelationalModel } from "@web/model/relational_model/relational_model";
 import { ViewButton } from "@web/views/view_button/view_button";
 import { AnimatedNumber } from "@web/views/view_components/animated_number";
 
-import { Component, onRendered, onWillRender, xml } from "@odoo/owl";
+import { Component, onRendered, onWillRender, xml } from "@koda/owl";
 import { SampleServer } from "@web/model/sample_server";
 import { KanbanRenderer } from "@web/views/kanban/kanban_renderer";
 
@@ -3641,7 +3641,7 @@ QUnit.module("Views", (hooks) => {
         // will NOT close the quick create.
         // This can happen when the user clicks out of the input because of a race condition between
         // the focusout of the m2o and the global 'click' handler of the quick create.
-        // Check odoo/odoo#61981 for more details.
+        // Check koda/koda#61981 for more details.
         assert.hasClass(document.body, "modal-open", "modal should be opening after m2o focusout");
         await click(document.body);
         assert.containsOnce(

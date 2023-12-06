@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { KanbanRenderer } from "@web/views/kanban/kanban_renderer";
@@ -7,7 +7,7 @@ import { registry } from "@web/core/registry";
 import { useService } from '@web/core/utils/hooks';
 
 import { ImagesCarouselDialog } from './images_carousel_dialog';
-import { useEffect, useRef } from "@odoo/owl";
+import { useEffect, useRef } from "@koda/owl";
 
 export class PostKanbanRenderer extends KanbanRenderer {
     setup() {

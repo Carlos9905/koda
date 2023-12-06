@@ -50,17 +50,17 @@
             "cells": {
                 "A13": {
                     "style": 1,
-                    "content": "[New Employees by Month](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"date:month\"],\"graph_measure\":\"count_new_employee\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"date:month\"]},\"modelName\":\"hr.contract.employee.report\",\"views\":[[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees Analysis\"})",
+                    "content": "[New Employees by Month](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"date:month\"],\"graph_measure\":\"count_new_employee\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"date:month\"]},\"modelName\":\"hr.contract.employee.report\",\"views\":[[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees Analysis\"})",
                     "border": 1
                 },
                 "A25": {
                     "style": 1,
-                    "content": "[Turnover by Month](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"date:month\"],\"graph_measure\":\"count_new_employee\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"date:month\"]},\"modelName\":\"hr.contract.employee.report\",\"views\":[[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees Analysis\"})",
+                    "content": "[Turnover by Month](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"date:month\"],\"graph_measure\":\"count_new_employee\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"date:month\"]},\"modelName\":\"hr.contract.employee.report\",\"views\":[[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees Analysis\"})",
                     "border": 1
                 },
                 "A37": {
                     "style": 1,
-                    "content": "[Top Departments](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"department_id\",\"!=\",false]],\"context\":{\"group_by\":[\"department_id\"],\"pivot_measures\":[\"count_new_employee\",\"employee_id\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"department_id\"]},\"modelName\":\"hr.contract.employee.report\",\"views\":[[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees Analysis\"})",
+                    "content": "[Top Departments](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"department_id\",\"!=\",false]],\"context\":{\"group_by\":[\"department_id\"],\"pivot_measures\":[\"count_new_employee\",\"employee_id\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"department_id\"]},\"modelName\":\"hr.contract.employee.report\",\"views\":[[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees Analysis\"})",
                     "border": 1
                 },
                 "A38": {
@@ -110,7 +110,7 @@
                 },
                 "A50": {
                     "style": 1,
-                    "content": "[Departure Reason](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"departure_reason_id\",\"!=\",false]],\"context\":{\"group_by\":[],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"departure_reason_id\"]},\"modelName\":\"hr.employee\",\"views\":[[false,\"kanban\"],[false,\"list\"],[false,\"form\"],[false,\"activity\"],[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees\"})",
+                    "content": "[Departure Reason](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"departure_reason_id\",\"!=\",false]],\"context\":{\"group_by\":[],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"departure_reason_id\"]},\"modelName\":\"hr.employee\",\"views\":[[false,\"kanban\"],[false,\"list\"],[false,\"form\"],[false,\"activity\"],[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees\"})",
                     "border": 1
                 },
                 "A51": {
@@ -331,7 +331,7 @@
                 },
                 "E37": {
                     "style": 1,
-                    "content": "[Top Paid Job Positions](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",[\"active_employee\",\"=\",true],[\"job_id\",\"!=\",false]],\"context\":{\"group_by\":[\"job_id\"],\"pivot_measures\":[\"__count\",\"wage\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"job_id\"]},\"modelName\":\"hr.contract.history\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees\"})",
+                    "content": "[Top Paid Job Positions](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",[\"active_employee\",\"=\",true],[\"job_id\",\"!=\",false]],\"context\":{\"group_by\":[\"job_id\"],\"pivot_measures\":[\"__count\",\"wage\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"job_id\"]},\"modelName\":\"hr.contract.history\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Employees\"})",
                     "border": 1
                 },
                 "E38": {

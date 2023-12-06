@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <t t-name="spreadsheet_edition.CommonOdooChartConfigPanel">
         <div class="o-section">
             <div class="o-section-title">Model</div>
@@ -23,4 +23,4 @@
             <br />
         </div>
     </t>
-</odoo>
+</koda>

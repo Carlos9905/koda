@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { _t } from "@web/core/l10n/translation";
 import { useInputField } from "../input_field_hook";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class UrlField extends Component {
     static template = "web.UrlField";

@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { registry } from "@web/core/registry";
 import { createFile, inputFiles } from "@web/../tests/utils";
@@ -6,7 +6,7 @@ import { createFile, inputFiles } from "@web/../tests/utils";
 registry.category("web_tour.tours").add("hr_contract_salary_tour", {
     test: true,
     url: "/my",
-    wait_for: Promise.resolve(odoo.__TipTemplateDef),
+    wait_for: Promise.resolve(koda.__TipTemplateDef),
     steps: () => [
         {
             content: "Go on configurator",
@@ -790,7 +790,7 @@ registry.category("web_tour.tours").add("hr_contract_salary_tour", {
 registry.category("web_tour.tours").add("hr_contract_salary_tour_hr_sign", {
     test: true,
     url: "/web",
-    wait_for: Promise.resolve(odoo.__TipTemplateDef),
+    wait_for: Promise.resolve(koda.__TipTemplateDef),
     steps: () => [
         {
             content: "Log into Belgian Company",
@@ -866,7 +866,7 @@ registry.category("web_tour.tours").add("hr_contract_salary_tour_hr_sign", {
 registry.category("web_tour.tours").add("hr_contract_salary_tour_2", {
     test: true,
     url: "/web",
-    wait_for: Promise.resolve(odoo.__TipTemplateDef),
+    wait_for: Promise.resolve(koda.__TipTemplateDef),
     steps: () => [
         {
             content: "Log into Belgian Company",

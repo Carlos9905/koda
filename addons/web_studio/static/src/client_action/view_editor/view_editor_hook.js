@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import {
     onWillDestroy,
     onWillStart,
@@ -7,7 +7,7 @@ import {
     useEnv,
     useState,
     useSubEnv,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { useOwnedDialogs, useService } from "@web/core/utils/hooks";
 import { viewTypeToString } from "@web_studio/studio_service";
 import {

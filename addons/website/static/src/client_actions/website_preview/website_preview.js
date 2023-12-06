@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { browser } from '@web/core/browser/browser';
@@ -25,7 +25,7 @@ import {
     useEffect,
     useState,
     useExternalListener,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 class BlockPreview extends Component {}
 BlockPreview.template = 'website.BlockPreview';

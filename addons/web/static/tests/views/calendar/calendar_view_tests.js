@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registerCleanup } from "../../helpers/cleanup";
 import { defaultLocalization, makeFakeDialogService } from "../../helpers/mock_services";
@@ -48,7 +48,7 @@ import { actionService } from "@web/webclient/actions/action_service";
 import { getTimePickers } from "../../core/datetime/datetime_test_helpers";
 import { CalendarController } from "@web/views/calendar/calendar_controller";
 import { calendarView } from "@web/views/calendar/calendar_view";
-import { Component, onWillRender, onWillStart, xml } from "@odoo/owl";
+import { Component, onWillRender, onWillStart, xml } from "@koda/owl";
 
 const fieldRegistry = registry.category("fields");
 const serviceRegistry = registry.category("services");

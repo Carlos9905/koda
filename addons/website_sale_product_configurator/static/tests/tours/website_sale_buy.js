@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 /**
  * Add custom steps to handle the optional products modal introduced
  * by the product configurator module.

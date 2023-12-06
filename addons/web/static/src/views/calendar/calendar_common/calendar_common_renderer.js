@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { is24HourFormat } from "@web/core/l10n/dates";
@@ -10,7 +10,7 @@ import { useCalendarPopover, useClickHandler, useFullCalendar } from "../hooks";
 import { CalendarCommonPopover } from "./calendar_common_popover";
 import { browser } from "@web/core/browser/browser";
 
-import { Component, onMounted, useEffect } from "@odoo/owl";
+import { Component, onMounted, useEffect } from "@koda/owl";
 
 const SCALE_TO_FC_VIEW = {
     day: "timeGridDay",

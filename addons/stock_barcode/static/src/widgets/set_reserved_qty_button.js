@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, onWillStart } from "@koda/owl";
 
 export class SetReservedQuantityButton extends Component {
     setup() {

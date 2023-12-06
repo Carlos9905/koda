@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { cartHandlerMixin } from '@website_sale/js/website_sale_utils';
 import { patch } from "@web/core/utils/patch";

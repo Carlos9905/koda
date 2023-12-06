@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { DROPDOWN } from "@web/core/dropdown/dropdown";
 import { pick } from "@web/core/utils/objects";
 import { debounce as debounceFn } from "@web/core/utils/timing";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 const explicitRankClasses = [
     "btn-primary",
@@ -46,7 +46,7 @@ export class ViewButton extends Component {
             this.onClick = debounceFn(this.onClick.bind(this), debounce, true);
         }
         this.tooltip = JSON.stringify({
-            debug: Boolean(odoo.debug),
+            debug: Boolean(koda.debug),
             button: {
                 string: this.props.string,
                 help: this.clickParams.help,
@@ -70,7 +70,7 @@ export class ViewButton extends Component {
     }
 
     get hasBigTooltip() {
-        return Boolean(odoo.debug) || this.clickParams.help;
+        return Boolean(koda.debug) || this.clickParams.help;
     }
 
     get hasSmallToolTip() {

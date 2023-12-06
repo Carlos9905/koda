@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="security_rule_whatsapp_account" model="ir.rule">
         <field name="name">WA Account: Restrict to Allowed Companies</field>
@@ -86,4 +86,4 @@
         <field name="groups" eval="[(4, ref('whatsapp.group_whatsapp_admin'))]"/>
     </record>
 
-</odoo>
+</koda>

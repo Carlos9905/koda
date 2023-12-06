@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useState, onWillStart, onWillUnmount } from "@odoo/owl";
+import { Component, useState, onWillStart, onWillUnmount } from "@koda/owl";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { useRecordObserver } from "@web/model/relational_model/utils";

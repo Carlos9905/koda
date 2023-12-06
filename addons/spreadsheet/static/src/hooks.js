@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { useEffect, useExternalListener, useState } from "@odoo/owl";
+import { useEffect, useExternalListener, useState } from "@koda/owl";
 import { loadBundle } from "@web/core/assets";
 
 /**

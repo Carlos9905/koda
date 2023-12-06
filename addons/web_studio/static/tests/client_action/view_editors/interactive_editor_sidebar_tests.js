@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { browser } from "@web/core/browser/browser";
 import {
@@ -22,7 +22,7 @@ import {
 import { CodeEditor } from "@web/core/code_editor/code_editor";
 import { registry } from "@web/core/registry";
 import { PivotEditorSidebar } from "@web_studio/client_action/view_editor/editors/pivot/pivot_editor";
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@koda/owl";
 
 const serviceRegistry = registry.category("services");
 
@@ -569,7 +569,7 @@ QUnit.module(
         QUnit.test("remove starting underscore from new field value", async function (assert) {
             assert.expect(1);
             // renaming is only available in debug mode
-            patchWithCleanup(odoo, { debug: true });
+            patchWithCleanup(koda, { debug: true });
 
             const arch = `<form><sheet>
                 <group>
@@ -700,7 +700,7 @@ QUnit.module(
             assert.expect(3);
 
             // the 'More' button is only available in debug mode
-            patchWithCleanup(odoo, { debug: true });
+            patchWithCleanup(koda, { debug: true });
 
             const openFormAction = {
                 res_id: 99999999,
@@ -760,7 +760,7 @@ QUnit.module(
             assert.expect(1);
 
             // the XML editor button is only available in debug mode
-            patchWithCleanup(odoo, { debug: true });
+            patchWithCleanup(koda, { debug: true });
 
             // the XML editor lazy loads its libs and its templates so its start
             // method is monkey-patched to know when the widget has started

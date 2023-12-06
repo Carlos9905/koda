@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
@@ -8,7 +8,7 @@ import { formatFloat } from "@web/core/utils/numbers";
 import { parseFloat } from "../parsers";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 export class FloatField extends Component {
     static template = "web.FloatField";

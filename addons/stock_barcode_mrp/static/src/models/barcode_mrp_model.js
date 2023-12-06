@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import BarcodePickingModel from '@stock_barcode/models/barcode_picking_model';
 import { _t } from "@web/core/l10n/translation";

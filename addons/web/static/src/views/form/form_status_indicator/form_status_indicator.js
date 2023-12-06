@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, useEffect, useRef, useState } from "@koda/owl";
 import { useBus } from "@web/core/utils/hooks";
 
 export class FormStatusIndicator extends Component {

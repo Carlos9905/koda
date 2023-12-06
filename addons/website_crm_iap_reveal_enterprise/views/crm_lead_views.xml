@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="crm_lead_view_pivot" model="ir.ui.view">
         <field name="name">crm.lead.view.pivot.inherit.lead.website</field>
         <field name="model">crm.lead</field>
@@ -44,4 +44,4 @@
         </field>
     </record>
     
-</odoo>
+</koda>

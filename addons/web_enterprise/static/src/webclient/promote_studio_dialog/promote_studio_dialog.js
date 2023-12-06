@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 import { browser } from "@web/core/browser/browser";
 import { Dialog } from "@web/core/dialog/dialog";
 import { useChildRef, useService } from "@web/core/utils/hooks";
 
-import { Component, useExternalListener } from "@odoo/owl";
+import { Component, useExternalListener } from "@koda/owl";
 
 export class PromoteStudioDialog extends Component {
     setup() {

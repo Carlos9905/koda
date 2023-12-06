@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /**
  * @typedef {import("@spreadsheet/data_sources/metadata_repository").Field} Field
@@ -12,7 +12,7 @@ import { sprintf } from "@web/core/utils/strings";
 import { Domain } from "@web/core/domain";
 import { constructDateRange, getPeriodOptions, QUARTER_OPTIONS } from "@web/search/utils/dates";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { CommandResult } from "@spreadsheet/o_spreadsheet/cancelled_reason";
 
 import { isEmpty } from "@spreadsheet/helpers/helpers";

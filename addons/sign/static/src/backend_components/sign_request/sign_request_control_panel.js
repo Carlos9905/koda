@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, useEffect, useComponent, markup } from "@odoo/owl";
+import { Component, useEffect, useComponent, markup } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 import multiFileUpload from "@sign/backend_components/multi_file_upload";

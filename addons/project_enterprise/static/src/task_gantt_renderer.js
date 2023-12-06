@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Avatar } from "@mail/views/web/fields/avatar/avatar";
-import { markup, useEffect } from "@odoo/owl";
+import { markup, useEffect } from "@koda/owl";
 import { localization } from "@web/core/l10n/localization";
 import { usePopover } from "@web/core/popover/popover_hook";
 import { useService } from "@web/core/utils/hooks";

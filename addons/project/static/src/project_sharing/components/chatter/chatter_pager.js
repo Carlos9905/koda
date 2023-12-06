@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useState, onWillUpdateProps } from "@odoo/owl";
+import { Component, useState, onWillUpdateProps } from "@koda/owl";
 
 export class ChatterPager extends Component {
     setup() {

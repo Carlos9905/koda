@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="view_repair_warn_uncomplete_move" model="ir.ui.view">
         <field name="name">repair.warn.uncomplete.move.view.form</field>
         <field name="model">repair.warn.uncomplete.move</field>
@@ -16,4 +16,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

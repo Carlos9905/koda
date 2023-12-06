@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { mockJoinSpreadsheetSession, mockFetchSpreadsheetHistory } from "@spreadsheet_edition/../tests/utils/mock_server";

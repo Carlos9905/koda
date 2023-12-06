@@ -1,5 +1,5 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Registry } from "@odoo/o-spreadsheet";
+import { Registry } from "@koda/o-spreadsheet";
 
 export const initCallbackRegistry = new Registry();

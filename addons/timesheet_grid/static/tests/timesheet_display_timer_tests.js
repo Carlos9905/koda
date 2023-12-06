@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { ormService } from "@web/core/orm_service";
@@ -8,7 +8,7 @@ import { getFixture, mount, nextTick } from "@web/../tests/helpers/utils";
 
 import { TimesheetDisplayTimer, TimesheetTimerFloatTimerField } from "@timesheet_grid/components/timesheet_display_timer/timesheet_display_timer";
 import { timerService } from "@timer/services/timer_service";
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 
 const { DateTime } = luxon;
 

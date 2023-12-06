@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /**
  * Traverses the given menu tree, executes the given callback for each node with

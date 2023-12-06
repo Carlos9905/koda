@@ -74,12 +74,12 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[Monthly Sales](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[[\"state\",\"not in\",[\"draft\",\"cancel\",\"sent\"]]],\"context\":{\"group_by\":[\"date:month\"],\"graph_measure\":\"price_subtotal\",\"graph_mode\":\"line\",\"graph_groupbys\":[\"date:month\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Monthly Sales](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[[\"state\",\"not in\",[\"draft\",\"cancel\",\"sent\"]]],\"context\":{\"group_by\":[\"date:month\"],\"graph_measure\":\"price_subtotal\",\"graph_mode\":\"line\",\"graph_groupbys\":[\"date:month\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "A19": {
                     "style": 1,
-                    "content": "[Top Quotations](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"state\",\"in\",[\"draft\",\"sent\"]]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"calendar\"],[false,\"pivot\"],[false,\"graph\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Quotations\"})",
+                    "content": "[Top Quotations](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"state\",\"in\",[\"draft\",\"sent\"]]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"calendar\"],[false,\"pivot\"],[false,\"graph\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Quotations\"})",
                     "border": 1
                 },
                 "A20": {
@@ -129,7 +129,7 @@
                 },
                 "A32": {
                     "style": 1,
-                    "content": "[Top Countries](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"country_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"country_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"country_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Top Countries](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"country_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"country_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"country_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "A33": {
@@ -179,7 +179,7 @@
                 },
                 "A45": {
                     "style": 1,
-                    "content": "[Top Customers](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"partner_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Top Customers](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"partner_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "A46": {
@@ -229,7 +229,7 @@
                 },
                 "A58": {
                     "style": 1,
-                    "content": "[Top Sales Teams](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"team_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"team_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Top Sales Teams](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"team_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"team_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "A59": {
@@ -279,7 +279,7 @@
                 },
                 "A71": {
                     "style": 1,
-                    "content": "[Top Sources](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"source_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"source_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"source_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Top Sources](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"source_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"source_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"source_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "A72": {
@@ -938,7 +938,7 @@
                 },
                 "F19": {
                     "style": 1,
-                    "content": "[Top Sales Orders](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"calendar\"],[false,\"pivot\"],[false,\"graph\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Orders\"})",
+                    "content": "[Top Sales Orders](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"calendar\"],[false,\"pivot\"],[false,\"graph\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Orders\"})",
                     "border": 1
                 },
                 "F20": {
@@ -988,7 +988,7 @@
                 },
                 "F32": {
                     "style": 1,
-                    "content": "[Top Products](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"product_tmpl_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"product_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Top Products](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"product_tmpl_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"product_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "F33": {
@@ -1038,7 +1038,7 @@
                 },
                 "F45": {
                     "style": 1,
-                    "content": "[Top Categories](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"categ_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"categ_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"categ_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Top Categories](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"categ_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"categ_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"categ_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "F46": {
@@ -1088,7 +1088,7 @@
                 },
                 "F58": {
                     "style": 1,
-                    "content": "[Top Salespeople](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"user_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Top Salespeople](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"user_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "F59": {
@@ -1138,7 +1138,7 @@
                 },
                 "F71": {
                     "style": 1,
-                    "content": "[Top Mediums](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"medium_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"medium_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"medium_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "content": "[Top Mediums](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"medium_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"medium_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"medium_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
                     "border": 1
                 },
                 "F72": {

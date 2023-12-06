@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export class Cache {
     constructor(getValue, getKey) {

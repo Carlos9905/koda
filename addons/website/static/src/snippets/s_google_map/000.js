@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 /* global google */
 
 import publicWidget from "@web/legacy/js/public/public_widget";

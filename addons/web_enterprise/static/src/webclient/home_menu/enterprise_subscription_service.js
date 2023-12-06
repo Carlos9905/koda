@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { session } from "@web/session";
@@ -10,7 +10,7 @@ import { ExpirationPanel } from "./expiration_panel";
 import { cookie } from "@web/core/browser/cookie";
 
 const { DateTime } = luxon;
-import { Component, xml, useState } from "@odoo/owl";
+import { Component, xml, useState } from "@koda/owl";
 
 function daysUntil(datetime) {
     const duration = datetime.diff(DateTime.utc(), "days");
@@ -68,7 +68,7 @@ export class SubscriptionManager {
             ],
         ];
         const nbUsers = await this.orm.call("res.users", "search_count", args);
-        browser.location = `https://www.odoo.com/odoo-enterprise/upgrade?num_users=${nbUsers}`;
+        browser.location = `https://www.koda.com/koda-enterprise/upgrade?num_users=${nbUsers}`;
     }
     /**
      * Save the registration code then triggers a ping to submit it.
@@ -144,7 +144,7 @@ export class SubscriptionManager {
             "database.enterprise_code",
         ]);
 
-        const url = "https://www.odoo.com/odoo-enterprise/renew";
+        const url = "https://www.koda.com/koda-enterprise/renew";
         const contractQueryString = enterpriseCode ? `?contract=${enterpriseCode}` : "";
         browser.location = `${url}${contractQueryString}`;
     }
@@ -160,7 +160,7 @@ export class SubscriptionManager {
                 ],
             ]),
         ]);
-        const url = "https://www.odoo.com/odoo-enterprise/upsell";
+        const url = "https://www.koda.com/koda-enterprise/upsell";
         const contractQueryString = enterpriseCode ? `&contract=${enterpriseCode}` : "";
         browser.location = `${url}?num_users=${nbUsers}${contractQueryString}`;
     }

@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 import { DashboardLoader, Status } from "./dashboard_loader";
-import { Spreadsheet } from "@odoo/o-spreadsheet";
+import { Spreadsheet } from "@koda/o-spreadsheet";
 import { useSetupAction } from "@web/webclient/actions/action_hook";
 import { DashboardMobileSearchPanel } from "./mobile_search_panel/mobile_search_panel";
 import { MobileFigureContainer } from "./mobile_figure_container/mobile_figure_container";
@@ -13,7 +13,7 @@ import { standardActionServiceProps } from "@web/webclient/actions/action_servic
 import { SpreadsheetShareButton } from "@spreadsheet/components/share_button/share_button";
 import { useSpreadsheetPrint } from "@spreadsheet/hooks";
 
-import { Component, onWillStart, useState, useEffect } from "@odoo/owl";
+import { Component, onWillStart, useState, useEffect } from "@koda/owl";
 
 export class SpreadsheetDashboardAction extends Component {
     setup() {

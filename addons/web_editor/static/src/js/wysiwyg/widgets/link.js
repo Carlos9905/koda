@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import * as OdooEditorLib from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
+import * as OdooEditorLib from "@web_editor/js/editor/koda-editor/src/OdooEditor";
 import { _t } from "@web/core/l10n/translation";
 import { isVisible } from "@web/core/utils/ui";
 import weUtils from "@web_editor/js/common/utils";
@@ -12,8 +12,8 @@ import {
     onWillDestroy,
     useState,
     useRef,
-} from "@odoo/owl";
-import { deduceURLfromText } from "@web_editor/js/editor/odoo-editor/src/utils/sanitize";
+} from "@koda/owl";
+import { deduceURLfromText } from "@web_editor/js/editor/koda-editor/src/utils/sanitize";
 
 const { getDeepRange, getInSelection, EMAIL_REGEX, PHONE_REGEX } = OdooEditorLib;
 

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "../browser/browser";
 import { registry } from "../registry";
@@ -84,7 +84,7 @@ export const errorService = {
             }
             let uncaughtError;
             if (!filename && !lineno && !colno) {
-                if ((isIOS() || isBrowserSafari()) && odoo.debug !== "assets") {
+                if ((isIOS() || isBrowserSafari()) && koda.debug !== "assets") {
                     // In Safari 16.4+ (as of Jun 14th 2023), an error occurs
                     // when going back and forward through the browser when the
                     // cache is enabled. A feedback has been reported but in the

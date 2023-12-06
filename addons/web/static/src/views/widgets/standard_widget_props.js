@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export const standardWidgetProps = {
     readonly: { type: Boolean, optional: true },

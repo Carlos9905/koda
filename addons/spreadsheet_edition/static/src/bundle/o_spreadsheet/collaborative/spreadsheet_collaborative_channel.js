@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /**
  * This class implements the `TransportService` interface defined
  * by o-spreadsheet. Its purpose is to communicate with other clients
  * by sending and receiving spreadsheet messages through the server.
- * @see https://github.com/odoo/o-spreadsheet
+ * @see https://github.com/koda/o-spreadsheet
  *
  * It listens messages on the long polling bus and forwards spreadsheet messages
  * to the handler. (note: it is assumed there is only one handler)

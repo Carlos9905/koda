@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import * as spreadsheet from "@odoo/o-spreadsheet";
+/** @koda-module **/
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { Domain } from "@web/core/domain";
 
 const uuidGenerator = new spreadsheet.helpers.UuidGenerator();

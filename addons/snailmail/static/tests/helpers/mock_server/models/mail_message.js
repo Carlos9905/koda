@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import '@mail/../tests/helpers/mock_server/models/mail_message'; // ensure mail overrides are applied first
 

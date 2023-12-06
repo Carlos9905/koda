@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { UserSettings } from "@mail/core/common/user_settings_service";
 

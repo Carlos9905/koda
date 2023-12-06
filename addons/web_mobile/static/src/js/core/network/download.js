@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import mobile from "@web_mobile/js/services/core";
 import { download } from "@web/core/network/download";
@@ -7,8 +7,8 @@ const _download = download._download;
 
 download._download = async function (options) {
     if (mobile.methods.downloadFile) {
-        if (odoo.csrf_token) {
-            options.csrf_token = odoo.csrf_token;
+        if (koda.csrf_token) {
+            options.csrf_token = koda.csrf_token;
         }
         mobile.methods.downloadFile(options);
         // There is no need to wait downloadFile because we delegate this to

@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Chatter } from "@mail/core/web/chatter";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class ChatterContainer extends Chatter {
     onClick(ev) {

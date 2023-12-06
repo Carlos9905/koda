@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _lt } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";

@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 
@@ -16,7 +16,7 @@ import { editInput, patchWithCleanup, click, patchDate } from "@web/../tests/hel
 import { toggleSearchBarMenu } from "@web/../tests/search/helpers";
 import { contains } from "@web/../tests/utils";
 import { doAction } from "@web/../tests/webclient/helpers";
-import { onMounted, onWillUnmount } from "@odoo/owl";
+import { onMounted, onWillUnmount } from "@koda/owl";
 const { DateTime } = luxon;
 
 let serverData;

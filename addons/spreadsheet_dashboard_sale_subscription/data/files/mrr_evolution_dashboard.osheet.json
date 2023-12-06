@@ -53,7 +53,7 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[MRR over time](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_date:month\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"line\",\"graph_groupbys\":[\"event_date:month\"],\"graph_order\":null,\"graph_stacked\":true,\"graph_cumulated\":true},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[MRR over time](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_date:month\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"line\",\"graph_groupbys\":[\"event_date:month\"],\"graph_order\":null,\"graph_stacked\":true,\"graph_cumulated\":true},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "A19": {
@@ -62,7 +62,7 @@
                 },
                 "A31": {
                     "style": 1,
-                    "content": "[Top upgrades](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"event_type\",\"=\",\"1_expansion\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[Top upgrades](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"event_type\",\"=\",\"1_expansion\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "A32": {
@@ -107,7 +107,7 @@
                 },
                 "A44": {
                     "style": 1,
-                    "content": "[MRR by Recurrence](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[],\"pivot_measures\":[\"mrr_change_normalized\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"plan_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[MRR by Recurrence](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[],\"pivot_measures\":[\"mrr_change_normalized\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"plan_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "A45": {
@@ -152,7 +152,7 @@
                 },
                 "A57": {
                     "style": 1,
-                    "content": "[Top Salesperson](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_date:month\"],\"pivot_measures\":[\"mrr_change_normalized\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[Top Salesperson](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_date:month\"],\"pivot_measures\":[\"mrr_change_normalized\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "A58": {
@@ -452,7 +452,7 @@
                 },
                 "F31": {
                     "style": 1,
-                    "content": "[Worst Downgrades](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"event_type\",\"=\",\"15_contraction\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[Worst Downgrades](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"event_type\",\"=\",\"15_contraction\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "F32": {
@@ -497,7 +497,7 @@
                 },
                 "F44": {
                     "style": 1,
-                    "content": "[MRR by Team](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_date:month\"],\"pivot_measures\":[\"mrr_change_normalized\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[MRR by Team](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_date:month\"],\"pivot_measures\":[\"mrr_change_normalized\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "F45": {
@@ -542,7 +542,7 @@
                 },
                 "F57": {
                     "style": 1,
-                    "content": "[MRR by Country](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_date:month\"],\"pivot_measures\":[\"mrr_change_normalized\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"event_date:month\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[MRR by Country](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_date:month\"],\"pivot_measures\":[\"mrr_change_normalized\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"event_date:month\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "F58": {

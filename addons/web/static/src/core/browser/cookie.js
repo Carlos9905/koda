@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /**
  * Utils to make use of document.cookie

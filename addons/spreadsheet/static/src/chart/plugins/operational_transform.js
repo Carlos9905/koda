@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { inverseCommandRegistry, otRegistry } = spreadsheet.registries;
 
 function identity(cmd) {

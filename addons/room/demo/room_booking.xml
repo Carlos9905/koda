@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data noupdate="1">
     <record id="room_booking_room_1_booking_1" model="room.booking">
         <field name="name">Daily Followup</field>
@@ -80,4 +80,4 @@
         <field name="organizer_id" ref="base.user_demo"/>
     </record>
 </data>
-</odoo>
+</koda>

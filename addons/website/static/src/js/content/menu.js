@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
 import animations from "@website/js/content/snippets.animation";
@@ -51,9 +51,9 @@ const BaseAnimatedHeader = animations.Animation.extend({
         });
 
         // We can rely on transitionend which is well supported but not on
-        // transitionstart, so we listen to a custom odoo event.
+        // transitionstart, so we listen to a custom koda event.
         this._transitionCount = 0;
-        this.$el.on('odoo-transitionstart.BaseAnimatedHeader', () => {
+        this.$el.on('koda-transitionstart.BaseAnimatedHeader', () => {
             this.el.classList.add('o_transitioning');
             this._adaptToHeaderChangeLoop(1);
         });
@@ -233,7 +233,7 @@ const BaseAnimatedHeader = animations.Animation.extend({
             this.scrollHeightTooShort = headerIsScrolled && this._scrollHeightTooShort();
             if (!this.scrollHeightTooShort) {
                 this.el.classList.toggle('o_header_is_scrolled', headerIsScrolled);
-                this.$el.trigger('odoo-transitionstart');
+                this.$el.trigger('koda-transitionstart');
                 this.headerIsScrolled = headerIsScrolled;
             }
         }
@@ -412,7 +412,7 @@ const BaseDisappearingHeader = publicWidget.registry.FixedHeader.extend({
      * @private
      */
     _hideHeader: function () {
-        this.$el.trigger('odoo-transitionstart');
+        this.$el.trigger('koda-transitionstart');
     },
     /**
      * @override
@@ -424,7 +424,7 @@ const BaseDisappearingHeader = publicWidget.registry.FixedHeader.extend({
      * @private
      */
     _showHeader: function () {
-        this.$el.trigger('odoo-transitionstart');
+        this.$el.trigger('koda-transitionstart');
     },
 
     //--------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="quality_control_worksheet_template_action_settings" model="ir.actions.act_window" >
         <field name="name">Quality Worksheet Templates</field>
         <field name="res_model">worksheet.template</field>
@@ -20,4 +20,4 @@
         parent="quality_control.menu_quality_configuration"
         groups="quality.group_quality_manager"/>
 
-</odoo>
+</koda>

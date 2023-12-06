@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { KanbanHeader } from '@web/views/kanban/kanban_header';
@@ -7,7 +7,7 @@ import { useService } from '@web/core/utils/hooks';
 
 import { StreamPostKanbanRecord } from './stream_post_kanban_record';
 import { ImagesCarouselDialog } from './images_carousel_dialog';
-import { useEffect, useRef } from "@odoo/owl";
+import { useEffect, useRef } from "@koda/owl";
 
 class StreamPostKanbanHeader extends KanbanHeader {
     static template = "social.KanbanHeader";

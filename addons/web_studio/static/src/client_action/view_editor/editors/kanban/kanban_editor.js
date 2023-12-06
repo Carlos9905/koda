@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { registry } from "@web/core/registry";
 import { omit } from "@web/core/utils/objects";
 import { kanbanView } from "@web/views/kanban/kanban_view";

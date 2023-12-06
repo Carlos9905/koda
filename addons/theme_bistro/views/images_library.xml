@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Backgrounds -->
 <record id="bg_img_01" model="theme.ir.attachment">
@@ -352,4 +352,4 @@
     <field name="url">/theme_bistro/static/src/img/backgrounds/08.jpg</field>
 </record>
 
-</odoo>
+</koda>

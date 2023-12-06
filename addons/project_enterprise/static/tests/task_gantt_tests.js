@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getFixture, patchDate, click, nextTick } from "@web/../tests/helpers/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";

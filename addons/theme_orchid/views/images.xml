@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Not used anymore by the editor: files and records kept for back-compatibility.
 Check in theme_loftspace's primary_variables.scss and theme.scss -->
@@ -221,4 +221,4 @@ Check in theme_loftspace's primary_variables.scss and theme.scss -->
     <field name="url">/theme_orchid/static/src/img/snippets/library_image_16.jpg</field>
 </record>
 
-</odoo>
+</koda>

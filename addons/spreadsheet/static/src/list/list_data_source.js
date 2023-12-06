@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { OdooViewsDataSource } from "@spreadsheet/data_sources/odoo_views_data_source";
 import { LoadingDataError } from "@spreadsheet/o_spreadsheet/errors";
@@ -12,7 +12,7 @@ import {
 } from "@web/core/l10n/dates";
 import { orderByToString } from "@web/search/utils/order_by";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
 const { toNumber } = spreadsheet.helpers;
 const { DEFAULT_LOCALE } = spreadsheet.constants;

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export function getTooltipInfo(params) {
     let widgetDescription = undefined;
@@ -9,7 +9,7 @@ export function getTooltipInfo(params) {
     const info = {
         viewMode: params.viewMode,
         resModel: params.resModel,
-        debug: Boolean(odoo.debug),
+        debug: Boolean(koda.debug),
         field: {
             name: params.field.name,
             help: params.fieldInfo.help ?? params.field.help,

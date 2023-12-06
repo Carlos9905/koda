@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { Domain } from "@web/core/domain";

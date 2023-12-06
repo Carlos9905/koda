@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Digipad } from '@stock_barcode/widgets/digipad';
 

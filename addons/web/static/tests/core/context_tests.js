@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { evalPartialContext, makeContext } from "@web/core/context";
 

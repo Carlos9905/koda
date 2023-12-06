@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { formatDate, formatDateTime } from "@web/core/l10n/dates";
 import { localization } from "@web/core/l10n/localization";
 import { _t } from "@web/core/l10n/translation";

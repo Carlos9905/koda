@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patch } from '@web/core/utils/patch';
 import { registry } from "@web/core/registry";
 
 let uniqueSeed = 0;
 
-odoo.loader.bus.addEventListener("module-started", (e) => {
+koda.loader.bus.addEventListener("module-started", (e) => {
     if (e.moduleName === "@social_twitter/js/stream_post_comments_reply") {
         patch(e.module.StreamPostCommentsReplyTwitter.prototype, "social_twitter_spam", {
             get authorPictureSrc() { return '' }

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
 import { TaskGanttRenderer } from "@project_enterprise/task_gantt_renderer";

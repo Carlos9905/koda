@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { markRaw, markup, toRaw } from "@odoo/owl";
+import { markRaw, markup, toRaw } from "@koda/owl";
 import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { Domain } from "@web/core/domain";
 import { serializeDate, serializeDateTime } from "@web/core/l10n/dates";

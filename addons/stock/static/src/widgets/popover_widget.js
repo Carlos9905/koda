@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 import { registry } from "@web/core/registry";
 import { usePopover } from "@web/core/popover/popover_hook";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 /**
  * Extend this to add functionality to Popover (custom methods etc.)

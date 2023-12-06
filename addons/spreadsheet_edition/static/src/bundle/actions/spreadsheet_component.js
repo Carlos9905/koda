@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
@@ -7,9 +7,9 @@ import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_d
 import { DEFAULT_LINES_NUMBER } from "@spreadsheet/helpers/constants";
 import { InputDialog } from "@spreadsheet_edition/bundle/actions/input_dialog/input_dialog";
 
-import { Spreadsheet, Model } from "@odoo/o-spreadsheet";
+import { Spreadsheet, Model } from "@koda/o-spreadsheet";
 
-import { useSubEnv, Component } from "@odoo/owl";
+import { useSubEnv, Component } from "@koda/owl";
 
 /**
  * @typedef {Object} User

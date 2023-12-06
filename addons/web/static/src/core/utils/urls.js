@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { session } from "@web/session";
 import { browser } from "../browser/browser";

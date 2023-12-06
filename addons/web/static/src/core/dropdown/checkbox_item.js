@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 

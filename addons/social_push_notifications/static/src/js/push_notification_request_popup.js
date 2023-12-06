@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import Widget from "@web/legacy/js/core/widget";
 

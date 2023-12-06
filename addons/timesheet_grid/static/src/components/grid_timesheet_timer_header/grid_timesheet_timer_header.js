@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Domain } from "@web/core/domain";
@@ -8,7 +8,7 @@ import { getRawValue } from "@web/views/kanban/kanban_record";
 
 import { TimesheetTimerHeader } from "../timesheet_timer_header/timesheet_timer_header";
 
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, onWillStart } from "@koda/owl";
 
 export class GridTimesheetTimerHeader extends Component {
     static components = {

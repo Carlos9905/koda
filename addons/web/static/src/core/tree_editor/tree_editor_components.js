@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { TagsList } from "@web/core/tags_list/tags_list";
 
 export class Input extends Component {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <template id="linkedin_preview" t-name="LinkedIn Preview">
         <div class="o_social_preview o_social_linkedin_preview">
@@ -32,4 +32,4 @@
         </div>
     </template>
 </data>
-</odoo>
+</koda>

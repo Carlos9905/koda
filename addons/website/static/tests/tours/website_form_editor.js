@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
     import wTourUtils from "@website/js/tours/tour_utils";
 
@@ -11,7 +11,7 @@
     const ESSENTIAL_FIELDS_VALID_DATA_FOR_DEFAULT_FORM = [
         {
             name: 'email_from',
-            value: 'admin@odoo.com',
+            value: 'admin@koda.com',
         },
         {
             name: 'subject',
@@ -221,7 +221,7 @@
             trigger: "we-customizeblock-option.snippet-option-WebsiteFieldEditor we-select[data-name='hidden_condition_opt']:not(:has(we-button:contains('Conditional Visibility Check 5')))",
             run: () => null,
         },
-        ...addExistingField('email_cc', 'text', 'Test conditional visibility', false, {visibility: CONDITIONALVISIBILITY, condition: 'odoo'}),
+        ...addExistingField('email_cc', 'text', 'Test conditional visibility', false, {visibility: CONDITIONALVISIBILITY, condition: 'koda'}),
 
         ...addExistingField('date', 'text', 'Test Date', true),
 

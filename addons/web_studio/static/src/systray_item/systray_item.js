@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 class StudioSystray extends Component {
     setup() {

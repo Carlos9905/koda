@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import {registry} from "@web/core/registry";
 import {
@@ -6,7 +6,7 @@ import {
     useState,
     onWillStart,
     onWillUnmount,
-} from "@odoo/owl";
+} from "@koda/owl";
 import {useService} from "@web/core/utils/hooks";
 
 

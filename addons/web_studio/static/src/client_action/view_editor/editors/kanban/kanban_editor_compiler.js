@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { KanbanCompiler } from "@web/views/kanban/kanban_compiler";
 import { computeXpath, applyInvisible } from "../xml_utils";
 import { isComponentNode } from "@web/views/view_compiler";

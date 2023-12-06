@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { evaluateBooleanExpr } from "@web/core/py_js/py";
 import { registry } from "@web/core/registry";
@@ -20,7 +20,7 @@ import {
     toRaw,
     useSubEnv,
     reactive,
-} from "@odoo/owl";
+} from "@koda/owl";
 const viewRegistry = registry.category("views");
 
 /** @typedef {Object} Config

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "../../core/browser/browser";
 import { registry } from "../../core/registry";
@@ -12,8 +12,8 @@ function makeFetchLoadMenus() {
     return async function fetchLoadMenus(reload) {
         if (reload) {
             loadMenusHash = new Date().getTime().toString();
-        } else if (odoo.loadMenusPromise) {
-            return odoo.loadMenusPromise;
+        } else if (koda.loadMenusPromise) {
+            return koda.loadMenusPromise;
         }
         const res = await browser.fetch(`${loadMenusUrl}/${loadMenusHash}`);
         if (!res.ok) {

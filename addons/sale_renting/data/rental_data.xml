@@ -1,4 +1,4 @@
-<odoo noupdate="1">
+<koda noupdate="1">
     <record forcecreate="True" id="property_extra_hourly" model="ir.property">
         <field name="name">property_extra_hourly</field>
         <field name="fields_id" search="[('model','=','product.template'),('name','=','extra_hourly')]"/>
@@ -72,4 +72,4 @@
         <field name="unit">year</field>
     </record>
 
-</odoo>
+</koda>

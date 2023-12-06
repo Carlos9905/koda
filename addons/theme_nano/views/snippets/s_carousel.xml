@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="s_carousel" inherit_id="website.s_carousel">
     <!-- Carousel -->
@@ -17,4 +17,4 @@
     <xpath expr="//*[@data-bs-slide-to='2']" position="replace"/>
 </template>
 
-</odoo>
+</koda>

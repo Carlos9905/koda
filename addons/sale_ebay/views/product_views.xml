@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="product_template_sale_ebay_form_view" model="ir.ui.view">
       <field name="name">product.sale.ebay.form</field>
@@ -156,4 +156,4 @@ if records:
   records.unlink_listing_product_ebay()
       </field>
     </record>
-</odoo>
+</koda>

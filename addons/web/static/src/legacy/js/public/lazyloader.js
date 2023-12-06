@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 var blockEvents = ['submit', 'click'];
 var blockFunction = function (ev) {

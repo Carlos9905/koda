@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, onError, xml, useSubEnv } from "@odoo/owl";
+import { Component, onError, xml, useSubEnv } from "@koda/owl";
 
 export class ErrorHandler extends Component {
     setup() {

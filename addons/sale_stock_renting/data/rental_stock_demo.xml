@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
   <record id="sale_renting.rental_product_1" model="product.product">
       <field name="preparation_time" eval="0.05"/>
@@ -143,4 +143,4 @@
   <!-- CONFIRM Rental Sale Order -->
   <function model="sale.order" name="action_confirm" eval="[[ref('rental_stock_order_1')]]" context="{'action_no_send_mail': True}"/>
 
-</odoo>
+</koda>

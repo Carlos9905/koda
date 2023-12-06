@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import wTourUtils from '@website/js/tours/tour_utils';
 import wSaleTourUtils from '@website_sale/js/tours/tour_utils';

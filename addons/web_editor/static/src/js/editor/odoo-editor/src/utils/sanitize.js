@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import {
     closestBlock,
     closestElement,
@@ -208,7 +208,7 @@ function sanitizeNode(node, root) {
         if (isEditorTab(tabPreviousSibling)) {
             node.style.width = '40px';
         } else {
-            const editable = closestElement(node, '.odoo-editor-editable');
+            const editable = closestElement(node, '.koda-editor-editable');
             if (editable?.firstElementChild) {
                 const nodeRect = node.getBoundingClientRect();
                 const referenceRect = editable.firstElementChild.getBoundingClientRect();

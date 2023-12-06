@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 /**
  * Improved John Resig's inheritance, based on:
  *

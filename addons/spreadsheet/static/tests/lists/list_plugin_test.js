@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { session } from "@web/session";
 import { nextTick, patchWithCleanup } from "@web/../tests/helpers/utils";
@@ -20,7 +20,7 @@ import { createSpreadsheetWithList } from "../utils/list";
 import { registry } from "@web/core/registry";
 import { getBasicServerData } from "../utils/data";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { DEFAULT_LOCALE } = spreadsheet.constants;
 
 QUnit.module("spreadsheet > list plugin", {}, () => {

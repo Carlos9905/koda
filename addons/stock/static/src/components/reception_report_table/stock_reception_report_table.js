@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useService } from "@web/core/utils/hooks";
 import { ReceptionReportLine } from "../reception_report_line/stock_reception_report_line";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class ReceptionReportTable extends Component {
     setup() {

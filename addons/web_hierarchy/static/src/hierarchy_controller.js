@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 import { useBus } from "@web/core/utils/hooks";
 import { useModel } from "@web/model/model";

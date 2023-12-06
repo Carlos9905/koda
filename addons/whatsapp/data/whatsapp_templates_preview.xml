@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="template_message_preview" t-name="WhatsApp Preview">
         <div class="o_whatsapp_preview overflow-hidden ps-3 pe-5">
             <div class="o_whatsapp_message mt-2 mb-1 fs-6 lh-1 float-start text-break text-black position-relative">
@@ -51,4 +51,4 @@
             </div>
         </div>
     </template>
-</odoo>
+</koda>

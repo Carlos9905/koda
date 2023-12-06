@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { LazyComponent } from "@web/core/assets";
 import { standardActionServiceProps } from "@web/webclient/actions/action_service";
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@koda/owl";
 
 class StudioActionLoader extends Component {
     static components = { LazyComponent };

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useOwnDebugContext } from "@web/core/debug/debug_context";
 import { DebugMenu } from "@web/core/debug/debug_menu";
@@ -9,7 +9,7 @@ import { useBus, useService } from "@web/core/utils/hooks";
 import { ActionContainer } from "./actions/action_container";
 import { NavBar } from "./navbar/navbar";
 
-import { Component, onMounted, onWillStart, useExternalListener, useState } from "@odoo/owl";
+import { Component, onMounted, onWillStart, useExternalListener, useState } from "@koda/owl";
 
 export class WebClient extends Component {
     setup() {

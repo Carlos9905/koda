@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { assets, templates } from "@web/core/assets";
 import { browser, makeRAMLocalStorage } from "@web/core/browser/browser";
@@ -13,7 +13,7 @@ import { loadLanguages } from "@web/core/l10n/translation";
 transitionConfig.disabled = true;
 
 import { patch } from "@web/core/utils/patch";
-import { App, EventBus, whenReady } from "@odoo/owl";
+import { App, EventBus, whenReady } from "@koda/owl";
 import { currencies } from "@web/core/currency";
 import { cookie } from "@web/core/browser/cookie";
 
@@ -201,7 +201,7 @@ function patchBodyAddEventListener() {
 }
 
 function patchOdoo() {
-    patchWithCleanup(odoo, {
+    patchWithCleanup(koda, {
         debug: "",
     });
 }

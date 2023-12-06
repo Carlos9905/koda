@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Library_image - Image_gallery & Images_wall-->
 <record id="library_image_08" model="theme.ir.attachment">
@@ -89,4 +89,4 @@
     <field name="url">/theme_buzzy/static/src/img/photos/s_cover_default_image.jpg</field>
 </record>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { BUILTINS, EvaluationError, execOnIterable } from "./py_builtin";
 import {

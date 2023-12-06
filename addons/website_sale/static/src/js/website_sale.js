@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
 import VariantMixin from "@website_sale/js/variant_mixin";
@@ -10,7 +10,7 @@ import { ProductImageViewer } from "@website_sale/js/components/website_sale_ima
 import { jsonrpc } from "@web/core/network/rpc_service";
 import { debounce, throttleForAnimation } from "@web/core/utils/timing";
 import { listenSizeChange, SIZES, utils as uiUtils } from "@web/core/ui/ui_service";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export const WebsiteSale = publicWidget.Widget.extend(VariantMixin, cartHandlerMixin, {
     selector: '.oe_website_sale',

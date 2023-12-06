@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, onWillStart, useState, useSubEnv } from "@odoo/owl";
+import { Component, onWillStart, useState, useSubEnv } from "@koda/owl";
 import { Dialog } from '@web/core/dialog/dialog';
 import { ProductList } from "../product_list/product_list";
 import { useService } from "@web/core/utils/hooks";

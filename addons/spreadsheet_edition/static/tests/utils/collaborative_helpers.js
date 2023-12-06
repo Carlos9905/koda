@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { MockSpreadsheetCollaborativeChannel } from "./mock_spreadsheet_collaborative_channel";
 import { ormService } from "@web/core/orm_service";

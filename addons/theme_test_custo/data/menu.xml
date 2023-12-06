@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Case 1: Create a new navbar menu -->
 <record id="menu_example_1" model="theme.website.menu">
@@ -77,4 +77,4 @@
     <field name="sequence" type="int">20</field>
 </record>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 
@@ -6,12 +6,12 @@ import { useService, useBus } from "@web/core/utils/hooks";
 import { useHotkey } from '@web/core/hotkeys/hotkey_hook';
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";
 import weUtils from '@web_editor/js/common/utils';
-import { isMediaElement } from '@web_editor/js/editor/odoo-editor/src/utils/utils';
+import { isMediaElement } from '@web_editor/js/editor/koda-editor/src/utils/utils';
 
 import { EditMenuDialog, MenuDialog } from "../dialog/edit_menu";
 import { WebsiteDialog } from '../dialog/dialog';
 import { PageOption } from "./page_options";
-import { Component, onWillStart, useEffect, onWillUnmount } from "@odoo/owl";
+import { Component, onWillStart, useEffect, onWillUnmount } from "@koda/owl";
 import { EditHeadBodyDialog } from "../edit_head_body_dialog/edit_head_body_dialog";
 
 /**
@@ -322,10 +322,10 @@ export class WysiwygAdapterComponent extends Wysiwyg {
         // destroy, options will have wrong social media values).
         // It would also survive (multi) website switch, not fetching the values
         // from the accessed website.
-        const mod = await odoo.loader.modules.get('@website/snippets/s_social_media/options')[Symbol.for('default')];
+        const mod = await koda.loader.modules.get('@website/snippets/s_social_media/options')[Symbol.for('default')];
         mod.clearDbSocialValuesCache();
 
-        const formOptionsMod = await odoo.loader.modules.get('@website/snippets/s_website_form/options')[Symbol.for('default')];
+        const formOptionsMod = await koda.loader.modules.get('@website/snippets/s_website_form/options')[Symbol.for('default')];
         formOptionsMod.clearAllFormsInfo();
 
         return super.destroy(...arguments);
@@ -853,7 +853,7 @@ export class WysiwygAdapterComponent extends Wysiwyg {
      * @override
      */
     async _createSnippetsMenuInstance(options = {}) {
-        const snippetsEditor = await odoo.loader.modules.get('@website/js/editor/snippets.editor')[Symbol.for('default')];
+        const snippetsEditor = await koda.loader.modules.get('@website/js/editor/snippets.editor')[Symbol.for('default')];
         const { SnippetsMenu } = snippetsEditor;
         return new SnippetsMenu(this, Object.assign({
             wysiwyg: this,

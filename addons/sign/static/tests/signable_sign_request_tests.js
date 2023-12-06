@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { getFixture, nextTick } from "@web/../tests/helpers/utils";
 import { doAction } from "@web/../tests/webclient/helpers";

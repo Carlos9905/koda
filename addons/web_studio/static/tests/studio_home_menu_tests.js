@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { IconCreator } from "@web_studio/client_action/icon_creator/icon_creator";
 import { StudioHomeMenu } from "@web_studio/client_action/studio_home_menu/studio_home_menu";
@@ -17,7 +17,7 @@ import { click, getFixture, mount } from "@web/../tests/helpers/utils";
 import { dialogService } from "@web/core/dialog/dialog_service";
 import { registry } from "@web/core/registry";
 
-import { Component, EventBus, xml } from "@odoo/owl";
+import { Component, EventBus, xml } from "@koda/owl";
 const serviceRegistry = registry.category("services");
 
 const genericHomeMenuProps = {

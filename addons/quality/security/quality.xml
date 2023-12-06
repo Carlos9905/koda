@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- This group is meant to manage quality stages -->
     <record model="ir.module.category" id="base.module_category_manufacturing_quality">
         <field name="name">Quality</field>
@@ -53,4 +53,4 @@
     </record>
     </data>
 
-</odoo>
+</koda>

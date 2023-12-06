@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 /* global OdooDeviceUtility */
 
 import { uniqueId } from "@web/core/utils/functions";
@@ -44,7 +44,7 @@ function native_invoke(name, args) {
  * @param {String} id callback id
  * @param {Object} result
  */
-window.odoo.native_notify = function (id, result) {
+window.koda.native_notify = function (id, result) {
     if (deferreds.hasOwnProperty(id)) {
         if (result.success) {
             deferreds[id].successCallback(result);

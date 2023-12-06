@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template name="Rental Search" id="s_rental_search">
         <div class="s_rental_search row align-items-start g-3 my-2">
             <div class="product_attribute_search_rental d-none col-auto o_not_editable">
@@ -56,4 +56,4 @@
         <field name="bundle">web.assets_frontend</field>
         <field name="path">website_sale_renting/static/src/snippets/s_rental_search/000.js</field>
     </record>
-</odoo>
+</koda>

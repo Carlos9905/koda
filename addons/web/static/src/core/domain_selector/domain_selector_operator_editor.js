@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export function getDomainDisplayedOperators(fieldDef) {
     if (!fieldDef) {

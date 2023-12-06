@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export function editModelDebug(env, title, model, id) {
     return env.services.action.doAction({

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Domain } from "@web/core/domain";
 import { evaluateBooleanExpr } from "@web/core/py_js/py";

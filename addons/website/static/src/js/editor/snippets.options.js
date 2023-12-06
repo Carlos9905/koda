@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { loadCSS } from "@web/core/assets";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
@@ -28,7 +28,7 @@ import {
     drawTextHighlightSVG,
 } from "@website/js/text_processing";
 
-import { Component, markup, useRef, useState } from "@odoo/owl";
+import { Component, markup, useRef, useState } from "@koda/owl";
 
 const InputUserValueWidget = options.userValueWidgetsRegistry['we-input'];
 const SelectUserValueWidget = options.userValueWidgetsRegistry['we-select'];

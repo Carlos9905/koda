@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
@@ -10,7 +10,7 @@ import {
     editInput,
 } from "@web/../tests/helpers/utils";
 
-import { Component, markup, useState, xml } from "@odoo/owl";
+import { Component, markup, useState, xml } from "@koda/owl";
 import { CodeEditor } from "@web/core/code_editor/code_editor";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="appointment_validated" name="Website Appointment: Appointment Confirmed" inherit_id="appointment.appointment_validated">
         <xpath expr="//t[@t-call='portal.portal_layout']" position="attributes">
             <attribute name="t-call">website.layout</attribute>
@@ -19,4 +19,4 @@
             <attribute name="class">o_appointment h-100 o_wappointment_wrap mt-4</attribute>
         </xpath>
     </template>
-</odoo>
+</koda>

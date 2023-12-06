@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <record id="action_social_stream_post" model="ir.actions.act_window">
         <field name="name">Feed</field>
@@ -134,4 +134,4 @@
         </field>
     </record>
 </data>
-</odoo>
+</koda>

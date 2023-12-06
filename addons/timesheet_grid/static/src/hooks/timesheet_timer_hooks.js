@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Domain } from "@web/core/domain";
@@ -15,7 +15,7 @@ import {
     useEffect,
     useExternalListener,
     useSubEnv,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 export class TimesheetTimerRendererHook {
     constructor(propsList, env) {

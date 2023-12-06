@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="knowledge_base_articles_card" inherit_id="website_helpdesk.knowledge_base">
         <xpath expr="//div[@id='o_knowledge_base_sections']" position="inside">
             <div class="col" t-if="team.show_knowledge_base_article">
@@ -67,4 +67,4 @@
             </div>
         </div>
     </template>
-</odoo>
+</koda>

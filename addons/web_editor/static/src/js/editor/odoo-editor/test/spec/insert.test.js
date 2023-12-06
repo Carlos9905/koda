@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { parseHTML, setCursorEnd } from '../../src/utils/utils.js';
 import { BasicEditor, testEditor, unformat, insertText, deleteBackward } from '../utils.js';

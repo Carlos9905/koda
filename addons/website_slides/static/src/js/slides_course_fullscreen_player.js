@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /* global YT, Vimeo */
 
@@ -14,7 +14,7 @@
     import { SIZES, utils as uiUtils } from "@web/core/ui/ui_service";
     import { browser } from '@web/core/browser/browser';
 
-    import { markup } from "@odoo/owl";
+    import { markup } from "@koda/owl";
 
     /**
      * Helper: Get the slide dict matching the given criteria

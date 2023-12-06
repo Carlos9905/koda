@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { helpers, registries, UIPlugin } from "@odoo/o-spreadsheet";
+import { helpers, registries, UIPlugin } from "@koda/o-spreadsheet";
 import { CurrencyDataSource } from "../currency_data_source";
 const { featurePluginRegistry } = registries;
 const { createCurrencyFormat } = helpers;

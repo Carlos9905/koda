@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Dialog } from "../dialog/dialog";
 import { _t } from "@web/core/l10n/translation";
 import { useChildRef } from "@web/core/utils/hooks";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export const deleteConfirmationMessage = _t(
     "Ready to make your record disappear into thin air? Are you sure?\n\

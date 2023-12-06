@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { sprintf } from "@web/core/utils/strings";
@@ -8,7 +8,7 @@ import { LoadingDataError } from "../o_spreadsheet/errors";
 import { DisplayNameRepository } from "./display_name_repository";
 import { LabelsRepository } from "./labels_repository";
 
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 
 /**
  * @typedef {object} Field

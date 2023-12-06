@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { Layout } from "@web/search/layout";
-import { Component, useEffect, useState } from "@odoo/owl";
+import { Component, useEffect, useState } from "@koda/owl";
 import { KeepLast } from "@web/core/utils/concurrency";
 
 class WebsiteDashboard extends Component {

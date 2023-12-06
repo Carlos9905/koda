@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 
@@ -8,7 +8,7 @@ import { formatFloat } from "@web/core/utils/numbers";
 import { parseInteger, parseFloat } from "@web/views/fields/parsers";
 import { useInputHook } from "@web_grid/hooks/input_hook";
 
-import { Component, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, useEffect, useRef, useState } from "@koda/owl";
 import { useGridCell, useMagnifierGlass } from "@web_grid/hooks/grid_cell_hook";
 
 export const standardGridCellProps = {

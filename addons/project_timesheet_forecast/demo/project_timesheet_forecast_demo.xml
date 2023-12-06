@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="planning.planning_slot_121" model="planning.slot">
             <field name="project_id" ref="project.project_project_1"/>
@@ -227,4 +227,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

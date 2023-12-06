@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { cookie as cookieManager } from "@web/core/browser/cookie";
 import { session } from "@web/session";

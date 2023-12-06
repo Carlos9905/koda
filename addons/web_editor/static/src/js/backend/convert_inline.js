@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { getAdjacentPreviousSiblings, isBlock, rgbToHex, commonParentGet } from '../editor/odoo-editor/src/utils/utils';
+import { getAdjacentPreviousSiblings, isBlock, rgbToHex, commonParentGet } from '../editor/koda-editor/src/utils/utils';
 
 //--------------------------------------------------------------------------
 // Constants
@@ -662,7 +662,7 @@ function enforceImagesResponsivity(editable) {
  * @param {JQuery} [$iframe] the iframe containing the editable, if any
  */
 export async function toInline($editable, cssRules, $iframe) {
-    $editable.removeClass('odoo-editor-editable');
+    $editable.removeClass('koda-editor-editable');
     const editable = $editable.get(0);
     const iframe = $iframe && $iframe.get(0);
     const wysiwyg = $editable.data('wysiwyg');
@@ -771,7 +771,7 @@ export async function toInline($editable, cssRules, $iframe) {
     for (const [node, displayValue] of displaysToRestore) {
         node.style.setProperty('display', displayValue);
     }
-    $editable.addClass('odoo-editor-editable');
+    $editable.addClass('koda-editor-editable');
 }
 /**
  * Take all elements with a `background-image` style and convert them to `vml`
@@ -807,7 +807,7 @@ function flattenBackgroundImages(editable) {
  */
 function fontToImg($editable) {
     const editable = $editable.get(0);
-    const { fonts } = odoo.loader.modules.get("@web_editor/js/wysiwyg/fonts");
+    const { fonts } = koda.loader.modules.get("@web_editor/js/wysiwyg/fonts");
 
     for (const font of editable.querySelectorAll('.fa')) {
         let icon, content;

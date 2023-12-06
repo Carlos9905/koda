@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
 
         <!-- Resource: stock.warehouse.orderpoint -->
@@ -41,4 +41,4 @@
         </record>
 
     </data>
-</odoo>
+</koda>

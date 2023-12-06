@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { browser } from "@web/core/browser/browser";
@@ -10,7 +10,7 @@ import { fuzzyLookup } from "@web/core/utils/search";
 import { useSortable } from "@web/core/utils/sortable_owl";
 import { useDebounced } from "@web/core/utils/timing";
 
-import { Component, useRef, useState, onMounted, onWillStart, onWillUnmount } from "@odoo/owl";
+import { Component, useRef, useState, onMounted, onWillStart, onWillUnmount } from "@koda/owl";
 
 class DeleteExportListDialog extends Component {
     async onDelete() {
@@ -161,7 +161,7 @@ export class ExportDataDialog extends Component {
     }
 
     get isDebug() {
-        return Boolean(odoo.debug);
+        return Boolean(koda.debug);
     }
 
     get rootFields() {

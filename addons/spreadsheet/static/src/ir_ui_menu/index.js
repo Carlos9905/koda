@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
 import { IrMenuPlugin } from "./ir_ui_menu_plugin";
 

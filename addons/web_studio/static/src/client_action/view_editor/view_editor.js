@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component, onWillUpdateProps, useState, useSubEnv, useRef } from "@odoo/owl";
+/** @koda-module */
+import { Component, onWillUpdateProps, useState, useSubEnv, useRef } from "@koda/owl";
 
 import { useBus, useService } from "@web/core/utils/hooks";
 import { registry } from "@web/core/registry";

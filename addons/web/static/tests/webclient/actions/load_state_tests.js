@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { registry } from "@web/core/registry";
@@ -30,7 +30,7 @@ import {
 } from "./../helpers";
 import { errorService } from "@web/core/errors/error_service";
 
-import { Component, onMounted, xml } from "@odoo/owl";
+import { Component, onMounted, xml } from "@koda/owl";
 
 function getBreadCrumbTexts(target) {
     return getNodesTextContent(target.querySelectorAll(".breadcrumb-item, .o_breadcrumb .active"));

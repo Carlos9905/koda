@@ -1,5 +1,5 @@
 
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { ormService } from "@web/core/orm_service";

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { setCellContent } from "@spreadsheet/../tests/utils/commands";
 import {

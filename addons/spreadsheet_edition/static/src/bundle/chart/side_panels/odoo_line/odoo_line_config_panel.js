@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { CommonOdooChartConfigPanel } from "../common/config_panel";
 

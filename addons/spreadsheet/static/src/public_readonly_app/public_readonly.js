@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, onWillStart, useChildSubEnv, useState } from "@odoo/owl";
+import { Component, onWillStart, useChildSubEnv, useState } from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { download } from "@web/core/network/download";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
-import { Spreadsheet, Model, registries } from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
+import { Spreadsheet, Model, registries } from "@koda/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
 import { migrate } from "../o_spreadsheet/migration";
 import { useSpreadsheetPrint } from "../hooks";

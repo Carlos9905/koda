@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, onWillRender, useState, xml } from "@odoo/owl";
+import { Component, onWillRender, useState, xml } from "@koda/owl";
 import { getFixture, mount, click } from "@web/../tests/helpers/utils";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { registry } from "@web/core/registry";

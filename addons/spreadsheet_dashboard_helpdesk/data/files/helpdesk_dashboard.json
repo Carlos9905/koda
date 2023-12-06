@@ -50,12 +50,12 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[Tickets by Stage](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"stage_id\",\"team_id\"],\"graph_measure\":\"__count\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"stage_id\",\"team_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tickets by Stage\"})",
+                    "content": "[Tickets by Stage](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"stage_id\",\"team_id\"],\"graph_measure\":\"__count\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"stage_id\",\"team_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tickets by Stage\"})",
                     "border": 1
                 },
                 "A19": {
                     "style": 1,
-                    "content": "[Top Teams](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"team_id\",\"!=\",false]],\"context\":{\"group_by\":[\"team_id\"],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Teams\"})",
+                    "content": "[Top Teams](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"team_id\",\"!=\",false]],\"context\":{\"group_by\":[\"team_id\"],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Teams\"})",
                     "border": 1
                 },
                 "A20": {
@@ -105,7 +105,7 @@
                 },
                 "A32": {
                     "style": 1,
-                    "content": "[Top Ticket Types](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"ticket_type_id\",\"!=\",false]],\"context\":{\"group_by\":[\"ticket_type_id\"],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"ticket_type_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Ticket Types\"})",
+                    "content": "[Top Ticket Types](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"ticket_type_id\",\"!=\",false]],\"context\":{\"group_by\":[\"ticket_type_id\"],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"ticket_type_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Ticket Types\"})",
                     "border": 1
                 },
                 "A33": {
@@ -307,12 +307,12 @@
                 },
                 "E7": {
                     "style": 1,
-                    "content": "[Tickets by Type](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"ticket_type_id\"],\"graph_measure\":\"__count\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"ticket_type_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tickets by Type\"})",
+                    "content": "[Tickets by Type](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"ticket_type_id\"],\"graph_measure\":\"__count\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"ticket_type_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tickets by Type\"})",
                     "border": 1
                 },
                 "E19": {
                     "style": 1,
-                    "content": "[Top Assignees](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_id\",\"!=\",false]],\"context\":{\"group_by\":[\"user_id\"],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Agents\"})",
+                    "content": "[Top Assignees](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_id\",\"!=\",false]],\"context\":{\"group_by\":[\"user_id\"],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Agents\"})",
                     "border": 1
                 },
                 "E20": {
@@ -362,7 +362,7 @@
                 },
                 "E32": {
                     "style": 1,
-                    "content": "[Top Customers](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"partner_id\",\"!=\",false]],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Customers\"})",
+                    "content": "[Top Customers](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"partner_id\",\"!=\",false]],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"__count\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"helpdesk.ticket.report.analysis\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"cohort\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Customers\"})",
                     "border": 1
                 },
                 "E33": {

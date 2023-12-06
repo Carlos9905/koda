@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
     /**
      * Transforms base64 encoded data to a Blob object

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import Dialog from '@web/legacy/js/core/dialog';
 import { _t } from "@web/core/l10n/translation";

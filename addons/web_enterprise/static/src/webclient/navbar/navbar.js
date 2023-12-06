@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { NavBar } from "@web/webclient/navbar/navbar";
 import { useService, useBus } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
-import { useEffect, useRef } from "@odoo/owl";
+import { useEffect, useRef } from "@koda/owl";
 
 export class EnterpriseNavBar extends NavBar {
     setup() {

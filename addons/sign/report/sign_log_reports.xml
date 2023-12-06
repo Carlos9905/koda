@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
 
     <template id="sign_request_logs_user">
         <t t-call="web.html_container">
@@ -197,4 +197,4 @@
         <field name="binding_type">report</field>
     </record>
 
-</odoo>
+</koda>

@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
-import { Component, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, useEffect, useRef, useState } from "@koda/owl";
 
 export class SurveyQuestionTriggerWidget extends Component {
     static template = "survey.surveyQuestionTrigger";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ViewCompiler } from "@web/views/view_compiler";
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="submenu" name="Submenu">
     <t t-set="show_dropdown" t-value="(submenu.is_mega_menu and submenu.is_visible) or submenu.child_id.filtered(lambda menu: menu.is_visible)"/>
@@ -66,7 +66,7 @@
         - Only for non-designers (especially visitors) (hence the "editable or
           translatable" check).
         - Only if not in any debug mode (we want any correct value of debug mode
-          to correctly appear in the `odoo` object + assets may depend on this
+          to correctly appear in the `koda` object + assets may depend on this
           (e.g. debug=assets or debug=tests)).
         -->
         <attribute name="t-cache">main_object if main_object and main_object._name == 'website.page' and not request.session.debug and not editable and not translatable else None</attribute>
@@ -268,7 +268,7 @@
     <xpath expr="//t[@t-call='web.brand_promotion_message']" position="replace">
         <t t-call="web.brand_promotion_message">
             <t t-set="_message">
-                Create a <a target="_blank" href="http://www.odoo.com/app/website?utm_source=db&amp;utm_medium=website">free website</a>
+                Create a <a target="_blank" href="http://www.koda.com/app/website?utm_source=db&amp;utm_medium=website">free website</a>
             </t>
             <t t-set="_utm_medium" t-valuef="website"/>
         </t>
@@ -2284,7 +2284,7 @@
                     <small groups='base.group_no_one'>Odoo Version <t t-out="version.get('server_version')"/></small>
                 </h1>
                 <p>
-                    Information about the <t t-esc="res_company.name"/> instance of Odoo, the <a target="_blank" href="https://www.odoo.com">Open Source ERP</a>.
+                    Information about the <t t-esc="res_company.name"/> instance of Odoo, the <a target="_blank" href="https://www.koda.com">Open Source ERP</a>.
                 </p>
 
                 <div class="alert alert-warning alert-dismissable mt16" groups="website.group_website_restricted_editor" role="status">
@@ -2312,7 +2312,7 @@
                     <h2 class='mt32'>Installed Localizations / Account Charts</h2>
                     <dl class="dl-horizontal" t-foreach="l10n" t-as="app">
                         <dt>
-                            <a t-att-href="app.website or 'https://www.odoo.com/app/accounting/' + app.name">
+                            <a t-att-href="app.website or 'https://www.koda.com/app/accounting/' + app.name">
                                 <t t-out="app.shortdesc"/>
                             </a>
                         </dt>
@@ -2354,14 +2354,14 @@
 <template id="default_less">
     <style type="text/less">
         div#wrap div &gt; h1 {
-            color: @o-brand-odoo;
+            color: @o-brand-koda;
         }
     </style>
 </template>
 <template id="default_scss">
     <style type="text/scss">
         div#wrap div &gt; h1 {
-            color: $o-brand-odoo;
+            color: $o-brand-koda;
         }
     </style>
 </template>
@@ -2953,4 +2953,4 @@ Sitemap: <t t-esc="url_root"/>sitemap.xml
         </li>
     </xpath>
 </template>
-</odoo>
+</koda>

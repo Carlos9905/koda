@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ormService } from "@web/core/orm_service";
 import { registry } from "@web/core/registry";
@@ -6,7 +6,7 @@ import { makeFakeLocalizationService } from "@web/../tests/helpers/mock_services
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { nextTick } from "@web/../tests/helpers/utils";
 
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 import { DataSources } from "@spreadsheet/data_sources/data_sources";
 import { getBasicServerData } from "./data";
 import { nameService } from "@web/core/name_service";

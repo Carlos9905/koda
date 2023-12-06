@@ -1,14 +1,14 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
 const { chartRegistry } = spreadsheet.registries;
 const { ChartPanel } = spreadsheet.components;
 
 /**
  * This patch is necessary to ensure that the chart type cannot be changed
- * between odoo charts and spreadsheet charts.
+ * between koda charts and spreadsheet charts.
  */
 
 patch(ChartPanel.prototype, {

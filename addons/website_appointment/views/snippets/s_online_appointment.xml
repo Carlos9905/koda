@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="remove_external_snippets" inherit_id="website_enterprise.external_snippets">
     <xpath expr="//t[@t-install='website_appointment']" position="replace"/>
@@ -56,4 +56,4 @@
     <field name="path">website_appointment/static/src/snippets/s_online_appointment/000.js</field>
 </record>
 
-</odoo>
+</koda>

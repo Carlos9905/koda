@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { isUnbreakable, preserveCursor, toggleClass, isBlock, isVisible } from '../utils/utils.js';
 
 Text.prototype.oShiftTab = function () {

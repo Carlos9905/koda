@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="s_media_list" inherit_id="website.s_media_list">
     <!-- Section -->
@@ -67,4 +67,4 @@
         <div class="o_we_shape o_web_editor_Origins_09_001"/>
     </xpath>
 </template>
-</odoo>
+</koda>

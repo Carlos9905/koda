@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { ListRenderer } from '@web/views/list/list_renderer';
 
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 export class SubtaskListRenderer extends ListRenderer {
     setup() {

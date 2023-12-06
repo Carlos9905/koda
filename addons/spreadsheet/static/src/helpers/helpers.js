@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { serializeDate } from "@web/core/l10n/dates";
 
@@ -37,7 +37,7 @@ export function getMaxObjectId(o) {
 }
 
 /**
- * Convert a spreadsheet date representation to an odoo
+ * Convert a spreadsheet date representation to an koda
  * server formatted date
  *
  * @param {Date} value

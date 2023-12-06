@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="project_view_form_inherit_project_forecast" model="ir.ui.view">
         <field name="name">project.view.form.inherit.project.forecast</field>
@@ -13,4 +13,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

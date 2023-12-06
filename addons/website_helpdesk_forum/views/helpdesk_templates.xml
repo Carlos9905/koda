@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="knowledge_base_forum_card" inherit_id="website_helpdesk.knowledge_base">
         <xpath expr="//div[@id='o_knowledge_base_sections']" position="inside">
             <t t-set="hide_community_button" t-value="True"/>
@@ -50,4 +50,4 @@
             <a class="btn btn-secondary btn-lg" href="/forum" t-if="team.use_website_helpdesk_forum and not hide_community_button">Ask the Community</a>
         </xpath>
     </template>
-</odoo>
+</koda>

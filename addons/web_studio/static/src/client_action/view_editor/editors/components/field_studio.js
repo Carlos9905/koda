@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 import { Field } from "@web/views/fields/field";
 import { FieldContentOverlay } from "./field_content_overlay";
 
 import { useStudioRef, studioIsVisible } from "@web_studio/client_action/view_editor/editors/utils";
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 /*
  * Field:

@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { LoadableDataSource } from "./data_source";
 import { MetadataRepository } from "./metadata_repository";
 
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 
 /** *
  * @typedef {object} DataSourceServices

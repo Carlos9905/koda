@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { SEE_RECORD_LIST, SEE_RECORD_LIST_VISIBLE } from "@spreadsheet/list/list_actions";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
 const { clickableCellRegistry } = spreadsheet.registries;
 

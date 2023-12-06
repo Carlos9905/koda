@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { KanbanCompiler } from "@web/views/kanban/kanban_compiler";
 import { append, createElement } from "@web/core/utils/xml";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import LineComponent from './line';
 

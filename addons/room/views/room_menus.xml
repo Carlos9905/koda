@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <menuitem
         id="room_menu_root"
         name="Meeting Rooms"
@@ -20,4 +20,4 @@
         action="room.room_room_action"
         parent="room.room_menu_root"
         sequence="2"/>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import {
     click,
@@ -25,7 +25,7 @@ import { actionService } from "@web/webclient/actions/action_service";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { UserMenu } from "@web/webclient/user_menu/user_menu";
 
-import { Component, onMounted, xml } from "@odoo/owl";
+import { Component, onMounted, xml } from "@koda/owl";
 
 let serverData;
 let fixture;
@@ -343,7 +343,7 @@ QUnit.module("WebClient Enterprise", (hooks) => {
                 webIcon: "bloop,bloop",
             },
         };
-        patchWithCleanup(odoo, { debug: "1" });
+        patchWithCleanup(koda, { debug: "1" });
         await createEnterpriseWebClient({ fixture, serverData });
         assert.containsOnce(fixture, ".o_home_menu");
     });
@@ -366,7 +366,7 @@ QUnit.module("WebClient Enterprise", (hooks) => {
                     return true;
                 }
             };
-            patchWithCleanup(odoo, { debug: "1" });
+            patchWithCleanup(koda, { debug: "1" });
             const webClient = await createEnterpriseWebClient({ fixture, serverData, mockRPC });
             await click(fixture.querySelector(".o_debug_manager .dropdown-toggle"));
             assert.containsOnce(fixture, ".o_debug_manager .dropdown-item:contains('globalItem')");

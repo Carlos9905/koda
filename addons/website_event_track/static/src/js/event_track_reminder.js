@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { debounce } from "@web/core/utils/timing";
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { _t } from "@web/core/l10n/translation";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 publicWidget.registry.websiteEventTrackReminder = publicWidget.Widget.extend({
     selector: '.o_wetrack_js_reminder',

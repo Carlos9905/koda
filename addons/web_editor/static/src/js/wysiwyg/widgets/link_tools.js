@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Link } from "./link";
 import { ColorPalette } from '@web_editor/js/wysiwyg/widgets/color_palette';
@@ -8,7 +8,7 @@ import {
     onMounted,
     onWillUnmount,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { normalizeCSSColor } from '@web/core/utils/colors';
 
 /**

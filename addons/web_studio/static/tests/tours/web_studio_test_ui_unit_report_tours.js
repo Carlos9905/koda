@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { registry } from "@web/core/registry";
 import { download } from "@web/core/network/download";
 import { patch } from "@web/core/utils/patch";
@@ -61,7 +61,7 @@ function openEditorPowerBox(element, offset = 0) {
 // to be sure we leave the tour when the save is done.
 function patchReportEditorModelForSilentSave() {
     const saveProms = [];
-    const { ReportEditorModel } = odoo.loader.modules.get(
+    const { ReportEditorModel } = koda.loader.modules.get(
         "@web_studio/client_action/report_editor/report_editor_model"
     );
     const _unpatch = patch(ReportEditorModel.prototype, {
@@ -101,11 +101,11 @@ registry.category("web_tour.tours").add("web_studio.test_basic_report_edition", 
         },
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(0)",
-            run: "text edited with odoo editor",
+            run: "text edited with koda editor",
         },
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(2)",
-            run: "text edited with odoo editor 2",
+            run: "text edited with koda editor 2",
         },
         {
             // Don't explicitly save, this is a feature
@@ -215,11 +215,11 @@ registry.category("web_tour.tours").add("web_studio.test_basic_report_edition_di
         },
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(0)",
-            run: "text edited with odoo editor",
+            run: "text edited with koda editor",
         },
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(2)",
-            run: "text edited with odoo editor 2",
+            run: "text edited with koda editor 2",
         },
         {
             trigger: ".o-web-studio-discard-report.btn-secondary",
@@ -272,13 +272,13 @@ registry.category("web_tour.tours").add("web_studio.test_basic_report_edition_er
     steps: () => [
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(0)",
-            run: "text edited with odoo editor",
+            run: "text edited with koda editor",
         },
         {
             // Brutally add a t-else: this will crash in python on save
             trigger: ".o-web-studio-report-editor-wysiwyg iframe body",
             run() {
-                const editable = this.$anchor[0].querySelector(".odoo-editor-editable");
+                const editable = this.$anchor[0].querySelector(".koda-editor-editable");
                 const wysiwyg = $(editable).data("wysiwyg");
                 const telse = wysiwyg.odooEditor.document.createElement("t");
                 telse.setAttribute("t-else", "");
@@ -287,7 +287,7 @@ registry.category("web_tour.tours").add("web_studio.test_basic_report_edition_er
         },
         {
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(2)",
-            run: "text edited with odoo editor 2",
+            run: "text edited with koda editor 2",
         },
         {
             trigger: ".o-web-studio-save-report.btn-primary",
@@ -302,7 +302,7 @@ registry.category("web_tour.tours").add("web_studio.test_basic_report_edition_er
             trigger: ".o-web-studio-report-editor-wysiwyg iframe p:eq(0)",
             run() {
                 // The iframe shouldn't have been reset after an error
-                assertEqual(this.$anchor[0].textContent, "edited with odoo editor");
+                assertEqual(this.$anchor[0].textContent, "edited with koda editor");
             },
         },
     ],
@@ -1091,7 +1091,7 @@ registry.category("web_tour.tours").add("web_studio.test_record_model_differs_fr
             {
                 trigger: ".o_studio_report_kanban_view",
                 run() {
-                    const { ReportEditorModel } = odoo.loader.modules.get(
+                    const { ReportEditorModel } = koda.loader.modules.get(
                         "@web_studio/client_action/report_editor/report_editor_model"
                     );
 

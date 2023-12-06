@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="project_sharing_portal" name="My Project">
         <t t-call="portal.frontend_layout">
             <!-- To add the class on div#wrapwrap to remove the overflow -->
@@ -18,10 +18,10 @@
         <t t-call="web.layout">
             <t t-set="head_project_sharing">
                 <script type="text/javascript">
-                    odoo.__session_info__ = <t t-out="json.dumps(session_info)"/>;
+                    koda.__session_info__ = <t t-out="json.dumps(session_info)"/>;
                     // Prevent the menu_service to load anything. In an ideal world, Project Sharing assets would only contain
                     // what is genuinely necessary, and not the whole backend.
-                    odoo.loadMenusPromise = Promise.resolve();
+                    koda.loadMenusPromise = Promise.resolve();
                 </script>
                 <base target="_parent"/>
                 <t t-call-assets="project.webclient"/>
@@ -30,4 +30,4 @@
             <t t-set="body_classname" t-value="'o_web_client o_project_sharing'"/>
         </t>
     </template>
-</odoo>
+</koda>

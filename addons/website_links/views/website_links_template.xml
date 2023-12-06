@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
         <template id="create_shorten_url">
             <div class="o_website_links_create_tracked_url">
                 <div class="container">
@@ -14,7 +14,7 @@
                                     <label class="col-md-3 col-form-label text-start">URL</label>
 
                                     <div class="col-md-9">
-                                        <input type="text" id="url" class="form-control required-form-control"  required="True" placeholder="e.g. https://www.odoo.com/contactus" t-att-value="u"/>
+                                        <input type="text" id="url" class="form-control required-form-control"  required="True" placeholder="e.g. https://www.koda.com/contactus" t-att-value="u"/>
                                     </div>
                                 </div>
 
@@ -83,4 +83,4 @@
             </t>
         </template>
 
-</odoo>
+</koda>

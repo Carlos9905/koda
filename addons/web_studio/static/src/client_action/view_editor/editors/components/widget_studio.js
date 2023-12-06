@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { Widget } from "@web/views/widgets/widget";
 
 export class WidgetStudio extends Widget {

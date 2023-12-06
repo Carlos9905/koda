@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, useEffect, useRef } from "@odoo/owl";
+import { Component, useEffect, useRef } from "@koda/owl";
 import { usePosition } from "@web/core/position_hook";
 
 /**

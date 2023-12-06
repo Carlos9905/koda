@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 /* global html2canvas */
@@ -6,7 +6,7 @@ import { _t } from "@web/core/l10n/translation";
 import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 import { loadJS } from "@web/core/assets";
-import { Component, onWillStart, useRef, useState } from "@odoo/owl";
+import { Component, onWillStart, useRef, useState } from "@koda/owl";
 import { localization } from "@web/core/l10n/localization";
 import { NameAndSignature } from "@web/core/signature/name_and_signature";
 

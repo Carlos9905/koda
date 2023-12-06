@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { RPCError } from "@web/core/network/rpc_service";
 import { renderToElement } from "@web/core/utils/render";
 import Widget from "@web/legacy/js/core/widget";
 import publicWidget from "@web/legacy/js/public/public_widget";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 var TweetWall = Widget.extend({
     template: 'website_twitter_wall_tweets',

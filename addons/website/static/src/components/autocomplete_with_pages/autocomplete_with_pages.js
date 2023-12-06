@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { AutoComplete } from "@web/core/autocomplete/autocomplete";
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 export class AutoCompleteWithPages extends AutoComplete {
     static template = "website.AutoCompleteWithPages";

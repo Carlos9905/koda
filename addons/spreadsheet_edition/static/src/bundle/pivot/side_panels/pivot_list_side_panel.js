@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { PivotDetailsSidePanel } from "./pivot_details_side_panel";
 
-import { Component, onWillUpdateProps } from "@odoo/owl";
+import { Component, onWillUpdateProps } from "@koda/owl";
 
 export class PivotSidePanel extends Component {
     setup() {

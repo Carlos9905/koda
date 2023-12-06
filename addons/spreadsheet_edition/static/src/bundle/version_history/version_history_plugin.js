@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { UIPlugin } from "@odoo/o-spreadsheet";
+/** @koda-module */
+import { UIPlugin } from "@koda/o-spreadsheet";
 
 export class VersionHistoryPlugin extends UIPlugin {
     constructor(config) {

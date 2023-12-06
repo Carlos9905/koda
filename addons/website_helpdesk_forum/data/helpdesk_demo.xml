@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="helpdesk.helpdesk_team1" model="helpdesk.team">
         <field name="use_website_helpdesk_forum" eval="True"/>
     </record>
@@ -48,4 +48,4 @@
     <record id="helpdesk.helpdesk_ticket_16" model="helpdesk.ticket">
         <field name="forum_post_ids" eval="[(4, ref('helpdesk_forum_post_4'))]"/>
     </record>
-</odoo>
+</koda>

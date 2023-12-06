@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { MockServer } from "./helpers/mock_server";
 

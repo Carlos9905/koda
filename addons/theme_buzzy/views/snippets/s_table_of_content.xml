@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="s_table_of_content" inherit_id="website.s_table_of_content">
     <!-- Section -->
@@ -12,4 +12,4 @@
     </xpath>
 </template>
 
-</odoo>
+</koda>

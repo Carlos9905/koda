@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { debounce } from "@web/core/utils/timing";

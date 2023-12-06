@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import { UIPlugin, tokenize } from "@odoo/o-spreadsheet";
+import { UIPlugin, tokenize } from "@koda/o-spreadsheet";
 import { getNumberOfPivotFormulas, makePivotFormula } from "@spreadsheet/pivot/pivot_helpers";
 import { pivotTimeAdapter } from "@spreadsheet/pivot/pivot_time_adapters";
 

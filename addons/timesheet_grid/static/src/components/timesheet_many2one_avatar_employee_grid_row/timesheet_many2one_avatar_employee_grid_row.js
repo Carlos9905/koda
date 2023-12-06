@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { useOpenChat } from "@mail/core/web/open_chat_hook";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 import { registry } from "@web/core/registry";
 import { Many2OneGridRow, many2OneGridRow } from "@web_grid/components/many2one_grid_row/many2one_grid_row";

@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class InsertListSpreadsheetMenu extends Component {
     /**

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { serializeDate } from "@web/core/l10n/dates";
 import { GridRow } from "@web_grid/views/grid_model";

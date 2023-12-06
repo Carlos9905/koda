@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { StockBarcodeKanbanController } from '@stock_barcode/kanban/stock_barcode_kanban_controller';

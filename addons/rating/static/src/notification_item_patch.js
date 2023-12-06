@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { NotificationItem } from "@mail/core/web/notification_item";
 

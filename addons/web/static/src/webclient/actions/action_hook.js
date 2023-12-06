@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { onMounted, useComponent, useEffect, useExternalListener } from "@odoo/owl";
+import { onMounted, useComponent, useEffect, useExternalListener } from "@koda/owl";
 
 export const scrollSymbol = Symbol("scroll");
 

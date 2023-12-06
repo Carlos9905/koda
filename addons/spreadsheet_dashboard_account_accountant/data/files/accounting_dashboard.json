@@ -44,7 +44,7 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[Invoiced](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[\"&\",[\"state\",\"not in\",[\"draft\",\"cancel\"]],\"|\",[\"move_type\",\"=\",\"out_invoice\"],[\"move_type\",\"=\",\"out_refund\"]],\"context\":{\"group_by\":[\"invoice_date\"],\"graph_measure\":\"price_subtotal\",\"graph_mode\":\"line\",\"graph_groupbys\":[\"invoice_date:month\"]},\"modelName\":\"account.invoice.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Invoices Analysis\",\"positional\":true})",
+                    "content": "[Invoiced](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[\"&\",[\"state\",\"not in\",[\"draft\",\"cancel\"]],\"|\",[\"move_type\",\"=\",\"out_invoice\"],[\"move_type\",\"=\",\"out_refund\"]],\"context\":{\"group_by\":[\"invoice_date\"],\"graph_measure\":\"price_subtotal\",\"graph_mode\":\"line\",\"graph_groupbys\":[\"invoice_date:month\"]},\"modelName\":\"account.invoice.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Invoices Analysis\",\"positional\":true})",
                     "border": 1
                 },
                 "A19": {

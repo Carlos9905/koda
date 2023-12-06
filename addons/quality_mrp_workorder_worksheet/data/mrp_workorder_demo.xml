@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <!-- For Table Top -->
     <record id="quality_point_sheet" model="quality.point">
         <field name="title">Quality Sheet</field>
@@ -14,4 +14,4 @@
         <field name="sequence">0</field>
     </record>
 
-</odoo>
+</koda>

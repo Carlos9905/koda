@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 /**
  * The purpose of this test is to click on every installed App and then open each
  * view. On each view, click on each filter.
  */
 
-import { App } from "@odoo/owl";
+import { App } from "@koda/owl";
 import { patch } from "@web/core/utils/patch";
 import { ORM } from "@web/core/orm_service";
 import { browser } from "@web/core/browser/browser";
@@ -53,7 +53,7 @@ function setup() {
             }
         },
     });
-    env = odoo.__WOWL_DEBUG__.root.env;
+    env = koda.__WOWL_DEBUG__.root.env;
     env.bus.addEventListener("ACTION_MANAGER:UI-UPDATED", uiUpdate);
     actionCount = 0;
     calledRPC = [];
@@ -65,7 +65,7 @@ function setup() {
     appIndex = 0;
     menuIndex = 0;
     subMenuIndex = 0;
-    isEnterprise = odoo.info && odoo.info.isEnterprise;
+    isEnterprise = koda.info && koda.info.isEnterprise;
 }
 
 function uiUpdate() {

@@ -1,13 +1,13 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
 import { endDiscussion, okRating, feedback, transcript, close } from "./website_livechat_common";
 import { registry } from "@web/core/registry";
 
-odoo.loader.bus.addEventListener("module-started", (e) => {
+koda.loader.bus.addEventListener("module-started", (e) => {
     if (e.detail.moduleName === "@im_livechat/embed/common/livechat_service") {
         const { LivechatService, ODOO_VERSION_KEY } = e.detail.module;
-        // Livechat sessions are deleted if they come from a different odoo version than
+        // Livechat sessions are deleted if they come from a different koda version than
         // the current one. Since each test is run with a different browser the version
         // is never set. This patch sets the version to the current one.
         patch(LivechatService.prototype, {

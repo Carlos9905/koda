@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 
 <record id="website_controller_pages_form_view" model="ir.ui.view">
     <field name="name">website.controller.page.form</field>
@@ -80,4 +80,4 @@
     groups="base.group_no_one"
     action="action_website_controller_pages_list" />
 
-</odoo>
+</koda>

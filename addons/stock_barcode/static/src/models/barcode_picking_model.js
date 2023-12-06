@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import BarcodeModel from '@stock_barcode/models/barcode_model';
 import { BackorderDialog } from '../components/backorder_dialog';
@@ -6,7 +6,7 @@ import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_d
 import { _t } from "@web/core/l10n/translation";
 import { escape } from '@web/core/utils/strings';
 import { session } from '@web/session';
-import { markup } from '@odoo/owl';
+import { markup } from '@koda/owl';
 import { formatFloat } from "@web/core/utils/numbers";
 
 export default class BarcodePickingModel extends BarcodeModel {

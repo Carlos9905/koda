@@ -1,4 +1,4 @@
-/** @odoo-modules **/
+/** @koda-modules **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Dialog } from "@web/core/dialog/dialog";
@@ -6,8 +6,8 @@ import { useChildRef } from "@web/core/utils/hooks";
 import weSnippetEditor from "@web_editor/js/editor/snippets.editor";
 import wSnippetOptions from "@website/js/editor/snippets.options";
 import wUtils from "@website/js/utils";
-import * as OdooEditorLib from "@web_editor/js/editor/odoo-editor/src/utils/utils";
-import { Component, onMounted, useRef, useState } from "@odoo/owl";
+import * as OdooEditorLib from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import { Component, onMounted, useRef, useState } from "@koda/owl";
 import { throttleForAnimation } from "@web/core/utils/timing";
 import {
     applyTextHighlight,

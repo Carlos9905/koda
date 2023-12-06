@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { formatDate, deserializeDate } from "@web/core/l10n/dates";
 import { useService } from "@web/core/utils/hooks";
 import { Dialog } from "@web/core/dialog/dialog";
 
-import { useState, Component } from "@odoo/owl";
+import { useState, Component } from "@koda/owl";
 
 export class StudioApprovalInfos extends Component {
     setup() {

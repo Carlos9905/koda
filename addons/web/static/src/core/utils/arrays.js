@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { shallowEqual as _shallowEqual } from "./objects";
 

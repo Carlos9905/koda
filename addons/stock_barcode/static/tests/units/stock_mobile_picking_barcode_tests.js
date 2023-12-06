@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { createWebClient, doAction } from "@web/../tests/webclient/helpers";
 import * as BarcodeScanner from "@web/webclient/barcode/barcode_scanner";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-export const session = odoo.__session_info__ || {};
-delete odoo.__session_info__;
+export const session = koda.__session_info__ || {};
+delete koda.__session_info__;

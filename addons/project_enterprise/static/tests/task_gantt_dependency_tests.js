@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { TaskGanttRenderer } from "@project_enterprise/task_gantt_renderer";
 import { getFixture, patchDate, patchWithCleanup } from "@web/../tests/helpers/utils";

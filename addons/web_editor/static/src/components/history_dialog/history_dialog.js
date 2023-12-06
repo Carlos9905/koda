@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Dialog } from '@web/core/dialog/dialog';
 import { formatDateTime } from '@web/core/l10n/dates';
 import { useService } from '@web/core/utils/hooks';
 import { memoize } from '@web/core/utils/functions';
-import { Component, onMounted, useState, markup } from '@odoo/owl';
+import { Component, onMounted, useState, markup } from '@koda/owl';
 import { _t } from '@web/core/l10n/translation';
 
 const { DateTime } = luxon;

@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { getFixture, mockTimeout, nextTick } from "@web/../tests/helpers/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { swipeLeft, swipeRight } from "@web/../tests/mobile/helpers";
 import { registry } from "@web/core/registry";
 
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 
 let serverData, target;
 

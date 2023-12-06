@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patch } from "@web/core/utils/patch";
 import {
@@ -6,7 +6,7 @@ import {
     setTestSelection,
     renderTextualSelection,
     patchEditorIframe,
-} from '@web_editor/js/editor/odoo-editor/test/utils';
+} from '@web_editor/js/editor/koda-editor/test/utils';
 import { Wysiwyg, stripHistoryIds } from '@web_editor/js/wysiwyg/wysiwyg';
 import { Mutex } from '@web/core/utils/concurrency';
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { KeepLast } from "@web/core/utils/concurrency";
 import publicWidget from '@web/legacy/js/public/public_widget';
@@ -6,7 +6,7 @@ import publicWidget from '@web/legacy/js/public/public_widget';
 import { renderToElement, renderToString } from "@web/core/utils/render";
 import { debounce } from '@web/core/utils/timing';
 
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 publicWidget.registry.searchBar = publicWidget.Widget.extend({
     selector: '.o_searchbar_form',

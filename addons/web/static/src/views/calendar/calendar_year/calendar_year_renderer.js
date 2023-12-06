@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { localization } from "@web/core/l10n/localization";
 import { useDebounced } from "@web/core/utils/timing";
@@ -6,7 +6,7 @@ import { getColor } from "../colors";
 import { useCalendarPopover, useFullCalendar } from "../hooks";
 import { CalendarYearPopover } from "./calendar_year_popover";
 
-import { Component, useEffect, useRef } from "@odoo/owl";
+import { Component, useEffect, useRef } from "@koda/owl";
 
 export class CalendarYearRenderer extends Component {
     setup() {

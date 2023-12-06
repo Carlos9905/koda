@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { isVisible as isElemVisible } from "@web/core/utils/ui";
 import { fullTraceback, fullAnnotatedTraceback } from "@web/core/errors/error_utils";
 import { registry } from "@web/core/registry";
-import { Component, whenReady } from "@odoo/owl";
+import { Component, whenReady } from "@koda/owl";
 
 const consoleError = console.error;
 
@@ -256,7 +256,7 @@ export function setupQUnit() {
      * browser_js is closed as soon as an error is logged.
      */
     QUnit.done(async (result) => {
-        await odoo.loader.checkErrorProm;
+        await koda.loader.checkErrorProm;
         const moduleLoadingError = document.querySelector(".o_module_error");
         if (moduleLoadingError) {
             errorMessages.unshift(moduleLoadingError.innerText);
@@ -432,7 +432,7 @@ export function setupQUnit() {
     });
 
     QUnit.begin(function () {
-        if (odoo.debug && odoo.debug.includes("assets")) {
+        if (koda.debug && koda.debug.includes("assets")) {
             QUnit.annotateTraceback = fullAnnotatedTraceback;
         } else {
             QUnit.annotateTraceback = (err) => Promise.resolve(fullTraceback(err));

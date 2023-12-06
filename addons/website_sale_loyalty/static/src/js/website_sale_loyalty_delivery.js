@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import PublicWidget from '@web/legacy/js/public/public_widget';
 import { patch } from "@web/core/utils/patch";

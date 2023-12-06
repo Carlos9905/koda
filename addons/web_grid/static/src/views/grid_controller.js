@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Dropdown } from "@web/core/dropdown/dropdown";
@@ -15,7 +15,7 @@ import { CogMenu } from "@web/search/cog_menu/cog_menu";
 import { SearchBar } from "@web/search/search_bar/search_bar";
 import { useSearchBarToggler } from "@web/search/search_bar/search_bar_toggler";
 
-import { Component, useState, onWillUpdateProps, onWillUnmount, useRef } from "@odoo/owl";
+import { Component, useState, onWillUpdateProps, onWillUnmount, useRef } from "@koda/owl";
 
 export class GridController extends Component {
     static components = {

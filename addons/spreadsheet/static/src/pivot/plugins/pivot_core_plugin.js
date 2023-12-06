@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /**
  *
@@ -23,7 +23,7 @@
  * @typedef {import("../pivot_table.js").PivotCell} PivotCell
  */
 
-import { CorePlugin, helpers } from "@odoo/o-spreadsheet";
+import { CorePlugin, helpers } from "@koda/o-spreadsheet";
 import { makePivotFormula } from "../pivot_helpers";
 import { getMaxObjectId } from "@spreadsheet/helpers/helpers";
 import { SpreadsheetPivotTable } from "../pivot_table";

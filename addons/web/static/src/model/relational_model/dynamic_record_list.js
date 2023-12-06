@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { DynamicList } from "./dynamic_list";
 

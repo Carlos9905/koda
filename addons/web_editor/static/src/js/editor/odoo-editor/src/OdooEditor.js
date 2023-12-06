@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import './commands/deleteBackward.js';
 import './commands/deleteForward.js';
@@ -267,7 +267,7 @@ export class OdooEditor extends EventTarget {
                 showResponsiveFontSizesBadges: false,
                 showExtendedTextStylesOptions: false,
                 // TODO probably move `getCSSVariableValue` and
-                // `convertNumericToUnit` as odoo-editor utils to avoid this
+                // `convertNumericToUnit` as koda-editor utils to avoid this
                 getCSSVariableValue: () => null,
                 convertNumericToUnit: x => x,
             },
@@ -336,7 +336,7 @@ export class OdooEditor extends EventTarget {
             this.options.onPostSanitize(editable);
         }
         this.editable = editable;
-        this.editable.classList.add("odoo-editor-editable");
+        this.editable.classList.add("koda-editor-editable");
         this.editable.setAttribute('dir', this.options.direction);
 
         // Set contenteditable before clone as FF updates the content at this point.
@@ -3803,7 +3803,7 @@ export class OdooEditor extends EventTarget {
         const odooText = selection.toString();
         clipboardEvent.clipboardData.setData('text/plain', odooText);
         clipboardEvent.clipboardData.setData('text/html', odooHtml);
-        clipboardEvent.clipboardData.setData('text/odoo-editor', odooHtml);
+        clipboardEvent.clipboardData.setData('text/koda-editor', odooHtml);
     }
     /**
      * @private
@@ -4166,7 +4166,7 @@ export class OdooEditor extends EventTarget {
         let currentNode = closestElement(selection.anchorNode);
         while (
             !currentNode.classList.contains('o_editable') &&
-            !currentNode.classList.contains('odoo-editor-editable') &&
+            !currentNode.classList.contains('koda-editor-editable') &&
             !selectionInBlockRoot
             ) {
             selectionInBlockRoot = isBlock(currentNode);
@@ -4728,7 +4728,7 @@ export class OdooEditor extends EventTarget {
         }
         ev.preventDefault();
         const files = getImageFiles(ev.clipboardData);
-        const odooEditorHtml = ev.clipboardData.getData('text/odoo-editor');
+        const odooEditorHtml = ev.clipboardData.getData('text/koda-editor');
         const clipboardHtml = ev.clipboardData.getData('text/html');
         const targetSupportsHtmlContent = isHtmlContentSupported(sel.anchorNode);
         // Replace entire link if its label is fully selected.

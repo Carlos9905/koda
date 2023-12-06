@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
-import { Component, status } from "@odoo/owl";
+import { Component, status } from "@koda/owl";
 
 export class SendSMSButton extends Component {
     setup() {

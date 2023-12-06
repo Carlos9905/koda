@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ViewButton } from "./view_button";
 

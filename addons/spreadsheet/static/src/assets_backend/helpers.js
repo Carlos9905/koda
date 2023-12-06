@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { loadBundle } from "@web/core/assets";
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Templates inherited -->
 
     <template id="appointments_list_layout" name="Appointment: Appointments List Layout"
@@ -311,4 +311,4 @@
         </t>
     </template>
 
-</odoo>
+</koda>

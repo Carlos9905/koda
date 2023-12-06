@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { StreamPostComment } from './stream_post_comment';
 import { useService } from '@web/core/utils/hooks';
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class StreamPostCommentList extends Component {
 

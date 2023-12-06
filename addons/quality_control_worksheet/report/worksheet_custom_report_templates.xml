@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <data>
         <template id="worksheet_custom_page" inherit_id="quality_control.worksheet_page">
             <xpath expr="//t[@name='qc_content']" position="inside">
@@ -16,4 +16,4 @@
             </xpath>
         </template>
     </data>
-</odoo>
+</koda>

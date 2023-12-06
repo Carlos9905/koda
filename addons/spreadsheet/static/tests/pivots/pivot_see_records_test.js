@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 import { nextTick } from "@web/../tests/helpers/utils";
 
 import { selectCell } from "@spreadsheet/../tests/utils/commands";
 import { doMenuAction, getActionMenu } from "@spreadsheet/../tests/utils/ui";
 import { createSpreadsheetWithPivot } from "@spreadsheet/../tests/utils/pivot";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { registry } from "@web/core/registry";
 import { setCellContent } from "../utils/commands";
 import { getCell } from "../utils/getters";

@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { StreamPostComments } from '@social/js/stream_post_comments';
 import { StreamPostCommentListInstagram } from './stream_post_comment_list';
 import { StreamPostCommentsReplyInstagram } from './stream_post_comments_reply';
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 export class StreamPostCommentsInstagram extends StreamPostComments {
 

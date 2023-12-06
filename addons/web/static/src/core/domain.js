@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { shallowEqual } from "@web/core/utils/arrays";
 import { evaluate, formatAST, parseExpr } from "./py_js/py";

@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { useService } from "@web/core/utils/hooks";
 import { formatFloat } from "@web/core/utils/numbers";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class ReceptionReportLine extends Component {
     setup() {

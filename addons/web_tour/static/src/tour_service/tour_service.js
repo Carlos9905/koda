@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { EventBus, markup, whenReady, reactive } from "@odoo/owl";
+import { EventBus, markup, whenReady, reactive } from "@koda/owl";
 import { browser } from "@web/core/browser/browser";
 import { _t } from "@web/core/l10n/translation";
 import { MacroEngine } from "@web/core/macro";
@@ -387,8 +387,8 @@ export const tourService = {
             }
         }
 
-        odoo.startTour = startTour;
-        odoo.isTourReady = (tourName) => tours[tourName].wait_for.then(() => true);
+        koda.startTour = startTour;
+        koda.isTourReady = (tourName) => tours[tourName].wait_for.then(() => true);
 
         return {
             bus,

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { setRecurringAnimationFrame, debounce } from "@web/core/utils/timing";
 const MIN_ID = -(2 ** 30);

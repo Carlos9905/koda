@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { evaluateBooleanExpr } from "@web/core/py_js/py";
@@ -11,7 +11,7 @@ import { CharField } from "../char/char_field";
 import { TextField } from "../text/text_field";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 class CopyClipboardField extends Component {
     static template = "web.CopyClipboardField";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Spreadsheet revisions -->
     <record id="spreadsheet_revision_action" model="ir.actions.act_window">
         <field name="name">Revisions</field>
@@ -42,4 +42,4 @@
         name="Revisions"
         parent="menu_technical_spreadsheet" sequence="10"
         action="spreadsheet_revision_action"/>
-</odoo>
+</koda>

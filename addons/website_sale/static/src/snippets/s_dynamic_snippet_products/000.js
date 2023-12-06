@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
 import DynamicSnippetCarousel from "@website/snippets/s_dynamic_snippet_carousel/000";

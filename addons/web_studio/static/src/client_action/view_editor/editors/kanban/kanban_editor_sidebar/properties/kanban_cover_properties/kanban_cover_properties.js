@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { Property } from "@web_studio/client_action/view_editor/property/property";
 import { useService } from "@web/core/utils/hooks";
 import { FieldSelectorDialog } from "@web_studio/client_action/view_editor/editors/components/field_selector_dialog";

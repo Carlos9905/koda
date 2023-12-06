@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="action_picking_type_list" model="ir.actions.act_window">
         <field name="name">Operations Types</field>
         <field name="res_model">stock.picking.type</field>
@@ -148,7 +148,7 @@
                                         Odoo opens a PDF preview by default. If you (Enterprise users only) want to print instantly,
                                         install the IoT App on a computer that is on the same local network as the
                                         barcode operator and configure the routing of the reports.
-                                        <a href="https://www.odoo.com/documentation/17.0/applications/productivity/iot/devices/printer.html"
+                                        <a href="https://www.koda.com/documentation/17.0/applications/productivity/iot/devices/printer.html"
                                            target="_blank" class="fa fa-arrow-right">
                                             Documentation
                                         </a>
@@ -283,4 +283,4 @@
             </kanban>
         </field>
     </record>
-</odoo>
+</koda>

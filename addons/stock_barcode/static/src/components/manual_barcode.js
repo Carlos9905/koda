@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Dialog } from "@web/core/dialog/dialog";
-import { Component, onMounted, useRef, useState } from "@odoo/owl";
+import { Component, onMounted, useRef, useState } from "@koda/owl";
 
 export class ManualBarcodeScanner extends Component {
     setup() {

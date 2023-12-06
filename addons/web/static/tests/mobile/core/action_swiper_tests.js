@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ActionSwiper } from "@web/core/action_swiper/action_swiper";
 import { registry } from "@web/core/registry";
@@ -13,7 +13,7 @@ import {
     mockTimeout,
 } from "@web/../tests/helpers/utils";
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@koda/owl";
 const serviceRegistry = registry.category("services");
 
 let env;

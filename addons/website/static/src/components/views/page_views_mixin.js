@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { AddPageDialog } from "@website/components/dialog/add_page_dialog";
 import {useService} from "@web/core/utils/hooks";
-import { onWillStart, useState } from "@odoo/owl";
+import { onWillStart, useState } from "@koda/owl";
 
 /**
  * Used to share code and keep the same behaviour on different types of 'website
@@ -22,7 +22,7 @@ export const PageControllerMixin = (component) => class extends component {
         this.dialog = useService('dialog');
         this.rpc = useService('rpc');
 
-        this.websiteSelection = odoo.debug ? [{id: 0, name: _t("All Websites")}] : [];
+        this.websiteSelection = koda.debug ? [{id: 0, name: _t("All Websites")}] : [];
 
         this.state = useState({
             activeWebsite: undefined,

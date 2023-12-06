@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { humanSize } from "@web/core/utils/binary";
 

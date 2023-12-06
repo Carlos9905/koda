@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <template id="instagram_preview" t-name="Instagram Preview">
         <div class="o_social_preview o_social_instagram_preview bg-white px-3 border rounded overflow-hidden">
@@ -47,4 +47,4 @@
         </div>
     </template>
 </data>
-</odoo>
+</koda>

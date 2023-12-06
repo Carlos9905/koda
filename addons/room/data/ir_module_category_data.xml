@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <record id="module_category_room" model="ir.module.category">
         <field name="name">Room</field>
@@ -7,4 +7,4 @@
         <field name="sequence">15</field>
     </record>
 </data>
-</odoo>
+</koda>

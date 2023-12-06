@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { reactive, useComponent, useEnv, useSubEnv } from "@odoo/owl";
+/** @koda-module */
+import { reactive, useComponent, useEnv, useSubEnv } from "@koda/owl";
 
 export function useDialogConfirmation({ confirm, cancel, before, close }) {
     before = before || (() => {});
@@ -92,7 +92,7 @@ export function useSubEnvAndServices(env) {
 /**
  * Sorts a list topologically, each element's dependencies should be defined
  * with the getDependencies callback.
- * This is a copy of what is done in python: odoo.tools.misc.py:def topological_sort
+ * This is a copy of what is done in python: koda.tools.misc.py:def topological_sort
  * @params [Array] elems
  * @params [Function] getDependencies
  */

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { download } from "@web/core/network/download";
 import { registry } from "@web/core/registry";

@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { ImageField, imageField } from '@web/views/fields/image/image_field';
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 class ImagePreviewDialog extends Component {}
 ImagePreviewDialog.components = { Dialog };

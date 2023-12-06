@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 import { getBasicData } from "@spreadsheet/../tests/utils/data";
 import { createBasicChart } from "@spreadsheet/../tests/utils/commands";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
@@ -128,11 +128,11 @@ QUnit.module(
                 assert.equal(
                     exportedData.chartOdooMenusReferences[chartId],
                     1,
-                    "Link to odoo menu is exported"
+                    "Link to koda menu is exported"
                 );
                 const importedModel = new Model(exportedData, { custom: { env } });
                 const chartMenu = importedModel.getters.getChartOdooMenu(chartId);
-                assert.equal(chartMenu.id, 1, "Link to odoo menu is imported");
+                assert.equal(chartMenu.id, 1, "Link to koda menu is imported");
             }
         );
 

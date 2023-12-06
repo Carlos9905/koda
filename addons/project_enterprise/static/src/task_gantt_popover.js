@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { GanttPopover } from "@web_gantt/gantt_popover";
 

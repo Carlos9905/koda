@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import {
     registries,
@@ -6,7 +6,7 @@ import {
     invalidateEvaluationCommands,
     invalidateCFEvaluationCommands,
     invalidateDependenciesCommands,
-} from "@odoo/o-spreadsheet";
+} from "@koda/o-spreadsheet";
 import { VersionHistorySidePanel } from "./side_panel/version_history_side_panel";
 import { _lt } from "@web/core/l10n/translation";
 import { VersionHistoryPlugin } from "./version_history_plugin";

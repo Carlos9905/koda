@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { PlanningGanttModel } from "@planning/views/planning_gantt/planning_gantt_model";
 import { patch } from "@web/core/utils/patch";

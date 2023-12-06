@@ -62,12 +62,12 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[Top Vendors by Amount](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"partner_id\"],\"graph_measure\":\"untaxed_total\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"partner_id\"]},\"modelName\":\"purchase.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Vendors by Amount\"})",
+                    "content": "[Top Vendors by Amount](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"partner_id\"],\"graph_measure\":\"untaxed_total\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"partner_id\"]},\"modelName\":\"purchase.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Vendors by Amount\"})",
                     "border": 1
                 },
                 "A19": {
                     "style": 1,
-                    "content": "[Top Orders](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"state\",\"in\",[\"purchase\",\"done\"]]],\"context\":{\"group_by\":[]},\"modelName\":\"purchase.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"calendar\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Orders\"})",
+                    "content": "[Top Orders](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"state\",\"in\",[\"purchase\",\"done\"]]],\"context\":{\"group_by\":[]},\"modelName\":\"purchase.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"calendar\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Orders\"})",
                     "border": 1
                 },
                 "A20": {
@@ -1055,7 +1055,7 @@
                 },
                 "H19": {
                     "style": 1,
-                    "content": "[Sourcing by Country](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"country_id\",\"!=\",false]],\"context\":{\"group_by\":[\"country_id\"],\"pivot_measures\":[\"order_id\",\"untaxed_total\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"country_id\"]},\"modelName\":\"purchase.report\",\"views\":[[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sourcing by Country\"})",
+                    "content": "[Sourcing by Country](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"country_id\",\"!=\",false]],\"context\":{\"group_by\":[\"country_id\"],\"pivot_measures\":[\"order_id\",\"untaxed_total\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"country_id\"]},\"modelName\":\"purchase.report\",\"views\":[[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sourcing by Country\"})",
                     "border": 1
                 },
                 "H20": {
@@ -1105,7 +1105,7 @@
                 },
                 "H32": {
                     "style": 1,
-                    "content": "[Top Vendors](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"order_id\",\"untaxed_total\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"purchase.report\",\"views\":[[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Vendors\"})"
+                    "content": "[Top Vendors](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"order_id\",\"untaxed_total\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"purchase.report\",\"views\":[[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Vendors\"})"
                 },
                 "H33": {
                     "style": 1
@@ -1159,7 +1159,7 @@
                 },
                 "H47": {
                     "style": 1,
-                    "content": "[Top Buyers](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_id\",\"!=\",false]],\"context\":{\"group_by\":[\"user_id\"],\"pivot_measures\":[\"order_id\",\"untaxed_total\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"purchase.report\",\"views\":[[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Buyers\"})"
+                    "content": "[Top Buyers](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_id\",\"!=\",false]],\"context\":{\"group_by\":[\"user_id\"],\"pivot_measures\":[\"order_id\",\"untaxed_total\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"purchase.report\",\"views\":[[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Buyers\"})"
                 },
                 "H48": {
                     "style": 1,

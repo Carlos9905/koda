@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { makeFakeNotificationService } from "@web/../tests/helpers/mock_services";
 import {
@@ -15,7 +15,7 @@ import { browser } from "@web/core/browser/browser";
 import { registry } from "@web/core/registry";
 import { session } from "@web/session";
 
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@koda/owl";
 
 let serverData;
 let target;

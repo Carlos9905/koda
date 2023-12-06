@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { HierarchyNavbar } from "./hierarchy_navbar";
 import { Layout } from "@web/search/layout";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart, useEffect, useState } from "@odoo/owl";
+import { Component, onWillStart, useEffect, useState } from "@koda/owl";
 
 export class ViewHierarchy extends Component {
     setup() {

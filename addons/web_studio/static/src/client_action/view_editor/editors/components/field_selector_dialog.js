@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Dialog } from "@web/core/dialog/dialog";
 
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 export class FieldSelectorDialog extends Component {
     static props = {

@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { evaluateBooleanExpr } from "@web/core/py_js/py";
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { onWillUpdateProps } from "@odoo/owl";
+import { onWillUpdateProps } from "@koda/owl";
 
 export class ProjectSharingListRenderer extends ListRenderer {
     setup() {

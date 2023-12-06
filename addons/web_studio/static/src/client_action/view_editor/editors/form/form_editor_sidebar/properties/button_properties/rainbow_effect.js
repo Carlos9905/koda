@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { FileInput } from "@web/core/file_input/file_input";
 import { SelectMenu } from "@web/core/select_menu/select_menu";
 import { Property } from "@web_studio/client_action/view_editor/property/property";

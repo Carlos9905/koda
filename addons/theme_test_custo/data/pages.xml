@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="view_example" name="Example">
     <t t-set="additional_title" t-valuef="Example"/>
@@ -41,4 +41,4 @@
     <field name="url">/example</field>
 </record>
 
-</odoo>
+</koda>

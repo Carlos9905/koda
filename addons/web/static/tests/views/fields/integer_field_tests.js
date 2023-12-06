@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { localization } from "@web/core/l10n/localization";
 import { defaultLocalization } from "@web/../tests/helpers/mock_services";

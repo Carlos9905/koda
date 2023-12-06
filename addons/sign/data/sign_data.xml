@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Tour template -->
     <record id="attachment_sign_tour" model="ir.attachment">
         <field name="name">Sample Contract.pdf</field>
@@ -136,4 +136,4 @@
         <field name="color">4</field>
     </record>
 
-</odoo>
+</koda>

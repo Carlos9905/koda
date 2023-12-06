@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { AnimatedNumber } from "./animated_number";
 
 export class ColumnProgress extends Component {

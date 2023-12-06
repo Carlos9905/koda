@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 document.addEventListener('DOMContentLoaded', () => {
     const htmlEl = document.documentElement;

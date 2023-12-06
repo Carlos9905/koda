@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { patchWithCleanup } from "@web/../tests/helpers/utils";
 import { createWebClient } from "@web/../tests/webclient/helpers";

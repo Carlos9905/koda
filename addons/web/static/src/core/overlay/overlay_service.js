@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { reactive } from "@odoo/owl";
+import { reactive } from "@koda/owl";
 import { registry } from "../registry";
 import { OverlayContainer } from "./overlay_container";
 

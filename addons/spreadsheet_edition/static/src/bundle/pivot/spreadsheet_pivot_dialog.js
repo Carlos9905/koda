@@ -1,14 +1,14 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { Dialog } from "@web/core/dialog/dialog";
 import { PivotDialogTable } from "./spreadsheet_pivot_dialog_table";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
 import { makePivotFormula } from "@spreadsheet/pivot/pivot_helpers";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 const formatValue = spreadsheet.helpers.formatValue;
 
 /**

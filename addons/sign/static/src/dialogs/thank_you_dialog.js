@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { session } from "@web/session";
 import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 import { EncryptedDialog } from "./encrypted_dialog";
-import { Component, onWillStart, useState } from "@odoo/owl";
+import { Component, onWillStart, useState } from "@koda/owl";
 
 export class ThankYouDialog extends Component {
     setup() {
@@ -96,7 +96,7 @@ export class ThankYouDialog extends Component {
                 ignored: true,
                 click: () => {
                     window.open(
-                        "https://www.odoo.com/trial?selected_app=sign&utm_source=db&utm_medium=sign",
+                        "https://www.koda.com/trial?selected_app=sign&utm_source=db&utm_medium=sign",
                         "_blank"
                     );
                 },

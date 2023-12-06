@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { setupQUnit } from "./qunit";
 import { setupTests } from "./setup";

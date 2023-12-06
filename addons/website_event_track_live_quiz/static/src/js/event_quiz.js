@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import Quiz from "@website_event_track_quiz/js/event_quiz";
 

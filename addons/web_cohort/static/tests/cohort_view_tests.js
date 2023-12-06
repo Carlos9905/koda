@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { createWebClient, doAction } from "@web/../tests/webclient/helpers";
@@ -22,7 +22,7 @@ import {
 } from "@web/../tests/search/helpers";
 import { browser } from "@web/core/browser/browser";
 import { makeFakeLocalizationService } from "@web/../tests/helpers/mock_services";
-import { markup } from "@odoo/owl";
+import { markup } from "@koda/owl";
 
 const serviceRegistry = registry.category("services");
 

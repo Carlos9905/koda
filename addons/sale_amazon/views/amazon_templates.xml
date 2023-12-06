@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <template id="authorization_error" name="Authorization Error">
         <!-- Variables description:
@@ -18,4 +18,4 @@
         </t>
     </template>
 
-</odoo>
+</koda>

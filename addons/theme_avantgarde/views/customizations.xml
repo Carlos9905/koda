@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- ======== COVER ======== -->
 <template id="s_cover" inherit_id="website.s_cover" name="Avantgarde s_cover">
@@ -228,4 +228,4 @@
     </xpath>
 </template>
 
-</odoo>
+</koda>

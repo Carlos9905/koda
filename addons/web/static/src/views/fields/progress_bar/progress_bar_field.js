@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
@@ -6,7 +6,7 @@ import { useNumpadDecimal } from "../numpad_decimal_hook";
 import { parseFloat } from "../parsers";
 import { standardFieldProps } from "../standard_field_props";
 
-import { Component, useRef, useState } from "@odoo/owl";
+import { Component, useRef, useState } from "@koda/owl";
 const formatters = registry.category("formatters");
 
 export class ProgressBarField extends Component {

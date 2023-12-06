@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
     import { registry } from "@web/core/registry";
     import tourUtils from "@website_sale/js/tours/tour_utils";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="s_company_team" inherit_id="website.s_company_team">
     <!-- Row #1 - Col #1 -->
@@ -34,4 +34,4 @@
     </xpath>
 </template>
 
-</odoo>
+</koda>

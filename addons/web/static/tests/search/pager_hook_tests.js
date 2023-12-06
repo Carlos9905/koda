@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ControlPanel } from "@web/search/control_panel/control_panel";
 import { usePager } from "@web/search/pager_hook";
 import { click, getFixture, nextTick } from "../helpers/utils";
 import { makeWithSearch, setupControlPanelServiceRegistry } from "./helpers";
 
-import { Component, useState, xml } from "@odoo/owl";
+import { Component, useState, xml } from "@koda/owl";
 
 let target;
 let serverData;

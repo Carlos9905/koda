@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 function patchSessionManager() {
     const { DateTime } = luxon;
-    const SessionManager = odoo.loader.modules.get('@survey/js/survey_session_manage')[Symbol.for('default')]
+    const SessionManager = koda.loader.modules.get('@survey/js/survey_session_manage')[Symbol.for('default')]
     /**
      * Small override for test/tour purposes.
      */

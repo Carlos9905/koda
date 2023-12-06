@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { makeFakeNotificationService } from "@web/../tests/helpers/mock_services";
 import {
@@ -124,7 +124,7 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
 
         assert.strictEqual(
             browser.location,
-            "https://www.odoo.com/odoo-enterprise/upgrade?num_users=7"
+            "https://www.koda.com/koda-enterprise/upgrade?num_users=7"
         );
     });
 
@@ -669,7 +669,7 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
         assert.verifySteps(["get_param", "search_count"]);
         assert.strictEqual(
             browser.location,
-            "https://www.odoo.com/odoo-enterprise/upsell?num_users=13&contract=ABC"
+            "https://www.koda.com/koda-enterprise/upsell?num_users=13&contract=ABC"
         );
     });
 
@@ -747,7 +747,7 @@ QUnit.module("web_enterprise", function ({ beforeEach }) {
 
         assert.strictEqual(
             browser.location,
-            "https://www.odoo.com/odoo-enterprise/renew?contract=ABC"
+            "https://www.koda.com/koda-enterprise/renew?contract=ABC"
         );
 
         assert.verifySteps(["get_param"]);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="sale_subscription_order_view_form" model="ir.ui.view">
         <field name="name">sale.subscription.order.form</field>
         <field name="model">sale.order</field>
@@ -240,4 +240,4 @@
             </filter>
         </field>
     </record>
-</odoo>
+</koda>

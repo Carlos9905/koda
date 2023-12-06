@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /**
  * Ensures that `element` will be visible in its `scrollable`.

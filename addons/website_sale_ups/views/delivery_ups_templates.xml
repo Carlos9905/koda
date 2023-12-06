@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <template id="ups_bill_my_account_dialog" name="UPS Bill My Account Dialog">
         <div role="dialog" class="modal fade" id="ups_bill_my_account_service">
@@ -86,4 +86,4 @@
             <attribute name="t-att-data-provider-custom-mode">provider_sudo.custom_mode</attribute>
         </xpath>
     </template>
-</odoo>
+</koda>

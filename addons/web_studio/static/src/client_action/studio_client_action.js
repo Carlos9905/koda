@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { useBus, useService } from "@web/core/utils/hooks";
@@ -11,7 +11,7 @@ import { Editor } from "./editor/editor";
 import { StudioNavbar } from "./navbar/navbar";
 import { StudioHomeMenu } from "./studio_home_menu/studio_home_menu";
 
-import { Component, onWillStart, onMounted, onPatched, onWillUnmount } from "@odoo/owl";
+import { Component, onWillStart, onMounted, onPatched, onWillUnmount } from "@koda/owl";
 import { ormService } from "@web/core/orm_service";
 
 const studioUserService = {

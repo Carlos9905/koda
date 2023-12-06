@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { DateTimeField, dateTimeField } from "@web/views/fields/datetime/datetime_field";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class WarningTooltip extends Component {
     static template = "industry_fsm.warning_tooltip";

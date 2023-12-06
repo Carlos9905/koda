@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
     <data>
 
     <!-- Purchase Requisition Type -->
@@ -309,4 +309,4 @@
         action="action_purchase_requisition"/>
 
     </data>
-</odoo>
+</koda>

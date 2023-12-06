@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record id="feature_module_appointment" model="website.configurator.feature">
             <field name="name">Appointment</field>
@@ -22,4 +22,4 @@
             <field name="feature_url">/helpdesk</field>
         </record>
     </data>
-</odoo>
+</koda>

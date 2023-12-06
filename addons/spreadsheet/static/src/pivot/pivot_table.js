@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { HEADER_STYLE, TOP_LEVEL_STYLE, MEASURE_STYLE } from "@spreadsheet/helpers/constants";
 
 /**

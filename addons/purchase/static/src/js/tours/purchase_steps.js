@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 class PurchaseAdditionalTourSteps {
     _get_purchase_stock_steps() {

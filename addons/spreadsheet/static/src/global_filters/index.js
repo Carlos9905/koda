@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 
 import { GlobalFiltersUIPlugin } from "./plugins/global_filters_ui_plugin";
 import { GlobalFiltersCorePlugin } from "./plugins/global_filters_core_plugin";

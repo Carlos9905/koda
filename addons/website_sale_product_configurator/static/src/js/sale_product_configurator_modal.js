@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import Dialog from '@web/legacy/js/core/dialog';
 import VariantMixin from '@website_sale/js/sale_variant_mixin';

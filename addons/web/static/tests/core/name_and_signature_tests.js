@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { makeFakeRPCService } from "@web/../tests/helpers/mock_services";
 import { hotkeyService } from "@web/core/hotkeys/hotkey_service";

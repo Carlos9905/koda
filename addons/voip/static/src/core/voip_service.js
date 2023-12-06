@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @koda-module */
 
-import { EventBus, markup, reactive } from "@odoo/owl";
+import { EventBus, markup, reactive } from "@koda/owl";
 
 import { CallMethodSelectionDialog } from "@voip/mobile/call_method_selection_dialog";
 import { SoftphoneContainer } from "@voip/softphone/softphone_container";

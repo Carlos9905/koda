@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { hasTouch, isMobileOS } from "@web/core/browser/feature_detection";
 
 export class GanttRowProgressBar extends Component {

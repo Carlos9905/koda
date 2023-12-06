@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { findElement, triggerEvent } from "../helpers/utils";
 

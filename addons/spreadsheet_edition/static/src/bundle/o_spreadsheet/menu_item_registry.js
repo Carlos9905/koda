@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { REINSERT_LIST_CHILDREN } from "../list/list_actions";
 import { INSERT_PIVOT_CELL_CHILDREN, REINSERT_PIVOT_CHILDREN } from "../pivot/pivot_actions";
 const { topbarMenuRegistry } = spreadsheet.registries;

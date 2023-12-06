@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 const PAPER_TO_CSS = {
     margin_top: "padding-top",

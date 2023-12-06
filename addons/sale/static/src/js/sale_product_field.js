@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { useEffect } from '@odoo/owl';
+import { useEffect } from '@koda/owl';
 import { registry } from "@web/core/registry";
 import { Many2OneField, many2OneField } from "@web/views/fields/many2one/many2one_field";
 

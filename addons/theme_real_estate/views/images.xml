@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Not used anymore by the editor: files and records kept for back-compatibility.
 Check in theme_monglia's primary_variables.scss, theme.scss and theme_common's mixins.scss -->
@@ -212,4 +212,4 @@ Check in theme_monglia's primary_variables.scss, theme.scss and theme_common's m
     <field name="url">/theme_real_estate/static/src/img/snippets/s_newsletter.jpg</field>
 </record>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Chatter } from "@mail/core/web/chatter";
@@ -16,7 +16,7 @@ import { View } from "@web/views/view";
 import { ManualBarcodeScanner } from './manual_barcode';
 import { url } from '@web/core/utils/urls';
 import { utils as uiUtils } from "@web/core/ui/ui_service";
-import { Component, EventBus, onPatched, onWillStart, useState, useSubEnv } from "@odoo/owl";
+import { Component, EventBus, onPatched, onWillStart, useState, useSubEnv } from "@koda/owl";
 
 // Lets `barcodeGenericHandlers` knows those commands exist so it doesn't warn when scanned.
 COMMANDS["O-CMD.MAIN-MENU"] = () => {};

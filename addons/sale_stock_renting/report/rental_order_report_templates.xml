@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="report_rental_order_document" inherit_id="sale_renting.report_rental_order_document">
         <xpath expr="//div/table" position="before">
             <t t-set="display_serial_numbers" t-value="any(l.pickedup_lot_ids for l in doc.order_line)"/>
@@ -13,4 +13,4 @@
             </td>
         </xpath>
     </template>
-</odoo>
+</koda>

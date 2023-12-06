@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 /**
  * program: "patienceDiff" algorithm implemented in javascript.
  * author: Jonathan Trent

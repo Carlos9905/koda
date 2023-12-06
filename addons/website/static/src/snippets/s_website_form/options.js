@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import FormEditorRegistry from "@website/js/form_editor_registry";
 import options from "@web_editor/js/editor/snippets.options";

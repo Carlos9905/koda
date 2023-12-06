@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { sprintf } from '@web/core/utils/strings';
 import { renderToElement } from "@web/core/utils/render";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { KanbanRenderer } from "@web/views/kanban/kanban_renderer";
 import { SignKanbanRecord } from "@sign/views/sign_kanban/sign_kanban_record";

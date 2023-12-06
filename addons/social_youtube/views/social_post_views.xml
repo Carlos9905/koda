@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <record id="social_post_view_kanban" model="ir.ui.view">
         <field name="name">social.post.view.kanban.inherit.youtube</field>
@@ -70,7 +70,7 @@
                     readonly="state != 'draft'"
                     required="youtube_accounts_count != 0"/>
                 <field name="youtube_description" string="Video Description" onchange_on_keydown="True"
-                    widget="text_emojis" placeholder="e.g. Engage your entire community with a single app! https://www.odoo.com/trial"
+                    widget="text_emojis" placeholder="e.g. Engage your entire community with a single app! https://www.koda.com/trial"
                     invisible="youtube_accounts_count != 1"
                     readonly="state != 'draft'"
                     required="youtube_video_id"/>
@@ -90,4 +90,4 @@
         </field>
     </record>
 </data>
-</odoo>
+</koda>

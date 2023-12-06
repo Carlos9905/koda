@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ReceiptScreen } from "@point_of_sale/app/screens/receipt_screen/receipt_screen";
 import { _t } from "@web/core/l10n/translation";
 import { patch } from "@web/core/utils/patch";
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 patch(ReceiptScreen.prototype, {
     setup() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="list_amazon_account_action" model="ir.actions.act_window">
         <field name="name">Amazon Accounts</field>
@@ -58,4 +58,4 @@
         </field>
     </record>
 
-</odoo>
+</koda>

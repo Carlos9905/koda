@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="resource_planning_project_forecast" inherit_id="planning.resource_planning">
         <xpath expr="//t[@t-set='show_name']" position="after">
             <t t-set="show_project" t-value="any(s.project_id for s in slots)" />
@@ -11,4 +11,4 @@
             <td t-if="show_project" class="align-middle"><t t-if="slot.project_id" t-esc="slot.project_id.name" /></td>
         </xpath>
     </template>
-</odoo>
+</koda>

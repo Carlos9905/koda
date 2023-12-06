@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <record id="quality_alert_view_form_inherit_mrp" model="ir.ui.view">
         <field name="name">quality.alert.view.form.inherit.mrp</field>
         <field name="model">quality.alert</field>
@@ -149,4 +149,4 @@
     <record id="quality_control.quality_check_action_main" model="ir.actions.act_window">
         <field name="context">{'search_default_quality_checks': 1}</field>
     </record>
-</odoo>
+</koda>

@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { drag, dragAndDrop, getFixture, mount, nextTick, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { useDraggable } from "@web/core/utils/draggable";
 import { browser } from "@web/core/browser/browser";
 
-import { Component, reactive, useRef, useState, xml } from "@odoo/owl";
+import { Component, reactive, useRef, useState, xml } from "@koda/owl";
 
 let target;
 QUnit.module("Draggable", ({ beforeEach }) => {

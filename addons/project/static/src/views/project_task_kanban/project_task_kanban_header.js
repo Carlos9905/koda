@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from '@web/core/utils/hooks';
 import { KanbanHeader } from "@web/views/kanban/kanban_header";
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 export class ProjectTaskKanbanHeader extends KanbanHeader {
     setup() {

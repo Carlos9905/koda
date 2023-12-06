@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { session } from "@web/session";
 import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { registry } from "@web/core/registry";
 
 const LINK_REGEX = new RegExp("^https?://");
@@ -25,7 +25,7 @@ export class DocumentationLink extends Component {
                       "-"
                   )
                 : "master";
-            return "https://www.odoo.com/documentation/" + serverVersion + this.props.path;
+            return "https://www.koda.com/documentation/" + serverVersion + this.props.path;
         }
     }
 }

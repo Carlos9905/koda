@@ -50,12 +50,12 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[Tasks by Stage](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"stage_id\",\"state\"],\"graph_measure\":\"__count\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"stage_id\",\"state\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
+                    "content": "[Tasks by Stage](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"stage_id\",\"state\"],\"graph_measure\":\"__count\",\"graph_mode\":\"bar\",\"graph_groupbys\":[\"stage_id\",\"state\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
                     "border": 1
                 },
                 "A19": {
                     "style": 1,
-                    "content": "[Top Assignees](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_ids\",\"!=\",false]],\"context\":{\"group_by\":[],\"pivot_measures\":[\"effective_hours\",\"nbr\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_ids\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
+                    "content": "[Top Assignees](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_ids\",\"!=\",false]],\"context\":{\"group_by\":[],\"pivot_measures\":[\"effective_hours\",\"nbr\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_ids\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
                     "border": 1
                 },
                 "A20": {
@@ -105,7 +105,7 @@
                 },
                 "A32": {
                     "style": 1,
-                    "content": "[Top Tags](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"tag_ids\",\"!=\",false]],\"context\":{\"group_by\":[\"tag_ids\"],\"pivot_measures\":[\"effective_hours\",\"nbr\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"tag_ids\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
+                    "content": "[Top Tags](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"tag_ids\",\"!=\",false]],\"context\":{\"group_by\":[\"tag_ids\"],\"pivot_measures\":[\"effective_hours\",\"nbr\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"tag_ids\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
                     "border": 1
                 },
                 "A33": {
@@ -369,12 +369,12 @@
                 },
                 "E7": {
                     "style": 1,
-                    "content": "[Tasks by State](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"state\"],\"graph_measure\":\"__count\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"state\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
+                    "content": "[Tasks by State](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"state\"],\"graph_measure\":\"__count\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"state\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
                     "border": 1
                 },
                 "E19": {
                     "style": 1,
-                    "content": "[Top Projects](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"project_id\",\"!=\",false]],\"context\":{\"group_by\":[\"project_id\"],\"pivot_measures\":[\"effective_hours\",\"nbr\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"project_id\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
+                    "content": "[Top Projects](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"project_id\",\"!=\",false]],\"context\":{\"group_by\":[\"project_id\"],\"pivot_measures\":[\"effective_hours\",\"nbr\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"project_id\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
                     "border": 1
                 },
                 "E20": {
@@ -424,7 +424,7 @@
                 },
                 "E32": {
                     "style": 1,
-                    "content": "[Top Customers](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"partner_id\",\"!=\",false]],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"effective_hours\",\"nbr\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
+                    "content": "[Top Customers](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"partner_id\",\"!=\",false]],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"effective_hours\",\"nbr\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"report.project.task.user\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Tasks Analysis\"})",
                     "border": 1
                 },
                 "E33": {

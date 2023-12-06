@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <!-- Actions from project kanban -->
     <record id="project_forecast_action_from_project" model="ir.actions.act_window">
@@ -47,4 +47,4 @@
         <field name="act_window_id" ref="project_forecast_action_from_project"/>
     </record>
 
-</odoo>
+</koda>

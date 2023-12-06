@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { sortBy } from "../utils/arrays";
 import { ErrorHandler } from "../utils/components";
 

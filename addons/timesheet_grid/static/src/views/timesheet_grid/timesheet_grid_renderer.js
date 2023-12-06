@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { deserializeDate } from "@web/core/l10n/dates";
 import { GridRenderer } from "@web_grid/views/grid_renderer";
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 export class TimesheetGridRenderer extends GridRenderer {
     static components = {

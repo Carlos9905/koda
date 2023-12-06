@@ -1,7 +1,7 @@
-/* @odoo-module */
+/* @koda-module */
 // @ts-check
 
-import { EventBus, markRaw } from "@odoo/owl";
+import { EventBus, markRaw } from "@koda/owl";
 import { makeContext } from "@web/core/context";
 import { Domain } from "@web/core/domain";
 import { WarningDialog } from "@web/core/errors/error_dialogs";

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 const urlParams = new URLSearchParams(window.location.search);
 const collaborationDebug = urlParams.get('collaborationDebug');

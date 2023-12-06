@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <record id="sign_log_view_tree" model="ir.ui.view">
       <field name="name">sign.log.tree</field>
       <field name="model">sign.log</field>
@@ -17,4 +17,4 @@
       </field>
     </record>
 
-</odoo>
+</koda>

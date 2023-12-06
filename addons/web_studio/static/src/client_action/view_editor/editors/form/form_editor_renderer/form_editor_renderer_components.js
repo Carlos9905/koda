@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { formView } from "@web/views/form/form_view";
 import { StudioHook } from "@web_studio/client_action/view_editor/editors/components/studio_hook_component";
@@ -13,7 +13,7 @@ import {
 import { _t } from "@web/core/l10n/translation";
 import { useOwnedDialogs } from "@web/core/utils/hooks";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { AddButtonAction } from "../../../interactive_editor/action_button/action_button";
 
 /**

@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useService } from "@web/core/utils/hooks";
 
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 /**
  * @typedef {import("./command_service").CommandOptions} CommandOptions

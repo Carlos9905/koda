@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="timesheet_tip_1" model="hr.timesheet.tip">
             <field name="name">Timesheets are the lifeblood of our company; they have a direct impact on revenues.</field>
@@ -16,4 +16,4 @@
             <field name="name">Even small tasks like answering an email should be recorded and rounded up to a quarter of an hour.</field>
         </record>
     </data>
-</odoo>
+</koda>

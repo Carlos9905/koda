@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <record id="theme_test_custo.bootstrap_overridden_scss" model="theme.ir.asset">
     <field name="key">theme_test_custo.bootstrap_overridden_scss</field>
@@ -16,4 +16,4 @@
     <field name="path">theme_test_custo/static/src/scss/primary_variables.scss</field>
 </record>
 
-</odoo>
+</koda>

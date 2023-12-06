@@ -74,17 +74,17 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[MRR by Products](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_type\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"event_type\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[MRR by Products](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"event_type\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"event_type\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "A19": {
                     "style": 1,
-                    "content": "[MRR by Country](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"country_id\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"country_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[MRR by Country](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"country_id\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"country_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "A32": {
                     "style": 1,
-                    "content": "[Top Quotations](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"subscription_state\",\"in\",[\"1_draft\",\"2_renewal\",\"3_progress\",\"4_paused\",\"5_renewed\",\"6_churn\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"calendar\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"cohort\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Quotations\"})",
+                    "content": "[Top Quotations](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",[\"subscription_state\",\"in\",[\"1_draft\",\"2_renewal\",\"3_progress\",\"4_paused\",\"5_renewed\",\"6_churn\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"calendar\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"cohort\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Quotations\"})",
                     "border": 1
                 },
                 "A33": {
@@ -140,7 +140,7 @@
                 },
                 "A45": {
                     "style": 1,
-                    "content": "[Top Plans](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"template_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
+                    "content": "[Top Plans](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"template_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
                     "border": 1
                 },
                 "A46": {
@@ -190,7 +190,7 @@
                 },
                 "A58": {
                     "style": 1,
-                    "content": "[Top Sales Team](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
+                    "content": "[Top Sales Team](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
                     "border": 1
                 },
                 "A59": {
@@ -240,7 +240,7 @@
                 },
                 "A71": {
                     "style": 1,
-                    "content": "[Top Recurrences](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"plan_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
+                    "content": "[Top Recurrences](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"plan_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
                     "border": 1
                 },
                 "A72": {
@@ -758,17 +758,17 @@
                 },
                 "F7": {
                     "style": 1,
-                    "content": "[MRR by Recurrence](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"plan_id\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"plan_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[MRR by Recurrence](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"plan_id\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"plan_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "F19": {
                     "style": 1,
-                    "content": "[MRR by Sales Team](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"team_id\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"team_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
+                    "content": "[MRR by Sales Team](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[],\"context\":{\"group_by\":[\"team_id\"],\"graph_measure\":\"mrr_change_normalized\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"team_id\"]},\"modelName\":\"sale.order.log.report\",\"views\":[[false,\"graph\"],[false,\"list\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"MRR Analysis\"})",
                     "border": 1
                 },
                 "F32": {
                     "style": 1,
-                    "content": "[Top Subscriptions](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"cohort\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions\"})",
+                    "content": "[Top Subscriptions](koda://view/{\"viewType\":\"list\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"cohort\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions\"})",
                     "border": 1
                 },
                 "F33": {
@@ -818,7 +818,7 @@
                 },
                 "F45": {
                     "style": 1,
-                    "content": "[Top Products](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]]],\"context\":{\"group_by\":[],\"pivot_measures\":[\"order_reference\",\"recurring_monthly\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"product_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
+                    "content": "[Top Products](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]]],\"context\":{\"group_by\":[],\"pivot_measures\":[\"order_reference\",\"recurring_monthly\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"product_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
                     "border": 1
                 },
                 "F46": {
@@ -868,7 +868,7 @@
                 },
                 "F58": {
                     "style": 1,
-                    "content": "[Top Salesman](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
+                    "content": "[Top Salesman](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
                     "border": 1
                 },
                 "F59": {
@@ -918,7 +918,7 @@
                 },
                 "F71": {
                     "style": 1,
-                    "content": "[Top Countries](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"country_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
+                    "content": "[Top Countries](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",\"&\",[\"is_subscription\",\"=\",true],[\"subscription_state\",\"not in\",[\"2_renewal\",\"5_renewed\"]],\"|\",[\"subscription_state\",\"=\",\"3_progress\"],[\"subscription_state\",\"=\",\"4_paused\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"recurring_monthly\",\"order_reference\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"country_id\"]},\"modelName\":\"sale.subscription.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"list\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Subscriptions Analysis\"})",
                     "border": 1
                 },
                 "F72": {

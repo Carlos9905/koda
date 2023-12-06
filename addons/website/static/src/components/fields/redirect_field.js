@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { pick } from "@web/core/utils/objects";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 class RedirectField extends Component {
     get info() {

@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { toRaw, useState, useEnv, reactive, onMounted, onWillUnmount, markRaw } from "@odoo/owl";
+import { toRaw, useState, useEnv, reactive, onMounted, onWillUnmount, markRaw } from "@koda/owl";
 import { Reactive } from "@web_studio/client_action/utils";
 
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";

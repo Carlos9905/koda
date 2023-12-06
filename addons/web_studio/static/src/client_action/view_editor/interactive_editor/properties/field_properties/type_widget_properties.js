@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, onWillUpdateProps, useState } from "@odoo/owl";
+import { Component, onWillUpdateProps, useState } from "@koda/owl";
 import { registry } from "@web/core/registry";
 import { Property } from "@web_studio/client_action/view_editor/property/property";
 import { getWowlFieldWidgets } from "@web_studio/client_action/view_editor/editors/utils";

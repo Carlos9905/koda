@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ModelSelector } from "@web/core/model_selector/model_selector";
 import { AbstractFilterEditorSidePanel } from "./filter_editor_side_panel";
@@ -6,7 +6,7 @@ import { FilterEditorFieldMatching } from "./filter_editor_field_matching";
 import { useService } from "@web/core/utils/hooks";
 import { MultiRecordSelector } from "@web/core/record_selectors/multi_record_selector";
 
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 /**
  * @typedef {import("@spreadsheet/data_sources/metadata_repository").Field} Field

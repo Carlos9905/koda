@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { AutoComplete } from "@web/core/autocomplete/autocomplete";
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { useOwnedDialogs, useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 import { RecordSelector } from "@web/core/record_selectors/record_selector";

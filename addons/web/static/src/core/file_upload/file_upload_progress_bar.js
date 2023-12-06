@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "../utils/hooks";
 import { ConfirmationDialog } from "../confirmation_dialog/confirmation_dialog";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class FileUploadProgressBar extends Component {
     setup() {

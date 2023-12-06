@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="project_forecast_view_form_inherit_project_timesheet_forecast" model="ir.ui.view">
         <field name="name">planning.slot.form.inherit.timesheet</field>
@@ -187,4 +187,4 @@
             parent="planning.planning_menu_schedule"
             action="project_timesheet_action_schedule_by_role"/>
 
-</odoo>
+</koda>

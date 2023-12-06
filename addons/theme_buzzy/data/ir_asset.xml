@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <record id="theme_buzzy.primary_variables_scss" model="theme.ir.asset">
     <field name="key">theme_buzzy.primary_variables_scss</field>
@@ -16,4 +16,4 @@
     <field name="path">theme_buzzy/static/src/scss/bootstrap_overridden.scss</field>
 </record>
 
-</odoo>
+</koda>

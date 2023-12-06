@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { renderToElement, renderToString } from "@web/core/utils/render";
 

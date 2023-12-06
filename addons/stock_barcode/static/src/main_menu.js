@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import * as BarcodeScanner from '@web/webclient/barcode/barcode_scanner';
@@ -7,7 +7,7 @@ import { registry } from "@web/core/registry";
 import { useBus, useService } from "@web/core/utils/hooks";
 import { session } from "@web/session";
 import { serializeDate, today } from "@web/core/l10n/dates";
-import { Component, onWillStart, useState } from "@odoo/owl";
+import { Component, onWillStart, useState } from "@koda/owl";
 
 export class MainMenu extends Component {
     setup() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
         <record model="ir.ui.view" id="view_slide_channel_form_inherit_website_helpdesk_slides">
             <field name="name">slide.channel.view.form.inherit.website.helpdesk.slides</field>
@@ -24,4 +24,4 @@
             </field>
         </record>
     </data>
-</odoo>
+</koda>

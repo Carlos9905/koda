@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, useState, useEffect, useRef } from "@odoo/owl";
+import { Component, useState, useEffect, useRef } from "@koda/owl";
 
 export class SettingsApp extends Component {
     setup() {

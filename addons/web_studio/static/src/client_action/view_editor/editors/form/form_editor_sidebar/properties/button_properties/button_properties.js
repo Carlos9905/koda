@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, onWillStart, onWillUpdateProps, useState } from "@odoo/owl";
+import { Component, onWillStart, onWillUpdateProps, useState } from "@koda/owl";
 import { CheckBox } from "@web/core/checkbox/checkbox";
 import { DomainSelectorDialog } from "@web/core/domain_selector_dialog/domain_selector_dialog";
 import { SelectMenu } from "@web/core/select_menu/select_menu";

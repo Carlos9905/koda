@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 export const REINSERT_LIST_CHILDREN = (env) =>
     env.model.getters.getListIds().map((listId, index) => {

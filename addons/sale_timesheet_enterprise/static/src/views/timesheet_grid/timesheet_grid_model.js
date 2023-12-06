@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { patch } from "@web/core/utils/patch";
 import { TimesheetGridDataPoint } from "@timesheet_grid/views/timesheet_grid/timesheet_grid_model";

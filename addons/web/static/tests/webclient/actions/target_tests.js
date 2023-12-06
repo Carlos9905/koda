@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import testUtils from "@web/../tests/legacy/helpers/test_utils";
 import { registry } from "@web/core/registry";
@@ -8,7 +8,7 @@ import { errorService } from "@web/core/errors/error_service";
 import { useService } from "@web/core/utils/hooks";
 import { ClientErrorDialog } from "@web/core/errors/error_dialogs";
 
-import { Component, onMounted, xml } from "@odoo/owl";
+import { Component, onMounted, xml } from "@koda/owl";
 
 let serverData;
 let target;

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { KanbanRecord } from '@web/views/kanban/kanban_record';
 import { useService } from '@web/core/utils/hooks';

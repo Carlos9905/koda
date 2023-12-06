@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { evaluateExpr, parseExpr } from "./py_js/py";
 import { evaluate } from "./py_js/py_interpreter";

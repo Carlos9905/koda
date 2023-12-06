@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { useInterval } from "@room/room_booking/useInterval";
 
-import { Component, useState, xml } from "@odoo/owl";
+import { Component, useState, xml } from "@koda/owl";
 
 export class RoomDisplayTime extends Component {
     static template = xml`<div class="d-flex flex-column justify-content-center"><span class="display-6" t-out="state.currentTime.toFormat('T')"/><span class="smaller" t-out="state.currentTime.toFormat('DDDD')"/></div>`;

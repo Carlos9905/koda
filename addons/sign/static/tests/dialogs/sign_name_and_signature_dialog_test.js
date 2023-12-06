@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { click, getFixture, mount } from "@web/../tests/helpers/utils";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
@@ -72,7 +72,7 @@ QUnit.module("Sign Name and Signature Dialog", function (hooks) {
             ["Sign all", "Sign", "Cancel"],
             "should show buttons"
         );
-        assert.containsOnce(target, ".mt16", "should show legal info about using odoo signature");
+        assert.containsOnce(target, ".mt16", "should show legal info about using koda signature");
         assert.strictEqual(
             target.querySelector('input[name="signer"]').value,
             name,

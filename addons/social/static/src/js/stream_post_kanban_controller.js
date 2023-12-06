@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { AddSocialStreamDialog } from './add_stream_modal';
@@ -8,7 +8,7 @@ import { useModelWithSampleData } from "@web/model/model";
 
 import { KanbanController } from '@web/views/kanban/kanban_controller';
 import { useService } from '@web/core/utils/hooks';
-import { onWillStart, useEffect, useSubEnv, useState } from "@odoo/owl";
+import { onWillStart, useEffect, useSubEnv, useState } from "@koda/owl";
 
 export class StreamPostKanbanController extends KanbanController {
 

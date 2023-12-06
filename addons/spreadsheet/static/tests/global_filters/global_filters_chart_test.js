@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { globalFiltersFieldMatchers } from "../../src/global_filters/plugins/global_filters_core_plugin";
 import { createSpreadsheetWithChart } from "../utils/chart";

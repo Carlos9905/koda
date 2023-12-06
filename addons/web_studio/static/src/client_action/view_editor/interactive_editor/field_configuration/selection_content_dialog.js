@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Dialog } from "@web/core/dialog/dialog";
 import { _t } from "@web/core/l10n/translation";
 import { useSortable } from "@web/core/utils/sortable_owl";
 
-import { Component, useRef, useState } from "@odoo/owl";
+import { Component, useRef, useState } from "@koda/owl";
 
 export class SelectionContentDialog extends Component {
     static components = {

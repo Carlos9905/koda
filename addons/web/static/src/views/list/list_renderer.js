@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { CheckBox } from "@web/core/checkbox/checkbox";
@@ -31,7 +31,7 @@ import {
     useExternalListener,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 
 const formatters = registry.category("formatters");
@@ -1919,7 +1919,7 @@ export class ListRenderer extends Component {
     }
 
     get isDebugMode() {
-        return Boolean(odoo.debug);
+        return Boolean(koda.debug);
     }
 
     makeTooltip(column) {

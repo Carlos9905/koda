@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="s_features" inherit_id="website.s_features">
     <!-- First column : icon -->
@@ -16,4 +16,4 @@
     </xpath>
 </template>
 
-</odoo>
+</koda>

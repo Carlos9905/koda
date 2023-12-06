@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { SampleServer } from "@web/model/sample_server";
 

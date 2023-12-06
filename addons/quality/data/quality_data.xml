@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
 
         <record forcecreate="True" id="decimal_quality" model="decimal.precision">
@@ -75,4 +75,4 @@
             <field name="technical_name">picture</field>
         </record>
     </data>
-</odoo>
+</koda>

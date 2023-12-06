@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component, useState } from "@odoo/owl";
+/** @koda-module */
+import { Component, useState } from "@koda/owl";
 import { useOwnedDialogs } from "@web/core/utils/hooks";
 import { Dialog } from "@web/core/dialog/dialog";
 

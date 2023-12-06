@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="period_report_template" inherit_id="planning.period_report_template">
         <xpath expr="//dd[@id='project']" position="after">
             <dt name="sale_order_item"  position="move"/>
@@ -24,4 +24,4 @@
             <td name="sale_line_id" t-if="unwanted_slot_has_sale_line" position="move"/>
         </xpath>
     </template>
-</odoo>
+</koda>

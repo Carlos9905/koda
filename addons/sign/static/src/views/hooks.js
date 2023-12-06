@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { multiFileUpload } from "@sign/backend_components/multi_file_upload";
 import { getDataURLFromFile } from "@web/core/utils/urls";
 import { TemplateAlertDialog } from "@sign/backend_components/template_alert_dialog/template_alert_dialog";
-import { onWillStart, useComponent, useRef } from "@odoo/owl";
+import { onWillStart, useComponent, useRef } from "@koda/owl";
 
 export function useSignViewButtons() {
     const component = useComponent();

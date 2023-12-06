@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { nextTick, patchDate } from "@web/../tests/helpers/utils";
 import { CommandResult } from "@spreadsheet/o_spreadsheet/cancelled_reason";
-import { Model, DispatchResult, helpers, tokenize } from "@odoo/o-spreadsheet";
+import { Model, DispatchResult, helpers, tokenize } from "@koda/o-spreadsheet";
 import {
     createModelWithDataSource,
     waitForDataSourcesLoaded,

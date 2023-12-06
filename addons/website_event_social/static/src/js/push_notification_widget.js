@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import NotificationWidget from "@social_push_notifications/js/push_notification_widget";

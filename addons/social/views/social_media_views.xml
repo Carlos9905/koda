@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 <data>
     <record id="action_social_media" model="ir.actions.act_window">
         <field name="name">Social Media</field>
@@ -39,4 +39,4 @@
         </field>
     </record>
 </data>
-</odoo>
+</koda>

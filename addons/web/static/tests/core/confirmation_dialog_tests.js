@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { uiService } from "@web/core/ui/ui_service";
@@ -15,7 +15,7 @@ import {
     triggerHotkey,
 } from "../helpers/utils";
 import { makeFakeDialogService } from "../helpers/mock_services";
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@koda/owl";
 
 const serviceRegistry = registry.category("services");
 let target;

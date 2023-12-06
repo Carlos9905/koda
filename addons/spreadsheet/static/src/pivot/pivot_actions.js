@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { getFirstPivotFunction, getNumberOfPivotFormulas } from "./pivot_helpers";
 
 export const SEE_RECORDS_PIVOT = async (position, env) => {

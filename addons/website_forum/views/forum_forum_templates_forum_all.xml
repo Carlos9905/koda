@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <data>
 
 <!-- All Forums Layout -->
@@ -98,4 +98,4 @@
 </template>
 
     </data>
-</odoo>
+</koda>

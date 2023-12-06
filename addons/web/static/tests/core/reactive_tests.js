@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { EventBus, reactive } from "@odoo/owl";
+import { EventBus, reactive } from "@koda/owl";
 import { Reactive, effect, withComputedProperties } from "@web/core/utils/reactive";
 
 QUnit.module("Reactive utils", () => {

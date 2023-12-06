@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, markup } from "@odoo/owl";
+import { Component, markup } from "@koda/owl";
 import { isMacOS } from "@web/core/browser/feature_detection";
 import { _t } from "@web/core/l10n/translation";
 import { escape } from "@web/core/utils/strings";
@@ -9,7 +9,7 @@ import { browser } from "../../core/browser/browser";
 import { registry } from "../../core/registry";
 
 function documentationItem(env) {
-    const documentationURL = "https://www.odoo.com/documentation/17.0";
+    const documentationURL = "https://www.koda.com/documentation/17.0";
     return {
         type: "item",
         id: "documentation",
@@ -97,7 +97,7 @@ function odooAccountItem(env) {
                     browser.open(url, "_blank");
                 })
                 .catch(() => {
-                    browser.open("https://accounts.odoo.com/account", "_blank");
+                    browser.open("https://accounts.koda.com/account", "_blank");
                 });
         },
         sequence: 60,

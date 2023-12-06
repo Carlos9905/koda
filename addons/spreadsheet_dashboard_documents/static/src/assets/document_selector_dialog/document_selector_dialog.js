@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { DocumentsSelectorPanel } from "@documents_spreadsheet/spreadsheet_selector_dialog/document_selector_panel";
 import { Dialog } from "@web/core/dialog/dialog";
 import { useService } from "@web/core/utils/hooks";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class DocumentSelectorDialog extends Component {
     setup() {

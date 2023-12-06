@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import helper from '@stock_barcode/../tests/tours/tour_helper_stock_barcode';
 import { registry } from "@web/core/registry";

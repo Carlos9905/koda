@@ -1,7 +1,7 @@
-/* @odoo-module */
+/* @koda-module */
 /* global SIP */
 
-import { reactive } from "@odoo/owl";
+import { reactive } from "@koda/owl";
 
 import { Registerer } from "@voip/core/registerer";
 
@@ -94,7 +94,7 @@ export class UserAgent {
 
     /** @returns {Object} */
     get sipJsUserAgentConfig() {
-        const isDebug = odoo.debug !== "";
+        const isDebug = koda.debug !== "";
         return {
             authorizationPassword: this.voip.settings.voip_secret,
             authorizationUsername: this.voip.authorizationUsername,

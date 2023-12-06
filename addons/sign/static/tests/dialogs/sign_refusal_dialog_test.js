@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { click, getFixture, mount, editInput, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";

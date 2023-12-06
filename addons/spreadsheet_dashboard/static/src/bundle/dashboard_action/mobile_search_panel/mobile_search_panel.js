@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 export class DashboardMobileSearchPanel extends Component {
     setup() {

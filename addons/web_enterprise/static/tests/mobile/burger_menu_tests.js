@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { click } from "@web/../tests/helpers/utils";
 import { getActionManagerServerData } from "@web/../tests/webclient/helpers";
 import { registry } from "@web/core/registry";

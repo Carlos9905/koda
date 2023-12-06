@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { useHotkey } from "../hotkeys/hotkey_hook";
 import { DateTimePicker } from "./datetime_picker";
 

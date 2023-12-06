@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getOdooFunctions } from "../helpers/odoo_functions_helpers";
 

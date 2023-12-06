@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { zip } from "@web/core/utils/arrays";
@@ -147,7 +147,7 @@ registry.category("web_tour.tours").add('test_survey_session_manage_tour', {
     isCheck: true // check nickname question is displayed
 }, {
     trigger: 'body',
-    run: async () => { rootWidget = await odoo.loader.modules.get('root.widget'); }
+    run: async () => { rootWidget = await koda.loader.modules.get('root.widget'); }
 }, {
     trigger: 'h1',
     run: nextScreen

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 /**
  * This file is meant to load the different subparts of the module
@@ -16,7 +16,7 @@
  */
 
 /** TODO: Introduce a position parameter to the plugin registry in order to load them in a specific order */
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { corePluginRegistry, coreViewsPluginRegistry } = spreadsheet.registries;
 
 import { GlobalFiltersCorePlugin, GlobalFiltersUIPlugin } from "@spreadsheet/global_filters/index";

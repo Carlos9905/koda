@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 /*global L*/
@@ -13,7 +13,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 const apiTilesRouteWithToken =
     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}";

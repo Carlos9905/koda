@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="cat_renting" model="product.category">
         <field name="parent_id" ref="product.product_category_all"/>
@@ -184,4 +184,4 @@
     <!-- Confirm rental order -->
     <function model="sale.order" name="action_confirm" eval="[[ref('rental_order_2'), ref('rental_order_3')]]" context="{'action_no_send_mail': True}"/>
 
-</odoo>
+</koda>

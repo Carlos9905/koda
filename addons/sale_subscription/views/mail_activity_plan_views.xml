@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <record id="mail_activity_plan_action_subscription" model="ir.actions.act_window">
         <field name="name">Subscription Plans</field>
         <field name="res_model">mail.activity.plan</field>
@@ -20,4 +20,4 @@
         parent="sale_subscription.menu_sale_subscription_config"
         sequence="110"
         groups="sales_team.group_sale_manager"/>
-</odoo>
+</koda>

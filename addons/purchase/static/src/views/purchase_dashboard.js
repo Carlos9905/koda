@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, onWillStart } from "@koda/owl";
 
 export class PurchaseDashBoard extends Component {
     setup() {

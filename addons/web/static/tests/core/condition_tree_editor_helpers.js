@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { getNodesTextContent, editInput, click, editSelect } from "../helpers/utils";
 import { getModelFieldSelectorValues } from "./model_field_selector_tests";

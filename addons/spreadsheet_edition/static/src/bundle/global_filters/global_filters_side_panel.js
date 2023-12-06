@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { FilterValue } from "@spreadsheet/global_filters/components/filter_value/filter_value";
 import { _t } from "@web/core/l10n/translation";
-import { Component, useRef } from "@odoo/owl";
-import { hooks } from "@odoo/o-spreadsheet";
+import { Component, useRef } from "@koda/owl";
+import { hooks } from "@koda/o-spreadsheet";
 
 /**
  * This is the side panel to define/edit a global filter.

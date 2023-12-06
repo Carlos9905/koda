@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
         <record id="quality_control.test_type_passfail" model="quality.point.test_type">
             <field name="name">Pass - Fail</field>
@@ -10,4 +10,4 @@
             <field name="technical_name">measure</field>
         </record>
     </data>
-</odoo>
+</koda>

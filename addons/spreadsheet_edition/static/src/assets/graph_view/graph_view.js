@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { GraphRenderer } from "@web/views/graph/graph_renderer";
@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { SpreadsheetSelectorDialog } from "@spreadsheet_edition/assets/components/spreadsheet_selector_dialog/spreadsheet_selector_dialog";
 import { omit } from "@web/core/utils/objects";
 
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 export const patchGraphSpreadsheet = () => ({
     setup() {

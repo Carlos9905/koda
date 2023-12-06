@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import MainComponent from '@stock_barcode/components/main';
 import { patch } from "@web/core/utils/patch";

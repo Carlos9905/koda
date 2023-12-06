@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { ActionContainer } from "@web/webclient/actions/action_container";
 import { useService } from "@web/core/utils/hooks";
 import { registry } from "@web/core/registry";
 import { KeepLast } from "@web/core/utils/concurrency";
-import { Component, markup, onWillStart, onWillUnmount, onWillUpdateProps, xml } from "@odoo/owl";
+import { Component, markup, onWillStart, onWillUnmount, onWillUpdateProps, xml } from "@koda/owl";
 import { useStudioServiceAsReactive } from "@web_studio/studio_service";
 import { resetViewCompilerCache } from "@web/views/view_compiler";
 

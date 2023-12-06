@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { _t } from "@web/core/l10n/translation";
@@ -15,7 +15,7 @@ import {
     getAdjacentPreviousSiblings,
     getAdjacentNextSiblings,
     getRangePosition
-} from '@web_editor/js/editor/odoo-editor/src/utils/utils';
+} from '@web_editor/js/editor/koda-editor/src/utils/utils';
 import { toInline } from '@web_editor/js/backend/convert_inline';
 import { getBundle, loadBundle } from '@web/core/assets';
 import {
@@ -28,7 +28,7 @@ import {
     useEffect,
     onWillUnmount,
     status,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { uniqueId } from '@web/core/utils/functions';
 // Ensure `@web/views/fields/html/html_field` is loaded first as this module
 // must override the html field in the registry.
@@ -298,7 +298,7 @@ export class HtmlField extends Component {
     async startWysiwyg(wysiwyg) {
         this.wysiwyg = wysiwyg;
         await this.wysiwyg.startEdition();
-        wysiwyg.$editable[0].classList.add("odoo-editor-qweb");
+        wysiwyg.$editable[0].classList.add("koda-editor-qweb");
 
         if (this.props.codeview) {
             const $codeviewButtonToolbar = $(`
@@ -399,13 +399,13 @@ export class HtmlField extends Component {
     }
     async _lazyloadWysiwyg() {
         // In some bundle (eg. `web.qunit_suite_tests`), the following module is already included.
-        let wysiwygModule = await odoo.loader.modules.get('@web_editor/js/wysiwyg/wysiwyg');
-        this.MoveNodePlugin = (await odoo.loader.modules.get('@web_editor/js/wysiwyg/MoveNodePlugin'))?.MoveNodePlugin;
+        let wysiwygModule = await koda.loader.modules.get('@web_editor/js/wysiwyg/wysiwyg');
+        this.MoveNodePlugin = (await koda.loader.modules.get('@web_editor/js/wysiwyg/MoveNodePlugin'))?.MoveNodePlugin;
         // Otherwise, load the module.
         if (!wysiwygModule) {
             await loadBundle('web_editor.backend_assets_wysiwyg');
-            wysiwygModule = await odoo.loader.modules.get('@web_editor/js/wysiwyg/wysiwyg');
-            this.MoveNodePlugin = (await odoo.loader.modules.get('@web_editor/js/wysiwyg/MoveNodePlugin')).MoveNodePlugin;
+            wysiwygModule = await koda.loader.modules.get('@web_editor/js/wysiwyg/wysiwyg');
+            this.MoveNodePlugin = (await koda.loader.modules.get('@web_editor/js/wysiwyg/MoveNodePlugin')).MoveNodePlugin;
         }
         stripHistoryIds = wysiwygModule.stripHistoryIds;
         this.Wysiwyg = wysiwygModule.Wysiwyg;
@@ -541,14 +541,14 @@ export class HtmlField extends Component {
         const $editable = this.wysiwyg.getEditable();
         this.wysiwyg.odooEditor.sanitize(this.wysiwyg.odooEditor.editable);
         const html = this.wysiwyg.getValue();
-        const $odooEditor = $editable.closest('.odoo-editor-editable');
+        const $odooEditor = $editable.closest('.koda-editor-editable');
         // Save correct nodes references.
         // Remove temporarily the class so that css editing will not be converted.
-        $odooEditor.removeClass('odoo-editor-editable');
+        $odooEditor.removeClass('koda-editor-editable');
         $editable.html(html);
 
         await toInline($editable, this.cssRules, this.wysiwyg.$iframe);
-        $odooEditor.addClass('odoo-editor-editable');
+        $odooEditor.addClass('koda-editor-editable');
 
         this.wysiwyg.setValue($editable.html());
         this.wysiwyg.odooEditor.sanitize(this.wysiwyg.odooEditor.editable);
@@ -724,7 +724,7 @@ export const htmlField = {
             wysiwygOptions.allowCommandVideo = Boolean(options.allowCommandVideo);
         }
         return {
-            codeview: Boolean(odoo.debug && options.codeview),
+            codeview: Boolean(koda.debug && options.codeview),
             placeholder: attrs.placeholder,
             sandboxedPreview: Boolean(options.sandboxedPreview),
 

@@ -20,7 +20,7 @@
     .o_barcode_header {
         flex: 0 0 46px;
         color: white;
-        background-color: var(--barcode__header-bg, #{$o-brand-odoo});
+        background-color: var(--barcode__header-bg, #{$o-brand-koda});
 
         .nav-link {
             cursor: pointer;

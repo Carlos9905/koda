@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { StockBarcodeKanbanRenderer } from '@stock_barcode/kanban/stock_barcode_kanban_renderer';
 import { stockBarcodeKanbanView } from '@stock_barcode/kanban/stock_barcode_kanban_view';

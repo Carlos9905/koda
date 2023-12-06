@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <record id="mrp_production_view_form_inherit_quality" model="ir.ui.view">
         <field name="name">mrp.production.view.form.inherit.quality</field>
         <field name="model">mrp.production</field>
@@ -31,4 +31,4 @@
             </div>
         </field>
     </record>
-</odoo>
+</koda>

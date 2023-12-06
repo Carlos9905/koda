@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Banner -->
 <record id="s_banner_default_image" model="theme.ir.attachment">
@@ -215,4 +215,4 @@
     <field name="url">/theme_paptic/static/src/img/pictures/s_popup.jpg</field>
 </record>
 
-</odoo>
+</koda>

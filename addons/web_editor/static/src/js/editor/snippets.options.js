@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { attachComponent } from "@web/legacy/utils";
 import { MediaDialog } from "@web_editor/components/media_dialog/media_dialog";
@@ -31,7 +31,7 @@ import {
     isGif,
     getDataURLBinarySize,
 } from "@web_editor/js/editor/image_processing";
-import * as OdooEditorLib from "@web_editor/js/editor/odoo-editor/src/OdooEditor";
+import * as OdooEditorLib from "@web_editor/js/editor/koda-editor/src/OdooEditor";
 import { pick } from "@web/core/utils/objects";
 import { _t } from "@web/core/l10n/translation";
 import {

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { Mutex } from "@web/core/utils/concurrency";
@@ -10,7 +10,7 @@ import {
 } from "@web/webclient/actions/action_service";
 import { HomeMenu } from "./home_menu";
 
-import { Component, onMounted, onWillUnmount, xml } from "@odoo/owl";
+import { Component, onMounted, onWillUnmount, xml } from "@koda/owl";
 
 export const homeMenuService = {
     dependencies: ["action", "router", "user"],

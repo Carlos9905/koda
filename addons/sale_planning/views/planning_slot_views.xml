@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <record id="planning_slot_view_search_inherit_sale_planning" model="ir.ui.view">
         <field name="name">planning.slot.search.inherit.sale.planning</field>
@@ -275,4 +275,4 @@
             action="sale_planning_action_schedule_by_sale_order"
             groups="planning.group_planning_manager"/>
 
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import { registry } from "@web/core/registry";

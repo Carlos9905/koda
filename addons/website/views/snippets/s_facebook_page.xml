@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Snippet template -->
 <template id="s_facebook_page" name="Facebook">
@@ -29,4 +29,4 @@
     <field name="path">website/static/src/snippets/s_facebook_page/000.js</field>
 </record>
 
-</odoo>
+</koda>

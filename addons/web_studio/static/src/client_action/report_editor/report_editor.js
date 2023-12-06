@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component } from "@odoo/owl";
+/** @koda-module */
+import { Component } from "@koda/owl";
 import { registry } from "@web/core/registry";
 
 import { useReportEditorModel } from "@web_studio/client_action/report_editor/report_editor_model";

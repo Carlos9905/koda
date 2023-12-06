@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { _t } from "@web/core/l10n/translation";
 import { renderToElement } from "@web/core/utils/render";
 import { KeepLast } from "@web/core/utils/concurrency";
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 publicWidget.registry.websiteSaleDelivery = publicWidget.Widget.extend({
     selector: '.oe_website_sale',

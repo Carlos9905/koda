@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
     <!-- MRR Breakdown -->
     <record id="view_sale_order_log_growth_pivot" model="ir.ui.view">
@@ -163,4 +163,4 @@
               parent="sale_subscription.menu_sale_subscription_report" action="sale_order_log_analysis_action"
               sequence="40"/>
 
-</odoo>
+</koda>

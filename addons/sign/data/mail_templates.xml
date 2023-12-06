@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="sign_template_mail_request">
 <table border="0" cellpadding="0" style="background-color: white; padding: 0px; border-collapse:separate;">
     <tr>
@@ -154,4 +154,4 @@
             </tr>
         </table>
     </template>
-</odoo>
+</koda>

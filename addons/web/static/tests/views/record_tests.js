@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { Field } from "@web/views/fields/field";
@@ -17,7 +17,7 @@ import {
 } from "@web/../tests/helpers/utils";
 import { setupViewRegistries } from "@web/../tests/views/helpers";
 
-import { Component, xml, useState } from "@odoo/owl";
+import { Component, xml, useState } from "@koda/owl";
 
 let serverData;
 let target;

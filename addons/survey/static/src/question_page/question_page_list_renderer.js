@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { makeContext } from "@web/core/context";
 import { ListRenderer } from "@web/views/list/list_renderer";
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 export class QuestionPageListRenderer extends ListRenderer {
     setup() {

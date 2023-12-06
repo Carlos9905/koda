@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "@web/core/registry";
 import { hotkeyService } from "@web/core/hotkeys/hotkey_service";
@@ -7,7 +7,7 @@ import { makeTestEnv } from "../../helpers/mock_env";
 import { getFixture, mount, dragAndDrop } from "../../helpers/utils";
 import { makeFakeDialogService } from "../../helpers/mock_services";
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@koda/owl";
 const serviceRegistry = registry.category("services");
 let parent;
 let target;

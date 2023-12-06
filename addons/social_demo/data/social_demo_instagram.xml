@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<koda>
 <data noupdate="1">
     <record id="social_stream_instagram_account" model="social.stream">
         <field name="name">Instagram Posts: My Company</field>
@@ -25,4 +25,4 @@
         <field name="stream_post_id" ref="social_stream_post_instagram_1" />
     </record>
 </data>
-</odoo>
+</koda>

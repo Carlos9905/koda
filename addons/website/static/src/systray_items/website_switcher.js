@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { browser } from "@web/core/browser/browser";
@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import wUtils from '@website/js/utils';
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class WebsiteSwitcherSystray extends Component {
     setup() {

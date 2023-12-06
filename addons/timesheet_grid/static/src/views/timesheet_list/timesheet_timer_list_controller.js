@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { useState, useSubEnv } from "@odoo/owl";
+import { useState, useSubEnv } from "@koda/owl";
 
 import { ListController } from "@web/views/list/list_controller";
 

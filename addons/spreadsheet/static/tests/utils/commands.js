@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { waitForDataSourcesLoaded } from "@spreadsheet/../tests/utils/model";
 
 const { toCartesian, toZone, lettersToNumber } = spreadsheet.helpers;

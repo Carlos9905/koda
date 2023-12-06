@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { evaluateBooleanExpr } from "@web/core/py_js/py";
 import { Notebook } from "@web/core/notebook/notebook";
@@ -26,7 +26,7 @@ import {
     useRef,
     useState,
     xml,
-} from "@odoo/owl";
+} from "@koda/owl";
 
 export class FormRenderer extends Component {
     setup() {

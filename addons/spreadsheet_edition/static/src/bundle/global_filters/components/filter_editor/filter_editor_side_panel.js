@@ -1,14 +1,14 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { CommandResult } from "@spreadsheet/o_spreadsheet/cancelled_reason";
 import { useService } from "@web/core/utils/hooks";
 import { globalFiltersFieldMatchers } from "@spreadsheet/global_filters/plugins/global_filters_core_plugin";
 import { SidePanelCollapsible } from "../side_panel_collapsible/side_panel_collapsible";
 import { FilterEditorLabel } from "./filter_editor_label";
 
-import { onWillStart, Component, useRef, useState, toRaw } from "@odoo/owl";
+import { onWillStart, Component, useRef, useState, toRaw } from "@koda/owl";
 
 const { toNumber } = spreadsheet.helpers;
 const uuidGenerator = new spreadsheet.helpers.UuidGenerator();

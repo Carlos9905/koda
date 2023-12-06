@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { TimesheetTimerKanbanRenderer } from "@timesheet_grid/views/timesheet_kanban/timesheet_timer_kanban_renderer";
 import { TimesheetLeaderboard } from "@sale_timesheet_enterprise/components/timesheet_leaderboard/timesheet_leaderboard";
 
 import { patch } from "@web/core/utils/patch";
 import { useService } from "@web/core/utils/hooks";
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 patch(TimesheetTimerKanbanRenderer, {
     components: {

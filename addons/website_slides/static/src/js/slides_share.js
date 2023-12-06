@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import publicWidget from '@web/legacy/js/public/public_widget';
 import '@website_slides/js/slides';

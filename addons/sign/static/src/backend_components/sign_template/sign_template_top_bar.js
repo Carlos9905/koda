@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
@@ -8,7 +8,7 @@ import {
     Many2ManyTagsField,
     Many2ManyTagsFieldColorEditable,
 } from "@web/views/fields/many2many_tags/many2many_tags_field";
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@koda/owl";
 
 const actionFieldsGet = {
     tag_ids: { type: "many2many", relation: "sign.template.tag", string: "Tags" },

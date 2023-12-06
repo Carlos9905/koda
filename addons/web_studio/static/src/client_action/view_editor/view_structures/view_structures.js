@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component, useState } from "@odoo/owl";
+/** @koda-module */
+import { Component, useState } from "@koda/owl";
 
 import { _t } from "@web/core/l10n/translation";
 

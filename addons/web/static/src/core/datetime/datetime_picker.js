@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, onWillRender, onWillUpdateProps, useState } from "@odoo/owl";
+import { Component, onWillRender, onWillUpdateProps, useState } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 import {
     MAX_VALID_DATE,

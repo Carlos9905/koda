@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { Command } from "@mail/../tests/helpers/command";
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="snippets" inherit_id="website.snippets" name="rental snippets">
         <xpath expr="//t[@id='snippet_rental_search_hook']" position="replace">
             <t t-snippet="website_sale_renting.s_rental_search"
@@ -16,4 +16,4 @@
                          data-reload="/"/>
         </xpath>
     </template>
-</odoo>
+</koda>

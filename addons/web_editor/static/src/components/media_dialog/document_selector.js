@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Attachment, FileSelector, IMAGE_MIMETYPES } from './file_selector';
@@ -11,7 +11,7 @@ export class DocumentSelector extends FileSelector {
         super.setup();
 
         this.uploadText = _t("Upload a document");
-        this.urlPlaceholder = "https://www.odoo.com/mydocument";
+        this.urlPlaceholder = "https://www.koda.com/mydocument";
         this.addText = _t("Add document");
         this.searchPlaceholder = _t("Search a document");
         this.allLoadedText = _t("All documents have been loaded");

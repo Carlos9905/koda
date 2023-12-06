@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import wTourUtils from '@website/js/tours/tour_utils';
 import { _t } from "@web/core/l10n/translation";
@@ -35,7 +35,7 @@ const snippets = [
 ];
 
 wTourUtils.registerThemeHomepageTour("odoo_experts_tour", () => [
-    wTourUtils.assertCssVariable('--color-palettes-name', '"odoo-experts-1"'),
+    wTourUtils.assertCssVariable('--color-palettes-name', '"koda-experts-1"'),
     wTourUtils.dragNDrop(snippets[0]),
     wTourUtils.dragNDrop(snippets[1]),
     wTourUtils.dragNDrop(snippets[2]),

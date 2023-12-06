@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 
@@ -32,7 +32,7 @@ import { start } from "@mail/../tests/helpers/test_utils";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
 import { RPCError } from "@web/core/network/rpc_service";
 import { setupManager } from "@mail/../tests/helpers/webclient_setup";
-import { Component, EventBus, onMounted, xml } from "@odoo/owl";
+import { Component, EventBus, onMounted, xml } from "@koda/owl";
 import { fieldService } from "@web/core/field_service";
 import { Setting } from "@web/views/form/setting/setting";
 
@@ -2684,7 +2684,7 @@ QUnit.module("View Editors", (hooks) => {
         registerCleanup(() => {
             window.console = _console;
         });
-        patchWithCleanup(odoo, {
+        patchWithCleanup(koda, {
             debug: true,
         });
         await createViewEditor({
@@ -2701,7 +2701,7 @@ QUnit.module("View Editors", (hooks) => {
                 if (args.method === "onchange") {
                     assert.step("onchange");
                     const error = new RPCError();
-                    error.exceptionName = "odoo.exceptions.ValidationError";
+                    error.exceptionName = "koda.exceptions.ValidationError";
                     error.code = 200;
                     return Promise.reject(error);
                 }
@@ -3339,7 +3339,7 @@ QUnit.module("View Editors", (hooks) => {
 
     QUnit.test("edit one2many list view", async function (assert) {
         // the 'More' button is only available in debug mode
-        patchWithCleanup(odoo, { debug: true });
+        patchWithCleanup(koda, { debug: true });
 
         const changeArch = makeArchChanger();
 

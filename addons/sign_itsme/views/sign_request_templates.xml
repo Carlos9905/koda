@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="sign_itsme._doc_sign" inherit_id="sign._doc_sign">
         <xpath expr="//input[@id='o_sign_input_optional_redirect_url_text']" position="after">
             <t t-if="show_thank_you_dialog">
@@ -10,4 +10,4 @@
             </t>
         </xpath>
     </template>
-</odoo>
+</koda>

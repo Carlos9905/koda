@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<koda>
 <data>
     <!-- EVENTS/CONFIGURATION/EVENT Sponsor Levels -->
     <record id="event_sponsor_type_view_form" model="ir.ui.view">
@@ -96,7 +96,7 @@
                             <field name="phone" widget="phone" string="Phone" options="{'enable_sms': True}"/>
                             <field name="mobile" widget="phone" string="Mobile" options="{'enable_sms': True}"/>
                             <field name="url" widget="url" string="Website"
-                                placeholder="e.g. : https://www.odoo.com"/>
+                                placeholder="e.g. : https://www.koda.com"/>
                         </group>
                         <group>
                             <field name="event_id"/>
@@ -226,4 +226,4 @@
     </record>
 
 </data>
-</odoo>
+</koda>

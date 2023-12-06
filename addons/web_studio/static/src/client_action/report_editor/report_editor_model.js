@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import { Reactive } from "@web_studio/client_action/utils";
 import {
     EventBus,
@@ -9,7 +9,7 @@ import {
     useEnv,
     useState,
     useSubEnv,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 import { omit, pick } from "@web/core/utils/objects";
 import { _t } from "@web/core/l10n/translation";

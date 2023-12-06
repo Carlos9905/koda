@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import {applyModifications, cropperDataFields, activateCropper, loadImage, loadImageInfo} from "@web_editor/js/editor/image_processing";
 import { _t } from "@web/core/l10n/translation";
@@ -10,7 +10,7 @@ import {
     onWillDestroy,
     onWillUpdateProps,
     markup,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class ImageCrop extends Component {

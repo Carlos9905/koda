@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { ViewButton } from "@web/views/view_button/view_button";
 import { ViewCompiler } from "@web/views/view_compiler";
@@ -6,7 +6,7 @@ import { patch } from "@web/core/utils/patch";
 
 import { StudioApproval } from "@web_studio/approval/studio_approval";
 import { useApproval } from "@web_studio/approval/approval_hook";
-import { useSubEnv } from "@odoo/owl";
+import { useSubEnv } from "@koda/owl";
 
 patch(ViewCompiler.prototype, {
     compileButton(el, params) {

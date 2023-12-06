@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { formatCurrency } from "@web/core/currency";
 import {
     ProductTemplateAttributeLine as PTAL

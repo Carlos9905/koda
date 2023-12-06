@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { App } from "@odoo/owl";
+import { App } from "@koda/owl";
 import { registry } from "@web/core/registry";
 import { templates } from "@web/core/assets";
 import { _t } from "@web/core/l10n/translation";

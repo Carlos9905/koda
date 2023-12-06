@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { browser } from "@web/core/browser/browser";
 import {
@@ -17,7 +17,7 @@ import {
 import { KanbanRecord } from "@web/views/kanban/kanban_record";
 import { registry } from "@web/core/registry";
 import { registerCleanup } from "@web/../tests/helpers/cleanup";
-import { onWillRender } from "@odoo/owl";
+import { onWillRender } from "@koda/owl";
 
 /** @type {Node} */
 let target;
@@ -396,11 +396,11 @@ QUnit.module(
             "prevent crash when accessing details of implementation",
             async function (assert) {
                 // the XML editor button is only available in debug mode
-                const initialDebugMode = odoo.debug;
-                odoo.debug = true;
+                const initialDebugMode = koda.debug;
+                koda.debug = true;
 
                 registerCleanup(() => {
-                    odoo.debug = initialDebugMode;
+                    koda.debug = initialDebugMode;
                 });
 
                 const arch = `
@@ -1538,7 +1538,7 @@ QUnit.module(
             registerCleanup(() => {
                 window.console = _console;
             });
-            patchWithCleanup(odoo, {
+            patchWithCleanup(koda, {
                 debug: true,
             });
             await createViewEditor({

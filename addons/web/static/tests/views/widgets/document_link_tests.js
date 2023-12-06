@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 import { getFixture } from "@web/../tests/helpers/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 
@@ -38,7 +38,7 @@ QUnit.module("Widgets", (hooks) => {
         assert.hasAttrValue(
             target.querySelector(".o_doc_link"),
             "href",
-            "https://www.odoo.com/documentation/1.0/applications/technical/web/settings/this_is_a_test.html"
+            "https://www.koda.com/documentation/1.0/applications/technical/web/settings/this_is_a_test.html"
         );
     });
     QUnit.test("documentation_link: absoluth path (http)", async function (assert) {
@@ -49,11 +49,11 @@ QUnit.module("Widgets", (hooks) => {
             arch: `
                 <form>
                     <field name="bar"/>
-                    <widget name="documentation_link"  path="http://www.odoo.com/"/>
+                    <widget name="documentation_link"  path="http://www.koda.com/"/>
                 </form>`,
         });
 
-        assert.hasAttrValue(target.querySelector(".o_doc_link"), "href", "http://www.odoo.com/");
+        assert.hasAttrValue(target.querySelector(".o_doc_link"), "href", "http://www.koda.com/");
     });
     QUnit.test("documentation_link: absoluth path (https)", async function (assert) {
         await makeView({
@@ -63,10 +63,10 @@ QUnit.module("Widgets", (hooks) => {
             arch: `
                 <form>
                     <field name="bar"/>
-                    <widget name="documentation_link"  path="https://www.odoo.com/"/>
+                    <widget name="documentation_link"  path="https://www.koda.com/"/>
                 </form>`,
         });
 
-        assert.hasAttrValue(target.querySelector(".o_doc_link"), "href", "https://www.odoo.com/");
+        assert.hasAttrValue(target.querySelector(".o_doc_link"), "href", "https://www.koda.com/");
     });
 });

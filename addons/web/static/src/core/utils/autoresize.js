@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 import { browser } from "../browser/browser";
 
 /**

@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { formatInteger } from '@web/views/fields/formatters';
 import { useService } from '@web/core/utils/hooks';
-import { Component, onMounted, onWillUnmount, useRef } from "@odoo/owl";
+import { Component, onMounted, onWillUnmount, useRef } from "@koda/owl";
 
 export class StreamPostDashboard extends Component {
 

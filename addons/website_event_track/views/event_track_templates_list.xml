@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="tracks_session" name="Event Tracks">
     <t t-call="website_event.layout">
@@ -478,4 +478,4 @@
         t-out="tag.name"/>
 </template>
 
-</odoo>
+</koda>

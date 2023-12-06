@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, status } from "@odoo/owl";
+import { Component, status } from "@koda/owl";
 import { browser } from "@web/core/browser/browser";
 import { routerService } from "@web/core/browser/router_service";
 import { effectService } from "@web/core/effects/effect_service";

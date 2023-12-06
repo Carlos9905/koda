@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { formatCurrency } from "@web/core/currency";
 
 export class AddToCartNotification extends Component {

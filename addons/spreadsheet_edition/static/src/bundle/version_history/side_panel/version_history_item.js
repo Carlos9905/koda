@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { components, helpers } from "@odoo/o-spreadsheet";
-import { Component, useRef, useState, useEffect } from "@odoo/owl";
+import { components, helpers } from "@koda/o-spreadsheet";
+import { Component, useRef, useState, useEffect } from "@koda/owl";
 import { formatToLocaleString } from "../../helpers";
 import { _t } from "@web/core/l10n/translation";
 

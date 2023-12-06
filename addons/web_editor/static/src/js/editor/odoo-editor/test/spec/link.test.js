@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { URL_REGEX } from '../../src/OdooEditor.js';
 import {
@@ -378,9 +378,9 @@ describe('Link', () => {
                     contentBefore: '<p>a<a href="https://google.com">google.com[]</a></p>',
                     stepFunction: async editor => {
                         await insertLineBreak(editor);
-                        await insertText(editor, 'odoo.com')
+                        await insertText(editor, 'koda.com')
                     },
-                    contentAfter: '<p>a<a href="https://google.com">google.com<br>odoo.com[]</a></p>',
+                    contentAfter: '<p>a<a href="https://google.com">google.com<br>koda.com[]</a></p>',
                 });
             });
         });

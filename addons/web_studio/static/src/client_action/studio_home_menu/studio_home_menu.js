@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { HomeMenu } from "@web_enterprise/webclient/home_menu/home_menu";
@@ -6,7 +6,7 @@ import { useService } from "@web/core/utils/hooks";
 import { NotEditableActionError } from "../../studio_service";
 import { IconCreatorDialog } from "./icon_creator_dialog/icon_creator_dialog";
 
-import { onMounted, onWillUnmount, useRef } from "@odoo/owl";
+import { onMounted, onWillUnmount, useRef } from "@koda/owl";
 const NEW_APP_BUTTON = {
     isNewAppButton: true,
     label: "New App",

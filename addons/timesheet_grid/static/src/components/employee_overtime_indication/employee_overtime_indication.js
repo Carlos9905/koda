@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { formatFloatTime } from "@web/views/fields/formatters";
 import { formatFloat } from "@web/core/utils/numbers";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 export class EmployeeOvertimeIndication extends Component {
     static props = {

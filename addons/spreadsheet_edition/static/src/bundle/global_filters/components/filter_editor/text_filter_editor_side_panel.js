@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { AbstractFilterEditorSidePanel } from "./filter_editor_side_panel";
 import { FilterEditorFieldMatching } from "./filter_editor_field_matching";
 import { TextFilterValue } from "@spreadsheet/global_filters/components/filter_text_value/filter_text_value";
 
-import { components } from "@odoo/o-spreadsheet";
-import { useState } from "@odoo/owl";
+import { components } from "@koda/o-spreadsheet";
+import { useState } from "@koda/owl";
 
 const { SelectionInput } = components;
 

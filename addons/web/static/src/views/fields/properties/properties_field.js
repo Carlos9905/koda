@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
@@ -16,7 +16,7 @@ import { archParseBoolean } from "@web/views/utils";
 import { pick } from "@web/core/utils/objects";
 import { useSortable } from "@web/core/utils/sortable_owl";
 
-import { Component, useRef, useState, useEffect, onWillStart } from "@odoo/owl";
+import { Component, useRef, useState, useEffect, onWillStart } from "@koda/owl";
 
 export class PropertiesField extends Component {
     static template = "web.PropertiesField";

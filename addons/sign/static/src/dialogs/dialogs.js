@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { InitialsAllPagesDialog } from "./initials_all_pages_dialog";
 import { PublicSignerDialog } from "./public_signer_dialog";

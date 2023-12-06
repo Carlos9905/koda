@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { decodeDataBehaviorProps, getVideoUrl } from "@knowledge/js/knowledge_utils";
 import { fetchValidHeadings } from '@knowledge/js/tools/knowledge_tools';

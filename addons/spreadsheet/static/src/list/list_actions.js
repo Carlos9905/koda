@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { astToFormula } from "@odoo/o-spreadsheet";
+import { astToFormula } from "@koda/o-spreadsheet";
 import { getFirstListFunction, getNumberOfListFormulas } from "./list_helpers";
 
 export const SEE_RECORD_LIST = async (position, env) => {

@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { FileUploader } from "@web/views/fields/file_handler";
 import { useAutofocus, useService } from "@web/core/utils/hooks";
 import { useEmojiPicker } from "@web/core/emoji_picker/emoji_picker";
-import { Component, useState, useRef } from "@odoo/owl";
+import { Component, useState, useRef } from "@koda/owl";
 
 export class StreamPostCommentsReply extends Component {
     setup() {
@@ -59,7 +59,7 @@ export class StreamPostCommentsReply extends Component {
         );
         const xhr = new window.XMLHttpRequest();
         xhr.open("POST", this.addCommentEndpoint);
-        formData.append("csrf_token", odoo.csrf_token);
+        formData.append("csrf_token", koda.csrf_token);
         formData.append("stream_post_id", this.originalPost.id.raw_value);
         if (this.isCommentEdit) {
             formData.append("is_edit", this.isCommentEdit);

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { StreamPostComment } from '@social/js/stream_post_comment';
 import { StreamPostCommentsReplyYoutube } from './stream_post_comments_reply';

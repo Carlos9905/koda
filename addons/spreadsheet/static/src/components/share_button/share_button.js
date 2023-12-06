@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { browser } from "@web/core/browser/browser";
 import { _t } from "@web/core/l10n/translation";
 
@@ -8,7 +8,7 @@ import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { CopyButton } from "@web/views/fields/copy_clipboard/copy_button";
 import { waitForDataLoaded, freezeOdooData } from "@spreadsheet/helpers/model";
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 
 /**
  * Share button to share a spreadsheet

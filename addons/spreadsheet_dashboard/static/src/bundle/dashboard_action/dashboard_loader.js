@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { DataSources } from "@spreadsheet/data_sources/data_sources";
 import { migrate } from "@spreadsheet/o_spreadsheet/migration";
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@koda/o-spreadsheet";
 
 /**
  * @type {{

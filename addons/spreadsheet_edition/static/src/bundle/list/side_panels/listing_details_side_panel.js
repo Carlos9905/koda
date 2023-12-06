@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { Domain } from "@web/core/domain";
 import { DomainSelector } from "@web/core/domain_selector/domain_selector";
@@ -8,7 +8,7 @@ import { _t } from "@web/core/l10n/translation";
 
 import { EditableName } from "../../o_spreadsheet/editable_name/editable_name";
 
-import { Component, onWillStart, onWillUpdateProps } from "@odoo/owl";
+import { Component, onWillStart, onWillUpdateProps } from "@koda/owl";
 
 export class ListingDetailsSidePanel extends Component {
     setup() {

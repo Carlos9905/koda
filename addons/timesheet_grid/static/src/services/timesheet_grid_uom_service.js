@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { registry } from "@web/core/registry";
 import { GridTimesheetUOM } from "../components/grid_timesheet_uom/grid_timesheet_uom";

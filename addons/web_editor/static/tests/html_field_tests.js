@@ -1,14 +1,14 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { click, editInput, getFixture, makeDeferred, nextTick, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
 import { FormController } from '@web/views/form/form_controller';
 import { HtmlField } from "@web_editor/js/backend/html_field";
 import { MediaDialog } from "@web_editor/components/media_dialog/media_dialog";
-import { parseHTML, setSelection } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
-import { onRendered } from "@odoo/owl";
+import { parseHTML, setSelection } from "@web_editor/js/editor/koda-editor/src/utils/utils";
+import { onRendered } from "@koda/owl";
 import { wysiwygData } from "@web_editor/../tests/test_utils";
-import { OdooEditor } from '@web_editor/js/editor/odoo-editor/src/OdooEditor';
+import { OdooEditor } from '@web_editor/js/editor/koda-editor/src/OdooEditor';
 import { Wysiwyg } from "@web_editor/js/wysiwyg/wysiwyg";
 
 async function iframeReady(iframe) {
@@ -85,13 +85,13 @@ QUnit.module("WebEditor.HtmlField", ({ beforeEach }) => {
         });
         await wysiwygPromise;
 
-        assert.containsOnce(target, ".odoo-editor-editable p:contains(first)");
+        assert.containsOnce(target, ".koda-editor-editable p:contains(first)");
 
         // click on the pager to switch to the next record
         await click(target.querySelector(".o_pager_next"));
 
-        assert.containsOnce(target, ".odoo-editor-editable p:contains(second)");
-        const paragraph = target.querySelector(".odoo-editor-editable p");
+        assert.containsOnce(target, ".koda-editor-editable p:contains(second)");
+        const paragraph = target.querySelector(".koda-editor-editable p");
         setSelection(paragraph, 0, paragraph, 0);
 
         wysiwyg.openMediaDialog();

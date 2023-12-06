@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { browser } from "@web/core/browser/browser";
-import { onWillUnmount, useComponent } from "@odoo/owl";
+import { onWillUnmount, useComponent } from "@koda/owl";
 
 /**
  * Creates a batched version of a callback so that all calls to it in the same

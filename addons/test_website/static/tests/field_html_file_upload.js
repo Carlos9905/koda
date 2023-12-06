@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { FileSelectorControlPanel } from '@web_editor/components/media_dialog/file_selector';
 import { getFixture, patchWithCleanup } from "@web/../tests/helpers/utils";
@@ -10,7 +10,7 @@ import { unsplashService } from '@web_unsplash/services/unsplash_service';
 import { createWebClient, doAction } from "@web/../tests/webclient/helpers";
 import weTestUtils from '@web_editor/../tests/test_utils';
 import {Wysiwyg} from '@web_editor/js/wysiwyg/wysiwyg';
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@koda/owl";
 
 QUnit.module('field html file upload', {
     beforeEach: function () {

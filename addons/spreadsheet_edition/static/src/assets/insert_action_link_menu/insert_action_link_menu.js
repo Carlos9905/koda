@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { useService } from "@web/core/utils/hooks";
 import { SpreadsheetSelectorDialog } from "@spreadsheet_edition/assets/components/spreadsheet_selector_dialog/spreadsheet_selector_dialog";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 
 /**
  * Insert a link to a view in spreadsheet

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { LoadableDataSource } from "./data_source";
 import { Domain } from "@web/core/domain";

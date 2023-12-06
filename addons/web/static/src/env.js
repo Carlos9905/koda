@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { registry } from "./core/registry";
 import { templates } from "./core/assets";
-import { App, EventBus } from "@odoo/owl";
+import { App, EventBus } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 
 // -----------------------------------------------------------------------------
@@ -31,7 +31,7 @@ export function makeEnv() {
     return {
         bus: new EventBus(),
         services: {},
-        debug: odoo.debug,
+        debug: koda.debug,
         get isSmall() {
             throw new Error("UI service not initialized!");
         },
@@ -176,7 +176,7 @@ async function _startServices(env, toStart) {
  * created and the services will be started, it will also be set as the root
  * in `__WOWL_DEBUG__`
  *
- * @param {import("@odoo/owl").Component} component the component to mount
+ * @param {import("@koda/owl").Component} component the component to mount
  * @param {HTMLElement} target the HTML element in which to mount the app
  * @param {Partial<ConstructorParameters<typeof App>[1]>} [appConfig] object
  *  containing a (partial) config for the app.
@@ -200,7 +200,7 @@ export async function mountComponent(component, target, appConfig = {}) {
     });
     const root = await app.mount(target);
     if (isRoot) {
-        odoo.__WOWL_DEBUG__ = { root };
+        koda.__WOWL_DEBUG__ = { root };
     }
     return app;
 }

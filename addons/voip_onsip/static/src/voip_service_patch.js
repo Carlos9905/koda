@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 
 import { Voip } from "@voip/core/voip_service";
 

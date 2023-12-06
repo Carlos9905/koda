@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { registries, helpers } from "@odoo/o-spreadsheet";
+import { registries, helpers } from "@koda/o-spreadsheet";
 import { createSpreadsheetTestAction } from "./utils/helpers";
 import {
     editInput,

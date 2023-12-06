@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <!-- Cover -->
 <record id="s_cover_default_image" model="theme.ir.attachment">
@@ -196,4 +196,4 @@
     <field name="url">/theme_aviato/static/src/img/content/s_wall_04.jpg</field>
 </record>
 
-</odoo>
+</koda>

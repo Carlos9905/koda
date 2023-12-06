@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { delay } from "@web/core/utils/concurrency";
 

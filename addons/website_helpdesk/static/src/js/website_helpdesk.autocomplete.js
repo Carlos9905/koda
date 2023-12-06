@@ -1,4 +1,4 @@
-/** @odoo-module  */
+/** @koda-module  */
 
 import { KeepLast } from "@web/core/utils/concurrency";
 import publicWidget from '@web/legacy/js/public/public_widget';

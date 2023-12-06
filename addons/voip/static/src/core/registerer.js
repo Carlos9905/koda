@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @koda-module */
 /* global SIP */
 
 import { _t } from "@web/core/l10n/translation";

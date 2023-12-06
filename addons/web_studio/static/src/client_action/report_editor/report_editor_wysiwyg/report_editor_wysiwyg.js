@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import {
     Component,
     onWillStart,
@@ -7,7 +7,7 @@ import {
     onWillUnmount,
     reactive,
     useState,
-} from "@odoo/owl";
+} from "@koda/owl";
 import { loadBundle } from "@web/core/assets";
 import { _t } from "@web/core/l10n/translation";
 import { omit } from "@web/core/utils/objects";
@@ -17,7 +17,7 @@ import { sortBy } from "@web/core/utils/arrays";
 import { useOwnedDialogs, useService } from "@web/core/utils/hooks";
 import { SelectMenu } from '@web/core/select_menu/select_menu';
 import { QWebPlugin } from "@web_editor/js/backend/QWebPlugin";
-import { setSelection, startPos, endPos } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
+import { setSelection, startPos, endPos } from "@web_editor/js/editor/koda-editor/src/utils/utils";
 
 import { StudioDynamicPlaceholderPopover } from "./studio_dynamic_placeholder_popover";
 import { Many2ManyTagsField } from "@web/views/fields/many2many_tags/many2many_tags_field";
@@ -265,7 +265,7 @@ export class ReportEditorWysiwyg extends Component {
                 this.reportEditorModel.loadReportQweb(),
             ]);
             this.Wysiwyg = (
-                await odoo.loader.modules.get("@web_editor/js/wysiwyg/wysiwyg")
+                await koda.loader.modules.get("@web_editor/js/wysiwyg/wysiwyg")
             ).Wysiwyg;
         });
 
@@ -316,7 +316,7 @@ export class ReportEditorWysiwyg extends Component {
             odooEditor.addEventListener("observerActive", observe);
 
             odooEditor.observerUnactive();
-            if (odoo.debug) {
+            if (koda.debug) {
                 ["t-esc", "t-out", "t-field"].forEach((tAtt) => {
                     odooEditor.document.querySelectorAll(`*[${tAtt}]`).forEach((e) => {
                         // Save the previous title to set it back before saving the report
@@ -416,7 +416,7 @@ export class ReportEditorWysiwyg extends Component {
         };
 
         // Clean technical title
-        if (odoo.debug) {
+        if (koda.debug) {
             editableClone.querySelectorAll("*[t-field],*[t-out],*[t-esc]").forEach((e) => {
                 if (e.hasAttribute("data-oe-title")) {
                     e.setAttribute("title", e.getAttribute("data-oe-title"));
@@ -603,7 +603,7 @@ export class ReportEditorWysiwyg extends Component {
                 span.textContent = defaultValue;
                 span.setAttribute("t-field", `${qwebVar}.${fieldNameChain}`);
 
-                if (odoo.debug) {
+                if (koda.debug) {
                     span.setAttribute("title", `${qwebVar}.${fieldNameChain}`);
                 }
 

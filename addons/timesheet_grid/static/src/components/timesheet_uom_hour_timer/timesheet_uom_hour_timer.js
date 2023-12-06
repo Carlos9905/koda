@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 
 import { TimesheetDisplayTimer } from "../timesheet_display_timer/timesheet_display_timer";
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 
 export class TimesheetUOMHourTimer extends Component {
     setup() {

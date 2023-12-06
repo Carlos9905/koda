@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <data noupdate="1">
         <!-- Validate timesheets if older than 10 days -->
         <function model="account.analytic.line" name="write">
@@ -75,4 +75,4 @@
             <field name="billable_time_target">160</field>
         </record>
     </data>
-</odoo>
+</koda>

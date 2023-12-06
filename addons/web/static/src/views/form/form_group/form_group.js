@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { Component } from "@odoo/owl";
+/** @koda-module */
+import { Component } from "@koda/owl";
 import { sortBy } from "@web/core/utils/arrays";
 
 class Group extends Component {

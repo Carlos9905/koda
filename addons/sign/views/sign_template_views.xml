@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- Signature Request Template Views -->
     <record id="sign_template_view_kanban" model="ir.ui.view">
         <field name="name">sign.template.kanban</field>
@@ -438,4 +438,4 @@
     <menuitem id="sign_request_documents" name="All documents" parent="sign_request_menu" action="sign_request_action"/>
     <menuitem id="sign_request_waiting_for_me" name="Waiting for me" parent="sign_request_menu" action="sign_request_waiting_for_me_action"/>
     <menuitem id="sign_request_my_requests" name="My requests" parent="sign_request_menu" action="sign_request_my_requests_action"/>
-</odoo>
+</koda>

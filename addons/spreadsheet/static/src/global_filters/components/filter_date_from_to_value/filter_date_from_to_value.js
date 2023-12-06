@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 import { DateTimeInput } from "@web/core/datetime/datetime_input";
 import { serializeDate, deserializeDate } from "@web/core/l10n/dates";

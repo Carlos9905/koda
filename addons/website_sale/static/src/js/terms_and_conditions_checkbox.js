@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from '@odoo/owl';
+import { Component } from '@koda/owl';
 import publicWidget from '@web/legacy/js/public/public_widget';
 
 publicWidget.registry.TermsAndConditionsCheckbox = publicWidget.Widget.extend({

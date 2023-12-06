@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { makeTestEnv } from "../../helpers/mock_env";
 import { setupWebClientRegistries, doAction, getActionManagerServerData } from "./../helpers";

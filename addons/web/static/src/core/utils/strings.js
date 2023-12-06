@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export const nbsp = "\u00a0";
 

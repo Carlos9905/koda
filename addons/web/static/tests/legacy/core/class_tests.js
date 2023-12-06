@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import Class from "@web/legacy/js/core/class";
 

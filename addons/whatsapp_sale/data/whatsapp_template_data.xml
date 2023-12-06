@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <record id="whatsapp_template_sale_order" model="whatsapp.template">
         <field name="name">Sale Order</field>
         <field name="template_name">sale</field>
@@ -63,4 +63,4 @@ Thank you.
             })
         ]" />
     </record>
-</odoo>
+</koda>

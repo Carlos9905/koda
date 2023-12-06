@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @koda-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { formatDate } from "@web/core/l10n/dates";
 
 export class MilestonesPopover extends Component {

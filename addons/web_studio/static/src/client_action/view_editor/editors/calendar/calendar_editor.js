@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { calendarView } from "@web/views/calendar/calendar_view";
 import { registry } from "@web/core/registry";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@koda/owl";
 import { InteractiveEditorSidebar } from "@web_studio/client_action/view_editor/interactive_editor/interactive_editor_sidebar";
 import { Property } from "@web_studio/client_action/view_editor/property/property";
 import { SidebarViewToolbox } from "@web_studio/client_action/view_editor/interactive_editor/sidebar_view_toolbox/sidebar_view_toolbox";

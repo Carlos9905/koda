@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <record id="ir_rule_spreadsheet_dashboard" model="ir.rule">
         <field name="name">Spreadsheet dashboard: groups</field>
         <field name="model_id" ref="model_spreadsheet_dashboard" />
@@ -24,4 +24,4 @@
         <field name="groups" eval="[(4, ref('base.group_user'))]" />
         <field name="domain_force">[('create_uid', '=', user.id)]</field>
     </record>
-</odoo>
+</koda>

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { registry } from "@web/core/registry";
 import { actionService } from "@web/webclient/actions/action_service";
 import { menuService } from "@web/webclient/menus/menu_service";
@@ -33,15 +33,15 @@ QUnit.test("click a web link", async (assert) => {
     const data = {
         sheets: [
             {
-                cells: { A1: { content: "[Odoo](https://odoo.com)" } },
+                cells: { A1: { content: "[Odoo](https://koda.com)" } },
             },
         ],
     };
     const model = new Model(data, { custom: { env } });
     const cell = getEvaluatedCell(model, "A1");
-    assert.strictEqual(urlRepresentation(cell.link, model.getters), "https://odoo.com");
+    assert.strictEqual(urlRepresentation(cell.link, model.getters), "https://koda.com");
     openLink(cell.link, env);
-    assert.verifySteps(["https://odoo.com"]);
+    assert.verifySteps(["https://koda.com"]);
 });
 
 QUnit.test("click a menu link", async (assert) => {
@@ -60,7 +60,7 @@ QUnit.test("click a menu link", async (assert) => {
     const data = {
         sheets: [
             {
-                cells: { A1: { content: "[label](odoo://ir_menu_xml_id/test_menu)" } },
+                cells: { A1: { content: "[label](koda://ir_menu_xml_id/test_menu)" } },
             },
         ],
     };
@@ -81,7 +81,7 @@ QUnit.test("click a menu link", async (assert) => {
                     assert.deepEqual(action, {
                         context: undefined,
                         domain: undefined,
-                        name: "an odoo view",
+                        name: "an koda view",
                         res_model: "partner",
                         target: "current",
                         type: "ir.actions.act_window",
@@ -94,7 +94,7 @@ QUnit.test("click a menu link", async (assert) => {
     registry.category("services").add("action", fakeActionService, { force: true });
     const env = await makeTestEnv({ serverData: getMenuServerData() });
     const view = {
-        name: "an odoo view",
+        name: "an koda view",
         viewType: "list",
         action: {
             modelName: "partner",
@@ -104,13 +104,13 @@ QUnit.test("click a menu link", async (assert) => {
     const data = {
         sheets: [
             {
-                cells: { A1: { content: `[a view](odoo://view/${JSON.stringify(view)})` } },
+                cells: { A1: { content: `[a view](koda://view/${JSON.stringify(view)})` } },
             },
         ],
     };
     const model = new Model(data, { custom: { env } });
     const cell = getEvaluatedCell(model, "A1");
-    assert.strictEqual(urlRepresentation(cell.link, model.getters), "an odoo view");
+    assert.strictEqual(urlRepresentation(cell.link, model.getters), "an koda view");
     openLink(cell.link, env);
     assert.verifySteps(["do-action"]);
 });

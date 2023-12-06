@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 export function getFormattedDateSpan(start, end) {
     const isSameDay = start.hasSame(end, "days");

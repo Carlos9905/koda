@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { helpers } from "@odoo/o-spreadsheet";
+import { helpers } from "@koda/o-spreadsheet";
 
 const { toUnboundedZone } = helpers;
 

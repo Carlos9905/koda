@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import { Component, onMounted, useRef, useState } from "@odoo/owl";
+import { Component, onMounted, useRef, useState } from "@koda/owl";
 import { VersionHistoryItem } from "./version_history_item";
 
 export class VersionHistorySidePanel extends Component {

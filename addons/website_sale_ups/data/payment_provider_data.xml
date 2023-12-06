@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<koda noupdate="1">
 
     <record id="payment_provider_ups_cod" model="payment.provider">
         <field name="name">Cash on Delivery</field>
@@ -18,4 +18,4 @@
         <field name="pending_msg"><![CDATA[
 <p><i>Pending</i>, Thanks for choosing COD(Collect on Delivery/Cash on Delivery) option. Delivery boy will collect the payment on delivery.</p>]]></field>
     </record>
-</odoo>
+</koda>

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { IrMenuSelector } from "@spreadsheet_edition/bundle/ir_menu_selector/ir_menu_selector";
 import { Domain } from "@web/core/domain";
@@ -7,7 +7,7 @@ import { DomainSelectorDialog } from "@web/core/domain_selector_dialog/domain_se
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 
-import { Component, onWillStart, onWillUpdateProps } from "@odoo/owl";
+import { Component, onWillStart, onWillUpdateProps } from "@koda/owl";
 
 export class CommonOdooChartConfigPanel extends Component {
     setup() {

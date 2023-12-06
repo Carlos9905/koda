@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import {
     getCell,
@@ -20,7 +20,7 @@ import { makeDeferred, nextTick, patchWithCleanup } from "@web/../tests/helpers/
 import { session } from "@web/session";
 import { makeServerError } from "@web/../tests/helpers/mock_server";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { DEFAULT_LOCALE } = spreadsheet.constants;
 
 QUnit.module("spreadsheet > pivot plugin", {}, () => {

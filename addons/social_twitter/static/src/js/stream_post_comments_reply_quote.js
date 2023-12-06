@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { StreamPostCommentsReplyTwitter } from './stream_post_comments_reply';
 

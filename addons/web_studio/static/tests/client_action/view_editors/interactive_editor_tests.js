@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 import {
     click,
     dragAndDrop,
@@ -23,7 +23,7 @@ import { CodeEditor } from "@web/core/code_editor/code_editor";
 import { registry } from "@web/core/registry";
 import { charField } from "@web/views/fields/char/char_field";
 import { COMPUTED_DISPLAY_OPTIONS } from "@web_studio/client_action/view_editor/interactive_editor/properties/field_properties/field_type_properties";
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@koda/owl";
 
 /* global ace */
 
@@ -781,7 +781,7 @@ QUnit.module("View Editors", () => {
         });
 
         QUnit.test("open XML editor in read-only", async function (assert) {
-            patchWithCleanup(odoo, {
+            patchWithCleanup(koda, {
                 debug: true,
             });
 
@@ -860,7 +860,7 @@ QUnit.module("View Editors", () => {
         });
 
         QUnit.test("XML editor: reset operations stack", async function (assert) {
-            patchWithCleanup(odoo, {
+            patchWithCleanup(koda, {
                 debug: true,
             });
 
@@ -983,7 +983,7 @@ QUnit.module("View Editors", () => {
         });
 
         QUnit.test("blockUI not removed just after rename", async function (assert) {
-            patchWithCleanup(odoo, {
+            patchWithCleanup(koda, {
                 debug: true,
             });
 

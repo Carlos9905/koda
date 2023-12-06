@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<koda>
     <record id="rental_sign_documents" model="ir.actions.act_window">
         <field name="name">Sign Documents</field>
         <field name="res_model">rental.sign.wizard</field>
@@ -24,4 +24,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

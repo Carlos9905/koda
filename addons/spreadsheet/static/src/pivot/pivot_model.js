@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { Domain } from "@web/core/domain";
 import { sprintf } from "@web/core/utils/strings";
 import { PivotModel } from "@web/views/pivot/pivot_model";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 import { PERIODS } from "@spreadsheet/pivot/pivot_helpers";
 import { SpreadsheetPivotTable } from "@spreadsheet/pivot/pivot_table";
 import { pivotTimeAdapter } from "./pivot_time_adapters";

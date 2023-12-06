@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @koda-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@koda/o-spreadsheet";
 const { load, CorePlugin, tokenize, parse, convertAstNodes, astToFormula } = spreadsheet;
 const { corePluginRegistry } = spreadsheet.registries;
 
@@ -18,7 +18,7 @@ const MAP = {
 const dmyRegex = /^([0|1|2|3][1-9])\/(0[1-9]|1[0-2])\/(\d{4})$/i;
 
 export function migrate(data) {
-    let _data = load(data, !!odoo.debug);
+    let _data = load(data, !!koda.debug);
     const version = _data.odooVersion || 0;
     if (version < 1) {
         _data = migrate0to1(_data);

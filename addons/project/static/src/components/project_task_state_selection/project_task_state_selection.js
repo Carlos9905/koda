@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import {
@@ -9,7 +9,7 @@ import { useCommand } from "@web/core/commands/command_hook";
 import { formatSelection } from "@web/views/fields/formatters";
 
 import { registry } from "@web/core/registry";
-import { useState } from "@odoo/owl";
+import { useState } from "@koda/owl";
 
 export class ProjectTaskStateSelection extends StateSelectionField {
     setup() {

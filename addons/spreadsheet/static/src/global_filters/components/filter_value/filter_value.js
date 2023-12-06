@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { MultiRecordSelector } from "@web/core/record_selectors/multi_record_selector";
 import { RELATIVE_DATE_RANGE_TYPES } from "@spreadsheet/helpers/constants";
 import { DateFilterValue } from "../filter_date_value/filter_date_value";
 import { DateFromToValue } from "../filter_date_from_to_value/filter_date_from_to_value";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@koda/owl";
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { TextFilterValue } from "../filter_text_value/filter_text_value";

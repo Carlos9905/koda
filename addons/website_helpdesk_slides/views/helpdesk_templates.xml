@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <template id="knowledge_base_slides_card" inherit_id="website_helpdesk.knowledge_base">
         <xpath expr="//div[@id='o_knowledge_base_sections']" position="inside">
             <div class="col" t-if="team.show_knowledge_base_slide_channel">
@@ -114,4 +114,4 @@
     <template id="website_helpdesk_slides.helpdesk_courses" inherit_id="website_slides.courses_all" primary="True">
         <xpath expr="//nav" position="replace"/>
     </template>
-</odoo>
+</koda>

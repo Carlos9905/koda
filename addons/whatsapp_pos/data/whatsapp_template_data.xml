@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo noupdate="1">
+<koda noupdate="1">
     <record id="whatsapp_template_pos_attach" model="ir.attachment">
         <field name="name">receipt.png</field>
         <field name="type">binary</field>
@@ -48,4 +48,4 @@ Thank you for shopping with us.
             })
         ]" />
     </record>
-</odoo>
+</koda>

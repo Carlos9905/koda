@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { WebsiteSale } from '@website_sale/js/website_sale';
 import { RentingMixin } from '@website_sale_renting/js/renting_mixin';

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { uniqueId } from '@web/core/utils/functions';
 import { _t } from "@web/core/l10n/translation";

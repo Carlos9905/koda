@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { _t } from "@web/core/l10n/translation";
-import { astToFormula, UIPlugin, tokenize } from "@odoo/o-spreadsheet";
+import { astToFormula, UIPlugin, tokenize } from "@koda/o-spreadsheet";
 import { sprintf } from "@web/core/utils/strings";
 import { getFirstListFunction, getNumberOfListFormulas } from "@spreadsheet/list/list_helpers";
 

@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { getActiveHotkey } from "@web/core/hotkeys/hotkey_service";
 
-import { useEffect, useRef } from "@odoo/owl";
+import { useEffect, useRef } from "@koda/owl";
 
 /**
  * This hook allows to navigate between tags in a record selector. It also

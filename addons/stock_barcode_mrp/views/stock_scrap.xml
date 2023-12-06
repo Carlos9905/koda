@@ -1,4 +1,4 @@
-<odoo>
+<koda>
     <record id="scrap_product_selector" model="ir.ui.view">
         <field name="name">scrap.product.selector</field>
         <field name="model">stock.scrap</field>
@@ -61,4 +61,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</koda>

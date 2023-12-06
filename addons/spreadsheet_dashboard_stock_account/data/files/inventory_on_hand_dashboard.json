@@ -50,12 +50,12 @@
             "cells": {
                 "A7": {
                     "style": 1,
-                    "content": "[Stock Quantity by Location](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[[\"location_id.usage\",\"=\",\"internal\"]],\"context\":{\"group_by\":[\"location_id\"],\"graph_measure\":\"quantity\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"location_id\"]},\"modelName\":\"stock.quant\",\"views\":[[false,\"list\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Stock Quantity by Location\"})",
+                    "content": "[Stock Quantity by Location](koda://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[[\"location_id.usage\",\"=\",\"internal\"]],\"context\":{\"group_by\":[\"location_id\"],\"graph_measure\":\"quantity\",\"graph_mode\":\"pie\",\"graph_groupbys\":[\"location_id\"]},\"modelName\":\"stock.quant\",\"views\":[[false,\"list\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Stock Quantity by Location\"})",
                     "border": 1
                 },
                 "A19": {
                     "style": 1,
-                    "content": "[Top Locations](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"location_id.usage\",\"=\",\"internal\"]],\"context\":{\"group_by\":[\"location_id\"],\"pivot_measures\":[\"reserved_quantity\",\"quantity\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"location_id\"]},\"modelName\":\"stock.quant\",\"views\":[[false,\"list\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Locations\"})",
+                    "content": "[Top Locations](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"location_id.usage\",\"=\",\"internal\"]],\"context\":{\"group_by\":[\"location_id\"],\"pivot_measures\":[\"reserved_quantity\",\"quantity\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"location_id\"]},\"modelName\":\"stock.quant\",\"views\":[[false,\"list\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Locations\"})",
                     "border": 1
                 },
                 "A20": {
@@ -105,7 +105,7 @@
                 },
                 "A32": {
                     "style": 1,
-                    "content": "[Top Lots / Serial Numbers](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",[\"location_id.usage\",\"=\",\"internal\"],[\"lot_id\",\"!=\",false]],\"context\":{\"group_by\":[\"lot_id\"],\"pivot_measures\":[\"reserved_quantity\",\"quantity\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"lot_id\"]},\"modelName\":\"stock.quant\",\"views\":[[false,\"list\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Lots / Serial Numbers\"})",
+                    "content": "[Top Lots / Serial Numbers](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[\"&\",[\"location_id.usage\",\"=\",\"internal\"],[\"lot_id\",\"!=\",false]],\"context\":{\"group_by\":[\"lot_id\"],\"pivot_measures\":[\"reserved_quantity\",\"quantity\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"lot_id\"]},\"modelName\":\"stock.quant\",\"views\":[[false,\"list\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Lots / Serial Numbers\"})",
                     "border": 1
                 },
                 "A33": {
@@ -384,7 +384,7 @@
                 },
                 "E19": {
                     "style": 1,
-                    "content": "[Top Products](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"location_id.usage\",\"=\",\"internal\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"reserved_quantity\",\"quantity\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"product_id\"]},\"modelName\":\"stock.quant\",\"views\":[[false,\"list\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Products\"})",
+                    "content": "[Top Products](koda://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"location_id.usage\",\"=\",\"internal\"]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"reserved_quantity\",\"quantity\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"product_id\"]},\"modelName\":\"stock.quant\",\"views\":[[false,\"list\"],[false,\"form\"],[false,\"pivot\"],[false,\"graph\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Top Products\"})",
                     "border": 1
                 },
                 "E20": {

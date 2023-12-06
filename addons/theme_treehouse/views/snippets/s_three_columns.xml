@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
 
 <template id="s_three_columns" inherit_id="website.s_three_columns">
     <!-- Section -->
@@ -44,4 +44,4 @@
     </xpath>
 </template>
 
-</odoo>
+</koda>

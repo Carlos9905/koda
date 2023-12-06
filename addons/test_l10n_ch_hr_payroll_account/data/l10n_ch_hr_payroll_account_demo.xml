@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <function model="res.users" name="write">
         <value eval="[1, 2]"/>
         <value eval="{'company_id': ref('l10n_ch_hr_payroll.res_company_ch')}"/>
@@ -648,7 +648,7 @@
         <field name="category_ids" eval="[(6, 0, [ref('hr.employee_category_4')])]"/>
         <field name="work_location_id" ref="hr.work_location_1"/>
         <field name="work_phone">+3281813700</field>
-        <field name="work_email">gilles@odoo.com</field>
+        <field name="work_email">gilles@koda.com</field>
         <field name="image_1920" type="base64" file="hr/static/img/employee_qdp-image.png"/>
         <field name="identification_id">93051822361</field>
         <field name="address_id" ref="l10n_ch_hr_payroll.res_partner_ruth_schmid_work_address"/>
@@ -1986,4 +1986,4 @@
         <value eval="(DateTime.today() + relativedelta(day=1, months=-1))"/> 
         <value eval="(DateTime.today() + relativedelta(day=31))"/>
     </function>
-</odoo>
+</koda>

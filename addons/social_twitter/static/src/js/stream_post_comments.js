@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { StreamPostComments } from '@social/js/stream_post_comments';
 import { StreamPostCommentListTwitter } from './stream_post_comment_list';
 import { StreamPostCommentsReplyTwitter } from './stream_post_comments_reply';
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@koda/owl";
 
 const MAX_ALLOWED_REPLIES = 3;
 

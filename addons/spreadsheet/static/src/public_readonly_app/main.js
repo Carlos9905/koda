@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import { App, whenReady } from "@odoo/owl";
+/** @koda-module **/
+import { App, whenReady } from "@koda/owl";
 import { PublicReadonlySpreadsheet } from "./public_readonly";
 import { templates } from "@web/core/assets";
 import { makeEnv, startServices } from "@web/env";
@@ -7,13 +7,13 @@ import { session } from "@web/session";
 import { _t } from "@web/core/l10n/translation";
 
 (async function boot() {
-    odoo.info = {
+    koda.info = {
         db: session.db,
         server_version: session.server_version,
         server_version_info: session.server_version_info,
         isEnterprise: session.server_version_info.slice(-1)[0] === "e",
     };
-    odoo.isReady = false;
+    koda.isReady = false;
     const env = makeEnv();
     await startServices(env);
     await whenReady();
@@ -27,6 +27,6 @@ import { _t } from "@web/core/l10n/translation";
         translatableAttributes: ["data-tooltip"],
     });
     const root = await app.mount(document.getElementById("spreadsheet-mount-anchor"));
-    odoo.__WOWL_DEBUG__ = { root };
-    odoo.isReady = true;
+    koda.__WOWL_DEBUG__ = { root };
+    koda.isReady = true;
 })();

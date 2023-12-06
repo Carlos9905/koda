@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { OptionalProductsModal } from "@website_sale_product_configurator/js/sale_product_configurator_modal";
 

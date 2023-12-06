@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @koda-module */
 
 import { freezeOdooData } from "../../src/helpers/model";
 import { createSpreadsheetWithChart } from "../utils/chart";
@@ -10,7 +10,7 @@ import { THIS_YEAR_GLOBAL_FILTER } from "@spreadsheet/../tests/utils/global_filt
 import { addGlobalFilter } from "@spreadsheet/../tests/utils/commands";
 
 QUnit.module("freezing spreadsheet", {}, function () {
-    QUnit.test("odoo pivot functions are replaced with their value", async function (assert) {
+    QUnit.test("koda pivot functions are replaced with their value", async function (assert) {
         const { model } = await createSpreadsheetWithPivot();
         assert.strictEqual(getCell(model, "A3").content, '=ODOO.PIVOT.HEADER(1,"bar","false")');
         assert.strictEqual(
@@ -38,9 +38,9 @@ QUnit.module("freezing spreadsheet", {}, function () {
         );
     });
 
-    QUnit.test("odoo pivot functions detection is not case sensitive", async function (assert) {
+    QUnit.test("koda pivot functions detection is not case sensitive", async function (assert) {
         const { model } = await createSpreadsheetWithPivot();
-        setCellContent(model, "A1", '=odoo.pivot(1,"probability")');
+        setCellContent(model, "A1", '=koda.pivot(1,"probability")');
         setCellContent(model, "A2", '=ODOO.pivot(1,"probability")');
         const data = await freezeOdooData(model);
         const A1 = data.sheets[0].cells.A1;
@@ -66,7 +66,7 @@ QUnit.module("freezing spreadsheet", {}, function () {
         assert.strictEqual(format, "#,##0.00[$€]");
     });
 
-    QUnit.test("odoo charts are replaced with an image", async function (assert) {
+    QUnit.test("koda charts are replaced with an image", async function (assert) {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_bar" });
         const data = await freezeOdooData(model);
         assert.strictEqual(data.sheets[0].figures.length, 1);

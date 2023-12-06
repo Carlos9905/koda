@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<koda>
     <!-- QUALITY.ALERT -->
     <record id="quality_alert_view_search_inherit_quality_control" model="ir.ui.view">
         <field name="name">quality.alert.view.search.inherit.quality.control</field>
@@ -974,4 +974,4 @@
         action="quality_check_action_report"
         parent="menu_quality_reporting"
         sequence="5"/>
-</odoo>
+</koda>

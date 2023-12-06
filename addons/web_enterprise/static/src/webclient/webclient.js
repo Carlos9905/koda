@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @koda-module **/
 
 import { WebClient } from "@web/webclient/webclient";
 import { useService } from "@web/core/utils/hooks";
