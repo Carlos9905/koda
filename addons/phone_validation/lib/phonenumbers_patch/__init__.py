@@ -15,7 +15,7 @@
 
 # https://github.com/google/libphonenumber
 
-from odoo.tools.parse_version import parse_version
+from koda.tools.parse_version import parse_version
 
 try:
     import phonenumbers

@@ -220,7 +220,7 @@ old_init = PdfFileReader.__init__
 PdfFileReader.__init__ = lambda self, stream, strict=True, warndest=None, overwriteWarnings=True: \
     old_init(self, stream=stream, strict=strict, warndest=None, overwriteWarnings=False)
 
-class kodaPdfFileReader(PdfFileReader):
+class KodaPdfFileReader(PdfFileReader):
     # OVERRIDE of PdfFileReader to add the management of multiple embedded files.
 
     ''' Returns the files inside the PDF.
