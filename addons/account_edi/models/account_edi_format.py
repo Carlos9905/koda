@@ -2,7 +2,7 @@
 # Koda
 
 from koda import models, fields, api, _
-from koda.tools.pdf import OdooPdfFileReader
+from koda.tools.pdf import KodaPdfFileReader
 from koda.osv import expression
 from koda.tools import html_escape
 from koda.exceptions import RedirectWarning

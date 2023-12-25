@@ -59,7 +59,7 @@ class IrAttachment(models.Model):
         """
         try:
             buffer = io.BytesIO(content)
-            pdf_reader = OdooPdfFileReader(buffer, strict=False)
+            pdf_reader = KodaPdfFileReader(buffer, strict=False)
         except Exception as e:
             # Malformed pdf
             _logger.warning("Error when reading the pdf: %s", e, exc_info=True)

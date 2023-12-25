@@ -17,7 +17,7 @@ class TestIrActionsReport(AccountTestInvoicingCommon):
         super().setUp()
         self.file = file_open('base/tests/minimal.pdf', 'rb').read()
         self.minimal_reader_buffer = io.BytesIO(self.file)
-        self.minimal_pdf_reader = pdf.OdooPdfFileReader(self.minimal_reader_buffer)
+        self.minimal_pdf_reader = pdf.KodaPdfFileReader(self.minimal_reader_buffer)
 
     def test_download_one_corrupted_pdf(self):
         """

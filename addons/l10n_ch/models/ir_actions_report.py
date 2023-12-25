@@ -2,7 +2,7 @@
 # Koda
 import io
 from koda import api, models
-from koda.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
+from koda.tools.pdf import KodaPdfFileReader, KodaPdfFileWriter
 from pathlib import Path
 from reportlab.graphics.shapes import Image as ReportLabImage
 from reportlab.lib.units import mm
@@ -65,13 +65,13 @@ class IrActionsReport(models.Model):
                     )
 
                     for invoice_id, stream in qr_res.items():
-                        qr_pdf = OdooPdfFileReader(stream['stream'], strict=False)
-                        header_pdf = OdooPdfFileReader(header_res[invoice_id]['stream'], strict=False)
+                        qr_pdf = KodaPdfFileReader(stream['stream'], strict=False)
+                        header_pdf = KodaPdfFileReader(header_res[invoice_id]['stream'], strict=False)
 
                         page = header_pdf.getPage(0)
                         page.mergePage(qr_pdf.getPage(0))
 
-                        output_pdf = OdooPdfFileWriter()
+                        output_pdf = KodaPdfFileWriter()
                         output_pdf.addPage(page)
                         new_pdf_stream = io.BytesIO()
                         output_pdf.write(new_pdf_stream)
@@ -83,9 +83,9 @@ class IrActionsReport(models.Model):
             # Add to results
             for invoice_id, additional_stream in streams_to_append.items():
                 invoice_stream = res[invoice_id]['stream']
-                writer = OdooPdfFileWriter()
-                writer.appendPagesFromReader(OdooPdfFileReader(invoice_stream, strict=False))
-                writer.appendPagesFromReader(OdooPdfFileReader(additional_stream['stream'], strict=False))
+                writer = KodaPdfFileWriter()
+                writer.appendPagesFromReader(KodaPdfFileReader(invoice_stream, strict=False))
+                writer.appendPagesFromReader(KodaPdfFileReader(additional_stream['stream'], strict=False))
                 new_pdf_stream = io.BytesIO()
                 writer.write(new_pdf_stream)
                 res[invoice_id]['stream'] = new_pdf_stream

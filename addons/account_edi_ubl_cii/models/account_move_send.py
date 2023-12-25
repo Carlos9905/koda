@@ -8,7 +8,7 @@ from xml.sax.saxutils import escape, quoteattr
 
 from koda import _, api, fields, models, tools, SUPERUSER_ID
 from koda.tools import cleanup_xml_node
-from koda.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
+from koda.tools.pdf import KodaPdfFileReader, KodaPdfFileWriter
 
 _logger = logging.getLogger(__name__)
 
@@ -146,10 +146,10 @@ class AccountMoveSend(models.TransientModel):
         # Read pdf content.
         pdf_values = invoice_data.get('pdf_attachment_values') or invoice_data['proforma_pdf_attachment_values']
         reader_buffer = io.BytesIO(pdf_values['raw'])
-        reader = OdooPdfFileReader(reader_buffer, strict=False)
+        reader = KodaPdfFileReader(reader_buffer, strict=False)
 
         # Post-process.
-        writer = OdooPdfFileWriter()
+        writer = KodaPdfFileWriter()
         writer.cloneReaderDocumentRoot(reader)
 
         writer.addAttachment('factur-x.xml', xml_facturx, subtype='text/xml')
