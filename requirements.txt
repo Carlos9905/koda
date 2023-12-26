@@ -63,5 +63,5 @@ XlsxWriter==1.1.2
 xlwt==1.3.*
 zeep==4.0.0
 rjsmin==1.1.0
-phonenumbers
-geoip2
+phonenumbers==8.13.27
+geoip2==4.8.0
