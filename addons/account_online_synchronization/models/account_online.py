@@ -15,7 +15,8 @@ from requests.exceptions import RequestException, Timeout, ConnectionError
 from koda import api, fields, models, modules, tools, _
 from koda.exceptions import UserError, CacheMiss, MissingError, ValidationError, RedirectWarning
 from koda.http import request
-from koda.addons.account_online_synchronization.models.kodafin_auth import OdooFinAuth
+from .kodafin_auth import OdooFinAuth
+#from koda.addons.account_online_synchronization.models.kodafin_auth import OdooFinAuth
 from koda.tools.misc import format_amount, format_date, get_lang
 
 _logger = logging.getLogger(__name__)

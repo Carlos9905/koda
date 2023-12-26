@@ -1,4 +1,4 @@
-Contributing to Odoo
+Contributing to Koda
 ====================
 
 [Full contribution guidelines](https://github.com/odoo/odoo/wiki/Contributing)

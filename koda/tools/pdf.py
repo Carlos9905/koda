@@ -244,7 +244,7 @@ class KodaPdfFileReader(PdfFileReader):
             return []
 
 
-class kodaPdfFileWriter(PdfFileWriter):
+class KodaPdfFileWriter(PdfFileWriter):
 
     def __init__(self, *args, **kwargs):
         """
