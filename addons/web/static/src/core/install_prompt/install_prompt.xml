@@ -8,7 +8,7 @@
                     <div t-on-click="onClose" type="button" class="btn-close" aria-label="Close"/>
                 </div>
             </t>
-            <p>Install Odoo on your device to access it easily. Here are the steps to follow:</p>
+            <p>Install Koda on your device to access it easily. Here are the steps to follow:</p>
             <t t-if="isMobileSafari">
                 <ul class="list-group list-group-numbered">
                     <li>

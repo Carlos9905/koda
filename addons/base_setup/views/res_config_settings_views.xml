@@ -104,7 +104,7 @@
                         <div id="contacts_settings">
                             <block title="Contacts" name="contacts_setting_container">
                                 <setting id="sms" string="Send SMS" documentation="/applications/marketing/sms_marketing/pricing/pricing_and_faq.html" help="Send texts to your contacts" />
-                                <setting help="Automatically enrich your contact base with company data" title="When populating your address book, Odoo provides a list of matching companies. When selecting one item, the company data and logo are auto-filled." id="partner_autocomplete">
+                                <setting help="Automatically enrich your contact base with company data" title="When populating your address book, Koda provides a list of matching companies. When selecting one item, the company data and logo are auto-filled." id="partner_autocomplete">
                                     <field name="module_partner_autocomplete"/>
                                 </setting>
                         </block>
@@ -119,7 +119,7 @@
                                 </div>
                             </div>
                         </setting>
-                        <setting string="API Keys" help="API Keys allow your users to access Odoo with external tools when multi-factor authentication is enabled." groups="base.group_system">
+                        <setting string="API Keys" help="API Keys allow your users to access Koda with external tools when multi-factor authentication is enabled." groups="base.group_system">
                             <button type="action" name="%(base.action_apikeys_admin)d" string="Manage API Keys" icon="oi-arrow-right" class="btn-link"/>
                         </setting>
                         <setting string="Import &amp; Export" help="Allow users to import data from CSV/XLS/XLSX/ODS files" documentation="/applications/general/export_import_data.html" groups="base.group_no_one" id="allow_import">
@@ -131,8 +131,8 @@
                     </block>
 
                     <block title="Progressive Web App" id="pwa_settings" groups="base.group_no_one">
-                        <setting help="This name will be used for the application when Odoo is installed through the browser.">
-                            <field name="web_app_name" placeholder="Odoo"/>
+                        <setting help="This name will be used for the application when Koda is installed through the browser.">
+                            <field name="web_app_name" placeholder="Koda"/>
                         </setting>
                     </block>
 
@@ -189,11 +189,12 @@
                         <widget name='res_config_dev_tool'/>
                         <div id='about'>
                             <block title="About" name="about_setting_container">
+                                <!--
                                 <setting id='appstore'>
                                     <div class="d-flex">
                                         <div>
-                                            <!-- FIXME Those links are defined directly in the template which means that we will have to
-                                            update the template code is the link ever changes -->
+
+                                            update the template code is the link ever changes
                                             <a class="d-block mx-auto" href="https://play.google.com/store/apps/details?id=com.koda.mobile" target="blank">
                                                 <img alt="On Google Play" class="d-block mx-auto img img-fluid" src="/base_setup/static/src/img/google_play.png"/>
                                             </a>
@@ -205,6 +206,7 @@
                                         </div>
                                     </div>
                                 </setting>
+                                -->
                                 <widget name='res_config_edition'/>
                             </block>
                         </div>
