@@ -13,7 +13,7 @@ const viewRegistry = registry.category("views");
 export const pivotView = {
     type: "pivot",
     display_name: _t("Pivot"),
-    icon: "oi oi-view-pivot",
+    icon: "fa fa-table",
     multiRecord: true,
     Controller: PivotController,
     Renderer: PivotRenderer,

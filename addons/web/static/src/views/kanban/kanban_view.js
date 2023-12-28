@@ -11,7 +11,7 @@ export const kanbanView = {
     type: "kanban",
 
     display_name: "Kanban",
-    icon: "oi oi-view-kanban",
+    icon: "fa fa-th-large",
     multiRecord: true,
 
     ArchParser: KanbanArchParser,
