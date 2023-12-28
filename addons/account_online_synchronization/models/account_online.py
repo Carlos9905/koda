@@ -950,7 +950,7 @@ class AccountOnlineLink(models.Model):
         country = self.env.company.country_id
         action = {
             'type': 'ir.actions.client',
-            'tag': 'koda_fin_connector',
+            'tag': 'odoo_fin_connector',
             'id': self.id,
             'params': {
                 'proxyMode': proxy_mode,

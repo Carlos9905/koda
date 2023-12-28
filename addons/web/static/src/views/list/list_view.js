@@ -9,7 +9,7 @@ import { ListRenderer } from "./list_renderer";
 export const listView = {
     type: "list",
     display_name: "List",
-    icon: "oi oi-view-list",
+    icon: "fa fa-th-list",
     multiRecord: true,
     Controller: ListController,
     Renderer: ListRenderer,
