@@ -1,0 +1,2 @@
+debian/koda.conf /etc/koda
+README.md /usr/share/doc/koda

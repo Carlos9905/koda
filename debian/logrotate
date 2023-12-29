@@ -1,0 +1,5 @@
+/var/log/koda/*.log {
+    copytruncate
+    missingok
+    notifempty
+}

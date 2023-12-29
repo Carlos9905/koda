@@ -1,0 +1,14 @@
+[Unit]
+Description=Koda System
+After=network.target
+
+[Service]
+Type=simple
+User=odoo
+Group=odoo
+ExecStart=/usr/bin/koda --config /etc/koda/koda.conf --logfile /var/log/koda/koda-server.log
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+

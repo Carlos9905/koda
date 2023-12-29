@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+KODA_LIB_DIR=/var/lib/koda
+KODA_USER="koda"
+KODA_GROUP="koda"
+
+case "${1}" in
+    remove)
+        deluser --quiet --system $KODA_USER || true
+        delgroup --quiet --system --only-if-empty $KODA_GROUP || true
+        ;;
+
+    purge)
+        if [ -d "$KODA_LIB_DIR" ]; then
+            rm -rf $KODA_LIB_DIR
+        fi
+        ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        ;;
+
+esac
+
+#DEBHELPER#
+
+exit 0
