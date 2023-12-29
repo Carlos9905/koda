@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-# Part of koda. See LICENSE file for full copyright and licensing details.
-
 RELEASE_LEVELS = [ALPHA, BETA, RELEASE_CANDIDATE, FINAL] = ['alpha', 'beta', 'candidate', 'final']
 RELEASE_LEVELS_DISPLAY = {ALPHA: ALPHA,
                           BETA: BETA,
@@ -18,20 +16,17 @@ series = serie = major_version = '.'.join(str(s) for s in version_info[:2])
 
 product_name = 'koda'
 description = 'koda Server'
-long_desc = '''koda is a complete ERP and CRM. The main features are accounting (analytic
-and financial), stock management, sales and purchases management, tasks
-automation, marketing campaigns, help desk, POS, etc. Technical features include
-a distributed server, an object database, a dynamic GUI,
-customizable reports, and XML-RPC interfaces.
+long_desc = '''Koda es un sistema de gestion empresarial
+pensado para pequeñas empresas de Nicaragua
 '''
 classifiers = """Development Status :: 5 - Production/Stable
 License :: OSI Approved :: GNU Lesser General Public License v3
 
 Programming Language :: Python
 """
-url = 'https://www.koda.com'
-author = 'OpenERP S.A.'
-author_email = 'info@koda.com'
+url = 'https://www.koda.net'
+author = 'Carlos Aguilar'
+author_email = 'info@koda.net'
 license = 'LGPL-3'
 
 nt_service_name = "koda-server-" + series.replace('~','-')

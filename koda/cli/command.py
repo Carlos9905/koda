@@ -16,7 +16,7 @@ class Command:
 
 
 koda_HELP = """\
-koda CLI, use '{koda_bin} --help' for regular server options.
+Koda CLI, use '{koda_bin} --help' for regular server options.
 
 Available commands:
     {command_list}
