@@ -1,2 +1,0 @@
-# Koda
-from . import main

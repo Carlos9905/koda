@@ -1,8 +1,0 @@
-# Koda
-from . import account_move
-from . import account_journal
-from . import res_currency
-from . import res_company
-from . import l10n_ar_afipws_connection
-from . import res_config_settings
-from . import product_template

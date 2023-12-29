@@ -1,4 +1,0 @@
-# Koda
-from . import l10n_ar_vat_book
-from . import res_config_settings
-from . import res_company
